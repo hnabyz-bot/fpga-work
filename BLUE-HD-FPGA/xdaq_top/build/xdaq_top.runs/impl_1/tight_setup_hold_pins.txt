@@ -1,0 +1,15 @@
++=====================+===================+=========================================================================+
+| Launch Setup Clock  | Launch Hold Clock | Pin                                                                     |
++=====================+===================+=========================================================================+
+| c0_clk_ctrl_1       | c0_clk_ctrl_1     | gen_ti_roic_top[5].ti_roic_top_inst/data_reorder/read_req_dly_reg[0]/D  |
+| c0_clk_ctrl_1       | c0_clk_ctrl_1     | gen_ti_roic_top[10].ti_roic_top_inst/data_reorder/read_req_dly_reg[0]/D |
+| c0_clk_ctrl_1       | c0_clk_ctrl_1     | gen_ti_roic_top[6].ti_roic_top_inst/data_reorder/read_req_dly_reg[0]/D  |
+| c0_clk_ctrl_1       | c0_clk_ctrl_1     | gen_ti_roic_top[4].ti_roic_top_inst/data_reorder/read_req_dly_reg[0]/D  |
+| c0_clk_ctrl_1       | c0_clk_ctrl_1     | gen_ti_roic_top[2].ti_roic_top_inst/data_reorder/read_req_dly_reg[0]/D  |
+| c0_clk_ctrl_1       | c0_clk_ctrl_1     | gen_ti_roic_top[9].ti_roic_top_inst/data_reorder/read_req_dly_reg[0]/D  |
+| dphy_clk_clk_ctrl_1 | c1_clk_ctrl_1     | read_data_mux_inst/read_data_out_b_reg[17]/D                            |
+| c0_clk_ctrl_1       | c0_clk_ctrl_1     | gen_ti_roic_top[3].ti_roic_top_inst/data_reorder/read_req_dly_reg[0]/D  |
+| c0_clk_ctrl_1       | c0_clk_ctrl_1     | gen_ti_roic_top[0].ti_roic_top_inst/data_reorder/read_req_dly_reg[0]/D  |
+| c0_clk_ctrl_1       | c0_clk_ctrl_1     | gen_ti_roic_top[7].ti_roic_top_inst/data_reorder/read_req_dly_reg[0]/D  |
+| c0_clk_ctrl_1       | c0_clk_ctrl_1     | gen_ti_roic_top[1].ti_roic_top_inst/data_reorder/read_req_dly_reg[0]/D  |
++---------------------+-------------------+-------------------------------------------------------------------------+

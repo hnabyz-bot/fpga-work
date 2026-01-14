@@ -1,0 +1,737 @@
+
+*** Running vivado
+    with args -log bd_26df_mipi_csi2_tx_ctrl_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source bd_26df_mipi_csi2_tx_ctrl_0_0.tcl
+
+
+
+****** Vivado v2024.2 (64-bit)
+  **** SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+  **** IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+  **** SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+  **** Start of session at: Tue Jan 13 10:09:10 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source bd_26df_mipi_csi2_tx_ctrl_0_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 445.008 ; gain = 130.645
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: bd_26df_mipi_csi2_tx_ctrl_0_0
+Command: synth_design -top bd_26df_mipi_csi2_tx_ctrl_0_0 -part xc7a35tfgg484-1 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tfgg484-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 46560
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1110.227 ; gain = 466.438
+---------------------------------------------------------------------------------
+INFO: [Synth 8-11241] undeclared symbol 'master_reset_4dphy_axis_clk_w', assumed default net type 'wire' [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_0/bd_26df_mipi_csi2_tx_ctrl_0_0_core.v:704]
+WARNING: [Synth 8-11065] parameter 'LBUF_WIDTH' becomes localparam in 'bd_26df_mipi_csi2_tx_ctrl_0_0_core' with formal parameter declaration list [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_0/bd_26df_mipi_csi2_tx_ctrl_0_0_core.v:176]
+WARNING: [Synth 8-11065] parameter 'DYNAMIC_LBUF_DPTH' becomes localparam in 'bd_26df_mipi_csi2_tx_ctrl_0_0_core' with formal parameter declaration list [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_0/bd_26df_mipi_csi2_tx_ctrl_0_0_core.v:287]
+WARNING: [Synth 8-11065] parameter 'DYNAMIC_PROJ_FULL' becomes localparam in 'bd_26df_mipi_csi2_tx_ctrl_0_0_core' with formal parameter declaration list [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_0/bd_26df_mipi_csi2_tx_ctrl_0_0_core.v:288]
+INFO: [Synth 8-6157] synthesizing module 'bd_26df_mipi_csi2_tx_ctrl_0_0' [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_0/bd_26df_mipi_csi2_tx_ctrl_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_26df_mipi_csi2_tx_ctrl_0_0_core' [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_0/bd_26df_mipi_csi2_tx_ctrl_0_0_core.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_sync' [D:/Xilinx/Vivado/2024.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1975]
+	Parameter FIFO_MEMORY_TYPE bound to: block - type: string 
+	Parameter ECC_MODE bound to: no_ecc - type: string 
+	Parameter FIFO_WRITE_DEPTH bound to: 1024 - type: integer 
+	Parameter WRITE_DATA_WIDTH bound to: 50 - type: integer 
+	Parameter PROG_FULL_THRESH bound to: 1014 - type: integer 
+	Parameter FULL_RESET_VALUE bound to: 0 - type: integer 
+	Parameter USE_ADV_FEATURES bound to: 0002 - type: string 
+	Parameter READ_MODE bound to: std - type: string 
+	Parameter FIFO_READ_LATENCY bound to: 1 - type: integer 
+	Parameter READ_DATA_WIDTH bound to: 50 - type: integer 
+	Parameter DOUT_RESET_VALUE bound to: 0 - type: string 
+	Parameter WAKEUP_TIME bound to: 0 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_base' [D:/Xilinx/Vivado/2024.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base' [D:/Xilinx/Vivado/2024.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:54]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base' (0#1) [D:/Xilinx/Vivado/2024.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:54]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_rst' [D:/Xilinx/Vivado/2024.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1639]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_rst' (0#1) [D:/Xilinx/Vivado/2024.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1639]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_reg_bit' [D:/Xilinx/Vivado/2024.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1927]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_reg_bit' (0#1) [D:/Xilinx/Vivado/2024.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1927]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn' [D:/Xilinx/Vivado/2024.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn' (0#1) [D:/Xilinx/Vivado/2024.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized0' [D:/Xilinx/Vivado/2024.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized0' (0#1) [D:/Xilinx/Vivado/2024.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized1' [D:/Xilinx/Vivado/2024.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized1' (0#1) [D:/Xilinx/Vivado/2024.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_base' (0#1) [D:/Xilinx/Vivado/2024.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_sync' (0#1) [D:/Xilinx/Vivado/2024.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1975]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_async' [D:/Xilinx/Vivado/2024.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:2173]
+	Parameter FIFO_MEMORY_TYPE bound to: block - type: string 
+	Parameter ECC_MODE bound to: no_ecc - type: string 
+	Parameter RELATED_CLOCKS bound to: 0 - type: integer 
+	Parameter FIFO_WRITE_DEPTH bound to: 8192 - type: integer 
+	Parameter WRITE_DATA_WIDTH bound to: 34 - type: integer 
+	Parameter PROG_FULL_THRESH bound to: 8182 - type: integer 
+	Parameter FULL_RESET_VALUE bound to: 0 - type: integer 
+	Parameter USE_ADV_FEATURES bound to: 0402 - type: string 
+	Parameter READ_MODE bound to: std - type: string 
+	Parameter FIFO_READ_LATENCY bound to: 2 - type: integer 
+	Parameter READ_DATA_WIDTH bound to: 34 - type: integer 
+	Parameter RD_DATA_COUNT_WIDTH bound to: 14 - type: integer 
+	Parameter DOUT_RESET_VALUE bound to: 0 - type: string 
+	Parameter CDC_SYNC_STAGES bound to: 2 - type: integer 
+	Parameter WAKEUP_TIME bound to: 0 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_base__parameterized0' [D:/Xilinx/Vivado/2024.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base__parameterized0' [D:/Xilinx/Vivado/2024.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:54]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base__parameterized0' (0#1) [D:/Xilinx/Vivado/2024.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:54]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_gray' [D:/Xilinx/Vivado/2024.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:283]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_gray' (0#1) [D:/Xilinx/Vivado/2024.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:283]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_reg_vec' [D:/Xilinx/Vivado/2024.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1905]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_reg_vec' (0#1) [D:/Xilinx/Vivado/2024.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1905]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_gray__parameterized0' [D:/Xilinx/Vivado/2024.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:283]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_gray__parameterized0' (0#1) [D:/Xilinx/Vivado/2024.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:283]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_reg_vec__parameterized0' [D:/Xilinx/Vivado/2024.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1905]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_reg_vec__parameterized0' (0#1) [D:/Xilinx/Vivado/2024.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1905]
+INFO: [Synth 8-6157] synthesizing module 'xpm_reg_pipe_bit' [D:/Xilinx/Vivado/2024.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1950]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_reg_pipe_bit' (0#1) [D:/Xilinx/Vivado/2024.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1950]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_rst__parameterized0' [D:/Xilinx/Vivado/2024.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1639]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_sync_rst' [D:/Xilinx/Vivado/2024.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1059]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_sync_rst' (0#1) [D:/Xilinx/Vivado/2024.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1059]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_rst__parameterized0' (0#1) [D:/Xilinx/Vivado/2024.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1639]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized2' [D:/Xilinx/Vivado/2024.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized2' (0#1) [D:/Xilinx/Vivado/2024.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized3' [D:/Xilinx/Vivado/2024.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized3' (0#1) [D:/Xilinx/Vivado/2024.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized4' [D:/Xilinx/Vivado/2024.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized4' (0#1) [D:/Xilinx/Vivado/2024.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_base__parameterized0' (0#1) [D:/Xilinx/Vivado/2024.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_async' (0#1) [D:/Xilinx/Vivado/2024.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:2173]
+WARNING: [Synth 8-7071] port 'wr_data_count' of module 'xpm_fifo_async' is unconnected for instance 'clock_cross_fifo' [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_0/bd_26df_mipi_csi2_tx_ctrl_0_0_core.v:360]
+WARNING: [Synth 8-7023] instance 'clock_cross_fifo' of module 'xpm_fifo_async' has 26 connections declared, but only 25 given [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_0/bd_26df_mipi_csi2_tx_ctrl_0_0_core.v:360]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_sync__parameterized0' [D:/Xilinx/Vivado/2024.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1975]
+	Parameter FIFO_MEMORY_TYPE bound to: distributed - type: string 
+	Parameter ECC_MODE bound to: no_ecc - type: string 
+	Parameter FIFO_WRITE_DEPTH bound to: 32 - type: integer 
+	Parameter WRITE_DATA_WIDTH bound to: 36 - type: integer 
+	Parameter FULL_RESET_VALUE bound to: 0 - type: integer 
+	Parameter USE_ADV_FEATURES bound to: 0408 - type: string 
+	Parameter READ_MODE bound to: std - type: string 
+	Parameter FIFO_READ_LATENCY bound to: 1 - type: integer 
+	Parameter READ_DATA_WIDTH bound to: 36 - type: integer 
+	Parameter RD_DATA_COUNT_WIDTH bound to: 6 - type: integer 
+	Parameter DOUT_RESET_VALUE bound to: 0 - type: string 
+	Parameter WAKEUP_TIME bound to: 0 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_base__parameterized1' [D:/Xilinx/Vivado/2024.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized5' [D:/Xilinx/Vivado/2024.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized5' (0#1) [D:/Xilinx/Vivado/2024.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base__parameterized1' [D:/Xilinx/Vivado/2024.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:54]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base__parameterized1' (0#1) [D:/Xilinx/Vivado/2024.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:54]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized6' [D:/Xilinx/Vivado/2024.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized6' (0#1) [D:/Xilinx/Vivado/2024.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized7' [D:/Xilinx/Vivado/2024.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized7' (0#1) [D:/Xilinx/Vivado/2024.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized8' [D:/Xilinx/Vivado/2024.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized8' (0#1) [D:/Xilinx/Vivado/2024.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_base__parameterized1' (0#1) [D:/Xilinx/Vivado/2024.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_sync__parameterized0' (0#1) [D:/Xilinx/Vivado/2024.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1975]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_sync__parameterized1' [D:/Xilinx/Vivado/2024.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1975]
+	Parameter FIFO_MEMORY_TYPE bound to: distributed - type: string 
+	Parameter ECC_MODE bound to: no_ecc - type: string 
+	Parameter FIFO_WRITE_DEPTH bound to: 32 - type: integer 
+	Parameter WRITE_DATA_WIDTH bound to: 24 - type: integer 
+	Parameter FULL_RESET_VALUE bound to: 0 - type: integer 
+	Parameter USE_ADV_FEATURES bound to: 0400 - type: string 
+	Parameter READ_MODE bound to: std - type: string 
+	Parameter FIFO_READ_LATENCY bound to: 1 - type: integer 
+	Parameter READ_DATA_WIDTH bound to: 24 - type: integer 
+	Parameter RD_DATA_COUNT_WIDTH bound to: 6 - type: integer 
+	Parameter DOUT_RESET_VALUE bound to: 0 - type: string 
+	Parameter WAKEUP_TIME bound to: 0 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_base__parameterized2' [D:/Xilinx/Vivado/2024.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base__parameterized2' [D:/Xilinx/Vivado/2024.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:54]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base__parameterized2' (0#1) [D:/Xilinx/Vivado/2024.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:54]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_base__parameterized2' (0#1) [D:/Xilinx/Vivado/2024.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_sync__parameterized1' (0#1) [D:/Xilinx/Vivado/2024.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1975]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_async_rst' [D:/Xilinx/Vivado/2024.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1175]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_async_rst' (0#1) [D:/Xilinx/Vivado/2024.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1175]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_single' [D:/Xilinx/Vivado/2024.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:152]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_single' (0#1) [D:/Xilinx/Vivado/2024.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:152]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_single__parameterized0' [D:/Xilinx/Vivado/2024.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:152]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_single__parameterized0' (0#1) [D:/Xilinx/Vivado/2024.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:152]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_pulse' [D:/Xilinx/Vivado/2024.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:714]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_single__parameterized1' [D:/Xilinx/Vivado/2024.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:152]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_single__parameterized1' (0#1) [D:/Xilinx/Vivado/2024.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:152]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_pulse' (0#1) [D:/Xilinx/Vivado/2024.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:714]
+INFO: [Synth 8-6155] done synthesizing module 'bd_26df_mipi_csi2_tx_ctrl_0_0_core' (0#1) [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_0/bd_26df_mipi_csi2_tx_ctrl_0_0_core.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_26df_mipi_csi2_tx_ctrl_0_0' (0#1) [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_0/bd_26df_mipi_csi2_tx_ctrl_0_0.v:53]
+WARNING: [Synth 8-6014] Unused sequential element gen_rd_b.gen_doutb_pipe.enb_pipe_reg[0] was removed.  [D:/Xilinx/Vivado/2024.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:3077]
+WARNING: [Synth 8-6014] Unused sequential element dest_out_bin_ff_reg was removed.  [D:/Xilinx/Vivado/2024.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:417]
+WARNING: [Synth 8-6014] Unused sequential element dest_out_bin_ff_reg was removed.  [D:/Xilinx/Vivado/2024.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:417]
+WARNING: [Synth 8-6014] Unused sequential element dest_pulse_ff_reg was removed.  [D:/Xilinx/Vivado/2024.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:860]
+WARNING: [Synth 8-3848] Net async_dc in module/entity bd_26df_mipi_csi2_tx_ctrl_0_0_core does not have driver. [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_0/bd_26df_mipi_csi2_tx_ctrl_0_0_core.v:230]
+WARNING: [Synth 8-7129] Port src_clk in module xpm_cdc_single is either unconnected or has no load
+WARNING: [Synth 8-7129] Port src_clk in module xpm_cdc_single__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port core_clk_rst_n in module mipi_csi2_tx_ctrl_v1_0_6_cdc_blk is either unconnected or has no load
+WARNING: [Synth 8-7129] Port active_lanes[1] in module mipi_csi2_tx_ctrl_v1_0_6_cdc_blk is either unconnected or has no load
+WARNING: [Synth 8-7129] Port active_lanes[0] in module mipi_csi2_tx_ctrl_v1_0_6_cdc_blk is either unconnected or has no load
+WARNING: [Synth 8-7129] Port txskewcalhs in module mipi_csi2_tx_ctrl_v1_0_6_cdc_blk is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dl1_txulpsactivenot in module mipi_csi2_tx_ctrl_v1_0_6_cdc_blk is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dl2_txulpsactivenot in module mipi_csi2_tx_ctrl_v1_0_6_cdc_blk is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dl3_txulpsactivenot in module mipi_csi2_tx_ctrl_v1_0_6_cdc_blk is either unconnected or has no load
+WARNING: [Synth 8-7129] Port no_lines_vc0_axis_clk[15] in module mipi_csi2_tx_ctrl_v1_0_6_reg_iface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port no_lines_vc0_axis_clk[14] in module mipi_csi2_tx_ctrl_v1_0_6_reg_iface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port no_lines_vc0_axis_clk[13] in module mipi_csi2_tx_ctrl_v1_0_6_reg_iface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port no_lines_vc0_axis_clk[12] in module mipi_csi2_tx_ctrl_v1_0_6_reg_iface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port no_lines_vc0_axis_clk[11] in module mipi_csi2_tx_ctrl_v1_0_6_reg_iface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port no_lines_vc0_axis_clk[10] in module mipi_csi2_tx_ctrl_v1_0_6_reg_iface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port no_lines_vc0_axis_clk[9] in module mipi_csi2_tx_ctrl_v1_0_6_reg_iface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port no_lines_vc0_axis_clk[8] in module mipi_csi2_tx_ctrl_v1_0_6_reg_iface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port no_lines_vc0_axis_clk[7] in module mipi_csi2_tx_ctrl_v1_0_6_reg_iface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port no_lines_vc0_axis_clk[6] in module mipi_csi2_tx_ctrl_v1_0_6_reg_iface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port no_lines_vc0_axis_clk[5] in module mipi_csi2_tx_ctrl_v1_0_6_reg_iface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port no_lines_vc0_axis_clk[4] in module mipi_csi2_tx_ctrl_v1_0_6_reg_iface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port no_lines_vc0_axis_clk[3] in module mipi_csi2_tx_ctrl_v1_0_6_reg_iface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port no_lines_vc0_axis_clk[2] in module mipi_csi2_tx_ctrl_v1_0_6_reg_iface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port no_lines_vc0_axis_clk[1] in module mipi_csi2_tx_ctrl_v1_0_6_reg_iface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port no_lines_vc0_axis_clk[0] in module mipi_csi2_tx_ctrl_v1_0_6_reg_iface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port no_lines_vc1_axis_clk[15] in module mipi_csi2_tx_ctrl_v1_0_6_reg_iface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port no_lines_vc1_axis_clk[14] in module mipi_csi2_tx_ctrl_v1_0_6_reg_iface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port no_lines_vc1_axis_clk[13] in module mipi_csi2_tx_ctrl_v1_0_6_reg_iface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port no_lines_vc1_axis_clk[12] in module mipi_csi2_tx_ctrl_v1_0_6_reg_iface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port no_lines_vc1_axis_clk[11] in module mipi_csi2_tx_ctrl_v1_0_6_reg_iface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port no_lines_vc1_axis_clk[10] in module mipi_csi2_tx_ctrl_v1_0_6_reg_iface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port no_lines_vc1_axis_clk[9] in module mipi_csi2_tx_ctrl_v1_0_6_reg_iface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port no_lines_vc1_axis_clk[8] in module mipi_csi2_tx_ctrl_v1_0_6_reg_iface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port no_lines_vc1_axis_clk[7] in module mipi_csi2_tx_ctrl_v1_0_6_reg_iface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port no_lines_vc1_axis_clk[6] in module mipi_csi2_tx_ctrl_v1_0_6_reg_iface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port no_lines_vc1_axis_clk[5] in module mipi_csi2_tx_ctrl_v1_0_6_reg_iface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port no_lines_vc1_axis_clk[4] in module mipi_csi2_tx_ctrl_v1_0_6_reg_iface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port no_lines_vc1_axis_clk[3] in module mipi_csi2_tx_ctrl_v1_0_6_reg_iface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port no_lines_vc1_axis_clk[2] in module mipi_csi2_tx_ctrl_v1_0_6_reg_iface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port no_lines_vc1_axis_clk[1] in module mipi_csi2_tx_ctrl_v1_0_6_reg_iface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port no_lines_vc1_axis_clk[0] in module mipi_csi2_tx_ctrl_v1_0_6_reg_iface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port no_lines_vc2_axis_clk[15] in module mipi_csi2_tx_ctrl_v1_0_6_reg_iface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port no_lines_vc2_axis_clk[14] in module mipi_csi2_tx_ctrl_v1_0_6_reg_iface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port no_lines_vc2_axis_clk[13] in module mipi_csi2_tx_ctrl_v1_0_6_reg_iface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port no_lines_vc2_axis_clk[12] in module mipi_csi2_tx_ctrl_v1_0_6_reg_iface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port no_lines_vc2_axis_clk[11] in module mipi_csi2_tx_ctrl_v1_0_6_reg_iface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port no_lines_vc2_axis_clk[10] in module mipi_csi2_tx_ctrl_v1_0_6_reg_iface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port no_lines_vc2_axis_clk[9] in module mipi_csi2_tx_ctrl_v1_0_6_reg_iface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port no_lines_vc2_axis_clk[8] in module mipi_csi2_tx_ctrl_v1_0_6_reg_iface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port no_lines_vc2_axis_clk[7] in module mipi_csi2_tx_ctrl_v1_0_6_reg_iface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port no_lines_vc2_axis_clk[6] in module mipi_csi2_tx_ctrl_v1_0_6_reg_iface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port no_lines_vc2_axis_clk[5] in module mipi_csi2_tx_ctrl_v1_0_6_reg_iface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port no_lines_vc2_axis_clk[4] in module mipi_csi2_tx_ctrl_v1_0_6_reg_iface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port no_lines_vc2_axis_clk[3] in module mipi_csi2_tx_ctrl_v1_0_6_reg_iface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port no_lines_vc2_axis_clk[2] in module mipi_csi2_tx_ctrl_v1_0_6_reg_iface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port no_lines_vc2_axis_clk[1] in module mipi_csi2_tx_ctrl_v1_0_6_reg_iface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port no_lines_vc2_axis_clk[0] in module mipi_csi2_tx_ctrl_v1_0_6_reg_iface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port no_lines_vc3_axis_clk[15] in module mipi_csi2_tx_ctrl_v1_0_6_reg_iface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port no_lines_vc3_axis_clk[14] in module mipi_csi2_tx_ctrl_v1_0_6_reg_iface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port no_lines_vc3_axis_clk[13] in module mipi_csi2_tx_ctrl_v1_0_6_reg_iface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port no_lines_vc3_axis_clk[12] in module mipi_csi2_tx_ctrl_v1_0_6_reg_iface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port no_lines_vc3_axis_clk[11] in module mipi_csi2_tx_ctrl_v1_0_6_reg_iface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port no_lines_vc3_axis_clk[10] in module mipi_csi2_tx_ctrl_v1_0_6_reg_iface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port no_lines_vc3_axis_clk[9] in module mipi_csi2_tx_ctrl_v1_0_6_reg_iface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port no_lines_vc3_axis_clk[8] in module mipi_csi2_tx_ctrl_v1_0_6_reg_iface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port no_lines_vc3_axis_clk[7] in module mipi_csi2_tx_ctrl_v1_0_6_reg_iface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port no_lines_vc3_axis_clk[6] in module mipi_csi2_tx_ctrl_v1_0_6_reg_iface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port no_lines_vc3_axis_clk[5] in module mipi_csi2_tx_ctrl_v1_0_6_reg_iface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port no_lines_vc3_axis_clk[4] in module mipi_csi2_tx_ctrl_v1_0_6_reg_iface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port no_lines_vc3_axis_clk[3] in module mipi_csi2_tx_ctrl_v1_0_6_reg_iface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port no_lines_vc3_axis_clk[2] in module mipi_csi2_tx_ctrl_v1_0_6_reg_iface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port no_lines_vc3_axis_clk[1] in module mipi_csi2_tx_ctrl_v1_0_6_reg_iface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port no_lines_vc3_axis_clk[0] in module mipi_csi2_tx_ctrl_v1_0_6_reg_iface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wdata[31] in module mipi_csi2_tx_ctrl_v1_0_6_reg_iface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wdata[30] in module mipi_csi2_tx_ctrl_v1_0_6_reg_iface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wdata[29] in module mipi_csi2_tx_ctrl_v1_0_6_reg_iface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wdata[28] in module mipi_csi2_tx_ctrl_v1_0_6_reg_iface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wdata[27] in module mipi_csi2_tx_ctrl_v1_0_6_reg_iface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wdata[26] in module mipi_csi2_tx_ctrl_v1_0_6_reg_iface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wdata[25] in module mipi_csi2_tx_ctrl_v1_0_6_reg_iface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wdata[24] in module mipi_csi2_tx_ctrl_v1_0_6_reg_iface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wstrb[3] in module mipi_csi2_tx_ctrl_v1_0_6_reg_iface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wstrb[2] in module mipi_csi2_tx_ctrl_v1_0_6_reg_iface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wstrb[1] in module mipi_csi2_tx_ctrl_v1_0_6_reg_iface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wstrb[0] in module mipi_csi2_tx_ctrl_v1_0_6_reg_iface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port csi2_tx_rdy_axis_clk in module mipi_csi2_tx_ctrl_v1_0_6_reg_iface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cntrl_4_dekew in module mipi_csi2_tx_ctrl_v1_0_6_four_lanes_ldf is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clock_mode in module mipi_csi2_tx_ctrl_v1_0_6_four_lanes_ldf is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst_4_ic_pc_ac_seq in module mipi_csi2_tx_ctrl_v1_0_6_ldf is either unconnected or has no load
+WARNING: [Synth 8-7129] Port send_periodic_patrn in module mipi_csi2_tx_ctrl_v1_0_6_ldf is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dl_tx_stop_st in module mipi_csi2_tx_ctrl_v1_0_6_ldf is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dl1_txreadyhs in module mipi_csi2_tx_ctrl_v1_0_6_ldf is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dl2_txreadyhs in module mipi_csi2_tx_ctrl_v1_0_6_ldf is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dl3_txreadyhs in module mipi_csi2_tx_ctrl_v1_0_6_ldf is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ppi_clk in module mipi_csi2_tx_ctrl_v1_0_6_ecc is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ppi_clk_rst_n in module mipi_csi2_tx_ctrl_v1_0_6_ecc is either unconnected or has no load
+WARNING: [Synth 8-7129] Port crc_out[15] in module mipi_csi2_tx_ctrl_v1_0_6_crc is either unconnected or has no load
+WARNING: [Synth 8-7129] Port crc_out[14] in module mipi_csi2_tx_ctrl_v1_0_6_crc is either unconnected or has no load
+WARNING: [Synth 8-7129] Port crc_out[13] in module mipi_csi2_tx_ctrl_v1_0_6_crc is either unconnected or has no load
+WARNING: [Synth 8-7129] Port crc_out[12] in module mipi_csi2_tx_ctrl_v1_0_6_crc is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1265.746 ; gain = 621.957
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1265.746 ; gain = 621.957
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1265.746 ; gain = 621.957
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.045 . Memory (MB): peak = 1265.746 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_0/bd_26df_mipi_csi2_tx_ctrl_0_0_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_0/bd_26df_mipi_csi2_tx_ctrl_0_0_ooc.xdc] for cell 'inst'
+Parsing XDC File [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_0/bd_26df_mipi_csi2_tx_ctrl_0_0.xdc] for cell 'inst'
+Finished Parsing XDC File [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_0/bd_26df_mipi_csi2_tx_ctrl_0_0.xdc] for cell 'inst'
+Parsing XDC File [D:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.runs/bd_26df_mipi_csi2_tx_ctrl_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [D:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.runs/bd_26df_mipi_csi2_tx_ctrl_0_0_synth_1/dont_touch.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/Xilinx/Vivado/2024.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/bd_26df_mipi_csi2_tx_ctrl_0_0_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/bd_26df_mipi_csi2_tx_ctrl_0_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/Xilinx/Vivado/2024.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/bd_26df_mipi_csi2_tx_ctrl_0_0_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/bd_26df_mipi_csi2_tx_ctrl_0_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/Xilinx/Vivado/2024.2/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/bd_26df_mipi_csi2_tx_ctrl_0_0_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/bd_26df_mipi_csi2_tx_ctrl_0_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/Xilinx/Vivado/2024.2/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/bd_26df_mipi_csi2_tx_ctrl_0_0_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/bd_26df_mipi_csi2_tx_ctrl_0_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Project 1-1714] 30 XPM XDC files have been applied to the design.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1348.266 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.032 . Memory (MB): peak = 1348.277 ; gain = 0.012
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1348.277 ; gain = 704.488
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tfgg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1348.277 ; gain = 704.488
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  D:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.runs/bd_26df_mipi_csi2_tx_ctrl_0_0_synth_1/dont_touch.xdc, line 6).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/rst_sync_blk/u_reset_sych_axis. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/rst_sync_blk/u_reset_sych_core_clk. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/rst_sync_blk/u_reset_sych_esc_clk. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/rst_sync_blk/u_reset_sych_ic_pc_ac. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/rst_sync_blk/u_reset_sych_ppi_clk. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/clock_cross_fifo/\gnuram_async_fifo.xpm_fifo_base_inst /\gen_cdc_pntr.rd_pntr_cdc_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/clock_cross_fifo/\gnuram_async_fifo.xpm_fifo_base_inst /\gen_cdc_pntr.wr_pntr_cdc_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/clock_cross_fifo/\gnuram_async_fifo.xpm_fifo_base_inst /\gen_cdc_pntr.rd_pntr_cdc_dc_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/clock_cross_fifo/\gnuram_async_fifo.xpm_fifo_base_inst /\gen_cdc_pntr.wr_pntr_cdc_dc_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/sync_blk/u_clk_mode. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/sync_blk/u_indic_sync. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/sync_blk/u_init_done_ppi_clk_sync. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/sync_blk/u_init_done_sync. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/sync_blk/u_ppi_clk_avail. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/sync_blk/u_rst_core_clk_sync. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/sync_blk/u_stop_state_sync. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/sync_blk/u_ulps_entry. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/sync_blk/u_ulps_entry_sensr_clk. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/sync_blk/u_ulps_exit_core_clk. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/sync_blk/u_ulps_start_en_core_clk. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/sync_blk/u_ulps_timer_en. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/sync_blk/u_async_empty_sensr_clk. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/sync_blk/u_ldf_empty_sensr_clk. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/sync_blk/u_packet_tranfr_dn_ppi_clk_sensr_clk/xpm_cdc_single_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/clock_cross_fifo/\gnuram_async_fifo.xpm_fifo_base_inst /xpm_fifo_rst_inst/\gen_rst_ic.rrst_wr_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/clock_cross_fifo/\gnuram_async_fifo.xpm_fifo_base_inst /xpm_fifo_rst_inst/\gen_rst_ic.wrst_rd_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/clock_cross_fifo. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/line_buffer. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/dist_fifo. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/generic_fifo. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1348.277 ; gain = 704.488
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'gen_rst_ic.curr_wrst_state_reg' in module 'xpm_fifo_rst__parameterized0'
+INFO: [Synth 8-802] inferred FSM for state register 'gen_rst_ic.curr_rrst_state_reg' in module 'xpm_fifo_rst__parameterized0'
+INFO: [Synth 8-802] inferred FSM for state register 'packtzr_fsm_r_reg' in module 'mipi_csi2_tx_ctrl_v1_0_6_packetizer'
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5552] Implemented safe state 'default_state' for state register 'gen_rst_ic.curr_wrst_state_reg' in module 'xpm_fifo_rst__parameterized0'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+               WRST_IDLE |                            00001 |                              000
+                 WRST_IN |                            00010 |                              010
+                WRST_OUT |                            00100 |                              111
+               WRST_EXIT |                            01000 |                              110
+            WRST_GO2IDLE |                            10000 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'gen_rst_ic.curr_wrst_state_reg' using encoding 'one-hot' in module 'xpm_fifo_rst__parameterized0'
+INFO: [Synth 8-5552] Implemented safe state 'default_state' for state register 'gen_rst_ic.curr_rrst_state_reg' in module 'xpm_fifo_rst__parameterized0'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+               RRST_IDLE |                               00 |                               00
+                 RRST_IN |                               01 |                               10
+                RRST_OUT |                               10 |                               11
+               RRST_EXIT |                               11 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'gen_rst_ic.curr_rrst_state_reg' using encoding 'sequential' in module 'xpm_fifo_rst__parameterized0'
+INFO: [Synth 8-6159] Found Keep on FSM register 'packtzr_fsm_r_reg' in module 'mipi_csi2_tx_ctrl_v1_0_6_packetizer', re-encoding will not be performed
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+                  iSTATE |                              000 |                              000
+                 iSTATE0 |                              001 |                              001
+                 iSTATE1 |                              010 |                              010
+                 iSTATE2 |                              011 |                              011
+                 iSTATE3 |                              100 |                              100
+                 iSTATE4 |                              101 |                              101
+                 iSTATE5 |                              110 |                              110
+---------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1348.277 ; gain = 704.488
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 1     
+	   2 Input   16 Bit       Adders := 1     
+	   4 Input   14 Bit       Adders := 2     
+	   2 Input   14 Bit       Adders := 1     
+	   3 Input   14 Bit       Adders := 1     
+	   4 Input   13 Bit       Adders := 3     
+	   4 Input   11 Bit       Adders := 2     
+	   2 Input   11 Bit       Adders := 1     
+	   4 Input   10 Bit       Adders := 3     
+	   2 Input    9 Bit       Adders := 1     
+	   2 Input    8 Bit       Adders := 1     
+	   4 Input    6 Bit       Adders := 4     
+	   3 Input    6 Bit       Adders := 2     
+	   2 Input    6 Bit       Adders := 1     
+	   4 Input    5 Bit       Adders := 7     
+	   2 Input    4 Bit       Adders := 2     
+	   2 Input    2 Bit       Adders := 2     
+	   2 Input    1 Bit       Adders := 2     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
+	   2 Input     16 Bit         XORs := 4     
+	   2 Input     14 Bit         XORs := 2     
+	   2 Input     13 Bit         XORs := 2     
+	   2 Input      3 Bit         XORs := 6     
+	   2 Input      1 Bit         XORs := 135   
+	   4 Input      1 Bit         XORs := 9     
+	   6 Input      1 Bit         XORs := 10    
+	   8 Input      1 Bit         XORs := 6     
+	  12 Input      1 Bit         XORs := 2     
+	  11 Input      1 Bit         XORs := 4     
+	   5 Input      1 Bit         XORs := 7     
+	   7 Input      1 Bit         XORs := 3     
+	   3 Input      1 Bit         XORs := 23    
+	  13 Input      1 Bit         XORs := 1     
+	   9 Input      1 Bit         XORs := 2     
++---Registers : 
+	               50 Bit    Registers := 6     
+	               48 Bit    Registers := 1     
+	               36 Bit    Registers := 4     
+	               34 Bit    Registers := 2     
+	               33 Bit    Registers := 3     
+	               32 Bit    Registers := 3     
+	               24 Bit    Registers := 3     
+	               16 Bit    Registers := 17    
+	               14 Bit    Registers := 13    
+	               13 Bit    Registers := 11    
+	               11 Bit    Registers := 3     
+	               10 Bit    Registers := 3     
+	                9 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                7 Bit    Registers := 2     
+	                6 Bit    Registers := 10    
+	                5 Bit    Registers := 7     
+	                4 Bit    Registers := 8     
+	                3 Bit    Registers := 4     
+	                2 Bit    Registers := 32    
+	                1 Bit    Registers := 162   
++---RAMs : 
+	             272K Bit	(8192 X 34 bit)          RAMs := 1     
+	              50K Bit	(1024 X 50 bit)          RAMs := 1     
++---Muxes : 
+	   4 Input   50 Bit        Muxes := 1     
+	   2 Input   50 Bit        Muxes := 2     
+	   2 Input   48 Bit        Muxes := 1     
+	   4 Input   48 Bit        Muxes := 1     
+	   2 Input   36 Bit        Muxes := 1     
+	   4 Input   36 Bit        Muxes := 3     
+	   2 Input   33 Bit        Muxes := 1     
+	   6 Input   33 Bit        Muxes := 1     
+	   4 Input   33 Bit        Muxes := 1     
+	   2 Input   32 Bit        Muxes := 5     
+	   4 Input   26 Bit        Muxes := 1     
+	   2 Input   16 Bit        Muxes := 15    
+	   4 Input   16 Bit        Muxes := 3     
+	   2 Input    8 Bit        Muxes := 4     
+	   2 Input    7 Bit        Muxes := 1     
+	   2 Input    6 Bit        Muxes := 1     
+	   6 Input    5 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 8     
+	   2 Input    4 Bit        Muxes := 1     
+	   8 Input    3 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 1     
+	   5 Input    2 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 13    
+	   6 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 82    
+	   6 Input    1 Bit        Muxes := 2     
+	   5 Input    1 Bit        Muxes := 3     
+	   3 Input    1 Bit        Muxes := 2     
+	   8 Input    1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5784] Optimized 1 bits of RAM "gen_wr_a.gen_word_narrow.mem_reg" due to constant propagation. Old ram width 34 bits, new ram width 33 bits.
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1350.148 ; gain = 706.359
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping Report (see note below)
++-----------------------------------------------------------------------------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name                                                                                    | RTL Object                       | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++-----------------------------------------------------------------------------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|inst/line_buffer/xpm_fifo_base_inst/\gen_sdpram.xpm_memory_base_inst                           | gen_wr_a.gen_word_narrow.mem_reg | 1 K x 50(NO_CHANGE)    | W |   | 1 K x 50(NO_CHANGE)    |   | R | Port A and B     | 1      | 1      | 
+|inst/clock_cross_fifo/\gnuram_async_fifo.xpm_fifo_base_inst /\gen_sdpram.xpm_memory_base_inst  | gen_wr_a.gen_word_narrow.mem_reg | 8 K x 34(NO_CHANGE)    | W |   | 8 K x 34(NO_CHANGE)    |   | R | Port A and B     | 1      | 8      | 
++-----------------------------------------------------------------------------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+
+Distributed RAM: Preliminary Mapping Report (see note below)
++-----------------------------------------------------------------------+----------------------------------+----------------+----------------------+-------------+
+|Module Name                                                            | RTL Object                       | Inference      | Size (Depth x Width) | Primitives  | 
++-----------------------------------------------------------------------+----------------------------------+----------------+----------------------+-------------+
+|inst/dist_fifo/xpm_fifo_base_inst/\gen_sdpram.xpm_memory_base_inst     | gen_wr_a.gen_word_narrow.mem_reg | User Attribute | 32 x 36              | RAM32M x 6  | 
+|inst/generic_fifo/xpm_fifo_base_inst/\gen_sdpram.xpm_memory_base_inst  | gen_wr_a.gen_word_narrow.mem_reg | User Attribute | 32 x 24              | RAM32M x 4  | 
++-----------------------------------------------------------------------+----------------------------------+----------------+----------------------+-------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 1449.086 ; gain = 805.297
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 1471.449 ; gain = 827.660
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping Report
++-----------------------------------------------------------------------------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name                                                                                    | RTL Object                       | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++-----------------------------------------------------------------------------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|inst/line_buffer/xpm_fifo_base_inst/\gen_sdpram.xpm_memory_base_inst                           | gen_wr_a.gen_word_narrow.mem_reg | 1 K x 50(NO_CHANGE)    | W |   | 1 K x 50(NO_CHANGE)    |   | R | Port A and B     | 1      | 1      | 
+|inst/clock_cross_fifo/\gnuram_async_fifo.xpm_fifo_base_inst /\gen_sdpram.xpm_memory_base_inst  | gen_wr_a.gen_word_narrow.mem_reg | 8 K x 34(NO_CHANGE)    | W |   | 8 K x 34(NO_CHANGE)    |   | R | Port A and B     | 1      | 8      | 
++-----------------------------------------------------------------------------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+
+Distributed RAM: Final Mapping Report
++-----------------------------------------------------------------------+----------------------------------+----------------+----------------------+-------------+
+|Module Name                                                            | RTL Object                       | Inference      | Size (Depth x Width) | Primitives  | 
++-----------------------------------------------------------------------+----------------------------------+----------------+----------------------+-------------+
+|inst/dist_fifo/xpm_fifo_base_inst/\gen_sdpram.xpm_memory_base_inst     | gen_wr_a.gen_word_narrow.mem_reg | User Attribute | 32 x 36              | RAM32M x 6  | 
+|inst/generic_fifo/xpm_fifo_base_inst/\gen_sdpram.xpm_memory_base_inst  | gen_wr_a.gen_word_narrow.mem_reg | User Attribute | 32 x 24              | RAM32M x 4  | 
++-----------------------------------------------------------------------+----------------------------------+----------------+----------------------+-------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance inst/line_buffer/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/line_buffer/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 1481.504 ; gain = 837.715
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3295] tying undriven pin dl0_enable_r1_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin dl1_enable_r1_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin dl2_enable_r1_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin dl3_enable_r1_inferred:in0 to constant 0
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:32 ; elapsed = 00:00:35 . Memory (MB): peak = 1674.238 ; gain = 1030.449
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:32 ; elapsed = 00:00:35 . Memory (MB): peak = 1674.238 ; gain = 1030.449
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:32 ; elapsed = 00:00:35 . Memory (MB): peak = 1674.238 ; gain = 1030.449
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:32 ; elapsed = 00:00:35 . Memory (MB): peak = 1674.238 ; gain = 1030.449
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:32 ; elapsed = 00:00:35 . Memory (MB): peak = 1675.199 ; gain = 1031.410
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:32 ; elapsed = 00:00:35 . Memory (MB): peak = 1675.199 ; gain = 1031.410
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++------------------------------------+-----------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name                         | RTL Name        | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++------------------------------------+-----------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|mipi_csi2_tx_ctrl_v1_0_6_packetizer | crc_init_r2_reg | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
++------------------------------------+-----------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |CARRY4   |    66|
+|2     |LUT1     |    49|
+|3     |LUT2     |   237|
+|4     |LUT3     |   233|
+|5     |LUT4     |   176|
+|6     |LUT5     |   306|
+|7     |LUT6     |   610|
+|8     |MUXF7    |    25|
+|9     |RAM32M   |    10|
+|10    |RAMB18E1 |     2|
+|12    |RAMB36E1 |     9|
+|14    |SRL16E   |     1|
+|15    |FDCE     |    40|
+|16    |FDPE     |    64|
+|17    |FDRE     |  1452|
+|18    |FDSE     |    38|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:32 ; elapsed = 00:00:35 . Memory (MB): peak = 1675.199 ; gain = 1031.410
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 506 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:22 ; elapsed = 00:00:33 . Memory (MB): peak = 1675.199 ; gain = 948.879
+Synthesis Optimization Complete : Time (s): cpu = 00:00:32 ; elapsed = 00:00:35 . Memory (MB): peak = 1675.199 ; gain = 1031.410
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.029 . Memory (MB): peak = 1684.391 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 112 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1688.043 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 10 instances were transformed.
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 10 instances
+
+Synth Design complete | Checksum: b60313f5
+INFO: [Common 17-83] Releasing license: Synthesis
+143 Infos, 111 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:36 ; elapsed = 00:00:40 . Memory (MB): peak = 1688.043 ; gain = 1233.164
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1688.043 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'D:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.runs/bd_26df_mipi_csi2_tx_ctrl_0_0_synth_1/bd_26df_mipi_csi2_tx_ctrl_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP bd_26df_mipi_csi2_tx_ctrl_0_0, cache-ID = c3e157d2c432e39b
+INFO: [Coretcl 2-1174] Renamed 80 cell refs.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1688.043 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'D:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.runs/bd_26df_mipi_csi2_tx_ctrl_0_0_synth_1/bd_26df_mipi_csi2_tx_ctrl_0_0.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file bd_26df_mipi_csi2_tx_ctrl_0_0_utilization_synth.rpt -pb bd_26df_mipi_csi2_tx_ctrl_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Jan 13 10:10:10 2026...

@@ -1,0 +1,219 @@
+2023.1:
+ * Version 2.2 (Rev. 6)
+ * General: Added Support for future devices
+ * Revision change in one or more subcores
+
+2022.2.2:
+ * Version 2.2 (Rev. 5)
+ * No changes
+
+2022.2.1:
+ * Version 2.2 (Rev. 5)
+ * No changes
+
+2022.2:
+ * Version 2.2 (Rev. 5)
+ * Bug Fix: Fixed synthesis critical warnings with BPC=8bit configuration
+ * Other: Corrected the Line Rate support for the SBVB Package devices
+ * Revision change in one or more subcores
+
+2022.1.2:
+ * Version 2.2 (Rev. 4)
+ * No changes
+
+2022.1.1:
+ * Version 2.2 (Rev. 4)
+ * No changes
+
+2022.1:
+ * Version 2.2 (Rev. 4)
+ * Bug Fix: Removed instantiation of unused subcore proc_sys_rst instance.
+ * Revision change in one or more subcores
+
+2021.2.2:
+ * Version 2.2 (Rev. 3)
+ * No changes
+
+2021.2.1:
+ * Version 2.2 (Rev. 3)
+ * No changes
+
+2021.2:
+ * Version 2.2 (Rev. 3)
+ * General: Added support for Artix ultrascale plus devices
+ * Revision change in one or more subcores
+
+2021.1.1:
+ * Version 2.2 (Rev. 2)
+ * No changes
+
+2021.1:
+ * Version 2.2 (Rev. 2)
+ * Bug Fix: Fixed clock,data misalignment issue in Master mode for Versal families
+ * Feature Enhancement: Added YUV 422 10bit support
+ * Revision change in one or more subcores
+
+2020.3:
+ * Version 2.2 (Rev. 1)
+ * Revision change in one or more subcores
+
+2020.2.2:
+ * Version 2.2
+ * No changes
+
+2020.2.1:
+ * Version 2.2
+ * No changes
+
+2020.2:
+ * Version 2.2
+ * Bug Fix: Example testbench issues fixed
+ * Feature Enhancement: Allows higher line rate selection for 7series devices
+ * Feature Enhancement: Example design support added for versal devices
+ * Revision change in one or more subcores
+
+2020.1.1:
+ * Version 2.1
+ * No changes
+
+2020.1:
+ * Version 2.1
+ * Feature Enhancement: Added MIPI D-PHY v2.0 Specification support with limited line-rate support(up to 3.2G)
+ * Feature Enhancement: Added RAW16 , RAW20 Support
+ * Feature Enhancement: Added Support of equal bandwidth requirement of input and output interface for Effective Pixel widths >=32
+ * Revision change in one or more subcores
+
+2019.2.2:
+ * Version 2.0 (Rev. 7)
+ * No changes
+
+2019.2.1:
+ * Version 2.0 (Rev. 7)
+ * No changes
+
+2019.2:
+ * Version 2.0 (Rev. 7)
+ * Feature Enhancement: Added MIPI D-PHY v2.0 Specification support with limited line-rate support
+ * Other: Added support for Versal devices
+ * Revision change in one or more subcores
+
+2019.1.3:
+ * Version 2.0 (Rev. 6)
+ * No changes
+
+2019.1.2:
+ * Version 2.0 (Rev. 6)
+ * No changes
+
+2019.1.1:
+ * Version 2.0 (Rev. 6)
+ * Feature Enhancement: Added MIPI D-PHY v1.2 Specification support
+ * Revision change in one or more subcores
+
+2019.1:
+ * Version 2.0 (Rev. 5)
+ * New Feature: Added example design
+ * Revision change in one or more subcores
+
+2018.3.1:
+ * Version 2.0 (Rev. 4)
+ * No changes
+
+2018.3:
+ * Version 2.0 (Rev. 4)
+ * Feature Enhancement: For Effective Pixel width <= 32 , enhanced to support Equal Bandwith ratio on Input and Ouput interfaces
+ * Revision change in one or more subcores
+
+2018.2:
+ * Version 2.0 (Rev. 3)
+ * Revision change in one or more subcores
+
+2018.1:
+ * Version 2.0 (Rev. 2)
+ * Feature Enhancement: Frame End Generation support from Register based Configuration
+ * Other: Added support for additional 7 series devices
+ * Revision change in one or more subcores
+
+2017.4:
+ * Version 2.0 (Rev. 1)
+ * Feature Enhancement: Support for  Virtex7,Kintex7,Artix7,Zynq-7000 devices at Production status
+ * Revision change in one or more subcores
+
+2017.3:
+ * Version 2.0
+ * Port Change: Grouped *txp, *txn ports as *mipi_phy_if interface
+ * Bug Fix: MIPI CSI-2 Tx Controller 'controller ready' behaviour now consider MIPI D-PHY Initialization Completion
+ * Revision change in one or more subcores
+
+2017.2:
+ * Version 1.0 (Rev. 3)
+ * Bug Fix: Corrected License status from Included to Purchase in the IP Catalog GUI
+ * Feature Enhancement: Support for non-continuous clock mode
+ * Revision change in one or more subcores
+
+2017.1:
+ * Version 1.0 (Rev. 2)
+ * Bug Fix: Fixed the scenario when the Word-Count > Received Payload to safely process the packet
+ * Bug Fix: Fixed the Clock Lane Enable & Request resetting w.r.t Controller Reset
+ * Feature Enhancement: Updated 7-Series line rates
+ * Revision change in one or more subcores
+
+2016.4:
+ * Version 1.0 (Rev. 1)
+ * Bug Fix: Fixed the Word-count 0,1,2 issue in Lane Distribution Block for 3,4 lanes
+ * Bug Fix: Fixed the resetting of internal states in RGB888 Data Type interleaving case
+ * Revision change in one or more subcores
+
+2016.3:
+ * Version 1.0
+ * General: Initial release
+ * General: Support for 7-Series, Zynq 7000, UltraScale+, Zynq UltraScale+ MPSoC
+ * General: Subsystem with integrated MIPI DPHY Controller and CSI-2 Tx Controller.
+ * General: Support for 1 to 4 DPHY lanes
+ * General: AXI4-Stream and Navtive Video Input interface selection
+
+(c) Copyright 2016 - 2023 Xilinx, Inc. All rights reserved.
+
+This file contains confidential and proprietary information
+of Xilinx, Inc. and is protected under U.S. and
+international copyright and other intellectual property
+laws.
+
+DISCLAIMER
+This disclaimer is not a license and does not grant any
+rights to the materials distributed herewith. Except as
+otherwise provided in a valid license issued to you by
+Xilinx, and to the maximum extent permitted by applicable
+law: (1) THESE MATERIALS ARE MADE AVAILABLE "AS IS" AND
+WITH ALL FAULTS, AND XILINX HEREBY DISCLAIMS ALL WARRANTIES
+AND CONDITIONS, EXPRESS, IMPLIED, OR STATUTORY, INCLUDING
+BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, NON-
+INFRINGEMENT, OR FITNESS FOR ANY PARTICULAR PURPOSE; and
+(2) Xilinx shall not be liable (whether in contract or tort,
+including negligence, or under any other theory of
+liability) for any loss or damage of any kind or nature
+related to, arising under or in connection with these
+materials, including for any direct, or any indirect,
+special, incidental, or consequential loss or damage
+(including loss of data, profits, goodwill, or any type of
+loss or damage suffered as a result of any action brought
+by a third party) even if such damage or loss was
+reasonably foreseeable or Xilinx had been advised of the
+possibility of the same.
+
+CRITICAL APPLICATIONS
+Xilinx products are not designed or intended to be fail-
+safe, or for use in any application requiring fail-safe
+performance, such as life-support or safety devices or
+systems, Class III medical devices, nuclear facilities,
+applications related to the deployment of airbags, or any
+other applications that could lead to death, personal
+injury, or severe property or environmental damage
+(individually and collectively, "Critical
+Applications"). Customer assumes the sole risk and
+liability of any use of Xilinx products in Critical
+Applications, subject only to applicable laws and
+regulations governing limitations on product liability.
+
+THIS COPYRIGHT NOTICE AND DISCLAIMER MUST BE RETAINED AS
+PART OF THIS FILE AT ALL TIMES.

@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Tue Jan 13 10:09:10 2026
+# Process ID         : 56240
+# Current directory  : D:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.runs/seq_lut_synth_1
+# Command line       : vivado.exe -log seq_lut.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source seq_lut.tcl
+# Log file           : D:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.runs/seq_lut_synth_1/seq_lut.vds
+# Journal file       : D:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.runs/seq_lut_synth_1\vivado.jou
+# Running On         : work-dev
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26200
+# Processor Detail   : 12th Gen Intel(R) Core(TM) i7-12700
+# CPU Frequency      : 2112 MHz
+# CPU Physical cores : 12
+# CPU Logical cores  : 20
+# Host memory        : 34088 MB
+# Swap memory        : 10200 MB
+# Total Virtual      : 44289 MB
+# Available Virtual  : 5493 MB
+#-----------------------------------------------------------
+source seq_lut.tcl -notrace
