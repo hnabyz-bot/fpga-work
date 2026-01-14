@@ -1,0 +1,9 @@
+project:
+  name: fpga-work
+  description: ''
+  type: ''
+  locale: '{{LOCALE}}'
+  created_at: '2026-01-14T18:31:25.075722Z'
+  initialized: 'true'
+github:
+  profile_name: hnabyz2023@gmail.com
