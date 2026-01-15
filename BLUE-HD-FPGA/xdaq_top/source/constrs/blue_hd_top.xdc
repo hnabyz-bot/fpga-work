@@ -11,17 +11,63 @@ create_clock -period 20.000 -name MCLK_50M [get_ports MCLK_50M_p]
 # Generated Clocks (from Clock Wizard)
 # These will be automatically derived by Vivado from Clock Wizard
 
-# AFE2256 LVDS DCLK (14 channels)
-# NOTE: DCLK are NOT treated as system clocks - they are sampled as LVDS data
-# The deserializer uses internal clocking, not DCLK as a clock domain
-# This avoids the "insufficient clock-capable IOs" error (FPGA only has 12 CC pins)
+# AFE2256 LVDS DCLK (14 channels) - TI ROIC Interface
+# DCLK frequency: 2.34 MHz (derived from TI ROIC datasheet)
+# FCLK frequency: Same as DCLK, used for frame synchronization
+# NOTE: These clocks are asynchronous to the main system clock domain
 
-# LVDS Input Delays
-# Since DCLK is not a clock domain, we use simple false_path for these signals
-set_false_path -from [get_ports DCLKP_*]
-set_false_path -from [get_ports DCLKN_*]
-set_false_path -from [get_ports FCLKP_*]
-set_false_path -from [get_ports FCLKN_*]
+# Create clocks for 14 DCLK channels (2.34 MHz = 427.35 ns period)
+create_clock -period 427.350 -name DCLK_0 [get_ports DCLKP_0]
+create_clock -period 427.350 -name DCLK_1 [get_ports DCLKP_1]
+create_clock -period 427.350 -name DCLK_2 [get_ports DCLKP_2]
+create_clock -period 427.350 -name DCLK_3 [get_ports DCLKP_3]
+create_clock -period 427.350 -name DCLK_4 [get_ports DCLKP_4]
+create_clock -period 427.350 -name DCLK_5 [get_ports DCLKP_5]
+create_clock -period 427.350 -name DCLK_6 [get_ports DCLKP_6]
+create_clock -period 427.350 -name DCLK_7 [get_ports DCLKP_7]
+create_clock -period 427.350 -name DCLK_8 [get_ports DCLKP_8]
+create_clock -period 427.350 -name DCLK_9 [get_ports DCLKP_9]
+create_clock -period 427.350 -name DCLK_10 [get_ports DCLKP_10]
+create_clock -period 427.350 -name DCLK_11 [get_ports DCLKP_11]
+create_clock -period 427.350 -name DCLK_12 [get_ports DCLKP_12]
+create_clock -period 427.350 -name DCLK_13 [get_ports DCLKP_13]
+
+# Create clocks for 14 FCLK channels (frame clock)
+create_clock -period 427.350 -name FCLK_0 [get_ports FCLKP_0]
+create_clock -period 427.350 -name FCLK_1 [get_ports FCLKP_1]
+create_clock -period 427.350 -name FCLK_2 [get_ports FCLKP_2]
+create_clock -period 427.350 -name FCLK_3 [get_ports FCLKP_3]
+create_clock -period 427.350 -name FCLK_4 [get_ports FCLKP_4]
+create_clock -period 427.350 -name FCLK_5 [get_ports FCLKP_5]
+create_clock -period 427.350 -name FCLK_6 [get_ports FCLKP_6]
+create_clock -period 427.350 -name FCLK_7 [get_ports FCLKP_7]
+create_clock -period 427.350 -name FCLK_8 [get_ports FCLKP_8]
+create_clock -period 427.350 -name FCLK_9 [get_ports FCLKP_9]
+create_clock -period 427.350 -name FCLK_10 [get_ports FCLKP_10]
+create_clock -period 427.350 -name FCLK_11 [get_ports FCLKP_11]
+create_clock -period 427.350 -name FCLK_12 [get_ports FCLKP_12]
+create_clock -period 427.350 -name FCLK_13 [get_ports FCLKP_13]
+
+# Asynchronous Clock Groups
+# DCLK/FCLK channels are asynchronous to the main system clock and to each other
+set_clock_groups -asynchronous \
+    -group [get_clocks MCLK_50M] \
+    -group [get_clocks {DCLK_0 FCLK_0}] \
+    -group [get_clocks {DCLK_1 FCLK_1}] \
+    -group [get_clocks {DCLK_2 FCLK_2}] \
+    -group [get_clocks {DCLK_3 FCLK_3}] \
+    -group [get_clocks {DCLK_4 FCLK_4}] \
+    -group [get_clocks {DCLK_5 FCLK_5}] \
+    -group [get_clocks {DCLK_6 FCLK_6}] \
+    -group [get_clocks {DCLK_7 FCLK_7}] \
+    -group [get_clocks {DCLK_8 FCLK_8}] \
+    -group [get_clocks {DCLK_9 FCLK_9}] \
+    -group [get_clocks {DCLK_10 FCLK_10}] \
+    -group [get_clocks {DCLK_11 FCLK_11}] \
+    -group [get_clocks {DCLK_12 FCLK_12}] \
+    -group [get_clocks {DCLK_13 FCLK_13}]
+
+# LVDS Data Input - False path (data signals, not clocks)
 set_false_path -from [get_ports DOUTP_*]
 set_false_path -from [get_ports DOUTN_*]
 

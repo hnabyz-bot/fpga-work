@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="clk_ctrl_synth_1" LaunchPart="xc7a35tfgg484-1" LaunchTime="1768266546">
-  <File Type="REPORTS-TCL" Name="clk_ctrl_reports.tcl"/>
+  <File Type="RDS-DCP" Name="clk_ctrl.dcp"/>
+  <File Type="RDS-RDS" Name="clk_ctrl.vds"/>
   <File Type="RDS-UTIL" Name="clk_ctrl_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="clk_ctrl_utilization_synth.pb"/>
   <File Type="PA-TCL" Name="clk_ctrl.tcl"/>
-  <File Type="RDS-RDS" Name="clk_ctrl.vds"/>
-  <File Type="RDS-DCP" Name="clk_ctrl.dcp"/>
+  <File Type="REPORTS-TCL" Name="clk_ctrl_reports.tcl"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/clk_ctrl" RelGenDir="$PGENDIR/clk_ctrl">
     <File Path="$PPRDIR/../source/ip/clk_ctrl/clk_ctrl.xci">
       <FileInfo>
