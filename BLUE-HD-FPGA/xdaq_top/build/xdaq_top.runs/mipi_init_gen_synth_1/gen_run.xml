@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="mipi_init_gen_synth_1" LaunchPart="xc7a35tfgg484-1" LaunchTime="1768266546">
-  <File Type="RDS-DCP" Name="mipi_init_gen.dcp"/>
-  <File Type="RDS-RDS" Name="mipi_init_gen.vds"/>
+  <File Type="REPORTS-TCL" Name="mipi_init_gen_reports.tcl"/>
   <File Type="RDS-UTIL" Name="mipi_init_gen_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="mipi_init_gen_utilization_synth.pb"/>
   <File Type="PA-TCL" Name="mipi_init_gen.tcl"/>
-  <File Type="REPORTS-TCL" Name="mipi_init_gen_reports.tcl"/>
+  <File Type="RDS-RDS" Name="mipi_init_gen.vds"/>
+  <File Type="RDS-DCP" Name="mipi_init_gen.dcp"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/mipi_init_gen" RelGenDir="$PGENDIR/mipi_init_gen">
     <File Path="$PPRDIR/../source/hdl/csi2/ip/mipi_init_gen/mipi_init_gen.xci">
       <FileInfo>

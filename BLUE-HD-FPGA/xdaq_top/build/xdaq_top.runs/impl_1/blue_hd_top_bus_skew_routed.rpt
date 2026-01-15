@@ -1,8 +1,8 @@
-Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2024.2.2 (lin64) Build 6060944 Thu Mar 06 19:10:09 MST 2025
-| Date         : Thu Jan 15 12:49:24 2026
-| Host         : drlinux running 64-bit Ubuntu 22.04.5 LTS
+| Tool Version : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
+| Date         : Thu Jan 15 14:21:20 2026
+| Host         : work-dev running 64-bit major release  (build 9200)
 | Command      : report_bus_skew -warn_on_violation -file blue_hd_top_bus_skew_routed.rpt -pb blue_hd_top_bus_skew_routed.pb -rpx blue_hd_top_bus_skew_routed.rpx
 | Design       : blue_hd_top
 | Device       : 7a35t-fgg484
@@ -22,7 +22,7 @@ Table of Contents
 
 Id  Position  From                            To                              Corner  Requirement(ns)  Actual(ns)  Slack(ns)
 --  --------  ------------------------------  ------------------------------  ------  ---------------  ----------  ---------
-1   53        [get_cells [list {inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[0]} \
+1   51        [get_cells [list {inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[0]} \
           {inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[10]} \
           {inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[11]} \
           {inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[12]} \
@@ -48,8 +48,8 @@ Id  Position  From                            To                              Co
           {inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][7]} \
           {inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][8]} \
           {inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][9]}]]
-                                                                              Slow             10.000       0.979      9.021
-2   55        [get_cells [list {inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[0]} \
+                                                                              Slow             10.000       1.190      8.810
+2   53        [get_cells [list {inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[0]} \
           {inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[10]} \
           {inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[11]} \
           {inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[12]} \
@@ -75,8 +75,8 @@ Id  Position  From                            To                              Co
           {inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][7]} \
           {inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][8]} \
           {inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][9]}]]
-                                                                              Slow             10.000       0.954      9.046
-3   59        [get_cells [list {inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst/src_gray_ff_reg[0]} \
+                                                                              Slow             10.000       1.102      8.898
+3   57        [get_cells [list {inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst/src_gray_ff_reg[0]} \
           {inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst/src_gray_ff_reg[10]} \
           {inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst/src_gray_ff_reg[11]} \
           {inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst/src_gray_ff_reg[12]} \
@@ -104,7 +104,7 @@ Id  Position  From                            To                              Co
           {inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst/dest_graysync_ff_reg[0][7]} \
           {inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst/dest_graysync_ff_reg[0][8]} \
           {inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst/dest_graysync_ff_reg[0][9]}]]
-                                                                              Slow             10.000       0.927      9.073
+                                                                              Slow             10.000       1.072      8.928
 
 
 2. Bus Skew Report Per Constraint
@@ -141,31 +141,31 @@ Endpoints: 13
 
 From Clock            To Clock              Endpoint Pin                    Reference Pin                   Corner  Actual(ns)  Slack(ns)
 --------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
-div_clk_w_1           c0_clk_ctrl_1         inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][7]/D
+div_clk_w             c0_clk_ctrl           inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][9]/D
                                                                             inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][12]/D
-                                                                                                            Slow         0.979      9.021
+                                                                                                            Slow         1.190      8.810
 
 
-Slack (MET) :             9.021ns  (requirement - actual skew)
-  Endpoint Source:        inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[7]/C
-                            (rising edge-triggered cell FDRE clocked by div_clk_w_1)
-  Endpoint Destination:   inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][7]/D
-                            (rising edge-triggered cell FDRE clocked by c0_clk_ctrl_1)
+Slack (MET) :             8.810ns  (requirement - actual skew)
+  Endpoint Source:        inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[9]/C
+                            (rising edge-triggered cell FDRE clocked by div_clk_w)
+  Endpoint Destination:   inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][9]/D
+                            (rising edge-triggered cell FDRE clocked by c0_clk_ctrl)
   Reference Source:       inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[12]/C
-                            (rising edge-triggered cell FDRE clocked by div_clk_w_1)
+                            (rising edge-triggered cell FDRE clocked by div_clk_w)
   Reference Destination:  inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][12]/D
-                            (rising edge-triggered cell FDRE clocked by c0_clk_ctrl_1)
+                            (rising edge-triggered cell FDRE clocked by c0_clk_ctrl)
   Path Type:              Bus Skew (Max at Slow Process Corner)
   Requirement:            10.000ns
-  Endpoint Relative Delay:    1.154ns
-  Reference Relative Delay:  -0.168ns
-  Relative CRPR:              0.343ns
-  Actual Bus Skew:            0.979ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR)
+  Endpoint Relative Delay:    1.315ns
+  Reference Relative Delay:  -0.179ns
+  Relative CRPR:              0.304ns
+  Actual Bus Skew:            1.190ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR)
 
 Endpoint path:
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-                         (clock div_clk_w_1 rise edge)
+                         (clock div_clk_w rise edge)
                                                       0.000     0.000 r  
     L3                                                0.000     0.000 r  MCLK_50M_p (IN)
                          net (fo=0)                   0.000     0.000    clk_inst0/inst/clk_in1_p
@@ -175,20 +175,20 @@ Endpoint path:
                                                       0.089     2.434 r  clk_inst0/inst/mmcm_adv_inst/CLKOUT2
                          net (fo=1, routed)           1.661     4.095    clk_inst0/inst/dphy_clk_clk_ctrl
     BUFGCTRL_X0Y4        BUFG (Prop_bufg_I_O)         0.096     4.191 r  clk_inst0/inst/clkout3_buf/O
-                         net (fo=1247, routed)        1.563     5.754    inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_dphy_0/inst/inst/bd_26df_mipi_dphy_0_0_tx_support_i/master_tx.bd_26df_mipi_dphy_0_0_tx_clock_module_support_i/bd_26df_mipi_dphy_0_0_clock_module_tx_i/inst/mmcm_clk_in
+                         net (fo=1248, routed)        1.563     5.754    inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_dphy_0/inst/inst/bd_26df_mipi_dphy_0_0_tx_support_i/master_tx.bd_26df_mipi_dphy_0_0_tx_clock_module_support_i/bd_26df_mipi_dphy_0_0_clock_module_tx_i/inst/mmcm_clk_in
     MMCME2_ADV_X1Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
                                                      -3.318     2.436 r  inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_dphy_0/inst/inst/bd_26df_mipi_dphy_0_0_tx_support_i/master_tx.bd_26df_mipi_dphy_0_0_tx_clock_module_support_i/bd_26df_mipi_dphy_0_0_clock_module_tx_i/inst/mmcm_adv_inst/CLKOUT1
                          net (fo=3, routed)           1.025     3.461    inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_dphy_0/inst/inst/bd_26df_mipi_dphy_0_0_tx_support_i/master_tx.bd_26df_mipi_dphy_0_0_tx_clock_module_support_i/serial_clk90
     BUFR_X1Y6            BUFR (Prop_bufr_I_O)         0.982     4.443 r  inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_dphy_0/inst/inst/bd_26df_mipi_dphy_0_0_tx_support_i/master_tx.bd_26df_mipi_dphy_0_0_tx_clock_module_support_i/div_clk90_gen/O
-                         net (fo=951, routed)         0.804     5.247    inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_clk
-    SLICE_X56Y87         FDRE                                         r  inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[7]/C
+                         net (fo=951, routed)         0.791     5.234    inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_clk
+    SLICE_X52Y75         FDRE                                         r  inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[9]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X56Y87         FDRE (Prop_fdre_C_Q)         0.478     5.725 r  inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[7]/Q
-                         net (fo=1, routed)           0.817     6.542    inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/async_path[7]
-    SLICE_X60Y88         FDRE                                         r  inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][7]/D
+    SLICE_X52Y75         FDRE (Prop_fdre_C_Q)         0.478     5.712 r  inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[9]/Q
+                         net (fo=1, routed)           0.857     6.569    inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/async_path[9]
+    SLICE_X53Y75         FDRE                                         r  inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][9]/D
   -------------------------------------------------------------------    -------------------
 
-                         (clock c0_clk_ctrl_1 rise edge)
+                         (clock c0_clk_ctrl rise edge)
                                                       0.000     0.000 r  
     L3                                                0.000     0.000 r  MCLK_50M_p (IN)
                          net (fo=0)                   0.000     0.000    clk_inst0/inst/clk_in1_p
@@ -198,20 +198,20 @@ Endpoint path:
                                                       0.084     2.307 r  clk_inst0/inst/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           1.581     3.888    clk_inst0/inst/c0_clk_ctrl
     BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.091     3.979 r  clk_inst0/inst/clkout1_buf/O
-                         net (fo=12382, routed)       1.505     5.484    inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_clk
-    SLICE_X60Y88         FDRE                                         r  inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][7]/C
-                         clock pessimism              0.127     5.610    
-    SLICE_X60Y88         FDRE (Setup_fdre_C_D)       -0.222     5.388    inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][7]
+                         net (fo=12375, routed)       1.425     5.404    inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_clk
+    SLICE_X53Y75         FDRE                                         r  inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][9]/C
+                         clock pessimism              0.127     5.530    
+    SLICE_X53Y75         FDRE (Setup_fdre_C_D)       -0.276     5.254    inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][9]
   -------------------------------------------------------------------
-                         data arrival                           6.542    
-                         clock arrival                          5.388    
+                         data arrival                           6.569    
+                         clock arrival                          5.254    
   -------------------------------------------------------------------
-                         relative delay                         1.154    
+                         relative delay                         1.315    
 
 Reference path:
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-                         (clock div_clk_w_1 rise edge)
+                         (clock div_clk_w rise edge)
                                                       0.000     0.000 r  
     L3                                                0.000     0.000 r  MCLK_50M_p (IN)
                          net (fo=0)                   0.000     0.000    clk_inst0/inst/clk_in1_p
@@ -221,20 +221,20 @@ Reference path:
                                                       0.084     2.307 r  clk_inst0/inst/mmcm_adv_inst/CLKOUT2
                          net (fo=1, routed)           1.581     3.888    clk_inst0/inst/dphy_clk_clk_ctrl
     BUFGCTRL_X0Y4        BUFG (Prop_bufg_I_O)         0.091     3.979 r  clk_inst0/inst/clkout3_buf/O
-                         net (fo=1247, routed)        1.447     5.426    inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_dphy_0/inst/inst/bd_26df_mipi_dphy_0_0_tx_support_i/master_tx.bd_26df_mipi_dphy_0_0_tx_clock_module_support_i/bd_26df_mipi_dphy_0_0_clock_module_tx_i/inst/mmcm_clk_in
+                         net (fo=1248, routed)        1.447     5.426    inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_dphy_0/inst/inst/bd_26df_mipi_dphy_0_0_tx_support_i/master_tx.bd_26df_mipi_dphy_0_0_tx_clock_module_support_i/bd_26df_mipi_dphy_0_0_clock_module_tx_i/inst/mmcm_clk_in
     MMCME2_ADV_X1Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
                                                      -3.116     2.310 r  inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_dphy_0/inst/inst/bd_26df_mipi_dphy_0_0_tx_support_i/master_tx.bd_26df_mipi_dphy_0_0_tx_clock_module_support_i/bd_26df_mipi_dphy_0_0_clock_module_tx_i/inst/mmcm_adv_inst/CLKOUT1
                          net (fo=3, routed)           0.960     3.270    inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_dphy_0/inst/inst/bd_26df_mipi_dphy_0_0_tx_support_i/master_tx.bd_26df_mipi_dphy_0_0_tx_clock_module_support_i/serial_clk90
     BUFR_X1Y6            BUFR (Prop_bufr_I_O)         0.918     4.188 r  inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_dphy_0/inst/inst/bd_26df_mipi_dphy_0_0_tx_support_i/master_tx.bd_26df_mipi_dphy_0_0_tx_clock_module_support_i/div_clk90_gen/O
-                         net (fo=951, routed)         0.710     4.898    inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_clk
-    SLICE_X59Y89         FDRE                                         r  inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[12]/C
+                         net (fo=951, routed)         0.698     4.886    inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_clk
+    SLICE_X59Y77         FDRE                                         r  inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[12]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X59Y89         FDRE (Prop_fdre_C_Q)         0.367     5.265 r  inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[12]/Q
-                         net (fo=1, routed)           0.486     5.751    inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/async_path[12]
-    SLICE_X60Y88         FDRE                                         r  inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][12]/D
+    SLICE_X59Y77         FDRE (Prop_fdre_C_Q)         0.367     5.253 r  inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[12]/Q
+                         net (fo=1, routed)           0.413     5.666    inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/async_path[12]
+    SLICE_X58Y78         FDRE                                         r  inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][12]/D
   -------------------------------------------------------------------    -------------------
 
-                         (clock c0_clk_ctrl_1 rise edge)
+                         (clock c0_clk_ctrl rise edge)
                                                       0.000     0.000 r  
     L3                                                0.000     0.000 r  MCLK_50M_p (IN)
                          net (fo=0)                   0.000     0.000    clk_inst0/inst/clk_in1_p
@@ -244,15 +244,15 @@ Reference path:
                                                       0.089     2.434 r  clk_inst0/inst/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           1.661     4.095    clk_inst0/inst/c0_clk_ctrl
     BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.096     4.191 r  clk_inst0/inst/clkout1_buf/O
-                         net (fo=12382, routed)       1.622     5.813    inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_clk
-    SLICE_X60Y88         FDRE                                         r  inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][12]/C
-                         clock pessimism             -0.127     5.686    
-    SLICE_X60Y88         FDRE (Hold_fdre_C_D)         0.233     5.919    inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][12]
+                         net (fo=12375, routed)       1.611     5.802    inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_clk
+    SLICE_X58Y78         FDRE                                         r  inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][12]/C
+                         clock pessimism             -0.127     5.675    
+    SLICE_X58Y78         FDRE (Hold_fdre_C_D)         0.169     5.844    inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][12]
   -------------------------------------------------------------------
-                         data arrival                           5.751    
-                         clock arrival                          5.919    
+                         data arrival                           5.666    
+                         clock arrival                          5.844    
   -------------------------------------------------------------------
-                         relative delay                        -0.168    
+                         relative delay                        -0.179    
 
 
 
@@ -287,31 +287,31 @@ Endpoints: 13
 
 From Clock            To Clock              Endpoint Pin                    Reference Pin                   Corner  Actual(ns)  Slack(ns)
 --------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
-c0_clk_ctrl_1         div_clk_w_1           inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/D
-                                                                            inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/D
-                                                                                                            Slow         0.954      9.046
+c0_clk_ctrl           div_clk_w             inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][9]/D
+                                                                            inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][6]/D
+                                                                                                            Slow         1.102      8.898
 
 
-Slack (MET) :             9.046ns  (requirement - actual skew)
-  Endpoint Source:        inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[1]/C
-                            (rising edge-triggered cell FDRE clocked by c0_clk_ctrl_1)
-  Endpoint Destination:   inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/D
-                            (rising edge-triggered cell FDRE clocked by div_clk_w_1)
-  Reference Source:       inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[0]/C
-                            (rising edge-triggered cell FDRE clocked by c0_clk_ctrl_1)
-  Reference Destination:  inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/D
-                            (rising edge-triggered cell FDRE clocked by div_clk_w_1)
+Slack (MET) :             8.898ns  (requirement - actual skew)
+  Endpoint Source:        inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[9]/C
+                            (rising edge-triggered cell FDRE clocked by c0_clk_ctrl)
+  Endpoint Destination:   inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][9]/D
+                            (rising edge-triggered cell FDRE clocked by div_clk_w)
+  Reference Source:       inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[6]/C
+                            (rising edge-triggered cell FDRE clocked by c0_clk_ctrl)
+  Reference Destination:  inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][6]/D
+                            (rising edge-triggered cell FDRE clocked by div_clk_w)
   Path Type:              Bus Skew (Max at Slow Process Corner)
   Requirement:            10.000ns
-  Endpoint Relative Delay:    2.189ns
-  Reference Relative Delay:   0.896ns
-  Relative CRPR:              0.340ns
-  Actual Bus Skew:            0.954ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR)
+  Endpoint Relative Delay:    2.255ns
+  Reference Relative Delay:   0.849ns
+  Relative CRPR:              0.304ns
+  Actual Bus Skew:            1.102ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR)
 
 Endpoint path:
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-                         (clock c0_clk_ctrl_1 rise edge)
+                         (clock c0_clk_ctrl rise edge)
                                                       0.000     0.000 r  
     L3                                                0.000     0.000 r  MCLK_50M_p (IN)
                          net (fo=0)                   0.000     0.000    clk_inst0/inst/clk_in1_p
@@ -321,15 +321,15 @@ Endpoint path:
                                                       0.089     2.434 r  clk_inst0/inst/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           1.661     4.095    clk_inst0/inst/c0_clk_ctrl
     BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.096     4.191 r  clk_inst0/inst/clkout1_buf/O
-                         net (fo=12382, routed)       1.540     5.731    inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_clk
-    SLICE_X48Y76         FDRE                                         r  inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[1]/C
+                         net (fo=12375, routed)       1.539     5.730    inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_clk
+    SLICE_X56Y74         FDRE                                         r  inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[9]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X48Y76         FDRE (Prop_fdre_C_Q)         0.419     6.150 r  inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[1]/Q
-                         net (fo=1, routed)           0.849     6.999    inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/async_path[1]
-    SLICE_X49Y77         FDRE                                         r  inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/D
+    SLICE_X56Y74         FDRE (Prop_fdre_C_Q)         0.478     6.208 r  inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[9]/Q
+                         net (fo=1, routed)           0.902     7.110    inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/async_path[9]
+    SLICE_X56Y73         FDRE                                         r  inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][9]/D
   -------------------------------------------------------------------    -------------------
 
-                         (clock div_clk_w_1 rise edge)
+                         (clock div_clk_w rise edge)
                                                       0.000     0.000 r  
     L3                                                0.000     0.000 r  MCLK_50M_p (IN)
                          net (fo=0)                   0.000     0.000    clk_inst0/inst/clk_in1_p
@@ -339,25 +339,25 @@ Endpoint path:
                                                       0.084     2.307 r  clk_inst0/inst/mmcm_adv_inst/CLKOUT2
                          net (fo=1, routed)           1.581     3.888    clk_inst0/inst/dphy_clk_clk_ctrl
     BUFGCTRL_X0Y4        BUFG (Prop_bufg_I_O)         0.091     3.979 r  clk_inst0/inst/clkout3_buf/O
-                         net (fo=1247, routed)        1.447     5.426    inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_dphy_0/inst/inst/bd_26df_mipi_dphy_0_0_tx_support_i/master_tx.bd_26df_mipi_dphy_0_0_tx_clock_module_support_i/bd_26df_mipi_dphy_0_0_clock_module_tx_i/inst/mmcm_clk_in
+                         net (fo=1248, routed)        1.447     5.426    inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_dphy_0/inst/inst/bd_26df_mipi_dphy_0_0_tx_support_i/master_tx.bd_26df_mipi_dphy_0_0_tx_clock_module_support_i/bd_26df_mipi_dphy_0_0_clock_module_tx_i/inst/mmcm_clk_in
     MMCME2_ADV_X1Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
                                                      -3.116     2.310 r  inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_dphy_0/inst/inst/bd_26df_mipi_dphy_0_0_tx_support_i/master_tx.bd_26df_mipi_dphy_0_0_tx_clock_module_support_i/bd_26df_mipi_dphy_0_0_clock_module_tx_i/inst/mmcm_adv_inst/CLKOUT1
                          net (fo=3, routed)           0.960     3.270    inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_dphy_0/inst/inst/bd_26df_mipi_dphy_0_0_tx_support_i/master_tx.bd_26df_mipi_dphy_0_0_tx_clock_module_support_i/serial_clk90
     BUFR_X1Y6            BUFR (Prop_bufr_I_O)         0.918     4.188 r  inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_dphy_0/inst/inst/bd_26df_mipi_dphy_0_0_tx_support_i/master_tx.bd_26df_mipi_dphy_0_0_tx_clock_module_support_i/div_clk90_gen/O
-                         net (fo=951, routed)         0.760     4.948    inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_clk
-    SLICE_X49Y77         FDRE                                         r  inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/C
-                         clock pessimism              0.127     5.075    
-    SLICE_X49Y77         FDRE (Setup_fdre_C_D)       -0.265     4.810    inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]
+                         net (fo=951, routed)         0.756     4.944    inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_clk
+    SLICE_X56Y73         FDRE                                         r  inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][9]/C
+                         clock pessimism              0.127     5.071    
+    SLICE_X56Y73         FDRE (Setup_fdre_C_D)       -0.216     4.855    inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][9]
   -------------------------------------------------------------------
-                         data arrival                           6.999    
-                         clock arrival                          4.810    
+                         data arrival                           7.110    
+                         clock arrival                          4.855    
   -------------------------------------------------------------------
-                         relative delay                         2.189    
+                         relative delay                         2.255    
 
 Reference path:
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-                         (clock c0_clk_ctrl_1 rise edge)
+                         (clock c0_clk_ctrl rise edge)
                                                       0.000     0.000 r  
     L3                                                0.000     0.000 r  MCLK_50M_p (IN)
                          net (fo=0)                   0.000     0.000    clk_inst0/inst/clk_in1_p
@@ -367,15 +367,15 @@ Reference path:
                                                       0.084     2.307 r  clk_inst0/inst/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           1.581     3.888    clk_inst0/inst/c0_clk_ctrl
     BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.091     3.979 r  clk_inst0/inst/clkout1_buf/O
-                         net (fo=12382, routed)       1.426     5.405    inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_clk
-    SLICE_X48Y76         FDRE                                         r  inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[0]/C
+                         net (fo=12375, routed)       1.425     5.404    inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_clk
+    SLICE_X53Y75         FDRE                                         r  inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[6]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X48Y76         FDRE (Prop_fdre_C_Q)         0.367     5.772 r  inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[0]/Q
-                         net (fo=1, routed)           0.404     6.176    inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/async_path[0]
-    SLICE_X48Y77         FDRE                                         r  inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/D
+    SLICE_X53Y75         FDRE (Prop_fdre_C_Q)         0.367     5.771 r  inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[6]/Q
+                         net (fo=1, routed)           0.414     6.184    inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/async_path[6]
+    SLICE_X54Y75         FDRE                                         r  inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][6]/D
   -------------------------------------------------------------------    -------------------
 
-                         (clock div_clk_w_1 rise edge)
+                         (clock div_clk_w rise edge)
                                                       0.000     0.000 r  
     L3                                                0.000     0.000 r  MCLK_50M_p (IN)
                          net (fo=0)                   0.000     0.000    clk_inst0/inst/clk_in1_p
@@ -385,20 +385,20 @@ Reference path:
                                                       0.089     2.434 r  clk_inst0/inst/mmcm_adv_inst/CLKOUT2
                          net (fo=1, routed)           1.661     4.095    clk_inst0/inst/dphy_clk_clk_ctrl
     BUFGCTRL_X0Y4        BUFG (Prop_bufg_I_O)         0.096     4.191 r  clk_inst0/inst/clkout3_buf/O
-                         net (fo=1247, routed)        1.563     5.754    inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_dphy_0/inst/inst/bd_26df_mipi_dphy_0_0_tx_support_i/master_tx.bd_26df_mipi_dphy_0_0_tx_clock_module_support_i/bd_26df_mipi_dphy_0_0_clock_module_tx_i/inst/mmcm_clk_in
+                         net (fo=1248, routed)        1.563     5.754    inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_dphy_0/inst/inst/bd_26df_mipi_dphy_0_0_tx_support_i/master_tx.bd_26df_mipi_dphy_0_0_tx_clock_module_support_i/bd_26df_mipi_dphy_0_0_clock_module_tx_i/inst/mmcm_clk_in
     MMCME2_ADV_X1Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
                                                      -3.318     2.436 r  inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_dphy_0/inst/inst/bd_26df_mipi_dphy_0_0_tx_support_i/master_tx.bd_26df_mipi_dphy_0_0_tx_clock_module_support_i/bd_26df_mipi_dphy_0_0_clock_module_tx_i/inst/mmcm_adv_inst/CLKOUT1
                          net (fo=3, routed)           1.025     3.461    inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_dphy_0/inst/inst/bd_26df_mipi_dphy_0_0_tx_support_i/master_tx.bd_26df_mipi_dphy_0_0_tx_clock_module_support_i/serial_clk90
     BUFR_X1Y6            BUFR (Prop_bufr_I_O)         0.982     4.443 r  inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_dphy_0/inst/inst/bd_26df_mipi_dphy_0_0_tx_support_i/master_tx.bd_26df_mipi_dphy_0_0_tx_clock_module_support_i/div_clk90_gen/O
-                         net (fo=951, routed)         0.794     5.237    inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_clk
-    SLICE_X48Y77         FDRE                                         r  inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/C
-                         clock pessimism             -0.127     5.110    
-    SLICE_X48Y77         FDRE (Hold_fdre_C_D)         0.170     5.280    inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]
+                         net (fo=951, routed)         0.789     5.232    inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_clk
+    SLICE_X54Y75         FDRE                                         r  inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][6]/C
+                         clock pessimism             -0.127     5.105    
+    SLICE_X54Y75         FDRE (Hold_fdre_C_D)         0.230     5.335    inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][6]
   -------------------------------------------------------------------
-                         data arrival                           6.176    
-                         clock arrival                          5.280    
+                         data arrival                           6.184    
+                         clock arrival                          5.335    
   -------------------------------------------------------------------
-                         relative delay                         0.896    
+                         relative delay                         0.849    
 
 
 
@@ -435,31 +435,31 @@ Endpoints: 14
 
 From Clock            To Clock              Endpoint Pin                    Reference Pin                   Corner  Actual(ns)  Slack(ns)
 --------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
-c0_clk_ctrl_1         div_clk_w_1           inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst/dest_graysync_ff_reg[0][4]/D
-                                                                            inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst/dest_graysync_ff_reg[0][8]/D
-                                                                                                            Slow         0.927      9.073
+c0_clk_ctrl           div_clk_w             inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst/dest_graysync_ff_reg[0][5]/D
+                                                                            inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst/dest_graysync_ff_reg[0][10]/D
+                                                                                                            Slow         1.072      8.928
 
 
-Slack (MET) :             9.073ns  (requirement - actual skew)
-  Endpoint Source:        inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst/src_gray_ff_reg[4]/C
-                            (rising edge-triggered cell FDRE clocked by c0_clk_ctrl_1)
-  Endpoint Destination:   inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst/dest_graysync_ff_reg[0][4]/D
-                            (rising edge-triggered cell FDRE clocked by div_clk_w_1)
-  Reference Source:       inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst/src_gray_ff_reg[8]/C
-                            (rising edge-triggered cell FDRE clocked by c0_clk_ctrl_1)
-  Reference Destination:  inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst/dest_graysync_ff_reg[0][8]/D
-                            (rising edge-triggered cell FDRE clocked by div_clk_w_1)
+Slack (MET) :             8.928ns  (requirement - actual skew)
+  Endpoint Source:        inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst/src_gray_ff_reg[5]/C
+                            (rising edge-triggered cell FDRE clocked by c0_clk_ctrl)
+  Endpoint Destination:   inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst/dest_graysync_ff_reg[0][5]/D
+                            (rising edge-triggered cell FDRE clocked by div_clk_w)
+  Reference Source:       inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst/src_gray_ff_reg[10]/C
+                            (rising edge-triggered cell FDRE clocked by c0_clk_ctrl)
+  Reference Destination:  inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst/dest_graysync_ff_reg[0][10]/D
+                            (rising edge-triggered cell FDRE clocked by div_clk_w)
   Path Type:              Bus Skew (Max at Slow Process Corner)
   Requirement:            10.000ns
-  Endpoint Relative Delay:    2.177ns
-  Reference Relative Delay:   0.946ns
+  Endpoint Relative Delay:    2.301ns
+  Reference Relative Delay:   0.925ns
   Relative CRPR:              0.304ns
-  Actual Bus Skew:            0.927ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR)
+  Actual Bus Skew:            1.072ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR)
 
 Endpoint path:
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-                         (clock c0_clk_ctrl_1 rise edge)
+                         (clock c0_clk_ctrl rise edge)
                                                       0.000     0.000 r  
     L3                                                0.000     0.000 r  MCLK_50M_p (IN)
                          net (fo=0)                   0.000     0.000    clk_inst0/inst/clk_in1_p
@@ -469,15 +469,15 @@ Endpoint path:
                                                       0.089     2.434 r  clk_inst0/inst/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           1.661     4.095    clk_inst0/inst/c0_clk_ctrl
     BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.096     4.191 r  clk_inst0/inst/clkout1_buf/O
-                         net (fo=12382, routed)       1.542     5.733    inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst/src_clk
-    SLICE_X50Y77         FDRE                                         r  inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst/src_gray_ff_reg[4]/C
+                         net (fo=12375, routed)       1.539     5.730    inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst/src_clk
+    SLICE_X51Y75         FDRE                                         r  inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst/src_gray_ff_reg[5]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X50Y77         FDRE (Prop_fdre_C_Q)         0.518     6.251 r  inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst/src_gray_ff_reg[4]/Q
-                         net (fo=1, routed)           0.905     7.156    inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst/async_path[4]
-    SLICE_X49Y77         FDRE                                         r  inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst/dest_graysync_ff_reg[0][4]/D
+    SLICE_X51Y75         FDRE (Prop_fdre_C_Q)         0.419     6.149 r  inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst/src_gray_ff_reg[5]/Q
+                         net (fo=1, routed)           1.008     7.157    inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst/async_path[5]
+    SLICE_X50Y75         FDRE                                         r  inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst/dest_graysync_ff_reg[0][5]/D
   -------------------------------------------------------------------    -------------------
 
-                         (clock div_clk_w_1 rise edge)
+                         (clock div_clk_w rise edge)
                                                       0.000     0.000 r  
     L3                                                0.000     0.000 r  MCLK_50M_p (IN)
                          net (fo=0)                   0.000     0.000    clk_inst0/inst/clk_in1_p
@@ -487,25 +487,25 @@ Endpoint path:
                                                       0.084     2.307 r  clk_inst0/inst/mmcm_adv_inst/CLKOUT2
                          net (fo=1, routed)           1.581     3.888    clk_inst0/inst/dphy_clk_clk_ctrl
     BUFGCTRL_X0Y4        BUFG (Prop_bufg_I_O)         0.091     3.979 r  clk_inst0/inst/clkout3_buf/O
-                         net (fo=1247, routed)        1.447     5.426    inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_dphy_0/inst/inst/bd_26df_mipi_dphy_0_0_tx_support_i/master_tx.bd_26df_mipi_dphy_0_0_tx_clock_module_support_i/bd_26df_mipi_dphy_0_0_clock_module_tx_i/inst/mmcm_clk_in
+                         net (fo=1248, routed)        1.447     5.426    inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_dphy_0/inst/inst/bd_26df_mipi_dphy_0_0_tx_support_i/master_tx.bd_26df_mipi_dphy_0_0_tx_clock_module_support_i/bd_26df_mipi_dphy_0_0_clock_module_tx_i/inst/mmcm_clk_in
     MMCME2_ADV_X1Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
                                                      -3.116     2.310 r  inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_dphy_0/inst/inst/bd_26df_mipi_dphy_0_0_tx_support_i/master_tx.bd_26df_mipi_dphy_0_0_tx_clock_module_support_i/bd_26df_mipi_dphy_0_0_clock_module_tx_i/inst/mmcm_adv_inst/CLKOUT1
                          net (fo=3, routed)           0.960     3.270    inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_dphy_0/inst/inst/bd_26df_mipi_dphy_0_0_tx_support_i/master_tx.bd_26df_mipi_dphy_0_0_tx_clock_module_support_i/serial_clk90
     BUFR_X1Y6            BUFR (Prop_bufr_I_O)         0.918     4.188 r  inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_dphy_0/inst/inst/bd_26df_mipi_dphy_0_0_tx_support_i/master_tx.bd_26df_mipi_dphy_0_0_tx_clock_module_support_i/div_clk90_gen/O
-                         net (fo=951, routed)         0.760     4.948    inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst/dest_clk
-    SLICE_X49Y77         FDRE                                         r  inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst/dest_graysync_ff_reg[0][4]/C
-                         clock pessimism              0.127     5.075    
-    SLICE_X49Y77         FDRE (Setup_fdre_C_D)       -0.095     4.980    inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst/dest_graysync_ff_reg[0][4]
+                         net (fo=951, routed)         0.756     4.944    inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst/dest_clk
+    SLICE_X50Y75         FDRE                                         r  inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst/dest_graysync_ff_reg[0][5]/C
+                         clock pessimism              0.127     5.071    
+    SLICE_X50Y75         FDRE (Setup_fdre_C_D)       -0.215     4.856    inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst/dest_graysync_ff_reg[0][5]
   -------------------------------------------------------------------
-                         data arrival                           7.156    
-                         clock arrival                          4.980    
+                         data arrival                           7.157    
+                         clock arrival                          4.856    
   -------------------------------------------------------------------
-                         relative delay                         2.177    
+                         relative delay                         2.301    
 
 Reference path:
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-                         (clock c0_clk_ctrl_1 rise edge)
+                         (clock c0_clk_ctrl rise edge)
                                                       0.000     0.000 r  
     L3                                                0.000     0.000 r  MCLK_50M_p (IN)
                          net (fo=0)                   0.000     0.000    clk_inst0/inst/clk_in1_p
@@ -515,15 +515,15 @@ Reference path:
                                                       0.084     2.307 r  clk_inst0/inst/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           1.581     3.888    clk_inst0/inst/c0_clk_ctrl
     BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.091     3.979 r  clk_inst0/inst/clkout1_buf/O
-                         net (fo=12382, routed)       1.429     5.408    inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst/src_clk
-    SLICE_X48Y78         FDRE                                         r  inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst/src_gray_ff_reg[8]/C
+                         net (fo=12375, routed)       1.426     5.405    inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst/src_clk
+    SLICE_X49Y73         FDRE                                         r  inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst/src_gray_ff_reg[10]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X48Y78         FDRE (Prop_fdre_C_Q)         0.367     5.775 r  inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst/src_gray_ff_reg[8]/Q
-                         net (fo=1, routed)           0.456     6.230    inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst/async_path[8]
-    SLICE_X48Y79         FDRE                                         r  inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst/dest_graysync_ff_reg[0][8]/D
+    SLICE_X49Y73         FDRE (Prop_fdre_C_Q)         0.367     5.772 r  inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst/src_gray_ff_reg[10]/Q
+                         net (fo=1, routed)           0.431     6.202    inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst/async_path[10]
+    SLICE_X49Y74         FDRE                                         r  inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst/dest_graysync_ff_reg[0][10]/D
   -------------------------------------------------------------------    -------------------
 
-                         (clock div_clk_w_1 rise edge)
+                         (clock div_clk_w rise edge)
                                                       0.000     0.000 r  
     L3                                                0.000     0.000 r  MCLK_50M_p (IN)
                          net (fo=0)                   0.000     0.000    clk_inst0/inst/clk_in1_p
@@ -533,20 +533,20 @@ Reference path:
                                                       0.089     2.434 r  clk_inst0/inst/mmcm_adv_inst/CLKOUT2
                          net (fo=1, routed)           1.661     4.095    clk_inst0/inst/dphy_clk_clk_ctrl
     BUFGCTRL_X0Y4        BUFG (Prop_bufg_I_O)         0.096     4.191 r  clk_inst0/inst/clkout3_buf/O
-                         net (fo=1247, routed)        1.563     5.754    inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_dphy_0/inst/inst/bd_26df_mipi_dphy_0_0_tx_support_i/master_tx.bd_26df_mipi_dphy_0_0_tx_clock_module_support_i/bd_26df_mipi_dphy_0_0_clock_module_tx_i/inst/mmcm_clk_in
+                         net (fo=1248, routed)        1.563     5.754    inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_dphy_0/inst/inst/bd_26df_mipi_dphy_0_0_tx_support_i/master_tx.bd_26df_mipi_dphy_0_0_tx_clock_module_support_i/bd_26df_mipi_dphy_0_0_clock_module_tx_i/inst/mmcm_clk_in
     MMCME2_ADV_X1Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
                                                      -3.318     2.436 r  inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_dphy_0/inst/inst/bd_26df_mipi_dphy_0_0_tx_support_i/master_tx.bd_26df_mipi_dphy_0_0_tx_clock_module_support_i/bd_26df_mipi_dphy_0_0_clock_module_tx_i/inst/mmcm_adv_inst/CLKOUT1
                          net (fo=3, routed)           1.025     3.461    inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_dphy_0/inst/inst/bd_26df_mipi_dphy_0_0_tx_support_i/master_tx.bd_26df_mipi_dphy_0_0_tx_clock_module_support_i/serial_clk90
     BUFR_X1Y6            BUFR (Prop_bufr_I_O)         0.982     4.443 r  inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_dphy_0/inst/inst/bd_26df_mipi_dphy_0_0_tx_support_i/master_tx.bd_26df_mipi_dphy_0_0_tx_clock_module_support_i/div_clk90_gen/O
-                         net (fo=951, routed)         0.798     5.241    inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst/dest_clk
-    SLICE_X48Y79         FDRE                                         r  inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst/dest_graysync_ff_reg[0][8]/C
-                         clock pessimism             -0.127     5.114    
-    SLICE_X48Y79         FDRE (Hold_fdre_C_D)         0.171     5.285    inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst/dest_graysync_ff_reg[0][8]
+                         net (fo=951, routed)         0.791     5.234    inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst/dest_clk
+    SLICE_X49Y74         FDRE                                         r  inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst/dest_graysync_ff_reg[0][10]/C
+                         clock pessimism             -0.127     5.107    
+    SLICE_X49Y74         FDRE (Hold_fdre_C_D)         0.170     5.277    inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_csi2_tx_ctrl_0/inst/clock_cross_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst/dest_graysync_ff_reg[0][10]
   -------------------------------------------------------------------
-                         data arrival                           6.230    
-                         clock arrival                          5.285    
+                         data arrival                           6.202    
+                         clock arrival                          5.277    
   -------------------------------------------------------------------
-                         relative delay                         0.946    
+                         relative delay                         0.925    
 
 
 

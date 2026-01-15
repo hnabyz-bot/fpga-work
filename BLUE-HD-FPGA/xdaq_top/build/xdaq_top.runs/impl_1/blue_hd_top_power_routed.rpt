@@ -1,8 +1,8 @@
-Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version     : Vivado v.2024.2.2 (lin64) Build 6060944 Thu Mar 06 19:10:09 MST 2025
-| Date             : Thu Jan 15 12:49:26 2026
-| Host             : drlinux running 64-bit Ubuntu 22.04.5 LTS
+| Tool Version     : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
+| Date             : Thu Jan 15 14:21:19 2026
+| Host             : work-dev running 64-bit major release  (build 9200)
 | Command          : report_power -file blue_hd_top_power_routed.rpt -pb blue_hd_top_power_summary_routed.pb -rpx blue_hd_top_power_routed.rpx
 | Design           : blue_hd_top
 | Device           : xc7a35tfgg484-1
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.586        |
+| Total On-Chip Power (W)  | 0.552        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.513        |
+| Dynamic (W)              | 0.479        |
 | Device Static (W)        | 0.073        |
 | Effective TJA (C/W)      | 2.8          |
 | Max Ambient (C)          | 83.4         |
@@ -53,21 +53,21 @@ Table of Contents
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |     0.056 |       41 |       --- |             --- |
-| Slice Logic              |     0.007 |    40889 |       --- |             --- |
-|   LUT as Logic           |     0.006 |    13782 |     20800 |           66.26 |
-|   Register               |    <0.001 |    19333 |     41600 |           46.47 |
+| Slice Logic              |     0.007 |    40897 |       --- |             --- |
+|   LUT as Logic           |     0.006 |    13763 |     20800 |           66.17 |
+|   Register               |    <0.001 |    19339 |     41600 |           46.49 |
 |   CARRY4                 |    <0.001 |      836 |      8150 |           10.26 |
 |   LUT as Distributed RAM |    <0.001 |      780 |      9600 |            8.13 |
 |   Others                 |    <0.001 |      667 |       --- |             --- |
 |   F7/F8 Muxes            |    <0.001 |     1994 |     32600 |            6.12 |
-|   LUT as Shift Register  |    <0.001 |      397 |      9600 |            4.14 |
-| Signals                  |     0.015 |    31702 |       --- |             --- |
+|   LUT as Shift Register  |    <0.001 |      395 |      9600 |            4.11 |
+| Signals                  |     0.016 |    31747 |       --- |             --- |
 | Block RAM                |     0.031 |       25 |        50 |           50.00 |
 | MMCM                     |     0.214 |        2 |         5 |           40.00 |
 | DSPs                     |     0.000 |       11 |        90 |           12.22 |
-| I/O                      |     0.190 |      150 |       250 |           60.00 |
+| I/O                      |     0.156 |      150 |       250 |           60.00 |
 | Static Power             |     0.073 |          |           |                 |
-| Total                    |     0.586 |          |           |                 |
+| Total                    |     0.552 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -77,8 +77,8 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.133 |       0.122 |      0.011 |       NA    | Unspecified | NA         |
-| Vccaux    |       1.800 |     0.218 |       0.205 |      0.013 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.134 |       0.123 |      0.011 |       NA    | Unspecified | NA         |
+| Vccaux    |       1.800 |     0.199 |       0.186 |      0.013 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.009 |       0.008 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -130,49 +130,49 @@ Table of Contents
 2.2 Clock Constraints
 ---------------------
 
-+-------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
-| Clock                                                 | Domain                                                                                                                                                                                                                                                                                 | Constraint (ns) |
-+-------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
-| DCLK_0                                                | DCLKP_0                                                                                                                                                                                                                                                                                |           427.4 |
-| DCLK_1                                                | DCLKP_1                                                                                                                                                                                                                                                                                |           427.4 |
-| DCLK_10                                               | DCLKP_10                                                                                                                                                                                                                                                                               |           427.4 |
-| DCLK_11                                               | DCLKP_11                                                                                                                                                                                                                                                                               |           427.4 |
-| DCLK_12                                               | DCLKP_12                                                                                                                                                                                                                                                                               |           427.4 |
-| DCLK_13                                               | DCLKP_13                                                                                                                                                                                                                                                                               |           427.4 |
-| DCLK_2                                                | DCLKP_2                                                                                                                                                                                                                                                                                |           427.4 |
-| DCLK_3                                                | DCLKP_3                                                                                                                                                                                                                                                                                |           427.4 |
-| DCLK_4                                                | DCLKP_4                                                                                                                                                                                                                                                                                |           427.4 |
-| DCLK_5                                                | DCLKP_5                                                                                                                                                                                                                                                                                |           427.4 |
-| DCLK_6                                                | DCLKP_6                                                                                                                                                                                                                                                                                |           427.4 |
-| DCLK_7                                                | DCLKP_7                                                                                                                                                                                                                                                                                |           427.4 |
-| DCLK_8                                                | DCLKP_8                                                                                                                                                                                                                                                                                |           427.4 |
-| DCLK_9                                                | DCLKP_9                                                                                                                                                                                                                                                                                |           427.4 |
-| FCLK_0                                                | FCLKP_0                                                                                                                                                                                                                                                                                |           427.4 |
-| FCLK_1                                                | FCLKP_1                                                                                                                                                                                                                                                                                |           427.4 |
-| FCLK_10                                               | FCLKP_10                                                                                                                                                                                                                                                                               |           427.4 |
-| FCLK_11                                               | FCLKP_11                                                                                                                                                                                                                                                                               |           427.4 |
-| FCLK_12                                               | FCLKP_12                                                                                                                                                                                                                                                                               |           427.4 |
-| FCLK_13                                               | FCLKP_13                                                                                                                                                                                                                                                                               |           427.4 |
-| FCLK_2                                                | FCLKP_2                                                                                                                                                                                                                                                                                |           427.4 |
-| FCLK_3                                                | FCLKP_3                                                                                                                                                                                                                                                                                |           427.4 |
-| FCLK_4                                                | FCLKP_4                                                                                                                                                                                                                                                                                |           427.4 |
-| FCLK_5                                                | FCLKP_5                                                                                                                                                                                                                                                                                |           427.4 |
-| FCLK_6                                                | FCLKP_6                                                                                                                                                                                                                                                                                |           427.4 |
-| FCLK_7                                                | FCLKP_7                                                                                                                                                                                                                                                                                |           427.4 |
-| FCLK_8                                                | FCLKP_8                                                                                                                                                                                                                                                                                |           427.4 |
-| FCLK_9                                                | FCLKP_9                                                                                                                                                                                                                                                                                |           427.4 |
-| MCLK_50M                                              | MCLK_50M_p                                                                                                                                                                                                                                                                             |            20.0 |
-| c0_clk_ctrl_1                                         | clk_inst0/inst/c0_clk_ctrl                                                                                                                                                                                                                                                             |            10.0 |
-| c1_clk_ctrl_1                                         | clk_inst0/inst/c1_clk_ctrl                                                                                                                                                                                                                                                             |            50.0 |
-| clkfb_i_1                                             | inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_dphy_0/inst/inst/bd_26df_mipi_dphy_0_0_tx_support_i/master_tx.bd_26df_mipi_dphy_0_0_tx_clock_module_support_i/bd_26df_mipi_dphy_0_0_clock_module_tx_i/inst/clkfb_out                                           |             5.0 |
-| clkfbout_clk_ctrl_1                                   | clk_inst0/inst/clkfbout_clk_ctrl                                                                                                                                                                                                                                                       |            20.0 |
-| div_clk_w_1                                           | inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_dphy_0/inst/inst/bd_26df_mipi_dphy_0_0_tx_support_i/master_tx.bd_26df_mipi_dphy_0_0_tx_clock_module_support_i/txbyteclkhs_out                                                                                  |            20.0 |
-| dphy_clk_clk_ctrl_1                                   | clk_inst0/inst/dphy_clk_clk_ctrl                                                                                                                                                                                                                                                       |             5.0 |
-| mmcm_clk_out2_bd_26df_mipi_dphy_0_0_clock_module_tx_1 | inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_dphy_0/inst/inst/bd_26df_mipi_dphy_0_0_tx_support_i/master_tx.bd_26df_mipi_dphy_0_0_tx_clock_module_support_i/bd_26df_mipi_dphy_0_0_clock_module_tx_i/inst/mmcm_clk_out2_bd_26df_mipi_dphy_0_0_clock_module_tx |           100.0 |
-| oserdes_clkdiv_out_1                                  | inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_dphy_0/inst/inst/bd_26df_mipi_dphy_0_0_tx_support_i/master_tx.bd_26df_mipi_dphy_0_0_tx_clock_module_support_i/oserdes_clkdiv_out                                                                               |            20.0 |
-| serial_clk90_1                                        | inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_dphy_0/inst/inst/bd_26df_mipi_dphy_0_0_tx_support_i/master_tx.bd_26df_mipi_dphy_0_0_tx_clock_module_support_i/bd_26df_mipi_dphy_0_0_clock_module_tx_i/inst/mmcm_clk_out1                                       |             5.0 |
-| serial_clk_1                                          | inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_dphy_0/inst/inst/bd_26df_mipi_dphy_0_0_tx_support_i/master_tx.bd_26df_mipi_dphy_0_0_tx_clock_module_support_i/bd_26df_mipi_dphy_0_0_clock_module_tx_i/inst/mmcm_clk_out0                                       |             5.0 |
-+-------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
++-----------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
+| Clock                                               | Domain                                                                                                                                                                                                                                                                                 | Constraint (ns) |
++-----------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
+| DCLK_0                                              | DCLKP_0                                                                                                                                                                                                                                                                                |           427.4 |
+| DCLK_1                                              | DCLKP_1                                                                                                                                                                                                                                                                                |           427.4 |
+| DCLK_10                                             | DCLKP_10                                                                                                                                                                                                                                                                               |           427.4 |
+| DCLK_11                                             | DCLKP_11                                                                                                                                                                                                                                                                               |           427.4 |
+| DCLK_12                                             | DCLKP_12                                                                                                                                                                                                                                                                               |           427.4 |
+| DCLK_13                                             | DCLKP_13                                                                                                                                                                                                                                                                               |           427.4 |
+| DCLK_2                                              | DCLKP_2                                                                                                                                                                                                                                                                                |           427.4 |
+| DCLK_3                                              | DCLKP_3                                                                                                                                                                                                                                                                                |           427.4 |
+| DCLK_4                                              | DCLKP_4                                                                                                                                                                                                                                                                                |           427.4 |
+| DCLK_5                                              | DCLKP_5                                                                                                                                                                                                                                                                                |           427.4 |
+| DCLK_6                                              | DCLKP_6                                                                                                                                                                                                                                                                                |           427.4 |
+| DCLK_7                                              | DCLKP_7                                                                                                                                                                                                                                                                                |           427.4 |
+| DCLK_8                                              | DCLKP_8                                                                                                                                                                                                                                                                                |           427.4 |
+| DCLK_9                                              | DCLKP_9                                                                                                                                                                                                                                                                                |           427.4 |
+| FCLK_0                                              | FCLKP_0                                                                                                                                                                                                                                                                                |           427.4 |
+| FCLK_1                                              | FCLKP_1                                                                                                                                                                                                                                                                                |           427.4 |
+| FCLK_10                                             | FCLKP_10                                                                                                                                                                                                                                                                               |           427.4 |
+| FCLK_11                                             | FCLKP_11                                                                                                                                                                                                                                                                               |           427.4 |
+| FCLK_12                                             | FCLKP_12                                                                                                                                                                                                                                                                               |           427.4 |
+| FCLK_13                                             | FCLKP_13                                                                                                                                                                                                                                                                               |           427.4 |
+| FCLK_2                                              | FCLKP_2                                                                                                                                                                                                                                                                                |           427.4 |
+| FCLK_3                                              | FCLKP_3                                                                                                                                                                                                                                                                                |           427.4 |
+| FCLK_4                                              | FCLKP_4                                                                                                                                                                                                                                                                                |           427.4 |
+| FCLK_5                                              | FCLKP_5                                                                                                                                                                                                                                                                                |           427.4 |
+| FCLK_6                                              | FCLKP_6                                                                                                                                                                                                                                                                                |           427.4 |
+| FCLK_7                                              | FCLKP_7                                                                                                                                                                                                                                                                                |           427.4 |
+| FCLK_8                                              | FCLKP_8                                                                                                                                                                                                                                                                                |           427.4 |
+| FCLK_9                                              | FCLKP_9                                                                                                                                                                                                                                                                                |           427.4 |
+| MCLK_50M_p                                          | MCLK_50M_p                                                                                                                                                                                                                                                                             |            20.0 |
+| c0_clk_ctrl                                         | clk_inst0/inst/c0_clk_ctrl                                                                                                                                                                                                                                                             |            10.0 |
+| c1_clk_ctrl                                         | clk_inst0/inst/c1_clk_ctrl                                                                                                                                                                                                                                                             |            50.0 |
+| clkfb_i                                             | inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_dphy_0/inst/inst/bd_26df_mipi_dphy_0_0_tx_support_i/master_tx.bd_26df_mipi_dphy_0_0_tx_clock_module_support_i/bd_26df_mipi_dphy_0_0_clock_module_tx_i/inst/clkfb_out                                           |             5.0 |
+| clkfbout_clk_ctrl                                   | clk_inst0/inst/clkfbout_clk_ctrl                                                                                                                                                                                                                                                       |            20.0 |
+| div_clk_w                                           | inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_dphy_0/inst/inst/bd_26df_mipi_dphy_0_0_tx_support_i/master_tx.bd_26df_mipi_dphy_0_0_tx_clock_module_support_i/txbyteclkhs_out                                                                                  |            20.0 |
+| dphy_clk_clk_ctrl                                   | clk_inst0/inst/dphy_clk_clk_ctrl                                                                                                                                                                                                                                                       |             5.0 |
+| mmcm_clk_out2_bd_26df_mipi_dphy_0_0_clock_module_tx | inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_dphy_0/inst/inst/bd_26df_mipi_dphy_0_0_tx_support_i/master_tx.bd_26df_mipi_dphy_0_0_tx_clock_module_support_i/bd_26df_mipi_dphy_0_0_clock_module_tx_i/inst/mmcm_clk_out2_bd_26df_mipi_dphy_0_0_clock_module_tx |           100.0 |
+| oserdes_clkdiv_out                                  | inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_dphy_0/inst/inst/bd_26df_mipi_dphy_0_0_tx_support_i/master_tx.bd_26df_mipi_dphy_0_0_tx_clock_module_support_i/oserdes_clkdiv_out                                                                               |            20.0 |
+| serial_clk                                          | inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_dphy_0/inst/inst/bd_26df_mipi_dphy_0_0_tx_support_i/master_tx.bd_26df_mipi_dphy_0_0_tx_clock_module_support_i/bd_26df_mipi_dphy_0_0_clock_module_tx_i/inst/mmcm_clk_out0                                       |             5.0 |
+| serial_clk90                                        | inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_dphy_0/inst/inst/bd_26df_mipi_dphy_0_0_tx_support_i/master_tx.bd_26df_mipi_dphy_0_0_tx_clock_module_support_i/bd_26df_mipi_dphy_0_0_clock_module_tx_i/inst/mmcm_clk_out1                                       |             5.0 |
++-----------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
 
 
 3. Detailed Reports
@@ -184,93 +184,93 @@ Table of Contents
 +----------------------------------------+-----------+
 | Name                                   | Power (W) |
 +----------------------------------------+-----------+
-| blue_hd_top                            |     0.513 |
+| blue_hd_top                            |     0.479 |
 |   clk_inst0                            |     0.108 |
 |     inst                               |     0.108 |
-|   gen_ti_roic_top[0].ti_roic_top_inst  |     0.016 |
-|     bit_clock_gen                      |     0.008 |
-|     data_reorder                       |     0.003 |
-|       even_ram_inst                    |     0.001 |
-|       odd_ram_inst                     |     0.001 |
-|     deserializer                       |     0.005 |
-|   gen_ti_roic_top[10].ti_roic_top_inst |     0.014 |
+|   gen_ti_roic_top[0].ti_roic_top_inst  |     0.012 |
 |     bit_clock_gen                      |     0.006 |
 |     data_reorder                       |     0.003 |
 |       even_ram_inst                    |     0.001 |
 |       odd_ram_inst                     |     0.001 |
-|     deserializer                       |     0.005 |
-|   gen_ti_roic_top[11].ti_roic_top_inst |     0.014 |
+|     deserializer                       |     0.003 |
+|   gen_ti_roic_top[10].ti_roic_top_inst |     0.012 |
 |     bit_clock_gen                      |     0.006 |
 |     data_reorder                       |     0.003 |
 |       even_ram_inst                    |     0.001 |
 |       odd_ram_inst                     |     0.001 |
-|     deserializer                       |     0.005 |
-|   gen_ti_roic_top[12].ti_roic_top_inst |     0.014 |
+|     deserializer                       |     0.003 |
+|   gen_ti_roic_top[11].ti_roic_top_inst |     0.012 |
 |     bit_clock_gen                      |     0.006 |
 |     data_reorder                       |     0.003 |
 |       even_ram_inst                    |     0.001 |
 |       odd_ram_inst                     |     0.001 |
-|     deserializer                       |     0.005 |
-|   gen_ti_roic_top[13].ti_roic_top_inst |     0.014 |
+|     deserializer                       |     0.003 |
+|   gen_ti_roic_top[12].ti_roic_top_inst |     0.012 |
 |     bit_clock_gen                      |     0.006 |
 |     data_reorder                       |     0.003 |
 |       even_ram_inst                    |     0.001 |
 |       odd_ram_inst                     |     0.001 |
-|     deserializer                       |     0.005 |
-|   gen_ti_roic_top[1].ti_roic_top_inst  |     0.014 |
+|     deserializer                       |     0.003 |
+|   gen_ti_roic_top[13].ti_roic_top_inst |     0.012 |
 |     bit_clock_gen                      |     0.006 |
 |     data_reorder                       |     0.003 |
 |       even_ram_inst                    |     0.001 |
 |       odd_ram_inst                     |     0.001 |
-|     deserializer                       |     0.005 |
-|   gen_ti_roic_top[2].ti_roic_top_inst  |     0.016 |
-|     bit_clock_gen                      |     0.008 |
-|     data_reorder                       |     0.003 |
-|       even_ram_inst                    |     0.001 |
-|       odd_ram_inst                     |     0.001 |
-|     deserializer                       |     0.005 |
-|   gen_ti_roic_top[3].ti_roic_top_inst  |     0.014 |
+|     deserializer                       |     0.003 |
+|   gen_ti_roic_top[1].ti_roic_top_inst  |     0.012 |
 |     bit_clock_gen                      |     0.006 |
 |     data_reorder                       |     0.003 |
 |       even_ram_inst                    |     0.001 |
 |       odd_ram_inst                     |     0.001 |
-|     deserializer                       |     0.005 |
-|   gen_ti_roic_top[4].ti_roic_top_inst  |     0.014 |
+|     deserializer                       |     0.003 |
+|   gen_ti_roic_top[2].ti_roic_top_inst  |     0.012 |
 |     bit_clock_gen                      |     0.006 |
 |     data_reorder                       |     0.003 |
 |       even_ram_inst                    |     0.001 |
 |       odd_ram_inst                     |     0.001 |
-|     deserializer                       |     0.005 |
-|   gen_ti_roic_top[5].ti_roic_top_inst  |     0.014 |
+|     deserializer                       |     0.003 |
+|   gen_ti_roic_top[3].ti_roic_top_inst  |     0.012 |
 |     bit_clock_gen                      |     0.006 |
 |     data_reorder                       |     0.003 |
 |       even_ram_inst                    |     0.001 |
 |       odd_ram_inst                     |     0.001 |
-|     deserializer                       |     0.005 |
-|   gen_ti_roic_top[6].ti_roic_top_inst  |     0.016 |
-|     bit_clock_gen                      |     0.008 |
-|     data_reorder                       |     0.003 |
-|       even_ram_inst                    |     0.001 |
-|       odd_ram_inst                     |     0.001 |
-|     deserializer                       |     0.005 |
-|   gen_ti_roic_top[7].ti_roic_top_inst  |     0.014 |
+|     deserializer                       |     0.003 |
+|   gen_ti_roic_top[4].ti_roic_top_inst  |     0.012 |
 |     bit_clock_gen                      |     0.006 |
 |     data_reorder                       |     0.003 |
 |       even_ram_inst                    |     0.001 |
 |       odd_ram_inst                     |     0.001 |
-|     deserializer                       |     0.005 |
-|   gen_ti_roic_top[8].ti_roic_top_inst  |     0.014 |
+|     deserializer                       |     0.003 |
+|   gen_ti_roic_top[5].ti_roic_top_inst  |     0.012 |
 |     bit_clock_gen                      |     0.006 |
 |     data_reorder                       |     0.003 |
 |       even_ram_inst                    |     0.001 |
 |       odd_ram_inst                     |     0.001 |
-|     deserializer                       |     0.005 |
-|   gen_ti_roic_top[9].ti_roic_top_inst  |     0.014 |
+|     deserializer                       |     0.003 |
+|   gen_ti_roic_top[6].ti_roic_top_inst  |     0.012 |
 |     bit_clock_gen                      |     0.006 |
 |     data_reorder                       |     0.003 |
 |       even_ram_inst                    |     0.001 |
 |       odd_ram_inst                     |     0.001 |
-|     deserializer                       |     0.005 |
+|     deserializer                       |     0.003 |
+|   gen_ti_roic_top[7].ti_roic_top_inst  |     0.012 |
+|     bit_clock_gen                      |     0.006 |
+|     data_reorder                       |     0.003 |
+|       even_ram_inst                    |     0.001 |
+|       odd_ram_inst                     |     0.001 |
+|     deserializer                       |     0.003 |
+|   gen_ti_roic_top[8].ti_roic_top_inst  |     0.012 |
+|     bit_clock_gen                      |     0.006 |
+|     data_reorder                       |     0.003 |
+|       even_ram_inst                    |     0.001 |
+|       odd_ram_inst                     |     0.001 |
+|     deserializer                       |     0.003 |
+|   gen_ti_roic_top[9].ti_roic_top_inst  |     0.012 |
+|     bit_clock_gen                      |     0.006 |
+|     data_reorder                       |     0.003 |
+|       even_ram_inst                    |     0.001 |
+|       odd_ram_inst                     |     0.001 |
+|     deserializer                       |     0.003 |
 |   host_if_inst                         |     0.003 |
 |   inst_mipi_csi2_tx                    |     0.155 |
 |     gen_axis_fifo[0].inst_out_fifo     |     0.001 |
@@ -281,8 +281,8 @@ Table of Contents
 |       inst_mipi_csi2_tx_subsyst        |     0.150 |
 |       inst_mipi_init_gen               |     0.002 |
 |   read_data_mux_inst                   |     0.003 |
-|   reg_map_inst                         |     0.026 |
-|   roic_tg_gen_int                      |     0.002 |
+|   reg_map_inst                         |     0.025 |
+|   roic_tg_gen_int                      |     0.001 |
 |   seq_fsm_inst                         |     0.002 |
 +----------------------------------------+-----------+
 

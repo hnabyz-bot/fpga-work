@@ -6,7 +6,7 @@
 # Port names updated to match blue_hd_top.sv SystemVerilog module
 
 # System Clock (50 MHz input)
-create_clock -period 20.000 -name MCLK_50M [get_ports MCLK_50M_p]
+#create_clock -period 20.000 -name MCLK_50M [get_ports MCLK_50M_p]
 
 # Generated Clocks (from Clock Wizard)
 # These will be automatically derived by Vivado from Clock Wizard
@@ -48,24 +48,24 @@ create_clock -period 427.350 -name FCLK_11 [get_ports FCLKP_11]
 create_clock -period 427.350 -name FCLK_12 [get_ports FCLKP_12]
 create_clock -period 427.350 -name FCLK_13 [get_ports FCLKP_13]
 
-# Asynchronous Clock Groups
-# DCLK/FCLK channels are asynchronous to the main system clock and to each other
-set_clock_groups -asynchronous \
-    -group [get_clocks MCLK_50M] \
-    -group [get_clocks {DCLK_0 FCLK_0}] \
-    -group [get_clocks {DCLK_1 FCLK_1}] \
-    -group [get_clocks {DCLK_2 FCLK_2}] \
-    -group [get_clocks {DCLK_3 FCLK_3}] \
-    -group [get_clocks {DCLK_4 FCLK_4}] \
-    -group [get_clocks {DCLK_5 FCLK_5}] \
-    -group [get_clocks {DCLK_6 FCLK_6}] \
-    -group [get_clocks {DCLK_7 FCLK_7}] \
-    -group [get_clocks {DCLK_8 FCLK_8}] \
-    -group [get_clocks {DCLK_9 FCLK_9}] \
-    -group [get_clocks {DCLK_10 FCLK_10}] \
-    -group [get_clocks {DCLK_11 FCLK_11}] \
-    -group [get_clocks {DCLK_12 FCLK_12}] \
-    -group [get_clocks {DCLK_13 FCLK_13}]
+## Asynchronous Clock Groups
+## DCLK/FCLK channels are asynchronous to the main system clock and to each other
+#set_clock_groups -asynchronous \
+#    -group [get_clocks MCLK_50M] \
+#    -group [get_clocks {DCLK_0 FCLK_0}] \
+#    -group [get_clocks {DCLK_1 FCLK_1}] \
+#    -group [get_clocks {DCLK_2 FCLK_2}] \
+#    -group [get_clocks {DCLK_3 FCLK_3}] \
+#    -group [get_clocks {DCLK_4 FCLK_4}] \
+#    -group [get_clocks {DCLK_5 FCLK_5}] \
+#    -group [get_clocks {DCLK_6 FCLK_6}] \
+#    -group [get_clocks {DCLK_7 FCLK_7}] \
+#    -group [get_clocks {DCLK_8 FCLK_8}] \
+#    -group [get_clocks {DCLK_9 FCLK_9}] \
+#    -group [get_clocks {DCLK_10 FCLK_10}] \
+#    -group [get_clocks {DCLK_11 FCLK_11}] \
+#    -group [get_clocks {DCLK_12 FCLK_12}] \
+#    -group [get_clocks {DCLK_13 FCLK_13}]
 
 # LVDS Data Input - False path (data signals, not clocks)
 set_false_path -from [get_ports DOUTP_*]
@@ -102,11 +102,11 @@ set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets gen_ti_roic_top[13].ti_roic_t
 # Pin Mapping
 #==============================================================================
 
-# I2C
-set_property PACKAGE_PIN N15 [get_ports scl_out]
-set_property PACKAGE_PIN R17 [get_ports sda]
-set_property IOSTANDARD LVCMOS25 [get_ports scl_out]
-set_property IOSTANDARD LVCMOS25 [get_ports sda]
+## I2C
+#set_property PACKAGE_PIN N15 [get_ports scl_out]
+#set_property PACKAGE_PIN R17 [get_ports sda]
+#set_property IOSTANDARD LVCMOS25 [get_ports scl_out]
+#set_property IOSTANDARD LVCMOS25 [get_ports sda]
 
 # Reset
 set_property PACKAGE_PIN T20 [get_ports nRST]

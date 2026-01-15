@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tfgg484-1" LaunchTime="1768448656" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/blue_hd_top.dcp" LaunchWriteIncrSynthDcp="true">
-  <File Type="VDS-TIMING-PB" Name="blue_hd_top_timing_summary_synth.pb"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="blue_hd_top_timing_summary_synth.rpt"/>
-  <File Type="RDS-DCP" Name="blue_hd_top.dcp"/>
-  <File Type="RDS-UTIL-PB" Name="blue_hd_top_utilization_synth.pb"/>
-  <File Type="RDS-UTIL" Name="blue_hd_top_utilization_synth.rpt"/>
-  <File Type="RDS-PROPCONSTRS" Name="blue_hd_top_drc_synth.rpt"/>
-  <File Type="RDS-RDS" Name="blue_hd_top.vds"/>
-  <File Type="REPORTS-TCL" Name="blue_hd_top_reports.tcl"/>
+<GenRun Id="synth_1" LaunchPart="xc7a35tfgg484-1" LaunchTime="1768453820" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/blue_hd_top.dcp" LaunchWriteIncrSynthDcp="true">
   <File Type="PA-TCL" Name="blue_hd_top.tcl"/>
+  <File Type="REPORTS-TCL" Name="blue_hd_top_reports.tcl"/>
+  <File Type="RDS-RDS" Name="blue_hd_top.vds"/>
+  <File Type="RDS-PROPCONSTRS" Name="blue_hd_top_drc_synth.rpt"/>
+  <File Type="RDS-UTIL" Name="blue_hd_top_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="blue_hd_top_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="blue_hd_top.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="blue_hd_top_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="blue_hd_top_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PPRDIR/../source/hdl/csi2/ip/rst_clk_200M/rst_clk_200M.xci">
@@ -286,13 +286,13 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2024"/>
     <Step Id="synth_design"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="bd_26df_mipi_csi2_tx_ctrl_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="bd_26df_axi_crossbar_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="bd_26df_mipi_dphy_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="seq_lut"/>
-  <BlockFileSet Type="BlockSrcs" Name="axis_data_fifo_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="indata_ram"/>
-  <BlockFileSet Type="BlockSrcs" Name="mipi_csi2_tx_subsys"/>
-  <BlockFileSet Type="BlockSrcs" Name="mipi_init_gen"/>
   <BlockFileSet Type="BlockSrcs" Name="clk_ctrl"/>
+  <BlockFileSet Type="BlockSrcs" Name="seq_lut"/>
+  <BlockFileSet Type="BlockSrcs" Name="mipi_init_gen"/>
+  <BlockFileSet Type="BlockSrcs" Name="indata_ram"/>
+  <BlockFileSet Type="BlockSrcs" Name="axis_data_fifo_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="mipi_csi2_tx_subsys"/>
+  <BlockFileSet Type="BlockSrcs" Name="bd_26df_mipi_dphy_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="bd_26df_axi_crossbar_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="bd_26df_mipi_csi2_tx_ctrl_0_0"/>
 </GenRun>

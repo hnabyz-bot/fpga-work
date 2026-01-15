@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.runs/synth_1/blue_hd_top.tcl"
+  variable script "D:/workspace/github-space/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.runs/synth_1/blue_hd_top.tcl"
   variable category "vivado_synth"
 }
 
@@ -56,6 +56,7 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param chipscope.maxJobs 5
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a35tfgg484-1
 
@@ -63,82 +64,82 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.cache/wt [current_project]
-set_property parent.project_path /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.xpr [current_project]
+set_property webtalk.parent_dir D:/workspace/github-space/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.cache/wt [current_project]
+set_property parent.project_path D:/workspace/github-space/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.xpr [current_project]
 set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.cache/ip [current_project]
+set_property ip_output_repo d:/workspace/github-space/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-add_files /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/coe/ctrl.coe
-add_files /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/coe/addr.coe
-add_files /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/coe/data.coe
-add_files /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/coe/mask.coe
-add_files /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/simulation/mipi_rx_sim/coe/data_rxsim.coe
-add_files /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/simulation/mipi_rx_sim/coe/addr_rxsim.coe
-add_files /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/simulation/mipi_rx_sim/coe/mask_rxsim.coe
-add_files /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/simulation/mipi_rx_sim/coe/ctrl_rxsim.coe
-add_files /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/simulation/mipi_rx_sim/coe/data2.coe
-add_files /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/simulation/mipi_rx_sim/coe/addr2.coe
-add_files /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/simulation/mipi_rx_sim/coe/mask2.coe
-add_files /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/simulation/mipi_rx_sim/coe/ctrl2.coe
-add_files /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/ip/mem_init.coe
+add_files D:/workspace/github-space/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/coe/ctrl.coe
+add_files D:/workspace/github-space/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/coe/addr.coe
+add_files D:/workspace/github-space/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/coe/data.coe
+add_files D:/workspace/github-space/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/coe/mask.coe
+add_files D:/workspace/github-space/fpga-work/BLUE-HD-FPGA/xdaq_top/simulation/mipi_rx_sim/coe/data_rxsim.coe
+add_files D:/workspace/github-space/fpga-work/BLUE-HD-FPGA/xdaq_top/simulation/mipi_rx_sim/coe/addr_rxsim.coe
+add_files D:/workspace/github-space/fpga-work/BLUE-HD-FPGA/xdaq_top/simulation/mipi_rx_sim/coe/mask_rxsim.coe
+add_files D:/workspace/github-space/fpga-work/BLUE-HD-FPGA/xdaq_top/simulation/mipi_rx_sim/coe/ctrl_rxsim.coe
+add_files D:/workspace/github-space/fpga-work/BLUE-HD-FPGA/xdaq_top/simulation/mipi_rx_sim/coe/data2.coe
+add_files D:/workspace/github-space/fpga-work/BLUE-HD-FPGA/xdaq_top/simulation/mipi_rx_sim/coe/addr2.coe
+add_files D:/workspace/github-space/fpga-work/BLUE-HD-FPGA/xdaq_top/simulation/mipi_rx_sim/coe/mask2.coe
+add_files D:/workspace/github-space/fpga-work/BLUE-HD-FPGA/xdaq_top/simulation/mipi_rx_sim/coe/ctrl2.coe
+add_files D:/workspace/github-space/fpga-work/BLUE-HD-FPGA/xdaq_top/source/ip/mem_init.coe
 read_verilog -library xil_defaultlib -sv {
-  /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/init.sv
-  /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/mipi_csi2_tx_bd.sv
-  /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/mipi_csi2_tx_top.sv
-  /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/spi_slave.sv
-  /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/ti-roic/roic_spi.sv
-  /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/ti-roic/indata_reorder.sv
-  /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/ti-roic/ti_roic_tg.sv
-  /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/ti-roic/ti_roic_top.sv
-  /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/ti-roic/first_ch_detector.sv
-  /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/ti-roic/bit_clock_module.sv
-  /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/ti-roic/deser_single.sv
-  /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/ti-roic/bit_align.sv
-  /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/read_data_mux.sv
-  /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/sequencer_fsm.sv
-  /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/dcdc_clk.sv
-  /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/fifo_1b.sv
-  /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/blue_hd_top.sv
-  /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/reg_map.sv
-  /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/roic_gate_drv.sv
+  D:/workspace/github-space/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/init.sv
+  D:/workspace/github-space/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/mipi_csi2_tx_bd.sv
+  D:/workspace/github-space/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/mipi_csi2_tx_top.sv
+  D:/workspace/github-space/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/spi_slave.sv
+  D:/workspace/github-space/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/ti-roic/roic_spi.sv
+  D:/workspace/github-space/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/ti-roic/indata_reorder.sv
+  D:/workspace/github-space/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/ti-roic/ti_roic_tg.sv
+  D:/workspace/github-space/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/ti-roic/ti_roic_top.sv
+  D:/workspace/github-space/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/ti-roic/first_ch_detector.sv
+  D:/workspace/github-space/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/ti-roic/bit_clock_module.sv
+  D:/workspace/github-space/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/ti-roic/deser_single.sv
+  D:/workspace/github-space/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/ti-roic/bit_align.sv
+  D:/workspace/github-space/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/read_data_mux.sv
+  D:/workspace/github-space/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/sequencer_fsm.sv
+  D:/workspace/github-space/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/dcdc_clk.sv
+  D:/workspace/github-space/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/fifo_1b.sv
+  D:/workspace/github-space/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/blue_hd_top.sv
+  D:/workspace/github-space/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/reg_map.sv
+  D:/workspace/github-space/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/roic_gate_drv.sv
 }
-read_ip -quiet /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/rst_clk_200M/rst_clk_200M.xci
-set_property used_in_implementation false [get_files -all /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/rst_clk_200M/rst_clk_200M_board.xdc]
-set_property used_in_implementation false [get_files -all /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/rst_clk_200M/rst_clk_200M.xdc]
-set_property used_in_implementation false [get_files -all /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/rst_clk_200M/rst_clk_200M_ooc.xdc]
+read_ip -quiet D:/workspace/github-space/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/rst_clk_200M/rst_clk_200M.xci
+set_property used_in_implementation false [get_files -all d:/workspace/github-space/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/rst_clk_200M/rst_clk_200M_board.xdc]
+set_property used_in_implementation false [get_files -all d:/workspace/github-space/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/rst_clk_200M/rst_clk_200M.xdc]
+set_property used_in_implementation false [get_files -all d:/workspace/github-space/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/rst_clk_200M/rst_clk_200M_ooc.xdc]
 
-read_ip -quiet /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/ip/clk_ctrl/clk_ctrl.xci
-set_property used_in_implementation false [get_files -all /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/ip/clk_ctrl/clk_ctrl_board.xdc]
-set_property used_in_implementation false [get_files -all /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/ip/clk_ctrl/clk_ctrl.xdc]
-set_property used_in_implementation false [get_files -all /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/ip/clk_ctrl/clk_ctrl_ooc.xdc]
+read_ip -quiet D:/workspace/github-space/fpga-work/BLUE-HD-FPGA/xdaq_top/source/ip/clk_ctrl/clk_ctrl.xci
+set_property used_in_implementation false [get_files -all d:/workspace/github-space/fpga-work/BLUE-HD-FPGA/xdaq_top/source/ip/clk_ctrl/clk_ctrl_board.xdc]
+set_property used_in_implementation false [get_files -all d:/workspace/github-space/fpga-work/BLUE-HD-FPGA/xdaq_top/source/ip/clk_ctrl/clk_ctrl.xdc]
+set_property used_in_implementation false [get_files -all d:/workspace/github-space/fpga-work/BLUE-HD-FPGA/xdaq_top/source/ip/clk_ctrl/clk_ctrl_ooc.xdc]
 
-read_ip -quiet /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_init_gen/mipi_init_gen.xci
-set_property used_in_implementation false [get_files -all /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_init_gen/mipi_init_gen_ooc.xdc]
+read_ip -quiet D:/workspace/github-space/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_init_gen/mipi_init_gen.xci
+set_property used_in_implementation false [get_files -all d:/workspace/github-space/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_init_gen/mipi_init_gen_ooc.xdc]
 
-read_ip -quiet /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/ip/indata_ram/indata_ram.xci
-set_property used_in_implementation false [get_files -all /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/ip/indata_ram/indata_ram_ooc.xdc]
+read_ip -quiet D:/workspace/github-space/fpga-work/BLUE-HD-FPGA/xdaq_top/source/ip/indata_ram/indata_ram.xci
+set_property used_in_implementation false [get_files -all d:/workspace/github-space/fpga-work/BLUE-HD-FPGA/xdaq_top/source/ip/indata_ram/indata_ram_ooc.xdc]
 
-read_ip -quiet /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/axis_data_fifo_0/axis_data_fifo_0.xci
-set_property used_in_implementation false [get_files -all /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/axis_data_fifo_0/axis_data_fifo_0_ooc.xdc]
+read_ip -quiet D:/workspace/github-space/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/axis_data_fifo_0/axis_data_fifo_0.xci
+set_property used_in_implementation false [get_files -all d:/workspace/github-space/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/axis_data_fifo_0/axis_data_fifo_0_ooc.xdc]
 
-read_ip -quiet /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/ip/seq_lut/seq_lut.xci
-set_property used_in_implementation false [get_files -all /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/ip/seq_lut/seq_lut_ooc.xdc]
+read_ip -quiet D:/workspace/github-space/fpga-work/BLUE-HD-FPGA/xdaq_top/source/ip/seq_lut/seq_lut.xci
+set_property used_in_implementation false [get_files -all d:/workspace/github-space/fpga-work/BLUE-HD-FPGA/xdaq_top/source/ip/seq_lut/seq_lut_ooc.xdc]
 
-read_ip -quiet /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/mipi_csi2_tx_subsys.xci
-set_property used_in_implementation false [get_files -all /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_0/bd_26df_mipi_csi2_tx_ctrl_0_0.xdc]
-set_property used_in_implementation false [get_files -all /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_0/bd_26df_mipi_csi2_tx_ctrl_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/ip_0/bd_26df_mipi_dphy_0_0_clock_module_tx.xdc]
-set_property used_in_implementation false [get_files -all /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/ip_0/bd_26df_mipi_dphy_0_0_clock_module_tx_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0.xdc]
-set_property used_in_implementation false [get_files -all /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0_clocks.xdc]
-set_property used_in_implementation false [get_files -all /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_2/bd_26df_axi_crossbar_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/bd_26df_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/mipi_csi2_tx_subsys_fixed_ooc.xdc]
+read_ip -quiet D:/workspace/github-space/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/mipi_csi2_tx_subsys.xci
+set_property used_in_implementation false [get_files -all d:/workspace/github-space/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_0/bd_26df_mipi_csi2_tx_ctrl_0_0.xdc]
+set_property used_in_implementation false [get_files -all d:/workspace/github-space/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_0/bd_26df_mipi_csi2_tx_ctrl_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/workspace/github-space/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/ip_0/bd_26df_mipi_dphy_0_0_clock_module_tx.xdc]
+set_property used_in_implementation false [get_files -all d:/workspace/github-space/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/ip_0/bd_26df_mipi_dphy_0_0_clock_module_tx_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/workspace/github-space/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0.xdc]
+set_property used_in_implementation false [get_files -all d:/workspace/github-space/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all d:/workspace/github-space/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/workspace/github-space/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_2/bd_26df_axi_crossbar_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/workspace/github-space/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/bd_26df_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/workspace/github-space/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/mipi_csi2_tx_subsys_fixed_ooc.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -149,17 +150,17 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/constrs/timing.xdc
-set_property used_in_implementation false [get_files /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/constrs/timing.xdc]
+read_xdc D:/workspace/github-space/fpga-work/BLUE-HD-FPGA/xdaq_top/source/constrs/timing.xdc
+set_property used_in_implementation false [get_files D:/workspace/github-space/fpga-work/BLUE-HD-FPGA/xdaq_top/source/constrs/timing.xdc]
 
-read_xdc /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/constrs/blue_hd_top.xdc
-set_property used_in_implementation false [get_files /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/constrs/blue_hd_top.xdc]
+read_xdc D:/workspace/github-space/fpga-work/BLUE-HD-FPGA/xdaq_top/source/constrs/blue_hd_top.xdc
+set_property used_in_implementation false [get_files D:/workspace/github-space/fpga-work/BLUE-HD-FPGA/xdaq_top/source/constrs/blue_hd_top.xdc]
 
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
 
-read_checkpoint -auto_incremental -incremental /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.srcs/utils_1/imports/synth_1/blue_hd_top.dcp
+read_checkpoint -auto_incremental -incremental D:/workspace/github-space/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.srcs/utils_1/imports/synth_1/blue_hd_top.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }
