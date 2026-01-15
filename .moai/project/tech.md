@@ -2,7 +2,7 @@
 
 ## 개요
 
-본 프로젝트는 Xilinx FPGA 기반의 이미지 데이터 수집 시스템입니다. SystemVerilog를 주요 HDL 언어로 사용하며, Xilinx Vivado 2024.2 개발 환경에서 합성 및 구현됩니다.
+본 프로젝트는 Xilinx FPGA 기반의 이미지 데이터 수집 시스템입니다. SystemVerilog를 주요 HDL 언어로 사용하며, Xilinx Vivado 2024.2 개발 환경에서 합성 및 구현되고, Questa Advanced Simulator 2024.3+ 환경에서 시뮬레이션됩니다.
 
 ---
 
@@ -38,21 +38,27 @@
 | 도구 | 버전 | 용도 |
 |------|------|------|
 | Xilinx Vivado | 2024.2 | 합성, 구현, 비트스트림 생성 |
+| Questa Advanced Simulator | 2024.3+ | 시뮬레이션, 검증 |
 | Xilinx Vitis | 2024.2 | 임베디드 개발 (선택사항) |
 
 ### 보조 도구
 
 | 도구 | 버전 | 용도 |
 |------|------|------|
-| Python | 3.8+ | XDC 생성 스크립트 |
+| Python | 3.8+ | 유틸리티 스크립트 |
 | Git | 2.x | 버전 관리 |
 | VS Code | 최신 | 코드 편집 (권장) |
+| Make | 3.81+ | 빌드 자동화 |
 
 ### 개발 환경 설정
 
 ```bash
 # Vivado 환경 설정 (Linux)
 source /opt/Xilinx/Vivado/2024.2/settings64.sh
+
+# Questa 환경 설정 (시뮬레이션 전용)
+cd BLUE-HD-FPGA/xdaq_top/simulation/questa
+source setup_env.sh
 
 # 프로젝트 열기
 cd BLUE-HD-FPGA/xdaq_top/build
@@ -76,7 +82,7 @@ vivado xdaq_top.xpr
 - **명명 규칙**: snake_case (모듈, 신호)
 - **들여쓰기**: 4 spaces
 - **최대 줄 길이**: 120 characters
-- **파일 확장자**: `.sv` (SystemVerilog), `.v` (Verilog)
+- **파일 확장자**: `.sv` (SystemVerilog), `.v` (Verilog), `.vhd` (VHDL)
 
 ---
 
@@ -148,18 +154,27 @@ vivado xdaq_top.xpr
 
 ## Xilinx IP 코어
 
-### 사용 IP 목록
+### 사용 IP 목록 (최신)
 
 | IP 이름 | 버전 | 용도 | 리소스 |
 |---------|------|------|--------|
 | Clocking Wizard | 6.0 | MMCM 클록 생성 | 1 MMCM |
-| Block Memory Generator | 8.4 | 시퀀스 LUT, 데이터 RAM | 2+ BRAM |
+| Block Memory Generator | 8.4 | 시퀀스 LUT, 데이터 RAM | 4+ BRAM |
 | MIPI CSI-2 TX Subsystem | 5.3 | MIPI 출력 | ~5K LUT |
 | MIPI D-PHY | 4.3 | PHY 계층 | I/O 리소스 |
 | AXI4-Stream Data FIFO | 2.0 | 데이터 버퍼링 | 1 BRAM |
 | AXI Crossbar | 2.1 | AXI 인터커넥트 | ~1K LUT |
 | AXI Traffic Generator | 3.0 | MIPI 초기화 | ~500 LUT |
-| Integrated Logic Analyzer | 6.2 | 디버그 (5개) | 선택적 |
+
+### 제거된 IP (2026-01-15)
+
+| IP 이름 | 이유 |
+|---------|------|
+| ila_0 | 디버그 최적화로 제거 |
+| ila_0_1 | 디버그 최적화로 제거 |
+| ila_csi2 | 디버그 최적화로 제거 |
+| ila_rd_tx | 디버그 최적화로 제거 |
+| ila_top | 디버그 최적화로 제거 |
 
 ### IP 라이선스
 
@@ -210,9 +225,61 @@ vivado -mode batch -source synth_only.tcl
 | 파일 | 위치 | 설명 |
 |------|------|------|
 | `*.bit` | output/ | 비트스트림 파일 |
-| `*.ltx` | output/ | 디버그 프로브 파일 |
+| `*.bin` | output/ | 바이너리 비트스트림 |
+| `*.mcs` | output/ | MCS 파일 (외부 메모리용) |
 | `*.rpt` | reports/ | 타이밍/리소스 리포트 |
 | `*.log` | build/ | 빌드 로그 |
+
+---
+
+## 시뮬레이션 시스템 (NEW)
+
+### Questa 시뮬레이션 환경
+
+#### 디렉토리 구조
+
+```
+simulation/questa/
+├── Makefile               # 메인 빌드 스크립트
+├── compile.do             # 컴파일 스크립트
+├── simulate.do            # 시뮬레이션 실행 스크립트
+├── wave.do                # 파형 뷰어 설정
+├── README.md              # 상세 사용 가이드
+├── setup_env.sh           # 환경 변수 설정
+├── run_sim.sh             # 간단한 실행 스크립트
+├── run_test.sh            # 개별 테스트 실행
+└── run_regression.sh      # 회귀 테스트 자동화
+```
+
+#### Makefile 기반 빌드
+
+```bash
+# 환경 설정
+source setup_env.sh
+
+# 컴파일
+make compile
+
+# GUI 시뮬레이션
+make sim
+
+# 배치 시뮬레이션
+make sim_batch
+
+# 특정 테스트벤치 실행
+make sim TB=sequencer_fsm_tb
+
+# 회귀 테스트
+make regression
+```
+
+#### 시뮬레이션 옵션
+
+| 옵션 | 설명 |
+|------|------|
+| SIM_TIME | 시뮬레이션 시간 (기본값: 100us) |
+| TB | 테스트벤치 이름 (기본값: test_bench) |
+| SIM_OPTS | 시뮬레이션 옵션 (기본값: -t 1ps -voptargs="+acc") |
 
 ---
 
@@ -269,6 +336,16 @@ RESET -> WAIT -> BIAS -> FLUSH -> EXPOSE -> READOUT -> AED
 - 전력 효율성
 - 타이밍 클로저 용이
 
+### 5. Questa 시뮬레이션 도입 (NEW)
+
+**결정 사항**: Questa Advanced Simulator 채택
+
+**근거**:
+- 고급 디버깅 기능
+- 빠른 컴파일 속도
+- 우수한 파형 분석 도구
+- SystemVerilog 1800-2017 완전 지원
+
 ---
 
 ## 개발 워크플로우
@@ -279,7 +356,7 @@ RESET -> WAIT -> BIAS -> FLUSH -> EXPOSE -> READOUT -> AED
 1. 요구사항 분석
 2. 아키텍처 설계
 3. RTL 코딩 (SystemVerilog)
-4. 시뮬레이션 검증
+4. Questa 시뮬레이션 검증
 5. 코드 리뷰
 ```
 
@@ -296,25 +373,61 @@ RESET -> WAIT -> BIAS -> FLUSH -> EXPOSE -> READOUT -> AED
 ### 3. 검증
 
 ```
-1. 기능 시뮬레이션
-2. 타이밍 시뮬레이션
-3. 하드웨어 테스트
-4. 시스템 통합 테스트
+1. 기능 시뮬레이션 (Questa)
+2. 회귀 테스트 자동화
+3. 타이밍 시뮬레이션
+4. 하드웨어 테스트
+5. 시스템 통합 테스트
+```
+
+---
+
+## 타이밍 제약조건
+
+### 업데이트된 타이밍 제약 (2026-01-15)
+
+#### 시스템 클록
+
+| 클록 | 주파수 | 주기 | 설명 |
+|------|--------|------|------|
+| MCLK_50M | 50 MHz | 20.000 ns | 시스템 입력 클록 |
+| clk_100m | 100 MHz | 10.000 ns | MMCM 생성 |
+| clk_200m | 200 MHz | 5.000 ns | MMCM 생성 |
+
+#### LVDS 클록 (14채널)
+
+| 클록 | 주파수 | 주기 | 설명 |
+|------|--------|------|------|
+| DCLK_[0:13] | 2.34 MHz | 427.350 ns | TI ROIC 데이터 클록 |
+| FCLK_[0:13] | 2.34 MHz | 427.350 ns | TI ROIC 프레임 클록 |
+
+#### 타이밍 예외
+
+```tcl
+# 비동기 클록 도메인 간 경로
+set_max_latency -from [get_cells DCLK*] -to [get_cells clk_100m*] 20
+set_max_latency -from [get_cells clk_100m*] -to [get_cells DCLK*] 20
+
+# 멀티사이클 경로
+set_multicycle_path -setup 2 -from [get_cells spi_slave*] -to [get_cells reg_map*]
+set_multicycle_path -hold 1 -from [get_cells spi_slave*] -to [get_cells reg_map*]
 ```
 
 ---
 
 ## 디버그 지원
 
-### ILA (Integrated Logic Analyzer)
+### ILA 제거 및 대안 (2026-01-15)
 
-| ILA 인스턴스 | 모니터링 대상 |
-|-------------|--------------|
-| ila_0 | 시스템 신호 |
-| ila_0_1 | 보조 디버그 |
-| ila_csi2 | MIPI CSI-2 신호 |
-| ila_rd_tx | 읽기/전송 신호 |
-| ila_top | 최상위 신호 |
+이전 버전에서 사용된 ILA (Integrated Logic Analyzer) IP는 다음과 같이 제거되었습니다:
+
+| 제거된 ILA | 대안 |
+|-----------|------|
+| ila_0 | Questa 시뮬레이션 파형 분석 |
+| ila_0_1 | 외부 로직 분석기 (필요시) |
+| ila_csi2 | MIPI 프로토콜 아날라이저 |
+| ila_rd_tx | 시뮬레이션 검증 |
+| ila_top | 시뮬레이션 검증 |
 
 ### 디버그 출력
 
@@ -333,7 +446,9 @@ RESET -> WAIT -> BIAS -> FLUSH -> EXPOSE -> READOUT -> AED
 | 의존성 | 버전 | 용도 |
 |--------|------|------|
 | Xilinx Vivado | 2024.2 | 개발 환경 |
+| Questa Simulator | 2024.3+ | 시뮬레이션 |
 | Python | 3.8+ | 유틸리티 스크립트 |
+| Make | 3.81+ | 빌드 자동화 |
 
 ### IP 의존성
 
@@ -373,11 +488,18 @@ RESET -> WAIT -> BIAS -> FLUSH -> EXPOSE -> READOUT -> AED
 - PG232: MIPI CSI-2 TX Subsystem Product Guide
 - PG202: MIPI D-PHY Product Guide
 
+### Siemens EDA 문서
+
+- Questa Simulation User Guide
+- SystemVerilog Language Reference
+
 ### 프로젝트 문서
 
 - `BLUE-HD-FPGA/README.md`: 프로젝트 개요
-- `100um_xc7a35tfgg484_Pinmap.xlsx`: 핀맵 문서
+- `BLUE-HD-FPGA/xdaq_top/simulation/questa/README.md`: 시뮬레이션 가이드
+- 핀맵 문서: `100um_xc7a35tfgg484_Pinmap.xlsx`
 
 ---
 
-*마지막 업데이트: 2026-01-14*
+*마지막 업데이트: 2026-01-15*
+*버전: 2.0.0 (Questa 시뮬레이션 환경 추가, ILA IP 제거)*
