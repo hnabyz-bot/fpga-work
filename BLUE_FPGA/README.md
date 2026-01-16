@@ -16,6 +16,9 @@ GEN2 과제를 위한 FPGA 소스 관리 - Blue Project FPGA
 
 - 본 프로젝트를 기반으로 **CYAN-FPGA** 파생 개발
 - **BLUE-HD-FPGA**는 본 보드를 사용하되 TI ROIC 적용
+  - 현재 상태: **기본 구현 완료** (2026-01-16 기준)
+  - 16개 모듈에 대한 EARS 형식 SPEC 문서 작성 완료
+  - Vivado 합성/구현 빌드 성공, 시뮬레이션 환경 구축 완료
 
 ## 개발 도구
 
@@ -24,7 +27,9 @@ GEN2 과제를 위한 FPGA 소스 관리 - Blue Project FPGA
 
 ## 참고
 
-상세 환경 정보는 [environment.md](../environment.md) 참조
+- 상세 환경 정보: [environment.md](../environment.md)
+- BLUE-HD-FPGA 진행 상황: [BLUE-HD-FPGA/README.md](../BLUE-HD-FPGA/README.md)
+- SPEC 문서 목차: [`.moai/specs/SPEC-INDEX.md`](../.moai/specs/SPEC-INDEX.md)
 
 ## 라이선스
 
