@@ -15,6 +15,28 @@ BLUE-HD 보드 기반 TI ROIC 데이터 수신 FPGA 프로젝트
 - **시퀀스 FSM**: 노출, 리드아웃, 플러시 등 이미지 획득 시퀀스 제어
 - **게이트 드라이브 제어**: 8채널 XAO 및 8채널 STV_LR 신호 생성
 
+## 개발 상태 (2026-01-16 기준)
+
+### 완료된 항목
+
+- [x] 기본 구현 완료
+- [x] Vivado 합성(Synthesis) 성공
+- [x] Vivado 구현(Implementation) 완료
+- [x] Questa 시뮬레이션 스크립트 검증 완료
+- [x] 16개 모듈에 대한 EARS 형식 SPEC 문서 작성 완료
+
+### 진행 가능 상태
+
+- Vivado 프로젝트: `BLUE-HD-FPGA/xdaq_top/build/xdaq_top.xpr`
+- 합성 완료: `BLUE-HD-FPGA/xdaq_top/build/xdaq_top.runs/synth_1/blue_hd_top.dcp`
+- 시뮬레이션 환경 구축 완료
+
+### 검증 중
+
+- [ ] 시뮬레이션 테스트 진행
+- [ ] 타이밍 검증
+- [ ] 하드웨어 테스트
+
 ## 하드웨어 사양
 
 ### 타겟 보드
@@ -99,8 +121,11 @@ BLUE-HD-FPGA/
 │   │       ├── roic_data_bmem/       # ROIC 데이터 블록 메모리 (미사용)
 │   │       └── seq_lut/              # 시퀀스 LUT
 │   ├── simulation/
-│   │   ├── mipi_rx_sim/              # MIPI 수신 시뮬레이션
+│   │   ├── questa/                   # Questa 시뮬레이션
 │   │   └── tb_src/                   # 테스트벤치
+│   │       ├── init_tb.sv            # 초기화 테스트벤치
+│   │       ├── compile_xsim.sh       # XSim 컴파일 스크립트
+│   │       ├── run_xsim.sh           # XSim 실행 스크립트
 │   │       ├── test_bench.sv
 │   │       ├── sequencer_fsm_tb.sv
 │   │       ├── tb_ctrl_fsm_sg.sv
@@ -152,17 +177,62 @@ cd xdaq_top/build
 vivado xdaq_top.xpr
 ```
 
-### 합성 및 구현
-1. Vivado에서 프로젝트 열기
-2. "Run Synthesis" 실행
-3. "Run Implementation" 실행
-4. "Generate Bitstream" 실행
+### 합성 실행 (Vivado Tcl Console)
+```tcl
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+```
 
-### 타이밍 제약 확인
-- 모든 14개 DCLK 채널에 대한 타이밍 제약 적용 필요
-- CDC(Clock Domain Crossing) 제약 확인
+### 구현 실행
+```tcl
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+```
+
+### 비트스트림 생성
+```tcl
+open_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+```
+
+## 시뮬레이션
+
+### XSim (Xilinx Simulator) 실행
+```bash
+cd xdaq_top/simulation/tb_src
+./compile_xsim.sh  # 컴파일
+./run_xsim.sh      # 시뮬레이션 실행
+```
+
+### Questa Simulator 실행
+```bash
+# 환경 설정 먼저 실행
+source /home/holee/TOOLS/env.sh
+# "You chose questa_base_2024.3" 메세지 확인
+
+# Questa GUI 실행
+cd xdaq_top/simulation/questa
+vsim -do run.tcl
+```
+
+## SPEC 문서
+
+모듈별 상세 설계 문서는 프로젝트 루트의 `.moai/specs/` 디렉토리를 참조하세요.
+
+### 주요 SPEC 문서
+- **[SPEC-INDEX](../.moai/specs/SPEC-INDEX.md)**: 전체 SPEC 문서 목차
+- **SPEC-SYS-001**: blue_hd_top 시스템 사양
+- **SPEC-ROIC-001~006**: ROIC 인터페이스 모듈 사양
+- **SPEC-COMM-001~003**: 통신 인터페이스 모듈 사양
+- **SPEC-MISC-001~003**: 기타 모듈 사양
 
 ## 변경 이력
+
+### v1.1 (2026-01-16) - 문서화 및 검증
+- ✅ 16개 모듈에 대한 EARS 형식 SPEC 문서 작성 완료
+- ✅ Questa 시뮬레이션 스크립트 검증 완료
+- ✅ Vivado 합성/구현 빌드 성공 확인
+- ✅ 프로젝트 문서화 진행
 
 ### v1.0 (2026-01-12) - Cyan Board 변환
 - 12채널에서 14채널 LVDS로 확장
@@ -171,21 +241,10 @@ vivado xdaq_top.xpr
 - GF_XAO 8채널, GF_STV_LR 8채널로 확장
 - ROIC_SPI 단일 신호로 변경
 
-## TODO
-
-### 하드웨어 검증
-- [ ] GF_STV_LR1~8 실제 로직 연결 (현재 1'bz)
-- [ ] GF_XAO_7, GF_XAO_8 매핑 검증
-- [ ] 제거된 신호(ROIC_MCLK1, SWITCH_SYNC 등) 필요 여부 확인
-
-### 기능 개선
-- [ ] 14채널 데이터 병합 로직 최적화
-- [ ] 타이밍 제약 세부 조정
-- [ ] 시뮬레이션 테스트벤치 업데이트
-
 ## 참고 문서
 
 - `100um_xc7a35tfgg484_Pinmap.xlsx`: BLUE-HD 보드 핀맵
+- [environment.md](../environment.md): 프로젝트 환경 및 작업 계획
 
 ## 라이선스
 
