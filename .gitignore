@@ -178,3 +178,48 @@ dist-ssr/
 .vercel/
 .netlify/
 .firebase/
+
+# ===========================================
+# FPGA / Vivado / Questa
+# ===========================================
+# Vivado build artifacts
+*.cache/
+*.runs/
+*.xpr
+*.hw/
+*.sim/
+*.jou
+*.log
+*.pb
+*.wdf
+*.wpc
+*.dcp
+*.bit
+*.bin
+*.rpt
+*.rpx
+*.vdi
+
+# Questa/XSim simulation artifacts
+*.vcd
+*.wcfg
+*.wlf
+transcript*
+vsim*
+xsim*
+xvlog*
+xelab*
+xsim.dir/
+work/
+
+# Simulation temporary files
+*backup.jou
+*.backup
+*.tcl
+*_fixed.sh
+*_v2.sh
+
+# Build directories (specific to FPGA projects)
+BLUE-HD-FPGA/*/build/
+BLUE-HD-FPGA/*/runs/
+BLUE-HD-FPGA/*/.Xil/
