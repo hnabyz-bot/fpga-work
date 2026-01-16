@@ -103,6 +103,52 @@ make sim_batch TB=tb_reg_map SIM_TIME=500us
 ./run_test.sh test_bench batch
 ```
 
+### 개별 모듈 시뮬레이션 (Vivado GUI 없이)
+
+Vivado GUI 연동 없이 Questa GUI만으로 개별 모듈을 시뮬레이션할 수 있습니다.
+
+#### 방법 1: 범용 스크립트 사용 (권장)
+
+```bash
+# 환경 설정
+source /home/holee/TOOLS/env.sh
+
+# init 모듈 시뮬레이션
+./run_module.sh init
+
+# sequencer_fsm 모듈 시뮬레이션
+./run_module.sh sequencer_fsm
+
+# 배치 모드로 실행
+./run_module.sh init -batch
+
+# 사용 가능한 모듈 목록
+./run_module.sh
+```
+
+#### 방법 2: 모듈별 전용 스크립트 사용
+
+```bash
+# init 모듈
+./run_init.sh          # GUI 모드
+./run_init.sh -batch   # 배치 모드
+
+# sequencer_fsm 모듈
+./run_sequencer_fsm.sh          # GUI 모드
+./run_sequencer_fsm.sh -batch   # 배치 모드
+```
+
+#### 지원되는 모듈
+
+| 모듈명 | 설명 | 테스트벤치 |
+|--------|------|-----------|
+| `init` | 초기화 파워 시퀀스 | `init_tb.sv` |
+| `sequencer_fsm` | 시퀀서 FSM 상태 머신 | `sequencer_fsm_tb.sv` |
+| `fifo_1b` | 1비트 FIFO | 준비 중 |
+| `async_fifo_1b` | 비동기 1비트 FIFO | 준비 중 |
+| `spi_slave` | SPI 슬레이브 | 준비 중 |
+| `i2c_master` | I2C 마스터 | 준비 중 |
+
 ### 회귀 테스트 실행
 
 ```bash
@@ -177,4 +223,4 @@ export_simulation -simulator questa -directory ./sim_export
 
 - **Project**: BLUE-HD-FPGA
 - **Author**: holee
-- **Last Updated**: 2026-01-15
+- **Last Updated**: 2026-01-16
