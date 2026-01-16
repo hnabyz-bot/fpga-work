@@ -1,7 +1,7 @@
 -------------------------------------
-| Tool Version : Vivado v.2024.2
-| Date         : Thu Jan 15 14:13:09 2026
-| Host         : work-dev
+| Tool Version : Vivado v.2024.2.2
+| Date         : Fri Jan 16 14:45:12 2026
+| Host         : drlinux
 | Design       : design_1
 | Device       : xc7a35t-fgg484-1--
 -------------------------------------

@@ -220,6 +220,10 @@ work/
 *_v2.sh
 
 # Build directories (specific to FPGA projects)
-BLUE-HD-FPGA/*/build/
+# 예외: Vivado 프로젝트 파일 유지
+!BLUE-HD-FPGA/*/build/post_script.tcl
+!BLUE-HD-FPGA/*/build/xdaq_top.xpr
+BLUE-HD-FPGA/*/build/*
+BLUE-HD-FPGA/*/build/*/
 BLUE-HD-FPGA/*/runs/
 BLUE-HD-FPGA/*/.Xil/

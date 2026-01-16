@@ -3,102 +3,100 @@
     with args -log bd_26df_mipi_dphy_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source bd_26df_mipi_dphy_0_0.tcl
 
 
-
-****** Vivado v2024.2 (64-bit)
-  **** SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
-  **** IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
-  **** SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
-  **** Start of session at: Tue Jan 13 10:09:10 2026
+****** Vivado v2024.2.2 (64-bit)
+  **** SW Build 6060944 on Thu Mar 06 19:10:09 MST 2025
+  **** IP Build 6050500 on Thu Mar  6 23:33:39 MST 2025
+  **** SharedData Build 6060542 on Thu Mar 06 10:31:07 MST 2025
+  **** Start of session at: Fri Jan 16 15:11:30 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
 source bd_26df_mipi_dphy_0_0.tcl -notrace
-create_project: Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 443.246 ; gain = 128.145
 INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: bd_26df_mipi_dphy_0_0
 Command: synth_design -top bd_26df_mipi_dphy_0_0 -part xc7a35tfgg484-1 -incremental_mode off -mode out_of_context
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Device 21-403] Loading part xc7a35tfgg484-1
-INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 53576
+INFO: [Synth 8-7075] Helper process launched with PID 428711
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1124.617 ; gain = 467.238
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1968.703 ; gain = 417.828 ; free physical = 4146 ; free virtual = 35322
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-11241] undeclared symbol 'dl4_txulpsesc', assumed default net type 'wire' [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_support.v:639]
-INFO: [Synth 8-11241] undeclared symbol 'dl5_txulpsesc', assumed default net type 'wire' [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_support.v:653]
-INFO: [Synth 8-11241] undeclared symbol 'dl6_txulpsesc', assumed default net type 'wire' [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_support.v:666]
-INFO: [Synth 8-11241] undeclared symbol 'dl7_txulpsesc', assumed default net type 'wire' [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_support.v:679]
-INFO: [Synth 8-11241] undeclared symbol 'dl0_txskewcalhs', assumed default net type 'wire' [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_support.v:800]
-INFO: [Synth 8-11241] undeclared symbol 'dl1_byteclkhs', assumed default net type 'wire' [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_support.v:820]
-INFO: [Synth 8-11241] undeclared symbol 'dl1_txskewcalhs', assumed default net type 'wire' [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_support.v:824]
-INFO: [Synth 8-11241] undeclared symbol 'dl2_byteclkhs', assumed default net type 'wire' [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_support.v:844]
-INFO: [Synth 8-11241] undeclared symbol 'dl2_txskewcalhs', assumed default net type 'wire' [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_support.v:848]
-INFO: [Synth 8-11241] undeclared symbol 'dl3_byteclkhs', assumed default net type 'wire' [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_support.v:868]
-INFO: [Synth 8-11241] undeclared symbol 'dl3_txskewcalhs', assumed default net type 'wire' [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_support.v:872]
-INFO: [Synth 8-11241] undeclared symbol 'dl4_byteclkhs', assumed default net type 'wire' [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_support.v:892]
-INFO: [Synth 8-11241] undeclared symbol 'dl4_txreadyhs', assumed default net type 'wire' [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_support.v:895]
-INFO: [Synth 8-11241] undeclared symbol 'dl4_stopstate', assumed default net type 'wire' [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_support.v:899]
-INFO: [Synth 8-11241] undeclared symbol 'dl4_ulpsactivenot', assumed default net type 'wire' [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_support.v:907]
-INFO: [Synth 8-11241] undeclared symbol 'dl4_txreadyesc', assumed default net type 'wire' [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_support.v:912]
-INFO: [Synth 8-11241] undeclared symbol 'dl5_byteclkhs', assumed default net type 'wire' [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_support.v:916]
-INFO: [Synth 8-11241] undeclared symbol 'dl5_txreadyhs', assumed default net type 'wire' [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_support.v:919]
-INFO: [Synth 8-11241] undeclared symbol 'dl5_stopstate', assumed default net type 'wire' [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_support.v:923]
-INFO: [Synth 8-11241] undeclared symbol 'dl5_ulpsactivenot', assumed default net type 'wire' [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_support.v:931]
-INFO: [Synth 8-11241] undeclared symbol 'dl5_txreadyesc', assumed default net type 'wire' [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_support.v:936]
-INFO: [Synth 8-11241] undeclared symbol 'dl6_byteclkhs', assumed default net type 'wire' [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_support.v:940]
-INFO: [Synth 8-11241] undeclared symbol 'dl6_txreadyhs', assumed default net type 'wire' [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_support.v:943]
-INFO: [Synth 8-11241] undeclared symbol 'dl6_stopstate', assumed default net type 'wire' [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_support.v:947]
-INFO: [Synth 8-11241] undeclared symbol 'dl6_ulpsactivenot', assumed default net type 'wire' [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_support.v:955]
-INFO: [Synth 8-11241] undeclared symbol 'dl6_txreadyesc', assumed default net type 'wire' [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_support.v:960]
-INFO: [Synth 8-11241] undeclared symbol 'dl7_byteclkhs', assumed default net type 'wire' [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_support.v:963]
-INFO: [Synth 8-11241] undeclared symbol 'dl7_txreadyhs', assumed default net type 'wire' [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_support.v:966]
-INFO: [Synth 8-11241] undeclared symbol 'dl7_stopstate', assumed default net type 'wire' [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_support.v:970]
-INFO: [Synth 8-11241] undeclared symbol 'dl7_ulpsactivenot', assumed default net type 'wire' [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_support.v:978]
-INFO: [Synth 8-11241] undeclared symbol 'dl7_txreadyesc', assumed default net type 'wire' [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_support.v:983]
-INFO: [Synth 8-6157] synthesizing module 'bd_26df_mipi_dphy_0_0' [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0.v:90]
-INFO: [Synth 8-6157] synthesizing module 'bd_26df_mipi_dphy_0_0_core' [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0_core.v:92]
-INFO: [Synth 8-6157] synthesizing module 'bd_26df_mipi_dphy_0_0_c1' [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0_c1.v:98]
-INFO: [Synth 8-6157] synthesizing module 'bd_26df_mipi_dphy_0_0_support' [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_support.v:102]
-INFO: [Synth 8-6157] synthesizing module 'FDR' [D:/Xilinx/Vivado/2024.2/scripts/rt/data/unisim_comp.v:43175]
-INFO: [Synth 8-6155] done synthesizing module 'FDR' (0#1) [D:/Xilinx/Vivado/2024.2/scripts/rt/data/unisim_comp.v:43175]
-WARNING: [Synth 8-7071] port 'cl_mode_intr' of module 'mipi_dphy_v4_3_13_tx_fab_top' is unconnected for instance 'dphy_tx_fab_top' [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_support.v:756]
-WARNING: [Synth 8-7071] port 'dl0_pkt_cnt_intr' of module 'mipi_dphy_v4_3_13_tx_fab_top' is unconnected for instance 'dphy_tx_fab_top' [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_support.v:756]
-WARNING: [Synth 8-7071] port 'dl0_mode_intr' of module 'mipi_dphy_v4_3_13_tx_fab_top' is unconnected for instance 'dphy_tx_fab_top' [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_support.v:756]
-WARNING: [Synth 8-7071] port 'dl1_pkt_cnt_intr' of module 'mipi_dphy_v4_3_13_tx_fab_top' is unconnected for instance 'dphy_tx_fab_top' [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_support.v:756]
-WARNING: [Synth 8-7071] port 'dl1_mode_intr' of module 'mipi_dphy_v4_3_13_tx_fab_top' is unconnected for instance 'dphy_tx_fab_top' [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_support.v:756]
-WARNING: [Synth 8-7071] port 'dl2_pkt_cnt_intr' of module 'mipi_dphy_v4_3_13_tx_fab_top' is unconnected for instance 'dphy_tx_fab_top' [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_support.v:756]
-WARNING: [Synth 8-7071] port 'dl2_mode_intr' of module 'mipi_dphy_v4_3_13_tx_fab_top' is unconnected for instance 'dphy_tx_fab_top' [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_support.v:756]
-WARNING: [Synth 8-7071] port 'dl3_pkt_cnt_intr' of module 'mipi_dphy_v4_3_13_tx_fab_top' is unconnected for instance 'dphy_tx_fab_top' [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_support.v:756]
-WARNING: [Synth 8-7071] port 'dl3_mode_intr' of module 'mipi_dphy_v4_3_13_tx_fab_top' is unconnected for instance 'dphy_tx_fab_top' [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_support.v:756]
-WARNING: [Synth 8-7071] port 'dl4_pkt_cnt_intr' of module 'mipi_dphy_v4_3_13_tx_fab_top' is unconnected for instance 'dphy_tx_fab_top' [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_support.v:756]
-WARNING: [Synth 8-7071] port 'dl4_mode_intr' of module 'mipi_dphy_v4_3_13_tx_fab_top' is unconnected for instance 'dphy_tx_fab_top' [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_support.v:756]
-WARNING: [Synth 8-7071] port 'dl5_pkt_cnt_intr' of module 'mipi_dphy_v4_3_13_tx_fab_top' is unconnected for instance 'dphy_tx_fab_top' [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_support.v:756]
-WARNING: [Synth 8-7071] port 'dl5_mode_intr' of module 'mipi_dphy_v4_3_13_tx_fab_top' is unconnected for instance 'dphy_tx_fab_top' [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_support.v:756]
-WARNING: [Synth 8-7071] port 'dl6_pkt_cnt_intr' of module 'mipi_dphy_v4_3_13_tx_fab_top' is unconnected for instance 'dphy_tx_fab_top' [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_support.v:756]
-WARNING: [Synth 8-7071] port 'dl6_mode_intr' of module 'mipi_dphy_v4_3_13_tx_fab_top' is unconnected for instance 'dphy_tx_fab_top' [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_support.v:756]
-WARNING: [Synth 8-7071] port 'dl7_pkt_cnt_intr' of module 'mipi_dphy_v4_3_13_tx_fab_top' is unconnected for instance 'dphy_tx_fab_top' [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_support.v:756]
-WARNING: [Synth 8-7071] port 'dl7_mode_intr' of module 'mipi_dphy_v4_3_13_tx_fab_top' is unconnected for instance 'dphy_tx_fab_top' [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_support.v:756]
-WARNING: [Synth 8-7023] instance 'dphy_tx_fab_top' of module 'mipi_dphy_v4_3_13_tx_fab_top' has 255 connections declared, but only 238 given [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_support.v:756]
-INFO: [Synth 8-6157] synthesizing module 'OBUFTDS' [D:/Xilinx/Vivado/2024.2/scripts/rt/data/unisim_comp.v:99831]
-INFO: [Synth 8-6155] done synthesizing module 'OBUFTDS' (0#1) [D:/Xilinx/Vivado/2024.2/scripts/rt/data/unisim_comp.v:99831]
-INFO: [Synth 8-6157] synthesizing module 'OSERDESE2' [D:/Xilinx/Vivado/2024.2/scripts/rt/data/unisim_comp.v:103679]
-INFO: [Synth 8-6155] done synthesizing module 'OSERDESE2' (0#1) [D:/Xilinx/Vivado/2024.2/scripts/rt/data/unisim_comp.v:103679]
-INFO: [Synth 8-6157] synthesizing module 'OSERDESE2__parameterized0' [D:/Xilinx/Vivado/2024.2/scripts/rt/data/unisim_comp.v:103679]
-INFO: [Synth 8-6155] done synthesizing module 'OSERDESE2__parameterized0' (0#1) [D:/Xilinx/Vivado/2024.2/scripts/rt/data/unisim_comp.v:103679]
-INFO: [Synth 8-6157] synthesizing module 'bd_26df_mipi_dphy_0_0_clock_module' [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_clock_module.v:87]
+INFO: [Synth 8-11241] undeclared symbol 'dl4_txulpsesc', assumed default net type 'wire' [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_support.v:639]
+INFO: [Synth 8-11241] undeclared symbol 'dl5_txulpsesc', assumed default net type 'wire' [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_support.v:653]
+INFO: [Synth 8-11241] undeclared symbol 'dl6_txulpsesc', assumed default net type 'wire' [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_support.v:666]
+INFO: [Synth 8-11241] undeclared symbol 'dl7_txulpsesc', assumed default net type 'wire' [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_support.v:679]
+INFO: [Synth 8-11241] undeclared symbol 'dl0_txskewcalhs', assumed default net type 'wire' [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_support.v:800]
+INFO: [Synth 8-11241] undeclared symbol 'dl1_byteclkhs', assumed default net type 'wire' [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_support.v:820]
+INFO: [Synth 8-11241] undeclared symbol 'dl1_txskewcalhs', assumed default net type 'wire' [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_support.v:824]
+INFO: [Synth 8-11241] undeclared symbol 'dl2_byteclkhs', assumed default net type 'wire' [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_support.v:844]
+INFO: [Synth 8-11241] undeclared symbol 'dl2_txskewcalhs', assumed default net type 'wire' [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_support.v:848]
+INFO: [Synth 8-11241] undeclared symbol 'dl3_byteclkhs', assumed default net type 'wire' [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_support.v:868]
+INFO: [Synth 8-11241] undeclared symbol 'dl3_txskewcalhs', assumed default net type 'wire' [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_support.v:872]
+INFO: [Synth 8-11241] undeclared symbol 'dl4_byteclkhs', assumed default net type 'wire' [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_support.v:892]
+INFO: [Synth 8-11241] undeclared symbol 'dl4_txreadyhs', assumed default net type 'wire' [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_support.v:895]
+INFO: [Synth 8-11241] undeclared symbol 'dl4_stopstate', assumed default net type 'wire' [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_support.v:899]
+INFO: [Synth 8-11241] undeclared symbol 'dl4_ulpsactivenot', assumed default net type 'wire' [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_support.v:907]
+INFO: [Synth 8-11241] undeclared symbol 'dl4_txreadyesc', assumed default net type 'wire' [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_support.v:912]
+INFO: [Synth 8-11241] undeclared symbol 'dl5_byteclkhs', assumed default net type 'wire' [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_support.v:916]
+INFO: [Synth 8-11241] undeclared symbol 'dl5_txreadyhs', assumed default net type 'wire' [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_support.v:919]
+INFO: [Synth 8-11241] undeclared symbol 'dl5_stopstate', assumed default net type 'wire' [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_support.v:923]
+INFO: [Synth 8-11241] undeclared symbol 'dl5_ulpsactivenot', assumed default net type 'wire' [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_support.v:931]
+INFO: [Synth 8-11241] undeclared symbol 'dl5_txreadyesc', assumed default net type 'wire' [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_support.v:936]
+INFO: [Synth 8-11241] undeclared symbol 'dl6_byteclkhs', assumed default net type 'wire' [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_support.v:940]
+INFO: [Synth 8-11241] undeclared symbol 'dl6_txreadyhs', assumed default net type 'wire' [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_support.v:943]
+INFO: [Synth 8-11241] undeclared symbol 'dl6_stopstate', assumed default net type 'wire' [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_support.v:947]
+INFO: [Synth 8-11241] undeclared symbol 'dl6_ulpsactivenot', assumed default net type 'wire' [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_support.v:955]
+INFO: [Synth 8-11241] undeclared symbol 'dl6_txreadyesc', assumed default net type 'wire' [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_support.v:960]
+INFO: [Synth 8-11241] undeclared symbol 'dl7_byteclkhs', assumed default net type 'wire' [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_support.v:963]
+INFO: [Synth 8-11241] undeclared symbol 'dl7_txreadyhs', assumed default net type 'wire' [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_support.v:966]
+INFO: [Synth 8-11241] undeclared symbol 'dl7_stopstate', assumed default net type 'wire' [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_support.v:970]
+INFO: [Synth 8-11241] undeclared symbol 'dl7_ulpsactivenot', assumed default net type 'wire' [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_support.v:978]
+INFO: [Synth 8-11241] undeclared symbol 'dl7_txreadyesc', assumed default net type 'wire' [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_support.v:983]
+INFO: [Synth 8-6157] synthesizing module 'bd_26df_mipi_dphy_0_0' [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0.v:90]
+INFO: [Synth 8-6157] synthesizing module 'bd_26df_mipi_dphy_0_0_core' [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0_core.v:92]
+INFO: [Synth 8-6157] synthesizing module 'bd_26df_mipi_dphy_0_0_c1' [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0_c1.v:98]
+INFO: [Synth 8-6157] synthesizing module 'bd_26df_mipi_dphy_0_0_support' [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_support.v:102]
+INFO: [Synth 8-6157] synthesizing module 'FDR' [/home/holee/tools/xilinx/Vivado/2024.2/scripts/rt/data/unisim_comp.v:43175]
+INFO: [Synth 8-6155] done synthesizing module 'FDR' (0#1) [/home/holee/tools/xilinx/Vivado/2024.2/scripts/rt/data/unisim_comp.v:43175]
+WARNING: [Synth 8-7071] port 'cl_mode_intr' of module 'mipi_dphy_v4_3_14_tx_fab_top' is unconnected for instance 'dphy_tx_fab_top' [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_support.v:756]
+WARNING: [Synth 8-7071] port 'dl0_pkt_cnt_intr' of module 'mipi_dphy_v4_3_14_tx_fab_top' is unconnected for instance 'dphy_tx_fab_top' [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_support.v:756]
+WARNING: [Synth 8-7071] port 'dl0_mode_intr' of module 'mipi_dphy_v4_3_14_tx_fab_top' is unconnected for instance 'dphy_tx_fab_top' [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_support.v:756]
+WARNING: [Synth 8-7071] port 'dl1_pkt_cnt_intr' of module 'mipi_dphy_v4_3_14_tx_fab_top' is unconnected for instance 'dphy_tx_fab_top' [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_support.v:756]
+WARNING: [Synth 8-7071] port 'dl1_mode_intr' of module 'mipi_dphy_v4_3_14_tx_fab_top' is unconnected for instance 'dphy_tx_fab_top' [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_support.v:756]
+WARNING: [Synth 8-7071] port 'dl2_pkt_cnt_intr' of module 'mipi_dphy_v4_3_14_tx_fab_top' is unconnected for instance 'dphy_tx_fab_top' [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_support.v:756]
+WARNING: [Synth 8-7071] port 'dl2_mode_intr' of module 'mipi_dphy_v4_3_14_tx_fab_top' is unconnected for instance 'dphy_tx_fab_top' [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_support.v:756]
+WARNING: [Synth 8-7071] port 'dl3_pkt_cnt_intr' of module 'mipi_dphy_v4_3_14_tx_fab_top' is unconnected for instance 'dphy_tx_fab_top' [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_support.v:756]
+WARNING: [Synth 8-7071] port 'dl3_mode_intr' of module 'mipi_dphy_v4_3_14_tx_fab_top' is unconnected for instance 'dphy_tx_fab_top' [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_support.v:756]
+WARNING: [Synth 8-7071] port 'dl4_pkt_cnt_intr' of module 'mipi_dphy_v4_3_14_tx_fab_top' is unconnected for instance 'dphy_tx_fab_top' [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_support.v:756]
+WARNING: [Synth 8-7071] port 'dl4_mode_intr' of module 'mipi_dphy_v4_3_14_tx_fab_top' is unconnected for instance 'dphy_tx_fab_top' [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_support.v:756]
+WARNING: [Synth 8-7071] port 'dl5_pkt_cnt_intr' of module 'mipi_dphy_v4_3_14_tx_fab_top' is unconnected for instance 'dphy_tx_fab_top' [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_support.v:756]
+WARNING: [Synth 8-7071] port 'dl5_mode_intr' of module 'mipi_dphy_v4_3_14_tx_fab_top' is unconnected for instance 'dphy_tx_fab_top' [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_support.v:756]
+WARNING: [Synth 8-7071] port 'dl6_pkt_cnt_intr' of module 'mipi_dphy_v4_3_14_tx_fab_top' is unconnected for instance 'dphy_tx_fab_top' [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_support.v:756]
+WARNING: [Synth 8-7071] port 'dl6_mode_intr' of module 'mipi_dphy_v4_3_14_tx_fab_top' is unconnected for instance 'dphy_tx_fab_top' [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_support.v:756]
+WARNING: [Synth 8-7071] port 'dl7_pkt_cnt_intr' of module 'mipi_dphy_v4_3_14_tx_fab_top' is unconnected for instance 'dphy_tx_fab_top' [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_support.v:756]
+WARNING: [Synth 8-7071] port 'dl7_mode_intr' of module 'mipi_dphy_v4_3_14_tx_fab_top' is unconnected for instance 'dphy_tx_fab_top' [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_support.v:756]
+WARNING: [Synth 8-7023] instance 'dphy_tx_fab_top' of module 'mipi_dphy_v4_3_14_tx_fab_top' has 255 connections declared, but only 238 given [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_support.v:756]
+INFO: [Synth 8-6157] synthesizing module 'OBUFTDS' [/home/holee/tools/xilinx/Vivado/2024.2/scripts/rt/data/unisim_comp.v:99831]
+INFO: [Synth 8-6155] done synthesizing module 'OBUFTDS' (0#1) [/home/holee/tools/xilinx/Vivado/2024.2/scripts/rt/data/unisim_comp.v:99831]
+INFO: [Synth 8-6157] synthesizing module 'OSERDESE2' [/home/holee/tools/xilinx/Vivado/2024.2/scripts/rt/data/unisim_comp.v:103679]
+INFO: [Synth 8-6155] done synthesizing module 'OSERDESE2' (0#1) [/home/holee/tools/xilinx/Vivado/2024.2/scripts/rt/data/unisim_comp.v:103679]
+INFO: [Synth 8-6157] synthesizing module 'OSERDESE2__parameterized0' [/home/holee/tools/xilinx/Vivado/2024.2/scripts/rt/data/unisim_comp.v:103679]
+INFO: [Synth 8-6155] done synthesizing module 'OSERDESE2__parameterized0' (0#1) [/home/holee/tools/xilinx/Vivado/2024.2/scripts/rt/data/unisim_comp.v:103679]
+INFO: [Synth 8-6157] synthesizing module 'bd_26df_mipi_dphy_0_0_clock_module' [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_clock_module.v:87]
 	Parameter C_DPHY_LANES bound to: 4 - type: integer 
 	Parameter MTBF_SYNC_STAGES bound to: 3 - type: integer 
 	Parameter C_HS_LINE_RATE bound to: 400 - type: integer 
 	Parameter C_STABLE_CLK_PERIOD bound to: 5.000000 - type: double 
 	Parameter C_TXPLL_CLKIN_PERIOD bound to: 8.000000 - type: double 
 	Parameter EN_DPHY_IO bound to: 0 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'bd_26df_mipi_dphy_0_0_clock_module_tx' [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/ip_0/bd_26df_mipi_dphy_0_0_clock_module_tx.v:67]
-INFO: [Synth 8-6157] synthesizing module 'bd_26df_mipi_dphy_0_0_clock_module_tx_clk_wiz' [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/ip_0/bd_26df_mipi_dphy_0_0_clock_module_tx_clk_wiz.v:67]
-INFO: [Synth 8-6157] synthesizing module 'BUFG' [D:/Xilinx/Vivado/2024.2/scripts/rt/data/unisim_comp.v:2676]
-INFO: [Synth 8-6155] done synthesizing module 'BUFG' (0#1) [D:/Xilinx/Vivado/2024.2/scripts/rt/data/unisim_comp.v:2676]
-INFO: [Synth 8-6157] synthesizing module 'MMCME2_ADV' [D:/Xilinx/Vivado/2024.2/scripts/rt/data/unisim_comp.v:84588]
+INFO: [Synth 8-6157] synthesizing module 'bd_26df_mipi_dphy_0_0_clock_module_tx' [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/ip_0/bd_26df_mipi_dphy_0_0_clock_module_tx.v:67]
+INFO: [Synth 8-6157] synthesizing module 'bd_26df_mipi_dphy_0_0_clock_module_tx_clk_wiz' [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/ip_0/bd_26df_mipi_dphy_0_0_clock_module_tx_clk_wiz.v:67]
+INFO: [Synth 8-6157] synthesizing module 'BUFG' [/home/holee/tools/xilinx/Vivado/2024.2/scripts/rt/data/unisim_comp.v:2676]
+INFO: [Synth 8-6155] done synthesizing module 'BUFG' (0#1) [/home/holee/tools/xilinx/Vivado/2024.2/scripts/rt/data/unisim_comp.v:2676]
+INFO: [Synth 8-6157] synthesizing module 'MMCME2_ADV' [/home/holee/tools/xilinx/Vivado/2024.2/scripts/rt/data/unisim_comp.v:84588]
 	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
 	Parameter CLKFBOUT_MULT_F bound to: 5.000000 - type: double 
 	Parameter CLKFBOUT_PHASE bound to: 0.000000 - type: double 
@@ -120,194 +118,194 @@ INFO: [Synth 8-6157] synthesizing module 'MMCME2_ADV' [D:/Xilinx/Vivado/2024.2/s
 	Parameter COMPENSATION bound to: ZHOLD - type: string 
 	Parameter DIVCLK_DIVIDE bound to: 1 - type: integer 
 	Parameter STARTUP_WAIT bound to: FALSE - type: string 
-INFO: [Synth 8-6155] done synthesizing module 'MMCME2_ADV' (0#1) [D:/Xilinx/Vivado/2024.2/scripts/rt/data/unisim_comp.v:84588]
-INFO: [Synth 8-6155] done synthesizing module 'bd_26df_mipi_dphy_0_0_clock_module_tx_clk_wiz' (0#1) [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/ip_0/bd_26df_mipi_dphy_0_0_clock_module_tx_clk_wiz.v:67]
-INFO: [Synth 8-6155] done synthesizing module 'bd_26df_mipi_dphy_0_0_clock_module_tx' (0#1) [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/ip_0/bd_26df_mipi_dphy_0_0_clock_module_tx.v:67]
-INFO: [Synth 8-6157] synthesizing module 'BUFIO' [D:/Xilinx/Vivado/2024.2/scripts/rt/data/unisim_comp.v:2949]
-INFO: [Synth 8-6155] done synthesizing module 'BUFIO' (0#1) [D:/Xilinx/Vivado/2024.2/scripts/rt/data/unisim_comp.v:2949]
-INFO: [Synth 8-6157] synthesizing module 'BUFR' [D:/Xilinx/Vivado/2024.2/scripts/rt/data/unisim_comp.v:3015]
+INFO: [Synth 8-6155] done synthesizing module 'MMCME2_ADV' (0#1) [/home/holee/tools/xilinx/Vivado/2024.2/scripts/rt/data/unisim_comp.v:84588]
+INFO: [Synth 8-6155] done synthesizing module 'bd_26df_mipi_dphy_0_0_clock_module_tx_clk_wiz' (0#1) [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/ip_0/bd_26df_mipi_dphy_0_0_clock_module_tx_clk_wiz.v:67]
+INFO: [Synth 8-6155] done synthesizing module 'bd_26df_mipi_dphy_0_0_clock_module_tx' (0#1) [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/ip_0/bd_26df_mipi_dphy_0_0_clock_module_tx.v:67]
+INFO: [Synth 8-6157] synthesizing module 'BUFIO' [/home/holee/tools/xilinx/Vivado/2024.2/scripts/rt/data/unisim_comp.v:2949]
+INFO: [Synth 8-6155] done synthesizing module 'BUFIO' (0#1) [/home/holee/tools/xilinx/Vivado/2024.2/scripts/rt/data/unisim_comp.v:2949]
+INFO: [Synth 8-6157] synthesizing module 'BUFR' [/home/holee/tools/xilinx/Vivado/2024.2/scripts/rt/data/unisim_comp.v:3015]
 	Parameter BUFR_DIVIDE bound to: 4 - type: string 
 	Parameter SIM_DEVICE bound to: 7SERIES - type: string 
-INFO: [Synth 8-6155] done synthesizing module 'BUFR' (0#1) [D:/Xilinx/Vivado/2024.2/scripts/rt/data/unisim_comp.v:3015]
-INFO: [Synth 8-6155] done synthesizing module 'bd_26df_mipi_dphy_0_0_clock_module' (0#1) [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_clock_module.v:87]
-INFO: [Synth 8-6155] done synthesizing module 'bd_26df_mipi_dphy_0_0_support' (0#1) [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_support.v:102]
-INFO: [Synth 8-6155] done synthesizing module 'bd_26df_mipi_dphy_0_0_c1' (0#1) [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0_c1.v:98]
-INFO: [Synth 8-6155] done synthesizing module 'bd_26df_mipi_dphy_0_0_core' (0#1) [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0_core.v:92]
-INFO: [Synth 8-6155] done synthesizing module 'bd_26df_mipi_dphy_0_0' (0#1) [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0.v:90]
-WARNING: [Synth 8-3848] Net master_tx.dl0_txskewcalhs in module/entity bd_26df_mipi_dphy_0_0_support does not have driver. [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_support.v:800]
-WARNING: [Synth 8-3848] Net master_tx.dl1_txskewcalhs in module/entity bd_26df_mipi_dphy_0_0_support does not have driver. [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_support.v:824]
-WARNING: [Synth 8-3848] Net master_tx.dl2_txskewcalhs in module/entity bd_26df_mipi_dphy_0_0_support does not have driver. [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_support.v:848]
-WARNING: [Synth 8-3848] Net master_tx.dl3_txskewcalhs in module/entity bd_26df_mipi_dphy_0_0_support does not have driver. [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_support.v:872]
-WARNING: [Synth 8-7129] Port core_clk in module mipi_dphy_v4_3_13_tx_ioi_7series is either unconnected or has no load
-WARNING: [Synth 8-7129] Port io_reset in module mipi_dphy_v4_3_13_tx_ioi_7series is either unconnected or has no load
-WARNING: [Synth 8-7129] Port en_hs_tst[8] in module mipi_dphy_v4_3_13_tx_ioi_7series is either unconnected or has no load
-WARNING: [Synth 8-7129] Port en_hs_tst[7] in module mipi_dphy_v4_3_13_tx_ioi_7series is either unconnected or has no load
-WARNING: [Synth 8-7129] Port en_hs_tst[6] in module mipi_dphy_v4_3_13_tx_ioi_7series is either unconnected or has no load
-WARNING: [Synth 8-7129] Port en_hs_tst[5] in module mipi_dphy_v4_3_13_tx_ioi_7series is either unconnected or has no load
-WARNING: [Synth 8-7129] Port cl_tst_clk_in in module mipi_dphy_v4_3_13_tx_ioi_7series is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dl_tst_clk_in in module mipi_dphy_v4_3_13_tx_ioi_7series is either unconnected or has no load
-WARNING: [Synth 8-7129] Port prmry_aclk in module mipi_dphy_v4_3_13_tx_sync_cell__parameterized0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port prmry_rst_n in module mipi_dphy_v4_3_13_tx_sync_cell__parameterized0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port prmry_vect_in[1] in module mipi_dphy_v4_3_13_tx_sync_cell__parameterized0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port prmry_vect_in[0] in module mipi_dphy_v4_3_13_tx_sync_cell__parameterized0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port scndry_rst_n in module mipi_dphy_v4_3_13_tx_sync_cell__parameterized0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port prmry_aclk in module mipi_dphy_v4_3_13_tx_sync_cell__parameterized9 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port prmry_rst_n in module mipi_dphy_v4_3_13_tx_sync_cell__parameterized9 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port prmry_vect_in[1] in module mipi_dphy_v4_3_13_tx_sync_cell__parameterized9 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port prmry_vect_in[0] in module mipi_dphy_v4_3_13_tx_sync_cell__parameterized9 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port scndry_rst_n in module mipi_dphy_v4_3_13_tx_sync_cell__parameterized9 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port prmry_aclk in module mipi_dphy_v4_3_13_tx_sync_cell is either unconnected or has no load
-WARNING: [Synth 8-7129] Port prmry_rst_n in module mipi_dphy_v4_3_13_tx_sync_cell is either unconnected or has no load
-WARNING: [Synth 8-7129] Port prmry_vect_in[1] in module mipi_dphy_v4_3_13_tx_sync_cell is either unconnected or has no load
-WARNING: [Synth 8-7129] Port prmry_vect_in[0] in module mipi_dphy_v4_3_13_tx_sync_cell is either unconnected or has no load
-WARNING: [Synth 8-7129] Port prmry_aclk in module mipi_dphy_v4_3_13_tx_sync_cell__parameterized8 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port prmry_rst_n in module mipi_dphy_v4_3_13_tx_sync_cell__parameterized8 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port prmry_in in module mipi_dphy_v4_3_13_tx_sync_cell__parameterized8 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port prmry_aclk in module mipi_dphy_v4_3_13_tx_sync_cell__parameterized7 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port prmry_rst_n in module mipi_dphy_v4_3_13_tx_sync_cell__parameterized7 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port prmry_in in module mipi_dphy_v4_3_13_tx_sync_cell__parameterized7 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port scndry_rst_n in module mipi_dphy_v4_3_13_tx_sync_cell__parameterized7 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port prmry_aclk in module mipi_dphy_v4_3_13_tx_sync_cell__parameterized6 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port prmry_rst_n in module mipi_dphy_v4_3_13_tx_sync_cell__parameterized6 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port prmry_in in module mipi_dphy_v4_3_13_tx_sync_cell__parameterized6 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port prmry_aclk in module mipi_dphy_v4_3_13_tx_sync_cell__parameterized5 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port prmry_rst_n in module mipi_dphy_v4_3_13_tx_sync_cell__parameterized5 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port prmry_in in module mipi_dphy_v4_3_13_tx_sync_cell__parameterized5 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port prmry_aclk in module mipi_dphy_v4_3_13_tx_sync_cell__parameterized4 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port prmry_rst_n in module mipi_dphy_v4_3_13_tx_sync_cell__parameterized4 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port prmry_in in module mipi_dphy_v4_3_13_tx_sync_cell__parameterized4 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port prmry_aclk in module mipi_dphy_v4_3_13_tx_sync_cell__parameterized3 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port prmry_rst_n in module mipi_dphy_v4_3_13_tx_sync_cell__parameterized3 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port prmry_in in module mipi_dphy_v4_3_13_tx_sync_cell__parameterized3 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port prmry_aclk in module mipi_dphy_v4_3_13_tx_sync_cell__parameterized2 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port prmry_rst_n in module mipi_dphy_v4_3_13_tx_sync_cell__parameterized2 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port prmry_in in module mipi_dphy_v4_3_13_tx_sync_cell__parameterized2 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port axi_wstrb[3] in module mipi_dphy_v4_3_13_tx_dphy_reg is either unconnected or has no load
-WARNING: [Synth 8-7129] Port axi_wstrb[2] in module mipi_dphy_v4_3_13_tx_dphy_reg is either unconnected or has no load
-WARNING: [Synth 8-7129] Port axi_wstrb[1] in module mipi_dphy_v4_3_13_tx_dphy_reg is either unconnected or has no load
-WARNING: [Synth 8-7129] Port axi_wstrb[0] in module mipi_dphy_v4_3_13_tx_dphy_reg is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dl1_hs_abort in module mipi_dphy_v4_3_13_tx_dphy_reg is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dl2_hs_abort in module mipi_dphy_v4_3_13_tx_dphy_reg is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dl3_hs_abort in module mipi_dphy_v4_3_13_tx_dphy_reg is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dl4_hs_abort in module mipi_dphy_v4_3_13_tx_dphy_reg is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dl5_hs_abort in module mipi_dphy_v4_3_13_tx_dphy_reg is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dl6_hs_abort in module mipi_dphy_v4_3_13_tx_dphy_reg is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dl7_hs_abort in module mipi_dphy_v4_3_13_tx_dphy_reg is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dl0_init_done in module mipi_dphy_v4_3_13_tx_dphy_reg is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dl1_init_done in module mipi_dphy_v4_3_13_tx_dphy_reg is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dl2_init_done in module mipi_dphy_v4_3_13_tx_dphy_reg is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dl3_init_done in module mipi_dphy_v4_3_13_tx_dphy_reg is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dl4_init_done in module mipi_dphy_v4_3_13_tx_dphy_reg is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dl5_init_done in module mipi_dphy_v4_3_13_tx_dphy_reg is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dl6_init_done in module mipi_dphy_v4_3_13_tx_dphy_reg is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dl7_init_done in module mipi_dphy_v4_3_13_tx_dphy_reg is either unconnected or has no load
-WARNING: [Synth 8-7129] Port prmry_aclk in module mipi_dphy_v4_3_13_tx_sync_cell__parameterized1 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port prmry_rst_n in module mipi_dphy_v4_3_13_tx_sync_cell__parameterized1 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port prmry_vect_in[1] in module mipi_dphy_v4_3_13_tx_sync_cell__parameterized1 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port prmry_vect_in[0] in module mipi_dphy_v4_3_13_tx_sync_cell__parameterized1 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port core_rst in module mipi_dphy_v4_3_13_tx_esc_datapath is either unconnected or has no load
-WARNING: [Synth 8-7129] Port wakeup_reg[31] in module mipi_dphy_v4_3_13_tx_esc_datapath is either unconnected or has no load
-WARNING: [Synth 8-7129] Port wakeup_reg[30] in module mipi_dphy_v4_3_13_tx_esc_datapath is either unconnected or has no load
-WARNING: [Synth 8-7129] Port wakeup_reg[29] in module mipi_dphy_v4_3_13_tx_esc_datapath is either unconnected or has no load
-WARNING: [Synth 8-7129] Port wakeup_reg[28] in module mipi_dphy_v4_3_13_tx_esc_datapath is either unconnected or has no load
-WARNING: [Synth 8-7129] Port wakeup_reg[27] in module mipi_dphy_v4_3_13_tx_esc_datapath is either unconnected or has no load
-WARNING: [Synth 8-7129] Port wakeup_reg[26] in module mipi_dphy_v4_3_13_tx_esc_datapath is either unconnected or has no load
-WARNING: [Synth 8-7129] Port wakeup_reg[25] in module mipi_dphy_v4_3_13_tx_esc_datapath is either unconnected or has no load
-WARNING: [Synth 8-7129] Port wakeup_reg[24] in module mipi_dphy_v4_3_13_tx_esc_datapath is either unconnected or has no load
-WARNING: [Synth 8-7129] Port wakeup_reg[23] in module mipi_dphy_v4_3_13_tx_esc_datapath is either unconnected or has no load
-WARNING: [Synth 8-7129] Port wakeup_reg[22] in module mipi_dphy_v4_3_13_tx_esc_datapath is either unconnected or has no load
-WARNING: [Synth 8-7129] Port wakeup_reg[21] in module mipi_dphy_v4_3_13_tx_esc_datapath is either unconnected or has no load
-WARNING: [Synth 8-7129] Port wakeup_reg[20] in module mipi_dphy_v4_3_13_tx_esc_datapath is either unconnected or has no load
-WARNING: [Synth 8-7129] Port wakeup_reg[19] in module mipi_dphy_v4_3_13_tx_esc_datapath is either unconnected or has no load
-WARNING: [Synth 8-7129] Port wakeup_reg[18] in module mipi_dphy_v4_3_13_tx_esc_datapath is either unconnected or has no load
-WARNING: [Synth 8-7129] Port wakeup_reg[17] in module mipi_dphy_v4_3_13_tx_esc_datapath is either unconnected or has no load
-WARNING: [Synth 8-7129] Port wakeup_reg[16] in module mipi_dphy_v4_3_13_tx_esc_datapath is either unconnected or has no load
-WARNING: [Synth 8-7129] Port wakeup_reg[15] in module mipi_dphy_v4_3_13_tx_esc_datapath is either unconnected or has no load
-WARNING: [Synth 8-7129] Port wakeup_reg[14] in module mipi_dphy_v4_3_13_tx_esc_datapath is either unconnected or has no load
-WARNING: [Synth 8-7129] Port wakeup_reg[13] in module mipi_dphy_v4_3_13_tx_esc_datapath is either unconnected or has no load
-WARNING: [Synth 8-7129] Port wakeup_reg[12] in module mipi_dphy_v4_3_13_tx_esc_datapath is either unconnected or has no load
-WARNING: [Synth 8-7129] Port wakeup_reg[11] in module mipi_dphy_v4_3_13_tx_esc_datapath is either unconnected or has no load
-WARNING: [Synth 8-7129] Port wakeup_reg[10] in module mipi_dphy_v4_3_13_tx_esc_datapath is either unconnected or has no load
-WARNING: [Synth 8-7129] Port wakeup_reg[9] in module mipi_dphy_v4_3_13_tx_esc_datapath is either unconnected or has no load
-WARNING: [Synth 8-7129] Port wakeup_reg[8] in module mipi_dphy_v4_3_13_tx_esc_datapath is either unconnected or has no load
-WARNING: [Synth 8-7129] Port wakeup_reg[7] in module mipi_dphy_v4_3_13_tx_esc_datapath is either unconnected or has no load
-WARNING: [Synth 8-7129] Port wakeup_reg[6] in module mipi_dphy_v4_3_13_tx_esc_datapath is either unconnected or has no load
-WARNING: [Synth 8-7129] Port wakeup_reg[5] in module mipi_dphy_v4_3_13_tx_esc_datapath is either unconnected or has no load
-WARNING: [Synth 8-7129] Port wakeup_reg[4] in module mipi_dphy_v4_3_13_tx_esc_datapath is either unconnected or has no load
-WARNING: [Synth 8-7129] Port wakeup_reg[3] in module mipi_dphy_v4_3_13_tx_esc_datapath is either unconnected or has no load
-WARNING: [Synth 8-7129] Port wakeup_reg[2] in module mipi_dphy_v4_3_13_tx_esc_datapath is either unconnected or has no load
-WARNING: [Synth 8-7129] Port wakeup_reg[1] in module mipi_dphy_v4_3_13_tx_esc_datapath is either unconnected or has no load
-WARNING: [Synth 8-7129] Port wakeup_reg[0] in module mipi_dphy_v4_3_13_tx_esc_datapath is either unconnected or has no load
+INFO: [Synth 8-6155] done synthesizing module 'BUFR' (0#1) [/home/holee/tools/xilinx/Vivado/2024.2/scripts/rt/data/unisim_comp.v:3015]
+INFO: [Synth 8-6155] done synthesizing module 'bd_26df_mipi_dphy_0_0_clock_module' (0#1) [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_clock_module.v:87]
+INFO: [Synth 8-6155] done synthesizing module 'bd_26df_mipi_dphy_0_0_support' (0#1) [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_support.v:102]
+INFO: [Synth 8-6155] done synthesizing module 'bd_26df_mipi_dphy_0_0_c1' (0#1) [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0_c1.v:98]
+INFO: [Synth 8-6155] done synthesizing module 'bd_26df_mipi_dphy_0_0_core' (0#1) [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0_core.v:92]
+INFO: [Synth 8-6155] done synthesizing module 'bd_26df_mipi_dphy_0_0' (0#1) [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0.v:90]
+WARNING: [Synth 8-3848] Net master_tx.dl0_txskewcalhs in module/entity bd_26df_mipi_dphy_0_0_support does not have driver. [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_support.v:800]
+WARNING: [Synth 8-3848] Net master_tx.dl1_txskewcalhs in module/entity bd_26df_mipi_dphy_0_0_support does not have driver. [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_support.v:824]
+WARNING: [Synth 8-3848] Net master_tx.dl2_txskewcalhs in module/entity bd_26df_mipi_dphy_0_0_support does not have driver. [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_support.v:848]
+WARNING: [Synth 8-3848] Net master_tx.dl3_txskewcalhs in module/entity bd_26df_mipi_dphy_0_0_support does not have driver. [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/support/bd_26df_mipi_dphy_0_0_support.v:872]
+WARNING: [Synth 8-7129] Port core_clk in module mipi_dphy_v4_3_14_tx_ioi_7series is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_reset in module mipi_dphy_v4_3_14_tx_ioi_7series is either unconnected or has no load
+WARNING: [Synth 8-7129] Port en_hs_tst[8] in module mipi_dphy_v4_3_14_tx_ioi_7series is either unconnected or has no load
+WARNING: [Synth 8-7129] Port en_hs_tst[7] in module mipi_dphy_v4_3_14_tx_ioi_7series is either unconnected or has no load
+WARNING: [Synth 8-7129] Port en_hs_tst[6] in module mipi_dphy_v4_3_14_tx_ioi_7series is either unconnected or has no load
+WARNING: [Synth 8-7129] Port en_hs_tst[5] in module mipi_dphy_v4_3_14_tx_ioi_7series is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cl_tst_clk_in in module mipi_dphy_v4_3_14_tx_ioi_7series is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dl_tst_clk_in in module mipi_dphy_v4_3_14_tx_ioi_7series is either unconnected or has no load
+WARNING: [Synth 8-7129] Port prmry_aclk in module mipi_dphy_v4_3_14_tx_sync_cell__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port prmry_rst_n in module mipi_dphy_v4_3_14_tx_sync_cell__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port prmry_vect_in[1] in module mipi_dphy_v4_3_14_tx_sync_cell__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port prmry_vect_in[0] in module mipi_dphy_v4_3_14_tx_sync_cell__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port scndry_rst_n in module mipi_dphy_v4_3_14_tx_sync_cell__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port prmry_aclk in module mipi_dphy_v4_3_14_tx_sync_cell__parameterized9 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port prmry_rst_n in module mipi_dphy_v4_3_14_tx_sync_cell__parameterized9 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port prmry_vect_in[1] in module mipi_dphy_v4_3_14_tx_sync_cell__parameterized9 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port prmry_vect_in[0] in module mipi_dphy_v4_3_14_tx_sync_cell__parameterized9 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port scndry_rst_n in module mipi_dphy_v4_3_14_tx_sync_cell__parameterized9 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port prmry_aclk in module mipi_dphy_v4_3_14_tx_sync_cell is either unconnected or has no load
+WARNING: [Synth 8-7129] Port prmry_rst_n in module mipi_dphy_v4_3_14_tx_sync_cell is either unconnected or has no load
+WARNING: [Synth 8-7129] Port prmry_vect_in[1] in module mipi_dphy_v4_3_14_tx_sync_cell is either unconnected or has no load
+WARNING: [Synth 8-7129] Port prmry_vect_in[0] in module mipi_dphy_v4_3_14_tx_sync_cell is either unconnected or has no load
+WARNING: [Synth 8-7129] Port prmry_aclk in module mipi_dphy_v4_3_14_tx_sync_cell__parameterized8 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port prmry_rst_n in module mipi_dphy_v4_3_14_tx_sync_cell__parameterized8 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port prmry_in in module mipi_dphy_v4_3_14_tx_sync_cell__parameterized8 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port prmry_aclk in module mipi_dphy_v4_3_14_tx_sync_cell__parameterized7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port prmry_rst_n in module mipi_dphy_v4_3_14_tx_sync_cell__parameterized7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port prmry_in in module mipi_dphy_v4_3_14_tx_sync_cell__parameterized7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port scndry_rst_n in module mipi_dphy_v4_3_14_tx_sync_cell__parameterized7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port prmry_aclk in module mipi_dphy_v4_3_14_tx_sync_cell__parameterized6 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port prmry_rst_n in module mipi_dphy_v4_3_14_tx_sync_cell__parameterized6 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port prmry_in in module mipi_dphy_v4_3_14_tx_sync_cell__parameterized6 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port prmry_aclk in module mipi_dphy_v4_3_14_tx_sync_cell__parameterized5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port prmry_rst_n in module mipi_dphy_v4_3_14_tx_sync_cell__parameterized5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port prmry_in in module mipi_dphy_v4_3_14_tx_sync_cell__parameterized5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port prmry_aclk in module mipi_dphy_v4_3_14_tx_sync_cell__parameterized4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port prmry_rst_n in module mipi_dphy_v4_3_14_tx_sync_cell__parameterized4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port prmry_in in module mipi_dphy_v4_3_14_tx_sync_cell__parameterized4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port prmry_aclk in module mipi_dphy_v4_3_14_tx_sync_cell__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port prmry_rst_n in module mipi_dphy_v4_3_14_tx_sync_cell__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port prmry_in in module mipi_dphy_v4_3_14_tx_sync_cell__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port prmry_aclk in module mipi_dphy_v4_3_14_tx_sync_cell__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port prmry_rst_n in module mipi_dphy_v4_3_14_tx_sync_cell__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port prmry_in in module mipi_dphy_v4_3_14_tx_sync_cell__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port axi_wstrb[3] in module mipi_dphy_v4_3_14_tx_dphy_reg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port axi_wstrb[2] in module mipi_dphy_v4_3_14_tx_dphy_reg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port axi_wstrb[1] in module mipi_dphy_v4_3_14_tx_dphy_reg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port axi_wstrb[0] in module mipi_dphy_v4_3_14_tx_dphy_reg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dl1_hs_abort in module mipi_dphy_v4_3_14_tx_dphy_reg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dl2_hs_abort in module mipi_dphy_v4_3_14_tx_dphy_reg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dl3_hs_abort in module mipi_dphy_v4_3_14_tx_dphy_reg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dl4_hs_abort in module mipi_dphy_v4_3_14_tx_dphy_reg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dl5_hs_abort in module mipi_dphy_v4_3_14_tx_dphy_reg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dl6_hs_abort in module mipi_dphy_v4_3_14_tx_dphy_reg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dl7_hs_abort in module mipi_dphy_v4_3_14_tx_dphy_reg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dl0_init_done in module mipi_dphy_v4_3_14_tx_dphy_reg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dl1_init_done in module mipi_dphy_v4_3_14_tx_dphy_reg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dl2_init_done in module mipi_dphy_v4_3_14_tx_dphy_reg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dl3_init_done in module mipi_dphy_v4_3_14_tx_dphy_reg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dl4_init_done in module mipi_dphy_v4_3_14_tx_dphy_reg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dl5_init_done in module mipi_dphy_v4_3_14_tx_dphy_reg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dl6_init_done in module mipi_dphy_v4_3_14_tx_dphy_reg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dl7_init_done in module mipi_dphy_v4_3_14_tx_dphy_reg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port prmry_aclk in module mipi_dphy_v4_3_14_tx_sync_cell__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port prmry_rst_n in module mipi_dphy_v4_3_14_tx_sync_cell__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port prmry_vect_in[1] in module mipi_dphy_v4_3_14_tx_sync_cell__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port prmry_vect_in[0] in module mipi_dphy_v4_3_14_tx_sync_cell__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port core_rst in module mipi_dphy_v4_3_14_tx_esc_datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wakeup_reg[31] in module mipi_dphy_v4_3_14_tx_esc_datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wakeup_reg[30] in module mipi_dphy_v4_3_14_tx_esc_datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wakeup_reg[29] in module mipi_dphy_v4_3_14_tx_esc_datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wakeup_reg[28] in module mipi_dphy_v4_3_14_tx_esc_datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wakeup_reg[27] in module mipi_dphy_v4_3_14_tx_esc_datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wakeup_reg[26] in module mipi_dphy_v4_3_14_tx_esc_datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wakeup_reg[25] in module mipi_dphy_v4_3_14_tx_esc_datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wakeup_reg[24] in module mipi_dphy_v4_3_14_tx_esc_datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wakeup_reg[23] in module mipi_dphy_v4_3_14_tx_esc_datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wakeup_reg[22] in module mipi_dphy_v4_3_14_tx_esc_datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wakeup_reg[21] in module mipi_dphy_v4_3_14_tx_esc_datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wakeup_reg[20] in module mipi_dphy_v4_3_14_tx_esc_datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wakeup_reg[19] in module mipi_dphy_v4_3_14_tx_esc_datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wakeup_reg[18] in module mipi_dphy_v4_3_14_tx_esc_datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wakeup_reg[17] in module mipi_dphy_v4_3_14_tx_esc_datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wakeup_reg[16] in module mipi_dphy_v4_3_14_tx_esc_datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wakeup_reg[15] in module mipi_dphy_v4_3_14_tx_esc_datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wakeup_reg[14] in module mipi_dphy_v4_3_14_tx_esc_datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wakeup_reg[13] in module mipi_dphy_v4_3_14_tx_esc_datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wakeup_reg[12] in module mipi_dphy_v4_3_14_tx_esc_datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wakeup_reg[11] in module mipi_dphy_v4_3_14_tx_esc_datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wakeup_reg[10] in module mipi_dphy_v4_3_14_tx_esc_datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wakeup_reg[9] in module mipi_dphy_v4_3_14_tx_esc_datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wakeup_reg[8] in module mipi_dphy_v4_3_14_tx_esc_datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wakeup_reg[7] in module mipi_dphy_v4_3_14_tx_esc_datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wakeup_reg[6] in module mipi_dphy_v4_3_14_tx_esc_datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wakeup_reg[5] in module mipi_dphy_v4_3_14_tx_esc_datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wakeup_reg[4] in module mipi_dphy_v4_3_14_tx_esc_datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wakeup_reg[3] in module mipi_dphy_v4_3_14_tx_esc_datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wakeup_reg[2] in module mipi_dphy_v4_3_14_tx_esc_datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wakeup_reg[1] in module mipi_dphy_v4_3_14_tx_esc_datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wakeup_reg[0] in module mipi_dphy_v4_3_14_tx_esc_datapath is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1290.676 ; gain = 633.297
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2092.641 ; gain = 541.766 ; free physical = 4009 ; free virtual = 35187
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1290.676 ; gain = 633.297
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2101.547 ; gain = 550.672 ; free physical = 4009 ; free virtual = 35187
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1290.676 ; gain = 633.297
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2101.547 ; gain = 550.672 ; free physical = 4009 ; free virtual = 35187
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.111 . Memory (MB): peak = 1290.676 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2107.484 ; gain = 0.000 ; free physical = 4009 ; free virtual = 35187
 INFO: [Netlist 29-17] Analyzing 12 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0_ooc.xdc] for cell 'inst'
-Finished Parsing XDC File [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0_ooc.xdc] for cell 'inst'
-Parsing XDC File [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/ip_0/bd_26df_mipi_dphy_0_0_clock_module_tx.xdc] for cell 'inst/inst/bd_26df_mipi_dphy_0_0_tx_support_i/master_tx.bd_26df_mipi_dphy_0_0_tx_clock_module_support_i/bd_26df_mipi_dphy_0_0_clock_module_tx_i/inst'
-Finished Parsing XDC File [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/ip_0/bd_26df_mipi_dphy_0_0_clock_module_tx.xdc] for cell 'inst/inst/bd_26df_mipi_dphy_0_0_tx_support_i/master_tx.bd_26df_mipi_dphy_0_0_tx_clock_module_support_i/bd_26df_mipi_dphy_0_0_clock_module_tx_i/inst'
-Parsing XDC File [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0.xdc] for cell 'inst'
-Finished Parsing XDC File [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0.xdc] for cell 'inst'
-Parsing XDC File [D:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.runs/bd_26df_mipi_dphy_0_0_synth_1/dont_touch.xdc]
-Finished Parsing XDC File [D:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.runs/bd_26df_mipi_dphy_0_0_synth_1/dont_touch.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.runs/bd_26df_mipi_dphy_0_0_synth_1/dont_touch.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/bd_26df_mipi_dphy_0_0_propImpl.xdc].
+Parsing XDC File [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0_ooc.xdc] for cell 'inst'
+Parsing XDC File [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/ip_0/bd_26df_mipi_dphy_0_0_clock_module_tx.xdc] for cell 'inst/inst/bd_26df_mipi_dphy_0_0_tx_support_i/master_tx.bd_26df_mipi_dphy_0_0_tx_clock_module_support_i/bd_26df_mipi_dphy_0_0_clock_module_tx_i/inst'
+Finished Parsing XDC File [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/ip_0/bd_26df_mipi_dphy_0_0_clock_module_tx.xdc] for cell 'inst/inst/bd_26df_mipi_dphy_0_0_tx_support_i/master_tx.bd_26df_mipi_dphy_0_0_tx_clock_module_support_i/bd_26df_mipi_dphy_0_0_clock_module_tx_i/inst'
+Parsing XDC File [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0.xdc] for cell 'inst'
+Finished Parsing XDC File [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0.xdc] for cell 'inst'
+Parsing XDC File [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.runs/bd_26df_mipi_dphy_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.runs/bd_26df_mipi_dphy_0_0_synth_1/dont_touch.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.runs/bd_26df_mipi_dphy_0_0_synth_1/dont_touch.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/bd_26df_mipi_dphy_0_0_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/bd_26df_mipi_dphy_0_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 INFO: [Timing 38-2] Deriving generated clocks
-Parsing XDC File [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0_clocks.xdc] for cell 'inst'
-Finished Parsing XDC File [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0_clocks.xdc] for cell 'inst'
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0_clocks.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/bd_26df_mipi_dphy_0_0_propImpl.xdc].
+Parsing XDC File [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0_clocks.xdc] for cell 'inst'
+Finished Parsing XDC File [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0_clocks.xdc] for cell 'inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0_clocks.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/bd_26df_mipi_dphy_0_0_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/bd_26df_mipi_dphy_0_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1366.828 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2244.297 ; gain = 0.000 ; free physical = 4007 ; free virtual = 35184
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 9 instances were transformed.
   FDR => FDRE: 4 instances
   OBUFTDS => OBUFTDS_DUAL_BUF (INV, OBUFTDS(x2)): 5 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.114 . Memory (MB): peak = 1367.734 ; gain = 0.906
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2244.297 ; gain = 0.000 ; free physical = 4007 ; free virtual = 35184
 INFO: [Designutils 20-5008] Incremental synthesis strategy off
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1367.734 ; gain = 710.355
+Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2244.297 ; gain = 693.422 ; free physical = 4130 ; free virtual = 35308
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tfgg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1367.734 ; gain = 710.355
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2252.301 ; gain = 701.426 ; free physical = 4130 ; free virtual = 35308
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property keep_hierarchy = soft for inst/inst/bd_26df_mipi_dphy_0_0_tx_support_i/\master_tx.bd_26df_mipi_dphy_0_0_tx_clock_module_support_i /bd_26df_mipi_dphy_0_0_clock_module_tx_i/inst. (constraint file  d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0_ooc.xdc, line 71).
-Applied set_property KEEP_HIERARCHY = SOFT for inst/inst/bd_26df_mipi_dphy_0_0_tx_support_i/\master_tx.bd_26df_mipi_dphy_0_0_tx_clock_module_support_i /bd_26df_mipi_dphy_0_0_clock_module_tx_i/inst. (constraint file  D:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.runs/bd_26df_mipi_dphy_0_0_synth_1/dont_touch.xdc, line 8).
-Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  D:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.runs/bd_26df_mipi_dphy_0_0_synth_1/dont_touch.xdc, line 14).
+Applied set_property keep_hierarchy = soft for inst/inst/bd_26df_mipi_dphy_0_0_tx_support_i/\master_tx.bd_26df_mipi_dphy_0_0_tx_clock_module_support_i /bd_26df_mipi_dphy_0_0_clock_module_tx_i/inst. (constraint file  /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0_ooc.xdc, line 71).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/inst/bd_26df_mipi_dphy_0_0_tx_support_i/\master_tx.bd_26df_mipi_dphy_0_0_tx_clock_module_support_i /bd_26df_mipi_dphy_0_0_clock_module_tx_i/inst. (constraint file  /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.runs/bd_26df_mipi_dphy_0_0_synth_1/dont_touch.xdc, line 8).
+Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.runs/bd_26df_mipi_dphy_0_0_synth_1/dont_touch.xdc, line 14).
 Applied set_property KEEP_HIERARCHY = SOFT for inst/inst/bd_26df_mipi_dphy_0_0_tx_support_i/\master_tx.bd_26df_mipi_dphy_0_0_tx_clock_module_support_i /bd_26df_mipi_dphy_0_0_clock_module_tx_i. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1367.734 ; gain = 710.355
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2252.301 ; gain = 701.426 ; free physical = 4130 ; free virtual = 35308
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-802] inferred FSM for state register 'rst_blk_state_reg' in module 'mipi_dphy_v4_3_13_tx_rst_logic'
-INFO: [Synth 8-802] inferred FSM for state register 'dl_tx_sm_state_reg' in module 'mipi_dphy_v4_3_13_tx_data_lane_sm'
-INFO: [Synth 8-802] inferred FSM for state register 'HS_BYTE_XFER_BLK2.dl_tx_state_reg' in module 'mipi_dphy_v4_3_13_tx_hs_datapath_7series'
-INFO: [Synth 8-802] inferred FSM for state register 'dl_tx_state_reg' in module 'mipi_dphy_v4_3_13_tx_esc_datapath'
-INFO: [Synth 8-802] inferred FSM for state register 'rst_blk_state_reg' in module 'mipi_dphy_v4_3_13_tx_support_rst_logic'
+INFO: [Synth 8-802] inferred FSM for state register 'rst_blk_state_reg' in module 'mipi_dphy_v4_3_14_tx_rst_logic'
+INFO: [Synth 8-802] inferred FSM for state register 'dl_tx_sm_state_reg' in module 'mipi_dphy_v4_3_14_tx_data_lane_sm'
+INFO: [Synth 8-802] inferred FSM for state register 'HS_BYTE_XFER_BLK2.dl_tx_state_reg' in module 'mipi_dphy_v4_3_14_tx_hs_datapath_7series'
+INFO: [Synth 8-802] inferred FSM for state register 'dl_tx_state_reg' in module 'mipi_dphy_v4_3_14_tx_esc_datapath'
+INFO: [Synth 8-802] inferred FSM for state register 'rst_blk_state_reg' in module 'mipi_dphy_v4_3_14_tx_support_rst_logic'
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -318,7 +316,7 @@ INFO: [Synth 8-802] inferred FSM for state register 'rst_blk_state_reg' in modul
           RESET_FSM_DONE |                              100 |                              101
          WAIT_FOR_ENABLE |                              101 |                              100
 ---------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'rst_blk_state_reg' using encoding 'sequential' in module 'mipi_dphy_v4_3_13_tx_rst_logic'
+INFO: [Synth 8-3354] encoded FSM with state register 'rst_blk_state_reg' using encoding 'sequential' in module 'mipi_dphy_v4_3_14_tx_rst_logic'
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -331,7 +329,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'rst_blk_state_reg' using e
            DL_TX_HS_EXIT |                              110 |                              110
           DL_TX_ESC_WAIT |                              111 |                              111
 ---------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'dl_tx_sm_state_reg' using encoding 'sequential' in module 'mipi_dphy_v4_3_13_tx_data_lane_sm'
+INFO: [Synth 8-3354] encoded FSM with state register 'dl_tx_sm_state_reg' using encoding 'sequential' in module 'mipi_dphy_v4_3_14_tx_data_lane_sm'
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -340,7 +338,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'dl_tx_sm_state_reg' using 
            DL_TX_HS_DATA |                               10 |                               10
             DL_TX_HS_EOT |                               11 |                               11
 ---------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'HS_BYTE_XFER_BLK2.dl_tx_state_reg' using encoding 'sequential' in module 'mipi_dphy_v4_3_13_tx_hs_datapath_7series'
+INFO: [Synth 8-3354] encoded FSM with state register 'HS_BYTE_XFER_BLK2.dl_tx_state_reg' using encoding 'sequential' in module 'mipi_dphy_v4_3_14_tx_hs_datapath_7series'
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -358,7 +356,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'HS_BYTE_XFER_BLK2.dl_tx_st
         DL_TX_ESC_SPACE1 |                             1010 |                             0111
            DL_TX_ESC_END |                             0101 |                             1100
 ---------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'dl_tx_state_reg' using encoding 'sequential' in module 'mipi_dphy_v4_3_13_tx_esc_datapath'
+INFO: [Synth 8-3354] encoded FSM with state register 'dl_tx_state_reg' using encoding 'sequential' in module 'mipi_dphy_v4_3_14_tx_esc_datapath'
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -368,9 +366,9 @@ INFO: [Synth 8-3354] encoded FSM with state register 'dl_tx_state_reg' using enc
           RESET_FSM_DONE |                              011 |                              100
               CHECK_SRST |                              100 |                              011
 ---------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'rst_blk_state_reg' using encoding 'sequential' in module 'mipi_dphy_v4_3_13_tx_support_rst_logic'
+INFO: [Synth 8-3354] encoded FSM with state register 'rst_blk_state_reg' using encoding 'sequential' in module 'mipi_dphy_v4_3_14_tx_support_rst_logic'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1367.734 ; gain = 710.355
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2252.301 ; gain = 701.426 ; free physical = 4123 ; free virtual = 35303
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -482,9 +480,9 @@ DSP Report: Generating DSP TRAIL_TIMEOUT1, operation Mode is: A*(B:0x3e8).
 DSP Report: operator TRAIL_TIMEOUT1 is absorbed into DSP TRAIL_TIMEOUT1.
 DSP Report: Generating DSP ZERO_TIMEOUT1, operation Mode is: A*(B:0x3e8).
 DSP Report: operator ZERO_TIMEOUT1 is absorbed into DSP ZERO_TIMEOUT1.
-INFO: [Synth 8-3332] Sequential element (align_byteclk_flop_i) is unused and will be removed from module mipi_dphy_v4_3_13_tx_data_lane.
+INFO: [Synth 8-3332] Sequential element (align_byteclk_flop_i) is unused and will be removed from module mipi_dphy_v4_3_14_tx_data_lane.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 1386.293 ; gain = 728.914
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2252.301 ; gain = 701.426 ; free physical = 4033 ; free virtual = 35213
 ---------------------------------------------------------------------------------
  Sort Area is  PREPARE_TIMEOUT1_4 : 0 0 : 300 300 : Used 1 time 0
  Sort Area is  PREPARE_TIMEOUT1_9 : 0 0 : 300 300 : Used 1 time 0
@@ -508,20 +506,20 @@ DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding R
 +-----------------------------------------+--------------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
 |Module Name                              | DSP Mapping                    | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
 +-----------------------------------------+--------------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|mipi_dphy_v4_3_13_tx_clk_lane_7series    | A*(B:0x3e8)                    | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mipi_dphy_v4_3_13_tx_clk_lane_7series    | (C:0xffffffffc568)+(A:0x3e8)*B | 7      | 10     | 32     | -      | 32     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|mipi_dphy_v4_3_13_tx_data_lane_sm        | (C:0xffffffffec78)+(A:0x3e8)*B | 8      | 10     | 32     | -      | 32     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|mipi_dphy_v4_3_13_tx_hs_datapath_7series | A*(B:0x3e8)                    | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mipi_dphy_v4_3_13_tx_hs_datapath_7series | A*(B:0x3e8)                    | 12     | 10     | -      | -      | 22     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mipi_dphy_v4_3_13_tx_data_lane_sm        | (C:0xffffffffec78)+(A:0x3e8)*B | 8      | 10     | 32     | -      | 32     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|mipi_dphy_v4_3_13_tx_hs_datapath_7series | A*(B:0x3e8)                    | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mipi_dphy_v4_3_13_tx_hs_datapath_7series | A*(B:0x3e8)                    | 12     | 10     | -      | -      | 22     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mipi_dphy_v4_3_13_tx_data_lane_sm        | (C:0xffffffffec78)+(A:0x3e8)*B | 8      | 10     | 32     | -      | 32     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|mipi_dphy_v4_3_13_tx_hs_datapath_7series | A*(B:0x3e8)                    | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mipi_dphy_v4_3_13_tx_hs_datapath_7series | A*(B:0x3e8)                    | 12     | 10     | -      | -      | 22     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mipi_dphy_v4_3_13_tx_data_lane_sm        | (C:0xffffffffec78)+(A:0x3e8)*B | 8      | 10     | 32     | -      | 32     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|mipi_dphy_v4_3_13_tx_hs_datapath_7series | A*(B:0x3e8)                    | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mipi_dphy_v4_3_13_tx_hs_datapath_7series | A*(B:0x3e8)                    | 12     | 10     | -      | -      | 22     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mipi_dphy_v4_3_14_tx_clk_lane_7series    | A*(B:0x3e8)                    | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mipi_dphy_v4_3_14_tx_clk_lane_7series    | (C:0xffffffffc568)+(A:0x3e8)*B | 7      | 10     | 32     | -      | 32     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mipi_dphy_v4_3_14_tx_data_lane_sm        | (C:0xffffffffec78)+(A:0x3e8)*B | 8      | 10     | 32     | -      | 32     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mipi_dphy_v4_3_14_tx_hs_datapath_7series | A*(B:0x3e8)                    | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mipi_dphy_v4_3_14_tx_hs_datapath_7series | A*(B:0x3e8)                    | 12     | 10     | -      | -      | 22     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mipi_dphy_v4_3_14_tx_data_lane_sm        | (C:0xffffffffec78)+(A:0x3e8)*B | 8      | 10     | 32     | -      | 32     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mipi_dphy_v4_3_14_tx_hs_datapath_7series | A*(B:0x3e8)                    | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mipi_dphy_v4_3_14_tx_hs_datapath_7series | A*(B:0x3e8)                    | 12     | 10     | -      | -      | 22     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mipi_dphy_v4_3_14_tx_data_lane_sm        | (C:0xffffffffec78)+(A:0x3e8)*B | 8      | 10     | 32     | -      | 32     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mipi_dphy_v4_3_14_tx_hs_datapath_7series | A*(B:0x3e8)                    | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mipi_dphy_v4_3_14_tx_hs_datapath_7series | A*(B:0x3e8)                    | 12     | 10     | -      | -      | 22     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mipi_dphy_v4_3_14_tx_data_lane_sm        | (C:0xffffffffec78)+(A:0x3e8)*B | 8      | 10     | 32     | -      | 32     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mipi_dphy_v4_3_14_tx_hs_datapath_7series | A*(B:0x3e8)                    | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mipi_dphy_v4_3_14_tx_hs_datapath_7series | A*(B:0x3e8)                    | 12     | 10     | -      | -      | 22     | 0    | 0    | -    | -    | -     | 0    | 0    | 
 +-----------------------------------------+--------------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
 
 Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
@@ -532,19 +530,19 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 1552.398 ; gain = 895.020
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 2360.301 ; gain = 809.426 ; free physical = 3947 ; free virtual = 35127
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:40 ; elapsed = 00:00:43 . Memory (MB): peak = 1569.414 ; gain = 912.035
+Finished Timing Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 2373.301 ; gain = 822.426 ; free physical = 3930 ; free virtual = 35110
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:43 ; elapsed = 00:00:45 . Memory (MB): peak = 1638.746 ; gain = 981.367
+Finished Technology Mapping : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 2424.355 ; gain = 873.480 ; free physical = 3827 ; free virtual = 35007
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -562,37 +560,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:45 ; elapsed = 00:00:48 . Memory (MB): peak = 1784.770 ; gain = 1127.391
+Finished IO Insertion : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 2531.168 ; gain = 980.293 ; free physical = 3723 ; free virtual = 34903
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:45 ; elapsed = 00:00:48 . Memory (MB): peak = 1784.770 ; gain = 1127.391
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 2531.168 ; gain = 980.293 ; free physical = 3715 ; free virtual = 34895
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:46 ; elapsed = 00:00:48 . Memory (MB): peak = 1784.770 ; gain = 1127.391
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 2531.168 ; gain = 980.293 ; free physical = 3715 ; free virtual = 34895
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:46 ; elapsed = 00:00:48 . Memory (MB): peak = 1784.770 ; gain = 1127.391
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 2531.168 ; gain = 980.293 ; free physical = 3715 ; free virtual = 34895
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:46 ; elapsed = 00:00:49 . Memory (MB): peak = 1784.770 ; gain = 1127.391
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 2531.168 ; gain = 980.293 ; free physical = 3715 ; free virtual = 34895
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:46 ; elapsed = 00:00:49 . Memory (MB): peak = 1784.770 ; gain = 1127.391
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 2531.168 ; gain = 980.293 ; free physical = 3715 ; free virtual = 34895
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -602,17 +600,17 @@ DSP Final Report (the ' indicates corresponding REG is set)
 +-----------------------------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
 |Module Name                              | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
 +-----------------------------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|mipi_dphy_v4_3_13_tx_clk_lane_7series    | A*B         | 6      | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mipi_dphy_v4_3_13_tx_clk_lane_7series    | C+A*B       | 7      | 10     | 48     | -      | 32     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|mipi_dphy_v4_3_13_tx_hs_datapath_7series | A*B         | 7      | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mipi_dphy_v4_3_13_tx_hs_datapath_7series | A*B         | 7      | 10     | -      | -      | 22     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mipi_dphy_v4_3_13_tx_data_lane_sm        | C+A*B       | 7      | 10     | 48     | -      | 32     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|mipi_dphy_v4_3_13_tx_hs_datapath_7series | A*B         | 7      | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mipi_dphy_v4_3_13_tx_data_lane_sm        | C+A*B       | 7      | 10     | 48     | -      | 32     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|mipi_dphy_v4_3_13_tx_hs_datapath_7series | A*B         | 7      | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mipi_dphy_v4_3_13_tx_data_lane_sm        | C+A*B       | 7      | 10     | 48     | -      | 32     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|mipi_dphy_v4_3_13_tx_hs_datapath_7series | A*B         | 7      | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mipi_dphy_v4_3_13_tx_data_lane_sm        | C+A*B       | 7      | 10     | 48     | -      | 32     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mipi_dphy_v4_3_14_tx_clk_lane_7series    | A*B         | 6      | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mipi_dphy_v4_3_14_tx_clk_lane_7series    | C+A*B       | 7      | 10     | 48     | -      | 32     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mipi_dphy_v4_3_14_tx_hs_datapath_7series | A*B         | 7      | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mipi_dphy_v4_3_14_tx_hs_datapath_7series | A*B         | 7      | 10     | -      | -      | 22     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mipi_dphy_v4_3_14_tx_data_lane_sm        | C+A*B       | 7      | 10     | 48     | -      | 32     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mipi_dphy_v4_3_14_tx_hs_datapath_7series | A*B         | 7      | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mipi_dphy_v4_3_14_tx_data_lane_sm        | C+A*B       | 7      | 10     | 48     | -      | 32     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mipi_dphy_v4_3_14_tx_hs_datapath_7series | A*B         | 7      | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mipi_dphy_v4_3_14_tx_data_lane_sm        | C+A*B       | 7      | 10     | 48     | -      | 32     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mipi_dphy_v4_3_14_tx_hs_datapath_7series | A*B         | 7      | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mipi_dphy_v4_3_14_tx_data_lane_sm        | C+A*B       | 7      | 10     | 48     | -      | 32     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
 +-----------------------------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
 
 
@@ -648,32 +646,34 @@ Report Cell Usage:
 |22    |OBUFTDS    |     5|
 +------+-----------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:46 ; elapsed = 00:00:49 . Memory (MB): peak = 1784.770 ; gain = 1127.391
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 2531.168 ; gain = 980.293 ; free physical = 3715 ; free virtual = 34895
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 679 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:35 ; elapsed = 00:00:45 . Memory (MB): peak = 1784.770 ; gain = 1050.332
-Synthesis Optimization Complete : Time (s): cpu = 00:00:46 ; elapsed = 00:00:49 . Memory (MB): peak = 1784.770 ; gain = 1127.391
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 2531.168 ; gain = 837.543 ; free physical = 3715 ; free virtual = 34895
+Synthesis Optimization Complete : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 2531.176 ; gain = 980.293 ; free physical = 3715 ; free virtual = 34895
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.083 . Memory (MB): peak = 1784.770 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2531.176 ; gain = 0.000 ; free physical = 3898 ; free virtual = 35078
 INFO: [Netlist 29-17] Analyzing 609 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1798.477 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2587.195 ; gain = 0.000 ; free physical = 3910 ; free virtual = 35090
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 5 instances were transformed.
   OBUFTDS => OBUFTDS_DUAL_BUF (INV, OBUFTDS(x2)): 5 instances
 
-Synth Design complete | Checksum: 2e017bec
+Synth Design complete | Checksum: 72ff9339
 INFO: [Common 17-83] Releasing license: Synthesis
 94 Infos, 123 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:51 ; elapsed = 00:00:55 . Memory (MB): peak = 1798.477 ; gain = 1341.637
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.024 . Memory (MB): peak = 1798.477 ; gain = 0.000
-INFO: [Common 17-1381] The checkpoint 'D:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.runs/bd_26df_mipi_dphy_0_0_synth_1/bd_26df_mipi_dphy_0_0.dcp' has been generated.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP bd_26df_mipi_dphy_0_0, cache-ID = b09b9751aeb201f9
+synth_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:25 . Memory (MB): peak = 2587.195 ; gain = 1105.855 ; free physical = 3910 ; free virtual = 35090
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1846.505; main = 1746.031; forked = 268.454
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3322.164; main = 2587.199; forked = 919.812
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2611.207 ; gain = 0.000 ; free physical = 3908 ; free virtual = 35090
+INFO: [Common 17-1381] The checkpoint '/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.runs/bd_26df_mipi_dphy_0_0_synth_1/bd_26df_mipi_dphy_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP bd_26df_mipi_dphy_0_0, cache-ID = 6a4a6cd05dbdcb7a
 INFO: [Coretcl 2-1174] Renamed 158 cell refs.
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.024 . Memory (MB): peak = 1798.477 ; gain = 0.000
-INFO: [Common 17-1381] The checkpoint 'D:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.runs/bd_26df_mipi_dphy_0_0_synth_1/bd_26df_mipi_dphy_0_0.dcp' has been generated.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2611.207 ; gain = 0.000 ; free physical = 3870 ; free virtual = 35069
+INFO: [Common 17-1381] The checkpoint '/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.runs/bd_26df_mipi_dphy_0_0_synth_1/bd_26df_mipi_dphy_0_0.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file bd_26df_mipi_dphy_0_0_utilization_synth.rpt -pb bd_26df_mipi_dphy_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Jan 13 10:10:28 2026...
+INFO: [Common 17-206] Exiting Vivado at Fri Jan 16 15:12:01 2026...

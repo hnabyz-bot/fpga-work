@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "D:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.runs/mipi_csi2_tx_subsys_synth_1/mipi_csi2_tx_subsys.tcl"
+  variable script "/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.runs/mipi_csi2_tx_subsys_synth_1/mipi_csi2_tx_subsys.tcl"
   variable category "vivado_synth"
 }
 
@@ -56,6 +56,8 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "mipi_csi2_tx_subsys_synth_1" START { ROLLUP_AUTO }
+set_param simulator.questaInstallPath /home/holee/TOOLS/QuestaBase_2024.3/questa_base/bin
+set_param simulator.modelsimInstallPath /home/holee/TOOLS/ModelSim_2024.2/modelsim_dlx/bin
 set_param project.vivado.isBlockSynthRun true
 set_msg_config -msgmgr_mode ooc_run
 OPTRACE "Creating in-memory project" START { }
@@ -65,26 +67,26 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir D:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.cache/wt [current_project]
-set_property parent.project_path D:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.xpr [current_project]
+set_property webtalk.parent_dir /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.cache/wt [current_project]
+set_property parent.project_path /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.xpr [current_project]
 set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.cache/ip [current_project]
+set_property ip_output_repo /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_ip -quiet D:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/mipi_csi2_tx_subsys.xci
-set_property used_in_implementation false [get_files -all d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_0/bd_26df_mipi_csi2_tx_ctrl_0_0.xdc]
-set_property used_in_implementation false [get_files -all d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_0/bd_26df_mipi_csi2_tx_ctrl_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/ip_0/bd_26df_mipi_dphy_0_0_clock_module_tx.xdc]
-set_property used_in_implementation false [get_files -all d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/ip_0/bd_26df_mipi_dphy_0_0_clock_module_tx_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0.xdc]
-set_property used_in_implementation false [get_files -all d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0_clocks.xdc]
-set_property used_in_implementation false [get_files -all d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_2/bd_26df_axi_crossbar_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/bd_26df_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/mipi_csi2_tx_subsys_fixed_ooc.xdc]
+read_ip -quiet /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/mipi_csi2_tx_subsys.xci
+set_property used_in_implementation false [get_files -all /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_0/bd_26df_mipi_csi2_tx_ctrl_0_0.xdc]
+set_property used_in_implementation false [get_files -all /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_0/bd_26df_mipi_csi2_tx_ctrl_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/ip_0/bd_26df_mipi_dphy_0_0_clock_module_tx.xdc]
+set_property used_in_implementation false [get_files -all /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/ip_0/bd_26df_mipi_dphy_0_0_clock_module_tx_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0.xdc]
+set_property used_in_implementation false [get_files -all /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_2/bd_26df_axi_crossbar_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/bd_26df_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/mipi_csi2_tx_subsys_fixed_ooc.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -100,7 +102,7 @@ set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
 OPTRACE "Configure IP Cache" START { }
 
-set cacheID [config_ip_cache -export -no_bom  -dir D:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.runs/mipi_csi2_tx_subsys_synth_1 -new_name mipi_csi2_tx_subsys -ip [get_ips mipi_csi2_tx_subsys]]
+set cacheID [config_ip_cache -export -no_bom  -dir /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.runs/mipi_csi2_tx_subsys_synth_1 -new_name mipi_csi2_tx_subsys -ip [get_ips mipi_csi2_tx_subsys]]
 
 OPTRACE "Configure IP Cache" END { }
 if { $cacheID == "" } {
@@ -155,32 +157,32 @@ generate_parallel_reports -reports { "report_utilization -file mipi_csi2_tx_subs
 OPTRACE "synth reports" END { }
 
 if { [catch {
-  file copy -force D:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.runs/mipi_csi2_tx_subsys_synth_1/mipi_csi2_tx_subsys.dcp d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/mipi_csi2_tx_subsys.dcp
+  file copy -force /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.runs/mipi_csi2_tx_subsys_synth_1/mipi_csi2_tx_subsys.dcp /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/mipi_csi2_tx_subsys.dcp
 } _RESULT ] } { 
   send_msg_id runtcl-3 status "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
 if { [catch {
-  write_verilog -force -mode synth_stub d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/mipi_csi2_tx_subsys_stub.v
+  write_verilog -force -mode synth_stub /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/mipi_csi2_tx_subsys_stub.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode synth_stub d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/mipi_csi2_tx_subsys_stub.vhdl
+  write_vhdl -force -mode synth_stub /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/mipi_csi2_tx_subsys_stub.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_verilog -force -mode funcsim d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/mipi_csi2_tx_subsys_sim_netlist.v
+  write_verilog -force -mode funcsim /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/mipi_csi2_tx_subsys_sim_netlist.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode funcsim d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/mipi_csi2_tx_subsys_sim_netlist.vhdl
+  write_vhdl -force -mode funcsim /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/mipi_csi2_tx_subsys_sim_netlist.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
@@ -190,32 +192,32 @@ if { [catch {
 
 
 if { [catch {
-  file copy -force D:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.runs/mipi_csi2_tx_subsys_synth_1/mipi_csi2_tx_subsys.dcp d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/mipi_csi2_tx_subsys.dcp
+  file copy -force /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.runs/mipi_csi2_tx_subsys_synth_1/mipi_csi2_tx_subsys.dcp /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/mipi_csi2_tx_subsys.dcp
 } _RESULT ] } { 
   send_msg_id runtcl-3 status "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
 if { [catch {
-  file rename -force D:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.runs/mipi_csi2_tx_subsys_synth_1/mipi_csi2_tx_subsys_stub.v d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/mipi_csi2_tx_subsys_stub.v
+  file rename -force /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.runs/mipi_csi2_tx_subsys_synth_1/mipi_csi2_tx_subsys_stub.v /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/mipi_csi2_tx_subsys_stub.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force D:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.runs/mipi_csi2_tx_subsys_synth_1/mipi_csi2_tx_subsys_stub.vhdl d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/mipi_csi2_tx_subsys_stub.vhdl
+  file rename -force /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.runs/mipi_csi2_tx_subsys_synth_1/mipi_csi2_tx_subsys_stub.vhdl /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/mipi_csi2_tx_subsys_stub.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force D:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.runs/mipi_csi2_tx_subsys_synth_1/mipi_csi2_tx_subsys_sim_netlist.v d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/mipi_csi2_tx_subsys_sim_netlist.v
+  file rename -force /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.runs/mipi_csi2_tx_subsys_synth_1/mipi_csi2_tx_subsys_sim_netlist.v /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/mipi_csi2_tx_subsys_sim_netlist.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force D:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.runs/mipi_csi2_tx_subsys_synth_1/mipi_csi2_tx_subsys_sim_netlist.vhdl d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/mipi_csi2_tx_subsys_sim_netlist.vhdl
+  file rename -force /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.runs/mipi_csi2_tx_subsys_synth_1/mipi_csi2_tx_subsys_sim_netlist.vhdl /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/mipi_csi2_tx_subsys_sim_netlist.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
@@ -223,15 +225,15 @@ if { [catch {
 close [open .end.used_ip_cache.rst w]
 }; # end if cacheID 
 
-if {[file isdir D:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.ip_user_files/ip/mipi_csi2_tx_subsys]} {
+if {[file isdir /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.ip_user_files/ip/mipi_csi2_tx_subsys]} {
   catch { 
-    file copy -force d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/mipi_csi2_tx_subsys_stub.v D:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.ip_user_files/ip/mipi_csi2_tx_subsys
+    file copy -force /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/mipi_csi2_tx_subsys_stub.v /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.ip_user_files/ip/mipi_csi2_tx_subsys
   }
 }
 
-if {[file isdir D:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.ip_user_files/ip/mipi_csi2_tx_subsys]} {
+if {[file isdir /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.ip_user_files/ip/mipi_csi2_tx_subsys]} {
   catch { 
-    file copy -force d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/mipi_csi2_tx_subsys_stub.vhdl D:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.ip_user_files/ip/mipi_csi2_tx_subsys
+    file copy -force /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/mipi_csi2_tx_subsys_stub.vhdl /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.ip_user_files/ip/mipi_csi2_tx_subsys
   }
 }
 file delete __synthesis_is_running__

@@ -1,8 +1,8 @@
-Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-| Date         : Tue Jan 13 10:10:06 2026
-| Host         : work-dev running 64-bit major release  (build 9200)
+| Tool Version : Vivado v.2024.2.2 (lin64) Build 6060944 Thu Mar 06 19:10:09 MST 2025
+| Date         : Fri Jan 16 15:13:06 2026
+| Host         : drlinux running 64-bit Ubuntu 22.04.5 LTS
 | Command      : report_utilization -file indata_ram_utilization_synth.rpt -pb indata_ram_utilization_synth.pb
 | Design       : indata_ram
 | Device       : xc7a35tfgg484-1

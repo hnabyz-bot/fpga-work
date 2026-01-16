@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="bd_26df_mipi_dphy_0_0_synth_1" LaunchPart="xc7a35tfgg484-1" LaunchTime="1768266546">
+<GenRun Id="bd_26df_mipi_dphy_0_0_synth_1" LaunchPart="xc7a35tfgg484-1" LaunchTime="1768543863">
+  <File Type="VDS-TIMING-PB" Name="bd_26df_mipi_dphy_0_0_timing_summary_synth.pb"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="bd_26df_mipi_dphy_0_0_timing_summary_synth.rpt"/>
+  <File Type="RDS-RDS" Name="bd_26df_mipi_dphy_0_0.vds"/>
   <File Type="REPORTS-TCL" Name="bd_26df_mipi_dphy_0_0_reports.tcl"/>
+  <File Type="PA-TCL" Name="bd_26df_mipi_dphy_0_0.tcl"/>
+  <File Type="RDS-DCP" Name="bd_26df_mipi_dphy_0_0.dcp"/>
+  <File Type="RDS-PROPCONSTRS" Name="bd_26df_mipi_dphy_0_0_drc_synth.rpt"/>
   <File Type="RDS-UTIL" Name="bd_26df_mipi_dphy_0_0_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="bd_26df_mipi_dphy_0_0_utilization_synth.pb"/>
-  <File Type="PA-TCL" Name="bd_26df_mipi_dphy_0_0.tcl"/>
-  <File Type="RDS-RDS" Name="bd_26df_mipi_dphy_0_0.vds"/>
-  <File Type="RDS-DCP" Name="bd_26df_mipi_dphy_0_0.dcp"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/bd_26df_mipi_dphy_0_0" RelGenDir="$PGENDIR/bd_26df_mipi_dphy_0_0">
     <File Path="$PPRDIR/../source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0.xci">
       <FileInfo>
@@ -42,12 +45,30 @@
         <Attr Name="UsedInSteps" Val="impl_1;WRITE_BITSTREAM;TCL.POST"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/utils_1/imports/impl_1/blue_hd_top_routed.dcp">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedInSteps" Val="impl_1"/>
+        <Attr Name="AutoDcp" Val="1"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/utils_1/imports/synth_1/blue_hd_top.dcp">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedInSteps" Val="synth_1"/>
+        <Attr Name="AutoDcp" Val="1"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="TopAutoSet" Val="TRUE"/>
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2024"/>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2024">
+      <Desc>Vivado Synthesis Defaults</Desc>
+    </StratHandle>
     <Step Id="synth_design"/>
   </Strategy>
 </GenRun>

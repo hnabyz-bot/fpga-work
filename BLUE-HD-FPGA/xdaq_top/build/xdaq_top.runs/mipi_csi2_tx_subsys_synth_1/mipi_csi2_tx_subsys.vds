@@ -1,25 +1,25 @@
 #-----------------------------------------------------------
-# Vivado v2024.2 (64-bit)
-# SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
-# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
-# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
-# Start of session at: Tue Jan 13 10:10:30 2026
-# Process ID         : 40236
-# Current directory  : D:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.runs/mipi_csi2_tx_subsys_synth_1
-# Command line       : vivado.exe -log mipi_csi2_tx_subsys.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source mipi_csi2_tx_subsys.tcl
-# Log file           : D:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.runs/mipi_csi2_tx_subsys_synth_1/mipi_csi2_tx_subsys.vds
-# Journal file       : D:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.runs/mipi_csi2_tx_subsys_synth_1\vivado.jou
-# Running On         : work-dev
-# Platform           : Windows Server 2016 or Windows 10
-# Operating System   : 26200
-# Processor Detail   : 12th Gen Intel(R) Core(TM) i7-12700
-# CPU Frequency      : 2112 MHz
-# CPU Physical cores : 12
-# CPU Logical cores  : 20
-# Host memory        : 34088 MB
-# Swap memory        : 13794 MB
-# Total Virtual      : 47883 MB
-# Available Virtual  : 9660 MB
+# Vivado v2024.2.2 (64-bit)
+# SW Build 6060944 on Thu Mar 06 19:10:09 MST 2025
+# IP Build 6050500 on Thu Mar  6 23:33:39 MST 2025
+# SharedData Build 6060542 on Thu Mar 06 10:31:07 MST 2025
+# Start of session at: Fri Jan 16 15:13:10 2026
+# Process ID         : 430478
+# Current directory  : /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.runs/mipi_csi2_tx_subsys_synth_1
+# Command line       : vivado -log mipi_csi2_tx_subsys.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source mipi_csi2_tx_subsys.tcl
+# Log file           : /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.runs/mipi_csi2_tx_subsys_synth_1/mipi_csi2_tx_subsys.vds
+# Journal file       : /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.runs/mipi_csi2_tx_subsys_synth_1/vivado.jou
+# Running On         : drlinux
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 22.04.5 LTS
+# Processor Detail   : Intel(R) Core(TM) i7-14700
+# CPU Frequency      : 5300.000 MHz
+# CPU Physical cores : 20
+# CPU Logical cores  : 28
+# Host memory        : 67178 MB
+# Swap memory        : 2147 MB
+# Total Virtual      : 69326 MB
+# Available Virtual  : 38164 MB
 #-----------------------------------------------------------
 source mipi_csi2_tx_subsys.tcl -notrace
 INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: mipi_csi2_tx_subsys
@@ -28,119 +28,119 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Device 21-403] Loading part xc7a35tfgg484-1
-INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 56284
+INFO: [Synth 8-7075] Helper process launched with PID 430548
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1145.770 ; gain = 465.062
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1986.551 ; gain = 420.828 ; free physical = 4103 ; free virtual = 35316
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'mipi_csi2_tx_subsys' [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/synth/mipi_csi2_tx_subsys.v:53]
-INFO: [Synth 8-6157] synthesizing module 'bd_26df' [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/synth/bd_26df.v:10]
-INFO: [Synth 8-6157] synthesizing module 'bd_26df_axi_crossbar_0_0' [D:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.runs/mipi_csi2_tx_subsys_synth_1/.Xil/Vivado-40236-work-dev/realtime/bd_26df_axi_crossbar_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'bd_26df_axi_crossbar_0_0' (0#1) [D:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.runs/mipi_csi2_tx_subsys_synth_1/.Xil/Vivado-40236-work-dev/realtime/bd_26df_axi_crossbar_0_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'bd_26df_axi_crossbar_0_0' is unconnected for instance 'axi_crossbar_0' [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/synth/bd_26df.v:248]
-WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'bd_26df_axi_crossbar_0_0' is unconnected for instance 'axi_crossbar_0' [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/synth/bd_26df.v:248]
-WARNING: [Synth 8-7023] instance 'axi_crossbar_0' of module 'bd_26df_axi_crossbar_0_0' has 40 connections declared, but only 38 given [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/synth/bd_26df.v:248]
-INFO: [Synth 8-6157] synthesizing module 'bd_26df_mipi_csi2_tx_ctrl_0_0' [D:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.runs/mipi_csi2_tx_subsys_synth_1/.Xil/Vivado-40236-work-dev/realtime/bd_26df_mipi_csi2_tx_ctrl_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'bd_26df_mipi_csi2_tx_ctrl_0_0' (0#1) [D:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.runs/mipi_csi2_tx_subsys_synth_1/.Xil/Vivado-40236-work-dev/realtime/bd_26df_mipi_csi2_tx_ctrl_0_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'dl0_txskewcalhs' of module 'bd_26df_mipi_csi2_tx_ctrl_0_0' is unconnected for instance 'mipi_csi2_tx_ctrl_0' [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/synth/bd_26df.v:287]
-WARNING: [Synth 8-7071] port 'dl1_txskewcalhs' of module 'bd_26df_mipi_csi2_tx_ctrl_0_0' is unconnected for instance 'mipi_csi2_tx_ctrl_0' [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/synth/bd_26df.v:287]
-WARNING: [Synth 8-7071] port 'dl2_txskewcalhs' of module 'bd_26df_mipi_csi2_tx_ctrl_0_0' is unconnected for instance 'mipi_csi2_tx_ctrl_0' [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/synth/bd_26df.v:287]
-WARNING: [Synth 8-7071] port 'dl3_txskewcalhs' of module 'bd_26df_mipi_csi2_tx_ctrl_0_0' is unconnected for instance 'mipi_csi2_tx_ctrl_0' [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/synth/bd_26df.v:287]
-WARNING: [Synth 8-7023] instance 'mipi_csi2_tx_ctrl_0' of module 'bd_26df_mipi_csi2_tx_ctrl_0_0' has 78 connections declared, but only 74 given [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/synth/bd_26df.v:287]
-INFO: [Synth 8-6157] synthesizing module 'bd_26df_mipi_dphy_0_0' [D:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.runs/mipi_csi2_tx_subsys_synth_1/.Xil/Vivado-40236-work-dev/realtime/bd_26df_mipi_dphy_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'bd_26df_mipi_dphy_0_0' (0#1) [D:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.runs/mipi_csi2_tx_subsys_synth_1/.Xil/Vivado-40236-work-dev/realtime/bd_26df_mipi_dphy_0_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'cl_stopstate' of module 'bd_26df_mipi_dphy_0_0' is unconnected for instance 'mipi_dphy_0' [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/synth/bd_26df.v:362]
-WARNING: [Synth 8-7071] port 'cl_ulpsactivenot' of module 'bd_26df_mipi_dphy_0_0' is unconnected for instance 'mipi_dphy_0' [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/synth/bd_26df.v:362]
-WARNING: [Synth 8-7071] port 'dl0_txreadyesc' of module 'bd_26df_mipi_dphy_0_0' is unconnected for instance 'mipi_dphy_0' [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/synth/bd_26df.v:362]
-WARNING: [Synth 8-7071] port 'dl1_stopstate' of module 'bd_26df_mipi_dphy_0_0' is unconnected for instance 'mipi_dphy_0' [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/synth/bd_26df.v:362]
-WARNING: [Synth 8-7071] port 'dl1_txreadyesc' of module 'bd_26df_mipi_dphy_0_0' is unconnected for instance 'mipi_dphy_0' [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/synth/bd_26df.v:362]
-WARNING: [Synth 8-7071] port 'dl2_stopstate' of module 'bd_26df_mipi_dphy_0_0' is unconnected for instance 'mipi_dphy_0' [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/synth/bd_26df.v:362]
-WARNING: [Synth 8-7071] port 'dl2_txreadyesc' of module 'bd_26df_mipi_dphy_0_0' is unconnected for instance 'mipi_dphy_0' [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/synth/bd_26df.v:362]
-WARNING: [Synth 8-7071] port 'dl3_stopstate' of module 'bd_26df_mipi_dphy_0_0' is unconnected for instance 'mipi_dphy_0' [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/synth/bd_26df.v:362]
-WARNING: [Synth 8-7071] port 'dl3_txreadyesc' of module 'bd_26df_mipi_dphy_0_0' is unconnected for instance 'mipi_dphy_0' [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/synth/bd_26df.v:362]
-WARNING: [Synth 8-7023] instance 'mipi_dphy_0' of module 'bd_26df_mipi_dphy_0_0' has 106 connections declared, but only 97 given [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/synth/bd_26df.v:362]
-INFO: [Synth 8-6155] done synthesizing module 'bd_26df' (0#1) [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/synth/bd_26df.v:10]
-INFO: [Synth 8-6155] done synthesizing module 'mipi_csi2_tx_subsys' (0#1) [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/synth/mipi_csi2_tx_subsys.v:53]
+INFO: [Synth 8-6157] synthesizing module 'mipi_csi2_tx_subsys' [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/synth/mipi_csi2_tx_subsys.v:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_26df' [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/synth/bd_26df.v:10]
+INFO: [Synth 8-6157] synthesizing module 'bd_26df_axi_crossbar_0_0' [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.runs/mipi_csi2_tx_subsys_synth_1/.Xil/Vivado-430478-drlinux/realtime/bd_26df_axi_crossbar_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_26df_axi_crossbar_0_0' (0#1) [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.runs/mipi_csi2_tx_subsys_synth_1/.Xil/Vivado-430478-drlinux/realtime/bd_26df_axi_crossbar_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'bd_26df_axi_crossbar_0_0' is unconnected for instance 'axi_crossbar_0' [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/synth/bd_26df.v:248]
+WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'bd_26df_axi_crossbar_0_0' is unconnected for instance 'axi_crossbar_0' [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/synth/bd_26df.v:248]
+WARNING: [Synth 8-7023] instance 'axi_crossbar_0' of module 'bd_26df_axi_crossbar_0_0' has 40 connections declared, but only 38 given [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/synth/bd_26df.v:248]
+INFO: [Synth 8-6157] synthesizing module 'bd_26df_mipi_csi2_tx_ctrl_0_0' [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.runs/mipi_csi2_tx_subsys_synth_1/.Xil/Vivado-430478-drlinux/realtime/bd_26df_mipi_csi2_tx_ctrl_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_26df_mipi_csi2_tx_ctrl_0_0' (0#1) [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.runs/mipi_csi2_tx_subsys_synth_1/.Xil/Vivado-430478-drlinux/realtime/bd_26df_mipi_csi2_tx_ctrl_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'dl0_txskewcalhs' of module 'bd_26df_mipi_csi2_tx_ctrl_0_0' is unconnected for instance 'mipi_csi2_tx_ctrl_0' [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/synth/bd_26df.v:287]
+WARNING: [Synth 8-7071] port 'dl1_txskewcalhs' of module 'bd_26df_mipi_csi2_tx_ctrl_0_0' is unconnected for instance 'mipi_csi2_tx_ctrl_0' [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/synth/bd_26df.v:287]
+WARNING: [Synth 8-7071] port 'dl2_txskewcalhs' of module 'bd_26df_mipi_csi2_tx_ctrl_0_0' is unconnected for instance 'mipi_csi2_tx_ctrl_0' [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/synth/bd_26df.v:287]
+WARNING: [Synth 8-7071] port 'dl3_txskewcalhs' of module 'bd_26df_mipi_csi2_tx_ctrl_0_0' is unconnected for instance 'mipi_csi2_tx_ctrl_0' [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/synth/bd_26df.v:287]
+WARNING: [Synth 8-7023] instance 'mipi_csi2_tx_ctrl_0' of module 'bd_26df_mipi_csi2_tx_ctrl_0_0' has 78 connections declared, but only 74 given [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/synth/bd_26df.v:287]
+INFO: [Synth 8-6157] synthesizing module 'bd_26df_mipi_dphy_0_0' [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.runs/mipi_csi2_tx_subsys_synth_1/.Xil/Vivado-430478-drlinux/realtime/bd_26df_mipi_dphy_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_26df_mipi_dphy_0_0' (0#1) [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.runs/mipi_csi2_tx_subsys_synth_1/.Xil/Vivado-430478-drlinux/realtime/bd_26df_mipi_dphy_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'cl_stopstate' of module 'bd_26df_mipi_dphy_0_0' is unconnected for instance 'mipi_dphy_0' [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/synth/bd_26df.v:362]
+WARNING: [Synth 8-7071] port 'cl_ulpsactivenot' of module 'bd_26df_mipi_dphy_0_0' is unconnected for instance 'mipi_dphy_0' [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/synth/bd_26df.v:362]
+WARNING: [Synth 8-7071] port 'dl0_txreadyesc' of module 'bd_26df_mipi_dphy_0_0' is unconnected for instance 'mipi_dphy_0' [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/synth/bd_26df.v:362]
+WARNING: [Synth 8-7071] port 'dl1_stopstate' of module 'bd_26df_mipi_dphy_0_0' is unconnected for instance 'mipi_dphy_0' [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/synth/bd_26df.v:362]
+WARNING: [Synth 8-7071] port 'dl1_txreadyesc' of module 'bd_26df_mipi_dphy_0_0' is unconnected for instance 'mipi_dphy_0' [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/synth/bd_26df.v:362]
+WARNING: [Synth 8-7071] port 'dl2_stopstate' of module 'bd_26df_mipi_dphy_0_0' is unconnected for instance 'mipi_dphy_0' [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/synth/bd_26df.v:362]
+WARNING: [Synth 8-7071] port 'dl2_txreadyesc' of module 'bd_26df_mipi_dphy_0_0' is unconnected for instance 'mipi_dphy_0' [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/synth/bd_26df.v:362]
+WARNING: [Synth 8-7071] port 'dl3_stopstate' of module 'bd_26df_mipi_dphy_0_0' is unconnected for instance 'mipi_dphy_0' [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/synth/bd_26df.v:362]
+WARNING: [Synth 8-7071] port 'dl3_txreadyesc' of module 'bd_26df_mipi_dphy_0_0' is unconnected for instance 'mipi_dphy_0' [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/synth/bd_26df.v:362]
+WARNING: [Synth 8-7023] instance 'mipi_dphy_0' of module 'bd_26df_mipi_dphy_0_0' has 106 connections declared, but only 97 given [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/synth/bd_26df.v:362]
+INFO: [Synth 8-6155] done synthesizing module 'bd_26df' (0#1) [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/synth/bd_26df.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'mipi_csi2_tx_subsys' (0#1) [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/synth/mipi_csi2_tx_subsys.v:53]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1258.148 ; gain = 577.441
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2064.520 ; gain = 498.797 ; free physical = 4004 ; free virtual = 35219
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1258.148 ; gain = 577.441
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2073.426 ; gain = 507.703 ; free physical = 4004 ; free virtual = 35219
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1258.148 ; gain = 577.441
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2073.426 ; gain = 507.703 ; free physical = 4004 ; free virtual = 35219
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1258.148 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2073.426 ; gain = 0.000 ; free physical = 4004 ; free virtual = 35219
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_0/bd_26df_mipi_csi2_tx_ctrl_0_0/bd_26df_mipi_csi2_tx_ctrl_0_0_in_context.xdc] for cell 'inst/mipi_csi2_tx_ctrl_0'
-Finished Parsing XDC File [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_0/bd_26df_mipi_csi2_tx_ctrl_0_0/bd_26df_mipi_csi2_tx_ctrl_0_0_in_context.xdc] for cell 'inst/mipi_csi2_tx_ctrl_0'
-Parsing XDC File [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/bd_26df_mipi_dphy_0_0_in_context.xdc] for cell 'inst/mipi_dphy_0'
-Finished Parsing XDC File [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/bd_26df_mipi_dphy_0_0_in_context.xdc] for cell 'inst/mipi_dphy_0'
-Parsing XDC File [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_2/bd_26df_axi_crossbar_0_0/bd_26df_axi_crossbar_0_0_in_context.xdc] for cell 'inst/axi_crossbar_0'
-Finished Parsing XDC File [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_2/bd_26df_axi_crossbar_0_0/bd_26df_axi_crossbar_0_0_in_context.xdc] for cell 'inst/axi_crossbar_0'
-Parsing XDC File [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/mipi_csi2_tx_subsys_fixed_ooc.xdc] for cell 'inst'
-WARNING: [Vivado 12-508] No pins matched '*rst_fsmr_r*/C'. [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/mipi_csi2_tx_subsys_fixed_ooc.xdc:53]
-Finished Parsing XDC File [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/mipi_csi2_tx_subsys_fixed_ooc.xdc] for cell 'inst'
-WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/mipi_csi2_tx_subsys_fixed_ooc.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/mipi_csi2_tx_subsys_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
-Parsing XDC File [D:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.runs/mipi_csi2_tx_subsys_synth_1/dont_touch.xdc]
-Finished Parsing XDC File [D:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.runs/mipi_csi2_tx_subsys_synth_1/dont_touch.xdc]
+Parsing XDC File [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_0/bd_26df_mipi_csi2_tx_ctrl_0_0/bd_26df_mipi_csi2_tx_ctrl_0_0_in_context.xdc] for cell 'inst/mipi_csi2_tx_ctrl_0'
+Finished Parsing XDC File [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_0/bd_26df_mipi_csi2_tx_ctrl_0_0/bd_26df_mipi_csi2_tx_ctrl_0_0_in_context.xdc] for cell 'inst/mipi_csi2_tx_ctrl_0'
+Parsing XDC File [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/bd_26df_mipi_dphy_0_0_in_context.xdc] for cell 'inst/mipi_dphy_0'
+Finished Parsing XDC File [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/bd_26df_mipi_dphy_0_0_in_context.xdc] for cell 'inst/mipi_dphy_0'
+Parsing XDC File [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_2/bd_26df_axi_crossbar_0_0/bd_26df_axi_crossbar_0_0_in_context.xdc] for cell 'inst/axi_crossbar_0'
+Finished Parsing XDC File [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_2/bd_26df_axi_crossbar_0_0/bd_26df_axi_crossbar_0_0_in_context.xdc] for cell 'inst/axi_crossbar_0'
+Parsing XDC File [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/mipi_csi2_tx_subsys_fixed_ooc.xdc] for cell 'inst'
+WARNING: [Vivado 12-508] No pins matched '*rst_fsmr_r*/C'. [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/mipi_csi2_tx_subsys_fixed_ooc.xdc:53]
+Finished Parsing XDC File [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/mipi_csi2_tx_subsys_fixed_ooc.xdc] for cell 'inst'
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/mipi_csi2_tx_subsys_fixed_ooc.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/mipi_csi2_tx_subsys_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+Parsing XDC File [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.runs/mipi_csi2_tx_subsys_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.runs/mipi_csi2_tx_subsys_synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1258.148 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2143.395 ; gain = 0.000 ; free physical = 3998 ; free virtual = 35213
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 1258.148 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2143.395 ; gain = 0.000 ; free physical = 3998 ; free virtual = 35213
 INFO: [Designutils 20-5008] Incremental synthesis strategy off
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1258.148 ; gain = 577.441
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2143.395 ; gain = 577.672 ; free physical = 4076 ; free virtual = 35290
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tfgg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1258.148 ; gain = 577.441
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2151.398 ; gain = 585.676 ; free physical = 4076 ; free virtual = 35290
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property IO_BUFFER_TYPE = NONE for mipi_phy_if_clk_hs_n. (constraint file  d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/bd_26df_mipi_dphy_0_0_in_context.xdc, line 8).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for mipi_phy_if_clk_hs_n. (constraint file  d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/bd_26df_mipi_dphy_0_0_in_context.xdc, line 9).
-Applied set_property IO_BUFFER_TYPE = NONE for mipi_phy_if_clk_hs_p. (constraint file  d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/bd_26df_mipi_dphy_0_0_in_context.xdc, line 10).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for mipi_phy_if_clk_hs_p. (constraint file  d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/bd_26df_mipi_dphy_0_0_in_context.xdc, line 11).
-Applied set_property IO_BUFFER_TYPE = NONE for mipi_phy_if_data_hs_n[0]. (constraint file  d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/bd_26df_mipi_dphy_0_0_in_context.xdc, line 12).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for mipi_phy_if_data_hs_n[0]. (constraint file  d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/bd_26df_mipi_dphy_0_0_in_context.xdc, line 13).
-Applied set_property IO_BUFFER_TYPE = NONE for mipi_phy_if_data_hs_n[1]. (constraint file  d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/bd_26df_mipi_dphy_0_0_in_context.xdc, line 14).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for mipi_phy_if_data_hs_n[1]. (constraint file  d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/bd_26df_mipi_dphy_0_0_in_context.xdc, line 15).
-Applied set_property IO_BUFFER_TYPE = NONE for mipi_phy_if_data_hs_n[2]. (constraint file  d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/bd_26df_mipi_dphy_0_0_in_context.xdc, line 16).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for mipi_phy_if_data_hs_n[2]. (constraint file  d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/bd_26df_mipi_dphy_0_0_in_context.xdc, line 17).
-Applied set_property IO_BUFFER_TYPE = NONE for mipi_phy_if_data_hs_n[3]. (constraint file  d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/bd_26df_mipi_dphy_0_0_in_context.xdc, line 18).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for mipi_phy_if_data_hs_n[3]. (constraint file  d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/bd_26df_mipi_dphy_0_0_in_context.xdc, line 19).
-Applied set_property IO_BUFFER_TYPE = NONE for mipi_phy_if_data_hs_p[0]. (constraint file  d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/bd_26df_mipi_dphy_0_0_in_context.xdc, line 20).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for mipi_phy_if_data_hs_p[0]. (constraint file  d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/bd_26df_mipi_dphy_0_0_in_context.xdc, line 21).
-Applied set_property IO_BUFFER_TYPE = NONE for mipi_phy_if_data_hs_p[1]. (constraint file  d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/bd_26df_mipi_dphy_0_0_in_context.xdc, line 22).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for mipi_phy_if_data_hs_p[1]. (constraint file  d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/bd_26df_mipi_dphy_0_0_in_context.xdc, line 23).
-Applied set_property IO_BUFFER_TYPE = NONE for mipi_phy_if_data_hs_p[2]. (constraint file  d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/bd_26df_mipi_dphy_0_0_in_context.xdc, line 24).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for mipi_phy_if_data_hs_p[2]. (constraint file  d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/bd_26df_mipi_dphy_0_0_in_context.xdc, line 25).
-Applied set_property IO_BUFFER_TYPE = NONE for mipi_phy_if_data_hs_p[3]. (constraint file  d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/bd_26df_mipi_dphy_0_0_in_context.xdc, line 26).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for mipi_phy_if_data_hs_p[3]. (constraint file  d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/bd_26df_mipi_dphy_0_0_in_context.xdc, line 27).
+Applied set_property IO_BUFFER_TYPE = NONE for mipi_phy_if_clk_hs_n. (constraint file  /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/bd_26df_mipi_dphy_0_0_in_context.xdc, line 8).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for mipi_phy_if_clk_hs_n. (constraint file  /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/bd_26df_mipi_dphy_0_0_in_context.xdc, line 9).
+Applied set_property IO_BUFFER_TYPE = NONE for mipi_phy_if_clk_hs_p. (constraint file  /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/bd_26df_mipi_dphy_0_0_in_context.xdc, line 10).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for mipi_phy_if_clk_hs_p. (constraint file  /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/bd_26df_mipi_dphy_0_0_in_context.xdc, line 11).
+Applied set_property IO_BUFFER_TYPE = NONE for mipi_phy_if_data_hs_n[0]. (constraint file  /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/bd_26df_mipi_dphy_0_0_in_context.xdc, line 12).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for mipi_phy_if_data_hs_n[0]. (constraint file  /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/bd_26df_mipi_dphy_0_0_in_context.xdc, line 13).
+Applied set_property IO_BUFFER_TYPE = NONE for mipi_phy_if_data_hs_n[1]. (constraint file  /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/bd_26df_mipi_dphy_0_0_in_context.xdc, line 14).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for mipi_phy_if_data_hs_n[1]. (constraint file  /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/bd_26df_mipi_dphy_0_0_in_context.xdc, line 15).
+Applied set_property IO_BUFFER_TYPE = NONE for mipi_phy_if_data_hs_n[2]. (constraint file  /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/bd_26df_mipi_dphy_0_0_in_context.xdc, line 16).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for mipi_phy_if_data_hs_n[2]. (constraint file  /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/bd_26df_mipi_dphy_0_0_in_context.xdc, line 17).
+Applied set_property IO_BUFFER_TYPE = NONE for mipi_phy_if_data_hs_n[3]. (constraint file  /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/bd_26df_mipi_dphy_0_0_in_context.xdc, line 18).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for mipi_phy_if_data_hs_n[3]. (constraint file  /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/bd_26df_mipi_dphy_0_0_in_context.xdc, line 19).
+Applied set_property IO_BUFFER_TYPE = NONE for mipi_phy_if_data_hs_p[0]. (constraint file  /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/bd_26df_mipi_dphy_0_0_in_context.xdc, line 20).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for mipi_phy_if_data_hs_p[0]. (constraint file  /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/bd_26df_mipi_dphy_0_0_in_context.xdc, line 21).
+Applied set_property IO_BUFFER_TYPE = NONE for mipi_phy_if_data_hs_p[1]. (constraint file  /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/bd_26df_mipi_dphy_0_0_in_context.xdc, line 22).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for mipi_phy_if_data_hs_p[1]. (constraint file  /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/bd_26df_mipi_dphy_0_0_in_context.xdc, line 23).
+Applied set_property IO_BUFFER_TYPE = NONE for mipi_phy_if_data_hs_p[2]. (constraint file  /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/bd_26df_mipi_dphy_0_0_in_context.xdc, line 24).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for mipi_phy_if_data_hs_p[2]. (constraint file  /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/bd_26df_mipi_dphy_0_0_in_context.xdc, line 25).
+Applied set_property IO_BUFFER_TYPE = NONE for mipi_phy_if_data_hs_p[3]. (constraint file  /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/bd_26df_mipi_dphy_0_0_in_context.xdc, line 26).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for mipi_phy_if_data_hs_p[3]. (constraint file  /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_1/bd_26df_mipi_dphy_0_0/bd_26df_mipi_dphy_0_0_in_context.xdc, line 27).
 Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for inst/mipi_csi2_tx_ctrl_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for inst/mipi_dphy_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for inst/axi_crossbar_0. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1258.148 ; gain = 577.441
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2151.398 ; gain = 585.676 ; free physical = 4076 ; free virtual = 35290
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1258.148 ; gain = 577.441
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2151.398 ; gain = 585.676 ; free physical = 4075 ; free virtual = 35291
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -163,25 +163,25 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1258.148 ; gain = 577.441
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2151.398 ; gain = 585.676 ; free physical = 4085 ; free virtual = 35301
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1424.961 ; gain = 744.254
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2227.398 ; gain = 661.676 ; free physical = 4056 ; free virtual = 35271
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1425.035 ; gain = 744.328
+Finished Timing Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2227.398 ; gain = 661.676 ; free physical = 4056 ; free virtual = 35271
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1434.961 ; gain = 754.254
+Finished Technology Mapping : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2237.414 ; gain = 671.691 ; free physical = 4040 ; free virtual = 35255
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -199,37 +199,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1652.098 ; gain = 971.391
+Finished IO Insertion : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2407.227 ; gain = 841.504 ; free physical = 3906 ; free virtual = 35122
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1652.098 ; gain = 971.391
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2407.227 ; gain = 841.504 ; free physical = 3906 ; free virtual = 35122
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1652.098 ; gain = 971.391
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2407.227 ; gain = 841.504 ; free physical = 3906 ; free virtual = 35122
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1652.098 ; gain = 971.391
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2407.227 ; gain = 841.504 ; free physical = 3907 ; free virtual = 35122
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1652.098 ; gain = 971.391
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2407.227 ; gain = 841.504 ; free physical = 3907 ; free virtual = 35122
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1652.098 ; gain = 971.391
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2407.227 ; gain = 841.504 ; free physical = 3907 ; free virtual = 35122
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -253,16 +253,16 @@ Report Cell Usage:
 |3     |bd_26df_mipi_dphy_0         |     1|
 +------+----------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1652.098 ; gain = 971.391
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2407.227 ; gain = 841.504 ; free physical = 3907 ; free virtual = 35122
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 1652.098 ; gain = 971.391
-Synthesis Optimization Complete : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1652.098 ; gain = 971.391
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2407.227 ; gain = 771.535 ; free physical = 3907 ; free virtual = 35123
+Synthesis Optimization Complete : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2407.234 ; gain = 841.504 ; free physical = 3907 ; free virtual = 35123
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1652.098 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2407.234 ; gain = 0.000 ; free physical = 3907 ; free virtual = 35123
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1652.098 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2407.234 ; gain = 0.000 ; free physical = 4089 ; free virtual = 35304
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
@@ -270,10 +270,12 @@ Synth Design complete | Checksum: b7cf0e01
 INFO: [Common 17-83] Releasing license: Synthesis
 24 Infos, 21 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1652.098 ; gain = 1179.727
-INFO: [Common 17-1381] The checkpoint 'D:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.runs/mipi_csi2_tx_subsys_synth_1/mipi_csi2_tx_subsys.dcp' has been generated.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP mipi_csi2_tx_subsys, cache-ID = 3a74069df0b842ef
+synth_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:12 . Memory (MB): peak = 2407.234 ; gain = 923.078 ; free physical = 4089 ; free virtual = 35304
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1609.951; main = 1609.951; forked = 0.000
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 2407.230; main = 2407.230; forked = 0.000
+INFO: [Common 17-1381] The checkpoint '/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.runs/mipi_csi2_tx_subsys_synth_1/mipi_csi2_tx_subsys.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP mipi_csi2_tx_subsys, cache-ID = 79121a389044a60e
 INFO: [Coretcl 2-1174] Renamed 4 cell refs.
-INFO: [Common 17-1381] The checkpoint 'D:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.runs/mipi_csi2_tx_subsys_synth_1/mipi_csi2_tx_subsys.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint '/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.runs/mipi_csi2_tx_subsys_synth_1/mipi_csi2_tx_subsys.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file mipi_csi2_tx_subsys_utilization_synth.rpt -pb mipi_csi2_tx_subsys_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Jan 13 10:11:01 2026...
+INFO: [Common 17-206] Exiting Vivado at Fri Jan 16 15:13:27 2026...
