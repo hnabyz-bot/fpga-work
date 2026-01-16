@@ -204,9 +204,9 @@ echo ""
 EOF
 
     # Questa GUI 실행
-    $VSIM work_init.init_tb \
+    $VSIM -gui work_init.init_tb \
         -do run_init_gui.tcl \
-        -do "log /* -r /*; run 1us" &
+        &
 
     print_success "Questa GUI가 시작되었습니다."
     print_info "GUI 내에서 'run -all' 명령으로 전체 시뮬레이션을 실행하세요."
