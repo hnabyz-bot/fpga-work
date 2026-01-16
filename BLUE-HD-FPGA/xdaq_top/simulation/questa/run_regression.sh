@@ -101,7 +101,8 @@ generate_report() {
         echo " Total    : $total"
         echo " Passed   : $passed"
         echo " Failed   : $failed"
-        echo " Pass Rate: $(echo "scale=1; $passed * 100 / $total" | bc)%"
+        local pass_rate=$((passed * 100 / total))
+        echo " Pass Rate: ${pass_rate}%"
         echo "============================================================"
         echo ""
         echo "Individual Results:"

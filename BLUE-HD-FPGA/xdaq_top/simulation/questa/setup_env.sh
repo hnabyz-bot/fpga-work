@@ -38,7 +38,7 @@ fi
 #------------------------------------------------------------------------------
 # Verify Questa Installation
 #------------------------------------------------------------------------------
-if command -v vsim &> /dev/null; then
+if command -v vsim >/dev/null 2>&1; then
     VSIM_VERSION=$(vsim -version 2>/dev/null | head -1)
     echo "[INFO] Questa found: $VSIM_VERSION"
 else

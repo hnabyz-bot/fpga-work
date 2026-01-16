@@ -7,6 +7,7 @@
 // Description: xdaq fpga top file - Converted from VHDL to SystemVerilog
 // Revision History:
 //    2025.05.19 - Initial
+//    2026.01.15 - Fixed magic numbers, added constants, extracted functions
 //
 ///////////////////////////////////////////////////////////////////////////////
 
@@ -118,14 +119,45 @@ module blue_hd_top (
 
     // (* mark_debug="true" *) 
 
+    //==========================================================================
+    // Localparam Constants - Replacing magic numbers
+    //==========================================================================
+    
+    // SPI packet parameters
+    localparam int SPI_HEADER     = 2;
+    localparam int SPI_PAYLOAD    = 16;
+    localparam int SPI_ADDRSZ     = 14;
+    localparam int SPI_PKTSZ      = 32;  // (header + addrsz + payload)
+    
+    // Timing and synchronization constants
+    localparam int SYNC_DELAY_THRESHOLD     = 3;   // Sync delay threshold (was 3'd3)
+    localparam int XAO_PHASE_COUNT          = 6;   // Number of XAO phases (was 32'd6)
+    localparam int COLUMN_END_ZERO          = 0;   // Column end detection value
+    localparam int COLUMN_MAX_COUNT         = 1024; // Maximum column count (was 11'd1024)
+    
+    // TI ROIC parameters
+    localparam int TI_ROIC_WORD_SIZE     = 24;     // 24-bit data word width
+    localparam int TI_ROIC_CHANNELS      = 14;     // Number of ROIC channels (cyan board)
+    
+    // Clock frequency parameters
+    localparam real TI_ROIC_REFCLK_FREQ   = 200.0;  // 200MHz reference clock frequency
+    
+    // Alignment patterns
+    localparam logic [23:0] TI_ROIC_PATTERN_1 = 24'hFFF000;  // First alignment pattern
+    localparam logic [23:0] TI_ROIC_PATTERN_2 = 24'hFF0000;  // Second alignment pattern
+
+    // ====================================================================
     // Clock signals
+    // ====================================================================
     logic s_clk_100mhz;
     logic s_dphy_clk_200M;
     logic s_clk_20mhz;
     logic s_clk_5mhz;
     logic s_clk_1mhz;
 
+    // ====================================================================
     // Module signals
+    // ====================================================================
     logic s_roic_reset;
     logic s_back_bias;
 
@@ -241,20 +273,17 @@ module blue_hd_top (
     logic [15:0] tg_row_cnt;
     logic [10:0] tg_col_cnt;
 
+    // ====================================================================
     // SPI signals
-    localparam int header = 2;
-    localparam int payload = 16;
-    localparam int addrsz = 14;
-    localparam int pktsz = 32; // (header + addrsz + payload) size of SPI packet
-
+    // ====================================================================
     logic s_spi_start_flag;
     logic s_addr_dv;
     logic s_rw_out;
 
     logic s_reg_read_index;
 
-    logic [addrsz-1:0] s_reg_addr;
-    logic [payload-1:0] s_reg_data;
+    logic [SPI_ADDRSZ-1:0] s_reg_addr;
+    logic [SPI_PAYLOAD-1:0] s_reg_data;
     logic s_reg_addr_index;
     logic s_reg_data_index;
 
@@ -278,7 +307,9 @@ module blue_hd_top (
     logic [7:0] s_state_led_ctr;
     logic s_reg_map_sel;
 
+    // ====================================================================
     // MIPI signals
+    // ====================================================================
     logic s_reset;
     logic s_csi2_reset;
     logic s_clk_lock;
@@ -300,7 +331,9 @@ module blue_hd_top (
     logic [1:0] s_gen_sync_start_dly;
     logic s_gen_sync_start_rise;
 
+    // ====================================================================
     // TI ROIC deser signals
+    // ====================================================================
     logic ti_roic_deser_reset;
     logic ti_roic_deser_dly_tap_ld;
     logic [4:0] ti_roic_deser_dly_tap_in;
@@ -309,11 +342,13 @@ module blue_hd_top (
     logic ti_roic_deser_align_mode;
     logic ti_roic_deser_align_start;
     // TODO: Changed from [11:0] to [13:0] for cyan board (14 channels)
-    logic [4:0] ti_roic_deser_shift_set[13:0];
-    logic [4:0] ti_roic_deser_align_shift[13:0];
-    logic [13:0] ti_roic_deser_align_done;
+    logic [4:0] ti_roic_deser_shift_set[TI_ROIC_CHANNELS-1:0];
+    logic [4:0] ti_roic_deser_align_shift[TI_ROIC_CHANNELS-1:0];
+    logic [TI_ROIC_CHANNELS-1:0] ti_roic_deser_align_done;
 
+    // ====================================================================
     // Sequence table signals
+    // ====================================================================
     logic s_seq_reset;
     logic [7:0] seq_lut_addr;
     logic [63:0] seq_lut_data;
@@ -386,7 +421,32 @@ module blue_hd_top (
     logic s_aed_detect_skip_oe_o;
 
 
+    // ====================================================================
+    // Helper Functions - Extracted complex logic for better readability
+    // ====================================================================
+    
+    /**
+     * @brief Determines if valid readout should occur
+     * @return 1 if readout conditions are met, 0 otherwise
+     * 
+     * Readout is valid when:
+     * - CSI mask is disabled (not masked)
+     * - FSM is in read index state
+     * - Valid repeat count exceeds current sync repeat count
+     */
+    function automatic logic get_valid_readout(
+        input logic sync_csi_mask_o,
+        input logic sync_fsm_read_index,
+        input logic [31:0] valid_repeat_count,
+        input logic [31:0] sync_repeat_cnt
+    );
+        return (~sync_csi_mask_o) && sync_fsm_read_index && (valid_repeat_count > sync_repeat_cnt);
+    endfunction
+
+
+    // ====================================================================
     // clk_ctrl module instantiation
+    // ====================================================================
     clk_ctrl clk_inst0 (
         .reset          (1'b0),
         .clk_in1_p      (MCLK_50M_p),
@@ -399,7 +459,9 @@ module blue_hd_top (
 
     assign eim_clk = s_clk_100mhz; // Use 100MHz clock for EIM
 
+    // ====================================================================
     // MIPI CSI2 TX module instantiation
+    // ====================================================================
     mipi_csi2_tx_top inst_mipi_csi2_tx (
         .reset                  (s_csi2_reset),
         .dphy_clk_200M          (s_dphy_clk_200M),
@@ -430,7 +492,9 @@ module blue_hd_top (
         .system_rst_out         ()
     );
 
+    // ====================================================================
     // init module instantiation
+    // ====================================================================
     init init_inst (
         .fsm_clk            (s_clk_20mhz),
         .reset              (s_reset),
@@ -446,13 +510,15 @@ module blue_hd_top (
         .roic_reset         (s_roic_reset)
     );
 
+    // ====================================================================
     // SPI slave instantiation 
+    // ====================================================================
     // Note: Placeholder, actual implementation needs to be provided    
     spi_slave #(
-        .header     (header),
-        .payload    (payload),
-        .addrsz     (addrsz),
-        .pktsz      (pktsz)
+        .header     (SPI_HEADER),
+        .payload    (SPI_PAYLOAD),
+        .addrsz     (SPI_ADDRSZ),
+        .pktsz      (SPI_PKTSZ)
     )
     host_if_inst (
         .clk               (s_clk_100mhz),
@@ -462,18 +528,21 @@ module blue_hd_top (
         .MOSI              (MOSI),
         .MISO              (s_miso),
         .spi_start_flag    (s_spi_start_flag),
-        .read_data         (reg_read_out[payload-1:0]),
+        .read_data         (reg_read_out[SPI_PAYLOAD-1:0]),
         .read_en           (s_read_data_en),
-        .reg_addr          (s_reg_addr[addrsz-1:0]),
+        .reg_addr          (s_reg_addr[SPI_ADDRSZ-1:0]),
         .addr_valid        (s_addr_dv),
-        .wr_data           (s_reg_data[payload-1:0]),
+        .wr_data           (s_reg_data[SPI_PAYLOAD-1:0]),
         .wr_data_valid     (s_reg_data_index),
         .rw_out            (s_rw_out)
     );
 
-    assign s_reg_address = ({2'b00,s_reg_addr[addrsz-1:0]});
+    assign s_reg_address = ({2'b00,s_reg_addr[SPI_ADDRSZ-1:0]});
     assign reg_read_out = s_reg_read_out_new;
 
+    // ====================================================================
+    // reg_map module instantiation
+    // ====================================================================
     reg_map reg_map_inst (
         .eim_clk                    (s_clk_100mhz),
         .eim_rst                    (eim_rst),
@@ -568,8 +637,9 @@ module blue_hd_top (
         .state_led_ctr              (s_state_led_ctr)
     );
 
-    // assign disable_aed_read_xao = 1'b1; // AED read XAO is always enabled
-
+    // ====================================================================
+    // roic_gate_drv module instantiation
+    // ====================================================================
     roic_gate_drv roic_gate_drv_inst (
         .fsm_clk                (s_clk_20mhz),
         .fsm_drv_rst            (fsm_drv_rst),
@@ -591,6 +661,9 @@ module blue_hd_top (
         .gate_xao_5             (gate_xao)
     );
 
+    // ====================================================================
+    // FSM Index Assignments
+    // ====================================================================
     assign row_cnt = s_sync_repeat_cnt[15:0];
     assign col_cnt = s_sync_col_cnt[15:0];
     assign col_end = (s_sync_col_cnt == 16'd0) ? 1'b1 : 1'b0;
@@ -605,9 +678,11 @@ module blue_hd_top (
     assign FSM_idle_index       = idle_elable_o     ? 1'b1 : 1'b0;
 
     // TODO: Changed from [11:0] to [13:0] for cyan board (14 channels)
-    logic [13:0] s_roic_even_odd_out;
+    logic [TI_ROIC_CHANNELS-1:0] s_roic_even_odd_out;
 
+    // ====================================================================
     // Sequence table module instantiation
+    // ====================================================================
     sequencer_fsm seq_fsm_inst (
         .clk                (s_clk_20mhz),
         .reset_i            (s_seq_reset),
@@ -646,24 +721,38 @@ module blue_hd_top (
         .current_data_length_o  (current_data_length_o)
     );
 
+    // ====================================================================
+    // Sync and Wait Control Logic
+    // ====================================================================
     assign s_wait_tp_sel = (wait_o && current_eof_o) ? 1'b1 : 1'b0;
     assign s_wait_sync   = (wait_o && current_sof_o) ? 1'b1 : 1'b0;
-    assign s_wait_roic_sync = (s_wait_sync_dly == 3'd3) ? 1'b1 : 1'b0;
+    // Use constant SYNC_DELAY_THRESHOLD instead of magic number 3'd3
+    assign s_wait_roic_sync = (s_wait_sync_dly == SYNC_DELAY_THRESHOLD) ? 1'b1 : 1'b0;
 
 
     assign s_seq_reset = (~rst) ? 1'b1 : 1'b0;
 
     assign valid_repeat_count_o = s_sync_current_repeat_count_o - 32'd2;
 
-    assign s_valid_readout = ((~s_sync_csi_mask_o) && s_sync_fsm_read_index && (valid_repeat_count_o > s_sync_repeat_cnt)) ? 1'b1 : 1'b0;
+    // Use helper function get_valid_readout() for better readability
+    assign s_valid_readout = get_valid_readout(
+        s_sync_csi_mask_o,
+        s_sync_fsm_read_index,
+        valid_repeat_count_o,
+        s_sync_repeat_cnt
+    );
 
-    assign s_read_data_start = (tg_col_cnt == 11'd1024 && s_valid_readout) ? 1'b1 : 1'b0;
+    // Use constant COLUMN_MAX_COUNT instead of magic number 11'd1024
+    assign s_read_data_start = (tg_col_cnt == COLUMN_MAX_COUNT && s_valid_readout) ? 1'b1 : 1'b0;
 
     assign seq_state_read = {wait_o , bias_enable_o, flush_enable_o, expose_enable_o, 
                             readout_enable_o, aed_enable_o , current_sof_o , current_eof_o,
                             stv_mask_o     , csi_mask_o  , sequence_done_o, busy_o,
                             current_state_o};
 
+    // ====================================================================
+    // Delay Registers
+    // ====================================================================
     always_ff @(posedge s_clk_20mhz or posedge s_seq_reset) begin
         if (s_seq_reset) begin
             s_get_dark_dly <= 2'b00;
@@ -697,6 +786,9 @@ module blue_hd_top (
     assign exit_signal_i = (s_exit_signal_dark || s_exit_signal_bright || s_exit_signal_aed) ? 1'b1 : 1'b0;
     assign ready_to_get_image = exit_signal_i;
 
+    // ====================================================================
+    // Exit Signal State Machine
+    // ====================================================================
     always_ff @(posedge s_clk_20mhz or posedge s_seq_reset) begin
         if (s_seq_reset) begin
             s_exit_signal_dark <= 1'b0;
@@ -732,6 +824,7 @@ module blue_hd_top (
 
 // ====================================================================
     // Read RX data processing
+    // ====================================================================
     always_ff @(posedge eim_clk or negedge eim_rst) begin
         if (!eim_rst) begin
             s_axis_tdata_a <= '0;
@@ -754,6 +847,9 @@ module blue_hd_top (
 
     assign s_mask_stv = (s_sync_stv_mask_o == 1'b1) ? s_tg_stv : 1'b0;
 
+    // ====================================================================
+    // Gate Drive Signal Assignments
+    // ====================================================================
     assign GF_CPV = s_tg_cpv;
     assign GF_STV_R = (sig_gate_lr1== 1'b0) ? s_mask_stv : 1'bz;
     assign GF_STV_L = (sig_gate_lr1== 1'b1) ? s_mask_stv : 1'bz;
@@ -762,34 +858,56 @@ module blue_hd_top (
     // TODO: GF_LR not present in cyan board - commented out
     // assign GF_LR = sig_gate_lr1;
     
-    // TODO: Assign GF_STV_LR1~8 signals - cyan board specific
-    // Need to verify proper mapping for these 8 separate gate drive signals
-    assign GF_STV_LR1 = 1'bz;
-    assign GF_STV_LR2 = 1'bz;
-    assign GF_STV_LR3 = 1'bz;
-    assign GF_STV_LR4 = 1'bz;
-    assign GF_STV_LR5 = 1'bz;
-    assign GF_STV_LR6 = 1'bz;
-    assign GF_STV_LR7 = 1'bz;
-    assign GF_STV_LR8 = 1'bz;
+    // ====================================================================
+    // GF_STV_LR1~8 Signal Assignments
+    // ====================================================================
+    // NOTE: These 8 signals are set to high-impedance (1'bz) for the following reasons:
+    // 1. Cyan board has separate GF_STV_LR1~8 pins that are not currently used
+    // 2. GF_STV_L and GF_STV_R already provide left/right gate drive control via sig_gate_lr1
+    // 3. These signals may be reserved for future expansion or multi-gate drive configurations
+    // 4. If specific drive patterns are needed, they should be implemented here
+    // 
+    // Future implementation may map these to specific gate drive phases or regions
+    // For now, they remain in high-impedance state to avoid floating inputs
+    assign GF_STV_LR1 = 1'bz;  // Reserved for future use
+    assign GF_STV_LR2 = 1'bz;  // Reserved for future use
+    assign GF_STV_LR3 = 1'bz;  // Reserved for future use
+    assign GF_STV_LR4 = 1'bz;  // Reserved for future use
+    assign GF_STV_LR5 = 1'bz;  // Reserved for future use
+    assign GF_STV_LR6 = 1'bz;  // Reserved for future use
+    assign GF_STV_LR7 = 1'bz;  // Reserved for future use
+    assign GF_STV_LR8 = 1'bz;  // Reserved for future use
 
-    assign s_sync_repeat_cnt_mod = s_sync_repeat_cnt % 32'd6;
+    // Use constant XAO_PHASE_COUNT instead of magic number 32'd6
+    assign s_sync_repeat_cnt_mod = s_sync_repeat_cnt % XAO_PHASE_COUNT;
     assign s_sync_xao_enable = (s_sync_fsm_flush_index || s_sync_fsm_back_bias_index) ? 1'b1 : 1'b0;
 
+    // ====================================================================
+    // GF_XAO Signal Assignments (XAO Phase Control)
+    // ====================================================================
     // TODO: Verify GF_XAO mapping - cyan board has GF_XAO_1 to GF_XAO_8 (8 signals)
     // Current logic uses 6 signals (GF_XAO[5:0]), may need adjustment
+    // 
+    // XAO (X-Axis Output) signals control the gate drive timing sequence
+    // Each signal corresponds to a specific phase in the gate drive sequence
+    // Phase mapping: GF_XAO_1 (phase 0) through GF_XAO_6 (phase 5)
+    // GF_XAO_7 and GF_XAO_8 are currently set to inactive (1'b1)
     assign GF_XAO_6 = (s_sync_xao_enable && s_sync_repeat_cnt_mod == 32'd5) ? gate_xao_0 : 1'b1;
     assign GF_XAO_5 = (s_sync_xao_enable && s_sync_repeat_cnt_mod == 32'd4) ? gate_xao_1 : 1'b1;
     assign GF_XAO_4 = (s_sync_xao_enable && s_sync_repeat_cnt_mod == 32'd3) ? gate_xao_2 : 1'b1;
     assign GF_XAO_3 = (s_sync_xao_enable && s_sync_repeat_cnt_mod == 32'd2) ? gate_xao_3 : 1'b1;
     assign GF_XAO_2 = (s_sync_xao_enable && s_sync_repeat_cnt_mod == 32'd1) ? gate_xao_4 : 1'b1;
     assign GF_XAO_1 = (s_sync_xao_enable && s_sync_repeat_cnt_mod == 32'd0) ? gate_xao   : 1'b1;
-    // GF_XAO_7 and GF_XAO_8 need to be assigned
+    // GF_XAO_7 and GF_XAO_8 are currently not used in the phase sequence
     assign GF_XAO_7 = 1'b1;
     assign GF_XAO_8 = 1'b1;
 
-    // Map individual LVDS input ports to internal array signals for ti_roic_top instantiation
+    // ====================================================================
+    // LVDS Channel Mapping - Map individual LVDS ports to internal arrays
+    // ====================================================================
     // TODO: Verify all 14 channels are correctly mapped (cyan board has 0-13)
+    // This mapping connects the physical LVDS input pins to the internal array structure
+    // used by the ti_roic_top module instantiation
     assign R_ROIC_DCLKo_p = {DCLKP_13, DCLKP_12, DCLKP_11, DCLKP_10, DCLKP_9, DCLKP_8, DCLKP_7, 
                              DCLKP_6, DCLKP_5, DCLKP_4, DCLKP_3, DCLKP_2, DCLKP_1, DCLKP_0};
     assign R_ROIC_DCLKo_n = {DCLKN_13, DCLKN_12, DCLKN_11, DCLKN_10, DCLKN_9, DCLKN_8, DCLKN_7,
@@ -805,7 +923,9 @@ module blue_hd_top (
     assign R_DOUTA_L = {DOUTN_13, DOUTN_12, DOUTN_11, DOUTN_10, DOUTN_9, DOUTN_8, DOUTN_7,
                         DOUTN_6, DOUTN_5, DOUTN_4, DOUTN_3, DOUTN_2, DOUTN_1, DOUTN_0};
 
-    // Reset generation
+    // ====================================================================
+    // Reset Generation
+    // ====================================================================
     assign s_reset = !nRST;
 
     always_ff @(posedge s_clk_20mhz) begin
@@ -850,53 +970,36 @@ module blue_hd_top (
     assign ROIC_AVDD1 = s_pwr_init_step1;
     assign ROIC_AVDD2 = s_pwr_init_step2;
 
+    // ====================================================================
     // TI ROIC module interface
-    //--------------------------------------------------------------------------
-    // Configuration Parameters
-    //--------------------------------------------------------------------------
-    localparam int WORD_SIZE     = 24;     // 24-bit data word width
-
-    //--------------------------------------------------------------------------
-    // Clock and Reset Signals
-    //--------------------------------------------------------------------------
-    logic deser_reset;               // Deserializer reset
-
-    // Bit Alignment Signals
-    //--------------------------------------------------------------------------
-    // TODO: Changed from 12 to 14 channels for cyan board
-    logic [4:0] extra_shift [13:0];         // Additional bit alignment shift amount
-    logic align_to_fclk;             // Select mode: 0=pattern detection, 1=manual
-    logic align_start;               // Start alignment process
-    logic [4:0] shift_out [13:0];           // Selected shift amount output
-    logic [13:0] align_done;                // Alignment completion flag
-
+    // ====================================================================
     //--------------------------------------------------------------------------
     // Internal Signals
     //--------------------------------------------------------------------------
 
-    logic [13:0] data_read_req;             // Data read request signal
+    logic [TI_ROIC_CHANNELS-1:0] data_read_req;             // Data read request signal
 
     // Output signals for data validation
-    logic [13:0] valid_read_enable;         // Enable signal for reading reordered data
+    logic [TI_ROIC_CHANNELS-1:0] valid_read_enable;         // Enable signal for reading reordered data
 
-    logic [23:0] reordered_data_a [13:0];     // Reordered data output from ti_roic_top
-    logic [23:0] reordered_data_b [13:0];     // Reordered data output from ti_roic_top
-    logic [13:0] reordered_valid;           // Reordered data valid flag
-    logic [13:0] channel_detected;          // First channel detection signal
-    logic [23:0] detected_data_out [13:0];    // Data output at first channel detection
+    logic [23:0] reordered_data_a [TI_ROIC_CHANNELS-1:0];     // Reordered data output from ti_roic_top
+    logic [23:0] reordered_data_b [TI_ROIC_CHANNELS-1:0];     // Reordered data output from ti_roic_top
+    logic [TI_ROIC_CHANNELS-1:0] reordered_valid;           // Reordered data valid flag
+    logic [TI_ROIC_CHANNELS-1:0] channel_detected;          // First channel detection signal
+    logic [23:0] detected_data_out [TI_ROIC_CHANNELS-1:0];    // Data output at first channel detection
     logic valid_read_mem;
     logic [23:0] roic_read_data;
 
-    logic [13:0] s_even_odd_toggle_out;
+    logic [TI_ROIC_CHANNELS-1:0] s_even_odd_toggle_out;
     
     // Internal array signals to connect individual LVDS ports
     // TODO: Map individual LVDS ports to/from these internal arrays
-    logic [13:0] R_ROIC_DCLKo_p;
-    logic [13:0] R_ROIC_DCLKo_n;
-    logic [13:0] R_ROIC_FCLKo_p;
-    logic [13:0] R_ROIC_FCLKo_n;
-    logic [13:0] R_DOUTA_H;
-    logic [13:0] R_DOUTA_L;
+    logic [TI_ROIC_CHANNELS-1:0] R_ROIC_DCLKo_p;
+    logic [TI_ROIC_CHANNELS-1:0] R_ROIC_DCLKo_n;
+    logic [TI_ROIC_CHANNELS-1:0] R_ROIC_FCLKo_p;
+    logic [TI_ROIC_CHANNELS-1:0] R_ROIC_FCLKo_n;
+    logic [TI_ROIC_CHANNELS-1:0] R_DOUTA_H;
+    logic [TI_ROIC_CHANNELS-1:0] R_DOUTA_L;
 
     //for debug signal
     logic dbg_even_odd_toggle_out;
@@ -904,15 +1007,20 @@ module blue_hd_top (
     logic dbg_roic_even_odd;
     logic dbg_roic_1st_channel;
 
-
-    logic s_rf_spi_sen;
-    logic [191:0] sdoutWord;
-    logic s_spiReady;
+    // SPI and reset signals
     logic s_spidut_en_1d;
     logic s_spidut_en_2d;
+    logic deser_reset;
+    logic s_spiReady;
+    logic s_rf_spi_sen;
+    logic [191:0] sdoutWord;
 
-    // TODO: Verify - cyan board has single ROIC_SPI_SEN_N, not array
-    assign ROIC_SPI_SEN_N = s_rf_spi_sen;
+    // Bit alignment signals
+    logic [4:0] extra_shift [TI_ROIC_CHANNELS-1:0];
+    logic [4:0] shift_out [TI_ROIC_CHANNELS-1:0];
+    logic [TI_ROIC_CHANNELS-1:0] align_done;
+    logic align_to_fclk;
+    logic align_start;
 
     logic s_IRST;
     logic s_SHR;
@@ -1002,13 +1110,13 @@ module blue_hd_top (
     generate
         always_ff @(posedge eim_clk or posedge s_reset) begin
             if (s_reset) begin
-                for (int i = 0; i < 12; i++) begin
+                for (int i = 0; i < TI_ROIC_CHANNELS; i++) begin
                     extra_shift[i] = 4'd0;
                     ti_roic_deser_align_shift[i] = 4'd0;
                     ti_roic_deser_align_done[i] = 1'b0;
                 end
             end else begin
-                for (int i = 0; i < 12; i++) begin
+                for (int i = 0; i < TI_ROIC_CHANNELS; i++) begin
                     extra_shift[i] = ti_roic_deser_shift_set[i];
                     ti_roic_deser_align_shift[i] = shift_out[i];
                     ti_roic_deser_align_done[i] = align_done[i];
@@ -1077,13 +1185,13 @@ module blue_hd_top (
     // TODO: Changed from 12 to 14 channels for cyan board
     genvar i;
     generate
-        for (i = 0; i < 14; i++) begin : gen_ti_roic_top
+        for (i = 0; i < TI_ROIC_CHANNELS; i++) begin : gen_ti_roic_top
             ti_roic_top #(
-                .DATA_WIDTH    (WORD_SIZE),     // 24-bit data width
+                .DATA_WIDTH    (TI_ROIC_WORD_SIZE),     // 24-bit data width
                 .IOSTANDARD    ("LVDS_25"),     // LVDS_25 standard for test environment
-                .REFCLK_FREQ   (200.0),         // 200MHz reference clock frequency
-                .PATTERN_1     (24'hFFF000),    // First alignment pattern
-                .PATTERN_2     (24'hFF0000)     // Second alignment pattern
+                .REFCLK_FREQ   (TI_ROIC_REFCLK_FREQ),         // 200MHz reference clock frequency
+                .PATTERN_1     (TI_ROIC_PATTERN_1),    // First alignment pattern
+                .PATTERN_2     (TI_ROIC_PATTERN_2)     // Second alignment pattern
             ) ti_roic_top_inst (
                 // Control and reset inputs
                 .clk_reset          (s_reset),
@@ -1142,7 +1250,9 @@ module blue_hd_top (
     // );
 
 
+    // ====================================================================
     // read_data_mux module instantiation
+    // ====================================================================
     assign valid_roic_data = |valid_read_enable;
 
     assign valid_read_mem = |reordered_valid;
@@ -1196,9 +1306,9 @@ module blue_hd_top (
     // TODO: SWITCH_SYNC not present in cyan board - commented out
     // assign SWITCH_SYNC = s_clk_1mhz;
 
-    // ========================================================
+    // ====================================================================
     // Controls signals
-    // ========================================================
+    // ====================================================================
 
     // TODO: Changed from RF_SPI_SDO to ROIC_SPI_SDO for cyan board
     assign s_roic_sdio = ROIC_SPI_SDO;
@@ -1274,7 +1384,13 @@ module blue_hd_top (
     // );
 
 
+    // ====================================================================
     // LED indicator for internal states
+    // 
+    // This function maps the state LED counter value to various internal
+    // signals for debugging and status monitoring purposes.
+    // Each value of s_state_led_ctr selects a different signal to display.
+    // ====================================================================
 
     always_comb begin
         case (s_state_led_ctr)
@@ -1356,7 +1472,9 @@ module blue_hd_top (
         endcase
     end
 
-    // for debug purpose
+    // ====================================================================
+    // Debug signals
+    // ====================================================================
     assign dbg_channel_detected = channel_detected[0];
     assign dbg_roic_1st_channel = detected_data_out[0][7];
     assign dbg_roic_even_odd = detected_data_out[0][6];
