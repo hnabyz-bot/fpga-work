@@ -77,14 +77,37 @@ cd BLUE-HD-FPGA/xdaq_top/simulation/tb_src
 - 테스트 결과 자동 검증
 
 ### Questa Simulator 실행
+
+#### 개별 모듈 시뮬레이션 (Vivado GUI 없이)
 ```bash
 # 환경 설정 먼저 실행
 source /home/holee/TOOLS/env.sh
 # "You chose questa_base_2024.3" 메세지 확인
 
-# Questa GUI 실행
 cd BLUE-HD-FPGA/xdaq_top/simulation/questa
-vsim -do run.tcl
+
+# init 모듈 시뮬레이션
+./run_init.sh
+
+# sequencer_fsm 모듈 시뮬레이션
+./run_sequencer_fsm.sh
+
+# 범용 스크립트로 다른 모듈 시뮬레이션
+./run_module.sh init
+./run_module.sh sequencer_fsm
+```
+
+**개별 모듈 시뮬레이션 특징**:
+- Vivado GUI 없이 Questa GUI만으로 개별 모듈 테스트
+- 최소 의존성만 컴파일하여 빠른 실행
+- 자동 파형 설정 및 신호 표시
+- GUI/배치 모드 지원
+
+#### 통합 시뮬레이션 (Makefile 사용)
+```bash
+cd BLUE-HD-FPGA/xdaq_top/simulation/questa
+make sim              # GUI 모드
+make sim_batch        # 배치 모드
 ```
 
 # tools 환경
