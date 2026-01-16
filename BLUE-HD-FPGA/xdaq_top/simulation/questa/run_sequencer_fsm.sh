@@ -151,47 +151,44 @@ quietly set PrefSource(StandardSource) 1
 quietly set PrefSource(ShowSource) 1
 
 # 파형 윈도우 열기
-if {[catch {view wave}]} {
-    noview wave
-    view wave
-}
+view wave
 
-# 신호 추가
-quietly add log -recursive /*
-quietly configure wave -signalnamewidth 1
+# 주요 신호 추가
+add wave -position insertpoint  \
+    sim:/sequencer_fsm_tb/clk \
+    sim:/sequencer_fsm_tb/reset_i \
+    sim:/sequencer_fsm_tb/config_done_i \
+    sim:/sequencer_fsm_tb/current_state_o \
+    sim:/sequencer_fsm_tb/busy_o \
+    sim:/sequencer_fsm_tb/sequence_done_o \
+    sim:/sequencer_fsm_tb/bias_enable_o \
+    sim:/sequencer_fsm_tb/flush_enable_o \
+    sim:/sequencer_fsm_tb/expose_enable_o \
+    sim:/sequencer_fsm_tb/readout_enable_o \
+    sim:/sequencer_fsm_tb/aed_enable_o
 
-# FSM 상태 심볼 디코딩
-quietly radix signal sequencer_fsm_tb/dut/state_reg -unsigned
-quietly radix signal sequencer_fsm_tb/current_state_o -unsigned
+# 신호 형식 설정
+radix binary sim:/sequencer_fsm_tb/clk
+radix binary sim:/sequencer_fsm_tb/reset_i
+radix binary sim:/sequencer_fsm_tb/config_done_i
+radix unsigned sim:/sequencer_fsm_tb/current_state_o
+radix binary sim:/sequencer_fsm_tb/busy_o
+radix binary sim:/sequencer_fsm_tb/sequence_done_o
+radix binary sim:/sequencer_fsm_tb/bias_enable_o
+radix binary sim:/sequencer_fsm_tb/flush_enable_o
+radix binary sim:/sequencer_fsm_tb/expose_enable_o
+radix binary sim:/sequencer_fsm_tb/readout_enable_o
+radix binary sim:/sequencer_fsm_tb/aed_enable_o
 
-# 제어 신호
-radix signal clk -binary
-radix signal reset_i -binary
-radix signal config_done_i -binary
-
-# FSM 상태 출력
-radix signal busy_o -binary
-radix signal sequence_done_o -binary
-
-# 커맨드 인에이블 출력
-radix signal bias_enable_o -binary
-radix signal flush_enable_o -binary
-radix signal expose_enable_o -binary
-radix signal readout_enable_o -binary
-radix signal aed_enable_o -binary
-
-# 파형 그룹화
-quietly wave cursor active time
-
-# 실행 시간 설정
-quietly set RunTime 1ms
+# 파형 윈도우 설정
+configure wave -signalnamewidth 1
+wave cursor active time
 
 # 메시지 출력
 echo "========================================"
 echo "sequencer_fsm 모듈 시뮬레이션"
 echo "========================================"
 echo "클럭 주기: 50ns (20MHz)"
-echo "실행 시간: $RunTime"
 echo ""
 echo "FSM States:"
 echo "  0: RST           1: WAIT"
@@ -206,9 +203,6 @@ echo "  run -all      - 전체 실행"
 echo "  quit          - 종료"
 echo "========================================"
 echo ""
-
-# 자동 실행 (필요시 주석 처리)
-# run -all
 EOF
 
     # Questa GUI 실행

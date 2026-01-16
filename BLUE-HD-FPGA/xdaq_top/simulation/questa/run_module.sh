@@ -232,18 +232,14 @@ quietly set PrefSource(StandardSource) 1
 quietly set PrefSource(ShowSource) 1
 
 # 파형 윈도우 열기
-if {[catch {view wave}]} {
-    noview wave
-    view wave
-}
+view wave
 
-# 모든 신호 추가
-quietly add log -recursive /*
-quietly configure wave -signalnamewidth 1
+# 모든 신호를 파형 윈도우에 추가
+add wave -position insertpoint sim:/${TB_NAME}/*
 
-# 클럭 및 리셋 신호 형식
-radix signal clk -binary
-radix signal reset_i -binary
+# 파형 윈도우 설정
+configure wave -signalnamewidth 1
+wave cursor active time
 
 # 메시지 출력
 echo "========================================"
@@ -258,9 +254,6 @@ echo "  run -all      - 전체 실행"
 echo "  quit          - 종료"
 echo "========================================"
 echo ""
-
-# 자동 실행 (필요시 주석 처리)
-# run -all
 EOF
 
     # Questa GUI 실행

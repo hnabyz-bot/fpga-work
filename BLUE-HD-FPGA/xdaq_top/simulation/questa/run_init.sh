@@ -151,45 +151,46 @@ quietly set PrefSource(StandardSource) 1
 quietly set PrefSource(ShowSource) 1
 
 # 파형 윈도우 열기
-if {[catch {view wave}]} {
-    noview wave
-    view wave
-}
+view wave
 
-# 신호 추가 (init 모듈)
-quietly add log -recursive /*
-quietly configure wave -signalnamewidth 1
+# 모든 신호를 파형 윈도우에 추가 (DUT 내부 신호 포함)
+add wave -position insertpoint  \
+    sim:/init_tb/fsm_clk \
+    sim:/init_tb/reset \
+    sim:/init_tb/en_pwr_off \
+    sim:/init_tb/en_pwr_dwn \
+    sim:/init_tb/init_rst \
+    sim:/init_tb/pwr_init_step1 \
+    sim:/init_tb/pwr_init_step2 \
+    sim:/init_tb/pwr_init_step3 \
+    sim:/init_tb/pwr_init_step4 \
+    sim:/init_tb/pwr_init_step5 \
+    sim:/init_tb/pwr_init_step6 \
+    sim:/init_tb/roic_reset
 
-# 클럭 및 리셋 신호
-radix signal fsm_clk -binary
-radix signal reset -binary
+# 신호 형식 설정
+radix binary sim:/init_tb/fsm_clk
+radix binary sim:/init_tb/reset
+radix binary sim:/init_tb/en_pwr_off
+radix binary sim:/init_tb/en_pwr_dwn
+radix binary sim:/init_tb/init_rst
+radix binary sim:/init_tb/pwr_init_step1
+radix binary sim:/init_tb/pwr_init_step2
+radix binary sim:/init_tb/pwr_init_step3
+radix binary sim:/init_tb/pwr_init_step4
+radix binary sim:/init_tb/pwr_init_step5
+radix binary sim:/init_tb/pwr_init_step6
+radix binary sim:/init_tb/roic_reset
 
-# 파워 제어 신호
-radix signal en_pwr_off -binary
-radix signal en_pwr_dwn -binary
-
-# 초기화 출력 신호
-radix signal init_rst -binary
-radix signal pwr_init_step1 -binary
-radix signal pwr_init_step2 -binary
-radix signal pwr_init_step3 -binary
-radix signal pwr_init_step4 -binary
-radix signal pwr_init_step5 -binary
-radix signal pwr_init_step6 -binary
-radix signal roic_reset -binary
-
-# 파형 그룹화 (선택사항)
-quietly wave cursor active time
-
-# 실행 시간 설정
-quietly set RunTime 1ms
+# 파형 윈도우 설정
+configure wave -signalnamewidth 1
+wave cursor active time
 
 # 메시지 출력
 echo "========================================"
 echo "init 모듈 시뮬레이션"
 echo "========================================"
 echo "클럭 주기: 50ns (20MHz)"
-echo "실행 시간: $RunTime"
 echo ""
 echo "명령어:"
 echo "  run 1us       - 1us 실행"
@@ -198,9 +199,6 @@ echo "  run -all      - 전체 실행"
 echo "  quit          - 종료"
 echo "========================================"
 echo ""
-
-# 자동 실행 (필요시 주석 처리)
-# run -all
 EOF
 
     # Questa GUI 실행
