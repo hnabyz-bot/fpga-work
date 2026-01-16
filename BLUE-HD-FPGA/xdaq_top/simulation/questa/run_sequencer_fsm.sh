@@ -206,7 +206,7 @@ echo ""
 EOF
 
     # Questa GUI 실행
-    $VSIM -gui work_fsm.sequencer_fsm_tb \
+    $VSIM -gui -voptargs="+acc" work_fsm.sequencer_fsm_tb \
         -do run_fsm_gui.tcl \
         &
 

@@ -202,7 +202,7 @@ echo ""
 EOF
 
     # Questa GUI 실행
-    $VSIM -gui work_init.init_tb \
+    $VSIM -gui -voptargs="+acc" work_init.init_tb \
         -do run_init_gui.tcl \
         &
 

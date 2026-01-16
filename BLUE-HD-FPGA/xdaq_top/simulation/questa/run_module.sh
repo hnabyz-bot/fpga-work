@@ -257,7 +257,7 @@ echo ""
 EOF
 
     # Questa GUI 실행
-    $VSIM -gui ${WORK_LIB}.${TB_NAME} \
+    $VSIM -gui -voptargs="+acc" ${WORK_LIB}.${TB_NAME} \
         -do run_${MODULE_NAME}_gui.tcl \
         &
 
