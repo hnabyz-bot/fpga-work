@@ -908,16 +908,25 @@ module blue_hd_top (
     // TODO: Verify all 14 channels are correctly mapped (cyan board has 0-13)
     // This mapping connects the physical LVDS input pins to the internal array structure
     // used by the ti_roic_top module instantiation
-    assign R_ROIC_DCLKo_p = {DCLKP_13, DCLKP_12, DCLKP_11, DCLKP_10, DCLKP_9, DCLKP_8, DCLKP_7, 
+
+    // Wire array declarations must come before assign statements for proper array indexing
+    wire [TI_ROIC_CHANNELS-1:0] R_ROIC_DCLKo_p;
+    wire [TI_ROIC_CHANNELS-1:0] R_ROIC_DCLKo_n;
+    wire [TI_ROIC_CHANNELS-1:0] R_ROIC_FCLKo_p;
+    wire [TI_ROIC_CHANNELS-1:0] R_ROIC_FCLKo_n;
+    wire [TI_ROIC_CHANNELS-1:0] R_DOUTA_H;
+    wire [TI_ROIC_CHANNELS-1:0] R_DOUTA_L;
+
+    assign R_ROIC_DCLKo_p = {DCLKP_13, DCLKP_12, DCLKP_11, DCLKP_10, DCLKP_9, DCLKP_8, DCLKP_7,
                              DCLKP_6, DCLKP_5, DCLKP_4, DCLKP_3, DCLKP_2, DCLKP_1, DCLKP_0};
     assign R_ROIC_DCLKo_n = {DCLKN_13, DCLKN_12, DCLKN_11, DCLKN_10, DCLKN_9, DCLKN_8, DCLKN_7,
                              DCLKN_6, DCLKN_5, DCLKN_4, DCLKN_3, DCLKN_2, DCLKN_1, DCLKN_0};
-    
+
     assign R_ROIC_FCLKo_p = {FCLKP_13, FCLKP_12, FCLKP_11, FCLKP_10, FCLKP_9, FCLKP_8, FCLKP_7,
                              FCLKP_6, FCLKP_5, FCLKP_4, FCLKP_3, FCLKP_2, FCLKP_1, FCLKP_0};
     assign R_ROIC_FCLKo_n = {FCLKN_13, FCLKN_12, FCLKN_11, FCLKN_10, FCLKN_9, FCLKN_8, FCLKN_7,
                              FCLKN_6, FCLKN_5, FCLKN_4, FCLKN_3, FCLKN_2, FCLKN_1, FCLKN_0};
-    
+
     assign R_DOUTA_H = {DOUTP_13, DOUTP_12, DOUTP_11, DOUTP_10, DOUTP_9, DOUTP_8, DOUTP_7,
                         DOUTP_6, DOUTP_5, DOUTP_4, DOUTP_3, DOUTP_2, DOUTP_1, DOUTP_0};
     assign R_DOUTA_L = {DOUTN_13, DOUTN_12, DOUTN_11, DOUTN_10, DOUTN_9, DOUTN_8, DOUTN_7,
@@ -991,15 +1000,16 @@ module blue_hd_top (
     logic [23:0] roic_read_data;
 
     logic [TI_ROIC_CHANNELS-1:0] s_even_odd_toggle_out;
-    
+
     // Internal array signals to connect individual LVDS ports
-    // TODO: Map individual LVDS ports to/from these internal arrays
-    logic [TI_ROIC_CHANNELS-1:0] R_ROIC_DCLKo_p;
-    logic [TI_ROIC_CHANNELS-1:0] R_ROIC_DCLKo_n;
-    logic [TI_ROIC_CHANNELS-1:0] R_ROIC_FCLKo_p;
-    logic [TI_ROIC_CHANNELS-1:0] R_ROIC_FCLKo_n;
-    logic [TI_ROIC_CHANNELS-1:0] R_DOUTA_H;
-    logic [TI_ROIC_CHANNELS-1:0] R_DOUTA_L;
+    // These are implicitly declared as wires by the assign statements below
+    // The assign statements at lines 911-924 create these wire arrays automatically
+    //wire [TI_ROIC_CHANNELS-1:0] R_ROIC_DCLKo_p;
+    //wire [TI_ROIC_CHANNELS-1:0] R_ROIC_DCLKo_n;
+    //wire [TI_ROIC_CHANNELS-1:0] R_ROIC_FCLKo_p;
+    //wire [TI_ROIC_CHANNELS-1:0] R_ROIC_FCLKo_n;
+    //wire [TI_ROIC_CHANNELS-1:0] R_DOUTA_H;
+    //wire [TI_ROIC_CHANNELS-1:0] R_DOUTA_L;
 
     //for debug signal
     logic dbg_even_odd_toggle_out;

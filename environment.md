@@ -30,12 +30,14 @@
 - [x] blue_hd_fpga 기본 구현 완료
 - [x] Vivado 빌드 성공 (합성/구현 완료)
 - [x] Questa 시뮬레이션 스크립트 검증 완료
+- [x] XSim 시뮬레이션 스크립트 작성 완료
+- [x] init 모듈 TDD 테스트벤치 작성 완료
 - [x] 16개 모듈에 대한 SPEC 문서 작성 완료
 
 ## 진행 가능 상태
 - Vivado 프로젝트: BLUE-HD-FPGA/xdaq_top/build/xdaq_top.xpr
 - 합성 완료: BLUE-HD-FPGA/xdaq_top/build/xdaq_top.runs/synth_1/blue_hd_top.dcp
-- 시뮬레이션 환경 구축 완료
+- 시뮬레이션 환경 구축 완료 (Questa + XSim 이중 지원)
 
 # 시뮬레이션 환경
 
@@ -52,11 +54,27 @@
 ## 실행 방법
 
 ### XSim (Xilinx Simulator) 실행
+
+#### 기본 컴파일 방식
 ```bash
 cd BLUE-HD-FPGA/xdaq_top/simulation/tb_src
-./compile_xsim.sh  # 컴파일
-./run_xsim.sh      # 시뮬레이션 실행
+./compile_xsim.sh  # 소스 컴파일
+./run_xsim.sh [testbench_name]  # 시뮬레이션 실행
 ```
+
+#### 고급 실행 스크립트 (권장)
+```bash
+cd BLUE-HD-FPGA/xdaq_top/simulation/tb_src
+./run_xsim.sh init_tb           # init 모듈 테스트
+./run_xsim.sh sequencer_fsm_tb  # sequencer FSM 테스트
+```
+
+**run_xsim.sh 특징**:
+- 자동 컴파일 및 엘라보레이션
+- 컬러 출력을 통한 가독성 향상
+- 상세한 로그 파일 생성 (xvlog_*.log, xelab.log, xsim.log)
+- 파형 덤프 지원 (VCD 포맷, gtkwave로 조회 가능)
+- 테스트 결과 자동 검증
 
 ### Questa Simulator 실행
 ```bash
@@ -76,6 +94,9 @@ vsim -do run.tcl
   . Questa simulation 실행 전 "source /home/holee/TOOLS/env.sh" 실행 필요
   . "You chose questa_base_2024.3" 메세지 확인
   . License 파일: /home/ednc/license.txt
+  . **Xilinx 시뮬레이션 라이브러리**: /home/holee/compile_simlib/questa/
+    - unisim/, unisims_ver/, secureip/ 포함
+    - Vivado 2024.2로 컴파일된 라이브러리
 
 # 프로젝트 문서
 
@@ -120,4 +141,4 @@ launch_runs impl_1 -to_step write_bitstream -jobs 8
 
 ## 브랜치 정보
 - 메인 브랜치: main
-- 현재 작업 브랜치: feature/blue-hd-enhancement
+- 현재 작업 브랜치: docs/update-environment

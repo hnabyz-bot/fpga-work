@@ -70,13 +70,15 @@ fi
 #------------------------------------------------------------------------------
 # Simulation Library Path
 #------------------------------------------------------------------------------
-export QUESTA_SIM_LIB="$BLUE_HD_ROOT/simulation/questa_lib"
+export QUESTA_SIM_LIB="$HOME/compile_simlib/questa"
 
 if [ -d "$QUESTA_SIM_LIB" ]; then
-    echo "[INFO] Questa simulation library: $QUESTA_SIM_LIB"
+    echo "[INFO] Xilinx simulation library: $QUESTA_SIM_LIB"
+    # Add library to vsim library path
+    export VSIM_LIBRARY_PATH="$QUESTA_SIM_LIB"
 else
     echo "[WARN] Simulation library not found: $QUESTA_SIM_LIB"
-    echo "[WARN] Run 'make compile_xilinx_lib' to generate."
+    echo "[WARN] Please compile Xilinx simulation libraries using Vivado."
 fi
 
 #------------------------------------------------------------------------------

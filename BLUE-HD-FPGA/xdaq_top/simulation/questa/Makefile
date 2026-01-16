@@ -174,12 +174,14 @@ compile: lib
 #------------------------------------------------------------------------------
 # Simulation Targets
 #------------------------------------------------------------------------------
+XSIM_LIB ?= $(HOME)/compile_simlib/questa
+
 sim: compile
 	@echo "============================================================"
 	@echo "Running Simulation (GUI mode)..."
 	@echo "Testbench: $(TB_TOP)"
 	@echo "============================================================"
-	$(VSIM) $(SIM_OPTS) work.$(TB_TOP) -do "do wave.do; run $(SIM_TIME)"
+	$(VSIM) $(SIM_OPTS) -L $(XSIM_LIB)/unisim -L $(XSIM_LIB)/unisims_ver -L $(XSIM_LIB)/secureip work.$(TB_TOP) -do "do wave.do; run $(SIM_TIME)"
 
 sim_batch: compile
 	@echo "============================================================"
@@ -187,7 +189,7 @@ sim_batch: compile
 	@echo "Testbench: $(TB_TOP)"
 	@echo "Time: $(SIM_TIME)"
 	@echo "============================================================"
-	$(VSIM) -c $(SIM_OPTS) work.$(TB_TOP) -do "run $(SIM_TIME); quit -f"
+	$(VSIM) -c $(SIM_OPTS) -L $(XSIM_LIB)/unisim -L $(XSIM_LIB)/unisims_ver -L $(XSIM_LIB)/secureip work.$(TB_TOP) -do "run $(SIM_TIME); quit -f"
 
 # Allow TB override
 ifdef TB
