@@ -1,5 +1,5 @@
 namespace eval ::optrace {
-  variable script "D:/workspace/github-space/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.runs/impl_1/blue_hd_top.tcl"
+  variable script "/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.runs/impl_1/blue_hd_top.tcl"
   variable category "vivado_impl"
 }
 
@@ -104,32 +104,34 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param chipscope.maxJobs 5
-  set_param runs.launchOptions { -jobs 10  }
+  set_param simulator.questaInstallPath /home/holee/TOOLS/QuestaBase_2024.3/questa_base/bin
+  set_param simulator.modelsimInstallPath /home/holee/TOOLS/ModelSim_2024.2/modelsim_dlx/bin
+  set_param chipscope.maxJobs 7
+  set_param runs.launchOptions { -jobs 14  }
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xc7a35tfgg484-1
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
 OPTRACE "create in-memory project" END { }
 OPTRACE "set parameters" START { }
-  set_property webtalk.parent_dir D:/workspace/github-space/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.cache/wt [current_project]
-  set_property parent.project_path D:/workspace/github-space/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.xpr [current_project]
-  set_property ip_output_repo D:/workspace/github-space/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.cache/ip [current_project]
+  set_property webtalk.parent_dir /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.cache/wt [current_project]
+  set_property parent.project_path /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.xpr [current_project]
+  set_property ip_output_repo /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
-  add_files -quiet D:/workspace/github-space/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.runs/synth_1/blue_hd_top.dcp
-  read_ip -quiet D:/workspace/github-space/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/rst_clk_200M/rst_clk_200M.xci
-  read_ip -quiet D:/workspace/github-space/fpga-work/BLUE-HD-FPGA/xdaq_top/source/ip/clk_ctrl/clk_ctrl.xci
-  read_ip -quiet D:/workspace/github-space/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_init_gen/mipi_init_gen.xci
-  read_ip -quiet D:/workspace/github-space/fpga-work/BLUE-HD-FPGA/xdaq_top/source/ip/indata_ram/indata_ram.xci
-  read_ip -quiet D:/workspace/github-space/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/axis_data_fifo_0/axis_data_fifo_0.xci
-  read_ip -quiet D:/workspace/github-space/fpga-work/BLUE-HD-FPGA/xdaq_top/source/ip/seq_lut/seq_lut.xci
-  read_ip -quiet D:/workspace/github-space/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/mipi_csi2_tx_subsys.xci
+  add_files -quiet /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.runs/synth_1/blue_hd_top.dcp
+  read_ip -quiet /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/rst_clk_200M/rst_clk_200M.xci
+  read_ip -quiet /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/ip/clk_ctrl/clk_ctrl.xci
+  read_ip -quiet /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_init_gen/mipi_init_gen.xci
+  read_ip -quiet /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/ip/indata_ram/indata_ram.xci
+  read_ip -quiet /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/axis_data_fifo_0/axis_data_fifo_0.xci
+  read_ip -quiet /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/ip/seq_lut/seq_lut.xci
+  read_ip -quiet /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/mipi_csi2_tx_subsys.xci
 OPTRACE "read constraints: implementation" START { }
-  read_xdc D:/workspace/github-space/fpga-work/BLUE-HD-FPGA/xdaq_top/source/constrs/timing.xdc
-  read_xdc D:/workspace/github-space/fpga-work/BLUE-HD-FPGA/xdaq_top/source/constrs/blue_hd_top.xdc
+  read_xdc /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/constrs/timing.xdc
+  read_xdc /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/constrs/blue_hd_top.xdc
 OPTRACE "read constraints: implementation" END { }
 OPTRACE "read constraints: implementation_pre" START { }
 OPTRACE "read constraints: implementation_pre" END { }
@@ -193,7 +195,7 @@ set rc [catch {
 OPTRACE "read constraints: place_design" START { }
 OPTRACE "read constraints: place_design" END { }
 OPTRACE "read incremental checkpoint" START { }
-  read_checkpoint -auto_incremental  -incremental D:/workspace/github-space/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.srcs/utils_1/imports/impl_1/blue_hd_top_routed.dcp
+  read_checkpoint -auto_incremental  -incremental /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.srcs/utils_1/imports/impl_1/blue_hd_top_routed.dcp
   catch { report_incremental_reuse -file blue_hd_top_incremental_reuse_pre_placed.rpt }
 OPTRACE "read incremental checkpoint" END { }
   if { [llength [get_debug_cores -quiet] ] > 0 }  { 
@@ -310,17 +312,17 @@ OPTRACE "read constraints: write_bitstream_post" END { }
   catch {file copy -force blue_hd_top.ltx debug_nets.ltx}
 OPTRACE "Write Bitstream: post hook" START { }
   set src_rc [catch { 
-    puts "source D:/workspace/github-space/fpga-work/BLUE-HD-FPGA/xdaq_top/build/post_script.tcl"
-    source D:/workspace/github-space/fpga-work/BLUE-HD-FPGA/xdaq_top/build/post_script.tcl
+    puts "source /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/build/post_script.tcl"
+    source /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/build/post_script.tcl
   } _RESULT] 
   if {$src_rc} { 
     set tool_flow [get_property -quiet TOOL_FLOW [current_project -quiet]]
     if { $tool_flow eq {SDx} } { 
       send_gid_msg -id 2 -ssname VPL_TCL -severity ERROR $_RESULT
-      send_gid_msg -id 3 -ssname VPL_TCL -severity ERROR "sourcing script D:/workspace/github-space/fpga-work/BLUE-HD-FPGA/xdaq_top/build/post_script.tcl failed"
+      send_gid_msg -id 3 -ssname VPL_TCL -severity ERROR "sourcing script /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/build/post_script.tcl failed"
     } else {
       send_msg_id runtcl-1 status "$_RESULT"
-      send_msg_id runtcl-2 status "sourcing script D:/workspace/github-space/fpga-work/BLUE-HD-FPGA/xdaq_top/build/post_script.tcl failed"
+      send_msg_id runtcl-2 status "sourcing script /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/build/post_script.tcl failed"
     }
     return -code error
   }

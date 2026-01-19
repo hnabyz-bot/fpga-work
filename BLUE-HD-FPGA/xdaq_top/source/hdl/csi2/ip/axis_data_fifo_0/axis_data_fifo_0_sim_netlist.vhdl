@@ -4,8 +4,8 @@
 -- Tool Version: Vivado v.2024.2.2 (lin64) Build 6060944 Thu Mar 06 19:10:09 MST 2025
 -- Date        : Fri Jan 16 15:12:44 2026
 -- Host        : drlinux running 64-bit Ubuntu 22.04.5 LTS
--- Command     : write_vhdl -force -mode funcsim
---               /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/axis_data_fifo_0/axis_data_fifo_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top axis_data_fifo_0 -prefix
+--               axis_data_fifo_0_ axis_data_fifo_0_sim_netlist.vhdl
 -- Design      : axis_data_fifo_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -26,8 +26,6 @@ entity axis_data_fifo_0_xpm_cdc_gray is
   attribute DEST_SYNC_FF of axis_data_fifo_0_xpm_cdc_gray : entity is 3;
   attribute INIT_SYNC_FF : integer;
   attribute INIT_SYNC_FF of axis_data_fifo_0_xpm_cdc_gray : entity is 1;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of axis_data_fifo_0_xpm_cdc_gray : entity is "xpm_cdc_gray";
   attribute REG_OUTPUT : integer;
   attribute REG_OUTPUT of axis_data_fifo_0_xpm_cdc_gray : entity is 0;
   attribute SIM_ASSERT_CHK : integer;
@@ -2485,8 +2483,6 @@ entity axis_data_fifo_0_xpm_cdc_sync_rst is
   attribute INIT of axis_data_fifo_0_xpm_cdc_sync_rst : entity is "0";
   attribute INIT_SYNC_FF : integer;
   attribute INIT_SYNC_FF of axis_data_fifo_0_xpm_cdc_sync_rst : entity is 1;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of axis_data_fifo_0_xpm_cdc_sync_rst : entity is "xpm_cdc_sync_rst";
   attribute SIM_ASSERT_CHK : integer;
   attribute SIM_ASSERT_CHK of axis_data_fifo_0_xpm_cdc_sync_rst : entity is 0;
   attribute VERSION : integer;
@@ -2741,8 +2737,6 @@ entity axis_data_fifo_0_xpm_counter_updn is
     E : in STD_LOGIC_VECTOR ( 0 to 0 );
     wr_clk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of axis_data_fifo_0_xpm_counter_updn : entity is "xpm_counter_updn";
 end axis_data_fifo_0_xpm_counter_updn;
 
 architecture STRUCTURE of axis_data_fifo_0_xpm_counter_updn is
@@ -4590,8 +4584,6 @@ entity axis_data_fifo_0_xpm_fifo_reg_bit is
     \gen_pf_ic_rc.gaf_ic.ram_afull_i_reg_2\ : in STD_LOGIC;
     wr_en : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of axis_data_fifo_0_xpm_fifo_reg_bit : entity is "xpm_fifo_reg_bit";
 end axis_data_fifo_0_xpm_fifo_reg_bit;
 
 architecture STRUCTURE of axis_data_fifo_0_xpm_fifo_reg_bit is
@@ -4690,8 +4682,6 @@ entity axis_data_fifo_0_xpm_fifo_reg_vec is
     D : in STD_LOGIC_VECTOR ( 7 downto 0 );
     wr_clk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of axis_data_fifo_0_xpm_fifo_reg_vec : entity is "xpm_fifo_reg_vec";
 end axis_data_fifo_0_xpm_fifo_reg_vec;
 
 architecture STRUCTURE of axis_data_fifo_0_xpm_fifo_reg_vec is
@@ -5109,8 +5099,6 @@ entity axis_data_fifo_0_xpm_memory_base is
   attribute MESSAGE_CONTROL of axis_data_fifo_0_xpm_memory_base : entity is 0;
   attribute NUM_CHAR_LOC : integer;
   attribute NUM_CHAR_LOC of axis_data_fifo_0_xpm_memory_base : entity is 0;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of axis_data_fifo_0_xpm_memory_base : entity is "xpm_memory_base";
   attribute P_ECC_MODE : integer;
   attribute P_ECC_MODE of axis_data_fifo_0_xpm_memory_base : entity is 0;
   attribute P_ENABLE_BYTE_WRITE_A : integer;
@@ -5459,8 +5447,6 @@ entity axis_data_fifo_0_xpm_fifo_rst is
     \count_value_i_reg[7]\ : in STD_LOGIC;
     wr_en : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of axis_data_fifo_0_xpm_fifo_rst : entity is "xpm_fifo_rst";
 end axis_data_fifo_0_xpm_fifo_rst;
 
 architecture STRUCTURE of axis_data_fifo_0_xpm_fifo_rst is
@@ -6010,8 +5996,6 @@ entity axis_data_fifo_0_xpm_fifo_base is
   attribute FULL_RESET_VALUE of axis_data_fifo_0_xpm_fifo_base : entity is 1;
   attribute FULL_RST_VAL : string;
   attribute FULL_RST_VAL of axis_data_fifo_0_xpm_fifo_base : entity is "1'b1";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of axis_data_fifo_0_xpm_fifo_base : entity is "xpm_fifo_base";
   attribute PE_THRESH_ADJ : integer;
   attribute PE_THRESH_ADJ of axis_data_fifo_0_xpm_fifo_base : entity is 3;
   attribute PE_THRESH_MAX : integer;
@@ -6916,8 +6900,6 @@ entity axis_data_fifo_0_xpm_fifo_axis is
   attribute FIFO_MEMORY_TYPE of axis_data_fifo_0_xpm_fifo_axis : entity is "block";
   attribute LOG_DEPTH_AXIS : integer;
   attribute LOG_DEPTH_AXIS of axis_data_fifo_0_xpm_fifo_axis : entity is 8;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of axis_data_fifo_0_xpm_fifo_axis : entity is "xpm_fifo_axis";
   attribute PACKET_FIFO : string;
   attribute PACKET_FIFO of axis_data_fifo_0_xpm_fifo_axis : entity is "false";
   attribute PKT_SIZE_LT8 : string;
@@ -7362,8 +7344,6 @@ entity axis_data_fifo_0_axis_data_fifo_v2_0_16_top is
   attribute LP_USE_ADV_FEATURES of axis_data_fifo_0_axis_data_fifo_v2_0_16_top : entity is 825765944;
   attribute LP_WR_DATA_COUNT_WIDTH : integer;
   attribute LP_WR_DATA_COUNT_WIDTH of axis_data_fifo_0_axis_data_fifo_v2_0_16_top : entity is 9;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of axis_data_fifo_0_axis_data_fifo_v2_0_16_top : entity is "axis_data_fifo_v2_0_16_top";
 end axis_data_fifo_0_axis_data_fifo_v2_0_16_top;
 
 architecture STRUCTURE of axis_data_fifo_0_axis_data_fifo_v2_0_16_top is

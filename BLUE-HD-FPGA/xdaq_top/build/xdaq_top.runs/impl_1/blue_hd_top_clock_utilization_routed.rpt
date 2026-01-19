@@ -1,8 +1,8 @@
-Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-| Date         : Thu Jan 15 14:21:19 2026
-| Host         : work-dev running 64-bit major release  (build 9200)
+| Tool Version : Vivado v.2024.2.2 (lin64) Build 6060944 Thu Mar 06 19:10:09 MST 2025
+| Date         : Mon Jan 19 15:37:48 2026
+| Host         : drlinux running 64-bit Ubuntu 22.04.5 LTS
 | Command      : report_clock_utilization -file blue_hd_top_clock_utilization_routed.rpt
 | Design       : blue_hd_top
 | Device       : 7a35t-fgg484
@@ -70,23 +70,23 @@ Table of Contents
 +-----------+-----------+-----------------+------------+----------------+--------------+-------------------+-------------+-----------------+--------------+-----------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Global Id | Source Id | Driver Type/Pin | Constraint | Site           | Clock Region | Load Clock Region | Clock Loads | Non-Clock Loads | Clock Period | Clock                                               | Driver Pin                                                                                                                                                                                                                                       | Net                                                                                                                                                                                                                                              |
 +-----------+-----------+-----------------+------------+----------------+--------------+-------------------+-------------+-----------------+--------------+-----------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| g0        | src0      | BUFG/O          | None       | BUFGCTRL_X0Y2  | n/a          |                 6 |       11998 |               0 |       10.000 | c0_clk_ctrl                                         | clk_inst0/inst/clkout1_buf/O                                                                                                                                                                                                                     | clk_inst0/inst/c0                                                                                                                                                                                                                                |
-| g1        | src1      | BUFG/O          | None       | BUFGCTRL_X0Y3  | n/a          |                 4 |        1431 |               2 |       50.000 | c1_clk_ctrl                                         | clk_inst0/inst/clkout2_buf/O                                                                                                                                                                                                                     | clk_inst0/inst/c1                                                                                                                                                                                                                                |
-| g2        | src2      | BUFG/O          | None       | BUFGCTRL_X0Y4  | n/a          |                 4 |        1248 |               0 |        5.000 | dphy_clk_clk_ctrl                                   | clk_inst0/inst/clkout3_buf/O                                                                                                                                                                                                                     | clk_inst0/inst/dphy_clk                                                                                                                                                                                                                          |
+| g0        | src0      | BUFG/O          | None       | BUFGCTRL_X0Y2  | n/a          |                 5 |       12059 |               0 |       10.000 | c0_clk_ctrl                                         | clk_inst0/inst/clkout1_buf/O                                                                                                                                                                                                                     | clk_inst0/inst/c0                                                                                                                                                                                                                                |
+| g1        | src1      | BUFG/O          | None       | BUFGCTRL_X0Y3  | n/a          |                 3 |        1434 |               2 |       50.000 | c1_clk_ctrl                                         | clk_inst0/inst/clkout2_buf/O                                                                                                                                                                                                                     | clk_inst0/inst/c1                                                                                                                                                                                                                                |
+| g2        | src2      | BUFG/O          | None       | BUFGCTRL_X0Y4  | n/a          |                 5 |        1252 |               0 |        5.000 | dphy_clk_clk_ctrl                                   | clk_inst0/inst/clkout3_buf/O                                                                                                                                                                                                                     | clk_inst0/inst/dphy_clk                                                                                                                                                                                                                          |
 | g3        | src3      | BUFR/O          | None       | BUFR_X1Y6      | X1Y1         |                 1 |         909 |               0 |       20.000 | div_clk_w                                           | inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_dphy_0/inst/inst/bd_26df_mipi_dphy_0_0_tx_support_i/master_tx.bd_26df_mipi_dphy_0_0_tx_clock_module_support_i/div_clk90_gen/O                                            | inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_dphy_0/inst/inst/bd_26df_mipi_dphy_0_0_tx_support_i/master_tx.bd_26df_mipi_dphy_0_0_tx_clock_module_support_i/txbyteclkhs_out                                            |
 | g4        | src3      | BUFG/O          | None       | BUFGCTRL_X0Y22 | n/a          |                 2 |          12 |               0 |        5.000 | serial_clk90                                        | inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_dphy_0/inst/inst/bd_26df_mipi_dphy_0_0_tx_support_i/master_tx.bd_26df_mipi_dphy_0_0_tx_clock_module_support_i/dl_tst_bufg/O                                              | inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_dphy_0/inst/inst/bd_26df_mipi_dphy_0_0_tx_support_i/master_tx.bd_26df_mipi_dphy_0_0_tx_clock_module_support_i/dl_tst_clk_out                                             |
-| g5        | src4      | BUFG/O          | None       | BUFGCTRL_X0Y30 | n/a          |                 2 |         249 |               1 |      427.350 | FCLK_1                                              | fclk_in_reg[0]_i_1__1/O                                                                                                                                                                                                                          | fclk_out_14                                                                                                                                                                                                                                      |
-| g6        | src5      | BUFG/O          | None       | BUFGCTRL_X0Y31 | n/a          |                 3 |         247 |               1 |      427.350 | FCLK_0                                              | fclk_in_reg[0]_i_1/O                                                                                                                                                                                                                             | fclk_out                                                                                                                                                                                                                                         |
-| g7        | src6      | BUFG/O          | None       | BUFGCTRL_X0Y25 | n/a          |                 2 |         247 |               1 |      427.350 | FCLK_5                                              | fclk_in_reg[0]_i_1__9/O                                                                                                                                                                                                                          | fclk_out_22                                                                                                                                                                                                                                      |
-| g8        | src7      | BUFG/O          | None       | BUFGCTRL_X0Y28 | n/a          |                 2 |         245 |               1 |      427.350 | FCLK_6                                              | fclk_in_reg[0]_i_1__2/O                                                                                                                                                                                                                          | fclk_out_15                                                                                                                                                                                                                                      |
-| g9        | src8      | BUFG/O          | None       | BUFGCTRL_X0Y29 | n/a          |                 3 |         245 |               1 |      427.350 | FCLK_8                                              | fclk_in_reg[0]_i_1__10/O                                                                                                                                                                                                                         | fclk_out_23                                                                                                                                                                                                                                      |
-| g10       | src9      | BUFG/O          | None       | BUFGCTRL_X0Y20 | n/a          |                 2 |         244 |               1 |      427.350 | FCLK_7                                              | fclk_in_reg[0]_i_1__0/O                                                                                                                                                                                                                          | fclk_out_13                                                                                                                                                                                                                                      |
-| g11       | src10     | BUFG/O          | None       | BUFGCTRL_X0Y27 | n/a          |                 2 |         244 |               1 |      427.350 | FCLK_2                                              | fclk_in_reg[0]_i_1__3/O                                                                                                                                                                                                                          | fclk_out_16                                                                                                                                                                                                                                      |
-| g12       | src11     | BUFG/O          | None       | BUFGCTRL_X0Y19 | n/a          |                 2 |         244 |               1 |      427.350 | FCLK_11                                             | fclk_in_reg[0]_i_1__4/O                                                                                                                                                                                                                          | fclk_out_17                                                                                                                                                                                                                                      |
-| g13       | src12     | BUFG/O          | None       | BUFGCTRL_X0Y26 | n/a          |                 2 |         244 |               1 |      427.350 | FCLK_3                                              | fclk_in_reg[0]_i_1__5/O                                                                                                                                                                                                                          | fclk_out_18                                                                                                                                                                                                                                      |
-| g14       | src13     | BUFG/O          | None       | BUFGCTRL_X0Y0  | n/a          |                 2 |         244 |               1 |      427.350 | FCLK_12                                             | fclk_in_reg[0]_i_1__6/O                                                                                                                                                                                                                          | fclk_out_19                                                                                                                                                                                                                                      |
-| g15       | src14     | BUFG/O          | None       | BUFGCTRL_X0Y18 | n/a          |                 3 |         244 |               1 |      427.350 | FCLK_4                                              | fclk_in_reg[0]_i_1__7/O                                                                                                                                                                                                                          | fclk_out_20                                                                                                                                                                                                                                      |
-| g16       | src15     | BUFG/O          | None       | BUFGCTRL_X0Y1  | n/a          |                 2 |         244 |               1 |      427.350 | FCLK_13                                             | fclk_in_reg[0]_i_1__8/O                                                                                                                                                                                                                          | fclk_out_21                                                                                                                                                                                                                                      |
+| g5        | src4      | BUFG/O          | None       | BUFGCTRL_X0Y28 | n/a          |                 3 |         248 |               1 |      427.350 | FCLK_6                                              | fclk_in_reg[0]_i_1__2/O                                                                                                                                                                                                                          | fclk_out_15                                                                                                                                                                                                                                      |
+| g6        | src5      | BUFG/O          | None       | BUFGCTRL_X0Y31 | n/a          |                 4 |         247 |               1 |      427.350 | FCLK_0                                              | fclk_in_reg[0]_i_1/O                                                                                                                                                                                                                             | fclk_out                                                                                                                                                                                                                                         |
+| g7        | src6      | BUFG/O          | None       | BUFGCTRL_X0Y29 | n/a          |                 2 |         247 |               1 |      427.350 | FCLK_8                                              | fclk_in_reg[0]_i_1__10/O                                                                                                                                                                                                                         | fclk_out_23                                                                                                                                                                                                                                      |
+| g8        | src7      | BUFG/O          | None       | BUFGCTRL_X0Y27 | n/a          |                 3 |         246 |               1 |      427.350 | FCLK_2                                              | fclk_in_reg[0]_i_1__3/O                                                                                                                                                                                                                          | fclk_out_16                                                                                                                                                                                                                                      |
+| g9        | src8      | BUFG/O          | None       | BUFGCTRL_X0Y20 | n/a          |                 2 |         244 |               1 |      427.350 | FCLK_7                                              | fclk_in_reg[0]_i_1__0/O                                                                                                                                                                                                                          | fclk_out_13                                                                                                                                                                                                                                      |
+| g10       | src9      | BUFG/O          | None       | BUFGCTRL_X0Y30 | n/a          |                 2 |         244 |               1 |      427.350 | FCLK_1                                              | fclk_in_reg[0]_i_1__1/O                                                                                                                                                                                                                          | fclk_out_14                                                                                                                                                                                                                                      |
+| g11       | src10     | BUFG/O          | None       | BUFGCTRL_X0Y19 | n/a          |                 2 |         244 |               1 |      427.350 | FCLK_11                                             | fclk_in_reg[0]_i_1__4/O                                                                                                                                                                                                                          | fclk_out_17                                                                                                                                                                                                                                      |
+| g12       | src11     | BUFG/O          | None       | BUFGCTRL_X0Y26 | n/a          |                 3 |         244 |               1 |      427.350 | FCLK_3                                              | fclk_in_reg[0]_i_1__5/O                                                                                                                                                                                                                          | fclk_out_18                                                                                                                                                                                                                                      |
+| g13       | src12     | BUFG/O          | None       | BUFGCTRL_X0Y0  | n/a          |                 2 |         244 |               1 |      427.350 | FCLK_12                                             | fclk_in_reg[0]_i_1__6/O                                                                                                                                                                                                                          | fclk_out_19                                                                                                                                                                                                                                      |
+| g14       | src13     | BUFG/O          | None       | BUFGCTRL_X0Y18 | n/a          |                 2 |         244 |               1 |      427.350 | FCLK_4                                              | fclk_in_reg[0]_i_1__7/O                                                                                                                                                                                                                          | fclk_out_20                                                                                                                                                                                                                                      |
+| g15       | src14     | BUFG/O          | None       | BUFGCTRL_X0Y1  | n/a          |                 2 |         244 |               1 |      427.350 | FCLK_13                                             | fclk_in_reg[0]_i_1__8/O                                                                                                                                                                                                                          | fclk_out_21                                                                                                                                                                                                                                      |
+| g16       | src15     | BUFG/O          | None       | BUFGCTRL_X0Y25 | n/a          |                 4 |         244 |               1 |      427.350 | FCLK_5                                              | fclk_in_reg[0]_i_1__9/O                                                                                                                                                                                                                          | fclk_out_22                                                                                                                                                                                                                                      |
 | g17       | src16     | BUFG/O          | None       | BUFGCTRL_X0Y21 | n/a          |                 1 |         182 |               0 |      100.000 | mmcm_clk_out2_bd_26df_mipi_dphy_0_0_clock_module_tx | inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_dphy_0/inst/inst/bd_26df_mipi_dphy_0_0_tx_support_i/master_tx.bd_26df_mipi_dphy_0_0_tx_clock_module_support_i/bd_26df_mipi_dphy_0_0_clock_module_tx_i/inst/clkout3_buf/O | inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_dphy_0/inst/inst/bd_26df_mipi_dphy_0_0_tx_support_i/master_tx.bd_26df_mipi_dphy_0_0_tx_clock_module_support_i/bd_26df_mipi_dphy_0_0_clock_module_tx_i/inst/mmcm_clk_out2 |
 | g18       | src17     | BUFR/O          | None       | BUFR_X1Y7      | X1Y1         |                 1 |         126 |               0 |       20.000 | oserdes_clkdiv_out                                  | inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_dphy_0/inst/inst/bd_26df_mipi_dphy_0_0_tx_support_i/master_tx.bd_26df_mipi_dphy_0_0_tx_clock_module_support_i/div_clk_gen/O                                              | inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_dphy_0/inst/inst/bd_26df_mipi_dphy_0_0_tx_support_i/master_tx.bd_26df_mipi_dphy_0_0_tx_clock_module_support_i/oserdes_clkdiv_out                                         |
 | g19       | src17     | BUFG/O          | None       | BUFGCTRL_X0Y23 | n/a          |                 1 |           9 |               0 |        5.000 | serial_clk                                          | inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_dphy_0/inst/inst/bd_26df_mipi_dphy_0_0_tx_support_i/master_tx.bd_26df_mipi_dphy_0_0_tx_clock_module_support_i/cl_tst_bufg/O                                              | inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_dphy_0/inst/inst/bd_26df_mipi_dphy_0_0_tx_support_i/master_tx.bd_26df_mipi_dphy_0_0_tx_clock_module_support_i/cl_tst_clk_out                                             |
@@ -107,18 +107,18 @@ Table of Contents
 | src2      | g2        | MMCME2_ADV/CLKOUT2  | None       | MMCME2_ADV_X1Y0 | X1Y0         |           1 |               0 |               5.000 | dphy_clk_clk_ctrl                                   | clk_inst0/inst/mmcm_adv_inst/CLKOUT2                                                                                                                                                                                                                      | clk_inst0/inst/dphy_clk_clk_ctrl                                                                                                                                                                                                                                                       |
 | src3      | g3        | MMCME2_ADV/CLKOUT1  | None       | MMCME2_ADV_X1Y1 | X1Y1         |           3 |               0 |               5.000 | serial_clk90                                        | inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_dphy_0/inst/inst/bd_26df_mipi_dphy_0_0_tx_support_i/master_tx.bd_26df_mipi_dphy_0_0_tx_clock_module_support_i/bd_26df_mipi_dphy_0_0_clock_module_tx_i/inst/mmcm_adv_inst/CLKOUT1  | inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_dphy_0/inst/inst/bd_26df_mipi_dphy_0_0_tx_support_i/master_tx.bd_26df_mipi_dphy_0_0_tx_clock_module_support_i/bd_26df_mipi_dphy_0_0_clock_module_tx_i/inst/mmcm_clk_out1                                       |
 | src3      | g4        | MMCME2_ADV/CLKOUT1  | None       | MMCME2_ADV_X1Y1 | X1Y1         |           3 |               0 |               5.000 | serial_clk90                                        | inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_dphy_0/inst/inst/bd_26df_mipi_dphy_0_0_tx_support_i/master_tx.bd_26df_mipi_dphy_0_0_tx_clock_module_support_i/bd_26df_mipi_dphy_0_0_clock_module_tx_i/inst/mmcm_adv_inst/CLKOUT1  | inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_dphy_0/inst/inst/bd_26df_mipi_dphy_0_0_tx_support_i/master_tx.bd_26df_mipi_dphy_0_0_tx_clock_module_support_i/bd_26df_mipi_dphy_0_0_clock_module_tx_i/inst/mmcm_clk_out1                                       |
-| src4      | g5        | IBUFDS/O            | IOB_X0Y92  | IOB_X0Y92       | X0Y1         |           1 |               0 |             427.350 | FCLK_1                                              | gen_ti_roic_top[1].ti_roic_top_inst/bit_clock_gen/adc_fclk_inst/O                                                                                                                                                                                         | gen_ti_roic_top[1].ti_roic_top_inst/bit_clock_gen/fclk_out                                                                                                                                                                                                                             |
+| src4      | g5        | IBUFDS/O            | IOB_X0Y58  | IOB_X0Y58       | X0Y1         |           1 |               0 |             427.350 | FCLK_6                                              | gen_ti_roic_top[6].ti_roic_top_inst/bit_clock_gen/adc_fclk_inst/O                                                                                                                                                                                         | gen_ti_roic_top[6].ti_roic_top_inst/bit_clock_gen/fclk_out                                                                                                                                                                                                                             |
 | src5      | g6        | IBUFDS/O            | IOB_X0Y64  | IOB_X0Y64       | X0Y1         |           1 |               0 |             427.350 | FCLK_0                                              | gen_ti_roic_top[0].ti_roic_top_inst/bit_clock_gen/adc_fclk_inst/O                                                                                                                                                                                         | gen_ti_roic_top[0].ti_roic_top_inst/bit_clock_gen/fclk_out                                                                                                                                                                                                                             |
-| src6      | g7        | IBUFDS/O            | IOB_X0Y98  | IOB_X0Y98       | X0Y1         |           1 |               0 |             427.350 | FCLK_5                                              | gen_ti_roic_top[5].ti_roic_top_inst/bit_clock_gen/adc_fclk_inst/O                                                                                                                                                                                         | gen_ti_roic_top[5].ti_roic_top_inst/bit_clock_gen/fclk_out                                                                                                                                                                                                                             |
-| src7      | g8        | IBUFDS/O            | IOB_X0Y58  | IOB_X0Y58       | X0Y1         |           1 |               0 |             427.350 | FCLK_6                                              | gen_ti_roic_top[6].ti_roic_top_inst/bit_clock_gen/adc_fclk_inst/O                                                                                                                                                                                         | gen_ti_roic_top[6].ti_roic_top_inst/bit_clock_gen/fclk_out                                                                                                                                                                                                                             |
-| src8      | g9        | IBUFDS/O            | IOB_X0Y148 | IOB_X0Y148      | X0Y2         |           1 |               0 |             427.350 | FCLK_8                                              | gen_ti_roic_top[8].ti_roic_top_inst/bit_clock_gen/adc_fclk_inst/O                                                                                                                                                                                         | gen_ti_roic_top[8].ti_roic_top_inst/bit_clock_gen/fclk_out                                                                                                                                                                                                                             |
-| src9      | g10       | IBUFDS/O            | IOB_X0Y76  | IOB_X0Y76       | X0Y1         |           1 |               0 |             427.350 | FCLK_7                                              | gen_ti_roic_top[7].ti_roic_top_inst/bit_clock_gen/adc_fclk_inst/O                                                                                                                                                                                         | gen_ti_roic_top[7].ti_roic_top_inst/bit_clock_gen/fclk_out                                                                                                                                                                                                                             |
-| src10     | g11       | IBUFDS/O            | IOB_X0Y68  | IOB_X0Y68       | X0Y1         |           1 |               0 |             427.350 | FCLK_2                                              | gen_ti_roic_top[2].ti_roic_top_inst/bit_clock_gen/adc_fclk_inst/O                                                                                                                                                                                         | gen_ti_roic_top[2].ti_roic_top_inst/bit_clock_gen/fclk_out                                                                                                                                                                                                                             |
-| src11     | g12       | IBUFDS/O            | IOB_X0Y122 | IOB_X0Y122      | X0Y2         |           1 |               0 |             427.350 | FCLK_11                                             | gen_ti_roic_top[11].ti_roic_top_inst/bit_clock_gen/adc_fclk_inst/O                                                                                                                                                                                        | gen_ti_roic_top[11].ti_roic_top_inst/bit_clock_gen/fclk_out                                                                                                                                                                                                                            |
-| src12     | g13       | IBUFDS/O            | IOB_X0Y86  | IOB_X0Y86       | X0Y1         |           1 |               0 |             427.350 | FCLK_3                                              | gen_ti_roic_top[3].ti_roic_top_inst/bit_clock_gen/adc_fclk_inst/O                                                                                                                                                                                         | gen_ti_roic_top[3].ti_roic_top_inst/bit_clock_gen/fclk_out                                                                                                                                                                                                                             |
-| src13     | g14       | IBUFDS/O            | IOB_X1Y4   | IOB_X1Y4        | X1Y0         |           1 |               0 |             427.350 | FCLK_12                                             | gen_ti_roic_top[12].ti_roic_top_inst/bit_clock_gen/adc_fclk_inst/O                                                                                                                                                                                        | gen_ti_roic_top[12].ti_roic_top_inst/bit_clock_gen/fclk_out                                                                                                                                                                                                                            |
-| src14     | g15       | IBUFDS/O            | IOB_X0Y52  | IOB_X0Y52       | X0Y1         |           1 |               0 |             427.350 | FCLK_4                                              | gen_ti_roic_top[4].ti_roic_top_inst/bit_clock_gen/adc_fclk_inst/O                                                                                                                                                                                         | gen_ti_roic_top[4].ti_roic_top_inst/bit_clock_gen/fclk_out                                                                                                                                                                                                                             |
-| src15     | g16       | IBUFDS/O            | IOB_X1Y10  | IOB_X1Y10       | X1Y0         |           1 |               0 |             427.350 | FCLK_13                                             | gen_ti_roic_top[13].ti_roic_top_inst/bit_clock_gen/adc_fclk_inst/O                                                                                                                                                                                        | gen_ti_roic_top[13].ti_roic_top_inst/bit_clock_gen/fclk_out                                                                                                                                                                                                                            |
+| src6      | g7        | IBUFDS/O            | IOB_X0Y148 | IOB_X0Y148      | X0Y2         |           1 |               0 |             427.350 | FCLK_8                                              | gen_ti_roic_top[8].ti_roic_top_inst/bit_clock_gen/adc_fclk_inst/O                                                                                                                                                                                         | gen_ti_roic_top[8].ti_roic_top_inst/bit_clock_gen/fclk_out                                                                                                                                                                                                                             |
+| src7      | g8        | IBUFDS/O            | IOB_X0Y68  | IOB_X0Y68       | X0Y1         |           1 |               0 |             427.350 | FCLK_2                                              | gen_ti_roic_top[2].ti_roic_top_inst/bit_clock_gen/adc_fclk_inst/O                                                                                                                                                                                         | gen_ti_roic_top[2].ti_roic_top_inst/bit_clock_gen/fclk_out                                                                                                                                                                                                                             |
+| src8      | g9        | IBUFDS/O            | IOB_X0Y76  | IOB_X0Y76       | X0Y1         |           1 |               0 |             427.350 | FCLK_7                                              | gen_ti_roic_top[7].ti_roic_top_inst/bit_clock_gen/adc_fclk_inst/O                                                                                                                                                                                         | gen_ti_roic_top[7].ti_roic_top_inst/bit_clock_gen/fclk_out                                                                                                                                                                                                                             |
+| src9      | g10       | IBUFDS/O            | IOB_X0Y92  | IOB_X0Y92       | X0Y1         |           1 |               0 |             427.350 | FCLK_1                                              | gen_ti_roic_top[1].ti_roic_top_inst/bit_clock_gen/adc_fclk_inst/O                                                                                                                                                                                         | gen_ti_roic_top[1].ti_roic_top_inst/bit_clock_gen/fclk_out                                                                                                                                                                                                                             |
+| src10     | g11       | IBUFDS/O            | IOB_X0Y122 | IOB_X0Y122      | X0Y2         |           1 |               0 |             427.350 | FCLK_11                                             | gen_ti_roic_top[11].ti_roic_top_inst/bit_clock_gen/adc_fclk_inst/O                                                                                                                                                                                        | gen_ti_roic_top[11].ti_roic_top_inst/bit_clock_gen/fclk_out                                                                                                                                                                                                                            |
+| src11     | g12       | IBUFDS/O            | IOB_X0Y86  | IOB_X0Y86       | X0Y1         |           1 |               0 |             427.350 | FCLK_3                                              | gen_ti_roic_top[3].ti_roic_top_inst/bit_clock_gen/adc_fclk_inst/O                                                                                                                                                                                         | gen_ti_roic_top[3].ti_roic_top_inst/bit_clock_gen/fclk_out                                                                                                                                                                                                                             |
+| src12     | g13       | IBUFDS/O            | IOB_X1Y4   | IOB_X1Y4        | X1Y0         |           1 |               0 |             427.350 | FCLK_12                                             | gen_ti_roic_top[12].ti_roic_top_inst/bit_clock_gen/adc_fclk_inst/O                                                                                                                                                                                        | gen_ti_roic_top[12].ti_roic_top_inst/bit_clock_gen/fclk_out                                                                                                                                                                                                                            |
+| src13     | g14       | IBUFDS/O            | IOB_X0Y52  | IOB_X0Y52       | X0Y1         |           1 |               0 |             427.350 | FCLK_4                                              | gen_ti_roic_top[4].ti_roic_top_inst/bit_clock_gen/adc_fclk_inst/O                                                                                                                                                                                         | gen_ti_roic_top[4].ti_roic_top_inst/bit_clock_gen/fclk_out                                                                                                                                                                                                                             |
+| src14     | g15       | IBUFDS/O            | IOB_X1Y10  | IOB_X1Y10       | X1Y0         |           1 |               0 |             427.350 | FCLK_13                                             | gen_ti_roic_top[13].ti_roic_top_inst/bit_clock_gen/adc_fclk_inst/O                                                                                                                                                                                        | gen_ti_roic_top[13].ti_roic_top_inst/bit_clock_gen/fclk_out                                                                                                                                                                                                                            |
+| src15     | g16       | IBUFDS/O            | IOB_X0Y98  | IOB_X0Y98       | X0Y1         |           1 |               0 |             427.350 | FCLK_5                                              | gen_ti_roic_top[5].ti_roic_top_inst/bit_clock_gen/adc_fclk_inst/O                                                                                                                                                                                         | gen_ti_roic_top[5].ti_roic_top_inst/bit_clock_gen/fclk_out                                                                                                                                                                                                                             |
 | src16     | g17       | MMCME2_ADV/CLKOUT2  | None       | MMCME2_ADV_X1Y1 | X1Y1         |           1 |               0 |             100.000 | mmcm_clk_out2_bd_26df_mipi_dphy_0_0_clock_module_tx | inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_dphy_0/inst/inst/bd_26df_mipi_dphy_0_0_tx_support_i/master_tx.bd_26df_mipi_dphy_0_0_tx_clock_module_support_i/bd_26df_mipi_dphy_0_0_clock_module_tx_i/inst/mmcm_adv_inst/CLKOUT2  | inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_dphy_0/inst/inst/bd_26df_mipi_dphy_0_0_tx_support_i/master_tx.bd_26df_mipi_dphy_0_0_tx_clock_module_support_i/bd_26df_mipi_dphy_0_0_clock_module_tx_i/inst/mmcm_clk_out2_bd_26df_mipi_dphy_0_0_clock_module_tx |
 | src17     | g18       | MMCME2_ADV/CLKOUT0  | None       | MMCME2_ADV_X1Y1 | X1Y1         |           3 |               0 |               5.000 | serial_clk                                          | inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_dphy_0/inst/inst/bd_26df_mipi_dphy_0_0_tx_support_i/master_tx.bd_26df_mipi_dphy_0_0_tx_clock_module_support_i/bd_26df_mipi_dphy_0_0_clock_module_tx_i/inst/mmcm_adv_inst/CLKOUT0  | inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_dphy_0/inst/inst/bd_26df_mipi_dphy_0_0_tx_support_i/master_tx.bd_26df_mipi_dphy_0_0_tx_clock_module_support_i/bd_26df_mipi_dphy_0_0_clock_module_tx_i/inst/mmcm_clk_out0                                       |
 | src17     | g19       | MMCME2_ADV/CLKOUT0  | None       | MMCME2_ADV_X1Y1 | X1Y1         |           3 |               0 |               5.000 | serial_clk                                          | inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_dphy_0/inst/inst/bd_26df_mipi_dphy_0_0_tx_support_i/master_tx.bd_26df_mipi_dphy_0_0_tx_clock_module_support_i/bd_26df_mipi_dphy_0_0_clock_module_tx_i/inst/mmcm_adv_inst/CLKOUT0  | inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_dphy_0/inst/inst/bd_26df_mipi_dphy_0_0_tx_support_i/master_tx.bd_26df_mipi_dphy_0_0_tx_clock_module_support_i/bd_26df_mipi_dphy_0_0_clock_module_tx_i/inst/mmcm_clk_out0                                       |
@@ -134,21 +134,21 @@ Table of Contents
 +----------+-----------------+------------+-------------------+--------------+-------------+-----------------+--------------+-------+-------------------------------------------------------------------------+----------------------------------------------------------------+
 | Local Id | Driver Type/Pin | Constraint | Site/BEL          | Clock Region | Clock Loads | Non-Clock Loads | Clock Period | Clock | Driver Pin                                                              | Net                                                            |
 +----------+-----------------+------------+-------------------+--------------+-------------+-----------------+--------------+-------+-------------------------------------------------------------------------+----------------------------------------------------------------+
-| 0        | FDCE/Q          | None       | SLICE_X28Y9/AFF   | X0Y0         |          38 |               3 |              |       | dcdc_clk_inst/clk_5M_o_reg/Q                                            | dcdc_clk_inst/s_clk_5mhz                                       |
-| 1        | FDCE/Q          | None       | SLICE_X53Y69/A5FF | X1Y1         |          17 |               1 |              |       | gen_ti_roic_top[0].ti_roic_top_inst/bit_clock_gen/mod_clkdiv4_reg[1]/Q  | gen_ti_roic_top[0].ti_roic_top_inst/bit_clock_gen/clk_div_out  |
-| 2        | FDCE/Q          | None       | SLICE_X38Y46/A5FF | X1Y0         |          17 |               1 |              |       | gen_ti_roic_top[10].ti_roic_top_inst/bit_clock_gen/mod_clkdiv4_reg[1]/Q | gen_ti_roic_top[10].ti_roic_top_inst/bit_clock_gen/clk_div_out |
-| 3        | FDCE/Q          | None       | SLICE_X58Y57/A5FF | X1Y1         |          17 |               1 |              |       | gen_ti_roic_top[11].ti_roic_top_inst/bit_clock_gen/mod_clkdiv4_reg[1]/Q | gen_ti_roic_top[11].ti_roic_top_inst/bit_clock_gen/clk_div_out |
-| 4        | FDCE/Q          | None       | SLICE_X65Y21/A5FF | X1Y0         |          17 |               1 |              |       | gen_ti_roic_top[12].ti_roic_top_inst/bit_clock_gen/mod_clkdiv4_reg[1]/Q | gen_ti_roic_top[12].ti_roic_top_inst/bit_clock_gen/clk_div_out |
-| 5        | FDCE/Q          | None       | SLICE_X65Y26/A5FF | X1Y0         |          17 |               1 |              |       | gen_ti_roic_top[13].ti_roic_top_inst/bit_clock_gen/mod_clkdiv4_reg[1]/Q | gen_ti_roic_top[13].ti_roic_top_inst/bit_clock_gen/clk_div_out |
-| 6        | FDCE/Q          | None       | SLICE_X55Y43/A5FF | X1Y0         |          17 |               1 |              |       | gen_ti_roic_top[1].ti_roic_top_inst/bit_clock_gen/mod_clkdiv4_reg[1]/Q  | gen_ti_roic_top[1].ti_roic_top_inst/bit_clock_gen/clk_div_out  |
-| 7        | FDCE/Q          | None       | SLICE_X51Y63/A5FF | X1Y1         |          17 |               1 |              |       | gen_ti_roic_top[2].ti_roic_top_inst/bit_clock_gen/mod_clkdiv4_reg[1]/Q  | gen_ti_roic_top[2].ti_roic_top_inst/bit_clock_gen/clk_div_out  |
-| 8        | FDCE/Q          | None       | SLICE_X38Y47/A5FF | X1Y0         |          17 |               1 |              |       | gen_ti_roic_top[3].ti_roic_top_inst/bit_clock_gen/mod_clkdiv4_reg[1]/Q  | gen_ti_roic_top[3].ti_roic_top_inst/bit_clock_gen/clk_div_out  |
-| 9        | FDCE/Q          | None       | SLICE_X14Y45/A5FF | X0Y0         |          17 |               1 |              |       | gen_ti_roic_top[4].ti_roic_top_inst/bit_clock_gen/mod_clkdiv4_reg[1]/Q  | gen_ti_roic_top[4].ti_roic_top_inst/bit_clock_gen/clk_div_out  |
-| 10       | FDCE/Q          | None       | SLICE_X51Y47/A5FF | X1Y0         |          17 |               1 |              |       | gen_ti_roic_top[5].ti_roic_top_inst/bit_clock_gen/mod_clkdiv4_reg[1]/Q  | gen_ti_roic_top[5].ti_roic_top_inst/bit_clock_gen/clk_div_out  |
-| 11       | FDCE/Q          | None       | SLICE_X65Y46/A5FF | X1Y0         |          17 |               1 |              |       | gen_ti_roic_top[6].ti_roic_top_inst/bit_clock_gen/mod_clkdiv4_reg[1]/Q  | gen_ti_roic_top[6].ti_roic_top_inst/bit_clock_gen/clk_div_out  |
-| 12       | FDCE/Q          | None       | SLICE_X54Y44/B5FF | X1Y0         |          17 |               1 |              |       | gen_ti_roic_top[7].ti_roic_top_inst/bit_clock_gen/mod_clkdiv4_reg[1]/Q  | gen_ti_roic_top[7].ti_roic_top_inst/bit_clock_gen/clk_div_out  |
-| 13       | FDCE/Q          | None       | SLICE_X13Y47/A5FF | X0Y0         |          17 |               1 |              |       | gen_ti_roic_top[8].ti_roic_top_inst/bit_clock_gen/mod_clkdiv4_reg[1]/Q  | gen_ti_roic_top[8].ti_roic_top_inst/bit_clock_gen/clk_div_out  |
-| 14       | FDCE/Q          | None       | SLICE_X32Y51/A5FF | X0Y1         |          17 |               1 |              |       | gen_ti_roic_top[9].ti_roic_top_inst/bit_clock_gen/mod_clkdiv4_reg[1]/Q  | gen_ti_roic_top[9].ti_roic_top_inst/bit_clock_gen/clk_div_out  |
+| 0        | FDCE/Q          | None       | SLICE_X44Y50/AFF  | X1Y1         |          37 |               3 |              |       | dcdc_clk_inst/clk_5M_o_reg/Q                                            | dcdc_clk_inst/s_clk_5mhz                                       |
+| 1        | FDCE/Q          | None       | SLICE_X5Y16/A5FF  | X0Y0         |          17 |               1 |              |       | gen_ti_roic_top[0].ti_roic_top_inst/bit_clock_gen/mod_clkdiv4_reg[1]/Q  | gen_ti_roic_top[0].ti_roic_top_inst/bit_clock_gen/clk_div_out  |
+| 2        | FDCE/Q          | None       | SLICE_X0Y11/A5FF  | X0Y0         |          17 |               1 |              |       | gen_ti_roic_top[10].ti_roic_top_inst/bit_clock_gen/mod_clkdiv4_reg[1]/Q | gen_ti_roic_top[10].ti_roic_top_inst/bit_clock_gen/clk_div_out |
+| 3        | FDCE/Q          | None       | SLICE_X6Y15/A5FF  | X0Y0         |          17 |               1 |              |       | gen_ti_roic_top[11].ti_roic_top_inst/bit_clock_gen/mod_clkdiv4_reg[1]/Q | gen_ti_roic_top[11].ti_roic_top_inst/bit_clock_gen/clk_div_out |
+| 4        | FDCE/Q          | None       | SLICE_X61Y16/A5FF | X1Y0         |          17 |               1 |              |       | gen_ti_roic_top[12].ti_roic_top_inst/bit_clock_gen/mod_clkdiv4_reg[1]/Q | gen_ti_roic_top[12].ti_roic_top_inst/bit_clock_gen/clk_div_out |
+| 5        | FDCE/Q          | None       | SLICE_X57Y15/A5FF | X1Y0         |          17 |               1 |              |       | gen_ti_roic_top[13].ti_roic_top_inst/bit_clock_gen/mod_clkdiv4_reg[1]/Q | gen_ti_roic_top[13].ti_roic_top_inst/bit_clock_gen/clk_div_out |
+| 6        | FDCE/Q          | None       | SLICE_X10Y25/A5FF | X0Y0         |          17 |               1 |              |       | gen_ti_roic_top[1].ti_roic_top_inst/bit_clock_gen/mod_clkdiv4_reg[1]/Q  | gen_ti_roic_top[1].ti_roic_top_inst/bit_clock_gen/clk_div_out  |
+| 7        | FDCE/Q          | None       | SLICE_X2Y62/A5FF  | X0Y1         |          17 |               1 |              |       | gen_ti_roic_top[2].ti_roic_top_inst/bit_clock_gen/mod_clkdiv4_reg[1]/Q  | gen_ti_roic_top[2].ti_roic_top_inst/bit_clock_gen/clk_div_out  |
+| 8        | FDCE/Q          | None       | SLICE_X2Y10/A5FF  | X0Y0         |          17 |               1 |              |       | gen_ti_roic_top[3].ti_roic_top_inst/bit_clock_gen/mod_clkdiv4_reg[1]/Q  | gen_ti_roic_top[3].ti_roic_top_inst/bit_clock_gen/clk_div_out  |
+| 9        | FDCE/Q          | None       | SLICE_X0Y9/A5FF   | X0Y0         |          17 |               1 |              |       | gen_ti_roic_top[4].ti_roic_top_inst/bit_clock_gen/mod_clkdiv4_reg[1]/Q  | gen_ti_roic_top[4].ti_roic_top_inst/bit_clock_gen/clk_div_out  |
+| 10       | FDCE/Q          | None       | SLICE_X6Y21/B5FF  | X0Y0         |          17 |               1 |              |       | gen_ti_roic_top[5].ti_roic_top_inst/bit_clock_gen/mod_clkdiv4_reg[1]/Q  | gen_ti_roic_top[5].ti_roic_top_inst/bit_clock_gen/clk_div_out  |
+| 11       | FDCE/Q          | None       | SLICE_X1Y10/A5FF  | X0Y0         |          17 |               1 |              |       | gen_ti_roic_top[6].ti_roic_top_inst/bit_clock_gen/mod_clkdiv4_reg[1]/Q  | gen_ti_roic_top[6].ti_roic_top_inst/bit_clock_gen/clk_div_out  |
+| 12       | FDCE/Q          | None       | SLICE_X2Y71/A5FF  | X0Y1         |          17 |               1 |              |       | gen_ti_roic_top[7].ti_roic_top_inst/bit_clock_gen/mod_clkdiv4_reg[1]/Q  | gen_ti_roic_top[7].ti_roic_top_inst/bit_clock_gen/clk_div_out  |
+| 13       | FDCE/Q          | None       | SLICE_X8Y13/A5FF  | X0Y0         |          17 |               1 |              |       | gen_ti_roic_top[8].ti_roic_top_inst/bit_clock_gen/mod_clkdiv4_reg[1]/Q  | gen_ti_roic_top[8].ti_roic_top_inst/bit_clock_gen/clk_div_out  |
+| 14       | FDCE/Q          | None       | SLICE_X0Y10/A5FF  | X0Y0         |          17 |               1 |              |       | gen_ti_roic_top[9].ti_roic_top_inst/bit_clock_gen/mod_clkdiv4_reg[1]/Q  | gen_ti_roic_top[9].ti_roic_top_inst/bit_clock_gen/clk_div_out  |
 +----------+-----------------+------------+-------------------+--------------+-------------+-----------------+--------------+-------+-------------------------------------------------------------------------+----------------------------------------------------------------+
 * Local Clocks in this context represents only clocks driven by non-global buffers
 ** Clock Loads column represents cell count of net connects that connect to a clock pin. Internal cell leaf pins are not considered
@@ -163,15 +163,14 @@ Table of Contents
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
 | Clock Region Name | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail |
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
-| X0Y0              |   12 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 | 4173 |  1200 | 1349 |   400 |    8 |    20 |    0 |    10 |    0 |    20 |
-| X1Y0              |   12 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    2 |    50 |    0 |    50 | 3219 |  1500 | 1283 |   450 |    0 |    40 |    0 |    20 |    0 |    20 |
-| X0Y1              |    3 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    8 |    50 |    0 |    50 | 3714 |  1200 | 1237 |   400 |    0 |    20 |    0 |    10 |    0 |    20 |
-| X1Y1              |   13 |    12 |    2 |     4 |    0 |     2 |    2 |     4 |    1 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    5 |    50 | 4519 |  1500 | 1311 |   450 |    7 |    40 |    9 |    20 |    0 |    20 |
-| X0Y2              |    5 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    4 |    50 |    0 |    50 | 1707 |  1800 |  312 |   400 |    0 |    20 |    0 |    10 |    0 |    20 |
-| X1Y2              |    5 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     4 |    0 |     1 |    0 |     0 |    0 |     0 | 1176 |   950 |  308 |   300 |    1 |    10 |    0 |     5 |    0 |    20 |
+| X0Y0              |   12 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 | 3648 |  1200 | 1241 |   400 |    0 |    20 |    0 |    10 |    0 |    20 |
+| X1Y0              |   12 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    2 |    50 |    0 |    50 | 1966 |  1500 |  858 |   450 |    7 |    40 |    0 |    20 |    0 |    20 |
+| X0Y1              |    8 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    8 |    50 |    0 |    50 | 3832 |  1200 | 1209 |   400 |    2 |    20 |    0 |    10 |    0 |    20 |
+| X1Y1              |   12 |    12 |    2 |     4 |    0 |     2 |    2 |     4 |    1 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    5 |    50 | 5476 |  1500 | 1473 |   450 |    4 |    40 |    9 |    20 |    0 |    20 |
+| X0Y2              |    5 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    4 |    50 |    0 |    50 | 2591 |  1800 |  446 |   400 |    0 |    20 |    0 |    10 |    0 |    20 |
+| X1Y2              |    4 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     4 |    0 |     1 |    0 |     0 |    0 |     0 | 1061 |   950 |  270 |   300 |    0 |    10 |    0 |     5 |    0 |    20 |
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
 * Global Clock column represents track count; while other columns represents cell counts
-** In Used column of Global Clock column, symbol '*' indicates higher number than Available; this is because Used Global Clocks includes only global clock resources based on load placement but does not consider global clock resources used to traverse a clock region.
 
 
 6. Clock Regions : Global Clock Summary
@@ -193,7 +192,7 @@ All Modules
 +-----------+-----------------+-------------------+-------------+-------------+---------------+-------------+----------+----------------+----------+-------------------+
 | Global Id | Driver Type/Pin | Driver Region (D) | Clock       | Period (ns) | Waveform (ns) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net               |
 +-----------+-----------------+-------------------+-------------+-------------+---------------+-------------+----------+----------------+----------+-------------------+
-| g0        | BUFG/O          | n/a               | c0_clk_ctrl |      10.000 | {0.000 5.000} |       11879 |        0 |              0 |        0 | clk_inst0/inst/c0 |
+| g0        | BUFG/O          | n/a               | c0_clk_ctrl |      10.000 | {0.000 5.000} |       11940 |        0 |              0 |        0 | clk_inst0/inst/c0 |
 +-----------+-----------------+-------------------+-------------+-------------+---------------+-------------+----------+----------------+----------+-------------------+
 * Slice Loads column represents load cell count of all cell types other than IO, GT and clock resources
 ** IO Loads column represents load cell count of IO types
@@ -204,9 +203,9 @@ All Modules
 +----+-------+-------+-----------------------+
 |    | X0    | X1    | HORIZONTAL PROG DELAY |
 +----+-------+-------+-----------------------+
-| Y2 |  1181 |   940 |                     0 |
-| Y1 |  3550 |  3306 |                     0 |
-| Y0 |  2129 |   773 |                     0 |
+| Y2 |  1986 |   884 |                     0 |
+| Y1 |  3356 |  3337 |                     0 |
+| Y0 |  2377 |     0 |                     0 |
 +----+-------+-------+-----------------------+
 
 
@@ -216,7 +215,7 @@ All Modules
 +-----------+-----------------+-------------------+-------------+-------------+----------------+-------------+----------+----------------+----------+-------------------+
 | Global Id | Driver Type/Pin | Driver Region (D) | Clock       | Period (ns) | Waveform (ns)  | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net               |
 +-----------+-----------------+-------------------+-------------+-------------+----------------+-------------+----------+----------------+----------+-------------------+
-| g1        | BUFG/O          | n/a               | c1_clk_ctrl |      50.000 | {0.000 25.000} |        1360 |        1 |              0 |        0 | clk_inst0/inst/c1 |
+| g1        | BUFG/O          | n/a               | c1_clk_ctrl |      50.000 | {0.000 25.000} |        1363 |        1 |              0 |        0 | clk_inst0/inst/c1 |
 +-----------+-----------------+-------------------+-------------+-------------+----------------+-------------+----------+----------------+----------+-------------------+
 * Slice Loads column represents load cell count of all cell types other than IO, GT and clock resources
 ** IO Loads column represents load cell count of IO types
@@ -224,13 +223,13 @@ All Modules
 **** GT Loads column represents load cell count of GT types
 
 
-+----+------+------+-----------------------+
-|    | X0   | X1   | HORIZONTAL PROG DELAY |
-+----+------+------+-----------------------+
-| Y2 |    1 |    0 |                     0 |
-| Y1 |  163 |  200 |                     0 |
-| Y0 |  997 |    0 |                     0 |
-+----+------+------+-----------------------+
++----+------+-------+-----------------------+
+|    | X0   | X1    | HORIZONTAL PROG DELAY |
++----+------+-------+-----------------------+
+| Y2 |   23 |     0 |                     0 |
+| Y1 |  335 |  1006 |                     0 |
+| Y0 |    0 |     0 |                     - |
++----+------+-------+-----------------------+
 
 
 9. Device Cell Placement Summary for Global Clock g2
@@ -239,7 +238,7 @@ All Modules
 +-----------+-----------------+-------------------+-------------------+-------------+---------------+-------------+----------+----------------+----------+-------------------------+
 | Global Id | Driver Type/Pin | Driver Region (D) | Clock             | Period (ns) | Waveform (ns) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                     |
 +-----------+-----------------+-------------------+-------------------+-------------+---------------+-------------+----------+----------------+----------+-------------------------+
-| g2        | BUFG/O          | n/a               | dphy_clk_clk_ctrl |       5.000 | {0.000 2.500} |        1247 |        0 |              1 |        0 | clk_inst0/inst/dphy_clk |
+| g2        | BUFG/O          | n/a               | dphy_clk_clk_ctrl |       5.000 | {0.000 2.500} |        1251 |        0 |              1 |        0 | clk_inst0/inst/dphy_clk |
 +-----------+-----------------+-------------------+-------------------+-------------+---------------+-------------+----------+----------------+----------+-------------------------+
 * Slice Loads column represents load cell count of all cell types other than IO, GT and clock resources
 ** IO Loads column represents load cell count of IO types
@@ -250,9 +249,9 @@ All Modules
 +----+------+------+-----------------------+
 |    | X0   | X1   | HORIZONTAL PROG DELAY |
 +----+------+------+-----------------------+
-| Y2 |  341 |  220 |                     0 |
-| Y1 |    0 |   26 |                     0 |
-| Y0 |  661 |    0 |                     0 |
+| Y2 |  398 |  159 |                     0 |
+| Y1 |    4 |   10 |                     0 |
+| Y0 |    0 |  681 |                     0 |
 +----+------+------+-----------------------+
 
 
@@ -308,7 +307,7 @@ All Modules
 +-----------+-----------------+-------------------+--------+-------------+-----------------+-------------+----------+----------------+----------+-------------+
 | Global Id | Driver Type/Pin | Driver Region (D) | Clock  | Period (ns) | Waveform (ns)   | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net         |
 +-----------+-----------------+-------------------+--------+-------------+-----------------+-------------+----------+----------------+----------+-------------+
-| g5        | BUFG/O          | n/a               | FCLK_1 |     427.350 | {0.000 213.675} |         250 |        0 |              0 |        0 | fclk_out_14 |
+| g5        | BUFG/O          | n/a               | FCLK_6 |     427.350 | {0.000 213.675} |         249 |        0 |              0 |        0 | fclk_out_15 |
 +-----------+-----------------+-------------------+--------+-------------+-----------------+-------------+----------+----------------+----------+-------------+
 * Slice Loads column represents load cell count of all cell types other than IO, GT and clock resources
 ** IO Loads column represents load cell count of IO types
@@ -316,13 +315,13 @@ All Modules
 **** GT Loads column represents load cell count of GT types
 
 
-+----+-----+------+-----------------------+
-|    | X0  | X1   | HORIZONTAL PROG DELAY |
-+----+-----+------+-----------------------+
-| Y2 |   0 |    0 |                     - |
-| Y1 |   0 |    0 |                     - |
-| Y0 |  20 |  230 |                     0 |
-+----+-----+------+-----------------------+
++----+------+-----+-----------------------+
+|    | X0   | X1  | HORIZONTAL PROG DELAY |
++----+------+-----+-----------------------+
+| Y2 |    0 |   0 |                     - |
+| Y1 |    2 |   0 |                     0 |
+| Y0 |  156 |  91 |                     0 |
++----+------+-----+-----------------------+
 
 
 13. Device Cell Placement Summary for Global Clock g6
@@ -339,13 +338,13 @@ All Modules
 **** GT Loads column represents load cell count of GT types
 
 
-+----+-----+------+-----------------------+
-|    | X0  | X1   | HORIZONTAL PROG DELAY |
-+----+-----+------+-----------------------+
-| Y2 |   0 |    0 |                     - |
-| Y1 |   0 |    2 |                     0 |
-| Y0 |  23 |  223 |                     0 |
-+----+-----+------+-----------------------+
++----+------+------+-----------------------+
+|    | X0   | X1   | HORIZONTAL PROG DELAY |
++----+------+------+-----------------------+
+| Y2 |    0 |    0 |                     - |
+| Y1 |    2 |    2 |                     0 |
+| Y0 |  134 |  110 |                     0 |
++----+------+------+-----------------------+
 
 
 14. Device Cell Placement Summary for Global Clock g7
@@ -354,7 +353,7 @@ All Modules
 +-----------+-----------------+-------------------+--------+-------------+-----------------+-------------+----------+----------------+----------+-------------+
 | Global Id | Driver Type/Pin | Driver Region (D) | Clock  | Period (ns) | Waveform (ns)   | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net         |
 +-----------+-----------------+-------------------+--------+-------------+-----------------+-------------+----------+----------------+----------+-------------+
-| g7        | BUFG/O          | n/a               | FCLK_5 |     427.350 | {0.000 213.675} |         248 |        0 |              0 |        0 | fclk_out_22 |
+| g7        | BUFG/O          | n/a               | FCLK_8 |     427.350 | {0.000 213.675} |         248 |        0 |              0 |        0 | fclk_out_23 |
 +-----------+-----------------+-------------------+--------+-------------+-----------------+-------------+----------+----------------+----------+-------------+
 * Slice Loads column represents load cell count of all cell types other than IO, GT and clock resources
 ** IO Loads column represents load cell count of IO types
@@ -362,13 +361,13 @@ All Modules
 **** GT Loads column represents load cell count of GT types
 
 
-+----+----+------+-----------------------+
-|    | X0 | X1   | HORIZONTAL PROG DELAY |
-+----+----+------+-----------------------+
-| Y2 |  0 |    0 |                     - |
-| Y1 |  0 |    2 |                     0 |
-| Y0 |  0 |  246 |                     0 |
-+----+----+------+-----------------------+
++----+------+------+-----------------------+
+|    | X0   | X1   | HORIZONTAL PROG DELAY |
++----+------+------+-----------------------+
+| Y2 |    0 |    0 |                     - |
+| Y1 |  110 |  138 |                     0 |
+| Y0 |    0 |    0 |                     - |
++----+------+------+-----------------------+
 
 
 15. Device Cell Placement Summary for Global Clock g8
@@ -377,7 +376,7 @@ All Modules
 +-----------+-----------------+-------------------+--------+-------------+-----------------+-------------+----------+----------------+----------+-------------+
 | Global Id | Driver Type/Pin | Driver Region (D) | Clock  | Period (ns) | Waveform (ns)   | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net         |
 +-----------+-----------------+-------------------+--------+-------------+-----------------+-------------+----------+----------------+----------+-------------+
-| g8        | BUFG/O          | n/a               | FCLK_6 |     427.350 | {0.000 213.675} |         246 |        0 |              0 |        0 | fclk_out_15 |
+| g8        | BUFG/O          | n/a               | FCLK_2 |     427.350 | {0.000 213.675} |         247 |        0 |              0 |        0 | fclk_out_16 |
 +-----------+-----------------+-------------------+--------+-------------+-----------------+-------------+----------+----------------+----------+-------------+
 * Slice Loads column represents load cell count of all cell types other than IO, GT and clock resources
 ** IO Loads column represents load cell count of IO types
@@ -385,13 +384,13 @@ All Modules
 **** GT Loads column represents load cell count of GT types
 
 
-+----+----+------+-----------------------+
-|    | X0 | X1   | HORIZONTAL PROG DELAY |
-+----+----+------+-----------------------+
-| Y2 |  0 |    2 |                     0 |
-| Y1 |  0 |    0 |                     - |
-| Y0 |  0 |  244 |                     0 |
-+----+----+------+-----------------------+
++----+------+------+-----------------------+
+|    | X0   | X1   | HORIZONTAL PROG DELAY |
++----+------+------+-----------------------+
+| Y2 |    0 |    0 |                     - |
+| Y1 |    2 |    0 |                     0 |
+| Y0 |  136 |  109 |                     0 |
++----+------+------+-----------------------+
 
 
 16. Device Cell Placement Summary for Global Clock g9
@@ -400,7 +399,7 @@ All Modules
 +-----------+-----------------+-------------------+--------+-------------+-----------------+-------------+----------+----------------+----------+-------------+
 | Global Id | Driver Type/Pin | Driver Region (D) | Clock  | Period (ns) | Waveform (ns)   | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net         |
 +-----------+-----------------+-------------------+--------+-------------+-----------------+-------------+----------+----------------+----------+-------------+
-| g9        | BUFG/O          | n/a               | FCLK_8 |     427.350 | {0.000 213.675} |         246 |        0 |              0 |        0 | fclk_out_23 |
+| g9        | BUFG/O          | n/a               | FCLK_7 |     427.350 | {0.000 213.675} |         245 |        0 |              0 |        0 | fclk_out_13 |
 +-----------+-----------------+-------------------+--------+-------------+-----------------+-------------+----------+----------------+----------+-------------+
 * Slice Loads column represents load cell count of all cell types other than IO, GT and clock resources
 ** IO Loads column represents load cell count of IO types
@@ -408,13 +407,13 @@ All Modules
 **** GT Loads column represents load cell count of GT types
 
 
-+----+------+----+-----------------------+
-|    | X0   | X1 | HORIZONTAL PROG DELAY |
-+----+------+----+-----------------------+
-| Y2 |    0 |  0 |                     - |
-| Y1 |    2 |  3 |                     0 |
-| Y0 |  241 |  0 |                     0 |
-+----+------+----+-----------------------+
++----+------+------+-----------------------+
+|    | X0   | X1   | HORIZONTAL PROG DELAY |
++----+------+------+-----------------------+
+| Y2 |    0 |    0 |                     - |
+| Y1 |    0 |    0 |                     - |
+| Y0 |  138 |  107 |                     0 |
++----+------+------+-----------------------+
 
 
 17. Device Cell Placement Summary for Global Clock g10
@@ -423,7 +422,7 @@ All Modules
 +-----------+-----------------+-------------------+--------+-------------+-----------------+-------------+----------+----------------+----------+-------------+
 | Global Id | Driver Type/Pin | Driver Region (D) | Clock  | Period (ns) | Waveform (ns)   | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net         |
 +-----------+-----------------+-------------------+--------+-------------+-----------------+-------------+----------+----------------+----------+-------------+
-| g10       | BUFG/O          | n/a               | FCLK_7 |     427.350 | {0.000 213.675} |         245 |        0 |              0 |        0 | fclk_out_13 |
+| g10       | BUFG/O          | n/a               | FCLK_1 |     427.350 | {0.000 213.675} |         245 |        0 |              0 |        0 | fclk_out_14 |
 +-----------+-----------------+-------------------+--------+-------------+-----------------+-------------+----------+----------------+----------+-------------+
 * Slice Loads column represents load cell count of all cell types other than IO, GT and clock resources
 ** IO Loads column represents load cell count of IO types
@@ -431,114 +430,45 @@ All Modules
 **** GT Loads column represents load cell count of GT types
 
 
-+----+-----+------+-----------------------+
-|    | X0  | X1   | HORIZONTAL PROG DELAY |
-+----+-----+------+-----------------------+
-| Y2 |   0 |    0 |                     - |
-| Y1 |   0 |    0 |                     - |
-| Y0 |  50 |  195 |                     0 |
-+----+-----+------+-----------------------+
++----+------+------+-----------------------+
+|    | X0   | X1   | HORIZONTAL PROG DELAY |
++----+------+------+-----------------------+
+| Y2 |    0 |    0 |                     - |
+| Y1 |    0 |    0 |                     - |
+| Y0 |  101 |  144 |                     0 |
++----+------+------+-----------------------+
 
 
 18. Device Cell Placement Summary for Global Clock g11
 ------------------------------------------------------
 
-+-----------+-----------------+-------------------+--------+-------------+-----------------+-------------+----------+----------------+----------+-------------+
-| Global Id | Driver Type/Pin | Driver Region (D) | Clock  | Period (ns) | Waveform (ns)   | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net         |
-+-----------+-----------------+-------------------+--------+-------------+-----------------+-------------+----------+----------------+----------+-------------+
-| g11       | BUFG/O          | n/a               | FCLK_2 |     427.350 | {0.000 213.675} |         245 |        0 |              0 |        0 | fclk_out_16 |
-+-----------+-----------------+-------------------+--------+-------------+-----------------+-------------+----------+----------------+----------+-------------+
++-----------+-----------------+-------------------+---------+-------------+-----------------+-------------+----------+----------------+----------+-------------+
+| Global Id | Driver Type/Pin | Driver Region (D) | Clock   | Period (ns) | Waveform (ns)   | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net         |
++-----------+-----------------+-------------------+---------+-------------+-----------------+-------------+----------+----------------+----------+-------------+
+| g11       | BUFG/O          | n/a               | FCLK_11 |     427.350 | {0.000 213.675} |         245 |        0 |              0 |        0 | fclk_out_17 |
++-----------+-----------------+-------------------+---------+-------------+-----------------+-------------+----------+----------------+----------+-------------+
 * Slice Loads column represents load cell count of all cell types other than IO, GT and clock resources
 ** IO Loads column represents load cell count of IO types
 *** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
 **** GT Loads column represents load cell count of GT types
 
 
-+----+-----+------+-----------------------+
-|    | X0  | X1   | HORIZONTAL PROG DELAY |
-+----+-----+------+-----------------------+
-| Y2 |   0 |    0 |                     - |
-| Y1 |   0 |    0 |                     - |
-| Y0 |  16 |  229 |                     0 |
-+----+-----+------+-----------------------+
++----+------+------+-----------------------+
+|    | X0   | X1   | HORIZONTAL PROG DELAY |
++----+------+------+-----------------------+
+| Y2 |    0 |    0 |                     - |
+| Y1 |    0 |    0 |                     - |
+| Y0 |  143 |  102 |                     0 |
++----+------+------+-----------------------+
 
 
 19. Device Cell Placement Summary for Global Clock g12
 ------------------------------------------------------
 
-+-----------+-----------------+-------------------+---------+-------------+-----------------+-------------+----------+----------------+----------+-------------+
-| Global Id | Driver Type/Pin | Driver Region (D) | Clock   | Period (ns) | Waveform (ns)   | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net         |
-+-----------+-----------------+-------------------+---------+-------------+-----------------+-------------+----------+----------------+----------+-------------+
-| g12       | BUFG/O          | n/a               | FCLK_11 |     427.350 | {0.000 213.675} |         245 |        0 |              0 |        0 | fclk_out_17 |
-+-----------+-----------------+-------------------+---------+-------------+-----------------+-------------+----------+----------------+----------+-------------+
-* Slice Loads column represents load cell count of all cell types other than IO, GT and clock resources
-** IO Loads column represents load cell count of IO types
-*** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
-**** GT Loads column represents load cell count of GT types
-
-
-+----+----+------+-----------------------+
-|    | X0 | X1   | HORIZONTAL PROG DELAY |
-+----+----+------+-----------------------+
-| Y2 |  0 |    0 |                     - |
-| Y1 |  0 |    2 |                     0 |
-| Y0 |  0 |  243 |                     0 |
-+----+----+------+-----------------------+
-
-
-20. Device Cell Placement Summary for Global Clock g13
-------------------------------------------------------
-
 +-----------+-----------------+-------------------+--------+-------------+-----------------+-------------+----------+----------------+----------+-------------+
 | Global Id | Driver Type/Pin | Driver Region (D) | Clock  | Period (ns) | Waveform (ns)   | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net         |
 +-----------+-----------------+-------------------+--------+-------------+-----------------+-------------+----------+----------------+----------+-------------+
-| g13       | BUFG/O          | n/a               | FCLK_3 |     427.350 | {0.000 213.675} |         245 |        0 |              0 |        0 | fclk_out_18 |
-+-----------+-----------------+-------------------+--------+-------------+-----------------+-------------+----------+----------------+----------+-------------+
-* Slice Loads column represents load cell count of all cell types other than IO, GT and clock resources
-** IO Loads column represents load cell count of IO types
-*** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
-**** GT Loads column represents load cell count of GT types
-
-
-+----+-----+------+-----------------------+
-|    | X0  | X1   | HORIZONTAL PROG DELAY |
-+----+-----+------+-----------------------+
-| Y2 |   0 |    0 |                     - |
-| Y1 |   0 |    0 |                     - |
-| Y0 |  25 |  220 |                     0 |
-+----+-----+------+-----------------------+
-
-
-21. Device Cell Placement Summary for Global Clock g14
-------------------------------------------------------
-
-+-----------+-----------------+-------------------+---------+-------------+-----------------+-------------+----------+----------------+----------+-------------+
-| Global Id | Driver Type/Pin | Driver Region (D) | Clock   | Period (ns) | Waveform (ns)   | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net         |
-+-----------+-----------------+-------------------+---------+-------------+-----------------+-------------+----------+----------------+----------+-------------+
-| g14       | BUFG/O          | n/a               | FCLK_12 |     427.350 | {0.000 213.675} |         245 |        0 |              0 |        0 | fclk_out_19 |
-+-----------+-----------------+-------------------+---------+-------------+-----------------+-------------+----------+----------------+----------+-------------+
-* Slice Loads column represents load cell count of all cell types other than IO, GT and clock resources
-** IO Loads column represents load cell count of IO types
-*** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
-**** GT Loads column represents load cell count of GT types
-
-
-+----+-----+------+-----------------------+
-|    | X0  | X1   | HORIZONTAL PROG DELAY |
-+----+-----+------+-----------------------+
-| Y2 |   0 |    0 |                     - |
-| Y1 |   0 |    0 |                     - |
-| Y0 |  20 |  225 |                     0 |
-+----+-----+------+-----------------------+
-
-
-22. Device Cell Placement Summary for Global Clock g15
-------------------------------------------------------
-
-+-----------+-----------------+-------------------+--------+-------------+-----------------+-------------+----------+----------------+----------+-------------+
-| Global Id | Driver Type/Pin | Driver Region (D) | Clock  | Period (ns) | Waveform (ns)   | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net         |
-+-----------+-----------------+-------------------+--------+-------------+-----------------+-------------+----------+----------------+----------+-------------+
-| g15       | BUFG/O          | n/a               | FCLK_4 |     427.350 | {0.000 213.675} |         245 |        0 |              0 |        0 | fclk_out_20 |
+| g12       | BUFG/O          | n/a               | FCLK_3 |     427.350 | {0.000 213.675} |         245 |        0 |              0 |        0 | fclk_out_18 |
 +-----------+-----------------+-------------------+--------+-------------+-----------------+-------------+----------+----------------+----------+-------------+
 * Slice Loads column represents load cell count of all cell types other than IO, GT and clock resources
 ** IO Loads column represents load cell count of IO types
@@ -551,17 +481,63 @@ All Modules
 +----+-----+------+-----------------------+
 | Y2 |   0 |    0 |                     - |
 | Y1 |   0 |    2 |                     0 |
-| Y0 |  39 |  204 |                     0 |
+| Y0 |  66 |  177 |                     0 |
 +----+-----+------+-----------------------+
 
 
-23. Device Cell Placement Summary for Global Clock g16
+20. Device Cell Placement Summary for Global Clock g13
 ------------------------------------------------------
 
 +-----------+-----------------+-------------------+---------+-------------+-----------------+-------------+----------+----------------+----------+-------------+
 | Global Id | Driver Type/Pin | Driver Region (D) | Clock   | Period (ns) | Waveform (ns)   | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net         |
 +-----------+-----------------+-------------------+---------+-------------+-----------------+-------------+----------+----------------+----------+-------------+
-| g16       | BUFG/O          | n/a               | FCLK_13 |     427.350 | {0.000 213.675} |         245 |        0 |              0 |        0 | fclk_out_21 |
+| g13       | BUFG/O          | n/a               | FCLK_12 |     427.350 | {0.000 213.675} |         245 |        0 |              0 |        0 | fclk_out_19 |
++-----------+-----------------+-------------------+---------+-------------+-----------------+-------------+----------+----------------+----------+-------------+
+* Slice Loads column represents load cell count of all cell types other than IO, GT and clock resources
+** IO Loads column represents load cell count of IO types
+*** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
+**** GT Loads column represents load cell count of GT types
+
+
++----+------+------+-----------------------+
+|    | X0   | X1   | HORIZONTAL PROG DELAY |
++----+------+------+-----------------------+
+| Y2 |    0 |    0 |                     - |
+| Y1 |    0 |    0 |                     - |
+| Y0 |  103 |  142 |                     0 |
++----+------+------+-----------------------+
+
+
+21. Device Cell Placement Summary for Global Clock g14
+------------------------------------------------------
+
++-----------+-----------------+-------------------+--------+-------------+-----------------+-------------+----------+----------------+----------+-------------+
+| Global Id | Driver Type/Pin | Driver Region (D) | Clock  | Period (ns) | Waveform (ns)   | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net         |
++-----------+-----------------+-------------------+--------+-------------+-----------------+-------------+----------+----------------+----------+-------------+
+| g14       | BUFG/O          | n/a               | FCLK_4 |     427.350 | {0.000 213.675} |         245 |        0 |              0 |        0 | fclk_out_20 |
++-----------+-----------------+-------------------+--------+-------------+-----------------+-------------+----------+----------------+----------+-------------+
+* Slice Loads column represents load cell count of all cell types other than IO, GT and clock resources
+** IO Loads column represents load cell count of IO types
+*** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
+**** GT Loads column represents load cell count of GT types
+
+
++----+------+------+-----------------------+
+|    | X0   | X1   | HORIZONTAL PROG DELAY |
++----+------+------+-----------------------+
+| Y2 |    0 |    0 |                     - |
+| Y1 |    0 |    0 |                     - |
+| Y0 |  135 |  110 |                     0 |
++----+------+------+-----------------------+
+
+
+22. Device Cell Placement Summary for Global Clock g15
+------------------------------------------------------
+
++-----------+-----------------+-------------------+---------+-------------+-----------------+-------------+----------+----------------+----------+-------------+
+| Global Id | Driver Type/Pin | Driver Region (D) | Clock   | Period (ns) | Waveform (ns)   | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net         |
++-----------+-----------------+-------------------+---------+-------------+-----------------+-------------+----------+----------------+----------+-------------+
+| g15       | BUFG/O          | n/a               | FCLK_13 |     427.350 | {0.000 213.675} |         245 |        0 |              0 |        0 | fclk_out_21 |
 +-----------+-----------------+-------------------+---------+-------------+-----------------+-------------+----------+----------------+----------+-------------+
 * Slice Loads column represents load cell count of all cell types other than IO, GT and clock resources
 ** IO Loads column represents load cell count of IO types
@@ -574,7 +550,30 @@ All Modules
 +----+-----+------+-----------------------+
 | Y2 |   0 |    0 |                     - |
 | Y1 |   0 |    0 |                     - |
-| Y0 |  19 |  226 |                     0 |
+| Y0 |  59 |  186 |                     0 |
++----+-----+------+-----------------------+
+
+
+23. Device Cell Placement Summary for Global Clock g16
+------------------------------------------------------
+
++-----------+-----------------+-------------------+--------+-------------+-----------------+-------------+----------+----------------+----------+-------------+
+| Global Id | Driver Type/Pin | Driver Region (D) | Clock  | Period (ns) | Waveform (ns)   | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net         |
++-----------+-----------------+-------------------+--------+-------------+-----------------+-------------+----------+----------------+----------+-------------+
+| g16       | BUFG/O          | n/a               | FCLK_5 |     427.350 | {0.000 213.675} |         245 |        0 |              0 |        0 | fclk_out_22 |
++-----------+-----------------+-------------------+--------+-------------+-----------------+-------------+----------+----------------+----------+-------------+
+* Slice Loads column represents load cell count of all cell types other than IO, GT and clock resources
+** IO Loads column represents load cell count of IO types
+*** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
+**** GT Loads column represents load cell count of GT types
+
+
++----+-----+------+-----------------------+
+|    | X0  | X1   | HORIZONTAL PROG DELAY |
++----+-----+------+-----------------------+
+| Y2 |   0 |    0 |                     - |
+| Y1 |  33 |   19 |                     0 |
+| Y0 |  45 |  148 |                     0 |
 +----+-----+------+-----------------------+
 
 
@@ -673,22 +672,22 @@ All Modules
 28. Clock Region Cell Placement per Global Clock: Region X0Y0
 -------------------------------------------------------------
 
-+-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+-------------------------+
-| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | Memory LUTs | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                     |
-+-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+-------------------------+
-| g0        | n/a   | BUFG/O          | None       |        2129 |               0 | 2129 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | clk_inst0/inst/c0       |
-| g1        | n/a   | BUFG/O          | None       |         996 |               1 |  996 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | clk_inst0/inst/c1       |
-| g2        | n/a   | BUFG/O          | None       |         661 |               0 |  618 |          27 |    8 |   0 |  0 |    0 |   0 |       0 | clk_inst0/inst/dphy_clk |
-| g5        | n/a   | BUFG/O          | None       |          20 |               0 |   18 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | fclk_out_14             |
-| g6        | n/a   | BUFG/O          | None       |          23 |               0 |   23 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | fclk_out                |
-| g9        | n/a   | BUFG/O          | None       |         241 |               0 |  216 |          25 |    0 |   0 |  0 |    0 |   0 |       0 | fclk_out_23             |
-| g10       | n/a   | BUFG/O          | None       |          50 |               0 |   48 |           0 |    1 |   0 |  0 |    0 |   0 |       0 | fclk_out_13             |
-| g11       | n/a   | BUFG/O          | None       |          16 |               0 |   14 |           0 |    1 |   0 |  0 |    0 |   0 |       0 | fclk_out_16             |
-| g13       | n/a   | BUFG/O          | None       |          25 |               0 |   21 |           2 |    1 |   0 |  0 |    0 |   0 |       0 | fclk_out_18             |
-| g14       | n/a   | BUFG/O          | None       |          20 |               0 |   18 |           0 |    1 |   0 |  0 |    0 |   0 |       0 | fclk_out_19             |
-| g15       | n/a   | BUFG/O          | None       |          39 |               0 |   37 |           2 |    0 |   0 |  0 |    0 |   0 |       0 | fclk_out_20             |
-| g16       | n/a   | BUFG/O          | None       |          19 |               0 |   17 |           0 |    1 |   0 |  0 |    0 |   0 |       0 | fclk_out_21             |
-+-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+-------------------------+
++-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+-------------------+
+| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | Memory LUTs | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net               |
++-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+-------------------+
+| g0        | n/a   | BUFG/O          | None       |        2377 |               0 | 2376 |           1 |    0 |   0 |  0 |    0 |   0 |       0 | clk_inst0/inst/c0 |
+| g5        | n/a   | BUFG/O          | None       |         156 |               0 |  135 |          21 |    0 |   0 |  0 |    0 |   0 |       0 | fclk_out_15       |
+| g6        | n/a   | BUFG/O          | None       |         134 |               0 |  119 |          15 |    0 |   0 |  0 |    0 |   0 |       0 | fclk_out          |
+| g8        | n/a   | BUFG/O          | None       |         135 |               1 |  122 |          14 |    0 |   0 |  0 |    0 |   0 |       0 | fclk_out_16       |
+| g9        | n/a   | BUFG/O          | None       |         137 |               1 |  115 |          23 |    0 |   0 |  0 |    0 |   0 |       0 | fclk_out_13       |
+| g10       | n/a   | BUFG/O          | None       |         100 |               1 |   93 |           8 |    0 |   0 |  0 |    0 |   0 |       0 | fclk_out_14       |
+| g11       | n/a   | BUFG/O          | None       |         142 |               1 |  119 |          24 |    0 |   0 |  0 |    0 |   0 |       0 | fclk_out_17       |
+| g12       | n/a   | BUFG/O          | None       |          66 |               0 |   66 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | fclk_out_18       |
+| g13       | n/a   | BUFG/O          | None       |         103 |               0 |   93 |          10 |    0 |   0 |  0 |    0 |   0 |       0 | fclk_out_19       |
+| g14       | n/a   | BUFG/O          | None       |         134 |               1 |  125 |          10 |    0 |   0 |  0 |    0 |   0 |       0 | fclk_out_20       |
+| g15       | n/a   | BUFG/O          | None       |          59 |               0 |   59 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | fclk_out_21       |
+| g16       | n/a   | BUFG/O          | None       |          44 |               1 |   41 |           4 |    0 |   0 |  0 |    0 |   0 |       0 | fclk_out_22       |
++-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+-------------------+
 * Clock Loads column represents cell count of net connects that connect to a clock pin. Internal cell leaf pins are not considered
 ** Non-Clock Loads column represents cell count of non-clock pin loads
 *** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
@@ -697,22 +696,22 @@ All Modules
 29. Clock Region Cell Placement per Global Clock: Region X1Y0
 -------------------------------------------------------------
 
-+-----------+-------+-----------------+------------+-------------+-----------------+-----+-------------+------+-----+----+------+-----+---------+-------------------+
-| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF  | Memory LUTs | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net               |
-+-----------+-------+-----------------+------------+-------------+-----------------+-----+-------------+------+-----+----+------+-----+---------+-------------------+
-| g0        | n/a   | BUFG/O          | None       |         773 |               0 | 772 |           1 |    0 |   0 |  0 |    0 |   0 |       0 | clk_inst0/inst/c0 |
-| g5        | n/a   | BUFG/O          | None       |         229 |               1 | 204 |          26 |    0 |   0 |  0 |    0 |   0 |       0 | fclk_out_14       |
-| g6        | n/a   | BUFG/O          | None       |         222 |               1 | 197 |          26 |    0 |   0 |  0 |    0 |   0 |       0 | fclk_out          |
-| g7        | n/a   | BUFG/O          | None       |         245 |               1 | 220 |          26 |    0 |   0 |  0 |    0 |   0 |       0 | fclk_out_22       |
-| g8        | n/a   | BUFG/O          | None       |         243 |               1 | 218 |          26 |    0 |   0 |  0 |    0 |   0 |       0 | fclk_out_15       |
-| g10       | n/a   | BUFG/O          | None       |         194 |               1 | 169 |          26 |    0 |   0 |  0 |    0 |   0 |       0 | fclk_out_13       |
-| g11       | n/a   | BUFG/O          | None       |         228 |               1 | 203 |          26 |    0 |   0 |  0 |    0 |   0 |       0 | fclk_out_16       |
-| g12       | n/a   | BUFG/O          | None       |         242 |               1 | 217 |          26 |    0 |   0 |  0 |    0 |   0 |       0 | fclk_out_17       |
-| g13       | n/a   | BUFG/O          | None       |         219 |               1 | 196 |          24 |    0 |   0 |  0 |    0 |   0 |       0 | fclk_out_18       |
-| g14       | n/a   | BUFG/O          | None       |         224 |               1 | 199 |          26 |    0 |   0 |  0 |    0 |   0 |       0 | fclk_out_19       |
-| g15       | n/a   | BUFG/O          | None       |         203 |               1 | 180 |          24 |    0 |   0 |  0 |    0 |   0 |       0 | fclk_out_20       |
-| g16       | n/a   | BUFG/O          | None       |         225 |               1 | 200 |          26 |    0 |   0 |  0 |    0 |   0 |       0 | fclk_out_21       |
-+-----------+-------+-----------------+------------+-------------+-----------------+-----+-------------+------+-----+----+------+-----+---------+-------------------+
++-----------+-------+-----------------+------------+-------------+-----------------+-----+-------------+------+-----+----+------+-----+---------+-------------------------+
+| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF  | Memory LUTs | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                     |
++-----------+-------+-----------------+------------+-------------+-----------------+-----+-------------+------+-----+----+------+-----+---------+-------------------------+
+| g2        | n/a   | BUFG/O          | None       |         681 |               0 | 635 |          28 |    7 |   0 |  0 |    0 |   0 |       0 | clk_inst0/inst/dphy_clk |
+| g5        | n/a   | BUFG/O          | None       |          90 |               1 |  86 |           5 |    0 |   0 |  0 |    0 |   0 |       0 | fclk_out_15             |
+| g6        | n/a   | BUFG/O          | None       |         109 |               1 |  99 |          11 |    0 |   0 |  0 |    0 |   0 |       0 | fclk_out                |
+| g8        | n/a   | BUFG/O          | None       |         109 |               0 |  97 |          12 |    0 |   0 |  0 |    0 |   0 |       0 | fclk_out_16             |
+| g9        | n/a   | BUFG/O          | None       |         107 |               0 | 102 |           3 |    1 |   0 |  0 |    0 |   0 |       0 | fclk_out_13             |
+| g10       | n/a   | BUFG/O          | None       |         144 |               0 | 124 |          18 |    1 |   0 |  0 |    0 |   0 |       0 | fclk_out_14             |
+| g11       | n/a   | BUFG/O          | None       |         102 |               0 |  98 |           2 |    0 |   0 |  0 |    0 |   0 |       0 | fclk_out_17             |
+| g12       | n/a   | BUFG/O          | None       |         176 |               1 | 151 |          26 |    0 |   0 |  0 |    0 |   0 |       0 | fclk_out_18             |
+| g13       | n/a   | BUFG/O          | None       |         141 |               1 | 124 |          16 |    1 |   0 |  0 |    0 |   0 |       0 | fclk_out_19             |
+| g14       | n/a   | BUFG/O          | None       |         110 |               0 |  92 |          16 |    1 |   0 |  0 |    0 |   0 |       0 | fclk_out_20             |
+| g15       | n/a   | BUFG/O          | None       |         185 |               1 | 158 |          26 |    1 |   0 |  0 |    0 |   0 |       0 | fclk_out_21             |
+| g16       | n/a   | BUFG/O          | None       |         148 |               0 | 124 |          22 |    1 |   0 |  0 |    0 |   0 |       0 | fclk_out_22             |
++-----------+-------+-----------------+------------+-------------+-----------------+-----+-------------+------+-----+----+------+-----+---------+-------------------------+
 * Clock Loads column represents cell count of net connects that connect to a clock pin. Internal cell leaf pins are not considered
 ** Non-Clock Loads column represents cell count of non-clock pin loads
 *** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
@@ -721,13 +720,18 @@ All Modules
 30. Clock Region Cell Placement per Global Clock: Region X0Y1
 -------------------------------------------------------------
 
-+-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+-------------------+
-| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | Memory LUTs | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net               |
-+-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+-------------------+
-| g0        | n/a   | BUFG/O          | None       |        3550 |               0 | 3550 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | clk_inst0/inst/c0 |
-| g1        | n/a   | BUFG/O          | None       |         163 |               0 |  163 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | clk_inst0/inst/c1 |
-| g9        | n/a   | BUFG/O          | None       |           2 |               0 |    1 |           1 |    0 |   0 |  0 |    0 |   0 |       0 | fclk_out_23       |
-+-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+-------------------+
++-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+-------------------------+
+| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | Memory LUTs | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                     |
++-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+-------------------------+
+| g0        | n/a   | BUFG/O          | None       |        3356 |               0 | 3356 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | clk_inst0/inst/c0       |
+| g1        | n/a   | BUFG/O          | None       |         335 |               0 |  335 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | clk_inst0/inst/c1       |
+| g2        | n/a   | BUFG/O          | None       |           4 |               0 |    0 |           0 |    2 |   0 |  0 |    0 |   0 |       0 | clk_inst0/inst/dphy_clk |
+| g5        | n/a   | BUFG/O          | None       |           2 |               0 |    0 |           0 |    1 |   0 |  0 |    0 |   0 |       0 | fclk_out_15             |
+| g6        | n/a   | BUFG/O          | None       |           2 |               0 |    2 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | fclk_out                |
+| g7        | n/a   | BUFG/O          | None       |         109 |               1 |  106 |           4 |    0 |   0 |  0 |    0 |   0 |       0 | fclk_out_23             |
+| g8        | n/a   | BUFG/O          | None       |           2 |               0 |    0 |           0 |    1 |   0 |  0 |    0 |   0 |       0 | fclk_out_16             |
+| g16       | n/a   | BUFG/O          | None       |          33 |               0 |   33 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | fclk_out_22             |
++-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+-------------------------+
 * Clock Loads column represents cell count of net connects that connect to a clock pin. Internal cell leaf pins are not considered
 ** Non-Clock Loads column represents cell count of non-clock pin loads
 *** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
@@ -739,15 +743,14 @@ All Modules
 +-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | Memory LUTs | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                                                                                                                                                      |
 +-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| g0        | n/a   | BUFG/O          | None       |        3306 |               0 | 3290 |           3 |   11 |   0 |  0 |    0 |   0 |       0 | clk_inst0/inst/c0                                                                                                                                                                                        |
-| g1        | n/a   | BUFG/O          | None       |         200 |               0 |  200 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | clk_inst0/inst/c1                                                                                                                                                                                        |
-| g2        | n/a   | BUFG/O          | None       |          26 |               0 |   14 |           1 |    5 |   0 |  0 |    1 |   0 |       0 | clk_inst0/inst/dphy_clk                                                                                                                                                                                  |
+| g0        | n/a   | BUFG/O          | None       |        3337 |               0 | 3321 |           3 |   10 |   0 |  0 |    0 |   0 |       0 | clk_inst0/inst/c0                                                                                                                                                                                        |
+| g1        | n/a   | BUFG/O          | None       |        1005 |               1 | 1005 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | clk_inst0/inst/c1                                                                                                                                                                                        |
+| g2        | n/a   | BUFG/O          | None       |          10 |               0 |    3 |           0 |    3 |   0 |  0 |    1 |   0 |       0 | clk_inst0/inst/dphy_clk                                                                                                                                                                                  |
 | g3        | n/a   | BUFR/O          | None       |         903 |               0 |  889 |           1 |    8 |   0 |  0 |    0 |   0 |       0 | inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_dphy_0/inst/inst/bd_26df_mipi_dphy_0_0_tx_support_i/master_tx.bd_26df_mipi_dphy_0_0_tx_clock_module_support_i/txbyteclkhs_out    |
 | g6        | n/a   | BUFG/O          | None       |           2 |               0 |    0 |           0 |    1 |   0 |  0 |    0 |   0 |       0 | fclk_out                                                                                                                                                                                                 |
-| g7        | n/a   | BUFG/O          | None       |           2 |               0 |    0 |           0 |    1 |   0 |  0 |    0 |   0 |       0 | fclk_out_22                                                                                                                                                                                              |
-| g9        | n/a   | BUFG/O          | None       |           2 |               1 |    1 |           0 |    1 |   0 |  0 |    0 |   0 |       0 | fclk_out_23                                                                                                                                                                                              |
-| g12       | n/a   | BUFG/O          | None       |           2 |               0 |    0 |           0 |    1 |   0 |  0 |    0 |   0 |       0 | fclk_out_17                                                                                                                                                                                              |
-| g15       | n/a   | BUFG/O          | None       |           2 |               0 |    0 |           0 |    1 |   0 |  0 |    0 |   0 |       0 | fclk_out_20                                                                                                                                                                                              |
+| g7        | n/a   | BUFG/O          | None       |         138 |               0 |  114 |          22 |    1 |   0 |  0 |    0 |   0 |       0 | fclk_out_23                                                                                                                                                                                              |
+| g12       | n/a   | BUFG/O          | None       |           2 |               0 |    0 |           0 |    1 |   0 |  0 |    0 |   0 |       0 | fclk_out_18                                                                                                                                                                                              |
+| g16       | n/a   | BUFG/O          | None       |          19 |               0 |   19 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | fclk_out_22                                                                                                                                                                                              |
 | g18       | n/a   | BUFR/O          | None       |         126 |               0 |  125 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_dphy_0/inst/inst/bd_26df_mipi_dphy_0_0_tx_support_i/master_tx.bd_26df_mipi_dphy_0_0_tx_clock_module_support_i/oserdes_clkdiv_out |
 | g20       | n/a   | BUFG/O          | None       |           1 |               0 |    0 |           0 |    0 |   0 |  0 |    1 |   0 |       0 | inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_dphy_0/inst/inst/bd_26df_mipi_dphy_0_0_tx_support_i/master_tx.bd_26df_mipi_dphy_0_0_tx_clock_module_support_i/clkfb_bufg_i       |
 +-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -762,9 +765,9 @@ All Modules
 +-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | Memory LUTs | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                                                                                                                                                                                              |
 +-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| g0        | n/a   | BUFG/O          | None       |        1181 |               0 | 1181 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | clk_inst0/inst/c0                                                                                                                                                                                                                                |
-| g1        | n/a   | BUFG/O          | None       |           0 |               1 |    0 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | clk_inst0/inst/c1                                                                                                                                                                                                                                |
-| g2        | n/a   | BUFG/O          | None       |         341 |               0 |  341 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | clk_inst0/inst/dphy_clk                                                                                                                                                                                                                          |
+| g0        | n/a   | BUFG/O          | None       |        1986 |               0 | 1986 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | clk_inst0/inst/c0                                                                                                                                                                                                                                |
+| g1        | n/a   | BUFG/O          | None       |          22 |               1 |   22 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | clk_inst0/inst/c1                                                                                                                                                                                                                                |
+| g2        | n/a   | BUFG/O          | None       |         398 |               0 |  398 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | clk_inst0/inst/dphy_clk                                                                                                                                                                                                                          |
 | g17       | n/a   | BUFG/O          | None       |         182 |               0 |  182 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_dphy_0/inst/inst/bd_26df_mipi_dphy_0_0_tx_support_i/master_tx.bd_26df_mipi_dphy_0_0_tx_clock_module_support_i/bd_26df_mipi_dphy_0_0_clock_module_tx_i/inst/mmcm_clk_out2 |
 | g4        | n/a   | BUFG/O          | None       |           3 |               0 |    3 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_dphy_0/inst/inst/bd_26df_mipi_dphy_0_0_tx_support_i/master_tx.bd_26df_mipi_dphy_0_0_tx_clock_module_support_i/dl_tst_clk_out                                             |
 +-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -779,9 +782,8 @@ All Modules
 +-----------+-------+-----------------+------------+-------------+-----------------+-----+-------------+------+-----+----+------+-----+---------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF  | Memory LUTs | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                                                                                                                                                  |
 +-----------+-------+-----------------+------------+-------------+-----------------+-----+-------------+------+-----+----+------+-----+---------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| g0        | n/a   | BUFG/O          | None       |         940 |               0 | 940 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | clk_inst0/inst/c0                                                                                                                                                                                    |
-| g2        | n/a   | BUFG/O          | None       |         220 |               0 | 218 |           0 |    1 |   0 |  0 |    0 |   0 |       0 | clk_inst0/inst/dphy_clk                                                                                                                                                                              |
-| g8        | n/a   | BUFG/O          | None       |           2 |               0 |   0 |           0 |    1 |   0 |  0 |    0 |   0 |       0 | fclk_out_15                                                                                                                                                                                          |
+| g0        | n/a   | BUFG/O          | None       |         884 |               0 | 884 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | clk_inst0/inst/c0                                                                                                                                                                                    |
+| g2        | n/a   | BUFG/O          | None       |         159 |               0 | 159 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | clk_inst0/inst/dphy_clk                                                                                                                                                                              |
 | g4        | n/a   | BUFG/O          | None       |           9 |               0 |   9 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_dphy_0/inst/inst/bd_26df_mipi_dphy_0_0_tx_support_i/master_tx.bd_26df_mipi_dphy_0_0_tx_clock_module_support_i/dl_tst_clk_out |
 | g19       | n/a   | BUFG/O          | None       |           9 |               0 |   9 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_dphy_0/inst/inst/bd_26df_mipi_dphy_0_0_tx_support_i/master_tx.bd_26df_mipi_dphy_0_0_tx_clock_module_support_i/cl_tst_clk_out |
 +-----------+-------+-----------------+------------+-------------+-----------------+-----+-------------+------+-----+----+------+-----+---------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -890,14 +892,14 @@ resize_pblock [get_pblocks {CLKAG_inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_
 #startgroup
 create_pblock {CLKAG_fclk_out_23}
 add_cells_to_pblock [get_pblocks  {CLKAG_fclk_out_23}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="fclk_out_23"}]]]
-resize_pblock [get_pblocks {CLKAG_fclk_out_23}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
+resize_pblock [get_pblocks {CLKAG_fclk_out_23}] -add {CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
 #endgroup
 
 # Clock net "fclk_out_22" driven by instance "fclk_in_reg[0]_i_1__9" located at site "BUFGCTRL_X0Y25"
 #startgroup
 create_pblock {CLKAG_fclk_out_22}
 add_cells_to_pblock [get_pblocks  {CLKAG_fclk_out_22}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="fclk_out_22"}]]]
-resize_pblock [get_pblocks {CLKAG_fclk_out_22}] -add {CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
+resize_pblock [get_pblocks {CLKAG_fclk_out_22}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
 #endgroup
 
 # Clock net "fclk_out_21" driven by instance "fclk_in_reg[0]_i_1__8" located at site "BUFGCTRL_X0Y1"
@@ -911,7 +913,7 @@ resize_pblock [get_pblocks {CLKAG_fclk_out_21}] -add {CLOCKREGION_X0Y0:CLOCKREGI
 #startgroup
 create_pblock {CLKAG_fclk_out_20}
 add_cells_to_pblock [get_pblocks  {CLKAG_fclk_out_20}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="fclk_out_20"}]]]
-resize_pblock [get_pblocks {CLKAG_fclk_out_20}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
+resize_pblock [get_pblocks {CLKAG_fclk_out_20}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
 #endgroup
 
 # Clock net "fclk_out_19" driven by instance "fclk_in_reg[0]_i_1__6" located at site "BUFGCTRL_X0Y0"
@@ -925,28 +927,28 @@ resize_pblock [get_pblocks {CLKAG_fclk_out_19}] -add {CLOCKREGION_X0Y0:CLOCKREGI
 #startgroup
 create_pblock {CLKAG_fclk_out_18}
 add_cells_to_pblock [get_pblocks  {CLKAG_fclk_out_18}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="fclk_out_18"}]]]
-resize_pblock [get_pblocks {CLKAG_fclk_out_18}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
+resize_pblock [get_pblocks {CLKAG_fclk_out_18}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
 #endgroup
 
 # Clock net "fclk_out_17" driven by instance "fclk_in_reg[0]_i_1__4" located at site "BUFGCTRL_X0Y19"
 #startgroup
 create_pblock {CLKAG_fclk_out_17}
 add_cells_to_pblock [get_pblocks  {CLKAG_fclk_out_17}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="fclk_out_17"}]]]
-resize_pblock [get_pblocks {CLKAG_fclk_out_17}] -add {CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
+resize_pblock [get_pblocks {CLKAG_fclk_out_17}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
 #endgroup
 
 # Clock net "fclk_out_16" driven by instance "fclk_in_reg[0]_i_1__3" located at site "BUFGCTRL_X0Y27"
 #startgroup
 create_pblock {CLKAG_fclk_out_16}
 add_cells_to_pblock [get_pblocks  {CLKAG_fclk_out_16}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="fclk_out_16"}]]]
-resize_pblock [get_pblocks {CLKAG_fclk_out_16}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
+resize_pblock [get_pblocks {CLKAG_fclk_out_16}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
 #endgroup
 
 # Clock net "fclk_out_15" driven by instance "fclk_in_reg[0]_i_1__2" located at site "BUFGCTRL_X0Y28"
 #startgroup
 create_pblock {CLKAG_fclk_out_15}
 add_cells_to_pblock [get_pblocks  {CLKAG_fclk_out_15}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="fclk_out_15"}]]]
-resize_pblock [get_pblocks {CLKAG_fclk_out_15}] -add {CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2}
+resize_pblock [get_pblocks {CLKAG_fclk_out_15}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
 #endgroup
 
 # Clock net "fclk_out_14" driven by instance "fclk_in_reg[0]_i_1__1" located at site "BUFGCTRL_X0Y30"
@@ -967,26 +969,26 @@ resize_pblock [get_pblocks {CLKAG_fclk_out_13}] -add {CLOCKREGION_X0Y0:CLOCKREGI
 #startgroup
 create_pblock {CLKAG_fclk_out}
 add_cells_to_pblock [get_pblocks  {CLKAG_fclk_out}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="fclk_out"}]]]
-resize_pblock [get_pblocks {CLKAG_fclk_out}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
+resize_pblock [get_pblocks {CLKAG_fclk_out}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
 #endgroup
 
 # Clock net "clk_inst0/inst/dphy_clk" driven by instance "clk_inst0/inst/clkout3_buf" located at site "BUFGCTRL_X0Y4"
 #startgroup
 create_pblock {CLKAG_clk_inst0/inst/dphy_clk}
 add_cells_to_pblock [get_pblocks  {CLKAG_clk_inst0/inst/dphy_clk}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL && NAME!=inst_mipi_csi2_tx/inst_mipi_csi2_tx/inst_mipi_csi2_tx_subsyst/inst/mipi_dphy_0/inst/inst/bd_26df_mipi_dphy_0_0_tx_support_i/master_tx.bd_26df_mipi_dphy_0_0_tx_clock_module_support_i/bd_26df_mipi_dphy_0_0_clock_module_tx_i/inst/mmcm_adv_inst} -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="clk_inst0/inst/dphy_clk"}]]]
-resize_pblock [get_pblocks {CLKAG_clk_inst0/inst/dphy_clk}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2}
+resize_pblock [get_pblocks {CLKAG_clk_inst0/inst/dphy_clk}] -add {CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2}
 #endgroup
 
 # Clock net "clk_inst0/inst/c1" driven by instance "clk_inst0/inst/clkout2_buf" located at site "BUFGCTRL_X0Y3"
 #startgroup
 create_pblock {CLKAG_clk_inst0/inst/c1}
 add_cells_to_pblock [get_pblocks  {CLKAG_clk_inst0/inst/c1}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL && NAME!=ROIC_MCLK0_OBUF_inst} -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="clk_inst0/inst/c1"}]]]
-resize_pblock [get_pblocks {CLKAG_clk_inst0/inst/c1}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
+resize_pblock [get_pblocks {CLKAG_clk_inst0/inst/c1}] -add {CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
 #endgroup
 
 # Clock net "clk_inst0/inst/c0" driven by instance "clk_inst0/inst/clkout1_buf" located at site "BUFGCTRL_X0Y2"
 #startgroup
 create_pblock {CLKAG_clk_inst0/inst/c0}
 add_cells_to_pblock [get_pblocks  {CLKAG_clk_inst0/inst/c0}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="clk_inst0/inst/c0"}]]]
-resize_pblock [get_pblocks {CLKAG_clk_inst0/inst/c0}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2}
+resize_pblock [get_pblocks {CLKAG_clk_inst0/inst/c0}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2}
 #endgroup

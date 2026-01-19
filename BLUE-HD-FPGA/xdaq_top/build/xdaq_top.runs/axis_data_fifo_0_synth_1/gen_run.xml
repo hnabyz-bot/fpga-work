@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="axis_data_fifo_0_synth_1" LaunchPart="xc7a35tfgg484-1" LaunchTime="1768266546">
+<GenRun Id="axis_data_fifo_0_synth_1" LaunchPart="xc7a35tfgg484-1" LaunchTime="1768804351">
+  <File Type="VDS-TIMING-PB" Name="axis_data_fifo_0_timing_summary_synth.pb"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="axis_data_fifo_0_timing_summary_synth.rpt"/>
   <File Type="RDS-DCP" Name="axis_data_fifo_0.dcp"/>
-  <File Type="RDS-RDS" Name="axis_data_fifo_0.vds"/>
-  <File Type="RDS-UTIL" Name="axis_data_fifo_0_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="axis_data_fifo_0_utilization_synth.pb"/>
-  <File Type="PA-TCL" Name="axis_data_fifo_0.tcl"/>
+  <File Type="RDS-UTIL" Name="axis_data_fifo_0_utilization_synth.rpt"/>
+  <File Type="RDS-PROPCONSTRS" Name="axis_data_fifo_0_drc_synth.rpt"/>
+  <File Type="RDS-RDS" Name="axis_data_fifo_0.vds"/>
   <File Type="REPORTS-TCL" Name="axis_data_fifo_0_reports.tcl"/>
+  <File Type="PA-TCL" Name="axis_data_fifo_0.tcl"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/axis_data_fifo_0" RelGenDir="$PGENDIR/axis_data_fifo_0">
     <File Path="$PPRDIR/../source/hdl/csi2/ip/axis_data_fifo_0/axis_data_fifo_0.xci">
       <FileInfo>
@@ -40,6 +43,22 @@
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
         <Attr Name="UsedInSteps" Val="impl_1;WRITE_BITSTREAM;TCL.POST"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/utils_1/imports/impl_1/blue_hd_top_routed.dcp">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedInSteps" Val="impl_1"/>
+        <Attr Name="AutoDcp" Val="1"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/utils_1/imports/synth_1/blue_hd_top.dcp">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedInSteps" Val="synth_1"/>
+        <Attr Name="AutoDcp" Val="1"/>
       </FileInfo>
     </File>
     <Config>

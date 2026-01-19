@@ -2,10 +2,10 @@
 -- Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2024.2.2 (lin64) Build 6060944 Thu Mar 06 19:10:09 MST 2025
--- Date        : Fri Jan 16 15:13:50 2026
+-- Date        : Fri Jan 16 15:13:49 2026
 -- Host        : drlinux running 64-bit Ubuntu 22.04.5 LTS
--- Command     : write_vhdl -force -mode funcsim
---               /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_init_gen/mipi_init_gen_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top mipi_init_gen -prefix
+--               mipi_init_gen_ mipi_init_gen_sim_netlist.vhdl
 -- Design      : mipi_init_gen
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -22,8 +22,6 @@ entity mipi_init_gen_axi_traffic_gen_v3_0_20_asynch_rst_ff is
     reset : in STD_LOGIC;
     q : out STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of mipi_init_gen_axi_traffic_gen_v3_0_20_asynch_rst_ff : entity is "axi_traffic_gen_v3_0_20_asynch_rst_ff";
   attribute dont_touch : string;
   attribute dont_touch of mipi_init_gen_axi_traffic_gen_v3_0_20_asynch_rst_ff : entity is "true";
 end mipi_init_gen_axi_traffic_gen_v3_0_20_asynch_rst_ff;
@@ -228,8 +226,6 @@ entity mipi_init_gen_axi_traffic_gen_v3_0_20_systeminit_mrdwr is
     \wdata_m_reg[31]_0\ : in STD_LOGIC_VECTOR ( 31 downto 0 );
     \ATG_SYSTEST_NXT_PTR.nxt_rom_ptr_reg[7]_0\ : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of mipi_init_gen_axi_traffic_gen_v3_0_20_systeminit_mrdwr : entity is "axi_traffic_gen_v3_0_20_systeminit_mrdwr";
 end mipi_init_gen_axi_traffic_gen_v3_0_20_systeminit_mrdwr;
 
 architecture STRUCTURE of mipi_init_gen_axi_traffic_gen_v3_0_20_systeminit_mrdwr is
@@ -5545,8 +5541,6 @@ entity mipi_init_gen_xpm_memory_base is
   attribute MESSAGE_CONTROL of mipi_init_gen_xpm_memory_base : entity is 0;
   attribute NUM_CHAR_LOC : integer;
   attribute NUM_CHAR_LOC of mipi_init_gen_xpm_memory_base : entity is 0;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of mipi_init_gen_xpm_memory_base : entity is "xpm_memory_base";
   attribute P_ECC_MODE : integer;
   attribute P_ECC_MODE of mipi_init_gen_xpm_memory_base : entity is 0;
   attribute P_ENABLE_BYTE_WRITE_A : integer;
@@ -10058,8 +10052,6 @@ entity mipi_init_gen_xpm_memory_spram is
     rom_eof0 : in STD_LOGIC;
     \rd_check2_inferred__0/i__carry__1\ : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of mipi_init_gen_xpm_memory_spram : entity is "xpm_memory_spram";
 end mipi_init_gen_xpm_memory_spram;
 
 architecture STRUCTURE of mipi_init_gen_xpm_memory_spram is
@@ -12982,8 +12974,6 @@ entity mipi_init_gen_axi_traffic_gen_v3_0_20_systeminit_dmg is
     rom_eof0 : in STD_LOGIC;
     \rd_check2_inferred__0/i__carry__1\ : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of mipi_init_gen_axi_traffic_gen_v3_0_20_systeminit_dmg : entity is "axi_traffic_gen_v3_0_20_systeminit_dmg";
 end mipi_init_gen_axi_traffic_gen_v3_0_20_systeminit_dmg;
 
 architecture STRUCTURE of mipi_init_gen_axi_traffic_gen_v3_0_20_systeminit_dmg is
@@ -13315,8 +13305,6 @@ entity mipi_init_gen_axi_traffic_gen_v3_0_20_systeminit_top is
     m_axi_lite_ch1_rvalid : in STD_LOGIC;
     m_axi_lite_ch1_rresp : in STD_LOGIC_VECTOR ( 1 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of mipi_init_gen_axi_traffic_gen_v3_0_20_systeminit_top : entity is "axi_traffic_gen_v3_0_20_systeminit_top";
 end mipi_init_gen_axi_traffic_gen_v3_0_20_systeminit_top;
 
 architecture STRUCTURE of mipi_init_gen_axi_traffic_gen_v3_0_20_systeminit_top is
@@ -14183,8 +14171,6 @@ entity mipi_init_gen_axi_traffic_gen_v3_0_20_top is
   attribute C_ZERO_INVALID of mipi_init_gen_axi_traffic_gen_v3_0_20_top : entity is 1;
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of mipi_init_gen_axi_traffic_gen_v3_0_20_top : entity is "yes";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of mipi_init_gen_axi_traffic_gen_v3_0_20_top : entity is "axi_traffic_gen_v3_0_20_top";
 end mipi_init_gen_axi_traffic_gen_v3_0_20_top;
 
 architecture STRUCTURE of mipi_init_gen_axi_traffic_gen_v3_0_20_top is

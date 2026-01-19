@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="indata_ram_synth_1" LaunchPart="xc7a35tfgg484-1" LaunchTime="1768266546">
+<GenRun Id="indata_ram_synth_1" LaunchPart="xc7a35tfgg484-1" LaunchTime="1768804351">
+  <File Type="VDS-TIMING-PB" Name="indata_ram_timing_summary_synth.pb"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="indata_ram_timing_summary_synth.rpt"/>
   <File Type="RDS-DCP" Name="indata_ram.dcp"/>
-  <File Type="RDS-RDS" Name="indata_ram.vds"/>
-  <File Type="RDS-UTIL" Name="indata_ram_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="indata_ram_utilization_synth.pb"/>
-  <File Type="PA-TCL" Name="indata_ram.tcl"/>
+  <File Type="RDS-UTIL" Name="indata_ram_utilization_synth.rpt"/>
+  <File Type="RDS-PROPCONSTRS" Name="indata_ram_drc_synth.rpt"/>
+  <File Type="RDS-RDS" Name="indata_ram.vds"/>
   <File Type="REPORTS-TCL" Name="indata_ram_reports.tcl"/>
+  <File Type="PA-TCL" Name="indata_ram.tcl"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/indata_ram" RelGenDir="$PGENDIR/indata_ram">
     <File Path="$PPRDIR/../source/ip/indata_ram/indata_ram.xci">
       <FileInfo>
@@ -40,6 +43,22 @@
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
         <Attr Name="UsedInSteps" Val="impl_1;WRITE_BITSTREAM;TCL.POST"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/utils_1/imports/impl_1/blue_hd_top_routed.dcp">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedInSteps" Val="impl_1"/>
+        <Attr Name="AutoDcp" Val="1"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/utils_1/imports/synth_1/blue_hd_top.dcp">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedInSteps" Val="synth_1"/>
+        <Attr Name="AutoDcp" Val="1"/>
       </FileInfo>
     </File>
     <Config>

@@ -2,10 +2,10 @@
 -- Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2024.2.2 (lin64) Build 6060944 Thu Mar 06 19:10:09 MST 2025
--- Date        : Fri Jan 16 15:13:27 2026
+-- Date        : Fri Jan 16 15:13:26 2026
 -- Host        : drlinux running 64-bit Ubuntu 22.04.5 LTS
--- Command     : write_vhdl -force -mode synth_stub
---               /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/mipi_csi2_tx_subsys_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top mipi_csi2_tx_subsys -prefix
+--               mipi_csi2_tx_subsys_ mipi_csi2_tx_subsys_stub.vhdl
 -- Design      : mipi_csi2_tx_subsys
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7a35tfgg484-1

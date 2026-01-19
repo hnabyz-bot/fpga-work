@@ -1,8 +1,8 @@
-Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version     : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-| Date             : Thu Jan 15 14:21:19 2026
-| Host             : work-dev running 64-bit major release  (build 9200)
+| Tool Version     : Vivado v.2024.2.2 (lin64) Build 6060944 Thu Mar 06 19:10:09 MST 2025
+| Date             : Mon Jan 19 15:37:48 2026
+| Host             : drlinux running 64-bit Ubuntu 22.04.5 LTS
 | Command          : report_power -file blue_hd_top_power_routed.rpt -pb blue_hd_top_power_summary_routed.pb -rpx blue_hd_top_power_routed.rpx
 | Design           : blue_hd_top
 | Device           : xc7a35tfgg484-1
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.552        |
+| Total On-Chip Power (W)  | 0.589        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.479        |
+| Dynamic (W)              | 0.516        |
 | Device Static (W)        | 0.073        |
 | Effective TJA (C/W)      | 2.8          |
-| Max Ambient (C)          | 83.4         |
-| Junction Temperature (C) | 26.6         |
+| Max Ambient (C)          | 83.3         |
+| Junction Temperature (C) | 26.7         |
 | Confidence Level         | Medium       |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,22 +52,22 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.056 |       41 |       --- |             --- |
-| Slice Logic              |     0.007 |    40897 |       --- |             --- |
-|   LUT as Logic           |     0.006 |    13763 |     20800 |           66.17 |
-|   Register               |    <0.001 |    19339 |     41600 |           46.49 |
-|   CARRY4                 |    <0.001 |      836 |      8150 |           10.26 |
+| Clocks                   |     0.058 |       41 |       --- |             --- |
+| Slice Logic              |     0.007 |    40944 |       --- |             --- |
+|   LUT as Logic           |     0.006 |    13922 |     20800 |           66.93 |
+|   Register               |    <0.001 |    19403 |     41600 |           46.64 |
+|   CARRY4                 |    <0.001 |      840 |      8150 |           10.31 |
 |   LUT as Distributed RAM |    <0.001 |      780 |      9600 |            8.13 |
 |   Others                 |    <0.001 |      667 |       --- |             --- |
-|   F7/F8 Muxes            |    <0.001 |     1994 |     32600 |            6.12 |
+|   F7/F8 Muxes            |    <0.001 |     1993 |     32600 |            6.11 |
 |   LUT as Shift Register  |    <0.001 |      395 |      9600 |            4.11 |
-| Signals                  |     0.016 |    31747 |       --- |             --- |
+| Signals                  |     0.016 |    31811 |       --- |             --- |
 | Block RAM                |     0.031 |       25 |        50 |           50.00 |
 | MMCM                     |     0.214 |        2 |         5 |           40.00 |
 | DSPs                     |     0.000 |       11 |        90 |           12.22 |
-| I/O                      |     0.156 |      150 |       250 |           60.00 |
+| I/O                      |     0.190 |      150 |       250 |           60.00 |
 | Static Power             |     0.073 |          |           |                 |
-| Total                    |     0.552 |          |           |                 |
+| Total                    |     0.589 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -77,8 +77,8 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.134 |       0.123 |      0.011 |       NA    | Unspecified | NA         |
-| Vccaux    |       1.800 |     0.199 |       0.186 |      0.013 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.136 |       0.125 |      0.011 |       NA    | Unspecified | NA         |
+| Vccaux    |       1.800 |     0.218 |       0.205 |      0.013 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.009 |       0.008 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -184,104 +184,104 @@ Table of Contents
 +----------------------------------------+-----------+
 | Name                                   | Power (W) |
 +----------------------------------------+-----------+
-| blue_hd_top                            |     0.479 |
+| blue_hd_top                            |     0.516 |
 |   clk_inst0                            |     0.108 |
 |     inst                               |     0.108 |
-|   gen_ti_roic_top[0].ti_roic_top_inst  |     0.012 |
+|   gen_ti_roic_top[0].ti_roic_top_inst  |     0.015 |
 |     bit_clock_gen                      |     0.006 |
 |     data_reorder                       |     0.003 |
 |       even_ram_inst                    |     0.001 |
 |       odd_ram_inst                     |     0.001 |
-|     deserializer                       |     0.003 |
-|   gen_ti_roic_top[10].ti_roic_top_inst |     0.012 |
+|     deserializer                       |     0.005 |
+|   gen_ti_roic_top[10].ti_roic_top_inst |     0.015 |
 |     bit_clock_gen                      |     0.006 |
 |     data_reorder                       |     0.003 |
 |       even_ram_inst                    |     0.001 |
 |       odd_ram_inst                     |     0.001 |
-|     deserializer                       |     0.003 |
-|   gen_ti_roic_top[11].ti_roic_top_inst |     0.012 |
+|     deserializer                       |     0.005 |
+|   gen_ti_roic_top[11].ti_roic_top_inst |     0.015 |
 |     bit_clock_gen                      |     0.006 |
 |     data_reorder                       |     0.003 |
 |       even_ram_inst                    |     0.001 |
 |       odd_ram_inst                     |     0.001 |
-|     deserializer                       |     0.003 |
-|   gen_ti_roic_top[12].ti_roic_top_inst |     0.012 |
+|     deserializer                       |     0.005 |
+|   gen_ti_roic_top[12].ti_roic_top_inst |     0.015 |
 |     bit_clock_gen                      |     0.006 |
 |     data_reorder                       |     0.003 |
 |       even_ram_inst                    |     0.001 |
 |       odd_ram_inst                     |     0.001 |
-|     deserializer                       |     0.003 |
-|   gen_ti_roic_top[13].ti_roic_top_inst |     0.012 |
+|     deserializer                       |     0.005 |
+|   gen_ti_roic_top[13].ti_roic_top_inst |     0.015 |
 |     bit_clock_gen                      |     0.006 |
 |     data_reorder                       |     0.003 |
 |       even_ram_inst                    |     0.001 |
 |       odd_ram_inst                     |     0.001 |
-|     deserializer                       |     0.003 |
-|   gen_ti_roic_top[1].ti_roic_top_inst  |     0.012 |
+|     deserializer                       |     0.005 |
+|   gen_ti_roic_top[1].ti_roic_top_inst  |     0.015 |
 |     bit_clock_gen                      |     0.006 |
 |     data_reorder                       |     0.003 |
 |       even_ram_inst                    |     0.001 |
 |       odd_ram_inst                     |     0.001 |
-|     deserializer                       |     0.003 |
-|   gen_ti_roic_top[2].ti_roic_top_inst  |     0.012 |
+|     deserializer                       |     0.005 |
+|   gen_ti_roic_top[2].ti_roic_top_inst  |     0.017 |
+|     bit_clock_gen                      |     0.008 |
+|     data_reorder                       |     0.003 |
+|       even_ram_inst                    |     0.001 |
+|       odd_ram_inst                     |     0.001 |
+|     deserializer                       |     0.005 |
+|   gen_ti_roic_top[3].ti_roic_top_inst  |     0.017 |
+|     bit_clock_gen                      |     0.008 |
+|     data_reorder                       |     0.003 |
+|       even_ram_inst                    |     0.001 |
+|       odd_ram_inst                     |     0.001 |
+|     deserializer                       |     0.005 |
+|   gen_ti_roic_top[4].ti_roic_top_inst  |     0.015 |
 |     bit_clock_gen                      |     0.006 |
 |     data_reorder                       |     0.003 |
 |       even_ram_inst                    |     0.001 |
 |       odd_ram_inst                     |     0.001 |
-|     deserializer                       |     0.003 |
-|   gen_ti_roic_top[3].ti_roic_top_inst  |     0.012 |
+|     deserializer                       |     0.005 |
+|   gen_ti_roic_top[5].ti_roic_top_inst  |     0.015 |
 |     bit_clock_gen                      |     0.006 |
 |     data_reorder                       |     0.003 |
 |       even_ram_inst                    |     0.001 |
 |       odd_ram_inst                     |     0.001 |
-|     deserializer                       |     0.003 |
-|   gen_ti_roic_top[4].ti_roic_top_inst  |     0.012 |
+|     deserializer                       |     0.005 |
+|   gen_ti_roic_top[6].ti_roic_top_inst  |     0.017 |
+|     bit_clock_gen                      |     0.008 |
+|     data_reorder                       |     0.003 |
+|       even_ram_inst                    |     0.001 |
+|       odd_ram_inst                     |     0.001 |
+|     deserializer                       |     0.005 |
+|   gen_ti_roic_top[7].ti_roic_top_inst  |     0.015 |
 |     bit_clock_gen                      |     0.006 |
 |     data_reorder                       |     0.003 |
 |       even_ram_inst                    |     0.001 |
 |       odd_ram_inst                     |     0.001 |
-|     deserializer                       |     0.003 |
-|   gen_ti_roic_top[5].ti_roic_top_inst  |     0.012 |
+|     deserializer                       |     0.005 |
+|   gen_ti_roic_top[8].ti_roic_top_inst  |     0.015 |
 |     bit_clock_gen                      |     0.006 |
 |     data_reorder                       |     0.003 |
 |       even_ram_inst                    |     0.001 |
 |       odd_ram_inst                     |     0.001 |
-|     deserializer                       |     0.003 |
-|   gen_ti_roic_top[6].ti_roic_top_inst  |     0.012 |
+|     deserializer                       |     0.005 |
+|   gen_ti_roic_top[9].ti_roic_top_inst  |     0.015 |
 |     bit_clock_gen                      |     0.006 |
 |     data_reorder                       |     0.003 |
 |       even_ram_inst                    |     0.001 |
 |       odd_ram_inst                     |     0.001 |
-|     deserializer                       |     0.003 |
-|   gen_ti_roic_top[7].ti_roic_top_inst  |     0.012 |
-|     bit_clock_gen                      |     0.006 |
-|     data_reorder                       |     0.003 |
-|       even_ram_inst                    |     0.001 |
-|       odd_ram_inst                     |     0.001 |
-|     deserializer                       |     0.003 |
-|   gen_ti_roic_top[8].ti_roic_top_inst  |     0.012 |
-|     bit_clock_gen                      |     0.006 |
-|     data_reorder                       |     0.003 |
-|       even_ram_inst                    |     0.001 |
-|       odd_ram_inst                     |     0.001 |
-|     deserializer                       |     0.003 |
-|   gen_ti_roic_top[9].ti_roic_top_inst  |     0.012 |
-|     bit_clock_gen                      |     0.006 |
-|     data_reorder                       |     0.003 |
-|       even_ram_inst                    |     0.001 |
-|       odd_ram_inst                     |     0.001 |
-|     deserializer                       |     0.003 |
+|     deserializer                       |     0.005 |
 |   host_if_inst                         |     0.003 |
-|   inst_mipi_csi2_tx                    |     0.155 |
+|   inst_mipi_csi2_tx                    |     0.157 |
 |     gen_axis_fifo[0].inst_out_fifo     |     0.001 |
 |       inst                             |     0.001 |
 |     gen_axis_fifo[1].inst_out_fifo     |     0.001 |
 |       inst                             |     0.001 |
-|     inst_mipi_csi2_tx                  |     0.152 |
-|       inst_mipi_csi2_tx_subsyst        |     0.150 |
+|     inst_mipi_csi2_tx                  |     0.154 |
+|       inst_mipi_csi2_tx_subsyst        |     0.152 |
 |       inst_mipi_init_gen               |     0.002 |
 |   read_data_mux_inst                   |     0.003 |
-|   reg_map_inst                         |     0.025 |
+|   reg_map_inst                         |     0.024 |
 |   roic_tg_gen_int                      |     0.001 |
 |   seq_fsm_inst                         |     0.002 |
 +----------------------------------------+-----------+

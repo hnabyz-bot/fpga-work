@@ -2,10 +2,10 @@
 -- Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2024.2.2 (lin64) Build 6060944 Thu Mar 06 19:10:09 MST 2025
--- Date        : Fri Jan 16 15:13:27 2026
+-- Date        : Fri Jan 16 15:13:26 2026
 -- Host        : drlinux running 64-bit Ubuntu 22.04.5 LTS
--- Command     : write_vhdl -force -mode funcsim
---               /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/mipi_csi2_tx_subsys_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top mipi_csi2_tx_subsys -prefix
+--               mipi_csi2_tx_subsys_ mipi_csi2_tx_subsys_sim_netlist.vhdl
 -- Design      : mipi_csi2_tx_subsys
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -67,8 +67,6 @@ entity mipi_csi2_tx_subsys_bd_26df is
   );
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of mipi_csi2_tx_subsys_bd_26df : entity is "mipi_csi2_tx_subsys.hwdef";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of mipi_csi2_tx_subsys_bd_26df : entity is "bd_26df";
 end mipi_csi2_tx_subsys_bd_26df;
 
 architecture STRUCTURE of mipi_csi2_tx_subsys_bd_26df is

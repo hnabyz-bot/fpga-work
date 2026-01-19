@@ -2,10 +2,10 @@
 -- Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2024.2.2 (lin64) Build 6060944 Thu Mar 06 19:10:09 MST 2025
--- Date        : Fri Jan 16 15:13:50 2026
+-- Date        : Fri Jan 16 15:13:49 2026
 -- Host        : drlinux running 64-bit Ubuntu 22.04.5 LTS
--- Command     : write_vhdl -force -mode synth_stub
---               /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_init_gen/mipi_init_gen_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top mipi_init_gen -prefix
+--               mipi_init_gen_ mipi_init_gen_stub.vhdl
 -- Design      : mipi_init_gen
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7a35tfgg484-1

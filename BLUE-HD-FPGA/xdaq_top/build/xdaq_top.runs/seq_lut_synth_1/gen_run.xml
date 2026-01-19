@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="seq_lut_synth_1" LaunchPart="xc7a35tfgg484-1" LaunchTime="1768266546">
+<GenRun Id="seq_lut_synth_1" LaunchPart="xc7a35tfgg484-1" LaunchTime="1768804351">
+  <File Type="VDS-TIMING-PB" Name="seq_lut_timing_summary_synth.pb"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="seq_lut_timing_summary_synth.rpt"/>
   <File Type="RDS-DCP" Name="seq_lut.dcp"/>
-  <File Type="RDS-RDS" Name="seq_lut.vds"/>
-  <File Type="RDS-UTIL" Name="seq_lut_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="seq_lut_utilization_synth.pb"/>
-  <File Type="PA-TCL" Name="seq_lut.tcl"/>
+  <File Type="RDS-UTIL" Name="seq_lut_utilization_synth.rpt"/>
+  <File Type="RDS-PROPCONSTRS" Name="seq_lut_drc_synth.rpt"/>
+  <File Type="RDS-RDS" Name="seq_lut.vds"/>
   <File Type="REPORTS-TCL" Name="seq_lut_reports.tcl"/>
+  <File Type="PA-TCL" Name="seq_lut.tcl"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/seq_lut" RelGenDir="$PGENDIR/seq_lut">
     <File Path="$PPRDIR/../source/ip/seq_lut/seq_lut.xci">
       <FileInfo>
@@ -40,6 +43,22 @@
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
         <Attr Name="UsedInSteps" Val="impl_1;WRITE_BITSTREAM;TCL.POST"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/utils_1/imports/impl_1/blue_hd_top_routed.dcp">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedInSteps" Val="impl_1"/>
+        <Attr Name="AutoDcp" Val="1"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/utils_1/imports/synth_1/blue_hd_top.dcp">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedInSteps" Val="synth_1"/>
+        <Attr Name="AutoDcp" Val="1"/>
       </FileInfo>
     </File>
     <Config>

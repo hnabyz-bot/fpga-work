@@ -2,10 +2,10 @@
 // Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2024.2.2 (lin64) Build 6060944 Thu Mar 06 19:10:09 MST 2025
-// Date        : Fri Jan 16 15:12:44 2026
+// Date        : Fri Jan 16 15:12:43 2026
 // Host        : drlinux running 64-bit Ubuntu 22.04.5 LTS
-// Command     : write_verilog -force -mode synth_stub
-//               /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/axis_data_fifo_0/axis_data_fifo_0_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top axis_data_fifo_0 -prefix
+//               axis_data_fifo_0_ axis_data_fifo_0_stub.v
 // Design      : axis_data_fifo_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7a35tfgg484-1
