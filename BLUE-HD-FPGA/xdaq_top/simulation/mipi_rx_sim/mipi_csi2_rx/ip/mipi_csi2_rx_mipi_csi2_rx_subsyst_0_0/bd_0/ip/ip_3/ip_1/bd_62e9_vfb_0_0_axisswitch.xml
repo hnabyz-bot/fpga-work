@@ -9046,6 +9046,106 @@
     </spirit:memoryMap>
   </spirit:memoryMaps>
   <spirit:model>
+    <spirit:views>
+      <spirit:view>
+        <spirit:name>xilinx_systemcsimulation</spirit:name>
+        <spirit:displayName>SystemC Simulation</spirit:displayName>
+        <spirit:envIdentifier>systemCSource:vivado.xilinx.com:simulation</spirit:envIdentifier>
+        <spirit:language>systemc</spirit:language>
+        <spirit:modelName>bd_62e9_vfb_0_0_axisswitch_core</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_systemcsimulation_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>GENtimestamp</spirit:name>
+            <spirit:value>Fri Jan 16 06:10:58 UTC 2026</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>outputProductCRC</spirit:name>
+            <spirit:value>9:cb1eb952</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>sim_type</spirit:name>
+            <spirit:value>tlm</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>use_subcore_outputs</spirit:name>
+            <spirit:value>false</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_systemcsimulationwrapper</spirit:name>
+        <spirit:displayName>SystemC Simulation Wrapper</spirit:displayName>
+        <spirit:envIdentifier>systemCSource:vivado.xilinx.com:simulation.wrapper</spirit:envIdentifier>
+        <spirit:language>systemc</spirit:language>
+        <spirit:modelName>bd_62e9_vfb_0_0_axisswitch</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_systemcsimulationwrapper_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>GENtimestamp</spirit:name>
+            <spirit:value>Fri Jan 16 06:10:58 UTC 2026</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>outputProductCRC</spirit:name>
+            <spirit:value>9:cb1eb952</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>sim_type</spirit:name>
+            <spirit:value>tlm</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_verilogbehavioralsimulation</spirit:name>
+        <spirit:displayName>Verilog Simulation</spirit:displayName>
+        <spirit:envIdentifier>verilogSource:vivado.xilinx.com:simulation</spirit:envIdentifier>
+        <spirit:language>verilog</spirit:language>
+        <spirit:modelName>axis_switch_v1_1_34_axis_switch</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_verilogbehavioralsimulation_xilinx_com_ip_axis_infrastructure_1_1__ref_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_verilogbehavioralsimulation_xilinx_com_ip_axis_register_slice_1_1__ref_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_verilogbehavioralsimulation_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>GENtimestamp</spirit:name>
+            <spirit:value>Fri Jan 16 06:10:58 UTC 2026</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>outputProductCRC</spirit:name>
+            <spirit:value>9:99c06ebd</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_verilogsimulationwrapper</spirit:name>
+        <spirit:displayName>Verilog Simulation Wrapper</spirit:displayName>
+        <spirit:envIdentifier>verilogSource:vivado.xilinx.com:simulation.wrapper</spirit:envIdentifier>
+        <spirit:language>verilog</spirit:language>
+        <spirit:modelName>bd_62e9_vfb_0_0_axisswitch</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_verilogsimulationwrapper_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>GENtimestamp</spirit:name>
+            <spirit:value>Fri Jan 16 06:10:58 UTC 2026</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>outputProductCRC</spirit:name>
+            <spirit:value>9:99c06ebd</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+    </spirit:views>
     <spirit:ports>
       <spirit:port>
         <spirit:name>aclk</spirit:name>
@@ -9054,7 +9154,7 @@
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>wire</spirit:typeName>
-              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
@@ -9066,7 +9166,7 @@
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>wire</spirit:typeName>
-              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
@@ -9078,7 +9178,7 @@
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>wire</spirit:typeName>
-              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
@@ -9104,7 +9204,7 @@
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>wire</spirit:typeName>
-              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
@@ -9130,7 +9230,7 @@
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>wire</spirit:typeName>
-              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
@@ -9153,7 +9253,7 @@
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>wire</spirit:typeName>
-              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
@@ -9179,7 +9279,7 @@
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>wire</spirit:typeName>
-              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
@@ -9205,7 +9305,7 @@
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>wire</spirit:typeName>
-              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
@@ -9231,7 +9331,7 @@
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>wire</spirit:typeName>
-              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
@@ -9257,7 +9357,7 @@
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>wire</spirit:typeName>
-              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
@@ -9283,7 +9383,7 @@
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>wire</spirit:typeName>
-              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
@@ -9309,7 +9409,7 @@
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>wire</spirit:typeName>
-              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
@@ -9335,7 +9435,7 @@
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>wire</spirit:typeName>
-              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
@@ -9358,7 +9458,7 @@
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>wire</spirit:typeName>
-              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
@@ -9384,7 +9484,7 @@
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>wire</spirit:typeName>
-              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
@@ -9407,7 +9507,7 @@
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>wire</spirit:typeName>
-              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
@@ -9430,7 +9530,7 @@
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>wire</spirit:typeName>
-              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
@@ -9453,7 +9553,7 @@
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>wire</spirit:typeName>
-              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
@@ -9476,7 +9576,7 @@
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>wire</spirit:typeName>
-              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
@@ -9499,7 +9599,7 @@
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>wire</spirit:typeName>
-              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
@@ -9522,7 +9622,7 @@
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>wire</spirit:typeName>
-              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
@@ -9545,7 +9645,7 @@
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>wire</spirit:typeName>
-              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
@@ -9568,7 +9668,7 @@
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>wire</spirit:typeName>
-              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
@@ -9591,7 +9691,7 @@
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>wire</spirit:typeName>
-              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
@@ -9617,7 +9717,7 @@
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>wire</spirit:typeName>
-              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
@@ -9643,7 +9743,7 @@
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>wire</spirit:typeName>
-              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
@@ -9666,7 +9766,7 @@
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>wire</spirit:typeName>
-              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
@@ -9689,7 +9789,7 @@
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>wire</spirit:typeName>
-              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
@@ -9712,7 +9812,7 @@
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>wire</spirit:typeName>
-              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
@@ -9735,7 +9835,7 @@
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>wire</spirit:typeName>
-              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
@@ -9757,7 +9857,7 @@
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>wire</spirit:typeName>
-              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
@@ -9779,7 +9879,7 @@
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>wire</spirit:typeName>
-              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
@@ -9801,7 +9901,7 @@
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>wire</spirit:typeName>
-              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
@@ -9823,7 +9923,7 @@
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>wire</spirit:typeName>
-              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
@@ -9846,7 +9946,7 @@
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>wire</spirit:typeName>
-              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
@@ -9868,7 +9968,7 @@
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>wire</spirit:typeName>
-              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
@@ -9890,7 +9990,7 @@
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>wire</spirit:typeName>
-              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
@@ -9913,7 +10013,7 @@
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>wire</spirit:typeName>
-              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
@@ -9935,7 +10035,7 @@
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>wire</spirit:typeName>
-              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
@@ -9954,7 +10054,7 @@
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>wire</spirit:typeName>
-              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
@@ -9980,7 +10080,7 @@
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>wire</spirit:typeName>
-              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
@@ -9999,7 +10099,7 @@
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>wire</spirit:typeName>
-              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
@@ -10021,7 +10121,7 @@
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>wire</spirit:typeName>
-              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
@@ -10044,7 +10144,7 @@
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>wire</spirit:typeName>
-              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
@@ -10066,7 +10166,7 @@
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>wire</spirit:typeName>
-              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
@@ -10085,7 +10185,7 @@
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>wire</spirit:typeName>
-              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
@@ -10111,7 +10211,7 @@
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>wire</spirit:typeName>
-              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
@@ -10134,7 +10234,7 @@
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>wire</spirit:typeName>
-              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
@@ -10157,7 +10257,7 @@
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>wire</spirit:typeName>
-              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
@@ -11307,6 +11407,103 @@
       <spirit:enumeration spirit:text="True Round-Robin">3</spirit:enumeration>
     </spirit:choice>
   </spirit:choices>
+  <spirit:fileSets>
+    <spirit:fileSet>
+      <spirit:name>xilinx_systemcsimulation_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>sysc/bd_62e9_vfb_0_0_axisswitch_core.h</spirit:name>
+        <spirit:fileType>systemCSource</spirit:fileType>
+        <spirit:isIncludeFile>true</spirit:isIncludeFile>
+        <spirit:exportedName>bd_62e9_vfb_0_0_axisswitch_core</spirit:exportedName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>sysc/bd_62e9_vfb_0_0_axisswitch_core.cpp</spirit:name>
+        <spirit:fileType>systemCSource</spirit:fileType>
+        <spirit:exportedName>bd_62e9_vfb_0_0_axisswitch_core</spirit:exportedName>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_systemcsimulationwrapper_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>sim/bd_62e9_vfb_0_0_axisswitch_sc.h</spirit:name>
+        <spirit:fileType>systemCSource</spirit:fileType>
+        <spirit:isIncludeFile>true</spirit:isIncludeFile>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>sim/bd_62e9_vfb_0_0_axisswitch_sc.cpp</spirit:name>
+        <spirit:fileType>systemCSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>sim/bd_62e9_vfb_0_0_axisswitch.h</spirit:name>
+        <spirit:fileType>systemCSource</spirit:fileType>
+        <spirit:isIncludeFile>true</spirit:isIncludeFile>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>sim/bd_62e9_vfb_0_0_axisswitch.cpp</spirit:name>
+        <spirit:fileType>systemCSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>sim/bd_62e9_vfb_0_0_axisswitch_stub.sv</spirit:name>
+        <spirit:fileType>systemVerilogSource</spirit:fileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_verilogbehavioralsimulation_xilinx_com_ip_axis_infrastructure_1_1__ref_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>../../../../../../ipshared/434f/hdl/axis_infrastructure_v1_1_1.vh</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+        <spirit:isIncludeFile>true</spirit:isIncludeFile>
+        <spirit:logicalName>axis_infrastructure_v1_1_1</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../../../../../ipshared/434f/hdl/axis_infrastructure_v1_1_vl_rfs.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+        <spirit:logicalName>axis_infrastructure_v1_1_1</spirit:logicalName>
+      </spirit:file>
+      <spirit:vendorExtensions>
+        <xilinx:subCoreRef>
+          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="ip" xilinx:name="axis_infrastructure" xilinx:version="1.1" xilinx:isGenerated="true" xilinx:checksum="793e142a">
+            <xilinx:mode xilinx:name="copy_mode"/>
+          </xilinx:componentRef>
+        </xilinx:subCoreRef>
+      </spirit:vendorExtensions>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_verilogbehavioralsimulation_xilinx_com_ip_axis_register_slice_1_1__ref_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>../../../../../../ipshared/5d61/hdl/axis_register_slice_v1_1_vl_rfs.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+        <spirit:logicalName>axis_register_slice_v1_1_34</spirit:logicalName>
+      </spirit:file>
+      <spirit:vendorExtensions>
+        <xilinx:subCoreRef>
+          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="ip" xilinx:name="axis_register_slice" xilinx:version="1.1" xilinx:isGenerated="true" xilinx:checksum="48e6db5e">
+            <xilinx:mode xilinx:name="copy_mode"/>
+          </xilinx:componentRef>
+        </xilinx:subCoreRef>
+      </spirit:vendorExtensions>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_verilogbehavioralsimulation_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>../../../../../../ipshared/53dd/hdl/axis_switch_v1_1_vl_rfs.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+        <spirit:logicalName>axis_switch_v1_1_34</spirit:logicalName>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_verilogsimulationwrapper_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>sim/bd_62e9_vfb_0_0_axisswitch.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:logicalName>axis_switch_v1_1_34</spirit:logicalName>
+      </spirit:file>
+    </spirit:fileSet>
+  </spirit:fileSets>
   <spirit:description>The AXI4-Stream Switch IP provides the infrastructure to connect multiple AXI4-Stream masters and slaves.</spirit:description>
   <spirit:parameters>
     <spirit:parameter>
@@ -15001,11 +15198,15 @@
   <spirit:vendorExtensions>
     <xilinx:coreExtensions>
       <xilinx:displayName>AXI4-Stream Switch</xilinx:displayName>
+      <xilinx:xpmLibraries>
+        <xilinx:xpmLibrary>XPM_CDC</xilinx:xpmLibrary>
+        <xilinx:xpmLibrary>XPM_FIFO</xilinx:xpmLibrary>
+      </xilinx:xpmLibraries>
       <xilinx:systemCLibraries>
         <xilinx:systemCLibrary>xtlm</xilinx:systemCLibrary>
         <xilinx:systemCLibrary>axis_switch_sc_v1_1</xilinx:systemCLibrary>
       </xilinx:systemCLibraries>
-      <xilinx:coreRevision>33</xilinx:coreRevision>
+      <xilinx:coreRevision>34</xilinx:coreRevision>
       <xilinx:configElementInfos>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.DECODER_REG" xilinx:valueSource="propagated"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.HAS_TKEEP" xilinx:valueSource="propagated"/>
@@ -15018,10 +15219,10 @@
       </xilinx:configElementInfos>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
-      <xilinx:xilinxVersion>2024.2</xilinx:xilinxVersion>
+      <xilinx:xilinxVersion>2024.2.2</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="2518c1e0"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="0de992c9"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="6f9aabd1"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="52016600"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="12001b75"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="bef26222"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="16f5c517"/>

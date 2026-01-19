@@ -4,7 +4,7 @@
     "xci_name": "bd_62e9_vfb_0_0",
     "cell_name": "vfb_0",
     "component_reference": "xilinx.com:ip:vfb:1.0",
-    "ip_revision": "27",
+    "ip_revision": "28",
     "gen_directory": ".",
     "parameters": {
       "component_parameters": {
@@ -73,12 +73,12 @@
       },
       "runtime_parameters": {
         "IPCONTEXT": [ { "value": "IP_Integrator" } ],
-        "IPREVISION": [ { "value": "27" } ],
+        "IPREVISION": [ { "value": "28" } ],
         "MANAGED": [ { "value": "TRUE" } ],
         "OUTPUTDIR": [ { "value": "." } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],
         "SHAREDDIR": [ { "value": "../../../../../ipshared" } ],
-        "SWVERSION": [ { "value": "2024.2" } ],
+        "SWVERSION": [ { "value": "2024.2.2" } ],
         "SYNTHESISFLOW": [ { "value": "OUT_OF_CONTEXT" } ]
       }
     },

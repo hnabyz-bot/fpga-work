@@ -3,7 +3,7 @@
   "ip_inst": {
     "xci_name": "mipi_csi2_tx_subsys",
     "component_reference": "xilinx.com:ip:mipi_csi2_tx_subsystem:2.2",
-    "ip_revision": "13",
+    "ip_revision": "15",
     "gen_directory": ".",
     "parameters": {
       "component_parameters": {
@@ -95,12 +95,12 @@
       },
       "runtime_parameters": {
         "IPCONTEXT": [ { "value": "IP_Flow" } ],
-        "IPREVISION": [ { "value": "13" } ],
+        "IPREVISION": [ { "value": "15" } ],
         "MANAGED": [ { "value": "TRUE" } ],
         "OUTPUTDIR": [ { "value": "." } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],
         "SHAREDDIR": [ { "value": "." } ],
-        "SWVERSION": [ { "value": "2024.2" } ],
+        "SWVERSION": [ { "value": "2024.2.2" } ],
         "SYNTHESISFLOW": [ { "value": "OOC_HIERARCHICAL" } ]
       }
     },

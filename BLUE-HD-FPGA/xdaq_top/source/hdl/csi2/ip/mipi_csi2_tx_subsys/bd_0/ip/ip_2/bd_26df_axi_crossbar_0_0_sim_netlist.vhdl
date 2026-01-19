@@ -1,11 +1,11 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
--- Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+-- Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
--- Date        : Tue Jan 13 10:10:06 2026
--- Host        : work-dev running 64-bit major release  (build 9200)
+-- Tool Version: Vivado v.2024.2.2 (lin64) Build 6060944 Thu Mar 06 19:10:09 MST 2025
+-- Date        : Fri Jan 16 15:12:23 2026
+-- Host        : drlinux running 64-bit Ubuntu 22.04.5 LTS
 -- Command     : write_vhdl -force -mode funcsim
---               d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_2/bd_26df_axi_crossbar_0_0_sim_netlist.vhdl
+--               /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_2/bd_26df_axi_crossbar_0_0_sim_netlist.vhdl
 -- Design      : bd_26df_axi_crossbar_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -15,7 +15,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_34_addr_arbiter_sasd is
+entity bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_36_addr_arbiter_sasd is
   port (
     SR : out STD_LOGIC_VECTOR ( 0 to 0 );
     m_axi_arvalid : out STD_LOGIC_VECTOR ( 1 downto 0 );
@@ -58,10 +58,10 @@ entity bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_34_addr_arbiter_sasd is
     s_axi_awaddr : in STD_LOGIC_VECTOR ( 12 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_34_addr_arbiter_sasd : entity is "axi_crossbar_v2_1_34_addr_arbiter_sasd";
-end bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_34_addr_arbiter_sasd;
+  attribute ORIG_REF_NAME of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_36_addr_arbiter_sasd : entity is "axi_crossbar_v2_1_36_addr_arbiter_sasd";
+end bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_36_addr_arbiter_sasd;
 
-architecture STRUCTURE of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_34_addr_arbiter_sasd is
+architecture STRUCTURE of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_36_addr_arbiter_sasd is
   signal \^sr\ : STD_LOGIC_VECTOR ( 0 to 0 );
   signal aa_grant_rnw : STD_LOGIC;
   signal \gen_no_arbiter.grant_rnw_i_1_n_0\ : STD_LOGIC;
@@ -925,7 +925,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_34_splitter is
+entity bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_36_splitter is
   port (
     m_ready_d : out STD_LOGIC_VECTOR ( 2 downto 0 );
     \m_ready_d_reg[2]_0\ : in STD_LOGIC;
@@ -935,10 +935,10 @@ entity bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_34_splitter is
     aclk : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_34_splitter : entity is "axi_crossbar_v2_1_34_splitter";
-end bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_34_splitter;
+  attribute ORIG_REF_NAME of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_36_splitter : entity is "axi_crossbar_v2_1_36_splitter";
+end bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_36_splitter;
 
-architecture STRUCTURE of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_34_splitter is
+architecture STRUCTURE of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_36_splitter is
   signal \m_ready_d[0]_i_1_n_0\ : STD_LOGIC;
   signal \m_ready_d[1]_i_1_n_0\ : STD_LOGIC;
   signal \m_ready_d[2]_i_1_n_0\ : STD_LOGIC;
@@ -1017,7 +1017,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity \bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_34_splitter__parameterized0\ is
+entity \bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_36_splitter__parameterized0\ is
   port (
     m_ready_d : out STD_LOGIC_VECTOR ( 1 downto 0 );
     aresetn_d : in STD_LOGIC;
@@ -1025,10 +1025,10 @@ entity \bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_34_splitter__parameterized0\ 
     aclk : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_34_splitter__parameterized0\ : entity is "axi_crossbar_v2_1_34_splitter";
-end \bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_34_splitter__parameterized0\;
+  attribute ORIG_REF_NAME of \bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_36_splitter__parameterized0\ : entity is "axi_crossbar_v2_1_36_splitter";
+end \bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_36_splitter__parameterized0\;
 
-architecture STRUCTURE of \bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_34_splitter__parameterized0\ is
+architecture STRUCTURE of \bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_36_splitter__parameterized0\ is
   signal \m_ready_d[0]_i_1_n_0\ : STD_LOGIC;
   signal \m_ready_d[1]_i_1_n_0\ : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
@@ -1082,7 +1082,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity bd_26df_axi_crossbar_0_0_axi_register_slice_v2_1_33_axic_register_slice is
+entity bd_26df_axi_crossbar_0_0_axi_register_slice_v2_1_34_axic_register_slice is
   port (
     sr_rvalid : out STD_LOGIC;
     m_axi_rready : out STD_LOGIC_VECTOR ( 1 downto 0 );
@@ -1099,10 +1099,10 @@ entity bd_26df_axi_crossbar_0_0_axi_register_slice_v2_1_33_axic_register_slice i
     SR : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of bd_26df_axi_crossbar_0_0_axi_register_slice_v2_1_33_axic_register_slice : entity is "axi_register_slice_v2_1_33_axic_register_slice";
-end bd_26df_axi_crossbar_0_0_axi_register_slice_v2_1_33_axic_register_slice;
+  attribute ORIG_REF_NAME of bd_26df_axi_crossbar_0_0_axi_register_slice_v2_1_34_axic_register_slice : entity is "axi_register_slice_v2_1_34_axic_register_slice";
+end bd_26df_axi_crossbar_0_0_axi_register_slice_v2_1_34_axic_register_slice;
 
-architecture STRUCTURE of bd_26df_axi_crossbar_0_0_axi_register_slice_v2_1_33_axic_register_slice is
+architecture STRUCTURE of bd_26df_axi_crossbar_0_0_axi_register_slice_v2_1_34_axic_register_slice is
   signal aa_rready : STD_LOGIC;
   signal \aresetn_d_reg_n_0_[0]\ : STD_LOGIC;
   signal \aresetn_d_reg_n_0_[1]\ : STD_LOGIC;
@@ -2228,7 +2228,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_34_crossbar_sasd is
+entity bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_36_crossbar_sasd is
   port (
     Q : out STD_LOGIC_VECTOR ( 15 downto 0 );
     \m_payload_i_reg[34]\ : out STD_LOGIC_VECTOR ( 33 downto 0 );
@@ -2264,10 +2264,10 @@ entity bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_34_crossbar_sasd is
     m_axi_bresp : in STD_LOGIC_VECTOR ( 3 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_34_crossbar_sasd : entity is "axi_crossbar_v2_1_34_crossbar_sasd";
-end bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_34_crossbar_sasd;
+  attribute ORIG_REF_NAME of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_36_crossbar_sasd : entity is "axi_crossbar_v2_1_36_crossbar_sasd";
+end bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_36_crossbar_sasd;
 
-architecture STRUCTURE of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_34_crossbar_sasd is
+architecture STRUCTURE of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_36_crossbar_sasd is
   signal \^q\ : STD_LOGIC_VECTOR ( 15 downto 0 );
   signal addr_arbiter_inst_n_11 : STD_LOGIC;
   signal addr_arbiter_inst_n_14 : STD_LOGIC;
@@ -2289,7 +2289,7 @@ architecture STRUCTURE of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_34_crossbar
   attribute SOFT_HLUTNM of \s_axi_bresp[1]_INST_0\ : label is "soft_lutpair13";
 begin
   Q(15 downto 0) <= \^q\(15 downto 0);
-addr_arbiter_inst: entity work.bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_34_addr_arbiter_sasd
+addr_arbiter_inst: entity work.bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_36_addr_arbiter_sasd
      port map (
       D(1 downto 0) => m_atarget_hot0(1 downto 0),
       E(0) => p_1_in,
@@ -2375,7 +2375,7 @@ aresetn_d_reg: unisim.vcomponents.FDRE
       Q => m_atarget_hot(1),
       R => reset
     );
-reg_slice_r: entity work.bd_26df_axi_crossbar_0_0_axi_register_slice_v2_1_33_axic_register_slice
+reg_slice_r: entity work.bd_26df_axi_crossbar_0_0_axi_register_slice_v2_1_34_axic_register_slice
      port map (
       E(0) => p_1_in,
       Q(1 downto 0) => m_atarget_hot(1 downto 0),
@@ -2412,14 +2412,14 @@ reg_slice_r: entity work.bd_26df_axi_crossbar_0_0_axi_register_slice_v2_1_33_axi
       I2 => m_axi_bresp(1),
       O => s_axi_bresp(1)
     );
-splitter_ar: entity work.\bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_34_splitter__parameterized0\
+splitter_ar: entity work.\bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_36_splitter__parameterized0\
      port map (
       aclk => aclk,
       aresetn_d => aresetn_d,
       m_ready_d(1 downto 0) => m_ready_d(1 downto 0),
       m_ready_d0(1 downto 0) => m_ready_d0(1 downto 0)
     );
-splitter_aw: entity work.bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_34_splitter
+splitter_aw: entity work.bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_36_splitter
      port map (
       aclk => aclk,
       aresetn_d => aresetn_d,
@@ -2433,7 +2433,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_34_axi_crossbar is
+entity bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_36_axi_crossbar is
   port (
     aclk : in STD_LOGIC;
     aresetn : in STD_LOGIC;
@@ -2527,108 +2527,108 @@ entity bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_34_axi_crossbar is
     m_axi_rready : out STD_LOGIC_VECTOR ( 1 downto 0 )
   );
   attribute C_AXI_ADDR_WIDTH : integer;
-  attribute C_AXI_ADDR_WIDTH of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_34_axi_crossbar : entity is 13;
+  attribute C_AXI_ADDR_WIDTH of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_36_axi_crossbar : entity is 13;
   attribute C_AXI_ARUSER_WIDTH : integer;
-  attribute C_AXI_ARUSER_WIDTH of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_34_axi_crossbar : entity is 1;
+  attribute C_AXI_ARUSER_WIDTH of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_36_axi_crossbar : entity is 1;
   attribute C_AXI_AWUSER_WIDTH : integer;
-  attribute C_AXI_AWUSER_WIDTH of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_34_axi_crossbar : entity is 1;
+  attribute C_AXI_AWUSER_WIDTH of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_36_axi_crossbar : entity is 1;
   attribute C_AXI_BUSER_WIDTH : integer;
-  attribute C_AXI_BUSER_WIDTH of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_34_axi_crossbar : entity is 1;
+  attribute C_AXI_BUSER_WIDTH of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_36_axi_crossbar : entity is 1;
   attribute C_AXI_DATA_WIDTH : integer;
-  attribute C_AXI_DATA_WIDTH of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_34_axi_crossbar : entity is 32;
+  attribute C_AXI_DATA_WIDTH of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_36_axi_crossbar : entity is 32;
   attribute C_AXI_ID_WIDTH : integer;
-  attribute C_AXI_ID_WIDTH of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_34_axi_crossbar : entity is 1;
+  attribute C_AXI_ID_WIDTH of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_36_axi_crossbar : entity is 1;
   attribute C_AXI_PROTOCOL : integer;
-  attribute C_AXI_PROTOCOL of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_34_axi_crossbar : entity is 2;
+  attribute C_AXI_PROTOCOL of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_36_axi_crossbar : entity is 2;
   attribute C_AXI_RUSER_WIDTH : integer;
-  attribute C_AXI_RUSER_WIDTH of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_34_axi_crossbar : entity is 1;
+  attribute C_AXI_RUSER_WIDTH of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_36_axi_crossbar : entity is 1;
   attribute C_AXI_SUPPORTS_USER_SIGNALS : integer;
-  attribute C_AXI_SUPPORTS_USER_SIGNALS of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_34_axi_crossbar : entity is 0;
+  attribute C_AXI_SUPPORTS_USER_SIGNALS of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_36_axi_crossbar : entity is 0;
   attribute C_AXI_WUSER_WIDTH : integer;
-  attribute C_AXI_WUSER_WIDTH of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_34_axi_crossbar : entity is 1;
+  attribute C_AXI_WUSER_WIDTH of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_36_axi_crossbar : entity is 1;
   attribute C_CONNECTIVITY_MODE : integer;
-  attribute C_CONNECTIVITY_MODE of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_34_axi_crossbar : entity is 0;
+  attribute C_CONNECTIVITY_MODE of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_36_axi_crossbar : entity is 0;
   attribute C_DEBUG : integer;
-  attribute C_DEBUG of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_34_axi_crossbar : entity is 1;
+  attribute C_DEBUG of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_36_axi_crossbar : entity is 1;
   attribute C_FAMILY : string;
-  attribute C_FAMILY of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_34_axi_crossbar : entity is "artix7";
+  attribute C_FAMILY of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_36_axi_crossbar : entity is "artix7";
   attribute C_M_AXI_ADDR_WIDTH : string;
-  attribute C_M_AXI_ADDR_WIDTH of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_34_axi_crossbar : entity is "64'b0000000000000000000000000000110000000000000000000000000000001100";
+  attribute C_M_AXI_ADDR_WIDTH of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_36_axi_crossbar : entity is "64'b0000000000000000000000000000110000000000000000000000000000001100";
   attribute C_M_AXI_BASE_ADDR : string;
-  attribute C_M_AXI_BASE_ADDR of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_34_axi_crossbar : entity is "128'b00000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000000000000000";
+  attribute C_M_AXI_BASE_ADDR of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_36_axi_crossbar : entity is "128'b00000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000000000000000";
   attribute C_M_AXI_READ_CONNECTIVITY : string;
-  attribute C_M_AXI_READ_CONNECTIVITY of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_34_axi_crossbar : entity is "64'b1111111111111111111111111111111111111111111111111111111111111111";
+  attribute C_M_AXI_READ_CONNECTIVITY of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_36_axi_crossbar : entity is "64'b1111111111111111111111111111111111111111111111111111111111111111";
   attribute C_M_AXI_READ_ISSUING : string;
-  attribute C_M_AXI_READ_ISSUING of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_34_axi_crossbar : entity is "64'b0000000000000000000000000000000100000000000000000000000000000001";
+  attribute C_M_AXI_READ_ISSUING of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_36_axi_crossbar : entity is "64'b0000000000000000000000000000000100000000000000000000000000000001";
   attribute C_M_AXI_SECURE : string;
-  attribute C_M_AXI_SECURE of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_34_axi_crossbar : entity is "64'b0000000000000000000000000000000000000000000000000000000000000000";
+  attribute C_M_AXI_SECURE of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_36_axi_crossbar : entity is "64'b0000000000000000000000000000000000000000000000000000000000000000";
   attribute C_M_AXI_WRITE_CONNECTIVITY : string;
-  attribute C_M_AXI_WRITE_CONNECTIVITY of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_34_axi_crossbar : entity is "64'b1111111111111111111111111111111111111111111111111111111111111111";
+  attribute C_M_AXI_WRITE_CONNECTIVITY of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_36_axi_crossbar : entity is "64'b1111111111111111111111111111111111111111111111111111111111111111";
   attribute C_M_AXI_WRITE_ISSUING : string;
-  attribute C_M_AXI_WRITE_ISSUING of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_34_axi_crossbar : entity is "64'b0000000000000000000000000000000100000000000000000000000000000001";
+  attribute C_M_AXI_WRITE_ISSUING of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_36_axi_crossbar : entity is "64'b0000000000000000000000000000000100000000000000000000000000000001";
   attribute C_NUM_ADDR_RANGES : integer;
-  attribute C_NUM_ADDR_RANGES of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_34_axi_crossbar : entity is 1;
+  attribute C_NUM_ADDR_RANGES of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_36_axi_crossbar : entity is 1;
   attribute C_NUM_MASTER_SLOTS : integer;
-  attribute C_NUM_MASTER_SLOTS of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_34_axi_crossbar : entity is 2;
+  attribute C_NUM_MASTER_SLOTS of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_36_axi_crossbar : entity is 2;
   attribute C_NUM_SLAVE_SLOTS : integer;
-  attribute C_NUM_SLAVE_SLOTS of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_34_axi_crossbar : entity is 1;
+  attribute C_NUM_SLAVE_SLOTS of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_36_axi_crossbar : entity is 1;
   attribute C_R_REGISTER : integer;
-  attribute C_R_REGISTER of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_34_axi_crossbar : entity is 1;
+  attribute C_R_REGISTER of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_36_axi_crossbar : entity is 1;
   attribute C_S_AXI_ARB_PRIORITY : integer;
-  attribute C_S_AXI_ARB_PRIORITY of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_34_axi_crossbar : entity is 0;
+  attribute C_S_AXI_ARB_PRIORITY of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_36_axi_crossbar : entity is 0;
   attribute C_S_AXI_BASE_ID : integer;
-  attribute C_S_AXI_BASE_ID of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_34_axi_crossbar : entity is 0;
+  attribute C_S_AXI_BASE_ID of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_36_axi_crossbar : entity is 0;
   attribute C_S_AXI_READ_ACCEPTANCE : integer;
-  attribute C_S_AXI_READ_ACCEPTANCE of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_34_axi_crossbar : entity is 1;
+  attribute C_S_AXI_READ_ACCEPTANCE of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_36_axi_crossbar : entity is 1;
   attribute C_S_AXI_SINGLE_THREAD : integer;
-  attribute C_S_AXI_SINGLE_THREAD of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_34_axi_crossbar : entity is 1;
+  attribute C_S_AXI_SINGLE_THREAD of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_36_axi_crossbar : entity is 1;
   attribute C_S_AXI_THREAD_ID_WIDTH : integer;
-  attribute C_S_AXI_THREAD_ID_WIDTH of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_34_axi_crossbar : entity is 0;
+  attribute C_S_AXI_THREAD_ID_WIDTH of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_36_axi_crossbar : entity is 0;
   attribute C_S_AXI_WRITE_ACCEPTANCE : integer;
-  attribute C_S_AXI_WRITE_ACCEPTANCE of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_34_axi_crossbar : entity is 1;
+  attribute C_S_AXI_WRITE_ACCEPTANCE of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_36_axi_crossbar : entity is 1;
   attribute DowngradeIPIdentifiedWarnings : string;
-  attribute DowngradeIPIdentifiedWarnings of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_34_axi_crossbar : entity is "yes";
+  attribute DowngradeIPIdentifiedWarnings of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_36_axi_crossbar : entity is "yes";
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_34_axi_crossbar : entity is "axi_crossbar_v2_1_34_axi_crossbar";
+  attribute ORIG_REF_NAME of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_36_axi_crossbar : entity is "axi_crossbar_v2_1_36_axi_crossbar";
   attribute P_ADDR_DECODE : integer;
-  attribute P_ADDR_DECODE of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_34_axi_crossbar : entity is 1;
+  attribute P_ADDR_DECODE of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_36_axi_crossbar : entity is 1;
   attribute P_AXI3 : integer;
-  attribute P_AXI3 of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_34_axi_crossbar : entity is 1;
+  attribute P_AXI3 of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_36_axi_crossbar : entity is 1;
   attribute P_AXI4 : integer;
-  attribute P_AXI4 of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_34_axi_crossbar : entity is 0;
+  attribute P_AXI4 of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_36_axi_crossbar : entity is 0;
   attribute P_AXILITE : integer;
-  attribute P_AXILITE of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_34_axi_crossbar : entity is 2;
+  attribute P_AXILITE of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_36_axi_crossbar : entity is 2;
   attribute P_AXILITE_SIZE : string;
-  attribute P_AXILITE_SIZE of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_34_axi_crossbar : entity is "3'b010";
+  attribute P_AXILITE_SIZE of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_36_axi_crossbar : entity is "3'b010";
   attribute P_FAMILY : string;
-  attribute P_FAMILY of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_34_axi_crossbar : entity is "artix7";
+  attribute P_FAMILY of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_36_axi_crossbar : entity is "artix7";
   attribute P_INCR : string;
-  attribute P_INCR of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_34_axi_crossbar : entity is "2'b01";
+  attribute P_INCR of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_36_axi_crossbar : entity is "2'b01";
   attribute P_LEN : integer;
-  attribute P_LEN of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_34_axi_crossbar : entity is 8;
+  attribute P_LEN of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_36_axi_crossbar : entity is 8;
   attribute P_LOCK : integer;
-  attribute P_LOCK of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_34_axi_crossbar : entity is 1;
+  attribute P_LOCK of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_36_axi_crossbar : entity is 1;
   attribute P_M_AXI_ERR_MODE : string;
-  attribute P_M_AXI_ERR_MODE of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_34_axi_crossbar : entity is "64'b0000000000000000000000000000000000000000000000000000000000000000";
+  attribute P_M_AXI_ERR_MODE of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_36_axi_crossbar : entity is "64'b0000000000000000000000000000000000000000000000000000000000000000";
   attribute P_M_AXI_SUPPORTS_READ : string;
-  attribute P_M_AXI_SUPPORTS_READ of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_34_axi_crossbar : entity is "2'b11";
+  attribute P_M_AXI_SUPPORTS_READ of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_36_axi_crossbar : entity is "2'b11";
   attribute P_M_AXI_SUPPORTS_WRITE : string;
-  attribute P_M_AXI_SUPPORTS_WRITE of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_34_axi_crossbar : entity is "2'b11";
+  attribute P_M_AXI_SUPPORTS_WRITE of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_36_axi_crossbar : entity is "2'b11";
   attribute P_ONES : string;
-  attribute P_ONES of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_34_axi_crossbar : entity is "65'b11111111111111111111111111111111111111111111111111111111111111111";
+  attribute P_ONES of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_36_axi_crossbar : entity is "65'b11111111111111111111111111111111111111111111111111111111111111111";
   attribute P_RANGE_CHECK : integer;
-  attribute P_RANGE_CHECK of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_34_axi_crossbar : entity is 1;
+  attribute P_RANGE_CHECK of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_36_axi_crossbar : entity is 1;
   attribute P_S_AXI_BASE_ID : string;
-  attribute P_S_AXI_BASE_ID of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_34_axi_crossbar : entity is "64'b0000000000000000000000000000000000000000000000000000000000000000";
+  attribute P_S_AXI_BASE_ID of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_36_axi_crossbar : entity is "64'b0000000000000000000000000000000000000000000000000000000000000000";
   attribute P_S_AXI_HIGH_ID : string;
-  attribute P_S_AXI_HIGH_ID of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_34_axi_crossbar : entity is "64'b0000000000000000000000000000000000000000000000000000000000000000";
+  attribute P_S_AXI_HIGH_ID of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_36_axi_crossbar : entity is "64'b0000000000000000000000000000000000000000000000000000000000000000";
   attribute P_S_AXI_SUPPORTS_READ : string;
-  attribute P_S_AXI_SUPPORTS_READ of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_34_axi_crossbar : entity is "1'b1";
+  attribute P_S_AXI_SUPPORTS_READ of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_36_axi_crossbar : entity is "1'b1";
   attribute P_S_AXI_SUPPORTS_WRITE : string;
-  attribute P_S_AXI_SUPPORTS_WRITE of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_34_axi_crossbar : entity is "1'b1";
-end bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_34_axi_crossbar;
+  attribute P_S_AXI_SUPPORTS_WRITE of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_36_axi_crossbar : entity is "1'b1";
+end bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_36_axi_crossbar;
 
-architecture STRUCTURE of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_34_axi_crossbar is
+architecture STRUCTURE of bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_36_axi_crossbar is
   signal \<const0>\ : STD_LOGIC;
   signal \^m_axi_araddr\ : STD_LOGIC_VECTOR ( 11 downto 0 );
   signal \^m_axi_arprot\ : STD_LOGIC_VECTOR ( 2 downto 0 );
@@ -2781,7 +2781,7 @@ GND: unisim.vcomponents.GND
      port map (
       G => \<const0>\
     );
-\gen_sasd.crossbar_sasd_0\: entity work.bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_34_crossbar_sasd
+\gen_sasd.crossbar_sasd_0\: entity work.bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_36_crossbar_sasd
      port map (
       Q(15 downto 13) => \^m_axi_arprot\(2 downto 0),
       Q(12) => \^m_axi_awaddr\(25),
@@ -2870,11 +2870,11 @@ entity bd_26df_axi_crossbar_0_0 is
   attribute NotValidForBitStream : boolean;
   attribute NotValidForBitStream of bd_26df_axi_crossbar_0_0 : entity is true;
   attribute CHECK_LICENSE_TYPE : string;
-  attribute CHECK_LICENSE_TYPE of bd_26df_axi_crossbar_0_0 : entity is "bd_26df_axi_crossbar_0_0,axi_crossbar_v2_1_34_axi_crossbar,{}";
+  attribute CHECK_LICENSE_TYPE of bd_26df_axi_crossbar_0_0 : entity is "bd_26df_axi_crossbar_0_0,axi_crossbar_v2_1_36_axi_crossbar,{}";
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of bd_26df_axi_crossbar_0_0 : entity is "yes";
   attribute X_CORE_INFO : string;
-  attribute X_CORE_INFO of bd_26df_axi_crossbar_0_0 : entity is "axi_crossbar_v2_1_34_axi_crossbar,Vivado 2024.2";
+  attribute X_CORE_INFO of bd_26df_axi_crossbar_0_0 : entity is "axi_crossbar_v2_1_36_axi_crossbar,Vivado 2024.2.2";
 end bd_26df_axi_crossbar_0_0;
 
 architecture STRUCTURE of bd_26df_axi_crossbar_0_0 is
@@ -3053,7 +3053,7 @@ architecture STRUCTURE of bd_26df_axi_crossbar_0_0 is
   attribute X_INTERFACE_INFO of s_axi_wstrb : signal is "xilinx.com:interface:aximm:1.0 S00_AXI WSTRB";
   attribute X_INTERFACE_INFO of s_axi_wvalid : signal is "xilinx.com:interface:aximm:1.0 S00_AXI WVALID";
 begin
-inst: entity work.bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_34_axi_crossbar
+inst: entity work.bd_26df_axi_crossbar_0_0_axi_crossbar_v2_1_36_axi_crossbar
      port map (
       aclk => aclk,
       aresetn => aresetn,

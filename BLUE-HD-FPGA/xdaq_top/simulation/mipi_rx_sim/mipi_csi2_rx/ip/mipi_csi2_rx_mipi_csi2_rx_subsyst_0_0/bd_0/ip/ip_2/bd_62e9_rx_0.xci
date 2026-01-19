@@ -4,7 +4,7 @@
     "xci_name": "bd_62e9_rx_0",
     "cell_name": "rx",
     "component_reference": "xilinx.com:ip:mipi_csi2_rx_ctrl:1.0",
-    "ip_revision": "11",
+    "ip_revision": "12",
     "gen_directory": ".",
     "parameters": {
       "component_parameters": {
@@ -103,12 +103,12 @@
       },
       "runtime_parameters": {
         "IPCONTEXT": [ { "value": "IP_Integrator" } ],
-        "IPREVISION": [ { "value": "11" } ],
+        "IPREVISION": [ { "value": "12" } ],
         "MANAGED": [ { "value": "TRUE" } ],
         "OUTPUTDIR": [ { "value": "." } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],
         "SHAREDDIR": [ { "value": "../../../../../ipshared" } ],
-        "SWVERSION": [ { "value": "2024.2" } ],
+        "SWVERSION": [ { "value": "2024.2.2" } ],
         "SYNTHESISFLOW": [ { "value": "OUT_OF_CONTEXT" } ]
       }
     },

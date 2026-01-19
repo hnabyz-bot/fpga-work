@@ -4,7 +4,7 @@
     "xci_name": "bd_62e9_xbar_0",
     "cell_name": "xbar",
     "component_reference": "xilinx.com:ip:axi_crossbar:2.1",
-    "ip_revision": "34",
+    "ip_revision": "36",
     "gen_directory": ".",
     "parameters": {
       "component_parameters": {
@@ -1255,12 +1255,12 @@
       },
       "runtime_parameters": {
         "IPCONTEXT": [ { "value": "IP_Integrator" } ],
-        "IPREVISION": [ { "value": "34" } ],
+        "IPREVISION": [ { "value": "36" } ],
         "MANAGED": [ { "value": "TRUE" } ],
         "OUTPUTDIR": [ { "value": "." } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],
         "SHAREDDIR": [ { "value": "../../../../../ipshared" } ],
-        "SWVERSION": [ { "value": "2024.2" } ],
+        "SWVERSION": [ { "value": "2024.2.2" } ],
         "SYNTHESISFLOW": [ { "value": "OUT_OF_CONTEXT" } ]
       }
     },
@@ -1315,7 +1315,7 @@
           "parameters": {
             "POLARITY": [ { "value": "ACTIVE_LOW", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ],
             "INSERT_VIP": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "simulation.rtl", "is_ips_inferred": true, "is_static_object": false } ],
-            "TYPE": [ { "value": "INTERCONNECT", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ]
+            "TYPE": [ { "value": "INTERCONNECT", "value_permission": "bd", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ]
           },
           "port_maps": {
             "RST": [ { "physical_name": "aresetn" } ]

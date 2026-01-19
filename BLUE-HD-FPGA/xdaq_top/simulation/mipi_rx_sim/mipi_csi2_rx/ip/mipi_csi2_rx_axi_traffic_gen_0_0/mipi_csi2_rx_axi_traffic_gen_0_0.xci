@@ -4,7 +4,7 @@
     "xci_name": "mipi_csi2_rx_axi_traffic_gen_0_0",
     "cell_name": "axi_traffic_gen_0",
     "component_reference": "xilinx.com:ip:axi_traffic_gen:3.0",
-    "ip_revision": "19",
+    "ip_revision": "20",
     "gen_directory": ".",
     "parameters": {
       "component_parameters": {
@@ -220,12 +220,12 @@
       },
       "runtime_parameters": {
         "IPCONTEXT": [ { "value": "IP_Integrator" } ],
-        "IPREVISION": [ { "value": "19" } ],
+        "IPREVISION": [ { "value": "20" } ],
         "MANAGED": [ { "value": "TRUE" } ],
         "OUTPUTDIR": [ { "value": "." } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],
         "SHAREDDIR": [ { "value": "../../ipshared" } ],
-        "SWVERSION": [ { "value": "2024.2" } ],
+        "SWVERSION": [ { "value": "2024.2.2" } ],
         "SYNTHESISFLOW": [ { "value": "GLOBAL" } ]
       }
     },

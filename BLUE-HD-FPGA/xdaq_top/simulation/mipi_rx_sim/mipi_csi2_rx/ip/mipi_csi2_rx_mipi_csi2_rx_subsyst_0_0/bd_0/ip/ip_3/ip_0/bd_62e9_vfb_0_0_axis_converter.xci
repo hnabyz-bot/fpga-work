@@ -3,7 +3,7 @@
   "ip_inst": {
     "xci_name": "bd_62e9_vfb_0_0_axis_converter",
     "component_reference": "xilinx.com:ip:axis_dwidth_converter:1.1",
-    "ip_revision": "32",
+    "ip_revision": "33",
     "gen_directory": ".",
     "parameters": {
       "component_parameters": {
@@ -45,12 +45,12 @@
       },
       "runtime_parameters": {
         "IPCONTEXT": [ { "value": "IP_Flow" } ],
-        "IPREVISION": [ { "value": "32" } ],
+        "IPREVISION": [ { "value": "33" } ],
         "MANAGED": [ { "value": "TRUE" } ],
         "OUTPUTDIR": [ { "value": "." } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],
         "SHAREDDIR": [ { "value": "../../../../../../ipshared" } ],
-        "SWVERSION": [ { "value": "2024.2" } ],
+        "SWVERSION": [ { "value": "2024.2.2" } ],
         "SYNTHESISFLOW": [ { "value": "GLOBAL" } ]
       }
     },

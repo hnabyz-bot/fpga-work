@@ -43,7 +43,7 @@
 // THIS COPYRIGHT NOTICE AND DISCLAIMER MUST BE RETAINED AS
 // PART OF THIS FILE AT ALL TIMES.
 ////////////////////////////////////////////////////////////
-// Filename:       axi_traffic_gen_v3_0_19_defines.v
+// Filename:       axi_traffic_gen_v3_0_20_defines.v
 // Version : v1.0
 // Description:    Defines used across different files in the design.
 // Verilog-Standard:verilog-2001

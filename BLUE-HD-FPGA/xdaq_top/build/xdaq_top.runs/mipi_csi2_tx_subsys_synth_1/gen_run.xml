@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="mipi_csi2_tx_subsys_synth_1" LaunchPart="xc7a35tfgg484-1" LaunchTime="1768266546">
-  <File Type="REPORTS-TCL" Name="mipi_csi2_tx_subsys_reports.tcl"/>
+  <File Type="RDS-DCP" Name="mipi_csi2_tx_subsys.dcp"/>
+  <File Type="RDS-RDS" Name="mipi_csi2_tx_subsys.vds"/>
   <File Type="RDS-UTIL" Name="mipi_csi2_tx_subsys_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="mipi_csi2_tx_subsys_utilization_synth.pb"/>
   <File Type="PA-TCL" Name="mipi_csi2_tx_subsys.tcl"/>
-  <File Type="RDS-RDS" Name="mipi_csi2_tx_subsys.vds"/>
-  <File Type="RDS-DCP" Name="mipi_csi2_tx_subsys.dcp"/>
+  <File Type="REPORTS-TCL" Name="mipi_csi2_tx_subsys_reports.tcl"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/mipi_csi2_tx_subsys" RelGenDir="$PGENDIR/mipi_csi2_tx_subsys">
     <File Path="$PPRDIR/../source/hdl/csi2/ip/mipi_csi2_tx_subsys/mipi_csi2_tx_subsys.xci">
       <FileInfo>

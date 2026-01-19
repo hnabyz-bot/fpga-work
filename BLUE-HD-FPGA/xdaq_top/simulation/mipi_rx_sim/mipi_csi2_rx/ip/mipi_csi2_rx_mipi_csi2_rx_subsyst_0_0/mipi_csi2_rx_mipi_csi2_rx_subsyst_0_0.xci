@@ -4,7 +4,7 @@
     "xci_name": "mipi_csi2_rx_mipi_csi2_rx_subsyst_0_0",
     "cell_name": "mipi_csi2_rx_subsyst_0",
     "component_reference": "xilinx.com:ip:mipi_csi2_rx_subsystem:6.0",
-    "ip_revision": "2",
+    "ip_revision": "4",
     "gen_directory": ".",
     "parameters": {
       "component_parameters": {
@@ -130,12 +130,12 @@
       },
       "runtime_parameters": {
         "IPCONTEXT": [ { "value": "IP_Integrator" } ],
-        "IPREVISION": [ { "value": "2" } ],
+        "IPREVISION": [ { "value": "4" } ],
         "MANAGED": [ { "value": "TRUE" } ],
         "OUTPUTDIR": [ { "value": "." } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],
         "SHAREDDIR": [ { "value": "../../ipshared" } ],
-        "SWVERSION": [ { "value": "2024.2" } ],
+        "SWVERSION": [ { "value": "2024.2.2" } ],
         "SYNTHESISFLOW": [ { "value": "OOC_HIERARCHICAL" } ]
       }
     },

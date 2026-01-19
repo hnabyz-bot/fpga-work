@@ -690,7 +690,7 @@ wire   lp_tx_t_data_lane_w;
   generate if(C_DPHY_MODE == "MASTER") begin: master_tx
 
 
-    mipi_dphy_v4_3_13_tx_rst_sync #
+    mipi_dphy_v4_3_14_tx_rst_sync #
     (
       .c_init_val      (1'b1),
       .c_mtbf_stages   (2)
@@ -701,7 +701,7 @@ wire   lp_tx_t_data_lane_w;
     );
 
     // TX Reset Logic Instance
-    mipi_dphy_v4_3_13_tx_rst_logic #
+    mipi_dphy_v4_3_14_tx_rst_logic #
     (
         .STABLE_CLK_PERIOD       (C_STABLE_CLK_PERIOD),
         .WATCHDOG_TIMEOUT        (200000),
@@ -726,7 +726,7 @@ wire   lp_tx_t_data_lane_w;
         .system_rst              (system_rst_w)              // System reset
     );
 
-   mipi_dphy_v4_3_13_tx_fab_top
+   mipi_dphy_v4_3_14_tx_fab_top
    #(  .C_DPHY_MODE           (C_DPHY_MODE           ),
        .C_IS_7SERIES          (C_IS_7SERIES          ),
        .C_DPHY_LANES          (C_DPHY_LANES          ),
@@ -1105,7 +1105,7 @@ wire   lp_tx_t_data_lane_w;
 
 
 
-   mipi_dphy_v4_3_13_tx_ioi_7series
+   mipi_dphy_v4_3_14_tx_ioi_7series
    #(  .C_DPHY_LANES         (C_DPHY_LANES        ),
        .C_EN_HS_OBUFTDS      (C_EN_HS_OBUFTDS     ),
        .MTBF_SYNC_STAGES     (MTBF_SYNC_STAGES    )

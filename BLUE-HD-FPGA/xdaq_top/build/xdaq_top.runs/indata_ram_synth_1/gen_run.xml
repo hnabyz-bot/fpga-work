@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="indata_ram_synth_1" LaunchPart="xc7a35tfgg484-1" LaunchTime="1768266546">
-  <File Type="REPORTS-TCL" Name="indata_ram_reports.tcl"/>
+  <File Type="RDS-DCP" Name="indata_ram.dcp"/>
+  <File Type="RDS-RDS" Name="indata_ram.vds"/>
   <File Type="RDS-UTIL" Name="indata_ram_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="indata_ram_utilization_synth.pb"/>
   <File Type="PA-TCL" Name="indata_ram.tcl"/>
-  <File Type="RDS-RDS" Name="indata_ram.vds"/>
-  <File Type="RDS-DCP" Name="indata_ram.dcp"/>
+  <File Type="REPORTS-TCL" Name="indata_ram_reports.tcl"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/indata_ram" RelGenDir="$PGENDIR/indata_ram">
     <File Path="$PPRDIR/../source/ip/indata_ram/indata_ram.xci">
       <FileInfo>

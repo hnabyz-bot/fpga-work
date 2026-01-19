@@ -905,6 +905,14 @@ module blue_hd_top (
     // ====================================================================
     // LVDS Channel Mapping - Map individual LVDS ports to internal arrays
     // ====================================================================
+    // Internal array signals to connect individual LVDS ports
+    logic [TI_ROIC_CHANNELS-1:0] R_ROIC_DCLKo_p;
+    logic [TI_ROIC_CHANNELS-1:0] R_ROIC_DCLKo_n;
+    logic [TI_ROIC_CHANNELS-1:0] R_ROIC_FCLKo_p;
+    logic [TI_ROIC_CHANNELS-1:0] R_ROIC_FCLKo_n;
+    logic [TI_ROIC_CHANNELS-1:0] R_DOUTA_H;
+    logic [TI_ROIC_CHANNELS-1:0] R_DOUTA_L;
+
     // TODO: Verify all 14 channels are correctly mapped (cyan board has 0-13)
     // This mapping connects the physical LVDS input pins to the internal array structure
     // used by the ti_roic_top module instantiation
@@ -992,15 +1000,6 @@ module blue_hd_top (
 
     logic [TI_ROIC_CHANNELS-1:0] s_even_odd_toggle_out;
     
-    // Internal array signals to connect individual LVDS ports
-    // TODO: Map individual LVDS ports to/from these internal arrays
-    logic [TI_ROIC_CHANNELS-1:0] R_ROIC_DCLKo_p;
-    logic [TI_ROIC_CHANNELS-1:0] R_ROIC_DCLKo_n;
-    logic [TI_ROIC_CHANNELS-1:0] R_ROIC_FCLKo_p;
-    logic [TI_ROIC_CHANNELS-1:0] R_ROIC_FCLKo_n;
-    logic [TI_ROIC_CHANNELS-1:0] R_DOUTA_H;
-    logic [TI_ROIC_CHANNELS-1:0] R_DOUTA_L;
-
     //for debug signal
     logic dbg_even_odd_toggle_out;
     logic dbg_channel_detected;

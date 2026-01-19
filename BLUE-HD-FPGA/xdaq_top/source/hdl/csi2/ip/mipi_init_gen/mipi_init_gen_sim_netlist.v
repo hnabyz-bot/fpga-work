@@ -1,11 +1,11 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-// Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+// Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-// Date        : Tue Jan 13 10:10:08 2026
-// Host        : work-dev running 64-bit major release  (build 9200)
+// Tool Version: Vivado v.2024.2.2 (lin64) Build 6060944 Thu Mar 06 19:10:09 MST 2025
+// Date        : Fri Jan 16 15:13:50 2026
+// Host        : drlinux running 64-bit Ubuntu 22.04.5 LTS
 // Command     : write_verilog -force -mode funcsim
-//               d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_init_gen/mipi_init_gen_sim_netlist.v
+//               /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_init_gen/mipi_init_gen_sim_netlist.v
 // Design      : mipi_init_gen
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -13,7 +13,7 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "mipi_init_gen,axi_traffic_gen_v3_0_19_top,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "axi_traffic_gen_v3_0_19_top,Vivado 2024.2" *) 
+(* CHECK_LICENSE_TYPE = "mipi_init_gen,axi_traffic_gen_v3_0_20_top,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "axi_traffic_gen_v3_0_20_top,Vivado 2024.2.2" *) 
 (* NotValidForBitStream *)
 module mipi_init_gen
    (s_axi_aclk,
@@ -293,7 +293,7 @@ module mipi_init_gen
   (* C_WRITE_ONLY = "0" *) 
   (* C_ZERO_INVALID = "1" *) 
   (* DowngradeIPIdentifiedWarnings = "yes" *) 
-  mipi_init_gen_axi_traffic_gen_v3_0_19_top inst
+  mipi_init_gen_axi_traffic_gen_v3_0_20_top inst
        (.axis_err_count(NLW_inst_axis_err_count_UNCONNECTED[15:0]),
         .core_ext_start(1'b0),
         .core_ext_stop(1'b0),
@@ -509,8 +509,8 @@ module mipi_init_gen
         .status(\^status ));
 endmodule
 
-(* ORIG_REF_NAME = "axi_traffic_gen_v3_0_19_asynch_rst_ff" *) (* dont_touch = "true" *) 
-module mipi_init_gen_axi_traffic_gen_v3_0_19_asynch_rst_ff
+(* ORIG_REF_NAME = "axi_traffic_gen_v3_0_20_asynch_rst_ff" *) (* dont_touch = "true" *) 
+module mipi_init_gen_axi_traffic_gen_v3_0_20_asynch_rst_ff
    (data,
     clk,
     reset,
@@ -537,8 +537,8 @@ module mipi_init_gen_axi_traffic_gen_v3_0_19_asynch_rst_ff
         .Q(q));
 endmodule
 
-(* ORIG_REF_NAME = "axi_traffic_gen_v3_0_19_asynch_rst_ff" *) (* dont_touch = "true" *) 
-module mipi_init_gen_axi_traffic_gen_v3_0_19_asynch_rst_ff__1
+(* ORIG_REF_NAME = "axi_traffic_gen_v3_0_20_asynch_rst_ff" *) (* dont_touch = "true" *) 
+module mipi_init_gen_axi_traffic_gen_v3_0_20_asynch_rst_ff__1
    (data,
     clk,
     reset,
@@ -565,8 +565,8 @@ module mipi_init_gen_axi_traffic_gen_v3_0_19_asynch_rst_ff__1
         .Q(q));
 endmodule
 
-(* ORIG_REF_NAME = "axi_traffic_gen_v3_0_19_asynch_rst_ff" *) (* dont_touch = "true" *) 
-module mipi_init_gen_axi_traffic_gen_v3_0_19_asynch_rst_ff__2
+(* ORIG_REF_NAME = "axi_traffic_gen_v3_0_20_asynch_rst_ff" *) (* dont_touch = "true" *) 
+module mipi_init_gen_axi_traffic_gen_v3_0_20_asynch_rst_ff__2
    (data,
     clk,
     reset,
@@ -593,8 +593,8 @@ module mipi_init_gen_axi_traffic_gen_v3_0_19_asynch_rst_ff__2
         .Q(q));
 endmodule
 
-(* ORIG_REF_NAME = "axi_traffic_gen_v3_0_19_asynch_rst_ff" *) (* dont_touch = "true" *) 
-module mipi_init_gen_axi_traffic_gen_v3_0_19_asynch_rst_ff__3
+(* ORIG_REF_NAME = "axi_traffic_gen_v3_0_20_asynch_rst_ff" *) (* dont_touch = "true" *) 
+module mipi_init_gen_axi_traffic_gen_v3_0_20_asynch_rst_ff__3
    (data,
     clk,
     reset,
@@ -621,8 +621,8 @@ module mipi_init_gen_axi_traffic_gen_v3_0_19_asynch_rst_ff__3
         .Q(q));
 endmodule
 
-(* ORIG_REF_NAME = "axi_traffic_gen_v3_0_19_systeminit_dmg" *) 
-module mipi_init_gen_axi_traffic_gen_v3_0_19_systeminit_dmg
+(* ORIG_REF_NAME = "axi_traffic_gen_v3_0_20_systeminit_dmg" *) 
+module mipi_init_gen_axi_traffic_gen_v3_0_20_systeminit_dmg
    (douta,
     \gen_rd_a.gen_rd_a_synth_template.gen_rf_narrow_reg.douta_reg_reg[5] ,
     DI,
@@ -720,8 +720,8 @@ module mipi_init_gen_axi_traffic_gen_v3_0_19_systeminit_dmg
         .s_axi_aclk(s_axi_aclk));
 endmodule
 
-(* ORIG_REF_NAME = "axi_traffic_gen_v3_0_19_systeminit_dmg" *) 
-module mipi_init_gen_axi_traffic_gen_v3_0_19_systeminit_dmg__parameterized0
+(* ORIG_REF_NAME = "axi_traffic_gen_v3_0_20_systeminit_dmg" *) 
+module mipi_init_gen_axi_traffic_gen_v3_0_20_systeminit_dmg__parameterized0
    (douta,
     \gen_rd_a.gen_rd_a_synth_template.gen_rf_narrow_reg.douta_reg_reg[21] ,
     m_axi_lite_ch1_rresp_0_sp_1,
@@ -780,8 +780,8 @@ module mipi_init_gen_axi_traffic_gen_v3_0_19_systeminit_dmg__parameterized0
         .s_axi_aclk(s_axi_aclk));
 endmodule
 
-(* ORIG_REF_NAME = "axi_traffic_gen_v3_0_19_systeminit_dmg" *) 
-module mipi_init_gen_axi_traffic_gen_v3_0_19_systeminit_dmg__parameterized1
+(* ORIG_REF_NAME = "axi_traffic_gen_v3_0_20_systeminit_dmg" *) 
+module mipi_init_gen_axi_traffic_gen_v3_0_20_systeminit_dmg__parameterized1
    (douta,
     rom_eof0,
     rready_m_reg,
@@ -978,8 +978,8 @@ module mipi_init_gen_axi_traffic_gen_v3_0_19_systeminit_dmg__parameterized1
         .s_axi_aresetn_0(s_axi_aresetn_0));
 endmodule
 
-(* ORIG_REF_NAME = "axi_traffic_gen_v3_0_19_systeminit_dmg" *) 
-module mipi_init_gen_axi_traffic_gen_v3_0_19_systeminit_dmg__parameterized2
+(* ORIG_REF_NAME = "axi_traffic_gen_v3_0_20_systeminit_dmg" *) 
+module mipi_init_gen_axi_traffic_gen_v3_0_20_systeminit_dmg__parameterized2
    (douta,
     \m_axi_lite_ch1_rdata[11] ,
     \gen_rd_a.gen_rd_a_synth_template.gen_rf_narrow_reg.douta_reg_reg[6] ,
@@ -1161,8 +1161,8 @@ module mipi_init_gen_axi_traffic_gen_v3_0_19_systeminit_dmg__parameterized2
         .s_axi_aclk(s_axi_aclk));
 endmodule
 
-(* ORIG_REF_NAME = "axi_traffic_gen_v3_0_19_systeminit_mrdwr" *) 
-module mipi_init_gen_axi_traffic_gen_v3_0_19_systeminit_mrdwr
+(* ORIG_REF_NAME = "axi_traffic_gen_v3_0_20_systeminit_mrdwr" *) 
+module mipi_init_gen_axi_traffic_gen_v3_0_20_systeminit_mrdwr
    (s_axi_aresetn_0,
     done,
     \m_axi_lite_ch1_rdata[30] ,
@@ -5210,8 +5210,8 @@ module mipi_init_gen_axi_traffic_gen_v3_0_19_systeminit_mrdwr
         .O(addra[0]));
 endmodule
 
-(* ORIG_REF_NAME = "axi_traffic_gen_v3_0_19_systeminit_top" *) 
-module mipi_init_gen_axi_traffic_gen_v3_0_19_systeminit_top
+(* ORIG_REF_NAME = "axi_traffic_gen_v3_0_20_systeminit_top" *) 
+module mipi_init_gen_axi_traffic_gen_v3_0_20_systeminit_top
    (m_axi_lite_ch1_awaddr,
     m_axi_lite_ch1_araddr,
     m_axi_lite_ch1_wdata,
@@ -5398,7 +5398,7 @@ module mipi_init_gen_axi_traffic_gen_v3_0_19_systeminit_top
   wire systeminit_dmg_data_n_87;
   wire systeminit_dmg_data_n_88;
 
-  mipi_init_gen_axi_traffic_gen_v3_0_19_systeminit_dmg__parameterized0 \ATG_SYSINIT_DMG.systeminit_dmg_ctrl 
+  mipi_init_gen_axi_traffic_gen_v3_0_20_systeminit_dmg__parameterized0 \ATG_SYSINIT_DMG.systeminit_dmg_ctrl 
        (.\ATG_SYSTEST_NXT_PTR.nxt_rom_ptr_reg[0] (static_mrdwr_n_7),
         .CO(rd_check2),
         .D({\ATG_SYSINIT_DMG.systeminit_dmg_ctrl_n_4 ,\ATG_SYSINIT_DMG.systeminit_dmg_ctrl_n_5 ,\ATG_SYSINIT_DMG.systeminit_dmg_ctrl_n_6 ,\ATG_SYSINIT_DMG.systeminit_dmg_ctrl_n_7 ,\ATG_SYSINIT_DMG.systeminit_dmg_ctrl_n_8 ,\ATG_SYSINIT_DMG.systeminit_dmg_ctrl_n_9 ,\ATG_SYSINIT_DMG.systeminit_dmg_ctrl_n_10 ,\ATG_SYSINIT_DMG.systeminit_dmg_ctrl_n_11 }),
@@ -5412,7 +5412,7 @@ module mipi_init_gen_axi_traffic_gen_v3_0_19_systeminit_top
         .m_axi_lite_ch1_rresp(m_axi_lite_ch1_rresp[0]),
         .m_axi_lite_ch1_rresp_0_sp_1(\ATG_SYSINIT_DMG.systeminit_dmg_ctrl_n_3 ),
         .s_axi_aclk(s_axi_aclk));
-  mipi_init_gen_axi_traffic_gen_v3_0_19_systeminit_dmg \ATG_SYSINIT_DMG.systeminit_dmg_mask 
+  mipi_init_gen_axi_traffic_gen_v3_0_20_systeminit_dmg \ATG_SYSINIT_DMG.systeminit_dmg_mask 
        (.DI(\ATG_SYSINIT_DMG.systeminit_dmg_mask_n_33 ),
         .S(\ATG_SYSINIT_DMG.systeminit_dmg_mask_n_41 ),
         .addra(rom_data_ptr_ff),
@@ -5436,7 +5436,7 @@ module mipi_init_gen_axi_traffic_gen_v3_0_19_systeminit_top
         .\rd_check2_inferred__0/i__carry__1 (systeminit_dmg_addr_n_53),
         .rom_eof0(rom_eof0),
         .s_axi_aclk(s_axi_aclk));
-  mipi_init_gen_axi_traffic_gen_v3_0_19_systeminit_mrdwr static_mrdwr
+  mipi_init_gen_axi_traffic_gen_v3_0_20_systeminit_mrdwr static_mrdwr
        (.\ATG_SYSTEST_NXT_PTR.nxt_rom_ptr_reg[7]_0 ({\ATG_SYSINIT_DMG.systeminit_dmg_ctrl_n_4 ,\ATG_SYSINIT_DMG.systeminit_dmg_ctrl_n_5 ,\ATG_SYSINIT_DMG.systeminit_dmg_ctrl_n_6 ,\ATG_SYSINIT_DMG.systeminit_dmg_ctrl_n_7 ,\ATG_SYSINIT_DMG.systeminit_dmg_ctrl_n_8 ,\ATG_SYSINIT_DMG.systeminit_dmg_ctrl_n_9 ,\ATG_SYSINIT_DMG.systeminit_dmg_ctrl_n_10 ,\ATG_SYSINIT_DMG.systeminit_dmg_ctrl_n_11 }),
         .CO(rd_check2),
         .D(rom_addr),
@@ -5491,7 +5491,7 @@ module mipi_init_gen_axi_traffic_gen_v3_0_19_systeminit_top
         .s_axi_aresetn_0(static_mrdwr_n_0),
         .status(status),
         .\wdata_m_reg[31]_0 (rom_data));
-  mipi_init_gen_axi_traffic_gen_v3_0_19_systeminit_dmg__parameterized1 systeminit_dmg_addr
+  mipi_init_gen_axi_traffic_gen_v3_0_20_systeminit_dmg__parameterized1 systeminit_dmg_addr
        (.addra(rom_data_ptr_ff),
         .b_complete(b_complete),
         .bready_m(bready_m),
@@ -5538,7 +5538,7 @@ module mipi_init_gen_axi_traffic_gen_v3_0_19_systeminit_top
         .s_axi_aclk(s_axi_aclk),
         .s_axi_aresetn(s_axi_aresetn),
         .s_axi_aresetn_0(systeminit_dmg_addr_n_34));
-  mipi_init_gen_axi_traffic_gen_v3_0_19_systeminit_dmg__parameterized2 systeminit_dmg_data
+  mipi_init_gen_axi_traffic_gen_v3_0_20_systeminit_dmg__parameterized2 systeminit_dmg_data
        (.DI({systeminit_dmg_data_n_40,systeminit_dmg_data_n_41,systeminit_dmg_data_n_42,systeminit_dmg_data_n_43}),
         .S({systeminit_dmg_data_n_75,systeminit_dmg_data_n_76,systeminit_dmg_data_n_77,systeminit_dmg_data_n_78}),
         .addra(rom_data_ptr_ff),
@@ -5614,8 +5614,8 @@ endmodule
 (* C_SRAM_F = "mipi_init_gen_default_mstram.mem" *) (* C_STRM_DATA_SEED = "16'b1010101111001101" *) (* C_S_AXI_ARUSER_WIDTH = "8" *) 
 (* C_S_AXI_AWUSER_WIDTH = "8" *) (* C_S_AXI_DATA_WIDTH = "32" *) (* C_S_AXI_ID_WIDTH = "1" *) 
 (* C_WRITE_ONLY = "0" *) (* C_ZERO_INVALID = "1" *) (* DowngradeIPIdentifiedWarnings = "yes" *) 
-(* ORIG_REF_NAME = "axi_traffic_gen_v3_0_19_top" *) 
-module mipi_init_gen_axi_traffic_gen_v3_0_19_top
+(* ORIG_REF_NAME = "axi_traffic_gen_v3_0_20_top" *) 
+module mipi_init_gen_axi_traffic_gen_v3_0_20_top
    (s_axi_aclk,
     s_axi_aresetn,
     core_ext_start,
@@ -6888,7 +6888,7 @@ module mipi_init_gen_axi_traffic_gen_v3_0_19_top
   assign status[11] = \<const0> ;
   assign status[10] = \<const0> ;
   assign status[9:0] = \^status [9:0];
-  mipi_init_gen_axi_traffic_gen_v3_0_19_systeminit_top \ATG_MODE_SYSTEM_INIT_TEST.systeminit_top 
+  mipi_init_gen_axi_traffic_gen_v3_0_20_systeminit_top \ATG_MODE_SYSTEM_INIT_TEST.systeminit_top 
        (.done(done),
         .m_axi_lite_ch1_araddr(m_axi_lite_ch1_araddr),
         .m_axi_lite_ch1_arready(m_axi_lite_ch1_arready),
@@ -6912,25 +6912,25 @@ module mipi_init_gen_axi_traffic_gen_v3_0_19_top
   GND GND
        (.G(\<const0> ));
   (* DONT_TOUCH *) 
-  mipi_init_gen_axi_traffic_gen_v3_0_19_asynch_rst_ff__3 ext_st_sync_flop_0
+  mipi_init_gen_axi_traffic_gen_v3_0_20_asynch_rst_ff__3 ext_st_sync_flop_0
        (.clk(s_axi_aclk),
         .data(1'b0),
         .q(st_flop_ze_out),
         .reset(core_ext_stop));
   (* DONT_TOUCH *) 
-  mipi_init_gen_axi_traffic_gen_v3_0_19_asynch_rst_ff ext_st_sync_flop_1
+  mipi_init_gen_axi_traffic_gen_v3_0_20_asynch_rst_ff ext_st_sync_flop_1
        (.clk(s_axi_aclk),
         .data(st_flop_ze_out),
         .q(st_flop_fi_out),
         .reset(core_ext_stop));
   (* DONT_TOUCH *) 
-  mipi_init_gen_axi_traffic_gen_v3_0_19_asynch_rst_ff__1 ext_sync_flop_0
+  mipi_init_gen_axi_traffic_gen_v3_0_20_asynch_rst_ff__1 ext_sync_flop_0
        (.clk(s_axi_aclk),
         .data(1'b0),
         .q(flop_ze_out),
         .reset(core_ext_start));
   (* DONT_TOUCH *) 
-  mipi_init_gen_axi_traffic_gen_v3_0_19_asynch_rst_ff__2 ext_sync_flop_1
+  mipi_init_gen_axi_traffic_gen_v3_0_20_asynch_rst_ff__2 ext_sync_flop_1
        (.clk(s_axi_aclk),
         .data(flop_ze_out),
         .q(flop_fi_out),

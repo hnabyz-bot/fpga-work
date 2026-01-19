@@ -3,7 +3,7 @@
   "ip_inst": {
     "xci_name": "mipi_init_gen",
     "component_reference": "xilinx.com:ip:axi_traffic_gen:3.0",
-    "ip_revision": "19",
+    "ip_revision": "20",
     "gen_directory": ".",
     "parameters": {
       "component_parameters": {
@@ -219,12 +219,12 @@
       },
       "runtime_parameters": {
         "IPCONTEXT": [ { "value": "IP_Flow" } ],
-        "IPREVISION": [ { "value": "19" } ],
+        "IPREVISION": [ { "value": "20" } ],
         "MANAGED": [ { "value": "TRUE" } ],
         "OUTPUTDIR": [ { "value": "." } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],
         "SHAREDDIR": [ { "value": "." } ],
-        "SWVERSION": [ { "value": "2024.2" } ],
+        "SWVERSION": [ { "value": "2024.2.2" } ],
         "SYNTHESISFLOW": [ { "value": "OUT_OF_CONTEXT" } ]
       }
     },

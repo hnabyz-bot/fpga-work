@@ -47,7 +47,7 @@
 // DO NOT MODIFY THIS FILE.
 
 // IP VLNV: xilinx.com:ip:mipi_csi2_tx_subsystem:2.2
-// IP Revision: 13
+// IP Revision: 15
 
 // The following must be inserted into your Verilog file for this
 // core to be instantiated. Change the instance name and port connections

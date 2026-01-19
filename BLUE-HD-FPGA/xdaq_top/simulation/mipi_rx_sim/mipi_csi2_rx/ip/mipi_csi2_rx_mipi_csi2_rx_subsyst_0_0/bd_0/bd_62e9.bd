@@ -8,7 +8,7 @@
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "scoped": "true",
       "synth_flow_mode": "None",
-      "tool_version": "2024.2",
+      "tool_version": "2024.2.2",
       "validated": "true"
     },
     "design_tree": {
@@ -400,9 +400,9 @@
     "components": {
       "xbar": {
         "vlnv": "xilinx.com:ip:axi_crossbar:2.1",
-        "ip_revision": "34",
+        "ip_revision": "36",
         "xci_name": "bd_62e9_xbar_0",
-        "xci_path": "ip\\ip_0\\bd_62e9_xbar_0.xci",
+        "xci_path": "ip/ip_0/bd_62e9_xbar_0.xci",
         "inst_hier_path": "xbar",
         "parameters": {
           "ADDR_WIDTH": {
@@ -446,9 +446,9 @@
       },
       "phy": {
         "vlnv": "xilinx.com:ip:mipi_dphy:4.3",
-        "ip_revision": "13",
+        "ip_revision": "14",
         "xci_name": "bd_62e9_phy_0",
-        "xci_path": "ip\\ip_1\\bd_62e9_phy_0.xci",
+        "xci_path": "ip/ip_1/bd_62e9_phy_0.xci",
         "inst_hier_path": "phy",
         "parameters": {
           "C_CAL_MODE": {
@@ -551,9 +551,9 @@
       },
       "rx": {
         "vlnv": "xilinx.com:ip:mipi_csi2_rx_ctrl:1.0",
-        "ip_revision": "11",
+        "ip_revision": "12",
         "xci_name": "bd_62e9_rx_0",
-        "xci_path": "ip\\ip_2\\bd_62e9_rx_0.xci",
+        "xci_path": "ip/ip_2/bd_62e9_rx_0.xci",
         "inst_hier_path": "rx",
         "parameters": {
           "AXIS_FIFO_DEPTH": {
@@ -650,9 +650,9 @@
       },
       "vfb_0": {
         "vlnv": "xilinx.com:ip:vfb:1.0",
-        "ip_revision": "27",
+        "ip_revision": "28",
         "xci_name": "bd_62e9_vfb_0_0",
-        "xci_path": "ip\\ip_3\\bd_62e9_vfb_0_0.xci",
+        "xci_path": "ip/ip_3/bd_62e9_vfb_0_0.xci",
         "inst_hier_path": "vfb_0",
         "parameters": {
           "AXIS_TDATA_WIDTH": {
@@ -688,7 +688,7 @@
         "vlnv": "xilinx.com:ip:proc_sys_reset:5.0",
         "ip_revision": "16",
         "xci_name": "bd_62e9_r_sync_0",
-        "xci_path": "ip\\ip_4\\bd_62e9_r_sync_0.xci",
+        "xci_path": "ip/ip_4/bd_62e9_r_sync_0.xci",
         "inst_hier_path": "r_sync"
       }
     },

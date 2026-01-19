@@ -50,7 +50,7 @@
 `timescale 1ps/1ps
 `default_nettype none
 
-module axis_data_fifo_v2_0_15_top #
+module axis_data_fifo_v2_0_16_top #
 (
 ///////////////////////////////////////////////////////////////////////////////
 // Parameter Definitions

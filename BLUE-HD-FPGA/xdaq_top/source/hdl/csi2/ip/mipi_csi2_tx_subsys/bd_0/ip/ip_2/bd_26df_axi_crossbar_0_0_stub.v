@@ -1,11 +1,11 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-// Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+// Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-// Date        : Tue Jan 13 10:10:06 2026
-// Host        : work-dev running 64-bit major release  (build 9200)
+// Tool Version: Vivado v.2024.2.2 (lin64) Build 6060944 Thu Mar 06 19:10:09 MST 2025
+// Date        : Fri Jan 16 15:12:23 2026
+// Host        : drlinux running 64-bit Ubuntu 22.04.5 LTS
 // Command     : write_verilog -force -mode synth_stub
-//               d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_2/bd_26df_axi_crossbar_0_0_stub.v
+//               /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_csi2_tx_subsys/bd_0/ip/ip_2/bd_26df_axi_crossbar_0_0_stub.v
 // Design      : bd_26df_axi_crossbar_0_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7a35tfgg484-1
@@ -14,8 +14,8 @@
 // This empty module with port declaration file causes synthesis tools to infer a black box for IP.
 // The synthesis directives are for Synopsys Synplify support to prevent IO buffer insertion.
 // Please paste the declaration into a Verilog source file or add the file as an additional source.
-(* CHECK_LICENSE_TYPE = "bd_26df_axi_crossbar_0_0,axi_crossbar_v2_1_34_axi_crossbar,{}" *) (* CORE_GENERATION_INFO = "bd_26df_axi_crossbar_0_0,axi_crossbar_v2_1_34_axi_crossbar,{x_ipProduct=Vivado 2024.2,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=axi_crossbar,x_ipVersion=2.1,x_ipCoreRevision=34,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_FAMILY=artix7,C_NUM_SLAVE_SLOTS=1,C_NUM_MASTER_SLOTS=2,C_AXI_ID_WIDTH=1,C_AXI_ADDR_WIDTH=13,C_AXI_DATA_WIDTH=32,C_AXI_PROTOCOL=2,C_NUM_ADDR_RANGES=1,C_M_AXI_BASE_ADDR=0x00000000000010000000000000000000,C_M_AXI_ADDR_WIDTH=0x0000000c0000000c,C_S_AXI_BASE_ID=0x00000000,C_S_AXI_THREAD_ID_WIDTH=0x00000000,C_AXI_SUPPORTS_USER_SIGNALS=0,C_AXI_AWUSER_WIDTH=1,C_AXI_ARUSER_WIDTH=1,C_AXI_WUSER_WIDTH=1,C_AXI_RUSER_WIDTH=1,C_AXI_BUSER_WIDTH=1,C_M_AXI_WRITE_CONNECTIVITY=0xFFFFFFFFFFFFFFFF,C_M_AXI_READ_CONNECTIVITY=0xFFFFFFFFFFFFFFFF,C_R_REGISTER=1,C_S_AXI_SINGLE_THREAD=0x00000001,C_S_AXI_WRITE_ACCEPTANCE=0x00000001,C_S_AXI_READ_ACCEPTANCE=0x00000001,C_M_AXI_WRITE_ISSUING=0x0000000100000001,C_M_AXI_READ_ISSUING=0x0000000100000001,C_S_AXI_ARB_PRIORITY=0x00000000,C_M_AXI_SECURE=0x00000000,C_CONNECTIVITY_MODE=0}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) 
-(* X_CORE_INFO = "axi_crossbar_v2_1_34_axi_crossbar,Vivado 2024.2" *) 
+(* CHECK_LICENSE_TYPE = "bd_26df_axi_crossbar_0_0,axi_crossbar_v2_1_36_axi_crossbar,{}" *) (* CORE_GENERATION_INFO = "bd_26df_axi_crossbar_0_0,axi_crossbar_v2_1_36_axi_crossbar,{x_ipProduct=Vivado 2024.2.2,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=axi_crossbar,x_ipVersion=2.1,x_ipCoreRevision=36,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_FAMILY=artix7,C_NUM_SLAVE_SLOTS=1,C_NUM_MASTER_SLOTS=2,C_AXI_ID_WIDTH=1,C_AXI_ADDR_WIDTH=13,C_AXI_DATA_WIDTH=32,C_AXI_PROTOCOL=2,C_NUM_ADDR_RANGES=1,C_M_AXI_BASE_ADDR=0x00000000000010000000000000000000,C_M_AXI_ADDR_WIDTH=0x0000000c0000000c,C_S_AXI_BASE_ID=0x00000000,C_S_AXI_THREAD_ID_WIDTH=0x00000000,C_AXI_SUPPORTS_USER_SIGNALS=0,C_AXI_AWUSER_WIDTH=1,C_AXI_ARUSER_WIDTH=1,C_AXI_WUSER_WIDTH=1,C_AXI_RUSER_WIDTH=1,C_AXI_BUSER_WIDTH=1,C_M_AXI_WRITE_CONNECTIVITY=0xFFFFFFFFFFFFFFFF,C_M_AXI_READ_CONNECTIVITY=0xFFFFFFFFFFFFFFFF,C_R_REGISTER=1,C_S_AXI_SINGLE_THREAD=0x00000001,C_S_AXI_WRITE_ACCEPTANCE=0x00000001,C_S_AXI_READ_ACCEPTANCE=0x00000001,C_M_AXI_WRITE_ISSUING=0x0000000100000001,C_M_AXI_READ_ISSUING=0x0000000100000001,C_S_AXI_ARB_PRIORITY=0x00000000,C_M_AXI_SECURE=0x00000000,C_CONNECTIVITY_MODE=0}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) 
+(* X_CORE_INFO = "axi_crossbar_v2_1_36_axi_crossbar,Vivado 2024.2.2" *) 
 module bd_26df_axi_crossbar_0_0(aclk, aresetn, s_axi_awaddr, s_axi_awprot, 
   s_axi_awvalid, s_axi_awready, s_axi_wdata, s_axi_wstrb, s_axi_wvalid, s_axi_wready, 
   s_axi_bresp, s_axi_bvalid, s_axi_bready, s_axi_araddr, s_axi_arprot, s_axi_arvalid, 

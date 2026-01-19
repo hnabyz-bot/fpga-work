@@ -46,7 +46,7 @@
 -- 
 -- DO NOT MODIFY THIS FILE.
 -- IP VLNV: xilinx.com:ip:mipi_csi2_tx_subsystem:2.2
--- IP Revision: 13
+-- IP Revision: 15
 
 -- The following code must appear in the VHDL architecture header.
 

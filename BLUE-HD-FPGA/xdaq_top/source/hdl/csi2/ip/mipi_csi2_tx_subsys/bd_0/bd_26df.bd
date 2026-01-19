@@ -8,7 +8,7 @@
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "scoped": "true",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2024.2",
+      "tool_version": "2024.2.2",
       "validated": "true"
     },
     "design_tree": {
@@ -499,7 +499,7 @@
         "vlnv": "xilinx.com:ip:mipi_csi2_tx_ctrl:1.0",
         "ip_revision": "6",
         "xci_name": "bd_26df_mipi_csi2_tx_ctrl_0_0",
-        "xci_path": "ip\\ip_0\\bd_26df_mipi_csi2_tx_ctrl_0_0.xci",
+        "xci_path": "ip/ip_0/bd_26df_mipi_csi2_tx_ctrl_0_0.xci",
         "inst_hier_path": "mipi_csi2_tx_ctrl_0",
         "parameters": {
           "C_CSI_CLK_PRE": {
@@ -557,9 +557,9 @@
       },
       "mipi_dphy_0": {
         "vlnv": "xilinx.com:ip:mipi_dphy:4.3",
-        "ip_revision": "13",
+        "ip_revision": "14",
         "xci_name": "bd_26df_mipi_dphy_0_0",
-        "xci_path": "ip\\ip_1\\bd_26df_mipi_dphy_0_0.xci",
+        "xci_path": "ip/ip_1/bd_26df_mipi_dphy_0_0.xci",
         "inst_hier_path": "mipi_dphy_0",
         "parameters": {
           "C_CLK_IO_SWAP": {
@@ -656,9 +656,9 @@
       },
       "axi_crossbar_0": {
         "vlnv": "xilinx.com:ip:axi_crossbar:2.1",
-        "ip_revision": "34",
+        "ip_revision": "36",
         "xci_name": "bd_26df_axi_crossbar_0_0",
-        "xci_path": "ip\\ip_2\\bd_26df_axi_crossbar_0_0.xci",
+        "xci_path": "ip/ip_2/bd_26df_axi_crossbar_0_0.xci",
         "inst_hier_path": "axi_crossbar_0",
         "parameters": {
           "ADDR_WIDTH": {

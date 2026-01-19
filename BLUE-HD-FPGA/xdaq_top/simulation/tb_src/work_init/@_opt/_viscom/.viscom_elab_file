@@ -1,0 +1,1 @@
+/home/holee/TOOLS/QuestaBase_2024.3/questa_base/linux_x86_64/VisualizerRls/bin/viscom -nolock -quiet -jmem_size 393216 work_init.init_tb -quiet -auto_acc_if_foreign -work work_init -allow_unnamed -o _opt -id 1-000ae431a4f1-6969d787-667b0-6a3b6
