@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2024.2.2 (lin64) Build 6060944 Thu Mar 06 19:10:09 MST 2025
-| Date         : Mon Jan 19 15:34:01 2026
-| Host         : drlinux running 64-bit Ubuntu 22.04.5 LTS
+| Tool Version : Vivado v.2024.2.2 (win64) Build 6060944 Thu Mar 06 19:10:01 MST 2025
+| Date         : Tue Jan 20 11:27:52 2026
+| Host         : work-dev running 64-bit major release  (build 9200)
 | Command      : report_drc -file blue_hd_top_drc_opted.rpt -pb blue_hd_top_drc_opted.pb -rpx blue_hd_top_drc_opted.rpx
 | Design       : blue_hd_top
 | Device       : xc7a35tfgg484-1
@@ -24,7 +24,7 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max checks: <unlimited>
-             Checks found: 71
+             Checks found: 69
 +-------------+----------+-------------------------------------------------------------+--------+
 | Rule        | Severity | Description                                                 | Checks |
 +-------------+----------+-------------------------------------------------------------+--------+
@@ -34,7 +34,7 @@ Table of Contents
 | PLCK-12     | Warning  | Clock Placer Checks                                         | 10     |
 | PLHOLDVIO-2 | Warning  | Non-Optimal connections which could lead to hold violations | 1      |
 | REQP-1577   | Warning  | Clock output buffering                                      | 1      |
-| REQP-1580   | Warning  | Phase alignment                                             | 14     |
+| REQP-1580   | Warning  | Phase alignment                                             | 12     |
 | REQP-1840   | Warning  | RAMB18 async control check                                  | 20     |
 | REQP-165    | Advisory | writefirst                                                  | 2      |
 +-------------+----------+-------------------------------------------------------------+--------+
@@ -173,7 +173,7 @@ Poor placement for routing between an IO pin and BUFG.
 Resolution: Poor placement of an IO pin and a BUFG has resulted in the router using a non-dedicated path between the two.  There are several things that could trigger this DRC, each of which can cause unpredictable clock insertion delays that result in poor timing.  This DRC could be caused by any of the following: (a) a clock port was placed on a pin that is not a CCIO-pin (b)the BUFG has not been placed in the same half of the device or SLR as the CCIO-pin (c) a single ended clock has been placed on the N-Side of a differential pair CCIO-pin.
  This is normally an ERROR but the CLOCK_DEDICATED_ROUTE constraint is set to FALSE allowing your design to continue. The use of this override is highly discouraged as it may lead to very poor timing results. It is recommended that this error condition be corrected in the design.
 
-	gen_ti_roic_top[12].ti_roic_top_inst/bit_clock_gen/adc_fclk_inst (IBUFDS.O) is locked to Y8
+	gen_ti_roic_top[10].ti_roic_top_inst/bit_clock_gen/adc_fclk_inst (IBUFDS.O) is locked to F16
 	fclk_in_reg[0]_i_1__6 (BUFG.I) cannot be placed
 
 Related violations: <none>
@@ -184,23 +184,12 @@ Poor placement for routing between an IO pin and BUFG.
 Resolution: Poor placement of an IO pin and a BUFG has resulted in the router using a non-dedicated path between the two.  There are several things that could trigger this DRC, each of which can cause unpredictable clock insertion delays that result in poor timing.  This DRC could be caused by any of the following: (a) a clock port was placed on a pin that is not a CCIO-pin (b)the BUFG has not been placed in the same half of the device or SLR as the CCIO-pin (c) a single ended clock has been placed on the N-Side of a differential pair CCIO-pin.
  This is normally an ERROR but the CLOCK_DEDICATED_ROUTE constraint is set to FALSE allowing your design to continue. The use of this override is highly discouraged as it may lead to very poor timing results. It is recommended that this error condition be corrected in the design.
 
-	gen_ti_roic_top[13].ti_roic_top_inst/bit_clock_gen/adc_fclk_inst (IBUFDS.O) is locked to AB7
-	fclk_in_reg[0]_i_1__8 (BUFG.I) cannot be placed
-
-Related violations: <none>
-
-PLCK-12#4 Warning
-Clock Placer Checks  
-Poor placement for routing between an IO pin and BUFG. 
-Resolution: Poor placement of an IO pin and a BUFG has resulted in the router using a non-dedicated path between the two.  There are several things that could trigger this DRC, each of which can cause unpredictable clock insertion delays that result in poor timing.  This DRC could be caused by any of the following: (a) a clock port was placed on a pin that is not a CCIO-pin (b)the BUFG has not been placed in the same half of the device or SLR as the CCIO-pin (c) a single ended clock has been placed on the N-Side of a differential pair CCIO-pin.
- This is normally an ERROR but the CLOCK_DEDICATED_ROUTE constraint is set to FALSE allowing your design to continue. The use of this override is highly discouraged as it may lead to very poor timing results. It is recommended that this error condition be corrected in the design.
-
 	gen_ti_roic_top[1].ti_roic_top_inst/bit_clock_gen/adc_fclk_inst (IBUFDS.O) is locked to G17
 	fclk_in_reg[0]_i_1__1 (BUFG.I) cannot be placed
 
 Related violations: <none>
 
-PLCK-12#5 Warning
+PLCK-12#4 Warning
 Clock Placer Checks  
 Poor placement for routing between an IO pin and BUFG. 
 Resolution: Poor placement of an IO pin and a BUFG has resulted in the router using a non-dedicated path between the two.  There are several things that could trigger this DRC, each of which can cause unpredictable clock insertion delays that result in poor timing.  This DRC could be caused by any of the following: (a) a clock port was placed on a pin that is not a CCIO-pin (b)the BUFG has not been placed in the same half of the device or SLR as the CCIO-pin (c) a single ended clock has been placed on the N-Side of a differential pair CCIO-pin.
@@ -211,7 +200,7 @@ Resolution: Poor placement of an IO pin and a BUFG has resulted in the router us
 
 Related violations: <none>
 
-PLCK-12#6 Warning
+PLCK-12#5 Warning
 Clock Placer Checks  
 Poor placement for routing between an IO pin and BUFG. 
 Resolution: Poor placement of an IO pin and a BUFG has resulted in the router using a non-dedicated path between the two.  There are several things that could trigger this DRC, each of which can cause unpredictable clock insertion delays that result in poor timing.  This DRC could be caused by any of the following: (a) a clock port was placed on a pin that is not a CCIO-pin (b)the BUFG has not been placed in the same half of the device or SLR as the CCIO-pin (c) a single ended clock has been placed on the N-Side of a differential pair CCIO-pin.
@@ -222,7 +211,7 @@ Resolution: Poor placement of an IO pin and a BUFG has resulted in the router us
 
 Related violations: <none>
 
-PLCK-12#7 Warning
+PLCK-12#6 Warning
 Clock Placer Checks  
 Poor placement for routing between an IO pin and BUFG. 
 Resolution: Poor placement of an IO pin and a BUFG has resulted in the router using a non-dedicated path between the two.  There are several things that could trigger this DRC, each of which can cause unpredictable clock insertion delays that result in poor timing.  This DRC could be caused by any of the following: (a) a clock port was placed on a pin that is not a CCIO-pin (b)the BUFG has not been placed in the same half of the device or SLR as the CCIO-pin (c) a single ended clock has been placed on the N-Side of a differential pair CCIO-pin.
@@ -233,14 +222,25 @@ Resolution: Poor placement of an IO pin and a BUFG has resulted in the router us
 
 Related violations: <none>
 
-PLCK-12#8 Warning
+PLCK-12#7 Warning
 Clock Placer Checks  
 Poor placement for routing between an IO pin and BUFG. 
 Resolution: Poor placement of an IO pin and a BUFG has resulted in the router using a non-dedicated path between the two.  There are several things that could trigger this DRC, each of which can cause unpredictable clock insertion delays that result in poor timing.  This DRC could be caused by any of the following: (a) a clock port was placed on a pin that is not a CCIO-pin (b)the BUFG has not been placed in the same half of the device or SLR as the CCIO-pin (c) a single ended clock has been placed on the N-Side of a differential pair CCIO-pin.
  This is normally an ERROR but the CLOCK_DEDICATED_ROUTE constraint is set to FALSE allowing your design to continue. The use of this override is highly discouraged as it may lead to very poor timing results. It is recommended that this error condition be corrected in the design.
 
 	gen_ti_roic_top[5].ti_roic_top_inst/bit_clock_gen/adc_fclk_inst (IBUFDS.O) is locked to H13
-	fclk_in_reg[0]_i_1__9 (BUFG.I) cannot be placed
+	fclk_in_reg[0]_i_1__2 (BUFG.I) cannot be placed
+
+Related violations: <none>
+
+PLCK-12#8 Warning
+Clock Placer Checks  
+Poor placement for routing between an IO pin and BUFG. 
+Resolution: Poor placement of an IO pin and a BUFG has resulted in the router using a non-dedicated path between the two.  There are several things that could trigger this DRC, each of which can cause unpredictable clock insertion delays that result in poor timing.  This DRC could be caused by any of the following: (a) a clock port was placed on a pin that is not a CCIO-pin (b)the BUFG has not been placed in the same half of the device or SLR as the CCIO-pin (c) a single ended clock has been placed on the N-Side of a differential pair CCIO-pin.
+ This is normally an ERROR but the CLOCK_DEDICATED_ROUTE constraint is set to FALSE allowing your design to continue. The use of this override is highly discouraged as it may lead to very poor timing results. It is recommended that this error condition be corrected in the design.
+
+	gen_ti_roic_top[6].ti_roic_top_inst/bit_clock_gen/adc_fclk_inst (IBUFDS.O) is locked to K17
+	fclk_in_reg[0]_i_1__0 (BUFG.I) cannot be placed
 
 Related violations: <none>
 
@@ -250,8 +250,8 @@ Poor placement for routing between an IO pin and BUFG.
 Resolution: Poor placement of an IO pin and a BUFG has resulted in the router using a non-dedicated path between the two.  There are several things that could trigger this DRC, each of which can cause unpredictable clock insertion delays that result in poor timing.  This DRC could be caused by any of the following: (a) a clock port was placed on a pin that is not a CCIO-pin (b)the BUFG has not been placed in the same half of the device or SLR as the CCIO-pin (c) a single ended clock has been placed on the N-Side of a differential pair CCIO-pin.
  This is normally an ERROR but the CLOCK_DEDICATED_ROUTE constraint is set to FALSE allowing your design to continue. The use of this override is highly discouraged as it may lead to very poor timing results. It is recommended that this error condition be corrected in the design.
 
-	gen_ti_roic_top[6].ti_roic_top_inst/bit_clock_gen/adc_fclk_inst (IBUFDS.O) is locked to K17
-	fclk_in_reg[0]_i_1__2 (BUFG.I) cannot be placed
+	gen_ti_roic_top[8].ti_roic_top_inst/bit_clock_gen/adc_fclk_inst (IBUFDS.O) is locked to F13
+	fclk_in_reg[0]_i_1__10 (BUFG.I) cannot be placed
 
 Related violations: <none>
 
@@ -261,8 +261,8 @@ Poor placement for routing between an IO pin and BUFG.
 Resolution: Poor placement of an IO pin and a BUFG has resulted in the router using a non-dedicated path between the two.  There are several things that could trigger this DRC, each of which can cause unpredictable clock insertion delays that result in poor timing.  This DRC could be caused by any of the following: (a) a clock port was placed on a pin that is not a CCIO-pin (b)the BUFG has not been placed in the same half of the device or SLR as the CCIO-pin (c) a single ended clock has been placed on the N-Side of a differential pair CCIO-pin.
  This is normally an ERROR but the CLOCK_DEDICATED_ROUTE constraint is set to FALSE allowing your design to continue. The use of this override is highly discouraged as it may lead to very poor timing results. It is recommended that this error condition be corrected in the design.
 
-	gen_ti_roic_top[8].ti_roic_top_inst/bit_clock_gen/adc_fclk_inst (IBUFDS.O) is locked to F13
-	fclk_in_reg[0]_i_1__10 (BUFG.I) cannot be placed
+	gen_ti_roic_top[9].ti_roic_top_inst/bit_clock_gen/adc_fclk_inst (IBUFDS.O) is locked to E22
+	fclk_in_reg[0]_i_1__4 (BUFG.I) cannot be placed
 
 Related violations: <none>
 
@@ -299,55 +299,45 @@ Related violations: <none>
 
 REQP-1580#4 Warning
 Phase alignment  
-Unsupported clocking topology used for ISERDESE2 gen_ti_roic_top[12].ti_roic_top_inst/deserializer/iserdese2_master. This can result in corrupted data. The gen_ti_roic_top[12].ti_roic_top_inst/deserializer/iserdese2_master/CLK / gen_ti_roic_top[12].ti_roic_top_inst/deserializer/iserdese2_master/CLKDIV pins should be driven by the same source through the same buffer type or by a BUFIO / BUFR combination in order to have a proper phase relationship. Please refer to the Select I/O User Guide for supported clocking topologies of the chosen INTERFACE_TYPE mode.
+Unsupported clocking topology used for ISERDESE2 gen_ti_roic_top[1].ti_roic_top_inst/deserializer/iserdese2_master. This can result in corrupted data. The gen_ti_roic_top[1].ti_roic_top_inst/deserializer/iserdese2_master/CLK / gen_ti_roic_top[1].ti_roic_top_inst/deserializer/iserdese2_master/CLKDIV pins should be driven by the same source through the same buffer type or by a BUFIO / BUFR combination in order to have a proper phase relationship. Please refer to the Select I/O User Guide for supported clocking topologies of the chosen INTERFACE_TYPE mode.
 Related violations: <none>
 
 REQP-1580#5 Warning
 Phase alignment  
-Unsupported clocking topology used for ISERDESE2 gen_ti_roic_top[13].ti_roic_top_inst/deserializer/iserdese2_master. This can result in corrupted data. The gen_ti_roic_top[13].ti_roic_top_inst/deserializer/iserdese2_master/CLK / gen_ti_roic_top[13].ti_roic_top_inst/deserializer/iserdese2_master/CLKDIV pins should be driven by the same source through the same buffer type or by a BUFIO / BUFR combination in order to have a proper phase relationship. Please refer to the Select I/O User Guide for supported clocking topologies of the chosen INTERFACE_TYPE mode.
+Unsupported clocking topology used for ISERDESE2 gen_ti_roic_top[2].ti_roic_top_inst/deserializer/iserdese2_master. This can result in corrupted data. The gen_ti_roic_top[2].ti_roic_top_inst/deserializer/iserdese2_master/CLK / gen_ti_roic_top[2].ti_roic_top_inst/deserializer/iserdese2_master/CLKDIV pins should be driven by the same source through the same buffer type or by a BUFIO / BUFR combination in order to have a proper phase relationship. Please refer to the Select I/O User Guide for supported clocking topologies of the chosen INTERFACE_TYPE mode.
 Related violations: <none>
 
 REQP-1580#6 Warning
 Phase alignment  
-Unsupported clocking topology used for ISERDESE2 gen_ti_roic_top[1].ti_roic_top_inst/deserializer/iserdese2_master. This can result in corrupted data. The gen_ti_roic_top[1].ti_roic_top_inst/deserializer/iserdese2_master/CLK / gen_ti_roic_top[1].ti_roic_top_inst/deserializer/iserdese2_master/CLKDIV pins should be driven by the same source through the same buffer type or by a BUFIO / BUFR combination in order to have a proper phase relationship. Please refer to the Select I/O User Guide for supported clocking topologies of the chosen INTERFACE_TYPE mode.
+Unsupported clocking topology used for ISERDESE2 gen_ti_roic_top[3].ti_roic_top_inst/deserializer/iserdese2_master. This can result in corrupted data. The gen_ti_roic_top[3].ti_roic_top_inst/deserializer/iserdese2_master/CLK / gen_ti_roic_top[3].ti_roic_top_inst/deserializer/iserdese2_master/CLKDIV pins should be driven by the same source through the same buffer type or by a BUFIO / BUFR combination in order to have a proper phase relationship. Please refer to the Select I/O User Guide for supported clocking topologies of the chosen INTERFACE_TYPE mode.
 Related violations: <none>
 
 REQP-1580#7 Warning
 Phase alignment  
-Unsupported clocking topology used for ISERDESE2 gen_ti_roic_top[2].ti_roic_top_inst/deserializer/iserdese2_master. This can result in corrupted data. The gen_ti_roic_top[2].ti_roic_top_inst/deserializer/iserdese2_master/CLK / gen_ti_roic_top[2].ti_roic_top_inst/deserializer/iserdese2_master/CLKDIV pins should be driven by the same source through the same buffer type or by a BUFIO / BUFR combination in order to have a proper phase relationship. Please refer to the Select I/O User Guide for supported clocking topologies of the chosen INTERFACE_TYPE mode.
+Unsupported clocking topology used for ISERDESE2 gen_ti_roic_top[4].ti_roic_top_inst/deserializer/iserdese2_master. This can result in corrupted data. The gen_ti_roic_top[4].ti_roic_top_inst/deserializer/iserdese2_master/CLK / gen_ti_roic_top[4].ti_roic_top_inst/deserializer/iserdese2_master/CLKDIV pins should be driven by the same source through the same buffer type or by a BUFIO / BUFR combination in order to have a proper phase relationship. Please refer to the Select I/O User Guide for supported clocking topologies of the chosen INTERFACE_TYPE mode.
 Related violations: <none>
 
 REQP-1580#8 Warning
 Phase alignment  
-Unsupported clocking topology used for ISERDESE2 gen_ti_roic_top[3].ti_roic_top_inst/deserializer/iserdese2_master. This can result in corrupted data. The gen_ti_roic_top[3].ti_roic_top_inst/deserializer/iserdese2_master/CLK / gen_ti_roic_top[3].ti_roic_top_inst/deserializer/iserdese2_master/CLKDIV pins should be driven by the same source through the same buffer type or by a BUFIO / BUFR combination in order to have a proper phase relationship. Please refer to the Select I/O User Guide for supported clocking topologies of the chosen INTERFACE_TYPE mode.
+Unsupported clocking topology used for ISERDESE2 gen_ti_roic_top[5].ti_roic_top_inst/deserializer/iserdese2_master. This can result in corrupted data. The gen_ti_roic_top[5].ti_roic_top_inst/deserializer/iserdese2_master/CLK / gen_ti_roic_top[5].ti_roic_top_inst/deserializer/iserdese2_master/CLKDIV pins should be driven by the same source through the same buffer type or by a BUFIO / BUFR combination in order to have a proper phase relationship. Please refer to the Select I/O User Guide for supported clocking topologies of the chosen INTERFACE_TYPE mode.
 Related violations: <none>
 
 REQP-1580#9 Warning
 Phase alignment  
-Unsupported clocking topology used for ISERDESE2 gen_ti_roic_top[4].ti_roic_top_inst/deserializer/iserdese2_master. This can result in corrupted data. The gen_ti_roic_top[4].ti_roic_top_inst/deserializer/iserdese2_master/CLK / gen_ti_roic_top[4].ti_roic_top_inst/deserializer/iserdese2_master/CLKDIV pins should be driven by the same source through the same buffer type or by a BUFIO / BUFR combination in order to have a proper phase relationship. Please refer to the Select I/O User Guide for supported clocking topologies of the chosen INTERFACE_TYPE mode.
+Unsupported clocking topology used for ISERDESE2 gen_ti_roic_top[6].ti_roic_top_inst/deserializer/iserdese2_master. This can result in corrupted data. The gen_ti_roic_top[6].ti_roic_top_inst/deserializer/iserdese2_master/CLK / gen_ti_roic_top[6].ti_roic_top_inst/deserializer/iserdese2_master/CLKDIV pins should be driven by the same source through the same buffer type or by a BUFIO / BUFR combination in order to have a proper phase relationship. Please refer to the Select I/O User Guide for supported clocking topologies of the chosen INTERFACE_TYPE mode.
 Related violations: <none>
 
 REQP-1580#10 Warning
 Phase alignment  
-Unsupported clocking topology used for ISERDESE2 gen_ti_roic_top[5].ti_roic_top_inst/deserializer/iserdese2_master. This can result in corrupted data. The gen_ti_roic_top[5].ti_roic_top_inst/deserializer/iserdese2_master/CLK / gen_ti_roic_top[5].ti_roic_top_inst/deserializer/iserdese2_master/CLKDIV pins should be driven by the same source through the same buffer type or by a BUFIO / BUFR combination in order to have a proper phase relationship. Please refer to the Select I/O User Guide for supported clocking topologies of the chosen INTERFACE_TYPE mode.
+Unsupported clocking topology used for ISERDESE2 gen_ti_roic_top[7].ti_roic_top_inst/deserializer/iserdese2_master. This can result in corrupted data. The gen_ti_roic_top[7].ti_roic_top_inst/deserializer/iserdese2_master/CLK / gen_ti_roic_top[7].ti_roic_top_inst/deserializer/iserdese2_master/CLKDIV pins should be driven by the same source through the same buffer type or by a BUFIO / BUFR combination in order to have a proper phase relationship. Please refer to the Select I/O User Guide for supported clocking topologies of the chosen INTERFACE_TYPE mode.
 Related violations: <none>
 
 REQP-1580#11 Warning
 Phase alignment  
-Unsupported clocking topology used for ISERDESE2 gen_ti_roic_top[6].ti_roic_top_inst/deserializer/iserdese2_master. This can result in corrupted data. The gen_ti_roic_top[6].ti_roic_top_inst/deserializer/iserdese2_master/CLK / gen_ti_roic_top[6].ti_roic_top_inst/deserializer/iserdese2_master/CLKDIV pins should be driven by the same source through the same buffer type or by a BUFIO / BUFR combination in order to have a proper phase relationship. Please refer to the Select I/O User Guide for supported clocking topologies of the chosen INTERFACE_TYPE mode.
-Related violations: <none>
-
-REQP-1580#12 Warning
-Phase alignment  
-Unsupported clocking topology used for ISERDESE2 gen_ti_roic_top[7].ti_roic_top_inst/deserializer/iserdese2_master. This can result in corrupted data. The gen_ti_roic_top[7].ti_roic_top_inst/deserializer/iserdese2_master/CLK / gen_ti_roic_top[7].ti_roic_top_inst/deserializer/iserdese2_master/CLKDIV pins should be driven by the same source through the same buffer type or by a BUFIO / BUFR combination in order to have a proper phase relationship. Please refer to the Select I/O User Guide for supported clocking topologies of the chosen INTERFACE_TYPE mode.
-Related violations: <none>
-
-REQP-1580#13 Warning
-Phase alignment  
 Unsupported clocking topology used for ISERDESE2 gen_ti_roic_top[8].ti_roic_top_inst/deserializer/iserdese2_master. This can result in corrupted data. The gen_ti_roic_top[8].ti_roic_top_inst/deserializer/iserdese2_master/CLK / gen_ti_roic_top[8].ti_roic_top_inst/deserializer/iserdese2_master/CLKDIV pins should be driven by the same source through the same buffer type or by a BUFIO / BUFR combination in order to have a proper phase relationship. Please refer to the Select I/O User Guide for supported clocking topologies of the chosen INTERFACE_TYPE mode.
 Related violations: <none>
 
-REQP-1580#14 Warning
+REQP-1580#12 Warning
 Phase alignment  
 Unsupported clocking topology used for ISERDESE2 gen_ti_roic_top[9].ti_roic_top_inst/deserializer/iserdese2_master. This can result in corrupted data. The gen_ti_roic_top[9].ti_roic_top_inst/deserializer/iserdese2_master/CLK / gen_ti_roic_top[9].ti_roic_top_inst/deserializer/iserdese2_master/CLKDIV pins should be driven by the same source through the same buffer type or by a BUFIO / BUFR combination in order to have a proper phase relationship. Please refer to the Select I/O User Guide for supported clocking topologies of the chosen INTERFACE_TYPE mode.
 Related violations: <none>

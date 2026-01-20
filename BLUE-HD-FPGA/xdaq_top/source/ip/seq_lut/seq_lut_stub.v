@@ -1,9 +1,9 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2024.2.2 (lin64) Build 6060944 Thu Mar 06 19:10:09 MST 2025
-// Date        : Fri Jan 16 15:14:10 2026
-// Host        : drlinux running 64-bit Ubuntu 22.04.5 LTS
+// Tool Version: Vivado v.2024.2.2 (win64) Build 6060944 Thu Mar 06 19:10:01 MST 2025
+// Date        : Mon Jan 19 17:14:23 2026
+// Host        : work-dev running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub -rename_top seq_lut -prefix
 //               seq_lut_ seq_lut_stub.v
 // Design      : seq_lut

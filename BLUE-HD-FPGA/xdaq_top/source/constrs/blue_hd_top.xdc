@@ -95,8 +95,8 @@ set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets gen_ti_roic_top[8].ti_roic_to
 set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets gen_ti_roic_top[9].ti_roic_top_inst/bit_clock_gen/fclk_out]
 set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets gen_ti_roic_top[10].ti_roic_top_inst/bit_clock_gen/fclk_out]
 set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets gen_ti_roic_top[11].ti_roic_top_inst/bit_clock_gen/fclk_out]
-set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets gen_ti_roic_top[12].ti_roic_top_inst/bit_clock_gen/fclk_out]
-set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets gen_ti_roic_top[13].ti_roic_top_inst/bit_clock_gen/fclk_out]
+#set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets gen_ti_roic_top[12].ti_roic_top_inst/bit_clock_gen/fclk_out]
+#set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets gen_ti_roic_top[13].ti_roic_top_inst/bit_clock_gen/fclk_out]
 
 #==============================================================================
 # Pin Mapping
