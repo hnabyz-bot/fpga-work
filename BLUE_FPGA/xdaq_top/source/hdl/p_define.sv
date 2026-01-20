@@ -557,15 +557,20 @@
 `define NUM_ROIC_DATA_PARALLEL			4'h3 //4'd3 // ������ 4���� ����
 
 //--------------------------------------------------------------------------------
-// ROIC Register Set 
+// ROIC Register Set (SPI Daisy-chain Configuration)
 //--------------------------------------------------------------------------------
-
+// NUM_ROIC: Number of ROIC chips (vendor-independent)
 `ifdef TB_SIM
-	`define NUM_ROIC						8'h2 //8'd11 ROIC 12 EA
+	`define NUM_ROIC						8'h2 // Simulation: 2 ROIC chips
 `else
-	// `define NUM_ROIC						8'hB //8'd11 ROIC 12 EA
-	`define NUM_ROIC						8'hA //8'd11 ROIC 11 EA
+	`define NUM_ROIC						8'd12 // Hardware: 12 ROIC chips
 `endif
+
+//--------------------------------------------------------------------------------
+// ROIC Channel Configuration
+//--------------------------------------------------------------------------------
+// NUM_ROIC_CHANNEL: Number of data channels per ROIC chip (max 127)
+`define NUM_ROIC_CHANNEL				8'd127
 
 `define NUM_SPI_WR						8'hF //8'd15 Configure Reigser 16 EA
 `define CS_START_DELAY					8'h12 //8'd18 Reset Ǯ���� CS ���۵Ǳ� �� ������ Delay time , min 4000ns
@@ -609,7 +614,7 @@
 `define BURST_SIZE						8'd8
 //
 `define VALID_NUM_ROIC_BURST_DATA		16'd32
-// 1ch 256pixe , dual LVDS �������? 128 ROIC CHANNEL setting
+// 1ch 256pixe , dual LVDS �������? 128 ROIC CHANNEL setting
 `define NUM_ROIC_CHANNEL				8'd127
 // 4 pixel data �̹Ƿ� 768 * 4 = 3072
 `define MEM_HEIGHT						10'd767

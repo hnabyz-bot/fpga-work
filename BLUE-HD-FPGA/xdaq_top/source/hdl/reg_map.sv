@@ -89,9 +89,9 @@ module reg_map (
     output logic        ti_roic_deser_dly_data_inc,
     output logic        ti_roic_deser_align_mode,
     output logic        ti_roic_deser_align_start,
-    output logic [4:0]  ti_roic_deser_shift_set[13:0],
-    input  wire  [4:0]  ti_roic_deser_align_shift[13:0],
-    input  wire  [13:0] ti_roic_deser_align_done,
+    output logic [4:0]  ti_roic_deser_shift_set[`NUM_ROIC-1:0],
+    input  wire  [4:0]  ti_roic_deser_align_shift[`NUM_ROIC-1:0],
+    input  wire  [`NUM_ROIC-1:0] ti_roic_deser_align_done,
 
     // Back Bias
     output logic [15:0] up_back_bias,
@@ -183,8 +183,8 @@ module reg_map (
     logic [15:0] reg_ti_roic_deser_dly_tap_in, reg_ti_roic_deser_dly_data_ce;
     logic [15:0] reg_ti_roic_deser_dly_data_inc, reg_ti_roic_deser_align_mode;
     logic [15:0] reg_ti_roic_deser_align_start;
-    logic [15:0] reg_ti_roic_deser_shift_set[13:0];
-    logic [15:0] reg_ti_roic_deser_align_shift[13:0];
+    logic [15:0] reg_ti_roic_deser_shift_set[`NUM_ROIC-1:0];
+    logic [15:0] reg_ti_roic_deser_align_shift[`NUM_ROIC-1:0];
     logic [15:0] reg_ti_roic_deser_align_done;
 
     // Sequence LUT

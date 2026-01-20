@@ -292,8 +292,8 @@ module roic_reg_set(
 	end
 
 	assign start_roic_reg_wr	= (!reset_roic_1d) & reset_roic_2d;
-	// assign end_roic_reg_wr		= ((num_roic_cnt == `NUM_ROIC) && end_roic_wr_cycle) ? 1'b1 : 1'b0;
-	assign end_roic_reg_wr		= ((num_roic_cnt == 8'd1) && end_roic_wr_cycle) ? 1'b1 : 1'b0;
+	assign end_roic_reg_wr		= ((num_roic_cnt == `NUM_ROIC) && end_roic_wr_cycle) ? 1'b1 : 1'b0;
+	// assign end_roic_reg_wr		= ((num_roic_cnt == 8'd1) && end_roic_wr_cycle) ? 1'b1 : 1'b0;
 	always @(posedge sys_clk_div or negedge sys_rst) begin
 		if(!sys_rst)
 			roic_reg_wr <= 1'b0;
@@ -506,7 +506,7 @@ module roic_reg_set(
 	end
 
 	// assign roic_sdo	= sig_roic_sdo & valid_spi_clk_1d;
-	// holee num_roic_cnt == 0 ÀÏ¶§¸¸ Ãâ·Â, Daisy-chain
+	// holee num_roic_cnt == 0 ï¿½Ï¶ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½, Daisy-chain
 	assign roic_sdo	= (valid_spi_clk_1d && num_roic_cnt== 8'd0) ? sig_roic_sdo : 1'b0;
 	assign roic_sdo_dual	= (valid_spi_clk_1d && num_roic_cnt== 8'd0) ? sig_roic_sdo_dual : 1'b0;
 

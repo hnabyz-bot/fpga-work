@@ -34,11 +34,11 @@ module read_data_mux (
     input  logic        read_data_start,
     
 //    input  logic        valid_roic_data,
-    input  wire [23:0] roic_read_data_a [13:0],
-    input  wire [23:0] roic_read_data_b [13:0],
+    input  wire [23:0] roic_read_data_a [`NUM_ROIC-1:0],
+    input  wire [23:0] roic_read_data_b [`NUM_ROIC-1:0],
 
     input  logic        valid_read_mem,
-    
+
     input  logic        read_axis_tready,
     output logic        read_axis_tlast,
     output logic        read_data_valid,
@@ -47,7 +47,7 @@ module read_data_mux (
     output logic        read_frame_start,
     output logic        read_frame_reset,
 //    output logic [7:0]  read_addr_cnt,
-    output logic [13:0] data_read_req
+    output logic [`NUM_ROIC-1:0] data_read_req
 
 //    output logic        read_vsync,
 //    output logic        read_hsync

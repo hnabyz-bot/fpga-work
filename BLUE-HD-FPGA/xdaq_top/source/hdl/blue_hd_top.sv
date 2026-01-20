@@ -137,7 +137,7 @@ module blue_hd_top (
     
     // TI ROIC parameters
     localparam int TI_ROIC_WORD_SIZE     = 24;     // 24-bit data word width
-    localparam int TI_ROIC_CHANNELS      = 14;     // Number of ROIC channels (cyan board)
+    localparam int TI_ROIC_CHANNELS      = `NUM_ROIC; // Number of ROIC chips (from p_define.sv)
     
     // Clock frequency parameters
     localparam real TI_ROIC_REFCLK_FREQ   = 200.0;  // 200MHz reference clock frequency

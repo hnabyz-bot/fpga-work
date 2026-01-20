@@ -446,14 +446,20 @@
 `define NUM_ROIC_DATA_PARALLEL          4'h3
 
 //--------------------------------------------------------------------------------
-// ROIC Register Set
+// ROIC Register Set (SPI Daisy-chain Configuration)
 //--------------------------------------------------------------------------------
-
+// NUM_ROIC: Number of ROIC chips (vendor-independent)
 `ifdef TB_SIM
-    `define NUM_ROIC                    8'h2
+    `define NUM_ROIC                    8'h2 // Simulation: 2 ROIC chips
 `else
-    `define NUM_ROIC                    8'hA
+    `define NUM_ROIC                    8'd12 // Hardware: 12 ROIC chips
 `endif
+
+//--------------------------------------------------------------------------------
+// ROIC Channel Configuration
+//--------------------------------------------------------------------------------
+// NUM_ROIC_CHANNEL: Number of data channels per ROIC chip (max 127)
+`define NUM_ROIC_CHANNEL                8'd127
 
 `define NUM_SPI_WR                      8'hF
 `define CS_START_DELAY                  8'h12
