@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2024.2.2 (win64) Build 6060944 Thu Mar 06 19:10:01 MST 2025
-| Date             : Tue Jan 20 11:33:42 2026
+| Date             : Fri Jan 23 16:18:50 2026
 | Host             : work-dev running 64-bit major release  (build 9200)
 | Command          : report_power -file blue_hd_top_power_routed.rpt -pb blue_hd_top_power_summary_routed.pb -rpx blue_hd_top_power_routed.rpx
 | Design           : blue_hd_top
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.550        |
+| Total On-Chip Power (W)  | 0.551        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.477        |
+| Dynamic (W)              | 0.478        |
 | Device Static (W)        | 0.073        |
 | Effective TJA (C/W)      | 2.8          |
 | Max Ambient (C)          | 83.5         |
@@ -65,9 +65,9 @@ Table of Contents
 | Block RAM                |     0.029 |       23 |        50 |           46.00 |
 | MMCM                     |     0.214 |        2 |         5 |           40.00 |
 | DSPs                     |     0.000 |       11 |        90 |           12.22 |
-| I/O                      |     0.161 |      138 |       250 |           55.20 |
+| I/O                      |     0.163 |      139 |       250 |           55.60 |
 | Static Power             |     0.073 |          |           |                 |
-| Total                    |     0.550 |          |           |                 |
+| Total                    |     0.551 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -180,7 +180,7 @@ Table of Contents
 +----------------------------------------+-----------+
 | Name                                   | Power (W) |
 +----------------------------------------+-----------+
-| blue_hd_top                            |     0.477 |
+| blue_hd_top                            |     0.478 |
 |   clk_inst0                            |     0.108 |
 |     inst                               |     0.108 |
 |   gen_ti_roic_top[0].ti_roic_top_inst  |     0.015 |

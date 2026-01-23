@@ -39,7 +39,7 @@ module blue_hd_top (
     output  logic        ROIC_SYNC,
     output  logic        ROIC_MCLK0,
     // ROIC_MCLK1 not present in cyan_hd_top.xdc - verify if needed
-    // output  logic        ROIC_MCLK1,
+    output  logic        ROIC_MCLK1,
 
     // ROIC SPI - changed from RF_SPI to ROIC_SPI per cyan board
     // ROIC_SPI_SEN_N is single signal in cyan, not array

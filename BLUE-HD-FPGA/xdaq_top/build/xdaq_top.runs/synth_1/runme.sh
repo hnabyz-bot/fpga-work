@@ -7,10 +7,14 @@
 # Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 # 
 
+echo "This script was generated under a different operating system."
+echo "Please update the PATH and LD_LIBRARY_PATH variables below, before executing this script"
+exit
+
 if [ -z "$PATH" ]; then
-  PATH=/home/holee/tools/xilinx/Vitis/2024.2/bin:/home/holee/tools/xilinx/Vivado/2024.2/ids_lite/ISE/bin/lin64:/home/holee/tools/xilinx/Vivado/2024.2/bin
+  PATH=D:/Xilinx/Vitis/2024.2/bin;D:/Xilinx/Vivado/2024.2/ids_lite/ISE/bin/nt64;D:/Xilinx/Vivado/2024.2/ids_lite/ISE/lib/nt64:D:/Xilinx/Vivado/2024.2/bin
 else
-  PATH=/home/holee/tools/xilinx/Vitis/2024.2/bin:/home/holee/tools/xilinx/Vivado/2024.2/ids_lite/ISE/bin/lin64:/home/holee/tools/xilinx/Vivado/2024.2/bin:$PATH
+  PATH=D:/Xilinx/Vitis/2024.2/bin;D:/Xilinx/Vivado/2024.2/ids_lite/ISE/bin/nt64;D:/Xilinx/Vivado/2024.2/ids_lite/ISE/lib/nt64:D:/Xilinx/Vivado/2024.2/bin:$PATH
 fi
 export PATH
 
@@ -21,7 +25,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.runs/synth_1'
+HD_PWD='D:/workspace/github-space/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

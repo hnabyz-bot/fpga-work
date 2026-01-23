@@ -190,6 +190,9 @@ set_property IOSTANDARD LVCMOS25 [get_ports ROIC_AVDD1]
 set_property PACKAGE_PIN F15 [get_ports ROIC_MCLK0]
 set_property IOSTANDARD LVCMOS25 [get_ports ROIC_MCLK0]
 
+set_property PACKAGE_PIN T3 [get_ports ROIC_MCLK1]
+set_property IOSTANDARD LVCMOS25 [get_ports ROIC_MCLK1]
+
 # CPU TO FPGA
 # NOTE: Bank 35 - Must use LVCMOS25 to match MIPI HS signals (DIFF_HSTL_II_18 @ 1.8V)
 set_property PACKAGE_PIN H4 [get_ports SSB]

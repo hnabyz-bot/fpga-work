@@ -1,33 +1,33 @@
 #-----------------------------------------------------------
 # Vivado v2024.2.2 (64-bit)
-# SW Build 6060944 on Thu Mar 06 19:10:09 MST 2025
+# SW Build 6060944 on Thu Mar 06 19:10:01 MST 2025
 # IP Build 6050500 on Thu Mar  6 23:33:39 MST 2025
 # SharedData Build 6060542 on Thu Mar 06 10:31:07 MST 2025
-# Start of session at: Mon Jan 19 15:32:32 2026
-# Process ID         : 879439
-# Current directory  : /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.runs/seq_lut_synth_1
-# Command line       : vivado -log seq_lut.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source seq_lut.tcl
-# Log file           : /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.runs/seq_lut_synth_1/seq_lut.vds
-# Journal file       : /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.runs/seq_lut_synth_1/vivado.jou
-# Running On         : drlinux
-# Platform           : Ubuntu
-# Operating System   : Ubuntu 22.04.5 LTS
-# Processor Detail   : Intel(R) Core(TM) i7-14700
-# CPU Frequency      : 5300.000 MHz
-# CPU Physical cores : 20
-# CPU Logical cores  : 28
-# Host memory        : 67178 MB
-# Swap memory        : 2147 MB
-# Total Virtual      : 69326 MB
-# Available Virtual  : 37575 MB
+# Start of session at: Tue Jan 20 11:12:38 2026
+# Process ID         : 29852
+# Current directory  : D:/workspace/github-space/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.runs/seq_lut_synth_1
+# Command line       : vivado.exe -log seq_lut.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source seq_lut.tcl
+# Log file           : D:/workspace/github-space/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.runs/seq_lut_synth_1/seq_lut.vds
+# Journal file       : D:/workspace/github-space/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.runs/seq_lut_synth_1\vivado.jou
+# Running On         : work-dev
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26200
+# Processor Detail   : 12th Gen Intel(R) Core(TM) i7-12700
+# CPU Frequency      : 2112 MHz
+# CPU Physical cores : 12
+# CPU Logical cores  : 20
+# Host memory        : 34088 MB
+# Swap memory        : 11811 MB
+# Total Virtual      : 45899 MB
+# Available Virtual  : 6461 MB
 #-----------------------------------------------------------
 source seq_lut.tcl -notrace
 INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: seq_lut
-INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry 9bb0d4eb0b19fb41 to dir: /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.runs/seq_lut_synth_1
-INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.cache/ip/2024.2.2/9/b/9bb0d4eb0b19fb41/seq_lut_sim_netlist.v to /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.runs/seq_lut_synth_1/seq_lut_sim_netlist.v.
-INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.cache/ip/2024.2.2/9/b/9bb0d4eb0b19fb41/seq_lut_sim_netlist.vhdl to /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.runs/seq_lut_synth_1/seq_lut_sim_netlist.vhdl.
-INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.cache/ip/2024.2.2/9/b/9bb0d4eb0b19fb41/seq_lut.dcp to /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.runs/seq_lut_synth_1/seq_lut.dcp.
-INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.cache/ip/2024.2.2/9/b/9bb0d4eb0b19fb41/seq_lut_stub.vhdl to /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.runs/seq_lut_synth_1/seq_lut_stub.vhdl.
-INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.cache/ip/2024.2.2/9/b/9bb0d4eb0b19fb41/seq_lut_stub.v to /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.runs/seq_lut_synth_1/seq_lut_stub.v.
+INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry 9bb0d4eb0b19fb41 to dir: D:/workspace/github-space/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.runs/seq_lut_synth_1
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file d:/workspace/github-space/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.cache/ip/2024.2.2/9/b/9bb0d4eb0b19fb41/seq_lut.dcp to D:/workspace/github-space/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.runs/seq_lut_synth_1/seq_lut.dcp.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file d:/workspace/github-space/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.cache/ip/2024.2.2/9/b/9bb0d4eb0b19fb41/seq_lut_sim_netlist.v to D:/workspace/github-space/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.runs/seq_lut_synth_1/seq_lut_sim_netlist.v.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file d:/workspace/github-space/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.cache/ip/2024.2.2/9/b/9bb0d4eb0b19fb41/seq_lut_sim_netlist.vhdl to D:/workspace/github-space/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.runs/seq_lut_synth_1/seq_lut_sim_netlist.vhdl.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file d:/workspace/github-space/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.cache/ip/2024.2.2/9/b/9bb0d4eb0b19fb41/seq_lut_stub.v to D:/workspace/github-space/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.runs/seq_lut_synth_1/seq_lut_stub.v.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file d:/workspace/github-space/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.cache/ip/2024.2.2/9/b/9bb0d4eb0b19fb41/seq_lut_stub.vhdl to D:/workspace/github-space/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.runs/seq_lut_synth_1/seq_lut_stub.vhdl.
 INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP seq_lut, cache-ID = 9bb0d4eb0b19fb41.
-INFO: [Common 17-206] Exiting Vivado at Mon Jan 19 15:32:37 2026...
+INFO: [Common 17-206] Exiting Vivado at Tue Jan 20 11:12:42 2026...

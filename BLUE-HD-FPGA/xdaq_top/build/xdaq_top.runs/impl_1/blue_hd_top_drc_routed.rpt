@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2024.2.2 (lin64) Build 6060944 Thu Mar 06 19:10:09 MST 2025
-| Date         : Mon Jan 19 15:37:40 2026
-| Host         : drlinux running 64-bit Ubuntu 22.04.5 LTS
+| Tool Version : Vivado v.2024.2.2 (win64) Build 6060944 Thu Mar 06 19:10:01 MST 2025
+| Date         : Fri Jan 23 16:18:30 2026
+| Host         : work-dev running 64-bit major release  (build 9200)
 | Command      : report_drc -file blue_hd_top_drc_routed.rpt -pb blue_hd_top_drc_routed.pb -rpx blue_hd_top_drc_routed.rpx
 | Design       : blue_hd_top
 | Device       : xc7a35tfgg484-1
@@ -24,7 +24,7 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max checks: <unlimited>
-             Checks found: 130
+             Checks found: 157
 +-------------+----------+-------------------------------------------------------------+--------+
 | Rule        | Severity | Description                                                 | Checks |
 +-------------+----------+-------------------------------------------------------------+--------+
@@ -32,18 +32,18 @@ Table of Contents
 | DPOP-1      | Warning  | PREG Output pipelining                                      | 11     |
 | DPOP-2      | Warning  | MREG Output pipelining                                      | 11     |
 | PDRC-132    | Warning  | SLICE_PairEqSame_A6A5_WARN                                  | 1      |
-| PDRC-134    | Warning  | SLICE_PairEqSame_B6B5_WARN                                  | 10     |
-| PDRC-136    | Warning  | SLICE_PairEqSame_C6C5_WARN                                  | 11     |
-| PDRC-138    | Warning  | SLICE_PairEqSame_D6D5_WARN                                  | 9      |
-| PDRC-142    | Warning  | SLICE_PairEqSame_B6B5_WARN                                  | 1      |
+| PDRC-134    | Warning  | SLICE_PairEqSame_B6B5_WARN                                  | 9      |
+| PDRC-136    | Warning  | SLICE_PairEqSame_C6C5_WARN                                  | 18     |
+| PDRC-138    | Warning  | SLICE_PairEqSame_D6D5_WARN                                  | 27     |
+| PDRC-142    | Warning  | SLICE_PairEqSame_B6B5_WARN                                  | 7      |
 | PDRC-144    | Warning  | SLICE_PairEqSame_C6C5_WARN                                  | 11     |
-| PDRC-146    | Warning  | SLICE_PairEqSame_D6D5_WARN                                  | 10     |
+| PDRC-146    | Warning  | SLICE_PairEqSame_D6D5_WARN                                  | 9      |
 | PDRC-153    | Warning  | Gated clock check                                           | 4      |
 | PLCK-12     | Warning  | Clock Placer Checks                                         | 10     |
 | PLCK-23     | Warning  | Clock Placer Checks                                         | 1      |
 | PLHOLDVIO-2 | Warning  | Non-Optimal connections which could lead to hold violations | 1      |
 | REQP-1577   | Warning  | Clock output buffering                                      | 1      |
-| REQP-1580   | Warning  | Phase alignment                                             | 14     |
+| REQP-1580   | Warning  | Phase alignment                                             | 12     |
 | REQP-1840   | Warning  | RAMB18 async control check                                  | 20     |
 | RTSTAT-10   | Warning  | No routable loads                                           | 1      |
 | REQP-165    | Advisory | writefirst                                                  | 2      |
@@ -168,267 +168,412 @@ Related violations: <none>
 
 PDRC-132#1 Warning
 SLICE_PairEqSame_A6A5_WARN  
-Luts A6LUT and A5LUT in use in site SLICE_X37Y37 with different equations without A6 pin connected to Global Logic High.
+Luts A6LUT and A5LUT in use in site SLICE_X41Y62 with different equations without A6 pin connected to Global Logic High.
 Related violations: <none>
 
 PDRC-134#1 Warning
 SLICE_PairEqSame_B6B5_WARN  
-Luts B6LUT and B5LUT in use in site SLICE_X1Y87 with different equations without A6 pin connected to Global Logic High.
+Luts B6LUT and B5LUT in use in site SLICE_X32Y46 with different equations without A6 pin connected to Global Logic High.
 Related violations: <none>
 
 PDRC-134#2 Warning
 SLICE_PairEqSame_B6B5_WARN  
-Luts B6LUT and B5LUT in use in site SLICE_X29Y123 with different equations without A6 pin connected to Global Logic High.
+Luts B6LUT and B5LUT in use in site SLICE_X37Y72 with different equations without A6 pin connected to Global Logic High.
 Related violations: <none>
 
 PDRC-134#3 Warning
 SLICE_PairEqSame_B6B5_WARN  
-Luts B6LUT and B5LUT in use in site SLICE_X31Y78 with different equations without A6 pin connected to Global Logic High.
+Luts B6LUT and B5LUT in use in site SLICE_X40Y69 with different equations without A6 pin connected to Global Logic High.
 Related violations: <none>
 
 PDRC-134#4 Warning
 SLICE_PairEqSame_B6B5_WARN  
-Luts B6LUT and B5LUT in use in site SLICE_X37Y37 with different equations without A6 pin connected to Global Logic High.
+Luts B6LUT and B5LUT in use in site SLICE_X44Y71 with different equations without A6 pin connected to Global Logic High.
 Related violations: <none>
 
 PDRC-134#5 Warning
 SLICE_PairEqSame_B6B5_WARN  
-Luts B6LUT and B5LUT in use in site SLICE_X47Y128 with different equations without A6 pin connected to Global Logic High.
+Luts B6LUT and B5LUT in use in site SLICE_X45Y78 with different equations without A6 pin connected to Global Logic High.
 Related violations: <none>
 
 PDRC-134#6 Warning
 SLICE_PairEqSame_B6B5_WARN  
-Luts B6LUT and B5LUT in use in site SLICE_X49Y77 with different equations without A6 pin connected to Global Logic High.
+Luts B6LUT and B5LUT in use in site SLICE_X48Y105 with different equations without A6 pin connected to Global Logic High.
 Related violations: <none>
 
 PDRC-134#7 Warning
 SLICE_PairEqSame_B6B5_WARN  
-Luts B6LUT and B5LUT in use in site SLICE_X51Y81 with different equations without A6 pin connected to Global Logic High.
+Luts B6LUT and B5LUT in use in site SLICE_X49Y78 with different equations without A6 pin connected to Global Logic High.
 Related violations: <none>
 
 PDRC-134#8 Warning
 SLICE_PairEqSame_B6B5_WARN  
-Luts B6LUT and B5LUT in use in site SLICE_X59Y81 with different equations without A6 pin connected to Global Logic High.
+Luts B6LUT and B5LUT in use in site SLICE_X53Y85 with different equations without A6 pin connected to Global Logic High.
 Related violations: <none>
 
 PDRC-134#9 Warning
 SLICE_PairEqSame_B6B5_WARN  
-Luts B6LUT and B5LUT in use in site SLICE_X5Y86 with different equations without A6 pin connected to Global Logic High.
-Related violations: <none>
-
-PDRC-134#10 Warning
-SLICE_PairEqSame_B6B5_WARN  
-Luts B6LUT and B5LUT in use in site SLICE_X9Y87 with different equations without A6 pin connected to Global Logic High.
+Luts B6LUT and B5LUT in use in site SLICE_X61Y52 with different equations without A6 pin connected to Global Logic High.
 Related violations: <none>
 
 PDRC-136#1 Warning
 SLICE_PairEqSame_C6C5_WARN  
-Luts C6LUT and C5LUT in use in site SLICE_X11Y80 with different equations without A6 pin connected to Global Logic High.
+Luts C6LUT and C5LUT in use in site SLICE_X29Y44 with different equations without A6 pin connected to Global Logic High.
 Related violations: <none>
 
 PDRC-136#2 Warning
 SLICE_PairEqSame_C6C5_WARN  
-Luts C6LUT and C5LUT in use in site SLICE_X1Y115 with different equations without A6 pin connected to Global Logic High.
+Luts C6LUT and C5LUT in use in site SLICE_X32Y46 with different equations without A6 pin connected to Global Logic High.
 Related violations: <none>
 
 PDRC-136#3 Warning
 SLICE_PairEqSame_C6C5_WARN  
-Luts C6LUT and C5LUT in use in site SLICE_X1Y87 with different equations without A6 pin connected to Global Logic High.
+Luts C6LUT and C5LUT in use in site SLICE_X35Y45 with different equations without A6 pin connected to Global Logic High.
 Related violations: <none>
 
 PDRC-136#4 Warning
 SLICE_PairEqSame_C6C5_WARN  
-Luts C6LUT and C5LUT in use in site SLICE_X29Y123 with different equations without A6 pin connected to Global Logic High.
+Luts C6LUT and C5LUT in use in site SLICE_X36Y45 with different equations without A6 pin connected to Global Logic High.
 Related violations: <none>
 
 PDRC-136#5 Warning
 SLICE_PairEqSame_C6C5_WARN  
-Luts C6LUT and C5LUT in use in site SLICE_X29Y63 with different equations without A6 pin connected to Global Logic High.
+Luts C6LUT and C5LUT in use in site SLICE_X37Y72 with different equations without A6 pin connected to Global Logic High.
 Related violations: <none>
 
 PDRC-136#6 Warning
 SLICE_PairEqSame_C6C5_WARN  
-Luts C6LUT and C5LUT in use in site SLICE_X37Y37 with different equations without A6 pin connected to Global Logic High.
+Luts C6LUT and C5LUT in use in site SLICE_X40Y69 with different equations without A6 pin connected to Global Logic High.
 Related violations: <none>
 
 PDRC-136#7 Warning
 SLICE_PairEqSame_C6C5_WARN  
-Luts C6LUT and C5LUT in use in site SLICE_X4Y111 with different equations without A6 pin connected to Global Logic High.
+Luts C6LUT and C5LUT in use in site SLICE_X44Y71 with different equations without A6 pin connected to Global Logic High.
 Related violations: <none>
 
 PDRC-136#8 Warning
 SLICE_PairEqSame_C6C5_WARN  
-Luts C6LUT and C5LUT in use in site SLICE_X59Y81 with different equations without A6 pin connected to Global Logic High.
+Luts C6LUT and C5LUT in use in site SLICE_X45Y78 with different equations without A6 pin connected to Global Logic High.
 Related violations: <none>
 
 PDRC-136#9 Warning
 SLICE_PairEqSame_C6C5_WARN  
-Luts C6LUT and C5LUT in use in site SLICE_X5Y111 with different equations without A6 pin connected to Global Logic High.
+Luts C6LUT and C5LUT in use in site SLICE_X48Y105 with different equations without A6 pin connected to Global Logic High.
 Related violations: <none>
 
 PDRC-136#10 Warning
 SLICE_PairEqSame_C6C5_WARN  
-Luts C6LUT and C5LUT in use in site SLICE_X5Y86 with different equations without A6 pin connected to Global Logic High.
+Luts C6LUT and C5LUT in use in site SLICE_X49Y106 with different equations without A6 pin connected to Global Logic High.
 Related violations: <none>
 
 PDRC-136#11 Warning
 SLICE_PairEqSame_C6C5_WARN  
-Luts C6LUT and C5LUT in use in site SLICE_X9Y87 with different equations without A6 pin connected to Global Logic High.
+Luts C6LUT and C5LUT in use in site SLICE_X55Y84 with different equations without A6 pin connected to Global Logic High.
+Related violations: <none>
+
+PDRC-136#12 Warning
+SLICE_PairEqSame_C6C5_WARN  
+Luts C6LUT and C5LUT in use in site SLICE_X58Y7 with different equations without A6 pin connected to Global Logic High.
+Related violations: <none>
+
+PDRC-136#13 Warning
+SLICE_PairEqSame_C6C5_WARN  
+Luts C6LUT and C5LUT in use in site SLICE_X59Y9 with different equations without A6 pin connected to Global Logic High.
+Related violations: <none>
+
+PDRC-136#14 Warning
+SLICE_PairEqSame_C6C5_WARN  
+Luts C6LUT and C5LUT in use in site SLICE_X61Y5 with different equations without A6 pin connected to Global Logic High.
+Related violations: <none>
+
+PDRC-136#15 Warning
+SLICE_PairEqSame_C6C5_WARN  
+Luts C6LUT and C5LUT in use in site SLICE_X61Y52 with different equations without A6 pin connected to Global Logic High.
+Related violations: <none>
+
+PDRC-136#16 Warning
+SLICE_PairEqSame_C6C5_WARN  
+Luts C6LUT and C5LUT in use in site SLICE_X61Y7 with different equations without A6 pin connected to Global Logic High.
+Related violations: <none>
+
+PDRC-136#17 Warning
+SLICE_PairEqSame_C6C5_WARN  
+Luts C6LUT and C5LUT in use in site SLICE_X62Y4 with different equations without A6 pin connected to Global Logic High.
+Related violations: <none>
+
+PDRC-136#18 Warning
+SLICE_PairEqSame_C6C5_WARN  
+Luts C6LUT and C5LUT in use in site SLICE_X62Y6 with different equations without A6 pin connected to Global Logic High.
 Related violations: <none>
 
 PDRC-138#1 Warning
 SLICE_PairEqSame_D6D5_WARN  
-Luts D6LUT and D5LUT in use in site SLICE_X11Y80 with different equations without A6 pin connected to Global Logic High.
+Luts D6LUT and D5LUT in use in site SLICE_X13Y42 with different equations without A6 pin connected to Global Logic High.
 Related violations: <none>
 
 PDRC-138#2 Warning
 SLICE_PairEqSame_D6D5_WARN  
-Luts D6LUT and D5LUT in use in site SLICE_X1Y115 with different equations without A6 pin connected to Global Logic High.
+Luts D6LUT and D5LUT in use in site SLICE_X19Y124 with different equations without A6 pin connected to Global Logic High.
 Related violations: <none>
 
 PDRC-138#3 Warning
 SLICE_PairEqSame_D6D5_WARN  
-Luts D6LUT and D5LUT in use in site SLICE_X29Y63 with different equations without A6 pin connected to Global Logic High.
+Luts D6LUT and D5LUT in use in site SLICE_X29Y44 with different equations without A6 pin connected to Global Logic High.
 Related violations: <none>
 
 PDRC-138#4 Warning
 SLICE_PairEqSame_D6D5_WARN  
-Luts D6LUT and D5LUT in use in site SLICE_X31Y83 with different equations without A6 pin connected to Global Logic High.
+Luts D6LUT and D5LUT in use in site SLICE_X32Y46 with different equations without A6 pin connected to Global Logic High.
 Related violations: <none>
 
 PDRC-138#5 Warning
 SLICE_PairEqSame_D6D5_WARN  
-Luts D6LUT and D5LUT in use in site SLICE_X4Y111 with different equations without A6 pin connected to Global Logic High.
+Luts D6LUT and D5LUT in use in site SLICE_X35Y45 with different equations without A6 pin connected to Global Logic High.
 Related violations: <none>
 
 PDRC-138#6 Warning
 SLICE_PairEqSame_D6D5_WARN  
-Luts D6LUT and D5LUT in use in site SLICE_X4Y86 with different equations without A6 pin connected to Global Logic High.
+Luts D6LUT and D5LUT in use in site SLICE_X36Y45 with different equations without A6 pin connected to Global Logic High.
 Related violations: <none>
 
 PDRC-138#7 Warning
 SLICE_PairEqSame_D6D5_WARN  
-Luts D6LUT and D5LUT in use in site SLICE_X4Y89 with different equations without A6 pin connected to Global Logic High.
+Luts D6LUT and D5LUT in use in site SLICE_X36Y70 with different equations without A6 pin connected to Global Logic High.
 Related violations: <none>
 
 PDRC-138#8 Warning
 SLICE_PairEqSame_D6D5_WARN  
-Luts D6LUT and D5LUT in use in site SLICE_X5Y111 with different equations without A6 pin connected to Global Logic High.
+Luts D6LUT and D5LUT in use in site SLICE_X37Y53 with different equations without A6 pin connected to Global Logic High.
 Related violations: <none>
 
 PDRC-138#9 Warning
 SLICE_PairEqSame_D6D5_WARN  
-Luts D6LUT and D5LUT in use in site SLICE_X61Y98 with different equations without A6 pin connected to Global Logic High.
+Luts D6LUT and D5LUT in use in site SLICE_X37Y72 with different equations without A6 pin connected to Global Logic High.
+Related violations: <none>
+
+PDRC-138#10 Warning
+SLICE_PairEqSame_D6D5_WARN  
+Luts D6LUT and D5LUT in use in site SLICE_X37Y94 with different equations without A6 pin connected to Global Logic High.
+Related violations: <none>
+
+PDRC-138#11 Warning
+SLICE_PairEqSame_D6D5_WARN  
+Luts D6LUT and D5LUT in use in site SLICE_X39Y70 with different equations without A6 pin connected to Global Logic High.
+Related violations: <none>
+
+PDRC-138#12 Warning
+SLICE_PairEqSame_D6D5_WARN  
+Luts D6LUT and D5LUT in use in site SLICE_X40Y69 with different equations without A6 pin connected to Global Logic High.
+Related violations: <none>
+
+PDRC-138#13 Warning
+SLICE_PairEqSame_D6D5_WARN  
+Luts D6LUT and D5LUT in use in site SLICE_X41Y44 with different equations without A6 pin connected to Global Logic High.
+Related violations: <none>
+
+PDRC-138#14 Warning
+SLICE_PairEqSame_D6D5_WARN  
+Luts D6LUT and D5LUT in use in site SLICE_X43Y62 with different equations without A6 pin connected to Global Logic High.
+Related violations: <none>
+
+PDRC-138#15 Warning
+SLICE_PairEqSame_D6D5_WARN  
+Luts D6LUT and D5LUT in use in site SLICE_X44Y57 with different equations without A6 pin connected to Global Logic High.
+Related violations: <none>
+
+PDRC-138#16 Warning
+SLICE_PairEqSame_D6D5_WARN  
+Luts D6LUT and D5LUT in use in site SLICE_X44Y71 with different equations without A6 pin connected to Global Logic High.
+Related violations: <none>
+
+PDRC-138#17 Warning
+SLICE_PairEqSame_D6D5_WARN  
+Luts D6LUT and D5LUT in use in site SLICE_X47Y44 with different equations without A6 pin connected to Global Logic High.
+Related violations: <none>
+
+PDRC-138#18 Warning
+SLICE_PairEqSame_D6D5_WARN  
+Luts D6LUT and D5LUT in use in site SLICE_X47Y81 with different equations without A6 pin connected to Global Logic High.
+Related violations: <none>
+
+PDRC-138#19 Warning
+SLICE_PairEqSame_D6D5_WARN  
+Luts D6LUT and D5LUT in use in site SLICE_X47Y95 with different equations without A6 pin connected to Global Logic High.
+Related violations: <none>
+
+PDRC-138#20 Warning
+SLICE_PairEqSame_D6D5_WARN  
+Luts D6LUT and D5LUT in use in site SLICE_X48Y105 with different equations without A6 pin connected to Global Logic High.
+Related violations: <none>
+
+PDRC-138#21 Warning
+SLICE_PairEqSame_D6D5_WARN  
+Luts D6LUT and D5LUT in use in site SLICE_X49Y97 with different equations without A6 pin connected to Global Logic High.
+Related violations: <none>
+
+PDRC-138#22 Warning
+SLICE_PairEqSame_D6D5_WARN  
+Luts D6LUT and D5LUT in use in site SLICE_X58Y7 with different equations without A6 pin connected to Global Logic High.
+Related violations: <none>
+
+PDRC-138#23 Warning
+SLICE_PairEqSame_D6D5_WARN  
+Luts D6LUT and D5LUT in use in site SLICE_X59Y9 with different equations without A6 pin connected to Global Logic High.
+Related violations: <none>
+
+PDRC-138#24 Warning
+SLICE_PairEqSame_D6D5_WARN  
+Luts D6LUT and D5LUT in use in site SLICE_X61Y5 with different equations without A6 pin connected to Global Logic High.
+Related violations: <none>
+
+PDRC-138#25 Warning
+SLICE_PairEqSame_D6D5_WARN  
+Luts D6LUT and D5LUT in use in site SLICE_X61Y52 with different equations without A6 pin connected to Global Logic High.
+Related violations: <none>
+
+PDRC-138#26 Warning
+SLICE_PairEqSame_D6D5_WARN  
+Luts D6LUT and D5LUT in use in site SLICE_X62Y4 with different equations without A6 pin connected to Global Logic High.
+Related violations: <none>
+
+PDRC-138#27 Warning
+SLICE_PairEqSame_D6D5_WARN  
+Luts D6LUT and D5LUT in use in site SLICE_X62Y6 with different equations without A6 pin connected to Global Logic High.
 Related violations: <none>
 
 PDRC-142#1 Warning
 SLICE_PairEqSame_B6B5_WARN  
-Luts B6LUT and B5LUT in use in site SLICE_X56Y120 with different equations without A6 pin connected to Global Logic High.
+Luts B6LUT and B5LUT in use in site SLICE_X30Y42 with different equations without A6 pin connected to Global Logic High.
+Related violations: <none>
+
+PDRC-142#2 Warning
+SLICE_PairEqSame_B6B5_WARN  
+Luts B6LUT and B5LUT in use in site SLICE_X34Y130 with different equations without A6 pin connected to Global Logic High.
+Related violations: <none>
+
+PDRC-142#3 Warning
+SLICE_PairEqSame_B6B5_WARN  
+Luts B6LUT and B5LUT in use in site SLICE_X34Y47 with different equations without A6 pin connected to Global Logic High.
+Related violations: <none>
+
+PDRC-142#4 Warning
+SLICE_PairEqSame_B6B5_WARN  
+Luts B6LUT and B5LUT in use in site SLICE_X46Y78 with different equations without A6 pin connected to Global Logic High.
+Related violations: <none>
+
+PDRC-142#5 Warning
+SLICE_PairEqSame_B6B5_WARN  
+Luts B6LUT and B5LUT in use in site SLICE_X50Y47 with different equations without A6 pin connected to Global Logic High.
+Related violations: <none>
+
+PDRC-142#6 Warning
+SLICE_PairEqSame_B6B5_WARN  
+Luts B6LUT and B5LUT in use in site SLICE_X56Y62 with different equations without A6 pin connected to Global Logic High.
+Related violations: <none>
+
+PDRC-142#7 Warning
+SLICE_PairEqSame_B6B5_WARN  
+Luts B6LUT and B5LUT in use in site SLICE_X60Y52 with different equations without A6 pin connected to Global Logic High.
 Related violations: <none>
 
 PDRC-144#1 Warning
 SLICE_PairEqSame_C6C5_WARN  
-Luts C6LUT and C5LUT in use in site SLICE_X10Y111 with different equations without A6 pin connected to Global Logic High.
+Luts C6LUT and C5LUT in use in site SLICE_X30Y42 with different equations without A6 pin connected to Global Logic High.
 Related violations: <none>
 
 PDRC-144#2 Warning
 SLICE_PairEqSame_C6C5_WARN  
-Luts C6LUT and C5LUT in use in site SLICE_X10Y113 with different equations without A6 pin connected to Global Logic High.
+Luts C6LUT and C5LUT in use in site SLICE_X34Y130 with different equations without A6 pin connected to Global Logic High.
 Related violations: <none>
 
 PDRC-144#3 Warning
 SLICE_PairEqSame_C6C5_WARN  
-Luts C6LUT and C5LUT in use in site SLICE_X10Y117 with different equations without A6 pin connected to Global Logic High.
+Luts C6LUT and C5LUT in use in site SLICE_X34Y47 with different equations without A6 pin connected to Global Logic High.
 Related violations: <none>
 
 PDRC-144#4 Warning
 SLICE_PairEqSame_C6C5_WARN  
-Luts C6LUT and C5LUT in use in site SLICE_X10Y80 with different equations without A6 pin connected to Global Logic High.
+Luts C6LUT and C5LUT in use in site SLICE_X46Y46 with different equations without A6 pin connected to Global Logic High.
 Related violations: <none>
 
 PDRC-144#5 Warning
 SLICE_PairEqSame_C6C5_WARN  
-Luts C6LUT and C5LUT in use in site SLICE_X12Y113 with different equations without A6 pin connected to Global Logic High.
+Luts C6LUT and C5LUT in use in site SLICE_X46Y78 with different equations without A6 pin connected to Global Logic High.
 Related violations: <none>
 
 PDRC-144#6 Warning
 SLICE_PairEqSame_C6C5_WARN  
-Luts C6LUT and C5LUT in use in site SLICE_X12Y115 with different equations without A6 pin connected to Global Logic High.
+Luts C6LUT and C5LUT in use in site SLICE_X50Y103 with different equations without A6 pin connected to Global Logic High.
 Related violations: <none>
 
 PDRC-144#7 Warning
 SLICE_PairEqSame_C6C5_WARN  
-Luts C6LUT and C5LUT in use in site SLICE_X2Y115 with different equations without A6 pin connected to Global Logic High.
+Luts C6LUT and C5LUT in use in site SLICE_X50Y47 with different equations without A6 pin connected to Global Logic High.
 Related violations: <none>
 
 PDRC-144#8 Warning
 SLICE_PairEqSame_C6C5_WARN  
-Luts C6LUT and C5LUT in use in site SLICE_X38Y123 with different equations without A6 pin connected to Global Logic High.
+Luts C6LUT and C5LUT in use in site SLICE_X56Y62 with different equations without A6 pin connected to Global Logic High.
 Related violations: <none>
 
 PDRC-144#9 Warning
 SLICE_PairEqSame_C6C5_WARN  
-Luts C6LUT and C5LUT in use in site SLICE_X42Y50 with different equations without A6 pin connected to Global Logic High.
+Luts C6LUT and C5LUT in use in site SLICE_X60Y5 with different equations without A6 pin connected to Global Logic High.
 Related violations: <none>
 
 PDRC-144#10 Warning
 SLICE_PairEqSame_C6C5_WARN  
-Luts C6LUT and C5LUT in use in site SLICE_X54Y120 with different equations without A6 pin connected to Global Logic High.
+Luts C6LUT and C5LUT in use in site SLICE_X60Y52 with different equations without A6 pin connected to Global Logic High.
 Related violations: <none>
 
 PDRC-144#11 Warning
 SLICE_PairEqSame_C6C5_WARN  
-Luts C6LUT and C5LUT in use in site SLICE_X8Y114 with different equations without A6 pin connected to Global Logic High.
+Luts C6LUT and C5LUT in use in site SLICE_X60Y8 with different equations without A6 pin connected to Global Logic High.
 Related violations: <none>
 
 PDRC-146#1 Warning
 SLICE_PairEqSame_D6D5_WARN  
-Luts D6LUT and D5LUT in use in site SLICE_X10Y117 with different equations without A6 pin connected to Global Logic High.
+Luts D6LUT and D5LUT in use in site SLICE_X30Y42 with different equations without A6 pin connected to Global Logic High.
 Related violations: <none>
 
 PDRC-146#2 Warning
 SLICE_PairEqSame_D6D5_WARN  
-Luts D6LUT and D5LUT in use in site SLICE_X10Y80 with different equations without A6 pin connected to Global Logic High.
+Luts D6LUT and D5LUT in use in site SLICE_X34Y43 with different equations without A6 pin connected to Global Logic High.
 Related violations: <none>
 
 PDRC-146#3 Warning
 SLICE_PairEqSame_D6D5_WARN  
-Luts D6LUT and D5LUT in use in site SLICE_X12Y113 with different equations without A6 pin connected to Global Logic High.
+Luts D6LUT and D5LUT in use in site SLICE_X46Y78 with different equations without A6 pin connected to Global Logic High.
 Related violations: <none>
 
 PDRC-146#4 Warning
 SLICE_PairEqSame_D6D5_WARN  
-Luts D6LUT and D5LUT in use in site SLICE_X12Y115 with different equations without A6 pin connected to Global Logic High.
+Luts D6LUT and D5LUT in use in site SLICE_X46Y84 with different equations without A6 pin connected to Global Logic High.
 Related violations: <none>
 
 PDRC-146#5 Warning
 SLICE_PairEqSame_D6D5_WARN  
-Luts D6LUT and D5LUT in use in site SLICE_X2Y115 with different equations without A6 pin connected to Global Logic High.
+Luts D6LUT and D5LUT in use in site SLICE_X50Y103 with different equations without A6 pin connected to Global Logic High.
 Related violations: <none>
 
 PDRC-146#6 Warning
 SLICE_PairEqSame_D6D5_WARN  
-Luts D6LUT and D5LUT in use in site SLICE_X38Y36 with different equations without A6 pin connected to Global Logic High.
+Luts D6LUT and D5LUT in use in site SLICE_X50Y47 with different equations without A6 pin connected to Global Logic High.
 Related violations: <none>
 
 PDRC-146#7 Warning
 SLICE_PairEqSame_D6D5_WARN  
-Luts D6LUT and D5LUT in use in site SLICE_X38Y60 with different equations without A6 pin connected to Global Logic High.
+Luts D6LUT and D5LUT in use in site SLICE_X56Y62 with different equations without A6 pin connected to Global Logic High.
 Related violations: <none>
 
 PDRC-146#8 Warning
 SLICE_PairEqSame_D6D5_WARN  
-Luts D6LUT and D5LUT in use in site SLICE_X42Y50 with different equations without A6 pin connected to Global Logic High.
+Luts D6LUT and D5LUT in use in site SLICE_X60Y5 with different equations without A6 pin connected to Global Logic High.
 Related violations: <none>
 
 PDRC-146#9 Warning
 SLICE_PairEqSame_D6D5_WARN  
-Luts D6LUT and D5LUT in use in site SLICE_X42Y81 with different equations without A6 pin connected to Global Logic High.
-Related violations: <none>
-
-PDRC-146#10 Warning
-SLICE_PairEqSame_D6D5_WARN  
-Luts D6LUT and D5LUT in use in site SLICE_X54Y120 with different equations without A6 pin connected to Global Logic High.
+Luts D6LUT and D5LUT in use in site SLICE_X60Y52 with different equations without A6 pin connected to Global Logic High.
 Related violations: <none>
 
 PDRC-153#1 Warning
@@ -468,8 +613,8 @@ Poor placement for routing between an IO pin and BUFG.
 Resolution: Poor placement of an IO pin and a BUFG has resulted in the router using a non-dedicated path between the two.  There are several things that could trigger this DRC, each of which can cause unpredictable clock insertion delays that result in poor timing.  This DRC could be caused by any of the following: (a) a clock port was placed on a pin that is not a CCIO-pin (b)the BUFG has not been placed in the same half of the device or SLR as the CCIO-pin (c) a single ended clock has been placed on the N-Side of a differential pair CCIO-pin.
  This is normally an ERROR but the CLOCK_DEDICATED_ROUTE constraint is set to FALSE allowing your design to continue. The use of this override is highly discouraged as it may lead to very poor timing results. It is recommended that this error condition be corrected in the design.
 
-	gen_ti_roic_top[12].ti_roic_top_inst/bit_clock_gen/adc_fclk_inst (IBUFDS.O) is locked to Y8
-	fclk_in_reg[0]_i_1__6 (BUFG.I) is provisionally placed by clockplacer on BUFGCTRL_X0Y0
+	gen_ti_roic_top[10].ti_roic_top_inst/bit_clock_gen/adc_fclk_inst (IBUFDS.O) is locked to F16
+	fclk_in_reg[0]_i_1__6 (BUFG.I) is provisionally placed by clockplacer on BUFGCTRL_X0Y23
 
 Related violations: <none>
 
@@ -479,8 +624,8 @@ Poor placement for routing between an IO pin and BUFG.
 Resolution: Poor placement of an IO pin and a BUFG has resulted in the router using a non-dedicated path between the two.  There are several things that could trigger this DRC, each of which can cause unpredictable clock insertion delays that result in poor timing.  This DRC could be caused by any of the following: (a) a clock port was placed on a pin that is not a CCIO-pin (b)the BUFG has not been placed in the same half of the device or SLR as the CCIO-pin (c) a single ended clock has been placed on the N-Side of a differential pair CCIO-pin.
  This is normally an ERROR but the CLOCK_DEDICATED_ROUTE constraint is set to FALSE allowing your design to continue. The use of this override is highly discouraged as it may lead to very poor timing results. It is recommended that this error condition be corrected in the design.
 
-	gen_ti_roic_top[13].ti_roic_top_inst/bit_clock_gen/adc_fclk_inst (IBUFDS.O) is locked to AB7
-	fclk_in_reg[0]_i_1__8 (BUFG.I) is provisionally placed by clockplacer on BUFGCTRL_X0Y1
+	gen_ti_roic_top[1].ti_roic_top_inst/bit_clock_gen/adc_fclk_inst (IBUFDS.O) is locked to G17
+	fclk_in_reg[0]_i_1__1 (BUFG.I) is provisionally placed by clockplacer on BUFGCTRL_X0Y29
 
 Related violations: <none>
 
@@ -490,8 +635,8 @@ Poor placement for routing between an IO pin and BUFG.
 Resolution: Poor placement of an IO pin and a BUFG has resulted in the router using a non-dedicated path between the two.  There are several things that could trigger this DRC, each of which can cause unpredictable clock insertion delays that result in poor timing.  This DRC could be caused by any of the following: (a) a clock port was placed on a pin that is not a CCIO-pin (b)the BUFG has not been placed in the same half of the device or SLR as the CCIO-pin (c) a single ended clock has been placed on the N-Side of a differential pair CCIO-pin.
  This is normally an ERROR but the CLOCK_DEDICATED_ROUTE constraint is set to FALSE allowing your design to continue. The use of this override is highly discouraged as it may lead to very poor timing results. It is recommended that this error condition be corrected in the design.
 
-	gen_ti_roic_top[1].ti_roic_top_inst/bit_clock_gen/adc_fclk_inst (IBUFDS.O) is locked to G17
-	fclk_in_reg[0]_i_1__1 (BUFG.I) is provisionally placed by clockplacer on BUFGCTRL_X0Y30
+	gen_ti_roic_top[2].ti_roic_top_inst/bit_clock_gen/adc_fclk_inst (IBUFDS.O) is locked to M18
+	fclk_in_reg[0]_i_1__3 (BUFG.I) is provisionally placed by clockplacer on BUFGCTRL_X0Y26
 
 Related violations: <none>
 
@@ -501,23 +646,12 @@ Poor placement for routing between an IO pin and BUFG.
 Resolution: Poor placement of an IO pin and a BUFG has resulted in the router using a non-dedicated path between the two.  There are several things that could trigger this DRC, each of which can cause unpredictable clock insertion delays that result in poor timing.  This DRC could be caused by any of the following: (a) a clock port was placed on a pin that is not a CCIO-pin (b)the BUFG has not been placed in the same half of the device or SLR as the CCIO-pin (c) a single ended clock has been placed on the N-Side of a differential pair CCIO-pin.
  This is normally an ERROR but the CLOCK_DEDICATED_ROUTE constraint is set to FALSE allowing your design to continue. The use of this override is highly discouraged as it may lead to very poor timing results. It is recommended that this error condition be corrected in the design.
 
-	gen_ti_roic_top[2].ti_roic_top_inst/bit_clock_gen/adc_fclk_inst (IBUFDS.O) is locked to M18
-	fclk_in_reg[0]_i_1__3 (BUFG.I) is provisionally placed by clockplacer on BUFGCTRL_X0Y27
+	gen_ti_roic_top[3].ti_roic_top_inst/bit_clock_gen/adc_fclk_inst (IBUFDS.O) is locked to J22
+	fclk_in_reg[0]_i_1__5 (BUFG.I) is provisionally placed by clockplacer on BUFGCTRL_X0Y24
 
 Related violations: <none>
 
 PLCK-12#6 Warning
-Clock Placer Checks  
-Poor placement for routing between an IO pin and BUFG. 
-Resolution: Poor placement of an IO pin and a BUFG has resulted in the router using a non-dedicated path between the two.  There are several things that could trigger this DRC, each of which can cause unpredictable clock insertion delays that result in poor timing.  This DRC could be caused by any of the following: (a) a clock port was placed on a pin that is not a CCIO-pin (b)the BUFG has not been placed in the same half of the device or SLR as the CCIO-pin (c) a single ended clock has been placed on the N-Side of a differential pair CCIO-pin.
- This is normally an ERROR but the CLOCK_DEDICATED_ROUTE constraint is set to FALSE allowing your design to continue. The use of this override is highly discouraged as it may lead to very poor timing results. It is recommended that this error condition be corrected in the design.
-
-	gen_ti_roic_top[3].ti_roic_top_inst/bit_clock_gen/adc_fclk_inst (IBUFDS.O) is locked to J22
-	fclk_in_reg[0]_i_1__5 (BUFG.I) is provisionally placed by clockplacer on BUFGCTRL_X0Y26
-
-Related violations: <none>
-
-PLCK-12#7 Warning
 Clock Placer Checks  
 Poor placement for routing between an IO pin and BUFG. 
 Resolution: Poor placement of an IO pin and a BUFG has resulted in the router using a non-dedicated path between the two.  There are several things that could trigger this DRC, each of which can cause unpredictable clock insertion delays that result in poor timing.  This DRC could be caused by any of the following: (a) a clock port was placed on a pin that is not a CCIO-pin (b)the BUFG has not been placed in the same half of the device or SLR as the CCIO-pin (c) a single ended clock has been placed on the N-Side of a differential pair CCIO-pin.
@@ -528,14 +662,25 @@ Resolution: Poor placement of an IO pin and a BUFG has resulted in the router us
 
 Related violations: <none>
 
-PLCK-12#8 Warning
+PLCK-12#7 Warning
 Clock Placer Checks  
 Poor placement for routing between an IO pin and BUFG. 
 Resolution: Poor placement of an IO pin and a BUFG has resulted in the router using a non-dedicated path between the two.  There are several things that could trigger this DRC, each of which can cause unpredictable clock insertion delays that result in poor timing.  This DRC could be caused by any of the following: (a) a clock port was placed on a pin that is not a CCIO-pin (b)the BUFG has not been placed in the same half of the device or SLR as the CCIO-pin (c) a single ended clock has been placed on the N-Side of a differential pair CCIO-pin.
  This is normally an ERROR but the CLOCK_DEDICATED_ROUTE constraint is set to FALSE allowing your design to continue. The use of this override is highly discouraged as it may lead to very poor timing results. It is recommended that this error condition be corrected in the design.
 
 	gen_ti_roic_top[5].ti_roic_top_inst/bit_clock_gen/adc_fclk_inst (IBUFDS.O) is locked to H13
-	fclk_in_reg[0]_i_1__9 (BUFG.I) is provisionally placed by clockplacer on BUFGCTRL_X0Y25
+	fclk_in_reg[0]_i_1__2 (BUFG.I) is provisionally placed by clockplacer on BUFGCTRL_X0Y27
+
+Related violations: <none>
+
+PLCK-12#8 Warning
+Clock Placer Checks  
+Poor placement for routing between an IO pin and BUFG. 
+Resolution: Poor placement of an IO pin and a BUFG has resulted in the router using a non-dedicated path between the two.  There are several things that could trigger this DRC, each of which can cause unpredictable clock insertion delays that result in poor timing.  This DRC could be caused by any of the following: (a) a clock port was placed on a pin that is not a CCIO-pin (b)the BUFG has not been placed in the same half of the device or SLR as the CCIO-pin (c) a single ended clock has been placed on the N-Side of a differential pair CCIO-pin.
+ This is normally an ERROR but the CLOCK_DEDICATED_ROUTE constraint is set to FALSE allowing your design to continue. The use of this override is highly discouraged as it may lead to very poor timing results. It is recommended that this error condition be corrected in the design.
+
+	gen_ti_roic_top[6].ti_roic_top_inst/bit_clock_gen/adc_fclk_inst (IBUFDS.O) is locked to K17
+	fclk_in_reg[0]_i_1__0 (BUFG.I) is provisionally placed by clockplacer on BUFGCTRL_X0Y30
 
 Related violations: <none>
 
@@ -545,8 +690,8 @@ Poor placement for routing between an IO pin and BUFG.
 Resolution: Poor placement of an IO pin and a BUFG has resulted in the router using a non-dedicated path between the two.  There are several things that could trigger this DRC, each of which can cause unpredictable clock insertion delays that result in poor timing.  This DRC could be caused by any of the following: (a) a clock port was placed on a pin that is not a CCIO-pin (b)the BUFG has not been placed in the same half of the device or SLR as the CCIO-pin (c) a single ended clock has been placed on the N-Side of a differential pair CCIO-pin.
  This is normally an ERROR but the CLOCK_DEDICATED_ROUTE constraint is set to FALSE allowing your design to continue. The use of this override is highly discouraged as it may lead to very poor timing results. It is recommended that this error condition be corrected in the design.
 
-	gen_ti_roic_top[6].ti_roic_top_inst/bit_clock_gen/adc_fclk_inst (IBUFDS.O) is locked to K17
-	fclk_in_reg[0]_i_1__2 (BUFG.I) is provisionally placed by clockplacer on BUFGCTRL_X0Y28
+	gen_ti_roic_top[8].ti_roic_top_inst/bit_clock_gen/adc_fclk_inst (IBUFDS.O) is locked to F13
+	fclk_in_reg[0]_i_1__10 (BUFG.I) is provisionally placed by clockplacer on BUFGCTRL_X0Y28
 
 Related violations: <none>
 
@@ -556,8 +701,8 @@ Poor placement for routing between an IO pin and BUFG.
 Resolution: Poor placement of an IO pin and a BUFG has resulted in the router using a non-dedicated path between the two.  There are several things that could trigger this DRC, each of which can cause unpredictable clock insertion delays that result in poor timing.  This DRC could be caused by any of the following: (a) a clock port was placed on a pin that is not a CCIO-pin (b)the BUFG has not been placed in the same half of the device or SLR as the CCIO-pin (c) a single ended clock has been placed on the N-Side of a differential pair CCIO-pin.
  This is normally an ERROR but the CLOCK_DEDICATED_ROUTE constraint is set to FALSE allowing your design to continue. The use of this override is highly discouraged as it may lead to very poor timing results. It is recommended that this error condition be corrected in the design.
 
-	gen_ti_roic_top[8].ti_roic_top_inst/bit_clock_gen/adc_fclk_inst (IBUFDS.O) is locked to F13
-	fclk_in_reg[0]_i_1__10 (BUFG.I) is provisionally placed by clockplacer on BUFGCTRL_X0Y29
+	gen_ti_roic_top[9].ti_roic_top_inst/bit_clock_gen/adc_fclk_inst (IBUFDS.O) is locked to E22
+	fclk_in_reg[0]_i_1__4 (BUFG.I) is provisionally placed by clockplacer on BUFGCTRL_X0Y25
 
 Related violations: <none>
 
@@ -605,55 +750,45 @@ Related violations: <none>
 
 REQP-1580#4 Warning
 Phase alignment  
-Unsupported clocking topology used for ISERDESE2 gen_ti_roic_top[12].ti_roic_top_inst/deserializer/iserdese2_master. This can result in corrupted data. The gen_ti_roic_top[12].ti_roic_top_inst/deserializer/iserdese2_master/CLK / gen_ti_roic_top[12].ti_roic_top_inst/deserializer/iserdese2_master/CLKDIV pins should be driven by the same source through the same buffer type or by a BUFIO / BUFR combination in order to have a proper phase relationship. Please refer to the Select I/O User Guide for supported clocking topologies of the chosen INTERFACE_TYPE mode.
+Unsupported clocking topology used for ISERDESE2 gen_ti_roic_top[1].ti_roic_top_inst/deserializer/iserdese2_master. This can result in corrupted data. The gen_ti_roic_top[1].ti_roic_top_inst/deserializer/iserdese2_master/CLK / gen_ti_roic_top[1].ti_roic_top_inst/deserializer/iserdese2_master/CLKDIV pins should be driven by the same source through the same buffer type or by a BUFIO / BUFR combination in order to have a proper phase relationship. Please refer to the Select I/O User Guide for supported clocking topologies of the chosen INTERFACE_TYPE mode.
 Related violations: <none>
 
 REQP-1580#5 Warning
 Phase alignment  
-Unsupported clocking topology used for ISERDESE2 gen_ti_roic_top[13].ti_roic_top_inst/deserializer/iserdese2_master. This can result in corrupted data. The gen_ti_roic_top[13].ti_roic_top_inst/deserializer/iserdese2_master/CLK / gen_ti_roic_top[13].ti_roic_top_inst/deserializer/iserdese2_master/CLKDIV pins should be driven by the same source through the same buffer type or by a BUFIO / BUFR combination in order to have a proper phase relationship. Please refer to the Select I/O User Guide for supported clocking topologies of the chosen INTERFACE_TYPE mode.
+Unsupported clocking topology used for ISERDESE2 gen_ti_roic_top[2].ti_roic_top_inst/deserializer/iserdese2_master. This can result in corrupted data. The gen_ti_roic_top[2].ti_roic_top_inst/deserializer/iserdese2_master/CLK / gen_ti_roic_top[2].ti_roic_top_inst/deserializer/iserdese2_master/CLKDIV pins should be driven by the same source through the same buffer type or by a BUFIO / BUFR combination in order to have a proper phase relationship. Please refer to the Select I/O User Guide for supported clocking topologies of the chosen INTERFACE_TYPE mode.
 Related violations: <none>
 
 REQP-1580#6 Warning
 Phase alignment  
-Unsupported clocking topology used for ISERDESE2 gen_ti_roic_top[1].ti_roic_top_inst/deserializer/iserdese2_master. This can result in corrupted data. The gen_ti_roic_top[1].ti_roic_top_inst/deserializer/iserdese2_master/CLK / gen_ti_roic_top[1].ti_roic_top_inst/deserializer/iserdese2_master/CLKDIV pins should be driven by the same source through the same buffer type or by a BUFIO / BUFR combination in order to have a proper phase relationship. Please refer to the Select I/O User Guide for supported clocking topologies of the chosen INTERFACE_TYPE mode.
+Unsupported clocking topology used for ISERDESE2 gen_ti_roic_top[3].ti_roic_top_inst/deserializer/iserdese2_master. This can result in corrupted data. The gen_ti_roic_top[3].ti_roic_top_inst/deserializer/iserdese2_master/CLK / gen_ti_roic_top[3].ti_roic_top_inst/deserializer/iserdese2_master/CLKDIV pins should be driven by the same source through the same buffer type or by a BUFIO / BUFR combination in order to have a proper phase relationship. Please refer to the Select I/O User Guide for supported clocking topologies of the chosen INTERFACE_TYPE mode.
 Related violations: <none>
 
 REQP-1580#7 Warning
 Phase alignment  
-Unsupported clocking topology used for ISERDESE2 gen_ti_roic_top[2].ti_roic_top_inst/deserializer/iserdese2_master. This can result in corrupted data. The gen_ti_roic_top[2].ti_roic_top_inst/deserializer/iserdese2_master/CLK / gen_ti_roic_top[2].ti_roic_top_inst/deserializer/iserdese2_master/CLKDIV pins should be driven by the same source through the same buffer type or by a BUFIO / BUFR combination in order to have a proper phase relationship. Please refer to the Select I/O User Guide for supported clocking topologies of the chosen INTERFACE_TYPE mode.
+Unsupported clocking topology used for ISERDESE2 gen_ti_roic_top[4].ti_roic_top_inst/deserializer/iserdese2_master. This can result in corrupted data. The gen_ti_roic_top[4].ti_roic_top_inst/deserializer/iserdese2_master/CLK / gen_ti_roic_top[4].ti_roic_top_inst/deserializer/iserdese2_master/CLKDIV pins should be driven by the same source through the same buffer type or by a BUFIO / BUFR combination in order to have a proper phase relationship. Please refer to the Select I/O User Guide for supported clocking topologies of the chosen INTERFACE_TYPE mode.
 Related violations: <none>
 
 REQP-1580#8 Warning
 Phase alignment  
-Unsupported clocking topology used for ISERDESE2 gen_ti_roic_top[3].ti_roic_top_inst/deserializer/iserdese2_master. This can result in corrupted data. The gen_ti_roic_top[3].ti_roic_top_inst/deserializer/iserdese2_master/CLK / gen_ti_roic_top[3].ti_roic_top_inst/deserializer/iserdese2_master/CLKDIV pins should be driven by the same source through the same buffer type or by a BUFIO / BUFR combination in order to have a proper phase relationship. Please refer to the Select I/O User Guide for supported clocking topologies of the chosen INTERFACE_TYPE mode.
+Unsupported clocking topology used for ISERDESE2 gen_ti_roic_top[5].ti_roic_top_inst/deserializer/iserdese2_master. This can result in corrupted data. The gen_ti_roic_top[5].ti_roic_top_inst/deserializer/iserdese2_master/CLK / gen_ti_roic_top[5].ti_roic_top_inst/deserializer/iserdese2_master/CLKDIV pins should be driven by the same source through the same buffer type or by a BUFIO / BUFR combination in order to have a proper phase relationship. Please refer to the Select I/O User Guide for supported clocking topologies of the chosen INTERFACE_TYPE mode.
 Related violations: <none>
 
 REQP-1580#9 Warning
 Phase alignment  
-Unsupported clocking topology used for ISERDESE2 gen_ti_roic_top[4].ti_roic_top_inst/deserializer/iserdese2_master. This can result in corrupted data. The gen_ti_roic_top[4].ti_roic_top_inst/deserializer/iserdese2_master/CLK / gen_ti_roic_top[4].ti_roic_top_inst/deserializer/iserdese2_master/CLKDIV pins should be driven by the same source through the same buffer type or by a BUFIO / BUFR combination in order to have a proper phase relationship. Please refer to the Select I/O User Guide for supported clocking topologies of the chosen INTERFACE_TYPE mode.
+Unsupported clocking topology used for ISERDESE2 gen_ti_roic_top[6].ti_roic_top_inst/deserializer/iserdese2_master. This can result in corrupted data. The gen_ti_roic_top[6].ti_roic_top_inst/deserializer/iserdese2_master/CLK / gen_ti_roic_top[6].ti_roic_top_inst/deserializer/iserdese2_master/CLKDIV pins should be driven by the same source through the same buffer type or by a BUFIO / BUFR combination in order to have a proper phase relationship. Please refer to the Select I/O User Guide for supported clocking topologies of the chosen INTERFACE_TYPE mode.
 Related violations: <none>
 
 REQP-1580#10 Warning
 Phase alignment  
-Unsupported clocking topology used for ISERDESE2 gen_ti_roic_top[5].ti_roic_top_inst/deserializer/iserdese2_master. This can result in corrupted data. The gen_ti_roic_top[5].ti_roic_top_inst/deserializer/iserdese2_master/CLK / gen_ti_roic_top[5].ti_roic_top_inst/deserializer/iserdese2_master/CLKDIV pins should be driven by the same source through the same buffer type or by a BUFIO / BUFR combination in order to have a proper phase relationship. Please refer to the Select I/O User Guide for supported clocking topologies of the chosen INTERFACE_TYPE mode.
+Unsupported clocking topology used for ISERDESE2 gen_ti_roic_top[7].ti_roic_top_inst/deserializer/iserdese2_master. This can result in corrupted data. The gen_ti_roic_top[7].ti_roic_top_inst/deserializer/iserdese2_master/CLK / gen_ti_roic_top[7].ti_roic_top_inst/deserializer/iserdese2_master/CLKDIV pins should be driven by the same source through the same buffer type or by a BUFIO / BUFR combination in order to have a proper phase relationship. Please refer to the Select I/O User Guide for supported clocking topologies of the chosen INTERFACE_TYPE mode.
 Related violations: <none>
 
 REQP-1580#11 Warning
 Phase alignment  
-Unsupported clocking topology used for ISERDESE2 gen_ti_roic_top[6].ti_roic_top_inst/deserializer/iserdese2_master. This can result in corrupted data. The gen_ti_roic_top[6].ti_roic_top_inst/deserializer/iserdese2_master/CLK / gen_ti_roic_top[6].ti_roic_top_inst/deserializer/iserdese2_master/CLKDIV pins should be driven by the same source through the same buffer type or by a BUFIO / BUFR combination in order to have a proper phase relationship. Please refer to the Select I/O User Guide for supported clocking topologies of the chosen INTERFACE_TYPE mode.
-Related violations: <none>
-
-REQP-1580#12 Warning
-Phase alignment  
-Unsupported clocking topology used for ISERDESE2 gen_ti_roic_top[7].ti_roic_top_inst/deserializer/iserdese2_master. This can result in corrupted data. The gen_ti_roic_top[7].ti_roic_top_inst/deserializer/iserdese2_master/CLK / gen_ti_roic_top[7].ti_roic_top_inst/deserializer/iserdese2_master/CLKDIV pins should be driven by the same source through the same buffer type or by a BUFIO / BUFR combination in order to have a proper phase relationship. Please refer to the Select I/O User Guide for supported clocking topologies of the chosen INTERFACE_TYPE mode.
-Related violations: <none>
-
-REQP-1580#13 Warning
-Phase alignment  
 Unsupported clocking topology used for ISERDESE2 gen_ti_roic_top[8].ti_roic_top_inst/deserializer/iserdese2_master. This can result in corrupted data. The gen_ti_roic_top[8].ti_roic_top_inst/deserializer/iserdese2_master/CLK / gen_ti_roic_top[8].ti_roic_top_inst/deserializer/iserdese2_master/CLKDIV pins should be driven by the same source through the same buffer type or by a BUFIO / BUFR combination in order to have a proper phase relationship. Please refer to the Select I/O User Guide for supported clocking topologies of the chosen INTERFACE_TYPE mode.
 Related violations: <none>
 
-REQP-1580#14 Warning
+REQP-1580#12 Warning
 Phase alignment  
 Unsupported clocking topology used for ISERDESE2 gen_ti_roic_top[9].ti_roic_top_inst/deserializer/iserdese2_master. This can result in corrupted data. The gen_ti_roic_top[9].ti_roic_top_inst/deserializer/iserdese2_master/CLK / gen_ti_roic_top[9].ti_roic_top_inst/deserializer/iserdese2_master/CLKDIV pins should be driven by the same source through the same buffer type or by a BUFIO / BUFR combination in order to have a proper phase relationship. Please refer to the Select I/O User Guide for supported clocking topologies of the chosen INTERFACE_TYPE mode.
 Related violations: <none>

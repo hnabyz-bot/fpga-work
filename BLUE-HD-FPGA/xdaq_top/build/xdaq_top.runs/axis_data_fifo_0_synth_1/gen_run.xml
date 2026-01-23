@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="axis_data_fifo_0_synth_1" LaunchPart="xc7a35tfgg484-1" LaunchTime="1768804351">
-  <File Type="VDS-TIMING-PB" Name="axis_data_fifo_0_timing_summary_synth.pb"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="axis_data_fifo_0_timing_summary_synth.rpt"/>
-  <File Type="RDS-DCP" Name="axis_data_fifo_0.dcp"/>
-  <File Type="RDS-UTIL-PB" Name="axis_data_fifo_0_utilization_synth.pb"/>
-  <File Type="RDS-UTIL" Name="axis_data_fifo_0_utilization_synth.rpt"/>
-  <File Type="RDS-PROPCONSTRS" Name="axis_data_fifo_0_drc_synth.rpt"/>
-  <File Type="RDS-RDS" Name="axis_data_fifo_0.vds"/>
   <File Type="REPORTS-TCL" Name="axis_data_fifo_0_reports.tcl"/>
+  <File Type="RDS-UTIL" Name="axis_data_fifo_0_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="axis_data_fifo_0_utilization_synth.pb"/>
   <File Type="PA-TCL" Name="axis_data_fifo_0.tcl"/>
+  <File Type="RDS-RDS" Name="axis_data_fifo_0.vds"/>
+  <File Type="RDS-DCP" Name="axis_data_fifo_0.dcp"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/axis_data_fifo_0" RelGenDir="$PGENDIR/axis_data_fifo_0">
     <File Path="$PPRDIR/../source/hdl/csi2/ip/axis_data_fifo_0/axis_data_fifo_0.xci">
       <FileInfo>

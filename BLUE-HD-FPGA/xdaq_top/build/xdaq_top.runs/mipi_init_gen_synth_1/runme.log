@@ -2,22 +2,3 @@
 *** Running vivado
     with args -log mipi_init_gen.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source mipi_init_gen.tcl
 
-
-****** Vivado v2024.2.2 (64-bit)
-  **** SW Build 6060944 on Thu Mar 06 19:10:09 MST 2025
-  **** IP Build 6050500 on Thu Mar  6 23:33:39 MST 2025
-  **** SharedData Build 6060542 on Thu Mar 06 10:31:07 MST 2025
-  **** Start of session at: Mon Jan 19 15:32:33 2026
-    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
-
-source mipi_init_gen.tcl -notrace
-INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: mipi_init_gen
-INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry eabae12bd7752482 to dir: /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.runs/mipi_init_gen_synth_1
-INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.cache/ip/2024.2.2/e/a/eabae12bd7752482/mipi_init_gen_sim_netlist.vhdl to /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.runs/mipi_init_gen_synth_1/mipi_init_gen_sim_netlist.vhdl.
-INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.cache/ip/2024.2.2/e/a/eabae12bd7752482/mipi_init_gen_stub.vhdl to /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.runs/mipi_init_gen_synth_1/mipi_init_gen_stub.vhdl.
-INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.cache/ip/2024.2.2/e/a/eabae12bd7752482/mipi_init_gen_stub.v to /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.runs/mipi_init_gen_synth_1/mipi_init_gen_stub.v.
-INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.cache/ip/2024.2.2/e/a/eabae12bd7752482/mipi_init_gen.dcp to /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.runs/mipi_init_gen_synth_1/mipi_init_gen.dcp.
-INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.cache/ip/2024.2.2/e/a/eabae12bd7752482/mipi_init_gen_sim_netlist.v to /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.runs/mipi_init_gen_synth_1/mipi_init_gen_sim_netlist.v.
-INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP mipi_init_gen, cache-ID = eabae12bd7752482.
-INFO: [Common 17-206] Exiting Vivado at Mon Jan 19 15:32:37 2026...
