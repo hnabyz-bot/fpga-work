@@ -1,0 +1,419 @@
+m255
+K4
+z2
+!s11f vlog 2024.3 2024.09, Sep 10 2024
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.sim/sim_1/behav/questa
+vgeneric_baseblocks_v2_1_2_carry
+Z1 2../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/0c28/hdl/generic_baseblocks_v2_1_vl_rfs.v
+Z2 !s110 1768976983
+!i10b 1
+!s100 biha=k?g4clJhe;AQ;OaY1
+I`7OVzPoIUVGTbOjhaG^?z1
+R0
+Z3 w1768543857
+Z4 8../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/0c28/hdl/generic_baseblocks_v2_1_vl_rfs.v
+Z5 F../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/0c28/hdl/generic_baseblocks_v2_1_vl_rfs.v
+!i122 31
+L0 531 56
+Z6 VDg1SIo80bB@j0V0VzS_@n1
+Z7 OL;L;2024.3;79
+r1
+!s85 0
+31
+Z8 !s108 1768976983.000000
+!s107 ../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/0c28/hdl/generic_baseblocks_v2_1_vl_rfs.v|
+Z9 !s90 -64|-incr|-mfcu|-work|generic_baseblocks_v2_1_2|+incdir+../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/2271/hdl/src/verilog|+incdir+../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/3cbc|+incdir+../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/ec67/hdl|+incdir+../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/a848/hdl|+incdir+../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/434f/hdl|+incdir+../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/f0b6/hdl/verilog|+incdir+../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/0127/hdl/verilog|+incdir+../../../../xdaq_top.ip_user_files/ipstatic|+incdir+../../../../xdaq_top.ip_user_files/ipstatic/hdl/src/verilog|+incdir+../../../../xdaq_top.ip_user_files/ipstatic/hdl|+incdir+/home/holee/tools/xilinx/Vivado/2024.2/data/xilinx_vip/include|../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/0c28/hdl/generic_baseblocks_v2_1_vl_rfs.v|
+!i113 0
+Z10 o-64 -mfcu -work generic_baseblocks_v2_1_2
+Z11 !s92 -64 -mfcu -work generic_baseblocks_v2_1_2 +incdir+../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/2271/hdl/src/verilog +incdir+../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/3cbc +incdir+../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/ec67/hdl +incdir+../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/a848/hdl +incdir+../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/434f/hdl +incdir+../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/f0b6/hdl/verilog +incdir+../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/0127/hdl/verilog +incdir+../../../../xdaq_top.ip_user_files/ipstatic +incdir+../../../../xdaq_top.ip_user_files/ipstatic/hdl/src/verilog +incdir+../../../../xdaq_top.ip_user_files/ipstatic/hdl +incdir+/home/holee/tools/xilinx/Vivado/2024.2/data/xilinx_vip/include
+Z12 tCvgOpt 0
+vgeneric_baseblocks_v2_1_2_carry_and
+R1
+R2
+!i10b 1
+!s100 f0dUo9Dz60:QDl]aHCbHc2
+IzK6?BIm3?@]hZ^=Z<?4680
+R0
+R3
+R4
+R5
+!i122 31
+L0 61 54
+R6
+R7
+r1
+!s85 0
+31
+R8
+Z13 !s107 ../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/0c28/hdl/generic_baseblocks_v2_1_vl_rfs.v|
+R9
+!i113 0
+R10
+R11
+R12
+vgeneric_baseblocks_v2_1_2_carry_latch_and
+R1
+R2
+!i10b 1
+!s100 e16FZBm^:@:<I=OdbCH5W2
+IOOCc<DiOj2nXZQz90Jj2Q1
+R0
+R3
+R4
+R5
+!i122 31
+L0 177 57
+R6
+R7
+r1
+!s85 0
+31
+R8
+R13
+R9
+!i113 0
+R10
+R11
+R12
+vgeneric_baseblocks_v2_1_2_carry_latch_or
+R1
+R2
+!i10b 1
+!s100 G0]z<8=73kU01X[cAa5g]2
+I3[k2F2?2donF>7HmCQY4i3
+R0
+R3
+R4
+R5
+!i122 31
+L0 296 53
+R6
+R7
+r1
+!s85 0
+31
+R8
+R13
+R9
+!i113 0
+R10
+R11
+R12
+vgeneric_baseblocks_v2_1_2_carry_or
+R1
+R2
+!i10b 1
+!s100 ?o257UgU@AWblSmGhXPa82
+IUVD:ni?gnQi0<Gz>YNWY<1
+R0
+R3
+R4
+R5
+!i122 31
+L0 411 58
+R6
+R7
+r1
+!s85 0
+31
+R8
+R13
+R9
+!i113 0
+R10
+R11
+R12
+vgeneric_baseblocks_v2_1_2_command_fifo
+R1
+R2
+!i10b 1
+!s100 gO[7_DHhRigA@WKlUKNU?1
+IE?7I=BEIhSAao0hiCT2]73
+R0
+R3
+R4
+R5
+!i122 31
+L0 649 409
+R6
+R7
+r1
+!s85 0
+31
+R8
+R13
+R9
+!i113 0
+R10
+R11
+R12
+vgeneric_baseblocks_v2_1_2_comparator
+R1
+R2
+!i10b 1
+!s100 nka`nURX5O12WbOInn35W0
+IlWJi?V_cUcHUKhRUF4ckL0
+R0
+R3
+R4
+R5
+!i122 31
+L0 2278 96
+R6
+R7
+r1
+!s85 0
+31
+R8
+R13
+R9
+!i113 0
+R10
+R11
+R12
+vgeneric_baseblocks_v2_1_2_comparator_mask
+R1
+R2
+!i10b 1
+!s100 lLSSS6M^LJhK:lNJdJTZ:1
+IWAR?iCWXZ8I9MA8h12X]C2
+R0
+R3
+R4
+R5
+!i122 31
+L0 1283 102
+R6
+R7
+r1
+!s85 0
+31
+R8
+R13
+R9
+!i113 0
+R10
+R11
+R12
+vgeneric_baseblocks_v2_1_2_comparator_mask_static
+R1
+R2
+!i10b 1
+!s100 ?Uza]ZUUM38hAUE_He12E1
+Ide`nKI_4<^nCDdPg3JH`H2
+R0
+R3
+R4
+R5
+!i122 31
+L0 1119 103
+R6
+R7
+r1
+!s85 0
+31
+R8
+R13
+R9
+!i113 0
+R10
+R11
+R12
+vgeneric_baseblocks_v2_1_2_comparator_sel
+R1
+R2
+!i10b 1
+!s100 4VWadYooVD?O2TFoTnZWD2
+InIOEaVPSKm]P][KciB5?J0
+R0
+R3
+R4
+R5
+!i122 31
+L0 1956 103
+R6
+R7
+r1
+!s85 0
+31
+R8
+R13
+R9
+!i113 0
+R10
+R11
+R12
+vgeneric_baseblocks_v2_1_2_comparator_sel_mask
+R1
+R2
+!i10b 1
+!s100 Ua745[ho6O6[Md4@V4M8@1
+I3PFUfFY9MHoF3fBLQ8bBY2
+R0
+R3
+R4
+R5
+!i122 31
+L0 1619 111
+R6
+R7
+r1
+!s85 0
+31
+R8
+R13
+R9
+!i113 0
+R10
+R11
+R12
+vgeneric_baseblocks_v2_1_2_comparator_sel_mask_static
+R1
+R2
+!i10b 1
+!s100 Gz:BHI8VF7go]Yom]Qmje1
+IU6:;zRnLji;P8>>V5UMgU1
+R0
+R3
+R4
+R5
+!i122 31
+L0 1446 112
+R6
+R7
+r1
+!s85 0
+31
+R8
+R13
+R9
+!i113 0
+R10
+R11
+R12
+vgeneric_baseblocks_v2_1_2_comparator_sel_static
+R1
+R2
+!i10b 1
+!s100 Z:9SV9^99QU6F2UlKDbGS1
+IMP:Po5;O9dNNzjbO1bHGE0
+R0
+R3
+R4
+R5
+!i122 31
+L0 1791 104
+R6
+R7
+r1
+!s85 0
+31
+R8
+R13
+R9
+!i113 0
+R10
+R11
+R12
+vgeneric_baseblocks_v2_1_2_comparator_static
+R1
+R2
+!i10b 1
+!s100 2Q4Dhj9A;9NZnZBT]A;R43
+IB;STQlAY69a4OBaRF9TVN3
+R0
+R3
+R4
+R5
+!i122 31
+L0 2120 97
+R6
+R7
+r1
+!s85 0
+31
+R8
+R13
+R9
+!i113 0
+R10
+R11
+R12
+vgeneric_baseblocks_v2_1_2_mux
+R1
+R2
+!i10b 1
+!s100 Z0z@MgU_EAIbUEXSPD4_W0
+ISJaRjVdHbRY6SOKgC1cbP3
+R0
+R3
+R4
+R5
+!i122 31
+L0 2705 108
+R6
+R7
+r1
+!s85 0
+31
+R8
+R13
+R9
+!i113 0
+R10
+R11
+R12
+vgeneric_baseblocks_v2_1_2_mux_enc
+R1
+R2
+!i10b 1
+!s100 aO:2[YmQf[0bEWValCJ>o0
+IbPO=U7eWlOIzHcjTkle7B3
+R0
+R3
+R4
+R5
+!i122 31
+L0 2437 206
+R6
+R7
+r1
+!s85 0
+31
+R8
+R13
+R9
+!i113 0
+R10
+R11
+R12
+vgeneric_baseblocks_v2_1_2_nto1_mux
+R1
+R2
+!i10b 1
+!s100 [QXo@2DHE[G8B;ocL:fFF3
+I;UcZdo_E9`91bRVbMWNz51
+R0
+R3
+R4
+R5
+!i122 31
+L0 2873 37
+R6
+R7
+r1
+!s85 0
+31
+R8
+R13
+R9
+!i113 0
+R10
+R11
+R12

@@ -1,0 +1,372 @@
+m255
+K4
+z2
+!s11f vlog 2024.3 2024.09, Sep 10 2024
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.sim/sim_1/behav/questa
+vaxi_register_slice_v2_1_34_auto_dest
+Z1 2../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/48f8/hdl/axi_register_slice_v2_1_vl_rfs.v
+Z2 !s110 1768976983
+!i10b 1
+!s100 ;gQlH3AFSBMjFTS5oI_9H3
+IY>g>m9bYMcidES@`0NjC=1
+R0
+Z3 w1768543857
+Z4 8../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/48f8/hdl/axi_register_slice_v2_1_vl_rfs.v
+Z5 F../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/48f8/hdl/axi_register_slice_v2_1_vl_rfs.v
+!i122 31
+L0 1304 103
+Z6 VDg1SIo80bB@j0V0VzS_@n1
+Z7 OL;L;2024.3;79
+r1
+!s85 0
+31
+Z8 !s108 1768976983.000000
+!s107 ../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/ec67/hdl/axi_infrastructure_v1_1_0.vh|../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/48f8/hdl/axi_register_slice_v2_1_vl_rfs.v|
+Z9 !s90 -64|-incr|-mfcu|-work|axi_register_slice_v2_1_34|+incdir+../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/2271/hdl/src/verilog|+incdir+../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/3cbc|+incdir+../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/ec67/hdl|+incdir+../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/a848/hdl|+incdir+../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/434f/hdl|+incdir+../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/f0b6/hdl/verilog|+incdir+../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/0127/hdl/verilog|+incdir+../../../../xdaq_top.ip_user_files/ipstatic|+incdir+../../../../xdaq_top.ip_user_files/ipstatic/hdl/src/verilog|+incdir+../../../../xdaq_top.ip_user_files/ipstatic/hdl|+incdir+/home/holee/tools/xilinx/Vivado/2024.2/data/xilinx_vip/include|../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/48f8/hdl/axi_register_slice_v2_1_vl_rfs.v|
+!i113 0
+Z10 o-64 -mfcu -work axi_register_slice_v2_1_34
+Z11 !s92 -64 -mfcu -work axi_register_slice_v2_1_34 +incdir+../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/2271/hdl/src/verilog +incdir+../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/3cbc +incdir+../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/ec67/hdl +incdir+../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/a848/hdl +incdir+../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/434f/hdl +incdir+../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/f0b6/hdl/verilog +incdir+../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/0127/hdl/verilog +incdir+../../../../xdaq_top.ip_user_files/ipstatic +incdir+../../../../xdaq_top.ip_user_files/ipstatic/hdl/src/verilog +incdir+../../../../xdaq_top.ip_user_files/ipstatic/hdl +incdir+/home/holee/tools/xilinx/Vivado/2024.2/data/xilinx_vip/include
+Z12 tCvgOpt 0
+vaxi_register_slice_v2_1_34_auto_slr
+R1
+R2
+!i10b 1
+!s100 ^X19RHOZ5OMc:DFo<V?8D1
+I6MO5NiVWHeA<`oEa]bC^43
+R0
+R3
+R4
+R5
+!i122 31
+L0 1131 87
+R6
+R7
+r1
+!s85 0
+31
+R8
+Z13 !s107 ../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/ec67/hdl/axi_infrastructure_v1_1_0.vh|../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/48f8/hdl/axi_register_slice_v2_1_vl_rfs.v|
+R9
+!i113 0
+R10
+R11
+R12
+vaxi_register_slice_v2_1_34_auto_src
+R1
+R2
+!i10b 1
+!s100 bI]<cl5mSgenJP9o?6<:31
+IEiSB6JW4fKR;D`fBkQgFK2
+R0
+R3
+R4
+R5
+!i122 31
+L0 1219 84
+R6
+R7
+r1
+!s85 0
+31
+R8
+R13
+R9
+!i113 0
+R10
+R11
+R12
+vaxi_register_slice_v2_1_34_axi_register_slice
+R1
+R2
+!i10b 1
+!s100 YMLHBAV6NXl]gmeCLQbh50
+I9M3z3KEKIe^Co7;Y^Ri880
+R0
+R3
+R4
+R5
+F../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/ec67/hdl/axi_infrastructure_v1_1_0.vh
+!i122 31
+L0 3722 1254
+R6
+R7
+r1
+!s85 0
+31
+R8
+R13
+R9
+!i113 0
+R10
+R11
+R12
+vaxi_register_slice_v2_1_34_axic_reg_srl_fifo
+R1
+R2
+!i10b 1
+!s100 `Y>mR0XAeh9:SoLHbS5O23
+I_^_R7VWLz6GkHbg2E[4?51
+R0
+R3
+R4
+R5
+!i122 31
+L0 3439 219
+R6
+R7
+r1
+!s85 0
+31
+R8
+R13
+R9
+!i113 0
+R10
+R11
+R12
+vaxi_register_slice_v2_1_34_axic_register_slice
+R1
+R2
+!i10b 1
+!s100 QX7?[[JAi^WIb]:]>R60]2
+ILba[4MGeHK:W=NH5FD;D20
+R0
+R3
+R4
+R5
+!i122 31
+L0 1493 644
+R6
+R7
+r1
+!s85 0
+31
+R8
+R13
+R9
+!i113 0
+R10
+R11
+R12
+vaxi_register_slice_v2_1_34_dest_region_slr
+R1
+R2
+!i10b 1
+!s100 B?:@Gg>[TdfcNI?<a1;dO3
+IkOAfa^]L^G>9g7=c`;O8@0
+R0
+R3
+R4
+R5
+!i122 31
+L0 3035 239
+R6
+R7
+r1
+!s85 0
+31
+R8
+R13
+R9
+!i113 0
+R10
+R11
+R12
+vaxi_register_slice_v2_1_34_middle_region_slr
+R1
+R2
+!i10b 1
+!s100 >zLbkF6HHUkM[5e3dk8QS1
+Id?a4aldCM69kLNgW<gdWJ0
+R0
+R3
+R4
+R5
+!i122 31
+L0 2710 138
+R6
+R7
+r1
+!s85 0
+31
+R8
+R13
+R9
+!i113 0
+R10
+R11
+R12
+vaxi_register_slice_v2_1_34_multi_slr
+R1
+R2
+!i10b 1
+!s100 _U3iO7]mFHR`0@VKz2^eh0
+IYc5oTU;KmH<PCHoYmLW2n2
+R0
+R3
+R4
+R5
+!i122 31
+L0 2198 509
+R6
+R7
+r1
+!s85 0
+31
+R8
+R13
+R9
+!i113 0
+R10
+R11
+R12
+vaxi_register_slice_v2_1_34_single_slr
+R1
+R2
+!i10b 1
+!s100 _1>nIP[o2HkelK1if[Fhd0
+IinmKnFMhmBHzONWG8fHX:2
+R0
+R3
+R4
+R5
+!i122 31
+L0 3277 160
+R6
+R7
+r1
+!s85 0
+31
+R8
+R13
+R9
+!i113 0
+R10
+R11
+R12
+vaxi_register_slice_v2_1_34_source_region_slr
+R1
+R2
+!i10b 1
+!s100 D1QXB7;oYe=gQVQ[D?E1h1
+I7SIX=Dj^;1?dDB<@jLQAU3
+R0
+R3
+R4
+R5
+!i122 31
+L0 2851 181
+R6
+R7
+r1
+!s85 0
+31
+R8
+R13
+R9
+!i113 0
+R10
+R11
+R12
+vaxi_register_slice_v2_1_34_srl_rtl
+R1
+R2
+!i10b 1
+!s100 H0JWhlo@Rh`Y_3R47nH<@2
+I:1]B:Kj@n=`UNU<dZD2:k3
+R0
+R3
+R4
+R5
+!i122 31
+L0 1469 21
+R6
+R7
+r1
+!s85 0
+31
+R8
+R13
+R9
+!i113 0
+R10
+R11
+R12
+vaxi_register_slice_v2_1_34_tdm_sample
+R1
+R2
+!i10b 1
+!s100 dAbd0DgkH9S]EEV7g]bUT0
+IBV<Ig7g2BUJhRKRlBA5EQ0
+R0
+R3
+R4
+R5
+!i122 31
+L0 1028 50
+R6
+R7
+r1
+!s85 0
+31
+R8
+R13
+R9
+!i113 0
+R10
+R11
+R12
+vaxi_register_slice_v2_1_34_test_master
+R1
+R2
+!i10b 1
+!s100 ]XURfVzjZ9SRQTkTmGU>L1
+IooM9lKo`A1gab0B2]2Z]=3
+R0
+R3
+R4
+R5
+!i122 31
+L0 49 469
+R6
+R7
+r1
+!s85 0
+31
+R8
+R13
+R9
+!i113 0
+R10
+R11
+R12
+vaxi_register_slice_v2_1_34_test_slave
+R1
+R2
+!i10b 1
+!s100 f93<o9UDid:_mH8DA0<B?1
+I_:e?5jIb>[BT10>6`0C_b2
+R0
+R3
+R4
+R5
+!i122 31
+L0 570 406
+R6
+R7
+r1
+!s85 0
+31
+R8
+R13
+R9
+!i113 0
+R10
+R11
+R12

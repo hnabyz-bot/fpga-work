@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:D:/workspace/github-space/fpga-work/BLUE-HD-FPGA/xdaq_top/source/constrs/blue_hd_top.xdc rfile:../../../../source/constrs/blue_hd_top.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/constrs/blue_hd_top.xdc rfile:../../../../source/constrs/blue_hd_top.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:82 export:INPUT save:INPUT read:READ} [current_design]
 set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets clk_inst0/inst/clk_in1_clk_ctrl]
 set_property src_info {type:XDC file:1 line:112 export:INPUT save:INPUT read:READ} [current_design]

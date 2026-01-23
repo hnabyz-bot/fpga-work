@@ -1,0 +1,299 @@
+m255
+K4
+z2
+!s11f vlog 2024.3 2024.09, Sep 10 2024
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.sim/sim_1/behav/questa
+vaxi_crossbar_v2_1_36_addr_arbiter
+Z1 2../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/cb42/hdl/axi_crossbar_v2_1_vl_rfs.v
+Z2 !s110 1768976984
+!i10b 1
+!s100 T83zZ>;lO^0=z=ZW`>T2J0
+IV2O@[eInf86][9^;:VPc81
+R0
+Z3 w1768543857
+Z4 8../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/cb42/hdl/axi_crossbar_v2_1_vl_rfs.v
+Z5 F../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/cb42/hdl/axi_crossbar_v2_1_vl_rfs.v
+!i122 31
+L0 421 299
+Z6 VDg1SIo80bB@j0V0VzS_@n1
+Z7 OL;L;2024.3;79
+r1
+!s85 0
+31
+Z8 !s108 1768976984.000000
+!s107 ../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/cb42/hdl/axi_crossbar_v2_1_vl_rfs.v|
+Z9 !s90 -64|-incr|-mfcu|-work|axi_crossbar_v2_1_36|+incdir+../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/2271/hdl/src/verilog|+incdir+../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/3cbc|+incdir+../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/ec67/hdl|+incdir+../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/a848/hdl|+incdir+../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/434f/hdl|+incdir+../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/f0b6/hdl/verilog|+incdir+../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/0127/hdl/verilog|+incdir+../../../../xdaq_top.ip_user_files/ipstatic|+incdir+../../../../xdaq_top.ip_user_files/ipstatic/hdl/src/verilog|+incdir+../../../../xdaq_top.ip_user_files/ipstatic/hdl|+incdir+/home/holee/tools/xilinx/Vivado/2024.2/data/xilinx_vip/include|../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/cb42/hdl/axi_crossbar_v2_1_vl_rfs.v|
+!i113 0
+Z10 o-64 -mfcu -work axi_crossbar_v2_1_36
+Z11 !s92 -64 -mfcu -work axi_crossbar_v2_1_36 +incdir+../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/2271/hdl/src/verilog +incdir+../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/3cbc +incdir+../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/ec67/hdl +incdir+../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/a848/hdl +incdir+../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/434f/hdl +incdir+../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/f0b6/hdl/verilog +incdir+../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/0127/hdl/verilog +incdir+../../../../xdaq_top.ip_user_files/ipstatic +incdir+../../../../xdaq_top.ip_user_files/ipstatic/hdl/src/verilog +incdir+../../../../xdaq_top.ip_user_files/ipstatic/hdl +incdir+/home/holee/tools/xilinx/Vivado/2024.2/data/xilinx_vip/include
+Z12 tCvgOpt 0
+vaxi_crossbar_v2_1_36_addr_arbiter_sasd
+R1
+R2
+!i10b 1
+!s100 Eg`i4JAM?L?6o@?bzHca82
+IME^oZ48HOLbBhBjk_TeIb3
+R0
+R3
+R4
+R5
+!i122 31
+L0 64 290
+R6
+R7
+r1
+!s85 0
+31
+R8
+Z13 !s107 ../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/cb42/hdl/axi_crossbar_v2_1_vl_rfs.v|
+R9
+!i113 0
+R10
+R11
+R12
+vaxi_crossbar_v2_1_36_addr_decoder
+R1
+R2
+!i10b 1
+!s100 EmZC@=^KG^`bH5MS@Zd3U1
+IhN3`5U[lRNk4?M1J93j?X2
+R0
+R3
+R4
+R5
+!i122 31
+L0 791 172
+R6
+R7
+r1
+!s85 0
+31
+R8
+R13
+R9
+!i113 0
+R10
+R11
+R12
+vaxi_crossbar_v2_1_36_arbiter_resp
+R1
+R2
+!i10b 1
+!s100 4WaJMN3lhzikokN?6Hd0l2
+I>CBD<1=Laz:lO5]Kk<Nzj2
+R0
+R3
+R4
+R5
+!i122 31
+L0 1021 135
+R6
+R7
+r1
+!s85 0
+31
+R8
+R13
+R9
+!i113 0
+R10
+R11
+R12
+vaxi_crossbar_v2_1_36_axi_crossbar
+R1
+R2
+!i10b 1
+!s100 e:1c;8n29<<LchC7bM=[a1
+IVQAo<OWm:d9WYG3S>bPTh3
+R0
+R3
+R4
+R5
+!i122 31
+L0 4872 917
+R6
+R7
+r1
+!s85 0
+31
+R8
+R13
+R9
+!i113 0
+R10
+R11
+R12
+vaxi_crossbar_v2_1_36_crossbar
+R1
+R2
+!i10b 1
+!s100 Xo]o[ZFzDbVD3Jhhg@N:`3
+IEmXW`bQP9dTfLOPPPITFA0
+R0
+R3
+R4
+R5
+!i122 31
+L0 2233 1195
+R6
+R7
+r1
+!s85 0
+31
+R8
+R13
+R9
+!i113 0
+R10
+R11
+R12
+vaxi_crossbar_v2_1_36_crossbar_sasd
+R1
+R2
+!i10b 1
+!s100 WJlo9CfA2EWjl7UD2CQQn1
+I76KO;kjnlLmE2fF^z?h8N2
+R0
+R3
+R4
+R5
+!i122 31
+L0 1235 906
+R6
+R7
+r1
+!s85 0
+31
+R8
+R13
+R9
+!i113 0
+R10
+R11
+R12
+vaxi_crossbar_v2_1_36_decerr_slave
+R1
+R2
+!i10b 1
+!s100 T52Hi@V@`=_E<^3KH3hE80
+INbAEA;8md1M2Egg:jPW;J0
+R0
+R3
+R4
+R5
+!i122 31
+L0 3494 215
+R6
+R7
+r1
+!s85 0
+31
+R8
+R13
+R9
+!i113 0
+R10
+R11
+R12
+vaxi_crossbar_v2_1_36_si_transactor
+R1
+R2
+!i10b 1
+!s100 Fj7=jQXlS7VIXe5a<6A>]0
+I@Bn^`_AAm=h<1Ug7M]=RZ1
+R0
+R3
+R4
+R5
+!i122 31
+L0 3792 586
+R6
+R7
+r1
+!s85 0
+31
+R8
+R13
+R9
+!i113 0
+R10
+R11
+R12
+vaxi_crossbar_v2_1_36_splitter
+R1
+R2
+!i10b 1
+!s100 lbkhAVTbG0P@D]M<6C@5=1
+I@@JlT5ZiK;=YQ63`8bJ]W0
+R0
+R3
+R4
+R5
+!i122 31
+L0 4452 31
+R6
+R7
+r1
+!s85 0
+31
+R8
+R13
+R9
+!i113 0
+R10
+R11
+R12
+vaxi_crossbar_v2_1_36_wdata_mux
+R1
+R2
+!i10b 1
+!s100 _O]B;EiKTbY:hGW7FiR:W3
+I0@UUKS^HWLmAOmC:2hNOl0
+R0
+R3
+R4
+R5
+!i122 31
+L0 4551 105
+R6
+R7
+r1
+!s85 0
+31
+R8
+R13
+R9
+!i113 0
+R10
+R11
+R12
+vaxi_crossbar_v2_1_36_wdata_router
+R1
+R2
+!i10b 1
+!s100 QjDMUZ66zR_?f@B2R@^A12
+IR>A1RRfOc_Ze4dB>cGhck2
+R0
+R3
+R4
+R5
+!i122 31
+L0 4725 91
+R6
+R7
+r1
+!s85 0
+31
+R8
+R13
+R9
+!i113 0
+R10
+R11
+R12

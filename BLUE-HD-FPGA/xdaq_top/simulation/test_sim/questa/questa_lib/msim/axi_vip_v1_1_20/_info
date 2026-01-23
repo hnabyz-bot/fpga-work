@@ -1,0 +1,38 @@
+m255
+K4
+z2
+!s11f vlog 2024.3 2024.09, Sep 10 2024
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.sim/sim_1/behav/questa
+vaxi_vip_v1_1_20_top
+2../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/0f82/hdl/axi_vip_v1_1_vl_rfs.sv
+!s10a 1768543858
+DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+!s110 1768795412
+!i10b 1
+!s100 4VWI:Q<T1=`I7JiHdQonQ3
+Idm8AAl?25WBa:P6<ZA8bS2
+S1
+R0
+w1768543858
+8../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/0f82/hdl/axi_vip_v1_1_vl_rfs.sv
+F../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/0f82/hdl/axi_vip_v1_1_vl_rfs.sv
+!i122 1
+L0 60 571
+VDg1SIo80bB@j0V0VzS_@n1
+OL;L;2024.3;79
+r1
+!s85 0
+31
+!s108 1768795412.000000
+!s107 ../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/0f82/hdl/axi_vip_v1_1_vl_rfs.sv|
+!s90 -64|-incr|-mfcu|-sv|-L|axi_vip_v1_1_20|-L|smartconnect_v1_0|-L|mipi_dphy_v4_3_14|-L|xilinx_vip|-work|axi_vip_v1_1_20|+incdir+../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/2271/hdl/src/verilog|+incdir+../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/3cbc|+incdir+../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/ec67/hdl|+incdir+../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/a848/hdl|+incdir+../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/434f/hdl|+incdir+../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/f0b6/hdl/verilog|+incdir+../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/0127/hdl/verilog|+incdir+../../../../xdaq_top.ip_user_files/ipstatic|+incdir+../../../../xdaq_top.ip_user_files/ipstatic/hdl/src/verilog|+incdir+../../../../xdaq_top.ip_user_files/ipstatic/hdl|+incdir+/home/holee/tools/xilinx/Vivado/2024.2/data/xilinx_vip/include|../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/0f82/hdl/axi_vip_v1_1_vl_rfs.sv|
+!i113 0
+o-64 -mfcu -sv -L axi_vip_v1_1_20 -L smartconnect_v1_0 -L mipi_dphy_v4_3_14 -L xilinx_vip -work axi_vip_v1_1_20
+!s92 -64 -mfcu -sv -L axi_vip_v1_1_20 -L smartconnect_v1_0 -L mipi_dphy_v4_3_14 -L xilinx_vip -work axi_vip_v1_1_20 +incdir+../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/2271/hdl/src/verilog +incdir+../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/3cbc +incdir+../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/ec67/hdl +incdir+../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/a848/hdl +incdir+../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/434f/hdl +incdir+../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/f0b6/hdl/verilog +incdir+../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/0127/hdl/verilog +incdir+../../../../xdaq_top.ip_user_files/ipstatic +incdir+../../../../xdaq_top.ip_user_files/ipstatic/hdl/src/verilog +incdir+../../../../xdaq_top.ip_user_files/ipstatic/hdl +incdir+/home/holee/tools/xilinx/Vivado/2024.2/data/xilinx_vip/include
+tCvgOpt 0

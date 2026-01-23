@@ -1,24 +1,24 @@
 #-----------------------------------------------------------
 # Vivado v2024.2.2 (64-bit)
-# SW Build 6060944 on Thu Mar 06 19:10:01 MST 2025
+# SW Build 6060944 on Thu Mar 06 19:10:09 MST 2025
 # IP Build 6050500 on Thu Mar  6 23:33:39 MST 2025
 # SharedData Build 6060542 on Thu Mar 06 10:31:07 MST 2025
-# Start of session at: Fri Jan 23 16:09:21 2026
-# Process ID         : 37028
-# Current directory  : D:/workspace/github-space/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.runs/synth_1
-# Command line       : vivado.exe -log blue_hd_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source blue_hd_top.tcl
-# Log file           : D:/workspace/github-space/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.runs/synth_1/blue_hd_top.vds
-# Journal file       : D:/workspace/github-space/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.runs/synth_1\vivado.jou
-# Running On         : work-dev
-# Platform           : Windows Server 2016 or Windows 10
-# Operating System   : 26200
-# Processor Detail   : 12th Gen Intel(R) Core(TM) i7-12700
-# CPU Frequency      : 2112 MHz
-# CPU Physical cores : 12
-# CPU Logical cores  : 20
-# Host memory        : 34088 MB
-# Swap memory        : 27052 MB
-# Total Virtual      : 61141 MB
-# Available Virtual  : 5026 MB
+# Start of session at: Fri Jan 23 16:22:22 2026
+# Process ID         : 429214
+# Current directory  : /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.runs/synth_1
+# Command line       : vivado -log blue_hd_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source blue_hd_top.tcl
+# Log file           : /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.runs/synth_1/blue_hd_top.vds
+# Journal file       : /home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.runs/synth_1/vivado.jou
+# Running On         : drlinux
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 22.04.5 LTS
+# Processor Detail   : Intel(R) Core(TM) i7-14700
+# CPU Frequency      : 5255.084 MHz
+# CPU Physical cores : 20
+# CPU Logical cores  : 28
+# Host memory        : 67046 MB
+# Swap memory        : 2147 MB
+# Total Virtual      : 69194 MB
+# Available Virtual  : 40842 MB
 #-----------------------------------------------------------
 source blue_hd_top.tcl -notrace

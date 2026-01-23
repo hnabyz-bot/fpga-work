@@ -1,0 +1,348 @@
+m255
+K4
+z2
+!s11f vlog 2024.3 2024.09, Sep 10 2024
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.sim/sim_1/behav/questa
+vbeh_vlog_ff_ce_clr_v8_4
+Z1 2../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/9e79/simulation/blk_mem_gen_v8_4.v
+Z2 !s110 1768976982
+!i10b 1
+!s100 TV08nVO6MXLj^69UEiJS_0
+I[SMY`i<4HmHCQ80bWWQi=2
+R0
+Z3 w1768543856
+Z4 8../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/9e79/simulation/blk_mem_gen_v8_4.v
+Z5 F../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/9e79/simulation/blk_mem_gen_v8_4.v
+!i122 31
+L0 193 17
+Z6 VDg1SIo80bB@j0V0VzS_@n1
+Z7 OL;L;2024.3;79
+r1
+!s85 0
+31
+Z8 !s108 1768976982.000000
+!s107 ../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/9e79/simulation/blk_mem_gen_v8_4.v|
+Z9 !s90 -64|-incr|-mfcu|-work|blk_mem_gen_v8_4_10|+incdir+../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/2271/hdl/src/verilog|+incdir+../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/3cbc|+incdir+../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/ec67/hdl|+incdir+../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/a848/hdl|+incdir+../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/434f/hdl|+incdir+../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/f0b6/hdl/verilog|+incdir+../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/0127/hdl/verilog|+incdir+../../../../xdaq_top.ip_user_files/ipstatic|+incdir+../../../../xdaq_top.ip_user_files/ipstatic/hdl/src/verilog|+incdir+../../../../xdaq_top.ip_user_files/ipstatic/hdl|+incdir+/home/holee/tools/xilinx/Vivado/2024.2/data/xilinx_vip/include|../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/9e79/simulation/blk_mem_gen_v8_4.v|
+!i113 0
+Z10 o-64 -mfcu -work blk_mem_gen_v8_4_10
+Z11 !s92 -64 -mfcu -work blk_mem_gen_v8_4_10 +incdir+../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/2271/hdl/src/verilog +incdir+../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/3cbc +incdir+../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/ec67/hdl +incdir+../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/a848/hdl +incdir+../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/434f/hdl +incdir+../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/f0b6/hdl/verilog +incdir+../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/0127/hdl/verilog +incdir+../../../../xdaq_top.ip_user_files/ipstatic +incdir+../../../../xdaq_top.ip_user_files/ipstatic/hdl/src/verilog +incdir+../../../../xdaq_top.ip_user_files/ipstatic/hdl +incdir+/home/holee/tools/xilinx/Vivado/2024.2/data/xilinx_vip/include
+Z12 tCvgOpt 0
+vbeh_vlog_ff_clr_v8_4
+R1
+R2
+!i10b 1
+!s100 4SE02@PYTlP[:Pb>;3oSZ0
+IQZhiccmoM@n9i@@gOA^GC2
+R0
+R3
+R4
+R5
+!i122 31
+L0 154 19
+R6
+R7
+r1
+!s85 0
+31
+R8
+Z13 !s107 ../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/9e79/simulation/blk_mem_gen_v8_4.v|
+R9
+!i113 0
+R10
+R11
+R12
+vbeh_vlog_ff_pre_v8_4
+R1
+R2
+!i10b 1
+!s100 <ZAFhdCT6nfP`;mdJPJlK3
+I45fiH`hUSj6gjB>dD62<Z1
+R0
+R3
+R4
+R5
+!i122 31
+L0 174 18
+R6
+R7
+r1
+!s85 0
+31
+R8
+R13
+R9
+!i113 0
+R10
+R11
+R12
+vbeh_vlog_muxf7_v8_4
+R1
+R2
+!i10b 1
+!s100 1F?z1C6B]bo]VLQ5495LS3
+I[gE7zKH?R>`@TBAkbLiA=2
+R0
+R3
+R4
+R5
+!i122 31
+L0 140 13
+R6
+R7
+r1
+!s85 0
+31
+R8
+R13
+R9
+!i113 0
+R10
+R11
+R12
+vblk_mem_axi_read_wrapper_beh_v8_4
+R1
+R2
+!i10b 1
+!s100 GIkg9ji8TGG>Q@eeVl8EU3
+I65R[6<8FzOB71FXP_h<882
+R0
+R3
+R4
+R5
+!i122 31
+L0 1315 222
+R6
+R7
+r1
+!s85 0
+31
+R8
+R13
+R9
+!i113 0
+R10
+R11
+R12
+vblk_mem_axi_regs_fwd_v8_4
+R1
+R2
+!i10b 1
+!s100 Df58ekod^hU84BGW_0DbS1
+I75:G9zY5G=na023McSe:X0
+R0
+R3
+R4
+R5
+!i122 31
+L0 1538 62
+R6
+R7
+r1
+!s85 0
+31
+R8
+R13
+R9
+!i113 0
+R10
+R11
+R12
+vblk_mem_axi_write_wrapper_beh_v8_4
+R1
+R2
+!i10b 1
+!s100 meAjI`in5^7da?7CefMi53
+IFMz4j>jaiU8PRULTlN3dY0
+R0
+R3
+R4
+R5
+!i122 31
+L0 1039 275
+R6
+R7
+r1
+!s85 0
+31
+R8
+R13
+R9
+!i113 0
+R10
+R11
+R12
+vblk_mem_gen_v8_4_10
+R1
+R2
+!i10b 1
+!s100 7_>55T:IJO31fCjEa>kXC0
+IY2z50nSTcSSCbECV_efSj2
+R0
+R3
+R4
+R5
+!i122 31
+L0 3457 1108
+R6
+R7
+r1
+!s85 0
+31
+R8
+R13
+R9
+!i113 0
+R10
+R11
+R12
+vblk_mem_gen_v8_4_10_mem_module
+R1
+R2
+!i10b 1
+!s100 kY03?5JfU:3SlH>@hW8al0
+ILoA;3EgY`cABTFcJ261N<1
+R0
+R3
+R4
+R5
+!i122 31
+L0 1996 1455
+R6
+R7
+r1
+!s85 0
+31
+R8
+R13
+R9
+!i113 0
+R10
+R11
+R12
+vblk_mem_gen_v8_4_10_output_stage
+R1
+R2
+!i10b 1
+!s100 f<I:2AEjfl2NZz1G0d8ni3
+I8^f=ZzaYgV@]c]1Z94K0Y1
+R0
+R3
+R4
+R5
+!i122 31
+L0 1608 295
+R6
+R7
+r1
+!s85 0
+31
+R8
+R13
+R9
+!i113 0
+R10
+R11
+R12
+vblk_mem_gen_v8_4_10_softecc_output_reg_stage
+R1
+R2
+!i10b 1
+!s100 >CELGo_gHC>kzaH@6agc20
+IaF4VD3?LiJSA]2>;L4BeL0
+R0
+R3
+R4
+R5
+!i122 31
+L0 1904 85
+R6
+R7
+r1
+!s85 0
+31
+R8
+R13
+R9
+!i113 0
+R10
+R11
+R12
+vread_netlist_v8_4
+R1
+R2
+!i10b 1
+!s100 JRoGdZ5NSd`IB0?V3jc`>0
+IWKNPQRI99^BDoEakGnllL2
+R0
+R3
+R4
+R5
+!i122 31
+L0 680 357
+R6
+R7
+r1
+!s85 0
+31
+R8
+R13
+R9
+!i113 0
+R10
+R11
+R12
+vSTATE_LOGIC_v8_4
+R1
+R2
+!i10b 1
+!s100 :RLIc1z=z8o?7ROo525871
+IIKA?b2n_fc9;T;^F04a;Z1
+R0
+R3
+R4
+R5
+!i122 31
+L0 118 21
+R6
+R7
+r1
+!s85 0
+31
+R8
+R13
+R9
+!i113 0
+R10
+R11
+R12
+n@s@t@a@t@e_@l@o@g@i@c_v8_4
+vwrite_netlist_v8_4
+R1
+R2
+!i10b 1
+!s100 dU>eR_1GN?DS?>^E>ceAE3
+IUfe>EcL5FBmlEfX2kWKlb2
+R0
+R3
+R4
+R5
+!i122 31
+L0 211 467
+R6
+R7
+r1
+!s85 0
+31
+R8
+R13
+R9
+!i113 0
+R10
+R11
+R12

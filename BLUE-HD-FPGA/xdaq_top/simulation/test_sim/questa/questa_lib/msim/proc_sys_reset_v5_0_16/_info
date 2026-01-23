@@ -1,0 +1,198 @@
+m255
+K4
+z2
+!s11e vcom 2024.3 2024.09, Sep 10 2024
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.sim/sim_1/behav/questa
+Elpf
+Z1 w1768543858
+Z2 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 35
+R0
+Z5 8../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/0831/hdl/proc_sys_reset_v5_0_vh_rfs.vhd
+Z6 F../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/0831/hdl/proc_sys_reset_v5_0_vh_rfs.vhd
+l0
+L802 1
+VGF=ia0od;?X9R9nCH5l500
+!s100 1D3j;f_6`z_?j2AzA>RRJ3
+Z7 OL;C;2024.3;79
+31
+Z8 !s110 1768976991
+!i10b 1
+Z9 !s108 1768976990.000000
+Z10 !s90 -64|-93|-work|proc_sys_reset_v5_0_16|../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/0831/hdl/proc_sys_reset_v5_0_vh_rfs.vhd|
+!s107 ../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/0831/hdl/proc_sys_reset_v5_0_vh_rfs.vhd|
+!i113 0
+Z11 o-64 -93 -work proc_sys_reset_v5_0_16
+Z12 tExplicit 1 CvgOpt 0
+Aimp
+Z13 DPx6 unisim 11 vcomponents 0 22 dhOaH0eAWD4azfjH[X5;U2
+Z14 DPx8 synopsys 10 attributes 0 22 iThS5<O8gHDP?YiMiccE>3
+Z15 DPx4 ieee 14 std_logic_misc 0 22 T3<OAQk@7zOVj;_ZQ8ClU2
+Z16 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z17 DEx14 lib_cdc_v1_0_3 8 cdc_sync 0 22 6Qd^5@4jm6EcD>=fTQ`RW0
+R2
+R3
+R4
+Z18 DEx4 work 3 lpf 0 22 GF=ia0od;?X9R9nCH5l500
+!i122 35
+l864
+Z19 L821 305
+Z20 VndcST9A_^k<9;558b1:2f2
+Z21 !s100 65cVjA4>b^`_<c[6cH?5I2
+R7
+31
+R8
+!i10b 1
+R9
+R10
+Z22 !s107 ../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/0831/hdl/proc_sys_reset_v5_0_vh_rfs.vhd|
+!i113 0
+R11
+R12
+Eproc_sys_reset
+R1
+R16
+R13
+R3
+R4
+!i122 35
+R0
+R5
+R6
+l0
+L1271 1
+Ve8o@SPn9@SLXQaDVRa:I23
+!s100 C<?goi7C4f[;zhI0?TJ6_2
+R7
+31
+R8
+!i10b 1
+R9
+R10
+R22
+!i113 0
+R11
+R12
+Aimp
+Z23 DEx22 proc_sys_reset_v5_0_16 12 sequence_psr 0 22 HV7DzjnceUE@2FE01^HJO0
+R2
+Z24 DEx22 proc_sys_reset_v5_0_16 3 lpf 0 22 GF=ia0od;?X9R9nCH5l500
+R16
+R13
+R3
+R4
+Z25 DEx4 work 14 proc_sys_reset 0 22 e8o@SPn9@SLXQaDVRa:I23
+!i122 35
+Z26 l1382
+Z27 L1330 320
+Z28 VCi8m11oDEnn_doa@@_KH^3
+Z29 !s100 `dcY]Q8>^?;=@3kJW0S[K0
+R7
+31
+R8
+!i10b 1
+R9
+R10
+R22
+!i113 0
+R11
+R12
+Esequence_psr
+R1
+R16
+R13
+R2
+R3
+R4
+!i122 35
+R0
+R5
+R6
+l0
+L289 1
+VHV7DzjnceUE@2FE01^HJO0
+!s100 ELeaKSzn[@z;SYb>Z0OAb2
+R7
+31
+R8
+!i10b 1
+R9
+R10
+R22
+!i113 0
+R11
+R12
+Aimp
+Z30 DEx22 proc_sys_reset_v5_0_16 7 upcnt_n 0 22 >^iLhS;JlQMm>g4Z<A2Kn1
+R16
+R13
+R2
+R3
+R4
+Z31 DEx4 work 12 sequence_psr 0 22 HV7DzjnceUE@2FE01^HJO0
+!i122 35
+l346
+Z32 L304 374
+Z33 V<``JD9`CcLbLKa6QfF=_g1
+Z34 !s100 lBTE`HK[HUNUONQzljEBO0
+R7
+31
+R8
+!i10b 1
+R9
+R10
+R22
+!i113 0
+R11
+R12
+Eupcnt_n
+R1
+R2
+R3
+R4
+!i122 35
+R0
+R5
+R6
+l0
+L110 1
+V>^iLhS;JlQMm>g4Z<A2Kn1
+!s100 c`eG<NXU8zm]WPPi6[MQS1
+R7
+31
+Z35 !s110 1768976990
+!i10b 1
+R9
+R10
+R22
+!i113 0
+R11
+R12
+Aimp
+R2
+R3
+R4
+Z36 DEx4 work 7 upcnt_n 0 22 >^iLhS;JlQMm>g4Z<A2Kn1
+!i122 35
+l132
+Z37 L126 27
+Z38 VnBnBVS6S]CALjUKf=9V=d0
+Z39 !s100 AF9;7S4@CbT^>g7?]C]eR3
+R7
+31
+R35
+!i10b 1
+R9
+R10
+R22
+!i113 0
+R11
+R12

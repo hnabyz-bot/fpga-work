@@ -1,0 +1,2 @@
+__design_bin_path=/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/simulation/questa
+opt_data_elab=/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.sim/sim_1/behav/questa/questa_lib/msim/xil_defaultlib/@_opt

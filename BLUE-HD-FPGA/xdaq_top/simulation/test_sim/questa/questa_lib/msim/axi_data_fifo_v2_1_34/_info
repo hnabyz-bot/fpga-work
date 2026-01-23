@@ -1,0 +1,155 @@
+m255
+K4
+z2
+!s11f vlog 2024.3 2024.09, Sep 10 2024
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/build/xdaq_top.sim/sim_1/behav/questa
+vaxi_data_fifo_v2_1_34_axi_data_fifo
+Z1 2../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/8894/hdl/axi_data_fifo_v2_1_vl_rfs.v
+Z2 !s110 1768976984
+!i10b 1
+!s100 5?=FhRbh8blNTkkZIX@[R0
+Ia1f`O2>IJMk`NNeNPWg393
+R0
+Z3 w1768543857
+Z4 8../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/8894/hdl/axi_data_fifo_v2_1_vl_rfs.v
+Z5 F../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/8894/hdl/axi_data_fifo_v2_1_vl_rfs.v
+!i122 31
+L0 1277 671
+Z6 VDg1SIo80bB@j0V0VzS_@n1
+Z7 OL;L;2024.3;79
+r1
+!s85 0
+31
+Z8 !s108 1768976984.000000
+!s107 ../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/8894/hdl/axi_data_fifo_v2_1_vl_rfs.v|
+Z9 !s90 -64|-incr|-mfcu|-work|axi_data_fifo_v2_1_34|+incdir+../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/2271/hdl/src/verilog|+incdir+../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/3cbc|+incdir+../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/ec67/hdl|+incdir+../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/a848/hdl|+incdir+../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/434f/hdl|+incdir+../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/f0b6/hdl/verilog|+incdir+../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/0127/hdl/verilog|+incdir+../../../../xdaq_top.ip_user_files/ipstatic|+incdir+../../../../xdaq_top.ip_user_files/ipstatic/hdl/src/verilog|+incdir+../../../../xdaq_top.ip_user_files/ipstatic/hdl|+incdir+/home/holee/tools/xilinx/Vivado/2024.2/data/xilinx_vip/include|../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/8894/hdl/axi_data_fifo_v2_1_vl_rfs.v|
+!i113 0
+Z10 o-64 -mfcu -work axi_data_fifo_v2_1_34
+Z11 !s92 -64 -mfcu -work axi_data_fifo_v2_1_34 +incdir+../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/2271/hdl/src/verilog +incdir+../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/3cbc +incdir+../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/ec67/hdl +incdir+../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/a848/hdl +incdir+../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/434f/hdl +incdir+../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/f0b6/hdl/verilog +incdir+../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/0127/hdl/verilog +incdir+../../../../xdaq_top.ip_user_files/ipstatic +incdir+../../../../xdaq_top.ip_user_files/ipstatic/hdl/src/verilog +incdir+../../../../xdaq_top.ip_user_files/ipstatic/hdl +incdir+/home/holee/tools/xilinx/Vivado/2024.2/data/xilinx_vip/include
+Z12 tCvgOpt 0
+vaxi_data_fifo_v2_1_34_axic_fifo
+R1
+R2
+!i10b 1
+!s100 EQzMNmYA=H6Om?MMHRMRO3
+IbYL6GM8PkX^d]VTCcFe=U0
+R0
+R3
+R4
+R5
+!i122 31
+L0 63 43
+R6
+R7
+r1
+!s85 0
+31
+R8
+Z13 !s107 ../../../../../simulation/mipi_rx_sim/mipi_csi2_rx/ipshared/8894/hdl/axi_data_fifo_v2_1_vl_rfs.v|
+R9
+!i113 0
+R10
+R11
+R12
+vaxi_data_fifo_v2_1_34_axic_reg_srl_fifo
+R1
+R2
+!i10b 1
+!s100 ceLHm]YW8]V8Y8@aKBKHa0
+IFc4JmGVC94`haIjTfAodL0
+R0
+R3
+R4
+R5
+!i122 31
+L0 885 185
+R6
+R7
+r1
+!s85 0
+31
+R8
+R13
+R9
+!i113 0
+R10
+R11
+R12
+vaxi_data_fifo_v2_1_34_axic_srl_fifo
+R1
+R2
+!i10b 1
+!s100 m<gbk18<2HSAnhDNWk3Nd2
+IHPO<nDzG>l6[?lQn;Q_cm1
+R0
+R3
+R4
+R5
+!i122 31
+L0 695 127
+R6
+R7
+r1
+!s85 0
+31
+R8
+R13
+R9
+!i113 0
+R10
+R11
+R12
+vaxi_data_fifo_v2_1_34_fifo_gen
+R1
+R2
+!i10b 1
+!s100 4>D^FghBmkIHbUX1Zegk<0
+Ic:GIicaY8kF:oTeHg9^6k1
+R0
+R3
+R4
+R5
+!i122 31
+L0 166 467
+R6
+R7
+r1
+!s85 0
+31
+R8
+R13
+R9
+!i113 0
+R10
+R11
+R12
+vaxi_data_fifo_v2_1_34_ndeep_srl
+R1
+R2
+!i10b 1
+!s100 fI_H61X5GFJ[lkb2ZPcl10
+IBa^I0zPG[6Tgn4QBT<m0n3
+R0
+R3
+R4
+R5
+!i122 31
+L0 1130 80
+R6
+R7
+r1
+!s85 0
+31
+R8
+R13
+R9
+!i113 0
+R10
+R11
+R12
