@@ -37,8 +37,8 @@ module blue_hd_top (
     // ROIC Driving Signals
     output  logic        ROIC_TP_SEL,
     output  logic        ROIC_SYNC,
+
     output  logic        ROIC_MCLK0,
-    // ROIC_MCLK1 not present in cyan_hd_top.xdc - verify if needed
     output  logic        ROIC_MCLK1,
 
     // ROIC SPI - changed from RF_SPI to ROIC_SPI per cyan board
@@ -1311,6 +1311,7 @@ module blue_hd_top (
 
     // TODO: Changed from RF_SPI_SDO to ROIC_SPI_SDO for cyan board
     assign s_roic_sdio = ROIC_SPI_SDO;
+    assign ROIC_SPI_SEN_N = s_rf_spi_sen;
 
     always_ff @(posedge s_clk_20mhz or posedge deser_reset) begin
         if (deser_reset) begin
