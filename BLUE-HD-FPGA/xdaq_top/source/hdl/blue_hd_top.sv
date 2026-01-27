@@ -46,7 +46,7 @@ module blue_hd_top (
     output  logic        ROIC_SPI_SCK,
     output  logic        ROIC_SPI_SDI,
     input   logic        ROIC_SPI_SDO,
-    output  logic        ROIC_SPI_SEN_N,
+    output  logic [TI_ROIC_CHANNELS-1:0]       ROIC_SPI_SEN_N,
 
     // SWITCH_SYNC not present in cyan_hd_top.xdc - verify if needed
     // output  logic        SWITCH_SYNC,
@@ -1311,7 +1311,8 @@ module blue_hd_top (
 
     // TODO: Changed from RF_SPI_SDO to ROIC_SPI_SDO for cyan board
     assign s_roic_sdio = ROIC_SPI_SDO;
-    assign ROIC_SPI_SEN_N = s_rf_spi_sen;
+    // Broadcast SPI chip enable to all ROIC channels
+    assign ROIC_SPI_SEN_N = {TI_ROIC_CHANNELS{s_rf_spi_sen}};
 
     always_ff @(posedge s_clk_20mhz or posedge deser_reset) begin
         if (deser_reset) begin
