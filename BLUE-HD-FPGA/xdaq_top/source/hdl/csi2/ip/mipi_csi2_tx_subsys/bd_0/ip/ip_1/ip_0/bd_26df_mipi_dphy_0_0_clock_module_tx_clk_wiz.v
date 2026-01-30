@@ -81,6 +81,7 @@ module bd_26df_mipi_dphy_0_0_clock_module_tx_clk_wiz
   // Input buffering
   //------------------------------------
 wire mmcm_clk_in_bd_26df_mipi_dphy_0_0_clock_module_tx;
+wire mmcm_clk_in_bd_26df_mipi_dphy_0_0_clock_module_tx_buf;
 wire clk_in2_bd_26df_mipi_dphy_0_0_clock_module_tx;
   BUFG clkin1_bufg
    (.O (mmcm_clk_in_bd_26df_mipi_dphy_0_0_clock_module_tx),

@@ -525,7 +525,6 @@ img_iface
  .vid_wc                (16'b0                   ), 
  .vid_di                (6'b0                    ), 
 
- //`else 
  .s_axis_aclk           (s_axis_aclk       ), 
  .axis_rst_n            (sensr_rst_n       ), 
  .s_axis_tready         (s_axis_tready     ), 
@@ -534,7 +533,7 @@ img_iface
  .s_axis_tdata          (s_axis_tdata_c      ), 
  .s_axis_tdest          (s_axis_tdest      ), 
  .s_axis_tuser          (s_axis_tuser      ), 
- //`endif                 
+
  .pkt_transfr_dn        (packet_tranfr_dn_sensr_clk_w),
  .gsp_fifo_empty        (gsp_fifo_empty    ), 
  .gsp_fifo_rd_data      (gsp_fifo_rd_data  ), 
@@ -616,7 +615,6 @@ ldf
 .ldf_rd_en	    (dfifo_rden   	  ), 
 .ldf_rd_data        (dfifo_rddata         ),  
 .send_periodic_patrn(send_periodic_patrn_w ),  
-.strm_fifo_under_run(/* OPEN */), 
 .packet_tranfr_dn   (packet_tranfr_dn_ppi_clk_w),  
 .active_lanes       (active_lanes_ppi_clk_w),  
 .cl_txclkactive     (cl_txclkactive       ),
@@ -631,25 +629,29 @@ ldf
 .dl0_forcetxstopmode(dl0_forcetxstopmode  ),  
 .dl0_enable         (dl0_enable           ),  
 .dl0_txskewcalhs    (dl0_txskewcalhs      ),  
-.dl1_txskewcalhs    (dl1_txskewcalhs      ),  
-.dl2_txskewcalhs    (dl2_txskewcalhs      ),  
-.dl3_txskewcalhs    (dl3_txskewcalhs      ),  
 .dl0_txreadyhs      (dl0_txreadyhs        ),  
 .dl1_txdatahs       (dl1_txdatahs         ),  
 .dl1_txrequesths    (dl1_txrequesths      ),  
 .dl1_txreadyhs      (dl1_txreadyhs        ),  
 .dl1_forcetxstopmode(dl1_forcetxstopmode  ),  
 .dl1_enable         (dl1_enable           ),  
+.dl1_txskewcalhs    (dl1_txskewcalhs      ),  
+ 
 .dl2_txdatahs       (dl2_txdatahs         ),  
 .dl2_txrequesths    (dl2_txrequesths      ),  
 .dl2_txreadyhs      (dl2_txreadyhs        ),  
 .dl2_forcetxstopmode(dl2_forcetxstopmode  ),  
 .dl2_enable         (dl2_enable           ),  
+.dl2_txskewcalhs    (dl2_txskewcalhs      ),  
+ 
 .dl3_txdatahs       (dl3_txdatahs         ),   
 .dl3_txrequesths    (dl3_txrequesths      ),   
 .dl3_txreadyhs      (dl3_txreadyhs        ),   
 .dl3_forcetxstopmode(dl3_forcetxstopmode  ),   
-.dl3_enable         (dl3_enable           )   
+.dl3_enable         (dl3_enable           ),   
+.dl3_txskewcalhs    (dl3_txskewcalhs      ), 
+ 
+.strm_fifo_under_run(/* OPEN */) 
 );
 
 
@@ -752,14 +754,17 @@ sync_blk
  .dl1_txreqesc                  ( dl1_txrequestesc          ),  
  .dl1_txulpsexit                ( dl1_txulpsexit            ),  
  .dl1_txulpsactivenot           ( dl1_ulpsactivenot         ),
+ 
  .dl2_txulpsesc                 ( dl2_txulpsesc             ),  
  .dl2_txreqesc                  ( dl2_txrequestesc          ),  
  .dl2_txulpsexit                ( dl2_txulpsexit            ),  
  .dl2_txulpsactivenot           ( dl2_ulpsactivenot         ),
+ 
  .dl3_txulpsesc                 ( dl3_txulpsesc             ),   
  .dl3_txreqesc                  ( dl3_txrequestesc          ),   
  .dl3_txulpsexit                ( dl3_txulpsexit            ),    
  .dl3_txulpsactivenot           ( dl3_ulpsactivenot         ),
+ 
  .cntlr_ready_indic_ppi_clk     (cntlr_ready_indic_ppi_clk_w),
  .master_reset_4dphy_axis_clk   (master_reset_4dphy_axis_clk_w),
  .master_reset_4dphy_core_clk   (master_reset_4dphy),

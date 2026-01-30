@@ -162,7 +162,6 @@ module bd_26df_mipi_dphy_0_0_core
        input                core_clk,
 
 
-
        input                core_rst,
        output               txclkesc_out,
        output               txbyteclkhs,
@@ -330,7 +329,6 @@ wire [C_DPHY_LANES-1:0] dl_lp_rxn;
  bd_26df_mipi_dphy_0_0_c1 inst
    (
        .core_clk(core_clk),
-
                                                        ////Data lane - 0 IOB signals
        .core_rst(core_rst),
        .txclkesc_out(txclkesc_out),

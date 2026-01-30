@@ -48,12 +48,12 @@
 
 
 // IP VLNV: xilinx.com:ip:axis_data_fifo:2.0
-// IP Revision: 16
+// IP Revision: 17
 
-(* X_CORE_INFO = "axis_data_fifo_v2_0_16_top,Vivado 2024.2.2" *)
-(* CHECK_LICENSE_TYPE = "axis_data_fifo_0,axis_data_fifo_v2_0_16_top,{}" *)
-(* CORE_GENERATION_INFO = "axis_data_fifo_0,axis_data_fifo_v2_0_16_top,{x_ipProduct=Vivado 2024.2.2,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=axis_data_fifo,x_ipVersion=2.0,x_ipCoreRevision=16,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_FAMILY=artix7,C_AXIS_TDATA_WIDTH=24,C_AXIS_TID_WIDTH=1,C_AXIS_TDEST_WIDTH=1,C_AXIS_TUSER_WIDTH=1,C_AXIS_SIGNAL_SET=0b00000000000000000000000000011111,C_FIFO_DEPTH=256,C_FIFO_MODE=1,C_IS_ACLK_ASYNC=1,C_SYNCHRONIZER_STAGE=3,C_ACLKEN_CONV_MODE=0,C_ECC_MODE=0,C_FIFO_MEMORY_TYPE=block,C_US\
-E_ADV_FEATURES=825765944,C_PROG_EMPTY_THRESH=5,C_PROG_FULL_THRESH=11}" *)
+(* X_CORE_INFO = "axis_data_fifo_v2_0_17_top,Vivado 2025.2" *)
+(* CHECK_LICENSE_TYPE = "axis_data_fifo_0,axis_data_fifo_v2_0_17_top,{}" *)
+(* CORE_GENERATION_INFO = "axis_data_fifo_0,axis_data_fifo_v2_0_17_top,{x_ipProduct=Vivado 2025.2,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=axis_data_fifo,x_ipVersion=2.0,x_ipCoreRevision=17,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_FAMILY=artix7,C_AXIS_TDATA_WIDTH=24,C_AXIS_TID_WIDTH=1,C_AXIS_TDEST_WIDTH=1,C_AXIS_TUSER_WIDTH=1,C_AXIS_SIGNAL_SET=0b00000000000000000000000000011111,C_FIFO_DEPTH=256,C_FIFO_MODE=1,C_IS_ACLK_ASYNC=1,C_SYNCHRONIZER_STAGE=3,C_ACLKEN_CONV_MODE=0,C_ECC_MODE=0,C_FIFO_MEMORY_TYPE=block,C_USE_\
+ADV_FEATURES=825765944,C_PROG_EMPTY_THRESH=5,C_PROG_FULL_THRESH=11}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module axis_data_fifo_0 (
   s_axis_aresetn,
@@ -118,7 +118,7 @@ output wire m_axis_tlast;
 output wire almost_empty;
 output wire almost_full;
 
-  axis_data_fifo_v2_0_16_top #(
+  axis_data_fifo_v2_0_17_top #(
     .C_FAMILY("artix7"),
     .C_AXIS_TDATA_WIDTH(24),
     .C_AXIS_TID_WIDTH(1),

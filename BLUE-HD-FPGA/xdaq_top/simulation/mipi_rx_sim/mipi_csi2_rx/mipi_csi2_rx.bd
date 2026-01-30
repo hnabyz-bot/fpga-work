@@ -6,7 +6,7 @@
       "name": "mipi_csi2_rx",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "None",
-      "tool_version": "2024.2.2",
+      "tool_version": "2025.2",
       "validated": "true"
     },
     "design_tree": {
@@ -175,10 +175,11 @@
     "components": {
       "axi_traffic_gen_0": {
         "vlnv": "xilinx.com:ip:axi_traffic_gen:3.0",
-        "ip_revision": "20",
+        "ip_revision": "22",
         "xci_name": "mipi_csi2_rx_axi_traffic_gen_0_0",
-        "xci_path": "ip/mipi_csi2_rx_axi_traffic_gen_0_0/mipi_csi2_rx_axi_traffic_gen_0_0.xci",
+        "xci_path": "ip\\mipi_csi2_rx_axi_traffic_gen_0_0_1\\mipi_csi2_rx_axi_traffic_gen_0_0.xci",
         "inst_hier_path": "axi_traffic_gen_0",
+        "has_run_ip_tcl": "true",
         "parameters": {
           "ATG_OPTIONS": {
             "value": "Custom"
@@ -234,6 +235,12 @@
         },
         "interface_ports": {
           "M_AXI_LITE_CH1": {
+            "bd_attributes": {
+              "TYPE": {
+                "value": "END_POINT",
+                "value_src": "auto"
+              }
+            },
             "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
             "mode": "Master",
             "address_space_ref": "Reg1",
@@ -255,10 +262,11 @@
       },
       "axi_traffic_gen_1": {
         "vlnv": "xilinx.com:ip:axi_traffic_gen:3.0",
-        "ip_revision": "20",
+        "ip_revision": "22",
         "xci_name": "mipi_csi2_rx_axi_traffic_gen_1_0",
-        "xci_path": "ip/mipi_csi2_rx_axi_traffic_gen_1_0/mipi_csi2_rx_axi_traffic_gen_1_0.xci",
+        "xci_path": "ip\\mipi_csi2_rx_axi_traffic_gen_1_0_1\\mipi_csi2_rx_axi_traffic_gen_1_0.xci",
         "inst_hier_path": "axi_traffic_gen_1",
+        "has_run_ip_tcl": "true",
         "parameters": {
           "ATG_OPTIONS": {
             "value": "Custom"
@@ -314,6 +322,12 @@
         },
         "interface_ports": {
           "M_AXI_LITE_CH1": {
+            "bd_attributes": {
+              "TYPE": {
+                "value": "END_POINT",
+                "value_src": "auto"
+              }
+            },
             "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
             "mode": "Master",
             "address_space_ref": "Reg1",
@@ -335,10 +349,11 @@
       },
       "clk_wiz_0": {
         "vlnv": "xilinx.com:ip:clk_wiz:6.0",
-        "ip_revision": "15",
+        "ip_revision": "17",
         "xci_name": "mipi_csi2_rx_clk_wiz_0_0",
-        "xci_path": "ip/mipi_csi2_rx_clk_wiz_0_0/mipi_csi2_rx_clk_wiz_0_0.xci",
+        "xci_path": "ip\\mipi_csi2_rx_clk_wiz_0_0_1\\mipi_csi2_rx_clk_wiz_0_0.xci",
         "inst_hier_path": "clk_wiz_0",
+        "has_run_ip_tcl": "true",
         "parameters": {
           "CLKOUT1_JITTER": {
             "value": "130.958"
@@ -419,10 +434,11 @@
       },
       "mipi_csi2_rx_subsyst_0": {
         "vlnv": "xilinx.com:ip:mipi_csi2_rx_subsystem:6.0",
-        "ip_revision": "4",
+        "ip_revision": "7",
         "xci_name": "mipi_csi2_rx_mipi_csi2_rx_subsyst_0_0",
-        "xci_path": "ip/mipi_csi2_rx_mipi_csi2_rx_subsyst_0_0/mipi_csi2_rx_mipi_csi2_rx_subsyst_0_0.xci",
+        "xci_path": "ip\\mipi_csi2_rx_mipi_csi2_rx_subsyst_0_0_1\\mipi_csi2_rx_mipi_csi2_rx_subsyst_0_0.xci",
         "inst_hier_path": "mipi_csi2_rx_subsyst_0",
+        "has_run_ip_tcl": "true",
         "parameters": {
           "CMN_INC_IIC": {
             "value": "false"
@@ -487,6 +503,12 @@
               "DATA_WIDTH": {
                 "value": "32"
               },
+              "NUM_READ_OUTSTANDING": {
+                "value": "1"
+              },
+              "NUM_WRITE_OUTSTANDING": {
+                "value": "1"
+              },
               "PROTOCOL": {
                 "value": "AXI4LITE"
               }
@@ -530,10 +552,11 @@
       },
       "proc_sys_reset_0": {
         "vlnv": "xilinx.com:ip:proc_sys_reset:5.0",
-        "ip_revision": "16",
+        "ip_revision": "17",
         "xci_name": "mipi_csi2_rx_proc_sys_reset_0_0",
-        "xci_path": "ip/mipi_csi2_rx_proc_sys_reset_0_0/mipi_csi2_rx_proc_sys_reset_0_0.xci",
+        "xci_path": "ip\\mipi_csi2_rx_proc_sys_reset_0_0_1\\mipi_csi2_rx_proc_sys_reset_0_0.xci",
         "inst_hier_path": "proc_sys_reset_0",
+        "has_run_ip_tcl": "true",
         "parameters": {
           "C_NUM_PERP_ARESETN": {
             "value": "1"
@@ -542,10 +565,11 @@
       },
       "rst_clk_wiz_0_100M": {
         "vlnv": "xilinx.com:ip:proc_sys_reset:5.0",
-        "ip_revision": "16",
+        "ip_revision": "17",
         "xci_name": "mipi_csi2_rx_rst_clk_wiz_0_100M_0",
-        "xci_path": "ip/mipi_csi2_rx_rst_clk_wiz_0_100M_0/mipi_csi2_rx_rst_clk_wiz_0_100M_0.xci",
+        "xci_path": "ip\\mipi_csi2_rx_rst_clk_wiz_0_100M_0_1\\mipi_csi2_rx_rst_clk_wiz_0_100M_0.xci",
         "inst_hier_path": "rst_clk_wiz_0_100M",
+        "has_run_ip_tcl": "true",
         "parameters": {
           "C_NUM_PERP_ARESETN": {
             "value": "1"
@@ -554,10 +578,11 @@
       },
       "smartconnect_0": {
         "vlnv": "xilinx.com:ip:smartconnect:1.0",
-        "ip_revision": "26",
+        "ip_revision": "28",
         "xci_name": "mipi_csi2_rx_smartconnect_0_0",
-        "xci_path": "ip/mipi_csi2_rx_smartconnect_0_0/mipi_csi2_rx_smartconnect_0_0.xci",
+        "xci_path": "ip\\mipi_csi2_rx_smartconnect_0_0_1\\mipi_csi2_rx_smartconnect_0_0.xci",
         "inst_hier_path": "smartconnect_0",
+        "has_run_ip_tcl": "true",
         "parameters": {
           "HAS_ARESETN": {
             "value": "1"
@@ -581,7 +606,17 @@
             },
             "bridges": [
               "M00_AXI"
-            ]
+            ],
+            "bd_attributes": {
+              "BRIDGES": {
+                "value": "M00_AXI",
+                "value_src": "auto"
+              },
+              "TYPE": {
+                "value": "interior",
+                "value_src": "default"
+              }
+            }
           },
           "S01_AXI": {
             "mode": "Slave",
@@ -597,7 +632,17 @@
             },
             "bridges": [
               "M00_AXI"
-            ]
+            ],
+            "bd_attributes": {
+              "BRIDGES": {
+                "value": "M00_AXI",
+                "value_src": "auto"
+              },
+              "TYPE": {
+                "value": "interior",
+                "value_src": "default"
+              }
+            }
           },
           "M00_AXI": {
             "mode": "Master",
@@ -622,16 +667,23 @@
               "WUSER_BITS_PER_BYTE": {
                 "value": "0"
               }
+            },
+            "bd_attributes": {
+              "TYPE": {
+                "value": "interior",
+                "value_src": "default"
+              }
             }
           }
         }
       },
       "xlconcat_1": {
         "vlnv": "xilinx.com:ip:xlconcat:2.1",
-        "ip_revision": "6",
+        "ip_revision": "7",
         "xci_name": "mipi_csi2_rx_xlconcat_1_0",
-        "xci_path": "ip/mipi_csi2_rx_xlconcat_1_0/mipi_csi2_rx_xlconcat_1_0.xci",
+        "xci_path": "ip\\mipi_csi2_rx_xlconcat_1_0_1\\mipi_csi2_rx_xlconcat_1_0.xci",
         "inst_hier_path": "xlconcat_1",
+        "has_run_ip_tcl": "true",
         "parameters": {
           "IN1_WIDTH": {
             "value": "32"
@@ -655,10 +707,11 @@
       },
       "xlconstant_0": {
         "vlnv": "xilinx.com:ip:xlconstant:1.1",
-        "ip_revision": "9",
+        "ip_revision": "10",
         "xci_name": "mipi_csi2_rx_xlconstant_0_0",
-        "xci_path": "ip/mipi_csi2_rx_xlconstant_0_0/mipi_csi2_rx_xlconstant_0_0.xci",
+        "xci_path": "ip\\mipi_csi2_rx_xlconstant_0_0_1\\mipi_csi2_rx_xlconstant_0_0.xci",
         "inst_hier_path": "xlconstant_0",
+        "has_run_ip_tcl": "true",
         "parameters": {
           "CONST_VAL": {
             "value": "1"
@@ -732,18 +785,18 @@
       "clk_wiz_0_clk_out1": {
         "ports": [
           "clk_wiz_0/clk_out1",
-          "rst_clk_wiz_0_100M/slowest_sync_clk",
           "axi_traffic_gen_0/s_axi_aclk",
           "axi_traffic_gen_1/s_axi_aclk",
           "mipi_csi2_rx_subsyst_0/lite_aclk",
+          "rst_clk_wiz_0_100M/slowest_sync_clk",
           "smartconnect_0/aclk"
         ]
       },
       "clk_wiz_0_clk_out4": {
         "ports": [
           "clk_wiz_0/clk_out3",
-          "proc_sys_reset_0/slowest_sync_clk",
-          "mipi_csi2_rx_subsyst_0/video_aclk"
+          "mipi_csi2_rx_subsyst_0/video_aclk",
+          "proc_sys_reset_0/slowest_sync_clk"
         ]
       },
       "clk_wiz_0_locked": {

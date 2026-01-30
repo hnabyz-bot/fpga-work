@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Jan 16 15:11:00 2026" VIVADOVERSION="2024.2.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Jan 26 21:12:35 2026" VIVADOVERSION="2025.2">
 
   <SYSTEMINFO ARCH="artix7" DEVICE="7a35t" NAME="mipi_csi2_rx" PACKAGE="fgg484" SPEEDGRADE="-1"/>
 
@@ -124,7 +124,7 @@
   </EXTERNALINTERFACES>
 
   <MODULES>
-    <MODULE COREREVISION="20" FULLNAME="/axi_traffic_gen_0" HWVERSION="3.0" INSTANCE="axi_traffic_gen_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="axi_traffic_gen" VLNV="xilinx.com:ip:axi_traffic_gen:3.0">
+    <MODULE COREREVISION="22" FULLNAME="/axi_traffic_gen_0" HWVERSION="3.0" INSTANCE="axi_traffic_gen_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="axi_traffic_gen" VLNV="xilinx.com:ip:axi_traffic_gen:3.0">
       <DOCUMENTS>
         <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=axi_traffic_gen;v=v3_0;d=pg125-axi-traffic-gen.pdf"/>
       </DOCUMENTS>
@@ -439,7 +439,7 @@
         <PERIPHERAL INSTANCE="mipi_csi2_rx_subsyst_0"/>
       </PERIPHERALS>
     </MODULE>
-    <MODULE COREREVISION="20" FULLNAME="/axi_traffic_gen_1" HWVERSION="3.0" INSTANCE="axi_traffic_gen_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="axi_traffic_gen" VLNV="xilinx.com:ip:axi_traffic_gen:3.0">
+    <MODULE COREREVISION="22" FULLNAME="/axi_traffic_gen_1" HWVERSION="3.0" INSTANCE="axi_traffic_gen_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="axi_traffic_gen" VLNV="xilinx.com:ip:axi_traffic_gen:3.0">
       <DOCUMENTS>
         <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=axi_traffic_gen;v=v3_0;d=pg125-axi-traffic-gen.pdf"/>
       </DOCUMENTS>
@@ -754,7 +754,7 @@
         <PERIPHERAL INSTANCE="mipi_csi2_rx_subsyst_0"/>
       </PERIPHERALS>
     </MODULE>
-    <MODULE COREREVISION="15" FULLNAME="/clk_wiz_0" HWVERSION="6.0" INSTANCE="clk_wiz_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="clk_wiz" VLNV="xilinx.com:ip:clk_wiz:6.0">
+    <MODULE COREREVISION="17" FULLNAME="/clk_wiz_0" HWVERSION="6.0" INSTANCE="clk_wiz_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="clk_wiz" VLNV="xilinx.com:ip:clk_wiz:6.0">
       <DOCUMENTS>
         <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=clk_wiz;v=v6_0;d=pg065-clk-wiz.pdf"/>
       </DOCUMENTS>
@@ -1341,10 +1341,10 @@
         </PORT>
         <PORT CLKFREQUENCY="100000000" DIR="O" NAME="clk_out1" SIGIS="clk" SIGNAME="clk_wiz_0_clk_out1">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="rst_clk_wiz_0_100M" PORT="slowest_sync_clk"/>
             <CONNECTION INSTANCE="axi_traffic_gen_0" PORT="s_axi_aclk"/>
             <CONNECTION INSTANCE="axi_traffic_gen_1" PORT="s_axi_aclk"/>
             <CONNECTION INSTANCE="mipi_csi2_rx_subsyst_0" PORT="lite_aclk"/>
+            <CONNECTION INSTANCE="rst_clk_wiz_0_100M" PORT="slowest_sync_clk"/>
             <CONNECTION INSTANCE="smartconnect_0" PORT="aclk"/>
           </CONNECTIONS>
         </PORT>
@@ -1355,8 +1355,8 @@
         </PORT>
         <PORT CLKFREQUENCY="100000000" DIR="O" NAME="clk_out3" SIGIS="clk" SIGNAME="clk_wiz_0_clk_out3">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="proc_sys_reset_0" PORT="slowest_sync_clk"/>
             <CONNECTION INSTANCE="mipi_csi2_rx_subsyst_0" PORT="video_aclk"/>
+            <CONNECTION INSTANCE="proc_sys_reset_0" PORT="slowest_sync_clk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="locked" SIGIS="undef" SIGNAME="clk_wiz_0_locked">
@@ -1372,7 +1372,7 @@
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
-    <MODULE BD="mipi_csi2_rx_mipi_csi2_rx_subsyst_0_0" BDTYPE="SBD" COREREVISION="4" DRIVERMODE="MIXED" FULLNAME="/mipi_csi2_rx_subsyst_0" HWVERSION="6.0" INSTANCE="mipi_csi2_rx_subsyst_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="mipi_csi2_rx_subsystem" SIM_BD="mipi_csi2_rx_mipi_csi2_rx_subsyst_0_0" VLNV="xilinx.com:ip:mipi_csi2_rx_subsystem:6.0">
+    <MODULE BD="mipi_csi2_rx_mipi_csi2_rx_subsyst_0_0" BDTYPE="SBD" COREREVISION="7" DRIVERMODE="MIXED" FULLNAME="/mipi_csi2_rx_subsyst_0" HWVERSION="6.0" INSTANCE="mipi_csi2_rx_subsyst_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="mipi_csi2_rx_subsystem" SIM_BD="mipi_csi2_rx_mipi_csi2_rx_subsyst_0_0" VLNV="xilinx.com:ip:mipi_csi2_rx_subsystem:6.0">
       <DOCUMENTS>
         <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=mipi_csi2_rx_subsystem;v=v6_0;d=pg232-mipi-csi2-rx.pdf"/>
       </DOCUMENTS>
@@ -1403,6 +1403,7 @@
         <PARAMETER NAME="C_CLK_IO_SWAP" VALUE="false"/>
         <PARAMETER NAME="C_CLK_LANE_IO_POSITION" VALUE="0"/>
         <PARAMETER NAME="C_CLK_LP_IO_SWAP" VALUE="false"/>
+        <PARAMETER NAME="C_CLOCK_MASK" VALUE="39"/>
         <PARAMETER NAME="C_CSI2RX_DBG" VALUE="0"/>
         <PARAMETER NAME="C_CSI_EN_ACTIVELANES" VALUE="false"/>
         <PARAMETER NAME="C_CSI_EN_CRC" VALUE="false"/>
@@ -1412,6 +1413,8 @@
         <PARAMETER NAME="C_DATA_LANE1_IO_POSITION" VALUE="4"/>
         <PARAMETER NAME="C_DATA_LANE2_IO_POSITION" VALUE="6"/>
         <PARAMETER NAME="C_DATA_LANE3_IO_POSITION" VALUE="8"/>
+        <PARAMETER NAME="C_DBG_PORTS_ON" VALUE="false"/>
+        <PARAMETER NAME="C_DEBUG_BUS" VALUE="false"/>
         <PARAMETER NAME="C_DL0_IO_SWAP" VALUE="false"/>
         <PARAMETER NAME="C_DL0_LP_IO_SWAP" VALUE="false"/>
         <PARAMETER NAME="C_DL1_IO_SWAP" VALUE="false"/>
@@ -1458,12 +1461,14 @@
         <PARAMETER NAME="C_IS_KSB" VALUE="false"/>
         <PARAMETER NAME="C_IS_VERSAL" VALUE="false"/>
         <PARAMETER NAME="C_LPRX_DISABLE_EXTPORT" VALUE="0"/>
+        <PARAMETER NAME="C_MASTER_RIU" VALUE="true"/>
         <PARAMETER NAME="C_MIPI_SLV_INT" VALUE="0"/>
         <PARAMETER NAME="C_OOC_VID_CLK" VALUE="6.666"/>
         <PARAMETER NAME="C_PHY_MODE" VALUE="DPHY"/>
         <PARAMETER NAME="C_RCVE_ALT_DESKEW_SEQ" VALUE="false"/>
         <PARAMETER NAME="C_RCVE_DESKEW_SEQ" VALUE="false"/>
         <PARAMETER NAME="C_RCVE_PREAMBLE_SEQ" VALUE="false"/>
+        <PARAMETER NAME="C_SEP_RIU" VALUE="false"/>
         <PARAMETER NAME="C_SHARE_IDLYCTRL" VALUE="false"/>
         <PARAMETER NAME="C_SPRT_ISP_BRIDGE" VALUE="false"/>
         <PARAMETER NAME="C_STRETCH_LINE_RATE" VALUE="3500"/>
@@ -1599,7 +1604,6 @@
             <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_out2"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="frame_rcvd_pulse_out" SIGIS="undef"/>
         <PORT CLKFREQUENCY="100000000" DIR="I" NAME="lite_aclk" SIGIS="clk" SIGNAME="clk_wiz_0_clk_out1">
           <CONNECTIONS>
             <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_out1"/>
@@ -1789,7 +1793,7 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="16" FULLNAME="/proc_sys_reset_0" HWVERSION="5.0" INSTANCE="proc_sys_reset_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="proc_sys_reset" VLNV="xilinx.com:ip:proc_sys_reset:5.0">
+    <MODULE COREREVISION="17" FULLNAME="/proc_sys_reset_0" HWVERSION="5.0" INSTANCE="proc_sys_reset_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="proc_sys_reset" VLNV="xilinx.com:ip:proc_sys_reset:5.0">
       <DOCUMENTS>
         <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=proc_sys_reset;v=v5_0;d=pg164-proc-sys-reset.pdf"/>
       </DOCUMENTS>
@@ -1834,7 +1838,7 @@
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
-    <MODULE COREREVISION="16" FULLNAME="/rst_clk_wiz_0_100M" HWVERSION="5.0" INSTANCE="rst_clk_wiz_0_100M" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="proc_sys_reset" VLNV="xilinx.com:ip:proc_sys_reset:5.0">
+    <MODULE COREREVISION="17" FULLNAME="/rst_clk_wiz_0_100M" HWVERSION="5.0" INSTANCE="rst_clk_wiz_0_100M" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="proc_sys_reset" VLNV="xilinx.com:ip:proc_sys_reset:5.0">
       <DOCUMENTS>
         <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=proc_sys_reset;v=v5_0;d=pg164-proc-sys-reset.pdf"/>
       </DOCUMENTS>
@@ -1888,7 +1892,7 @@
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
-    <MODULE BD="mipi_csi2_rx_smartconnect_0_0" BDTYPE="SBD" COREREVISION="26" DRIVERMODE="CORE" FULLNAME="/smartconnect_0" HWVERSION="1.0" INSTANCE="smartconnect_0" IPTYPE="BUS" IS_ENABLE="1" MODCLASS="BUS" MODTYPE="smartconnect" SIM_BD="mipi_csi2_rx_smartconnect_0_0" VLNV="xilinx.com:ip:smartconnect:1.0">
+    <MODULE BD="mipi_csi2_rx_smartconnect_0_0" BDTYPE="SBD" COREREVISION="28" DRIVERMODE="CORE" FULLNAME="/smartconnect_0" HWVERSION="1.0" INSTANCE="smartconnect_0" IPTYPE="BUS" IS_ENABLE="1" MODCLASS="BUS" MODTYPE="smartconnect" SIM_BD="mipi_csi2_rx_smartconnect_0_0" VLNV="xilinx.com:ip:smartconnect:1.0">
       <DOCUMENTS>
         <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=smartconnect;v=v1_0;d=pg247-smartconnect.pdf"/>
       </DOCUMENTS>
@@ -1901,6 +1905,7 @@
         <PARAMETER NAME="NUM_CLKS" VALUE="1"/>
         <PARAMETER NAME="NUM_MI" VALUE="1"/>
         <PARAMETER NAME="NUM_SI" VALUE="2"/>
+        <PARAMETER NAME="STRATEGY" VALUE="AUTOMATIC"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
       </PARAMETERS>
       <PORTS>
@@ -2353,7 +2358,7 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="6" FULLNAME="/xlconcat_1" HWVERSION="2.1" INSTANCE="xlconcat_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlconcat" VLNV="xilinx.com:ip:xlconcat:2.1">
+    <MODULE COREREVISION="7" FULLNAME="/xlconcat_1" HWVERSION="2.1" INSTANCE="xlconcat_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlconcat" VLNV="xilinx.com:ip:xlconcat:2.1">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="IN0_WIDTH" VALUE="1"/>
@@ -2503,7 +2508,7 @@
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
-    <MODULE COREREVISION="9" FULLNAME="/xlconstant_0" HWVERSION="1.1" INSTANCE="xlconstant_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlconstant" VLNV="xilinx.com:ip:xlconstant:1.1">
+    <MODULE COREREVISION="10" FULLNAME="/xlconstant_0" HWVERSION="1.1" INSTANCE="xlconstant_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlconstant" VLNV="xilinx.com:ip:xlconstant:1.1">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="CONST_VAL" VALUE="0x1"/>

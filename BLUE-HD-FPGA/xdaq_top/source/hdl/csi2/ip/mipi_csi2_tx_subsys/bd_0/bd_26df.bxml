@@ -2,19 +2,20 @@
 <Root MajorVersion="0" MinorVersion="43">
   <CompositeFile CompositeFileTopName="bd_26df" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1768543852"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1768543852"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1768543852"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1768543852"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1769493083"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1769493083"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1769493083"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1769493083"/>
+    <Generation Name="INSTANTIATION_TEMPLATE" State="GENERATED" Timestamp="1769493083"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
-      <File Name="synth/bd_26df.v" Type="Verilog">
+      <File Name="synth\bd_26df.v" Type="Verilog">
         <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
         <UsedIn Val="IMPLEMENTATION"/>
         <ProcessingOrder Val="NORMAL"/>
       </File>
-      <File Name="sim/bd_26df.v" Type="Verilog">
+      <File Name="sim\bd_26df.v" Type="Verilog">
         <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SIMULATION"/>
@@ -28,19 +29,19 @@
         <UsedIn Val="OUT_OF_CONTEXT"/>
         <ProcessingOrder Val="NORMAL"/>
       </File>
-      <File Name="hw_handoff/mipi_csi2_tx_subsys.hwh" Type="HwHandoff">
+      <File Name="hw_handoff\mipi_csi2_tx_subsys.hwh" Type="HwHandoff">
         <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="HW_HANDOFF"/>
         <ProcessingOrder Val="NORMAL"/>
       </File>
-      <File Name="synth/mipi_csi2_tx_subsys.hwdef">
+      <File Name="synth\mipi_csi2_tx_subsys.hwdef">
         <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="HW_HANDOFF"/>
         <ProcessingOrder Val="NORMAL"/>
       </File>
-      <File Name="sim/bd_26df.protoinst">
+      <File Name="sim\bd_26df.protoinst">
         <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SIMULATION"/>

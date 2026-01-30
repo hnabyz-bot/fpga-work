@@ -48,7 +48,7 @@
 
 
 // IP VLNV: xilinx.com:ip:dist_mem_gen:8.0
-// IP Revision: 16
+// IP Revision: 17
 
 `timescale 1ns/1ps
 
@@ -69,7 +69,7 @@ input wire clk;
 input wire we;
 output wire [51 : 0] dpo;
 
-  dist_mem_gen_v8_0_16 #(
+  dist_mem_gen_v8_0_17 #(
     .C_FAMILY("artix7"),
     .C_ADDR_WIDTH(8),
     .C_DEFAULT_DATA("0"),

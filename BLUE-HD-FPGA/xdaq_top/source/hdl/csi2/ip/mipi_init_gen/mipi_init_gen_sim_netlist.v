@@ -1,11 +1,11 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2024.2.2 (win64) Build 6060944 Thu Mar 06 19:10:01 MST 2025
-// Date        : Mon Jan 19 17:14:31 2026
+// Tool Version: Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+// Date        : Tue Jan 27 14:12:21 2026
 // Host        : work-dev running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim -rename_top mipi_init_gen -prefix
-//               mipi_init_gen_ mipi_init_gen_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim
+//               d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/mipi_init_gen/mipi_init_gen_sim_netlist.v
 // Design      : mipi_init_gen
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -13,8 +13,504 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* dont_touch = "true" *) 
-module mipi_init_gen_axi_traffic_gen_v3_0_20_asynch_rst_ff
+(* CHECK_LICENSE_TYPE = "mipi_init_gen,axi_traffic_gen_v3_0_22_top,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "axi_traffic_gen_v3_0_22_top,Vivado 2025.2" *) 
+(* NotValidForBitStream *)
+module mipi_init_gen
+   (s_axi_aclk,
+    s_axi_aresetn,
+    m_axi_lite_ch1_awaddr,
+    m_axi_lite_ch1_awprot,
+    m_axi_lite_ch1_awvalid,
+    m_axi_lite_ch1_awready,
+    m_axi_lite_ch1_wdata,
+    m_axi_lite_ch1_wstrb,
+    m_axi_lite_ch1_wvalid,
+    m_axi_lite_ch1_wready,
+    m_axi_lite_ch1_bresp,
+    m_axi_lite_ch1_bvalid,
+    m_axi_lite_ch1_bready,
+    m_axi_lite_ch1_araddr,
+    m_axi_lite_ch1_arvalid,
+    m_axi_lite_ch1_arready,
+    m_axi_lite_ch1_rdata,
+    m_axi_lite_ch1_rvalid,
+    m_axi_lite_ch1_rresp,
+    m_axi_lite_ch1_rready,
+    done,
+    status);
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clock CLK" *) (* X_INTERFACE_MODE = "slave" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clock, ASSOCIATED_BUSIF S_AXI:M_AXI:M_AXIS_MASTER:S_AXIS_MASTER:M_AXIS_SLAVE:S_AXIS_SLAVE:M_AXI_LITE_CH1:M_AXI_LITE_CH2:M_AXI_LITE_CH3:M_AXI_LITE_CH4:M_AXI_LITE_CH5, ASSOCIATED_RESET s_axi_aresetn, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, INSERT_VIP 0" *) input s_axi_aclk;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 reset RST" *) (* X_INTERFACE_MODE = "slave" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME reset, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input s_axi_aresetn;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_LITE_CH1 AWADDR" *) (* X_INTERFACE_MODE = "master" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME M_AXI_LITE_CH1, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 32, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 1, PHASE 0.0, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *) output [31:0]m_axi_lite_ch1_awaddr;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_LITE_CH1 AWPROT" *) output [2:0]m_axi_lite_ch1_awprot;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_LITE_CH1 AWVALID" *) output m_axi_lite_ch1_awvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_LITE_CH1 AWREADY" *) input m_axi_lite_ch1_awready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_LITE_CH1 WDATA" *) output [31:0]m_axi_lite_ch1_wdata;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_LITE_CH1 WSTRB" *) output [3:0]m_axi_lite_ch1_wstrb;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_LITE_CH1 WVALID" *) output m_axi_lite_ch1_wvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_LITE_CH1 WREADY" *) input m_axi_lite_ch1_wready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_LITE_CH1 BRESP" *) input [1:0]m_axi_lite_ch1_bresp;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_LITE_CH1 BVALID" *) input m_axi_lite_ch1_bvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_LITE_CH1 BREADY" *) output m_axi_lite_ch1_bready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_LITE_CH1 ARADDR" *) output [31:0]m_axi_lite_ch1_araddr;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_LITE_CH1 ARVALID" *) output m_axi_lite_ch1_arvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_LITE_CH1 ARREADY" *) input m_axi_lite_ch1_arready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_LITE_CH1 RDATA" *) input [31:0]m_axi_lite_ch1_rdata;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_LITE_CH1 RVALID" *) input m_axi_lite_ch1_rvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_LITE_CH1 RRESP" *) input [1:0]m_axi_lite_ch1_rresp;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_LITE_CH1 RREADY" *) output m_axi_lite_ch1_rready;
+  output done;
+  output [31:0]status;
+
+  wire \<const0> ;
+  wire \<const1> ;
+  wire done;
+  wire [31:0]m_axi_lite_ch1_araddr;
+  wire m_axi_lite_ch1_arready;
+  wire m_axi_lite_ch1_arvalid;
+  wire [31:0]m_axi_lite_ch1_awaddr;
+  wire m_axi_lite_ch1_awready;
+  wire m_axi_lite_ch1_awvalid;
+  wire m_axi_lite_ch1_bready;
+  wire [1:0]m_axi_lite_ch1_bresp;
+  wire m_axi_lite_ch1_bvalid;
+  wire [31:0]m_axi_lite_ch1_rdata;
+  wire m_axi_lite_ch1_rready;
+  wire [1:0]m_axi_lite_ch1_rresp;
+  wire m_axi_lite_ch1_rvalid;
+  wire [31:0]m_axi_lite_ch1_wdata;
+  wire m_axi_lite_ch1_wready;
+  wire m_axi_lite_ch1_wvalid;
+  wire s_axi_aclk;
+  wire s_axi_aresetn;
+  wire [31:0]\^status ;
+  wire NLW_inst_err_out_UNCONNECTED;
+  wire NLW_inst_irq_out_UNCONNECTED;
+  wire NLW_inst_m_axi_arvalid_UNCONNECTED;
+  wire NLW_inst_m_axi_awvalid_UNCONNECTED;
+  wire NLW_inst_m_axi_bready_UNCONNECTED;
+  wire NLW_inst_m_axi_lite_ch2_arvalid_UNCONNECTED;
+  wire NLW_inst_m_axi_lite_ch2_awvalid_UNCONNECTED;
+  wire NLW_inst_m_axi_lite_ch2_bready_UNCONNECTED;
+  wire NLW_inst_m_axi_lite_ch2_rready_UNCONNECTED;
+  wire NLW_inst_m_axi_lite_ch2_wvalid_UNCONNECTED;
+  wire NLW_inst_m_axi_lite_ch3_arvalid_UNCONNECTED;
+  wire NLW_inst_m_axi_lite_ch3_awvalid_UNCONNECTED;
+  wire NLW_inst_m_axi_lite_ch3_bready_UNCONNECTED;
+  wire NLW_inst_m_axi_lite_ch3_rready_UNCONNECTED;
+  wire NLW_inst_m_axi_lite_ch3_wvalid_UNCONNECTED;
+  wire NLW_inst_m_axi_lite_ch4_arvalid_UNCONNECTED;
+  wire NLW_inst_m_axi_lite_ch4_awvalid_UNCONNECTED;
+  wire NLW_inst_m_axi_lite_ch4_bready_UNCONNECTED;
+  wire NLW_inst_m_axi_lite_ch4_rready_UNCONNECTED;
+  wire NLW_inst_m_axi_lite_ch4_wvalid_UNCONNECTED;
+  wire NLW_inst_m_axi_lite_ch5_arvalid_UNCONNECTED;
+  wire NLW_inst_m_axi_lite_ch5_awvalid_UNCONNECTED;
+  wire NLW_inst_m_axi_lite_ch5_bready_UNCONNECTED;
+  wire NLW_inst_m_axi_lite_ch5_rready_UNCONNECTED;
+  wire NLW_inst_m_axi_lite_ch5_wvalid_UNCONNECTED;
+  wire NLW_inst_m_axi_rready_UNCONNECTED;
+  wire NLW_inst_m_axi_wlast_UNCONNECTED;
+  wire NLW_inst_m_axi_wvalid_UNCONNECTED;
+  wire NLW_inst_m_axis_1_tlast_UNCONNECTED;
+  wire NLW_inst_m_axis_1_tvalid_UNCONNECTED;
+  wire NLW_inst_m_axis_2_tlast_UNCONNECTED;
+  wire NLW_inst_m_axis_2_tvalid_UNCONNECTED;
+  wire NLW_inst_s_axi_arready_UNCONNECTED;
+  wire NLW_inst_s_axi_awready_UNCONNECTED;
+  wire NLW_inst_s_axi_bvalid_UNCONNECTED;
+  wire NLW_inst_s_axi_rlast_UNCONNECTED;
+  wire NLW_inst_s_axi_rvalid_UNCONNECTED;
+  wire NLW_inst_s_axi_wready_UNCONNECTED;
+  wire NLW_inst_s_axis_1_tready_UNCONNECTED;
+  wire NLW_inst_s_axis_2_tready_UNCONNECTED;
+  wire [15:0]NLW_inst_axis_err_count_UNCONNECTED;
+  wire [31:0]NLW_inst_m_axi_araddr_UNCONNECTED;
+  wire [1:0]NLW_inst_m_axi_arburst_UNCONNECTED;
+  wire [3:0]NLW_inst_m_axi_arcache_UNCONNECTED;
+  wire [0:0]NLW_inst_m_axi_arid_UNCONNECTED;
+  wire [7:0]NLW_inst_m_axi_arlen_UNCONNECTED;
+  wire [0:0]NLW_inst_m_axi_arlock_UNCONNECTED;
+  wire [2:0]NLW_inst_m_axi_arprot_UNCONNECTED;
+  wire [3:0]NLW_inst_m_axi_arqos_UNCONNECTED;
+  wire [2:0]NLW_inst_m_axi_arsize_UNCONNECTED;
+  wire [7:0]NLW_inst_m_axi_aruser_UNCONNECTED;
+  wire [31:0]NLW_inst_m_axi_awaddr_UNCONNECTED;
+  wire [1:0]NLW_inst_m_axi_awburst_UNCONNECTED;
+  wire [3:0]NLW_inst_m_axi_awcache_UNCONNECTED;
+  wire [0:0]NLW_inst_m_axi_awid_UNCONNECTED;
+  wire [7:0]NLW_inst_m_axi_awlen_UNCONNECTED;
+  wire [0:0]NLW_inst_m_axi_awlock_UNCONNECTED;
+  wire [2:0]NLW_inst_m_axi_awprot_UNCONNECTED;
+  wire [3:0]NLW_inst_m_axi_awqos_UNCONNECTED;
+  wire [2:0]NLW_inst_m_axi_awsize_UNCONNECTED;
+  wire [7:0]NLW_inst_m_axi_awuser_UNCONNECTED;
+  wire [2:0]NLW_inst_m_axi_lite_ch1_awprot_UNCONNECTED;
+  wire [3:0]NLW_inst_m_axi_lite_ch1_wstrb_UNCONNECTED;
+  wire [31:0]NLW_inst_m_axi_lite_ch2_araddr_UNCONNECTED;
+  wire [31:0]NLW_inst_m_axi_lite_ch2_awaddr_UNCONNECTED;
+  wire [2:0]NLW_inst_m_axi_lite_ch2_awprot_UNCONNECTED;
+  wire [31:0]NLW_inst_m_axi_lite_ch2_wdata_UNCONNECTED;
+  wire [3:0]NLW_inst_m_axi_lite_ch2_wstrb_UNCONNECTED;
+  wire [31:0]NLW_inst_m_axi_lite_ch3_araddr_UNCONNECTED;
+  wire [31:0]NLW_inst_m_axi_lite_ch3_awaddr_UNCONNECTED;
+  wire [2:0]NLW_inst_m_axi_lite_ch3_awprot_UNCONNECTED;
+  wire [31:0]NLW_inst_m_axi_lite_ch3_wdata_UNCONNECTED;
+  wire [3:0]NLW_inst_m_axi_lite_ch3_wstrb_UNCONNECTED;
+  wire [31:0]NLW_inst_m_axi_lite_ch4_araddr_UNCONNECTED;
+  wire [31:0]NLW_inst_m_axi_lite_ch4_awaddr_UNCONNECTED;
+  wire [2:0]NLW_inst_m_axi_lite_ch4_awprot_UNCONNECTED;
+  wire [31:0]NLW_inst_m_axi_lite_ch4_wdata_UNCONNECTED;
+  wire [3:0]NLW_inst_m_axi_lite_ch4_wstrb_UNCONNECTED;
+  wire [31:0]NLW_inst_m_axi_lite_ch5_araddr_UNCONNECTED;
+  wire [31:0]NLW_inst_m_axi_lite_ch5_awaddr_UNCONNECTED;
+  wire [2:0]NLW_inst_m_axi_lite_ch5_awprot_UNCONNECTED;
+  wire [31:0]NLW_inst_m_axi_lite_ch5_wdata_UNCONNECTED;
+  wire [3:0]NLW_inst_m_axi_lite_ch5_wstrb_UNCONNECTED;
+  wire [31:0]NLW_inst_m_axi_wdata_UNCONNECTED;
+  wire [3:0]NLW_inst_m_axi_wstrb_UNCONNECTED;
+  wire [31:0]NLW_inst_m_axis_1_tdata_UNCONNECTED;
+  wire [7:0]NLW_inst_m_axis_1_tdest_UNCONNECTED;
+  wire [7:0]NLW_inst_m_axis_1_tid_UNCONNECTED;
+  wire [3:0]NLW_inst_m_axis_1_tkeep_UNCONNECTED;
+  wire [3:0]NLW_inst_m_axis_1_tstrb_UNCONNECTED;
+  wire [7:0]NLW_inst_m_axis_1_tuser_UNCONNECTED;
+  wire [31:0]NLW_inst_m_axis_2_tdata_UNCONNECTED;
+  wire [7:0]NLW_inst_m_axis_2_tdest_UNCONNECTED;
+  wire [7:0]NLW_inst_m_axis_2_tid_UNCONNECTED;
+  wire [3:0]NLW_inst_m_axis_2_tkeep_UNCONNECTED;
+  wire [3:0]NLW_inst_m_axis_2_tstrb_UNCONNECTED;
+  wire [7:0]NLW_inst_m_axis_2_tuser_UNCONNECTED;
+  wire [0:0]NLW_inst_s_axi_bid_UNCONNECTED;
+  wire [1:0]NLW_inst_s_axi_bresp_UNCONNECTED;
+  wire [31:0]NLW_inst_s_axi_rdata_UNCONNECTED;
+  wire [0:0]NLW_inst_s_axi_rid_UNCONNECTED;
+  wire [1:0]NLW_inst_s_axi_rresp_UNCONNECTED;
+  wire [15:10]NLW_inst_status_UNCONNECTED;
+
+  assign m_axi_lite_ch1_awprot[2] = \<const0> ;
+  assign m_axi_lite_ch1_awprot[1] = \<const0> ;
+  assign m_axi_lite_ch1_awprot[0] = \<const0> ;
+  assign m_axi_lite_ch1_wstrb[3] = \<const1> ;
+  assign m_axi_lite_ch1_wstrb[2] = \<const1> ;
+  assign m_axi_lite_ch1_wstrb[1] = \<const1> ;
+  assign m_axi_lite_ch1_wstrb[0] = \<const1> ;
+  assign status[31:16] = \^status [31:16];
+  assign status[15] = \<const0> ;
+  assign status[14] = \<const0> ;
+  assign status[13] = \<const0> ;
+  assign status[12] = \<const0> ;
+  assign status[11] = \<const0> ;
+  assign status[10] = \<const0> ;
+  assign status[9:0] = \^status [9:0];
+  GND GND
+       (.G(\<const0> ));
+  VCC VCC
+       (.P(\<const1> ));
+  (* ATG_VERSAL_400 = "0" *) 
+  (* C_ADDR_F = "mipi_init_gen_default_addrram.mem" *) 
+  (* C_ATG_AXIS_DATA_GEN_TYPE = "0" *) 
+  (* C_ATG_BASIC_AXI4 = "0" *) 
+  (* C_ATG_HLTP_MODE = "0" *) 
+  (* C_ATG_MIF_ADDR_BITS = "8" *) 
+  (* C_ATG_MIF_DATA_DEPTH = "256" *) 
+  (* C_ATG_REPEAT_TYPE = "0" *) 
+  (* C_ATG_SLAVE_ONLY = "0" *) 
+  (* C_ATG_STATIC = "0" *) 
+  (* C_ATG_STATIC_EN_READ = "1" *) 
+  (* C_ATG_STATIC_EN_WRITE = "1" *) 
+  (* C_ATG_STATIC_FREE_RUN = "1" *) 
+  (* C_ATG_STATIC_INCR = "0" *) 
+  (* C_ATG_STATIC_LENGTH = "16" *) 
+  (* C_ATG_STATIC_RD_ADDRESS = "64'b0000000000000000000000000000000000010011101000000000000000000000" *) 
+  (* C_ATG_STATIC_RD_HIGH_ADDRESS = "64'b0000000000000000000000000000000000010011101000000000111111111111" *) 
+  (* C_ATG_STATIC_RD_PIPELINE = "3" *) 
+  (* C_ATG_STATIC_TRANGAP = "0" *) 
+  (* C_ATG_STATIC_WR_ADDRESS = "64'b0000000000000000000000000000000000010010101000000000000000000000" *) 
+  (* C_ATG_STATIC_WR_HIGH_ADDRESS = "64'b0000000000000000000000000000000000010010101000000000111111111111" *) 
+  (* C_ATG_STATIC_WR_PIPELINE = "3" *) 
+  (* C_ATG_STREAMING = "0" *) 
+  (* C_ATG_STREAMING_MAX_LEN_BITS = "16" *) 
+  (* C_ATG_STREAMING_MEM_FILE = "no_mem_file_loaded" *) 
+  (* C_ATG_STREAMING_MST_LPBK = "0" *) 
+  (* C_ATG_STREAMING_MST_ONLY = "1" *) 
+  (* C_ATG_STREAMING_SLV_LPBK = "0" *) 
+  (* C_ATG_SYSTEM_CH1_HIGH = "1151533055" *) 
+  (* C_ATG_SYSTEM_CH1_LOW = "1151336448" *) 
+  (* C_ATG_SYSTEM_CH2_HIGH = "511" *) 
+  (* C_ATG_SYSTEM_CH2_LOW = "256" *) 
+  (* C_ATG_SYSTEM_CH3_HIGH = "767" *) 
+  (* C_ATG_SYSTEM_CH3_LOW = "512" *) 
+  (* C_ATG_SYSTEM_CH4_HIGH = "1023" *) 
+  (* C_ATG_SYSTEM_CH4_LOW = "768" *) 
+  (* C_ATG_SYSTEM_CH5_HIGH = "1279" *) 
+  (* C_ATG_SYSTEM_CH5_LOW = "1024" *) 
+  (* C_ATG_SYSTEM_CMD_MAX_RETRY = "-16" *) 
+  (* C_ATG_SYSTEM_INIT = "0" *) 
+  (* C_ATG_SYSTEM_INIT_ADDR_MIF = "mipi_init_gen_addr.mem" *) 
+  (* C_ATG_SYSTEM_INIT_CTRL_MIF = "mipi_init_gen_ctrl.mem" *) 
+  (* C_ATG_SYSTEM_INIT_DATA_MIF = "mipi_init_gen_data.mem" *) 
+  (* C_ATG_SYSTEM_INIT_MASK_MIF = "mipi_init_gen_mask.mem" *) 
+  (* C_ATG_SYSTEM_MAX_CHANNELS = "1" *) 
+  (* C_ATG_SYSTEM_TEST = "1" *) 
+  (* C_ATG_SYSTEM_TEST_MAX_CLKS = "-6" *) 
+  (* C_AXIS1_HAS_TKEEP = "1" *) 
+  (* C_AXIS1_HAS_TSTRB = "1" *) 
+  (* C_AXIS2_HAS_TKEEP = "0" *) 
+  (* C_AXIS2_HAS_TSTRB = "0" *) 
+  (* C_AXIS_SPARSE_EN = "1" *) 
+  (* C_AXIS_TDATA_WIDTH = "32" *) 
+  (* C_AXIS_TDEST_WIDTH = "8" *) 
+  (* C_AXIS_TID_WIDTH = "8" *) 
+  (* C_AXIS_TUSER_WIDTH = "8" *) 
+  (* C_AXI_RD_ADDR_SEED = "16'b0101101001011010" *) 
+  (* C_AXI_WR_ADDR_SEED = "16'b0111110010011011" *) 
+  (* C_BASEADDR = "0" *) 
+  (* C_CMDRAM_F = "mipi_init_gen_default_cmdram.mem" *) 
+  (* C_FAMILY = "artix7" *) 
+  (* C_HIGHADDR = "65535" *) 
+  (* C_M_AXI_ADDR_WIDTH = "32" *) 
+  (* C_M_AXI_ARUSER_WIDTH = "8" *) 
+  (* C_M_AXI_AWUSER_WIDTH = "8" *) 
+  (* C_M_AXI_DATA_WIDTH = "32" *) 
+  (* C_M_AXI_THREAD_ID_WIDTH = "1" *) 
+  (* C_NO_EXCL = "0" *) 
+  (* C_PRAM_F = "mipi_init_gen_default_prmram.mem" *) 
+  (* C_RAMINIT_ADDRRAM0_F = "mipi_init_gen_default_addrram.mem" *) 
+  (* C_RAMINIT_CMDRAM0_F = "mipi_init_gen_default_cmdram.mem" *) 
+  (* C_RAMINIT_CMDRAM1_F = "NONE" *) 
+  (* C_RAMINIT_CMDRAM2_F = "NONE" *) 
+  (* C_RAMINIT_CMDRAM3_F = "NONE" *) 
+  (* C_RAMINIT_PARAMRAM0_F = "mipi_init_gen_default_prmram.mem" *) 
+  (* C_RAMINIT_SRAM0_F = "mipi_init_gen_default_mstram.mem" *) 
+  (* C_READ_ONLY = "0" *) 
+  (* C_REPEAT_COUNT = "254" *) 
+  (* C_SRAM_F = "mipi_init_gen_default_mstram.mem" *) 
+  (* C_STRM_DATA_SEED = "16'b1010101111001101" *) 
+  (* C_S_AXI_ARUSER_WIDTH = "8" *) 
+  (* C_S_AXI_AWUSER_WIDTH = "8" *) 
+  (* C_S_AXI_DATA_WIDTH = "32" *) 
+  (* C_S_AXI_ID_WIDTH = "1" *) 
+  (* C_WRITE_ONLY = "0" *) 
+  (* C_ZERO_INVALID = "1" *) 
+  (* DowngradeIPIdentifiedWarnings = "yes" *) 
+  mipi_init_gen_axi_traffic_gen_v3_0_22_top inst
+       (.axis_err_count(NLW_inst_axis_err_count_UNCONNECTED[15:0]),
+        .core_ext_start(1'b0),
+        .core_ext_stop(1'b0),
+        .done(done),
+        .err_out(NLW_inst_err_out_UNCONNECTED),
+        .irq_out(NLW_inst_irq_out_UNCONNECTED),
+        .m_axi_araddr(NLW_inst_m_axi_araddr_UNCONNECTED[31:0]),
+        .m_axi_arburst(NLW_inst_m_axi_arburst_UNCONNECTED[1:0]),
+        .m_axi_arcache(NLW_inst_m_axi_arcache_UNCONNECTED[3:0]),
+        .m_axi_arid(NLW_inst_m_axi_arid_UNCONNECTED[0]),
+        .m_axi_arlen(NLW_inst_m_axi_arlen_UNCONNECTED[7:0]),
+        .m_axi_arlock(NLW_inst_m_axi_arlock_UNCONNECTED[0]),
+        .m_axi_arprot(NLW_inst_m_axi_arprot_UNCONNECTED[2:0]),
+        .m_axi_arqos(NLW_inst_m_axi_arqos_UNCONNECTED[3:0]),
+        .m_axi_arready(1'b0),
+        .m_axi_arsize(NLW_inst_m_axi_arsize_UNCONNECTED[2:0]),
+        .m_axi_aruser(NLW_inst_m_axi_aruser_UNCONNECTED[7:0]),
+        .m_axi_arvalid(NLW_inst_m_axi_arvalid_UNCONNECTED),
+        .m_axi_awaddr(NLW_inst_m_axi_awaddr_UNCONNECTED[31:0]),
+        .m_axi_awburst(NLW_inst_m_axi_awburst_UNCONNECTED[1:0]),
+        .m_axi_awcache(NLW_inst_m_axi_awcache_UNCONNECTED[3:0]),
+        .m_axi_awid(NLW_inst_m_axi_awid_UNCONNECTED[0]),
+        .m_axi_awlen(NLW_inst_m_axi_awlen_UNCONNECTED[7:0]),
+        .m_axi_awlock(NLW_inst_m_axi_awlock_UNCONNECTED[0]),
+        .m_axi_awprot(NLW_inst_m_axi_awprot_UNCONNECTED[2:0]),
+        .m_axi_awqos(NLW_inst_m_axi_awqos_UNCONNECTED[3:0]),
+        .m_axi_awready(1'b0),
+        .m_axi_awsize(NLW_inst_m_axi_awsize_UNCONNECTED[2:0]),
+        .m_axi_awuser(NLW_inst_m_axi_awuser_UNCONNECTED[7:0]),
+        .m_axi_awvalid(NLW_inst_m_axi_awvalid_UNCONNECTED),
+        .m_axi_bid(1'b0),
+        .m_axi_bready(NLW_inst_m_axi_bready_UNCONNECTED),
+        .m_axi_bresp({1'b0,1'b0}),
+        .m_axi_bvalid(1'b0),
+        .m_axi_lite_ch1_araddr(m_axi_lite_ch1_araddr),
+        .m_axi_lite_ch1_arready(m_axi_lite_ch1_arready),
+        .m_axi_lite_ch1_arvalid(m_axi_lite_ch1_arvalid),
+        .m_axi_lite_ch1_awaddr(m_axi_lite_ch1_awaddr),
+        .m_axi_lite_ch1_awprot(NLW_inst_m_axi_lite_ch1_awprot_UNCONNECTED[2:0]),
+        .m_axi_lite_ch1_awready(m_axi_lite_ch1_awready),
+        .m_axi_lite_ch1_awvalid(m_axi_lite_ch1_awvalid),
+        .m_axi_lite_ch1_bready(m_axi_lite_ch1_bready),
+        .m_axi_lite_ch1_bresp({1'b0,m_axi_lite_ch1_bresp[0]}),
+        .m_axi_lite_ch1_bvalid(m_axi_lite_ch1_bvalid),
+        .m_axi_lite_ch1_rdata(m_axi_lite_ch1_rdata),
+        .m_axi_lite_ch1_rready(m_axi_lite_ch1_rready),
+        .m_axi_lite_ch1_rresp(m_axi_lite_ch1_rresp),
+        .m_axi_lite_ch1_rvalid(m_axi_lite_ch1_rvalid),
+        .m_axi_lite_ch1_wdata(m_axi_lite_ch1_wdata),
+        .m_axi_lite_ch1_wready(m_axi_lite_ch1_wready),
+        .m_axi_lite_ch1_wstrb(NLW_inst_m_axi_lite_ch1_wstrb_UNCONNECTED[3:0]),
+        .m_axi_lite_ch1_wvalid(m_axi_lite_ch1_wvalid),
+        .m_axi_lite_ch2_araddr(NLW_inst_m_axi_lite_ch2_araddr_UNCONNECTED[31:0]),
+        .m_axi_lite_ch2_arready(1'b0),
+        .m_axi_lite_ch2_arvalid(NLW_inst_m_axi_lite_ch2_arvalid_UNCONNECTED),
+        .m_axi_lite_ch2_awaddr(NLW_inst_m_axi_lite_ch2_awaddr_UNCONNECTED[31:0]),
+        .m_axi_lite_ch2_awprot(NLW_inst_m_axi_lite_ch2_awprot_UNCONNECTED[2:0]),
+        .m_axi_lite_ch2_awready(1'b0),
+        .m_axi_lite_ch2_awvalid(NLW_inst_m_axi_lite_ch2_awvalid_UNCONNECTED),
+        .m_axi_lite_ch2_bready(NLW_inst_m_axi_lite_ch2_bready_UNCONNECTED),
+        .m_axi_lite_ch2_bresp({1'b0,1'b0}),
+        .m_axi_lite_ch2_bvalid(1'b0),
+        .m_axi_lite_ch2_rdata({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .m_axi_lite_ch2_rready(NLW_inst_m_axi_lite_ch2_rready_UNCONNECTED),
+        .m_axi_lite_ch2_rresp({1'b0,1'b0}),
+        .m_axi_lite_ch2_rvalid(1'b0),
+        .m_axi_lite_ch2_wdata(NLW_inst_m_axi_lite_ch2_wdata_UNCONNECTED[31:0]),
+        .m_axi_lite_ch2_wready(1'b0),
+        .m_axi_lite_ch2_wstrb(NLW_inst_m_axi_lite_ch2_wstrb_UNCONNECTED[3:0]),
+        .m_axi_lite_ch2_wvalid(NLW_inst_m_axi_lite_ch2_wvalid_UNCONNECTED),
+        .m_axi_lite_ch3_araddr(NLW_inst_m_axi_lite_ch3_araddr_UNCONNECTED[31:0]),
+        .m_axi_lite_ch3_arready(1'b0),
+        .m_axi_lite_ch3_arvalid(NLW_inst_m_axi_lite_ch3_arvalid_UNCONNECTED),
+        .m_axi_lite_ch3_awaddr(NLW_inst_m_axi_lite_ch3_awaddr_UNCONNECTED[31:0]),
+        .m_axi_lite_ch3_awprot(NLW_inst_m_axi_lite_ch3_awprot_UNCONNECTED[2:0]),
+        .m_axi_lite_ch3_awready(1'b0),
+        .m_axi_lite_ch3_awvalid(NLW_inst_m_axi_lite_ch3_awvalid_UNCONNECTED),
+        .m_axi_lite_ch3_bready(NLW_inst_m_axi_lite_ch3_bready_UNCONNECTED),
+        .m_axi_lite_ch3_bresp({1'b0,1'b0}),
+        .m_axi_lite_ch3_bvalid(1'b0),
+        .m_axi_lite_ch3_rdata({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .m_axi_lite_ch3_rready(NLW_inst_m_axi_lite_ch3_rready_UNCONNECTED),
+        .m_axi_lite_ch3_rresp({1'b0,1'b0}),
+        .m_axi_lite_ch3_rvalid(1'b0),
+        .m_axi_lite_ch3_wdata(NLW_inst_m_axi_lite_ch3_wdata_UNCONNECTED[31:0]),
+        .m_axi_lite_ch3_wready(1'b0),
+        .m_axi_lite_ch3_wstrb(NLW_inst_m_axi_lite_ch3_wstrb_UNCONNECTED[3:0]),
+        .m_axi_lite_ch3_wvalid(NLW_inst_m_axi_lite_ch3_wvalid_UNCONNECTED),
+        .m_axi_lite_ch4_araddr(NLW_inst_m_axi_lite_ch4_araddr_UNCONNECTED[31:0]),
+        .m_axi_lite_ch4_arready(1'b0),
+        .m_axi_lite_ch4_arvalid(NLW_inst_m_axi_lite_ch4_arvalid_UNCONNECTED),
+        .m_axi_lite_ch4_awaddr(NLW_inst_m_axi_lite_ch4_awaddr_UNCONNECTED[31:0]),
+        .m_axi_lite_ch4_awprot(NLW_inst_m_axi_lite_ch4_awprot_UNCONNECTED[2:0]),
+        .m_axi_lite_ch4_awready(1'b0),
+        .m_axi_lite_ch4_awvalid(NLW_inst_m_axi_lite_ch4_awvalid_UNCONNECTED),
+        .m_axi_lite_ch4_bready(NLW_inst_m_axi_lite_ch4_bready_UNCONNECTED),
+        .m_axi_lite_ch4_bresp({1'b0,1'b0}),
+        .m_axi_lite_ch4_bvalid(1'b0),
+        .m_axi_lite_ch4_rdata({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .m_axi_lite_ch4_rready(NLW_inst_m_axi_lite_ch4_rready_UNCONNECTED),
+        .m_axi_lite_ch4_rresp({1'b0,1'b0}),
+        .m_axi_lite_ch4_rvalid(1'b0),
+        .m_axi_lite_ch4_wdata(NLW_inst_m_axi_lite_ch4_wdata_UNCONNECTED[31:0]),
+        .m_axi_lite_ch4_wready(1'b0),
+        .m_axi_lite_ch4_wstrb(NLW_inst_m_axi_lite_ch4_wstrb_UNCONNECTED[3:0]),
+        .m_axi_lite_ch4_wvalid(NLW_inst_m_axi_lite_ch4_wvalid_UNCONNECTED),
+        .m_axi_lite_ch5_araddr(NLW_inst_m_axi_lite_ch5_araddr_UNCONNECTED[31:0]),
+        .m_axi_lite_ch5_arready(1'b0),
+        .m_axi_lite_ch5_arvalid(NLW_inst_m_axi_lite_ch5_arvalid_UNCONNECTED),
+        .m_axi_lite_ch5_awaddr(NLW_inst_m_axi_lite_ch5_awaddr_UNCONNECTED[31:0]),
+        .m_axi_lite_ch5_awprot(NLW_inst_m_axi_lite_ch5_awprot_UNCONNECTED[2:0]),
+        .m_axi_lite_ch5_awready(1'b0),
+        .m_axi_lite_ch5_awvalid(NLW_inst_m_axi_lite_ch5_awvalid_UNCONNECTED),
+        .m_axi_lite_ch5_bready(NLW_inst_m_axi_lite_ch5_bready_UNCONNECTED),
+        .m_axi_lite_ch5_bresp({1'b0,1'b0}),
+        .m_axi_lite_ch5_bvalid(1'b0),
+        .m_axi_lite_ch5_rdata({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .m_axi_lite_ch5_rready(NLW_inst_m_axi_lite_ch5_rready_UNCONNECTED),
+        .m_axi_lite_ch5_rresp({1'b0,1'b0}),
+        .m_axi_lite_ch5_rvalid(1'b0),
+        .m_axi_lite_ch5_wdata(NLW_inst_m_axi_lite_ch5_wdata_UNCONNECTED[31:0]),
+        .m_axi_lite_ch5_wready(1'b0),
+        .m_axi_lite_ch5_wstrb(NLW_inst_m_axi_lite_ch5_wstrb_UNCONNECTED[3:0]),
+        .m_axi_lite_ch5_wvalid(NLW_inst_m_axi_lite_ch5_wvalid_UNCONNECTED),
+        .m_axi_rdata({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .m_axi_rid(1'b0),
+        .m_axi_rlast(1'b0),
+        .m_axi_rready(NLW_inst_m_axi_rready_UNCONNECTED),
+        .m_axi_rresp({1'b0,1'b0}),
+        .m_axi_rvalid(1'b0),
+        .m_axi_wdata(NLW_inst_m_axi_wdata_UNCONNECTED[31:0]),
+        .m_axi_wlast(NLW_inst_m_axi_wlast_UNCONNECTED),
+        .m_axi_wready(1'b0),
+        .m_axi_wstrb(NLW_inst_m_axi_wstrb_UNCONNECTED[3:0]),
+        .m_axi_wvalid(NLW_inst_m_axi_wvalid_UNCONNECTED),
+        .m_axis_1_tdata(NLW_inst_m_axis_1_tdata_UNCONNECTED[31:0]),
+        .m_axis_1_tdest(NLW_inst_m_axis_1_tdest_UNCONNECTED[7:0]),
+        .m_axis_1_tid(NLW_inst_m_axis_1_tid_UNCONNECTED[7:0]),
+        .m_axis_1_tkeep(NLW_inst_m_axis_1_tkeep_UNCONNECTED[3:0]),
+        .m_axis_1_tlast(NLW_inst_m_axis_1_tlast_UNCONNECTED),
+        .m_axis_1_tready(1'b1),
+        .m_axis_1_tstrb(NLW_inst_m_axis_1_tstrb_UNCONNECTED[3:0]),
+        .m_axis_1_tuser(NLW_inst_m_axis_1_tuser_UNCONNECTED[7:0]),
+        .m_axis_1_tvalid(NLW_inst_m_axis_1_tvalid_UNCONNECTED),
+        .m_axis_2_tdata(NLW_inst_m_axis_2_tdata_UNCONNECTED[31:0]),
+        .m_axis_2_tdest(NLW_inst_m_axis_2_tdest_UNCONNECTED[7:0]),
+        .m_axis_2_tid(NLW_inst_m_axis_2_tid_UNCONNECTED[7:0]),
+        .m_axis_2_tkeep(NLW_inst_m_axis_2_tkeep_UNCONNECTED[3:0]),
+        .m_axis_2_tlast(NLW_inst_m_axis_2_tlast_UNCONNECTED),
+        .m_axis_2_tready(1'b1),
+        .m_axis_2_tstrb(NLW_inst_m_axis_2_tstrb_UNCONNECTED[3:0]),
+        .m_axis_2_tuser(NLW_inst_m_axis_2_tuser_UNCONNECTED[7:0]),
+        .m_axis_2_tvalid(NLW_inst_m_axis_2_tvalid_UNCONNECTED),
+        .s_axi_aclk(s_axi_aclk),
+        .s_axi_araddr({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .s_axi_arburst({1'b0,1'b0}),
+        .s_axi_arcache({1'b0,1'b0,1'b0,1'b0}),
+        .s_axi_aresetn(s_axi_aresetn),
+        .s_axi_arid(1'b0),
+        .s_axi_arlen({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .s_axi_arlock(1'b0),
+        .s_axi_arprot({1'b0,1'b0,1'b0}),
+        .s_axi_arqos({1'b0,1'b0,1'b0,1'b0}),
+        .s_axi_arready(NLW_inst_s_axi_arready_UNCONNECTED),
+        .s_axi_arsize({1'b0,1'b0,1'b0}),
+        .s_axi_aruser({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .s_axi_arvalid(1'b0),
+        .s_axi_awaddr({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .s_axi_awburst({1'b0,1'b0}),
+        .s_axi_awcache({1'b0,1'b0,1'b0,1'b0}),
+        .s_axi_awid(1'b0),
+        .s_axi_awlen({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .s_axi_awlock(1'b0),
+        .s_axi_awprot({1'b0,1'b0,1'b0}),
+        .s_axi_awqos({1'b0,1'b0,1'b0,1'b0}),
+        .s_axi_awready(NLW_inst_s_axi_awready_UNCONNECTED),
+        .s_axi_awsize({1'b0,1'b0,1'b0}),
+        .s_axi_awuser({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .s_axi_awvalid(1'b0),
+        .s_axi_bid(NLW_inst_s_axi_bid_UNCONNECTED[0]),
+        .s_axi_bready(1'b0),
+        .s_axi_bresp(NLW_inst_s_axi_bresp_UNCONNECTED[1:0]),
+        .s_axi_bvalid(NLW_inst_s_axi_bvalid_UNCONNECTED),
+        .s_axi_rdata(NLW_inst_s_axi_rdata_UNCONNECTED[31:0]),
+        .s_axi_rid(NLW_inst_s_axi_rid_UNCONNECTED[0]),
+        .s_axi_rlast(NLW_inst_s_axi_rlast_UNCONNECTED),
+        .s_axi_rready(1'b0),
+        .s_axi_rresp(NLW_inst_s_axi_rresp_UNCONNECTED[1:0]),
+        .s_axi_rvalid(NLW_inst_s_axi_rvalid_UNCONNECTED),
+        .s_axi_wdata({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .s_axi_wlast(1'b0),
+        .s_axi_wready(NLW_inst_s_axi_wready_UNCONNECTED),
+        .s_axi_wstrb({1'b0,1'b0,1'b0,1'b0}),
+        .s_axi_wvalid(1'b0),
+        .s_axis_1_tdata({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .s_axis_1_tdest({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .s_axis_1_tid({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .s_axis_1_tkeep({1'b1,1'b1,1'b1,1'b1}),
+        .s_axis_1_tlast(1'b0),
+        .s_axis_1_tready(NLW_inst_s_axis_1_tready_UNCONNECTED),
+        .s_axis_1_tstrb({1'b1,1'b1,1'b1,1'b1}),
+        .s_axis_1_tuser({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .s_axis_1_tvalid(1'b0),
+        .s_axis_2_tdata({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .s_axis_2_tdest({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .s_axis_2_tid({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .s_axis_2_tkeep({1'b1,1'b1,1'b1,1'b1}),
+        .s_axis_2_tlast(1'b0),
+        .s_axis_2_tready(NLW_inst_s_axis_2_tready_UNCONNECTED),
+        .s_axis_2_tstrb({1'b1,1'b1,1'b1,1'b1}),
+        .s_axis_2_tuser({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .s_axis_2_tvalid(1'b0),
+        .status(\^status ));
+endmodule
+
+(* ORIG_REF_NAME = "axi_traffic_gen_v3_0_22_asynch_rst_ff" *) (* dont_touch = "true" *) 
+module mipi_init_gen_axi_traffic_gen_v3_0_22_asynch_rst_ff
    (data,
     clk,
     reset,
@@ -41,8 +537,8 @@ module mipi_init_gen_axi_traffic_gen_v3_0_20_asynch_rst_ff
         .Q(q));
 endmodule
 
-(* ORIG_REF_NAME = "axi_traffic_gen_v3_0_20_asynch_rst_ff" *) (* dont_touch = "true" *) 
-module mipi_init_gen_axi_traffic_gen_v3_0_20_asynch_rst_ff__1
+(* ORIG_REF_NAME = "axi_traffic_gen_v3_0_22_asynch_rst_ff" *) (* dont_touch = "true" *) 
+module mipi_init_gen_axi_traffic_gen_v3_0_22_asynch_rst_ff__1
    (data,
     clk,
     reset,
@@ -69,8 +565,8 @@ module mipi_init_gen_axi_traffic_gen_v3_0_20_asynch_rst_ff__1
         .Q(q));
 endmodule
 
-(* ORIG_REF_NAME = "axi_traffic_gen_v3_0_20_asynch_rst_ff" *) (* dont_touch = "true" *) 
-module mipi_init_gen_axi_traffic_gen_v3_0_20_asynch_rst_ff__2
+(* ORIG_REF_NAME = "axi_traffic_gen_v3_0_22_asynch_rst_ff" *) (* dont_touch = "true" *) 
+module mipi_init_gen_axi_traffic_gen_v3_0_22_asynch_rst_ff__2
    (data,
     clk,
     reset,
@@ -97,8 +593,8 @@ module mipi_init_gen_axi_traffic_gen_v3_0_20_asynch_rst_ff__2
         .Q(q));
 endmodule
 
-(* ORIG_REF_NAME = "axi_traffic_gen_v3_0_20_asynch_rst_ff" *) (* dont_touch = "true" *) 
-module mipi_init_gen_axi_traffic_gen_v3_0_20_asynch_rst_ff__3
+(* ORIG_REF_NAME = "axi_traffic_gen_v3_0_22_asynch_rst_ff" *) (* dont_touch = "true" *) 
+module mipi_init_gen_axi_traffic_gen_v3_0_22_asynch_rst_ff__3
    (data,
     clk,
     reset,
@@ -125,7 +621,8 @@ module mipi_init_gen_axi_traffic_gen_v3_0_20_asynch_rst_ff__3
         .Q(q));
 endmodule
 
-module mipi_init_gen_axi_traffic_gen_v3_0_20_systeminit_dmg
+(* ORIG_REF_NAME = "axi_traffic_gen_v3_0_22_systeminit_dmg" *) 
+module mipi_init_gen_axi_traffic_gen_v3_0_22_systeminit_dmg
    (douta,
     \gen_rd_a.gen_rd_a_synth_template.gen_rf_narrow_reg.douta_reg_reg[5] ,
     DI,
@@ -223,8 +720,8 @@ module mipi_init_gen_axi_traffic_gen_v3_0_20_systeminit_dmg
         .s_axi_aclk(s_axi_aclk));
 endmodule
 
-(* ORIG_REF_NAME = "axi_traffic_gen_v3_0_20_systeminit_dmg" *) 
-module mipi_init_gen_axi_traffic_gen_v3_0_20_systeminit_dmg__parameterized0
+(* ORIG_REF_NAME = "axi_traffic_gen_v3_0_22_systeminit_dmg" *) 
+module mipi_init_gen_axi_traffic_gen_v3_0_22_systeminit_dmg__parameterized0
    (douta,
     \gen_rd_a.gen_rd_a_synth_template.gen_rf_narrow_reg.douta_reg_reg[21] ,
     m_axi_lite_ch1_rresp_0_sp_1,
@@ -283,8 +780,8 @@ module mipi_init_gen_axi_traffic_gen_v3_0_20_systeminit_dmg__parameterized0
         .s_axi_aclk(s_axi_aclk));
 endmodule
 
-(* ORIG_REF_NAME = "axi_traffic_gen_v3_0_20_systeminit_dmg" *) 
-module mipi_init_gen_axi_traffic_gen_v3_0_20_systeminit_dmg__parameterized1
+(* ORIG_REF_NAME = "axi_traffic_gen_v3_0_22_systeminit_dmg" *) 
+module mipi_init_gen_axi_traffic_gen_v3_0_22_systeminit_dmg__parameterized1
    (douta,
     rom_eof0,
     rready_m_reg,
@@ -481,8 +978,8 @@ module mipi_init_gen_axi_traffic_gen_v3_0_20_systeminit_dmg__parameterized1
         .s_axi_aresetn_0(s_axi_aresetn_0));
 endmodule
 
-(* ORIG_REF_NAME = "axi_traffic_gen_v3_0_20_systeminit_dmg" *) 
-module mipi_init_gen_axi_traffic_gen_v3_0_20_systeminit_dmg__parameterized2
+(* ORIG_REF_NAME = "axi_traffic_gen_v3_0_22_systeminit_dmg" *) 
+module mipi_init_gen_axi_traffic_gen_v3_0_22_systeminit_dmg__parameterized2
    (douta,
     \m_axi_lite_ch1_rdata[11] ,
     \gen_rd_a.gen_rd_a_synth_template.gen_rf_narrow_reg.douta_reg_reg[6] ,
@@ -664,7 +1161,8 @@ module mipi_init_gen_axi_traffic_gen_v3_0_20_systeminit_dmg__parameterized2
         .s_axi_aclk(s_axi_aclk));
 endmodule
 
-module mipi_init_gen_axi_traffic_gen_v3_0_20_systeminit_mrdwr
+(* ORIG_REF_NAME = "axi_traffic_gen_v3_0_22_systeminit_mrdwr" *) 
+module mipi_init_gen_axi_traffic_gen_v3_0_22_systeminit_mrdwr
    (s_axi_aresetn_0,
     done,
     \m_axi_lite_ch1_rdata[30] ,
@@ -887,7 +1385,7 @@ module mipi_init_gen_axi_traffic_gen_v3_0_20_systeminit_mrdwr
   wire bready_m_i_1_n_0;
   wire bready_m_i_2_n_0;
   wire [31:0]cur_trn_addr;
-  wire cur_trn_addr_0;
+  wire [0:0]cur_trn_addr_0;
   wire cur_trn_done;
   wire [2:0]cur_trn_status_i_3;
   wire [3:0]cur_trn_status_i_4;
@@ -1224,7 +1722,7 @@ module mipi_init_gen_axi_traffic_gen_v3_0_20_systeminit_mrdwr
   wire \status[1]_i_8_n_0 ;
   wire \status[1]_i_9_n_0 ;
   wire \status[31]_i_1_n_0 ;
-  wire test_err_cntr;
+  wire [0:0]test_err_cntr;
   wire [31:0]\wdata_m_reg[31]_0 ;
   wire wvalid_m;
   wire wvalid_m_i_1_n_0;
@@ -1321,7 +1819,7 @@ module mipi_init_gen_axi_traffic_gen_v3_0_20_systeminit_mrdwr
         .D(\ATG_SYSTEST_NXT_PTR.test_err_cntr_reg[0]_i_2_n_7 ),
         .Q(\ATG_SYSTEST_NXT_PTR.test_err_cntr_reg [0]),
         .R(s_axi_aresetn_0));
-  (* ADDER_THRESHOLD = "11" *) 
+  (* ADDER_THRESHOLD = "35" *) 
   CARRY4 \ATG_SYSTEST_NXT_PTR.test_err_cntr_reg[0]_i_2 
        (.CI(1'b0),
         .CO({\ATG_SYSTEST_NXT_PTR.test_err_cntr_reg[0]_i_2_n_0 ,\ATG_SYSTEST_NXT_PTR.test_err_cntr_reg[0]_i_2_n_1 ,\ATG_SYSTEST_NXT_PTR.test_err_cntr_reg[0]_i_2_n_2 ,\ATG_SYSTEST_NXT_PTR.test_err_cntr_reg[0]_i_2_n_3 }),
@@ -1347,7 +1845,7 @@ module mipi_init_gen_axi_traffic_gen_v3_0_20_systeminit_mrdwr
         .D(\ATG_SYSTEST_NXT_PTR.test_err_cntr_reg[12]_i_1_n_7 ),
         .Q(\ATG_SYSTEST_NXT_PTR.test_err_cntr_reg [12]),
         .R(s_axi_aresetn_0));
-  (* ADDER_THRESHOLD = "11" *) 
+  (* ADDER_THRESHOLD = "35" *) 
   CARRY4 \ATG_SYSTEST_NXT_PTR.test_err_cntr_reg[12]_i_1 
        (.CI(\ATG_SYSTEST_NXT_PTR.test_err_cntr_reg[8]_i_1_n_0 ),
         .CO({\ATG_SYSTEST_NXT_PTR.test_err_cntr_reg[12]_i_1_n_0 ,\ATG_SYSTEST_NXT_PTR.test_err_cntr_reg[12]_i_1_n_1 ,\ATG_SYSTEST_NXT_PTR.test_err_cntr_reg[12]_i_1_n_2 ,\ATG_SYSTEST_NXT_PTR.test_err_cntr_reg[12]_i_1_n_3 }),
@@ -1379,7 +1877,7 @@ module mipi_init_gen_axi_traffic_gen_v3_0_20_systeminit_mrdwr
         .D(\ATG_SYSTEST_NXT_PTR.test_err_cntr_reg[16]_i_1_n_7 ),
         .Q(\ATG_SYSTEST_NXT_PTR.test_err_cntr_reg__0 [16]),
         .R(s_axi_aresetn_0));
-  (* ADDER_THRESHOLD = "11" *) 
+  (* ADDER_THRESHOLD = "35" *) 
   CARRY4 \ATG_SYSTEST_NXT_PTR.test_err_cntr_reg[16]_i_1 
        (.CI(\ATG_SYSTEST_NXT_PTR.test_err_cntr_reg[12]_i_1_n_0 ),
         .CO({\ATG_SYSTEST_NXT_PTR.test_err_cntr_reg[16]_i_1_n_0 ,\ATG_SYSTEST_NXT_PTR.test_err_cntr_reg[16]_i_1_n_1 ,\ATG_SYSTEST_NXT_PTR.test_err_cntr_reg[16]_i_1_n_2 ,\ATG_SYSTEST_NXT_PTR.test_err_cntr_reg[16]_i_1_n_3 }),
@@ -1417,7 +1915,7 @@ module mipi_init_gen_axi_traffic_gen_v3_0_20_systeminit_mrdwr
         .D(\ATG_SYSTEST_NXT_PTR.test_err_cntr_reg[20]_i_1_n_7 ),
         .Q(\ATG_SYSTEST_NXT_PTR.test_err_cntr_reg__0 [20]),
         .R(s_axi_aresetn_0));
-  (* ADDER_THRESHOLD = "11" *) 
+  (* ADDER_THRESHOLD = "35" *) 
   CARRY4 \ATG_SYSTEST_NXT_PTR.test_err_cntr_reg[20]_i_1 
        (.CI(\ATG_SYSTEST_NXT_PTR.test_err_cntr_reg[16]_i_1_n_0 ),
         .CO({\ATG_SYSTEST_NXT_PTR.test_err_cntr_reg[20]_i_1_n_0 ,\ATG_SYSTEST_NXT_PTR.test_err_cntr_reg[20]_i_1_n_1 ,\ATG_SYSTEST_NXT_PTR.test_err_cntr_reg[20]_i_1_n_2 ,\ATG_SYSTEST_NXT_PTR.test_err_cntr_reg[20]_i_1_n_3 }),
@@ -1449,7 +1947,7 @@ module mipi_init_gen_axi_traffic_gen_v3_0_20_systeminit_mrdwr
         .D(\ATG_SYSTEST_NXT_PTR.test_err_cntr_reg[24]_i_1_n_7 ),
         .Q(\ATG_SYSTEST_NXT_PTR.test_err_cntr_reg__0 [24]),
         .R(s_axi_aresetn_0));
-  (* ADDER_THRESHOLD = "11" *) 
+  (* ADDER_THRESHOLD = "35" *) 
   CARRY4 \ATG_SYSTEST_NXT_PTR.test_err_cntr_reg[24]_i_1 
        (.CI(\ATG_SYSTEST_NXT_PTR.test_err_cntr_reg[20]_i_1_n_0 ),
         .CO({\ATG_SYSTEST_NXT_PTR.test_err_cntr_reg[24]_i_1_n_0 ,\ATG_SYSTEST_NXT_PTR.test_err_cntr_reg[24]_i_1_n_1 ,\ATG_SYSTEST_NXT_PTR.test_err_cntr_reg[24]_i_1_n_2 ,\ATG_SYSTEST_NXT_PTR.test_err_cntr_reg[24]_i_1_n_3 }),
@@ -1481,7 +1979,7 @@ module mipi_init_gen_axi_traffic_gen_v3_0_20_systeminit_mrdwr
         .D(\ATG_SYSTEST_NXT_PTR.test_err_cntr_reg[28]_i_1_n_7 ),
         .Q(\ATG_SYSTEST_NXT_PTR.test_err_cntr_reg__0 [28]),
         .R(s_axi_aresetn_0));
-  (* ADDER_THRESHOLD = "11" *) 
+  (* ADDER_THRESHOLD = "35" *) 
   CARRY4 \ATG_SYSTEST_NXT_PTR.test_err_cntr_reg[28]_i_1 
        (.CI(\ATG_SYSTEST_NXT_PTR.test_err_cntr_reg[24]_i_1_n_0 ),
         .CO({\NLW_ATG_SYSTEST_NXT_PTR.test_err_cntr_reg[28]_i_1_CO_UNCONNECTED [3],\ATG_SYSTEST_NXT_PTR.test_err_cntr_reg[28]_i_1_n_1 ,\ATG_SYSTEST_NXT_PTR.test_err_cntr_reg[28]_i_1_n_2 ,\ATG_SYSTEST_NXT_PTR.test_err_cntr_reg[28]_i_1_n_3 }),
@@ -1525,7 +2023,7 @@ module mipi_init_gen_axi_traffic_gen_v3_0_20_systeminit_mrdwr
         .D(\ATG_SYSTEST_NXT_PTR.test_err_cntr_reg[4]_i_1_n_7 ),
         .Q(\ATG_SYSTEST_NXT_PTR.test_err_cntr_reg [4]),
         .R(s_axi_aresetn_0));
-  (* ADDER_THRESHOLD = "11" *) 
+  (* ADDER_THRESHOLD = "35" *) 
   CARRY4 \ATG_SYSTEST_NXT_PTR.test_err_cntr_reg[4]_i_1 
        (.CI(\ATG_SYSTEST_NXT_PTR.test_err_cntr_reg[0]_i_2_n_0 ),
         .CO({\ATG_SYSTEST_NXT_PTR.test_err_cntr_reg[4]_i_1_n_0 ,\ATG_SYSTEST_NXT_PTR.test_err_cntr_reg[4]_i_1_n_1 ,\ATG_SYSTEST_NXT_PTR.test_err_cntr_reg[4]_i_1_n_2 ,\ATG_SYSTEST_NXT_PTR.test_err_cntr_reg[4]_i_1_n_3 }),
@@ -1557,7 +2055,7 @@ module mipi_init_gen_axi_traffic_gen_v3_0_20_systeminit_mrdwr
         .D(\ATG_SYSTEST_NXT_PTR.test_err_cntr_reg[8]_i_1_n_7 ),
         .Q(\ATG_SYSTEST_NXT_PTR.test_err_cntr_reg [8]),
         .R(s_axi_aresetn_0));
-  (* ADDER_THRESHOLD = "11" *) 
+  (* ADDER_THRESHOLD = "35" *) 
   CARRY4 \ATG_SYSTEST_NXT_PTR.test_err_cntr_reg[8]_i_1 
        (.CI(\ATG_SYSTEST_NXT_PTR.test_err_cntr_reg[4]_i_1_n_0 ),
         .CO({\ATG_SYSTEST_NXT_PTR.test_err_cntr_reg[8]_i_1_n_0 ,\ATG_SYSTEST_NXT_PTR.test_err_cntr_reg[8]_i_1_n_1 ,\ATG_SYSTEST_NXT_PTR.test_err_cntr_reg[8]_i_1_n_2 ,\ATG_SYSTEST_NXT_PTR.test_err_cntr_reg[8]_i_1_n_3 }),
@@ -2735,7 +3233,7 @@ module mipi_init_gen_axi_traffic_gen_v3_0_20_systeminit_mrdwr
         .D(\max_retry_cntr_reg[0]_i_3_n_7 ),
         .Q(max_retry_cntr_reg[0]),
         .R(\max_retry_cntr[0]_i_1_n_0 ));
-  (* ADDER_THRESHOLD = "11" *) 
+  (* ADDER_THRESHOLD = "35" *) 
   CARRY4 \max_retry_cntr_reg[0]_i_3 
        (.CI(1'b0),
         .CO({\max_retry_cntr_reg[0]_i_3_n_0 ,\max_retry_cntr_reg[0]_i_3_n_1 ,\max_retry_cntr_reg[0]_i_3_n_2 ,\max_retry_cntr_reg[0]_i_3_n_3 }),
@@ -2761,7 +3259,7 @@ module mipi_init_gen_axi_traffic_gen_v3_0_20_systeminit_mrdwr
         .D(\max_retry_cntr_reg[12]_i_1_n_7 ),
         .Q(max_retry_cntr_reg[12]),
         .R(\max_retry_cntr[0]_i_1_n_0 ));
-  (* ADDER_THRESHOLD = "11" *) 
+  (* ADDER_THRESHOLD = "35" *) 
   CARRY4 \max_retry_cntr_reg[12]_i_1 
        (.CI(\max_retry_cntr_reg[8]_i_1_n_0 ),
         .CO({\max_retry_cntr_reg[12]_i_1_n_0 ,\max_retry_cntr_reg[12]_i_1_n_1 ,\max_retry_cntr_reg[12]_i_1_n_2 ,\max_retry_cntr_reg[12]_i_1_n_3 }),
@@ -2793,7 +3291,7 @@ module mipi_init_gen_axi_traffic_gen_v3_0_20_systeminit_mrdwr
         .D(\max_retry_cntr_reg[16]_i_1_n_7 ),
         .Q(max_retry_cntr_reg[16]),
         .R(\max_retry_cntr[0]_i_1_n_0 ));
-  (* ADDER_THRESHOLD = "11" *) 
+  (* ADDER_THRESHOLD = "35" *) 
   CARRY4 \max_retry_cntr_reg[16]_i_1 
        (.CI(\max_retry_cntr_reg[12]_i_1_n_0 ),
         .CO({\max_retry_cntr_reg[16]_i_1_n_0 ,\max_retry_cntr_reg[16]_i_1_n_1 ,\max_retry_cntr_reg[16]_i_1_n_2 ,\max_retry_cntr_reg[16]_i_1_n_3 }),
@@ -2831,7 +3329,7 @@ module mipi_init_gen_axi_traffic_gen_v3_0_20_systeminit_mrdwr
         .D(\max_retry_cntr_reg[20]_i_1_n_7 ),
         .Q(max_retry_cntr_reg[20]),
         .R(\max_retry_cntr[0]_i_1_n_0 ));
-  (* ADDER_THRESHOLD = "11" *) 
+  (* ADDER_THRESHOLD = "35" *) 
   CARRY4 \max_retry_cntr_reg[20]_i_1 
        (.CI(\max_retry_cntr_reg[16]_i_1_n_0 ),
         .CO({\max_retry_cntr_reg[20]_i_1_n_0 ,\max_retry_cntr_reg[20]_i_1_n_1 ,\max_retry_cntr_reg[20]_i_1_n_2 ,\max_retry_cntr_reg[20]_i_1_n_3 }),
@@ -2863,7 +3361,7 @@ module mipi_init_gen_axi_traffic_gen_v3_0_20_systeminit_mrdwr
         .D(\max_retry_cntr_reg[24]_i_1_n_7 ),
         .Q(max_retry_cntr_reg[24]),
         .R(\max_retry_cntr[0]_i_1_n_0 ));
-  (* ADDER_THRESHOLD = "11" *) 
+  (* ADDER_THRESHOLD = "35" *) 
   CARRY4 \max_retry_cntr_reg[24]_i_1 
        (.CI(\max_retry_cntr_reg[20]_i_1_n_0 ),
         .CO({\max_retry_cntr_reg[24]_i_1_n_0 ,\max_retry_cntr_reg[24]_i_1_n_1 ,\max_retry_cntr_reg[24]_i_1_n_2 ,\max_retry_cntr_reg[24]_i_1_n_3 }),
@@ -2895,7 +3393,7 @@ module mipi_init_gen_axi_traffic_gen_v3_0_20_systeminit_mrdwr
         .D(\max_retry_cntr_reg[28]_i_1_n_7 ),
         .Q(max_retry_cntr_reg[28]),
         .R(\max_retry_cntr[0]_i_1_n_0 ));
-  (* ADDER_THRESHOLD = "11" *) 
+  (* ADDER_THRESHOLD = "35" *) 
   CARRY4 \max_retry_cntr_reg[28]_i_1 
        (.CI(\max_retry_cntr_reg[24]_i_1_n_0 ),
         .CO({\NLW_max_retry_cntr_reg[28]_i_1_CO_UNCONNECTED [3],\max_retry_cntr_reg[28]_i_1_n_1 ,\max_retry_cntr_reg[28]_i_1_n_2 ,\max_retry_cntr_reg[28]_i_1_n_3 }),
@@ -2939,7 +3437,7 @@ module mipi_init_gen_axi_traffic_gen_v3_0_20_systeminit_mrdwr
         .D(\max_retry_cntr_reg[4]_i_1_n_7 ),
         .Q(max_retry_cntr_reg[4]),
         .R(\max_retry_cntr[0]_i_1_n_0 ));
-  (* ADDER_THRESHOLD = "11" *) 
+  (* ADDER_THRESHOLD = "35" *) 
   CARRY4 \max_retry_cntr_reg[4]_i_1 
        (.CI(\max_retry_cntr_reg[0]_i_3_n_0 ),
         .CO({\max_retry_cntr_reg[4]_i_1_n_0 ,\max_retry_cntr_reg[4]_i_1_n_1 ,\max_retry_cntr_reg[4]_i_1_n_2 ,\max_retry_cntr_reg[4]_i_1_n_3 }),
@@ -2971,7 +3469,7 @@ module mipi_init_gen_axi_traffic_gen_v3_0_20_systeminit_mrdwr
         .D(\max_retry_cntr_reg[8]_i_1_n_7 ),
         .Q(max_retry_cntr_reg[8]),
         .R(\max_retry_cntr[0]_i_1_n_0 ));
-  (* ADDER_THRESHOLD = "11" *) 
+  (* ADDER_THRESHOLD = "35" *) 
   CARRY4 \max_retry_cntr_reg[8]_i_1 
        (.CI(\max_retry_cntr_reg[4]_i_1_n_0 ),
         .CO({\max_retry_cntr_reg[8]_i_1_n_0 ,\max_retry_cntr_reg[8]_i_1_n_1 ,\max_retry_cntr_reg[8]_i_1_n_2 ,\max_retry_cntr_reg[8]_i_1_n_3 }),
@@ -3001,7 +3499,7 @@ module mipi_init_gen_axi_traffic_gen_v3_0_20_systeminit_mrdwr
         .D(\max_test_time_cntr_reg[0]_i_2_n_7 ),
         .Q(max_test_time_cntr_reg[0]),
         .R(s_axi_aresetn_0));
-  (* ADDER_THRESHOLD = "11" *) 
+  (* ADDER_THRESHOLD = "35" *) 
   CARRY4 \max_test_time_cntr_reg[0]_i_2 
        (.CI(1'b0),
         .CO({\max_test_time_cntr_reg[0]_i_2_n_0 ,\max_test_time_cntr_reg[0]_i_2_n_1 ,\max_test_time_cntr_reg[0]_i_2_n_2 ,\max_test_time_cntr_reg[0]_i_2_n_3 }),
@@ -3027,7 +3525,7 @@ module mipi_init_gen_axi_traffic_gen_v3_0_20_systeminit_mrdwr
         .D(\max_test_time_cntr_reg[12]_i_1_n_7 ),
         .Q(max_test_time_cntr_reg[12]),
         .R(s_axi_aresetn_0));
-  (* ADDER_THRESHOLD = "11" *) 
+  (* ADDER_THRESHOLD = "35" *) 
   CARRY4 \max_test_time_cntr_reg[12]_i_1 
        (.CI(\max_test_time_cntr_reg[8]_i_1_n_0 ),
         .CO({\max_test_time_cntr_reg[12]_i_1_n_0 ,\max_test_time_cntr_reg[12]_i_1_n_1 ,\max_test_time_cntr_reg[12]_i_1_n_2 ,\max_test_time_cntr_reg[12]_i_1_n_3 }),
@@ -3059,7 +3557,7 @@ module mipi_init_gen_axi_traffic_gen_v3_0_20_systeminit_mrdwr
         .D(\max_test_time_cntr_reg[16]_i_1_n_7 ),
         .Q(max_test_time_cntr_reg[16]),
         .R(s_axi_aresetn_0));
-  (* ADDER_THRESHOLD = "11" *) 
+  (* ADDER_THRESHOLD = "35" *) 
   CARRY4 \max_test_time_cntr_reg[16]_i_1 
        (.CI(\max_test_time_cntr_reg[12]_i_1_n_0 ),
         .CO({\max_test_time_cntr_reg[16]_i_1_n_0 ,\max_test_time_cntr_reg[16]_i_1_n_1 ,\max_test_time_cntr_reg[16]_i_1_n_2 ,\max_test_time_cntr_reg[16]_i_1_n_3 }),
@@ -3097,7 +3595,7 @@ module mipi_init_gen_axi_traffic_gen_v3_0_20_systeminit_mrdwr
         .D(\max_test_time_cntr_reg[20]_i_1_n_7 ),
         .Q(max_test_time_cntr_reg[20]),
         .R(s_axi_aresetn_0));
-  (* ADDER_THRESHOLD = "11" *) 
+  (* ADDER_THRESHOLD = "35" *) 
   CARRY4 \max_test_time_cntr_reg[20]_i_1 
        (.CI(\max_test_time_cntr_reg[16]_i_1_n_0 ),
         .CO({\max_test_time_cntr_reg[20]_i_1_n_0 ,\max_test_time_cntr_reg[20]_i_1_n_1 ,\max_test_time_cntr_reg[20]_i_1_n_2 ,\max_test_time_cntr_reg[20]_i_1_n_3 }),
@@ -3129,7 +3627,7 @@ module mipi_init_gen_axi_traffic_gen_v3_0_20_systeminit_mrdwr
         .D(\max_test_time_cntr_reg[24]_i_1_n_7 ),
         .Q(max_test_time_cntr_reg[24]),
         .R(s_axi_aresetn_0));
-  (* ADDER_THRESHOLD = "11" *) 
+  (* ADDER_THRESHOLD = "35" *) 
   CARRY4 \max_test_time_cntr_reg[24]_i_1 
        (.CI(\max_test_time_cntr_reg[20]_i_1_n_0 ),
         .CO({\max_test_time_cntr_reg[24]_i_1_n_0 ,\max_test_time_cntr_reg[24]_i_1_n_1 ,\max_test_time_cntr_reg[24]_i_1_n_2 ,\max_test_time_cntr_reg[24]_i_1_n_3 }),
@@ -3161,7 +3659,7 @@ module mipi_init_gen_axi_traffic_gen_v3_0_20_systeminit_mrdwr
         .D(\max_test_time_cntr_reg[28]_i_1_n_7 ),
         .Q(max_test_time_cntr_reg[28]),
         .R(s_axi_aresetn_0));
-  (* ADDER_THRESHOLD = "11" *) 
+  (* ADDER_THRESHOLD = "35" *) 
   CARRY4 \max_test_time_cntr_reg[28]_i_1 
        (.CI(\max_test_time_cntr_reg[24]_i_1_n_0 ),
         .CO({\NLW_max_test_time_cntr_reg[28]_i_1_CO_UNCONNECTED [3],\max_test_time_cntr_reg[28]_i_1_n_1 ,\max_test_time_cntr_reg[28]_i_1_n_2 ,\max_test_time_cntr_reg[28]_i_1_n_3 }),
@@ -3205,7 +3703,7 @@ module mipi_init_gen_axi_traffic_gen_v3_0_20_systeminit_mrdwr
         .D(\max_test_time_cntr_reg[4]_i_1_n_7 ),
         .Q(max_test_time_cntr_reg[4]),
         .R(s_axi_aresetn_0));
-  (* ADDER_THRESHOLD = "11" *) 
+  (* ADDER_THRESHOLD = "35" *) 
   CARRY4 \max_test_time_cntr_reg[4]_i_1 
        (.CI(\max_test_time_cntr_reg[0]_i_2_n_0 ),
         .CO({\max_test_time_cntr_reg[4]_i_1_n_0 ,\max_test_time_cntr_reg[4]_i_1_n_1 ,\max_test_time_cntr_reg[4]_i_1_n_2 ,\max_test_time_cntr_reg[4]_i_1_n_3 }),
@@ -3237,7 +3735,7 @@ module mipi_init_gen_axi_traffic_gen_v3_0_20_systeminit_mrdwr
         .D(\max_test_time_cntr_reg[8]_i_1_n_7 ),
         .Q(max_test_time_cntr_reg[8]),
         .R(s_axi_aresetn_0));
-  (* ADDER_THRESHOLD = "11" *) 
+  (* ADDER_THRESHOLD = "35" *) 
   CARRY4 \max_test_time_cntr_reg[8]_i_1 
        (.CI(\max_test_time_cntr_reg[4]_i_1_n_0 ),
         .CO({\max_test_time_cntr_reg[8]_i_1_n_0 ,\max_test_time_cntr_reg[8]_i_1_n_1 ,\max_test_time_cntr_reg[8]_i_1_n_2 ,\max_test_time_cntr_reg[8]_i_1_n_3 }),
@@ -4712,7 +5210,8 @@ module mipi_init_gen_axi_traffic_gen_v3_0_20_systeminit_mrdwr
         .O(addra[0]));
 endmodule
 
-module mipi_init_gen_axi_traffic_gen_v3_0_20_systeminit_top
+(* ORIG_REF_NAME = "axi_traffic_gen_v3_0_22_systeminit_top" *) 
+module mipi_init_gen_axi_traffic_gen_v3_0_22_systeminit_top
    (m_axi_lite_ch1_awaddr,
     m_axi_lite_ch1_araddr,
     m_axi_lite_ch1_wdata,
@@ -4899,7 +5398,7 @@ module mipi_init_gen_axi_traffic_gen_v3_0_20_systeminit_top
   wire systeminit_dmg_data_n_87;
   wire systeminit_dmg_data_n_88;
 
-  mipi_init_gen_axi_traffic_gen_v3_0_20_systeminit_dmg__parameterized0 \ATG_SYSINIT_DMG.systeminit_dmg_ctrl 
+  mipi_init_gen_axi_traffic_gen_v3_0_22_systeminit_dmg__parameterized0 \ATG_SYSINIT_DMG.systeminit_dmg_ctrl 
        (.\ATG_SYSTEST_NXT_PTR.nxt_rom_ptr_reg[0] (static_mrdwr_n_7),
         .CO(rd_check2),
         .D({\ATG_SYSINIT_DMG.systeminit_dmg_ctrl_n_4 ,\ATG_SYSINIT_DMG.systeminit_dmg_ctrl_n_5 ,\ATG_SYSINIT_DMG.systeminit_dmg_ctrl_n_6 ,\ATG_SYSINIT_DMG.systeminit_dmg_ctrl_n_7 ,\ATG_SYSINIT_DMG.systeminit_dmg_ctrl_n_8 ,\ATG_SYSINIT_DMG.systeminit_dmg_ctrl_n_9 ,\ATG_SYSINIT_DMG.systeminit_dmg_ctrl_n_10 ,\ATG_SYSINIT_DMG.systeminit_dmg_ctrl_n_11 }),
@@ -4913,7 +5412,7 @@ module mipi_init_gen_axi_traffic_gen_v3_0_20_systeminit_top
         .m_axi_lite_ch1_rresp(m_axi_lite_ch1_rresp[0]),
         .m_axi_lite_ch1_rresp_0_sp_1(\ATG_SYSINIT_DMG.systeminit_dmg_ctrl_n_3 ),
         .s_axi_aclk(s_axi_aclk));
-  mipi_init_gen_axi_traffic_gen_v3_0_20_systeminit_dmg \ATG_SYSINIT_DMG.systeminit_dmg_mask 
+  mipi_init_gen_axi_traffic_gen_v3_0_22_systeminit_dmg \ATG_SYSINIT_DMG.systeminit_dmg_mask 
        (.DI(\ATG_SYSINIT_DMG.systeminit_dmg_mask_n_33 ),
         .S(\ATG_SYSINIT_DMG.systeminit_dmg_mask_n_41 ),
         .addra(rom_data_ptr_ff),
@@ -4937,7 +5436,7 @@ module mipi_init_gen_axi_traffic_gen_v3_0_20_systeminit_top
         .\rd_check2_inferred__0/i__carry__1 (systeminit_dmg_addr_n_53),
         .rom_eof0(rom_eof0),
         .s_axi_aclk(s_axi_aclk));
-  mipi_init_gen_axi_traffic_gen_v3_0_20_systeminit_mrdwr static_mrdwr
+  mipi_init_gen_axi_traffic_gen_v3_0_22_systeminit_mrdwr static_mrdwr
        (.\ATG_SYSTEST_NXT_PTR.nxt_rom_ptr_reg[7]_0 ({\ATG_SYSINIT_DMG.systeminit_dmg_ctrl_n_4 ,\ATG_SYSINIT_DMG.systeminit_dmg_ctrl_n_5 ,\ATG_SYSINIT_DMG.systeminit_dmg_ctrl_n_6 ,\ATG_SYSINIT_DMG.systeminit_dmg_ctrl_n_7 ,\ATG_SYSINIT_DMG.systeminit_dmg_ctrl_n_8 ,\ATG_SYSINIT_DMG.systeminit_dmg_ctrl_n_9 ,\ATG_SYSINIT_DMG.systeminit_dmg_ctrl_n_10 ,\ATG_SYSINIT_DMG.systeminit_dmg_ctrl_n_11 }),
         .CO(rd_check2),
         .D(rom_addr),
@@ -4992,7 +5491,7 @@ module mipi_init_gen_axi_traffic_gen_v3_0_20_systeminit_top
         .s_axi_aresetn_0(static_mrdwr_n_0),
         .status(status),
         .\wdata_m_reg[31]_0 (rom_data));
-  mipi_init_gen_axi_traffic_gen_v3_0_20_systeminit_dmg__parameterized1 systeminit_dmg_addr
+  mipi_init_gen_axi_traffic_gen_v3_0_22_systeminit_dmg__parameterized1 systeminit_dmg_addr
        (.addra(rom_data_ptr_ff),
         .b_complete(b_complete),
         .bready_m(bready_m),
@@ -5039,7 +5538,7 @@ module mipi_init_gen_axi_traffic_gen_v3_0_20_systeminit_top
         .s_axi_aclk(s_axi_aclk),
         .s_axi_aresetn(s_axi_aresetn),
         .s_axi_aresetn_0(systeminit_dmg_addr_n_34));
-  mipi_init_gen_axi_traffic_gen_v3_0_20_systeminit_dmg__parameterized2 systeminit_dmg_data
+  mipi_init_gen_axi_traffic_gen_v3_0_22_systeminit_dmg__parameterized2 systeminit_dmg_data
        (.DI({systeminit_dmg_data_n_40,systeminit_dmg_data_n_41,systeminit_dmg_data_n_42,systeminit_dmg_data_n_43}),
         .S({systeminit_dmg_data_n_75,systeminit_dmg_data_n_76,systeminit_dmg_data_n_77,systeminit_dmg_data_n_78}),
         .addra(rom_data_ptr_ff),
@@ -5115,7 +5614,8 @@ endmodule
 (* C_SRAM_F = "mipi_init_gen_default_mstram.mem" *) (* C_STRM_DATA_SEED = "16'b1010101111001101" *) (* C_S_AXI_ARUSER_WIDTH = "8" *) 
 (* C_S_AXI_AWUSER_WIDTH = "8" *) (* C_S_AXI_DATA_WIDTH = "32" *) (* C_S_AXI_ID_WIDTH = "1" *) 
 (* C_WRITE_ONLY = "0" *) (* C_ZERO_INVALID = "1" *) (* DowngradeIPIdentifiedWarnings = "yes" *) 
-module mipi_init_gen_axi_traffic_gen_v3_0_20_top
+(* ORIG_REF_NAME = "axi_traffic_gen_v3_0_22_top" *) 
+module mipi_init_gen_axi_traffic_gen_v3_0_22_top
    (s_axi_aclk,
     s_axi_aresetn,
     core_ext_start,
@@ -5570,6 +6070,8 @@ module mipi_init_gen_axi_traffic_gen_v3_0_20_top
   wire st_flop_fi_out;
   wire st_flop_ze_out;
   wire [31:0]\^status ;
+  wire NLW_cdc_start_sync_dest_out_UNCONNECTED;
+  wire NLW_cdc_stop_sync_dest_out_UNCONNECTED;
 
   assign axis_err_count[15] = \<const0> ;
   assign axis_err_count[14] = \<const0> ;
@@ -6388,7 +6890,7 @@ module mipi_init_gen_axi_traffic_gen_v3_0_20_top
   assign status[11] = \<const0> ;
   assign status[10] = \<const0> ;
   assign status[9:0] = \^status [9:0];
-  mipi_init_gen_axi_traffic_gen_v3_0_20_systeminit_top \ATG_MODE_SYSTEM_INIT_TEST.systeminit_top 
+  mipi_init_gen_axi_traffic_gen_v3_0_22_systeminit_top \ATG_MODE_SYSTEM_INIT_TEST.systeminit_top 
        (.done(done),
         .m_axi_lite_ch1_araddr(m_axi_lite_ch1_araddr),
         .m_axi_lite_ch1_arready(m_axi_lite_ch1_arready),
@@ -6411,526 +6913,166 @@ module mipi_init_gen_axi_traffic_gen_v3_0_20_top
         .status({\^status [31:16],\^status [9:0]}));
   GND GND
        (.G(\<const0> ));
+  (* DEST_SYNC_FF = "4" *) 
+  (* INIT_SYNC_FF = "0" *) 
+  (* SIM_ASSERT_CHK = "0" *) 
+  (* SRC_INPUT_REG = "0" *) 
+  (* VERSION = "0" *) 
+  (* XPM_CDC = "SINGLE" *) 
+  (* XPM_MODULE = "TRUE" *) 
+  mipi_init_gen_xpm_cdc_single__1 cdc_start_sync
+       (.dest_clk(s_axi_aclk),
+        .dest_out(NLW_cdc_start_sync_dest_out_UNCONNECTED),
+        .src_clk(1'b1),
+        .src_in(flop_fi_out));
+  (* DEST_SYNC_FF = "4" *) 
+  (* INIT_SYNC_FF = "0" *) 
+  (* SIM_ASSERT_CHK = "0" *) 
+  (* SRC_INPUT_REG = "0" *) 
+  (* VERSION = "0" *) 
+  (* XPM_CDC = "SINGLE" *) 
+  (* XPM_MODULE = "TRUE" *) 
+  mipi_init_gen_xpm_cdc_single cdc_stop_sync
+       (.dest_clk(s_axi_aclk),
+        .dest_out(NLW_cdc_stop_sync_dest_out_UNCONNECTED),
+        .src_clk(1'b1),
+        .src_in(st_flop_fi_out));
   (* DONT_TOUCH *) 
-  mipi_init_gen_axi_traffic_gen_v3_0_20_asynch_rst_ff__3 ext_st_sync_flop_0
+  mipi_init_gen_axi_traffic_gen_v3_0_22_asynch_rst_ff__3 ext_st_sync_flop_0
        (.clk(s_axi_aclk),
         .data(1'b0),
         .q(st_flop_ze_out),
         .reset(core_ext_stop));
   (* DONT_TOUCH *) 
-  mipi_init_gen_axi_traffic_gen_v3_0_20_asynch_rst_ff ext_st_sync_flop_1
+  mipi_init_gen_axi_traffic_gen_v3_0_22_asynch_rst_ff ext_st_sync_flop_1
        (.clk(s_axi_aclk),
         .data(st_flop_ze_out),
         .q(st_flop_fi_out),
         .reset(core_ext_stop));
   (* DONT_TOUCH *) 
-  mipi_init_gen_axi_traffic_gen_v3_0_20_asynch_rst_ff__1 ext_sync_flop_0
+  mipi_init_gen_axi_traffic_gen_v3_0_22_asynch_rst_ff__1 ext_sync_flop_0
        (.clk(s_axi_aclk),
         .data(1'b0),
         .q(flop_ze_out),
         .reset(core_ext_start));
   (* DONT_TOUCH *) 
-  mipi_init_gen_axi_traffic_gen_v3_0_20_asynch_rst_ff__2 ext_sync_flop_1
+  mipi_init_gen_axi_traffic_gen_v3_0_22_asynch_rst_ff__2 ext_sync_flop_1
        (.clk(s_axi_aclk),
         .data(flop_ze_out),
         .q(flop_fi_out),
         .reset(core_ext_start));
 endmodule
 
-(* CHECK_LICENSE_TYPE = "mipi_init_gen,axi_traffic_gen_v3_0_20_top,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "axi_traffic_gen_v3_0_20_top,Vivado 2024.2.2" *) 
-(* NotValidForBitStream *)
-module mipi_init_gen
-   (s_axi_aclk,
-    s_axi_aresetn,
-    m_axi_lite_ch1_awaddr,
-    m_axi_lite_ch1_awprot,
-    m_axi_lite_ch1_awvalid,
-    m_axi_lite_ch1_awready,
-    m_axi_lite_ch1_wdata,
-    m_axi_lite_ch1_wstrb,
-    m_axi_lite_ch1_wvalid,
-    m_axi_lite_ch1_wready,
-    m_axi_lite_ch1_bresp,
-    m_axi_lite_ch1_bvalid,
-    m_axi_lite_ch1_bready,
-    m_axi_lite_ch1_araddr,
-    m_axi_lite_ch1_arvalid,
-    m_axi_lite_ch1_arready,
-    m_axi_lite_ch1_rdata,
-    m_axi_lite_ch1_rvalid,
-    m_axi_lite_ch1_rresp,
-    m_axi_lite_ch1_rready,
-    done,
-    status);
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clock CLK" *) (* X_INTERFACE_MODE = "slave" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clock, ASSOCIATED_BUSIF S_AXI:M_AXI:M_AXIS_MASTER:S_AXIS_MASTER:M_AXIS_SLAVE:S_AXIS_SLAVE:M_AXI_LITE_CH1:M_AXI_LITE_CH2:M_AXI_LITE_CH3:M_AXI_LITE_CH4:M_AXI_LITE_CH5, ASSOCIATED_RESET s_axi_aresetn, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, INSERT_VIP 0" *) input s_axi_aclk;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 reset RST" *) (* X_INTERFACE_MODE = "slave" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME reset, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input s_axi_aresetn;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_LITE_CH1 AWADDR" *) (* X_INTERFACE_MODE = "master" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME M_AXI_LITE_CH1, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 32, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 1, PHASE 0.0, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *) output [31:0]m_axi_lite_ch1_awaddr;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_LITE_CH1 AWPROT" *) output [2:0]m_axi_lite_ch1_awprot;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_LITE_CH1 AWVALID" *) output m_axi_lite_ch1_awvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_LITE_CH1 AWREADY" *) input m_axi_lite_ch1_awready;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_LITE_CH1 WDATA" *) output [31:0]m_axi_lite_ch1_wdata;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_LITE_CH1 WSTRB" *) output [3:0]m_axi_lite_ch1_wstrb;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_LITE_CH1 WVALID" *) output m_axi_lite_ch1_wvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_LITE_CH1 WREADY" *) input m_axi_lite_ch1_wready;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_LITE_CH1 BRESP" *) input [1:0]m_axi_lite_ch1_bresp;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_LITE_CH1 BVALID" *) input m_axi_lite_ch1_bvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_LITE_CH1 BREADY" *) output m_axi_lite_ch1_bready;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_LITE_CH1 ARADDR" *) output [31:0]m_axi_lite_ch1_araddr;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_LITE_CH1 ARVALID" *) output m_axi_lite_ch1_arvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_LITE_CH1 ARREADY" *) input m_axi_lite_ch1_arready;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_LITE_CH1 RDATA" *) input [31:0]m_axi_lite_ch1_rdata;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_LITE_CH1 RVALID" *) input m_axi_lite_ch1_rvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_LITE_CH1 RRESP" *) input [1:0]m_axi_lite_ch1_rresp;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_LITE_CH1 RREADY" *) output m_axi_lite_ch1_rready;
-  output done;
-  output [31:0]status;
+(* DEST_SYNC_FF = "4" *) (* INIT_SYNC_FF = "0" *) (* ORIG_REF_NAME = "xpm_cdc_single" *) 
+(* SIM_ASSERT_CHK = "0" *) (* SRC_INPUT_REG = "0" *) (* VERSION = "0" *) 
+(* XPM_MODULE = "TRUE" *) (* keep_hierarchy = "soft" *) (* xpm_cdc = "SINGLE" *) 
+module mipi_init_gen_xpm_cdc_single
+   (src_clk,
+    src_in,
+    dest_clk,
+    dest_out);
+  input src_clk;
+  input src_in;
+  input dest_clk;
+  output dest_out;
 
-  wire \<const0> ;
-  wire \<const1> ;
-  wire done;
-  wire [31:0]m_axi_lite_ch1_araddr;
-  wire m_axi_lite_ch1_arready;
-  wire m_axi_lite_ch1_arvalid;
-  wire [31:0]m_axi_lite_ch1_awaddr;
-  wire m_axi_lite_ch1_awready;
-  wire m_axi_lite_ch1_awvalid;
-  wire m_axi_lite_ch1_bready;
-  wire [1:0]m_axi_lite_ch1_bresp;
-  wire m_axi_lite_ch1_bvalid;
-  wire [31:0]m_axi_lite_ch1_rdata;
-  wire m_axi_lite_ch1_rready;
-  wire [1:0]m_axi_lite_ch1_rresp;
-  wire m_axi_lite_ch1_rvalid;
-  wire [31:0]m_axi_lite_ch1_wdata;
-  wire m_axi_lite_ch1_wready;
-  wire m_axi_lite_ch1_wvalid;
-  wire s_axi_aclk;
-  wire s_axi_aresetn;
-  wire [31:0]\^status ;
-  wire NLW_inst_err_out_UNCONNECTED;
-  wire NLW_inst_irq_out_UNCONNECTED;
-  wire NLW_inst_m_axi_arvalid_UNCONNECTED;
-  wire NLW_inst_m_axi_awvalid_UNCONNECTED;
-  wire NLW_inst_m_axi_bready_UNCONNECTED;
-  wire NLW_inst_m_axi_lite_ch2_arvalid_UNCONNECTED;
-  wire NLW_inst_m_axi_lite_ch2_awvalid_UNCONNECTED;
-  wire NLW_inst_m_axi_lite_ch2_bready_UNCONNECTED;
-  wire NLW_inst_m_axi_lite_ch2_rready_UNCONNECTED;
-  wire NLW_inst_m_axi_lite_ch2_wvalid_UNCONNECTED;
-  wire NLW_inst_m_axi_lite_ch3_arvalid_UNCONNECTED;
-  wire NLW_inst_m_axi_lite_ch3_awvalid_UNCONNECTED;
-  wire NLW_inst_m_axi_lite_ch3_bready_UNCONNECTED;
-  wire NLW_inst_m_axi_lite_ch3_rready_UNCONNECTED;
-  wire NLW_inst_m_axi_lite_ch3_wvalid_UNCONNECTED;
-  wire NLW_inst_m_axi_lite_ch4_arvalid_UNCONNECTED;
-  wire NLW_inst_m_axi_lite_ch4_awvalid_UNCONNECTED;
-  wire NLW_inst_m_axi_lite_ch4_bready_UNCONNECTED;
-  wire NLW_inst_m_axi_lite_ch4_rready_UNCONNECTED;
-  wire NLW_inst_m_axi_lite_ch4_wvalid_UNCONNECTED;
-  wire NLW_inst_m_axi_lite_ch5_arvalid_UNCONNECTED;
-  wire NLW_inst_m_axi_lite_ch5_awvalid_UNCONNECTED;
-  wire NLW_inst_m_axi_lite_ch5_bready_UNCONNECTED;
-  wire NLW_inst_m_axi_lite_ch5_rready_UNCONNECTED;
-  wire NLW_inst_m_axi_lite_ch5_wvalid_UNCONNECTED;
-  wire NLW_inst_m_axi_rready_UNCONNECTED;
-  wire NLW_inst_m_axi_wlast_UNCONNECTED;
-  wire NLW_inst_m_axi_wvalid_UNCONNECTED;
-  wire NLW_inst_m_axis_1_tlast_UNCONNECTED;
-  wire NLW_inst_m_axis_1_tvalid_UNCONNECTED;
-  wire NLW_inst_m_axis_2_tlast_UNCONNECTED;
-  wire NLW_inst_m_axis_2_tvalid_UNCONNECTED;
-  wire NLW_inst_s_axi_arready_UNCONNECTED;
-  wire NLW_inst_s_axi_awready_UNCONNECTED;
-  wire NLW_inst_s_axi_bvalid_UNCONNECTED;
-  wire NLW_inst_s_axi_rlast_UNCONNECTED;
-  wire NLW_inst_s_axi_rvalid_UNCONNECTED;
-  wire NLW_inst_s_axi_wready_UNCONNECTED;
-  wire NLW_inst_s_axis_1_tready_UNCONNECTED;
-  wire NLW_inst_s_axis_2_tready_UNCONNECTED;
-  wire [15:0]NLW_inst_axis_err_count_UNCONNECTED;
-  wire [31:0]NLW_inst_m_axi_araddr_UNCONNECTED;
-  wire [1:0]NLW_inst_m_axi_arburst_UNCONNECTED;
-  wire [3:0]NLW_inst_m_axi_arcache_UNCONNECTED;
-  wire [0:0]NLW_inst_m_axi_arid_UNCONNECTED;
-  wire [7:0]NLW_inst_m_axi_arlen_UNCONNECTED;
-  wire [0:0]NLW_inst_m_axi_arlock_UNCONNECTED;
-  wire [2:0]NLW_inst_m_axi_arprot_UNCONNECTED;
-  wire [3:0]NLW_inst_m_axi_arqos_UNCONNECTED;
-  wire [2:0]NLW_inst_m_axi_arsize_UNCONNECTED;
-  wire [7:0]NLW_inst_m_axi_aruser_UNCONNECTED;
-  wire [31:0]NLW_inst_m_axi_awaddr_UNCONNECTED;
-  wire [1:0]NLW_inst_m_axi_awburst_UNCONNECTED;
-  wire [3:0]NLW_inst_m_axi_awcache_UNCONNECTED;
-  wire [0:0]NLW_inst_m_axi_awid_UNCONNECTED;
-  wire [7:0]NLW_inst_m_axi_awlen_UNCONNECTED;
-  wire [0:0]NLW_inst_m_axi_awlock_UNCONNECTED;
-  wire [2:0]NLW_inst_m_axi_awprot_UNCONNECTED;
-  wire [3:0]NLW_inst_m_axi_awqos_UNCONNECTED;
-  wire [2:0]NLW_inst_m_axi_awsize_UNCONNECTED;
-  wire [7:0]NLW_inst_m_axi_awuser_UNCONNECTED;
-  wire [2:0]NLW_inst_m_axi_lite_ch1_awprot_UNCONNECTED;
-  wire [3:0]NLW_inst_m_axi_lite_ch1_wstrb_UNCONNECTED;
-  wire [31:0]NLW_inst_m_axi_lite_ch2_araddr_UNCONNECTED;
-  wire [31:0]NLW_inst_m_axi_lite_ch2_awaddr_UNCONNECTED;
-  wire [2:0]NLW_inst_m_axi_lite_ch2_awprot_UNCONNECTED;
-  wire [31:0]NLW_inst_m_axi_lite_ch2_wdata_UNCONNECTED;
-  wire [3:0]NLW_inst_m_axi_lite_ch2_wstrb_UNCONNECTED;
-  wire [31:0]NLW_inst_m_axi_lite_ch3_araddr_UNCONNECTED;
-  wire [31:0]NLW_inst_m_axi_lite_ch3_awaddr_UNCONNECTED;
-  wire [2:0]NLW_inst_m_axi_lite_ch3_awprot_UNCONNECTED;
-  wire [31:0]NLW_inst_m_axi_lite_ch3_wdata_UNCONNECTED;
-  wire [3:0]NLW_inst_m_axi_lite_ch3_wstrb_UNCONNECTED;
-  wire [31:0]NLW_inst_m_axi_lite_ch4_araddr_UNCONNECTED;
-  wire [31:0]NLW_inst_m_axi_lite_ch4_awaddr_UNCONNECTED;
-  wire [2:0]NLW_inst_m_axi_lite_ch4_awprot_UNCONNECTED;
-  wire [31:0]NLW_inst_m_axi_lite_ch4_wdata_UNCONNECTED;
-  wire [3:0]NLW_inst_m_axi_lite_ch4_wstrb_UNCONNECTED;
-  wire [31:0]NLW_inst_m_axi_lite_ch5_araddr_UNCONNECTED;
-  wire [31:0]NLW_inst_m_axi_lite_ch5_awaddr_UNCONNECTED;
-  wire [2:0]NLW_inst_m_axi_lite_ch5_awprot_UNCONNECTED;
-  wire [31:0]NLW_inst_m_axi_lite_ch5_wdata_UNCONNECTED;
-  wire [3:0]NLW_inst_m_axi_lite_ch5_wstrb_UNCONNECTED;
-  wire [31:0]NLW_inst_m_axi_wdata_UNCONNECTED;
-  wire [3:0]NLW_inst_m_axi_wstrb_UNCONNECTED;
-  wire [31:0]NLW_inst_m_axis_1_tdata_UNCONNECTED;
-  wire [7:0]NLW_inst_m_axis_1_tdest_UNCONNECTED;
-  wire [7:0]NLW_inst_m_axis_1_tid_UNCONNECTED;
-  wire [3:0]NLW_inst_m_axis_1_tkeep_UNCONNECTED;
-  wire [3:0]NLW_inst_m_axis_1_tstrb_UNCONNECTED;
-  wire [7:0]NLW_inst_m_axis_1_tuser_UNCONNECTED;
-  wire [31:0]NLW_inst_m_axis_2_tdata_UNCONNECTED;
-  wire [7:0]NLW_inst_m_axis_2_tdest_UNCONNECTED;
-  wire [7:0]NLW_inst_m_axis_2_tid_UNCONNECTED;
-  wire [3:0]NLW_inst_m_axis_2_tkeep_UNCONNECTED;
-  wire [3:0]NLW_inst_m_axis_2_tstrb_UNCONNECTED;
-  wire [7:0]NLW_inst_m_axis_2_tuser_UNCONNECTED;
-  wire [0:0]NLW_inst_s_axi_bid_UNCONNECTED;
-  wire [1:0]NLW_inst_s_axi_bresp_UNCONNECTED;
-  wire [31:0]NLW_inst_s_axi_rdata_UNCONNECTED;
-  wire [0:0]NLW_inst_s_axi_rid_UNCONNECTED;
-  wire [1:0]NLW_inst_s_axi_rresp_UNCONNECTED;
-  wire [15:10]NLW_inst_status_UNCONNECTED;
+  wire dest_clk;
+  wire src_in;
+  (* RTL_KEEP = "true" *) (* async_reg = "true" *) (* xpm_cdc = "SINGLE" *) wire [3:0]syncstages_ff;
 
-  assign m_axi_lite_ch1_awprot[2] = \<const0> ;
-  assign m_axi_lite_ch1_awprot[1] = \<const0> ;
-  assign m_axi_lite_ch1_awprot[0] = \<const0> ;
-  assign m_axi_lite_ch1_wstrb[3] = \<const1> ;
-  assign m_axi_lite_ch1_wstrb[2] = \<const1> ;
-  assign m_axi_lite_ch1_wstrb[1] = \<const1> ;
-  assign m_axi_lite_ch1_wstrb[0] = \<const1> ;
-  assign status[31:16] = \^status [31:16];
-  assign status[15] = \<const0> ;
-  assign status[14] = \<const0> ;
-  assign status[13] = \<const0> ;
-  assign status[12] = \<const0> ;
-  assign status[11] = \<const0> ;
-  assign status[10] = \<const0> ;
-  assign status[9:0] = \^status [9:0];
-  GND GND
-       (.G(\<const0> ));
-  VCC VCC
-       (.P(\<const1> ));
-  (* ATG_VERSAL_400 = "0" *) 
-  (* C_ADDR_F = "mipi_init_gen_default_addrram.mem" *) 
-  (* C_ATG_AXIS_DATA_GEN_TYPE = "0" *) 
-  (* C_ATG_BASIC_AXI4 = "0" *) 
-  (* C_ATG_HLTP_MODE = "0" *) 
-  (* C_ATG_MIF_ADDR_BITS = "8" *) 
-  (* C_ATG_MIF_DATA_DEPTH = "256" *) 
-  (* C_ATG_REPEAT_TYPE = "0" *) 
-  (* C_ATG_SLAVE_ONLY = "0" *) 
-  (* C_ATG_STATIC = "0" *) 
-  (* C_ATG_STATIC_EN_READ = "1" *) 
-  (* C_ATG_STATIC_EN_WRITE = "1" *) 
-  (* C_ATG_STATIC_FREE_RUN = "1" *) 
-  (* C_ATG_STATIC_INCR = "0" *) 
-  (* C_ATG_STATIC_LENGTH = "16" *) 
-  (* C_ATG_STATIC_RD_ADDRESS = "64'b0000000000000000000000000000000000010011101000000000000000000000" *) 
-  (* C_ATG_STATIC_RD_HIGH_ADDRESS = "64'b0000000000000000000000000000000000010011101000000000111111111111" *) 
-  (* C_ATG_STATIC_RD_PIPELINE = "3" *) 
-  (* C_ATG_STATIC_TRANGAP = "0" *) 
-  (* C_ATG_STATIC_WR_ADDRESS = "64'b0000000000000000000000000000000000010010101000000000000000000000" *) 
-  (* C_ATG_STATIC_WR_HIGH_ADDRESS = "64'b0000000000000000000000000000000000010010101000000000111111111111" *) 
-  (* C_ATG_STATIC_WR_PIPELINE = "3" *) 
-  (* C_ATG_STREAMING = "0" *) 
-  (* C_ATG_STREAMING_MAX_LEN_BITS = "16" *) 
-  (* C_ATG_STREAMING_MEM_FILE = "no_mem_file_loaded" *) 
-  (* C_ATG_STREAMING_MST_LPBK = "0" *) 
-  (* C_ATG_STREAMING_MST_ONLY = "1" *) 
-  (* C_ATG_STREAMING_SLV_LPBK = "0" *) 
-  (* C_ATG_SYSTEM_CH1_HIGH = "1151533055" *) 
-  (* C_ATG_SYSTEM_CH1_LOW = "1151336448" *) 
-  (* C_ATG_SYSTEM_CH2_HIGH = "511" *) 
-  (* C_ATG_SYSTEM_CH2_LOW = "256" *) 
-  (* C_ATG_SYSTEM_CH3_HIGH = "767" *) 
-  (* C_ATG_SYSTEM_CH3_LOW = "512" *) 
-  (* C_ATG_SYSTEM_CH4_HIGH = "1023" *) 
-  (* C_ATG_SYSTEM_CH4_LOW = "768" *) 
-  (* C_ATG_SYSTEM_CH5_HIGH = "1279" *) 
-  (* C_ATG_SYSTEM_CH5_LOW = "1024" *) 
-  (* C_ATG_SYSTEM_CMD_MAX_RETRY = "-16" *) 
-  (* C_ATG_SYSTEM_INIT = "0" *) 
-  (* C_ATG_SYSTEM_INIT_ADDR_MIF = "mipi_init_gen_addr.mem" *) 
-  (* C_ATG_SYSTEM_INIT_CTRL_MIF = "mipi_init_gen_ctrl.mem" *) 
-  (* C_ATG_SYSTEM_INIT_DATA_MIF = "mipi_init_gen_data.mem" *) 
-  (* C_ATG_SYSTEM_INIT_MASK_MIF = "mipi_init_gen_mask.mem" *) 
-  (* C_ATG_SYSTEM_MAX_CHANNELS = "1" *) 
-  (* C_ATG_SYSTEM_TEST = "1" *) 
-  (* C_ATG_SYSTEM_TEST_MAX_CLKS = "-6" *) 
-  (* C_AXIS1_HAS_TKEEP = "1" *) 
-  (* C_AXIS1_HAS_TSTRB = "1" *) 
-  (* C_AXIS2_HAS_TKEEP = "0" *) 
-  (* C_AXIS2_HAS_TSTRB = "0" *) 
-  (* C_AXIS_SPARSE_EN = "1" *) 
-  (* C_AXIS_TDATA_WIDTH = "32" *) 
-  (* C_AXIS_TDEST_WIDTH = "8" *) 
-  (* C_AXIS_TID_WIDTH = "8" *) 
-  (* C_AXIS_TUSER_WIDTH = "8" *) 
-  (* C_AXI_RD_ADDR_SEED = "16'b0101101001011010" *) 
-  (* C_AXI_WR_ADDR_SEED = "16'b0111110010011011" *) 
-  (* C_BASEADDR = "0" *) 
-  (* C_CMDRAM_F = "mipi_init_gen_default_cmdram.mem" *) 
-  (* C_FAMILY = "artix7" *) 
-  (* C_HIGHADDR = "65535" *) 
-  (* C_M_AXI_ADDR_WIDTH = "32" *) 
-  (* C_M_AXI_ARUSER_WIDTH = "8" *) 
-  (* C_M_AXI_AWUSER_WIDTH = "8" *) 
-  (* C_M_AXI_DATA_WIDTH = "32" *) 
-  (* C_M_AXI_THREAD_ID_WIDTH = "1" *) 
-  (* C_NO_EXCL = "0" *) 
-  (* C_PRAM_F = "mipi_init_gen_default_prmram.mem" *) 
-  (* C_RAMINIT_ADDRRAM0_F = "mipi_init_gen_default_addrram.mem" *) 
-  (* C_RAMINIT_CMDRAM0_F = "mipi_init_gen_default_cmdram.mem" *) 
-  (* C_RAMINIT_CMDRAM1_F = "NONE" *) 
-  (* C_RAMINIT_CMDRAM2_F = "NONE" *) 
-  (* C_RAMINIT_CMDRAM3_F = "NONE" *) 
-  (* C_RAMINIT_PARAMRAM0_F = "mipi_init_gen_default_prmram.mem" *) 
-  (* C_RAMINIT_SRAM0_F = "mipi_init_gen_default_mstram.mem" *) 
-  (* C_READ_ONLY = "0" *) 
-  (* C_REPEAT_COUNT = "254" *) 
-  (* C_SRAM_F = "mipi_init_gen_default_mstram.mem" *) 
-  (* C_STRM_DATA_SEED = "16'b1010101111001101" *) 
-  (* C_S_AXI_ARUSER_WIDTH = "8" *) 
-  (* C_S_AXI_AWUSER_WIDTH = "8" *) 
-  (* C_S_AXI_DATA_WIDTH = "32" *) 
-  (* C_S_AXI_ID_WIDTH = "1" *) 
-  (* C_WRITE_ONLY = "0" *) 
-  (* C_ZERO_INVALID = "1" *) 
-  (* DowngradeIPIdentifiedWarnings = "yes" *) 
-  mipi_init_gen_axi_traffic_gen_v3_0_20_top inst
-       (.axis_err_count(NLW_inst_axis_err_count_UNCONNECTED[15:0]),
-        .core_ext_start(1'b0),
-        .core_ext_stop(1'b0),
-        .done(done),
-        .err_out(NLW_inst_err_out_UNCONNECTED),
-        .irq_out(NLW_inst_irq_out_UNCONNECTED),
-        .m_axi_araddr(NLW_inst_m_axi_araddr_UNCONNECTED[31:0]),
-        .m_axi_arburst(NLW_inst_m_axi_arburst_UNCONNECTED[1:0]),
-        .m_axi_arcache(NLW_inst_m_axi_arcache_UNCONNECTED[3:0]),
-        .m_axi_arid(NLW_inst_m_axi_arid_UNCONNECTED[0]),
-        .m_axi_arlen(NLW_inst_m_axi_arlen_UNCONNECTED[7:0]),
-        .m_axi_arlock(NLW_inst_m_axi_arlock_UNCONNECTED[0]),
-        .m_axi_arprot(NLW_inst_m_axi_arprot_UNCONNECTED[2:0]),
-        .m_axi_arqos(NLW_inst_m_axi_arqos_UNCONNECTED[3:0]),
-        .m_axi_arready(1'b0),
-        .m_axi_arsize(NLW_inst_m_axi_arsize_UNCONNECTED[2:0]),
-        .m_axi_aruser(NLW_inst_m_axi_aruser_UNCONNECTED[7:0]),
-        .m_axi_arvalid(NLW_inst_m_axi_arvalid_UNCONNECTED),
-        .m_axi_awaddr(NLW_inst_m_axi_awaddr_UNCONNECTED[31:0]),
-        .m_axi_awburst(NLW_inst_m_axi_awburst_UNCONNECTED[1:0]),
-        .m_axi_awcache(NLW_inst_m_axi_awcache_UNCONNECTED[3:0]),
-        .m_axi_awid(NLW_inst_m_axi_awid_UNCONNECTED[0]),
-        .m_axi_awlen(NLW_inst_m_axi_awlen_UNCONNECTED[7:0]),
-        .m_axi_awlock(NLW_inst_m_axi_awlock_UNCONNECTED[0]),
-        .m_axi_awprot(NLW_inst_m_axi_awprot_UNCONNECTED[2:0]),
-        .m_axi_awqos(NLW_inst_m_axi_awqos_UNCONNECTED[3:0]),
-        .m_axi_awready(1'b0),
-        .m_axi_awsize(NLW_inst_m_axi_awsize_UNCONNECTED[2:0]),
-        .m_axi_awuser(NLW_inst_m_axi_awuser_UNCONNECTED[7:0]),
-        .m_axi_awvalid(NLW_inst_m_axi_awvalid_UNCONNECTED),
-        .m_axi_bid(1'b0),
-        .m_axi_bready(NLW_inst_m_axi_bready_UNCONNECTED),
-        .m_axi_bresp({1'b0,1'b0}),
-        .m_axi_bvalid(1'b0),
-        .m_axi_lite_ch1_araddr(m_axi_lite_ch1_araddr),
-        .m_axi_lite_ch1_arready(m_axi_lite_ch1_arready),
-        .m_axi_lite_ch1_arvalid(m_axi_lite_ch1_arvalid),
-        .m_axi_lite_ch1_awaddr(m_axi_lite_ch1_awaddr),
-        .m_axi_lite_ch1_awprot(NLW_inst_m_axi_lite_ch1_awprot_UNCONNECTED[2:0]),
-        .m_axi_lite_ch1_awready(m_axi_lite_ch1_awready),
-        .m_axi_lite_ch1_awvalid(m_axi_lite_ch1_awvalid),
-        .m_axi_lite_ch1_bready(m_axi_lite_ch1_bready),
-        .m_axi_lite_ch1_bresp({1'b0,m_axi_lite_ch1_bresp[0]}),
-        .m_axi_lite_ch1_bvalid(m_axi_lite_ch1_bvalid),
-        .m_axi_lite_ch1_rdata(m_axi_lite_ch1_rdata),
-        .m_axi_lite_ch1_rready(m_axi_lite_ch1_rready),
-        .m_axi_lite_ch1_rresp(m_axi_lite_ch1_rresp),
-        .m_axi_lite_ch1_rvalid(m_axi_lite_ch1_rvalid),
-        .m_axi_lite_ch1_wdata(m_axi_lite_ch1_wdata),
-        .m_axi_lite_ch1_wready(m_axi_lite_ch1_wready),
-        .m_axi_lite_ch1_wstrb(NLW_inst_m_axi_lite_ch1_wstrb_UNCONNECTED[3:0]),
-        .m_axi_lite_ch1_wvalid(m_axi_lite_ch1_wvalid),
-        .m_axi_lite_ch2_araddr(NLW_inst_m_axi_lite_ch2_araddr_UNCONNECTED[31:0]),
-        .m_axi_lite_ch2_arready(1'b0),
-        .m_axi_lite_ch2_arvalid(NLW_inst_m_axi_lite_ch2_arvalid_UNCONNECTED),
-        .m_axi_lite_ch2_awaddr(NLW_inst_m_axi_lite_ch2_awaddr_UNCONNECTED[31:0]),
-        .m_axi_lite_ch2_awprot(NLW_inst_m_axi_lite_ch2_awprot_UNCONNECTED[2:0]),
-        .m_axi_lite_ch2_awready(1'b0),
-        .m_axi_lite_ch2_awvalid(NLW_inst_m_axi_lite_ch2_awvalid_UNCONNECTED),
-        .m_axi_lite_ch2_bready(NLW_inst_m_axi_lite_ch2_bready_UNCONNECTED),
-        .m_axi_lite_ch2_bresp({1'b0,1'b0}),
-        .m_axi_lite_ch2_bvalid(1'b0),
-        .m_axi_lite_ch2_rdata({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .m_axi_lite_ch2_rready(NLW_inst_m_axi_lite_ch2_rready_UNCONNECTED),
-        .m_axi_lite_ch2_rresp({1'b0,1'b0}),
-        .m_axi_lite_ch2_rvalid(1'b0),
-        .m_axi_lite_ch2_wdata(NLW_inst_m_axi_lite_ch2_wdata_UNCONNECTED[31:0]),
-        .m_axi_lite_ch2_wready(1'b0),
-        .m_axi_lite_ch2_wstrb(NLW_inst_m_axi_lite_ch2_wstrb_UNCONNECTED[3:0]),
-        .m_axi_lite_ch2_wvalid(NLW_inst_m_axi_lite_ch2_wvalid_UNCONNECTED),
-        .m_axi_lite_ch3_araddr(NLW_inst_m_axi_lite_ch3_araddr_UNCONNECTED[31:0]),
-        .m_axi_lite_ch3_arready(1'b0),
-        .m_axi_lite_ch3_arvalid(NLW_inst_m_axi_lite_ch3_arvalid_UNCONNECTED),
-        .m_axi_lite_ch3_awaddr(NLW_inst_m_axi_lite_ch3_awaddr_UNCONNECTED[31:0]),
-        .m_axi_lite_ch3_awprot(NLW_inst_m_axi_lite_ch3_awprot_UNCONNECTED[2:0]),
-        .m_axi_lite_ch3_awready(1'b0),
-        .m_axi_lite_ch3_awvalid(NLW_inst_m_axi_lite_ch3_awvalid_UNCONNECTED),
-        .m_axi_lite_ch3_bready(NLW_inst_m_axi_lite_ch3_bready_UNCONNECTED),
-        .m_axi_lite_ch3_bresp({1'b0,1'b0}),
-        .m_axi_lite_ch3_bvalid(1'b0),
-        .m_axi_lite_ch3_rdata({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .m_axi_lite_ch3_rready(NLW_inst_m_axi_lite_ch3_rready_UNCONNECTED),
-        .m_axi_lite_ch3_rresp({1'b0,1'b0}),
-        .m_axi_lite_ch3_rvalid(1'b0),
-        .m_axi_lite_ch3_wdata(NLW_inst_m_axi_lite_ch3_wdata_UNCONNECTED[31:0]),
-        .m_axi_lite_ch3_wready(1'b0),
-        .m_axi_lite_ch3_wstrb(NLW_inst_m_axi_lite_ch3_wstrb_UNCONNECTED[3:0]),
-        .m_axi_lite_ch3_wvalid(NLW_inst_m_axi_lite_ch3_wvalid_UNCONNECTED),
-        .m_axi_lite_ch4_araddr(NLW_inst_m_axi_lite_ch4_araddr_UNCONNECTED[31:0]),
-        .m_axi_lite_ch4_arready(1'b0),
-        .m_axi_lite_ch4_arvalid(NLW_inst_m_axi_lite_ch4_arvalid_UNCONNECTED),
-        .m_axi_lite_ch4_awaddr(NLW_inst_m_axi_lite_ch4_awaddr_UNCONNECTED[31:0]),
-        .m_axi_lite_ch4_awprot(NLW_inst_m_axi_lite_ch4_awprot_UNCONNECTED[2:0]),
-        .m_axi_lite_ch4_awready(1'b0),
-        .m_axi_lite_ch4_awvalid(NLW_inst_m_axi_lite_ch4_awvalid_UNCONNECTED),
-        .m_axi_lite_ch4_bready(NLW_inst_m_axi_lite_ch4_bready_UNCONNECTED),
-        .m_axi_lite_ch4_bresp({1'b0,1'b0}),
-        .m_axi_lite_ch4_bvalid(1'b0),
-        .m_axi_lite_ch4_rdata({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .m_axi_lite_ch4_rready(NLW_inst_m_axi_lite_ch4_rready_UNCONNECTED),
-        .m_axi_lite_ch4_rresp({1'b0,1'b0}),
-        .m_axi_lite_ch4_rvalid(1'b0),
-        .m_axi_lite_ch4_wdata(NLW_inst_m_axi_lite_ch4_wdata_UNCONNECTED[31:0]),
-        .m_axi_lite_ch4_wready(1'b0),
-        .m_axi_lite_ch4_wstrb(NLW_inst_m_axi_lite_ch4_wstrb_UNCONNECTED[3:0]),
-        .m_axi_lite_ch4_wvalid(NLW_inst_m_axi_lite_ch4_wvalid_UNCONNECTED),
-        .m_axi_lite_ch5_araddr(NLW_inst_m_axi_lite_ch5_araddr_UNCONNECTED[31:0]),
-        .m_axi_lite_ch5_arready(1'b0),
-        .m_axi_lite_ch5_arvalid(NLW_inst_m_axi_lite_ch5_arvalid_UNCONNECTED),
-        .m_axi_lite_ch5_awaddr(NLW_inst_m_axi_lite_ch5_awaddr_UNCONNECTED[31:0]),
-        .m_axi_lite_ch5_awprot(NLW_inst_m_axi_lite_ch5_awprot_UNCONNECTED[2:0]),
-        .m_axi_lite_ch5_awready(1'b0),
-        .m_axi_lite_ch5_awvalid(NLW_inst_m_axi_lite_ch5_awvalid_UNCONNECTED),
-        .m_axi_lite_ch5_bready(NLW_inst_m_axi_lite_ch5_bready_UNCONNECTED),
-        .m_axi_lite_ch5_bresp({1'b0,1'b0}),
-        .m_axi_lite_ch5_bvalid(1'b0),
-        .m_axi_lite_ch5_rdata({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .m_axi_lite_ch5_rready(NLW_inst_m_axi_lite_ch5_rready_UNCONNECTED),
-        .m_axi_lite_ch5_rresp({1'b0,1'b0}),
-        .m_axi_lite_ch5_rvalid(1'b0),
-        .m_axi_lite_ch5_wdata(NLW_inst_m_axi_lite_ch5_wdata_UNCONNECTED[31:0]),
-        .m_axi_lite_ch5_wready(1'b0),
-        .m_axi_lite_ch5_wstrb(NLW_inst_m_axi_lite_ch5_wstrb_UNCONNECTED[3:0]),
-        .m_axi_lite_ch5_wvalid(NLW_inst_m_axi_lite_ch5_wvalid_UNCONNECTED),
-        .m_axi_rdata({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .m_axi_rid(1'b0),
-        .m_axi_rlast(1'b0),
-        .m_axi_rready(NLW_inst_m_axi_rready_UNCONNECTED),
-        .m_axi_rresp({1'b0,1'b0}),
-        .m_axi_rvalid(1'b0),
-        .m_axi_wdata(NLW_inst_m_axi_wdata_UNCONNECTED[31:0]),
-        .m_axi_wlast(NLW_inst_m_axi_wlast_UNCONNECTED),
-        .m_axi_wready(1'b0),
-        .m_axi_wstrb(NLW_inst_m_axi_wstrb_UNCONNECTED[3:0]),
-        .m_axi_wvalid(NLW_inst_m_axi_wvalid_UNCONNECTED),
-        .m_axis_1_tdata(NLW_inst_m_axis_1_tdata_UNCONNECTED[31:0]),
-        .m_axis_1_tdest(NLW_inst_m_axis_1_tdest_UNCONNECTED[7:0]),
-        .m_axis_1_tid(NLW_inst_m_axis_1_tid_UNCONNECTED[7:0]),
-        .m_axis_1_tkeep(NLW_inst_m_axis_1_tkeep_UNCONNECTED[3:0]),
-        .m_axis_1_tlast(NLW_inst_m_axis_1_tlast_UNCONNECTED),
-        .m_axis_1_tready(1'b1),
-        .m_axis_1_tstrb(NLW_inst_m_axis_1_tstrb_UNCONNECTED[3:0]),
-        .m_axis_1_tuser(NLW_inst_m_axis_1_tuser_UNCONNECTED[7:0]),
-        .m_axis_1_tvalid(NLW_inst_m_axis_1_tvalid_UNCONNECTED),
-        .m_axis_2_tdata(NLW_inst_m_axis_2_tdata_UNCONNECTED[31:0]),
-        .m_axis_2_tdest(NLW_inst_m_axis_2_tdest_UNCONNECTED[7:0]),
-        .m_axis_2_tid(NLW_inst_m_axis_2_tid_UNCONNECTED[7:0]),
-        .m_axis_2_tkeep(NLW_inst_m_axis_2_tkeep_UNCONNECTED[3:0]),
-        .m_axis_2_tlast(NLW_inst_m_axis_2_tlast_UNCONNECTED),
-        .m_axis_2_tready(1'b1),
-        .m_axis_2_tstrb(NLW_inst_m_axis_2_tstrb_UNCONNECTED[3:0]),
-        .m_axis_2_tuser(NLW_inst_m_axis_2_tuser_UNCONNECTED[7:0]),
-        .m_axis_2_tvalid(NLW_inst_m_axis_2_tvalid_UNCONNECTED),
-        .s_axi_aclk(s_axi_aclk),
-        .s_axi_araddr({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .s_axi_arburst({1'b0,1'b0}),
-        .s_axi_arcache({1'b0,1'b0,1'b0,1'b0}),
-        .s_axi_aresetn(s_axi_aresetn),
-        .s_axi_arid(1'b0),
-        .s_axi_arlen({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .s_axi_arlock(1'b0),
-        .s_axi_arprot({1'b0,1'b0,1'b0}),
-        .s_axi_arqos({1'b0,1'b0,1'b0,1'b0}),
-        .s_axi_arready(NLW_inst_s_axi_arready_UNCONNECTED),
-        .s_axi_arsize({1'b0,1'b0,1'b0}),
-        .s_axi_aruser({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .s_axi_arvalid(1'b0),
-        .s_axi_awaddr({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .s_axi_awburst({1'b0,1'b0}),
-        .s_axi_awcache({1'b0,1'b0,1'b0,1'b0}),
-        .s_axi_awid(1'b0),
-        .s_axi_awlen({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .s_axi_awlock(1'b0),
-        .s_axi_awprot({1'b0,1'b0,1'b0}),
-        .s_axi_awqos({1'b0,1'b0,1'b0,1'b0}),
-        .s_axi_awready(NLW_inst_s_axi_awready_UNCONNECTED),
-        .s_axi_awsize({1'b0,1'b0,1'b0}),
-        .s_axi_awuser({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .s_axi_awvalid(1'b0),
-        .s_axi_bid(NLW_inst_s_axi_bid_UNCONNECTED[0]),
-        .s_axi_bready(1'b0),
-        .s_axi_bresp(NLW_inst_s_axi_bresp_UNCONNECTED[1:0]),
-        .s_axi_bvalid(NLW_inst_s_axi_bvalid_UNCONNECTED),
-        .s_axi_rdata(NLW_inst_s_axi_rdata_UNCONNECTED[31:0]),
-        .s_axi_rid(NLW_inst_s_axi_rid_UNCONNECTED[0]),
-        .s_axi_rlast(NLW_inst_s_axi_rlast_UNCONNECTED),
-        .s_axi_rready(1'b0),
-        .s_axi_rresp(NLW_inst_s_axi_rresp_UNCONNECTED[1:0]),
-        .s_axi_rvalid(NLW_inst_s_axi_rvalid_UNCONNECTED),
-        .s_axi_wdata({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .s_axi_wlast(1'b0),
-        .s_axi_wready(NLW_inst_s_axi_wready_UNCONNECTED),
-        .s_axi_wstrb({1'b0,1'b0,1'b0,1'b0}),
-        .s_axi_wvalid(1'b0),
-        .s_axis_1_tdata({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .s_axis_1_tdest({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .s_axis_1_tid({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .s_axis_1_tkeep({1'b1,1'b1,1'b1,1'b1}),
-        .s_axis_1_tlast(1'b0),
-        .s_axis_1_tready(NLW_inst_s_axis_1_tready_UNCONNECTED),
-        .s_axis_1_tstrb({1'b1,1'b1,1'b1,1'b1}),
-        .s_axis_1_tuser({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .s_axis_1_tvalid(1'b0),
-        .s_axis_2_tdata({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .s_axis_2_tdest({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .s_axis_2_tid({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .s_axis_2_tkeep({1'b1,1'b1,1'b1,1'b1}),
-        .s_axis_2_tlast(1'b0),
-        .s_axis_2_tready(NLW_inst_s_axis_2_tready_UNCONNECTED),
-        .s_axis_2_tstrb({1'b1,1'b1,1'b1,1'b1}),
-        .s_axis_2_tuser({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .s_axis_2_tvalid(1'b0),
-        .status(\^status ));
+  assign dest_out = syncstages_ff[3];
+  (* ASYNC_REG *) 
+  (* KEEP = "true" *) 
+  (* XPM_CDC = "SINGLE" *) 
+  FDRE \syncstages_ff_reg[0] 
+       (.C(dest_clk),
+        .CE(1'b1),
+        .D(src_in),
+        .Q(syncstages_ff[0]),
+        .R(1'b0));
+  (* ASYNC_REG *) 
+  (* KEEP = "true" *) 
+  (* XPM_CDC = "SINGLE" *) 
+  FDRE \syncstages_ff_reg[1] 
+       (.C(dest_clk),
+        .CE(1'b1),
+        .D(syncstages_ff[0]),
+        .Q(syncstages_ff[1]),
+        .R(1'b0));
+  (* ASYNC_REG *) 
+  (* KEEP = "true" *) 
+  (* XPM_CDC = "SINGLE" *) 
+  FDRE \syncstages_ff_reg[2] 
+       (.C(dest_clk),
+        .CE(1'b1),
+        .D(syncstages_ff[1]),
+        .Q(syncstages_ff[2]),
+        .R(1'b0));
+  (* ASYNC_REG *) 
+  (* KEEP = "true" *) 
+  (* XPM_CDC = "SINGLE" *) 
+  FDRE \syncstages_ff_reg[3] 
+       (.C(dest_clk),
+        .CE(1'b1),
+        .D(syncstages_ff[2]),
+        .Q(syncstages_ff[3]),
+        .R(1'b0));
+endmodule
+
+(* DEST_SYNC_FF = "4" *) (* INIT_SYNC_FF = "0" *) (* ORIG_REF_NAME = "xpm_cdc_single" *) 
+(* SIM_ASSERT_CHK = "0" *) (* SRC_INPUT_REG = "0" *) (* VERSION = "0" *) 
+(* XPM_MODULE = "TRUE" *) (* keep_hierarchy = "soft" *) (* xpm_cdc = "SINGLE" *) 
+module mipi_init_gen_xpm_cdc_single__1
+   (src_clk,
+    src_in,
+    dest_clk,
+    dest_out);
+  input src_clk;
+  input src_in;
+  input dest_clk;
+  output dest_out;
+
+  wire dest_clk;
+  wire src_in;
+  (* RTL_KEEP = "true" *) (* async_reg = "true" *) (* xpm_cdc = "SINGLE" *) wire [3:0]syncstages_ff;
+
+  assign dest_out = syncstages_ff[3];
+  (* ASYNC_REG *) 
+  (* KEEP = "true" *) 
+  (* XPM_CDC = "SINGLE" *) 
+  FDRE \syncstages_ff_reg[0] 
+       (.C(dest_clk),
+        .CE(1'b1),
+        .D(src_in),
+        .Q(syncstages_ff[0]),
+        .R(1'b0));
+  (* ASYNC_REG *) 
+  (* KEEP = "true" *) 
+  (* XPM_CDC = "SINGLE" *) 
+  FDRE \syncstages_ff_reg[1] 
+       (.C(dest_clk),
+        .CE(1'b1),
+        .D(syncstages_ff[0]),
+        .Q(syncstages_ff[1]),
+        .R(1'b0));
+  (* ASYNC_REG *) 
+  (* KEEP = "true" *) 
+  (* XPM_CDC = "SINGLE" *) 
+  FDRE \syncstages_ff_reg[2] 
+       (.C(dest_clk),
+        .CE(1'b1),
+        .D(syncstages_ff[1]),
+        .Q(syncstages_ff[2]),
+        .R(1'b0));
+  (* ASYNC_REG *) 
+  (* KEEP = "true" *) 
+  (* XPM_CDC = "SINGLE" *) 
+  FDRE \syncstages_ff_reg[3] 
+       (.C(dest_clk),
+        .CE(1'b1),
+        .D(syncstages_ff[2]),
+        .Q(syncstages_ff[3]),
+        .R(1'b0));
 endmodule
 
 (* ADDR_WIDTH_A = "8" *) (* ADDR_WIDTH_B = "8" *) (* AUTO_SLEEP_TIME = "0" *) 
@@ -6939,15 +7081,18 @@ endmodule
 (* ECC_TYPE = "NONE" *) (* IGNORE_INIT_SYNTH = "0" *) (* MAX_NUM_CHAR = "0" *) 
 (* MEMORY_INIT_FILE = "mipi_init_gen_mask.mem" *) (* MEMORY_INIT_PARAM = "" *) (* MEMORY_OPTIMIZATION = "true" *) 
 (* MEMORY_PRIMITIVE = "1" *) (* MEMORY_SIZE = "8192" *) (* MEMORY_TYPE = "0" *) 
-(* MESSAGE_CONTROL = "0" *) (* NUM_CHAR_LOC = "0" *) (* P_ECC_MODE = "0" *) 
-(* P_ENABLE_BYTE_WRITE_A = "1" *) (* P_ENABLE_BYTE_WRITE_B = "0" *) (* P_MAX_DEPTH_DATA = "256" *) 
-(* P_MEMORY_OPT = "yes" *) (* P_MEMORY_PRIMITIVE = "0" *) (* P_MIN_WIDTH_DATA = "32" *) 
-(* P_MIN_WIDTH_DATA_A = "32" *) (* P_MIN_WIDTH_DATA_B = "32" *) (* P_MIN_WIDTH_DATA_ECC = "32" *) 
-(* P_MIN_WIDTH_DATA_LDW = "4" *) (* P_MIN_WIDTH_DATA_SHFT = "32" *) (* P_NUM_COLS_WRITE_A = "4" *) 
-(* P_NUM_COLS_WRITE_B = "1" *) (* P_NUM_ROWS_READ_A = "1" *) (* P_NUM_ROWS_READ_B = "1" *) 
-(* P_NUM_ROWS_WRITE_A = "1" *) (* P_NUM_ROWS_WRITE_B = "1" *) (* P_SDP_WRITE_MODE = "yes" *) 
-(* P_WIDTH_ADDR_LSB_READ_A = "0" *) (* P_WIDTH_ADDR_LSB_READ_B = "0" *) (* P_WIDTH_ADDR_LSB_WRITE_A = "0" *) 
-(* P_WIDTH_ADDR_LSB_WRITE_B = "0" *) (* P_WIDTH_ADDR_READ_A = "8" *) (* P_WIDTH_ADDR_READ_B = "8" *) 
+(* MESSAGE_CONTROL = "0" *) (* NUM_CHAR_LOC = "0" *) (* ORIG_REF_NAME = "xpm_memory_base" *) 
+(* P_ECC_MODE = "0" *) (* P_ENABLE_BYTE_WRITE_A = "1" *) (* P_ENABLE_BYTE_WRITE_B = "0" *) 
+(* P_MAX_DEPTH_DATA = "256" *) (* P_MEMORY_OPT = "yes" *) (* P_MEMORY_PRIMITIVE = "0" *) 
+(* P_MIN_WIDTH_DATA = "32" *) (* P_MIN_WIDTH_DATA_A = "32" *) (* P_MIN_WIDTH_DATA_B = "32" *) 
+(* P_MIN_WIDTH_DATA_ECC = "32" *) (* P_MIN_WIDTH_DATA_LDW = "4" *) (* P_MIN_WIDTH_DATA_SHFT = "32" *) 
+(* P_NUM_COLS_WRITE_A = "4" *) (* P_NUM_COLS_WRITE_B = "1" *) (* P_NUM_COL_READ_A = "4" *) 
+(* P_NUM_COL_READ_B = "1" *) (* P_NUM_COL_WRITE_A = "4" *) (* P_NUM_COL_WRITE_B = "1" *) 
+(* P_NUM_ROWS_READ_A = "1" *) (* P_NUM_ROWS_READ_B = "1" *) (* P_NUM_ROWS_WRITE_A = "1" *) 
+(* P_NUM_ROWS_WRITE_B = "1" *) (* P_SDP_WRITE_MODE = "yes" *) (* P_WIDTH_ADDR_LSB_READ_A = "0" *) 
+(* P_WIDTH_ADDR_LSB_READ_B = "0" *) (* P_WIDTH_ADDR_LSB_READ_COLL_A = "2" *) (* P_WIDTH_ADDR_LSB_READ_COLL_B = "1" *) 
+(* P_WIDTH_ADDR_LSB_WRITE_A = "0" *) (* P_WIDTH_ADDR_LSB_WRITE_B = "0" *) (* P_WIDTH_ADDR_LSB_WRITE_COLL_A = "2" *) 
+(* P_WIDTH_ADDR_LSB_WRITE_COLL_B = "1" *) (* P_WIDTH_ADDR_READ_A = "8" *) (* P_WIDTH_ADDR_READ_B = "8" *) 
 (* P_WIDTH_ADDR_WRITE_A = "8" *) (* P_WIDTH_ADDR_WRITE_B = "8" *) (* P_WIDTH_COL_WRITE_A = "8" *) 
 (* P_WIDTH_COL_WRITE_B = "32" *) (* RAM_DECOMP = "auto" *) (* READ_DATA_WIDTH_A = "32" *) 
 (* READ_DATA_WIDTH_B = "32" *) (* READ_LATENCY_A = "1" *) (* READ_LATENCY_B = "1" *) 
@@ -7869,20 +8014,23 @@ endmodule
 (* P_MAX_DEPTH_DATA = "256" *) (* P_MEMORY_OPT = "yes" *) (* P_MEMORY_PRIMITIVE = "0" *) 
 (* P_MIN_WIDTH_DATA = "32" *) (* P_MIN_WIDTH_DATA_A = "32" *) (* P_MIN_WIDTH_DATA_B = "32" *) 
 (* P_MIN_WIDTH_DATA_ECC = "32" *) (* P_MIN_WIDTH_DATA_LDW = "4" *) (* P_MIN_WIDTH_DATA_SHFT = "32" *) 
-(* P_NUM_COLS_WRITE_A = "4" *) (* P_NUM_COLS_WRITE_B = "1" *) (* P_NUM_ROWS_READ_A = "1" *) 
-(* P_NUM_ROWS_READ_B = "1" *) (* P_NUM_ROWS_WRITE_A = "1" *) (* P_NUM_ROWS_WRITE_B = "1" *) 
-(* P_SDP_WRITE_MODE = "yes" *) (* P_WIDTH_ADDR_LSB_READ_A = "0" *) (* P_WIDTH_ADDR_LSB_READ_B = "0" *) 
-(* P_WIDTH_ADDR_LSB_WRITE_A = "0" *) (* P_WIDTH_ADDR_LSB_WRITE_B = "0" *) (* P_WIDTH_ADDR_READ_A = "8" *) 
-(* P_WIDTH_ADDR_READ_B = "8" *) (* P_WIDTH_ADDR_WRITE_A = "8" *) (* P_WIDTH_ADDR_WRITE_B = "8" *) 
-(* P_WIDTH_COL_WRITE_A = "8" *) (* P_WIDTH_COL_WRITE_B = "32" *) (* RAM_DECOMP = "auto" *) 
-(* READ_DATA_WIDTH_A = "32" *) (* READ_DATA_WIDTH_B = "32" *) (* READ_LATENCY_A = "1" *) 
-(* READ_LATENCY_B = "1" *) (* READ_RESET_VALUE_A = "0" *) (* READ_RESET_VALUE_B = "0" *) 
-(* RST_MODE_A = "SYNC" *) (* RST_MODE_B = "SYNC" *) (* SIM_ASSERT_CHK = "0" *) 
-(* USE_EMBEDDED_CONSTRAINT = "0" *) (* USE_MEM_INIT = "1" *) (* USE_MEM_INIT_MMI = "0" *) 
-(* VERSION = "0" *) (* WAKEUP_TIME = "0" *) (* WRITE_DATA_WIDTH_A = "32" *) 
-(* WRITE_DATA_WIDTH_B = "32" *) (* WRITE_MODE_A = "1" *) (* WRITE_MODE_B = "1" *) 
-(* WRITE_PROTECT = "1" *) (* XPM_MODULE = "TRUE" *) (* keep_hierarchy = "soft" *) 
-(* rsta_loop_iter = "32" *) (* rstb_loop_iter = "32" *) 
+(* P_NUM_COLS_WRITE_A = "4" *) (* P_NUM_COLS_WRITE_B = "1" *) (* P_NUM_COL_READ_A = "4" *) 
+(* P_NUM_COL_READ_B = "1" *) (* P_NUM_COL_WRITE_A = "4" *) (* P_NUM_COL_WRITE_B = "1" *) 
+(* P_NUM_ROWS_READ_A = "1" *) (* P_NUM_ROWS_READ_B = "1" *) (* P_NUM_ROWS_WRITE_A = "1" *) 
+(* P_NUM_ROWS_WRITE_B = "1" *) (* P_SDP_WRITE_MODE = "yes" *) (* P_WIDTH_ADDR_LSB_READ_A = "0" *) 
+(* P_WIDTH_ADDR_LSB_READ_B = "0" *) (* P_WIDTH_ADDR_LSB_READ_COLL_A = "2" *) (* P_WIDTH_ADDR_LSB_READ_COLL_B = "1" *) 
+(* P_WIDTH_ADDR_LSB_WRITE_A = "0" *) (* P_WIDTH_ADDR_LSB_WRITE_B = "0" *) (* P_WIDTH_ADDR_LSB_WRITE_COLL_A = "2" *) 
+(* P_WIDTH_ADDR_LSB_WRITE_COLL_B = "1" *) (* P_WIDTH_ADDR_READ_A = "8" *) (* P_WIDTH_ADDR_READ_B = "8" *) 
+(* P_WIDTH_ADDR_WRITE_A = "8" *) (* P_WIDTH_ADDR_WRITE_B = "8" *) (* P_WIDTH_COL_WRITE_A = "8" *) 
+(* P_WIDTH_COL_WRITE_B = "32" *) (* RAM_DECOMP = "auto" *) (* READ_DATA_WIDTH_A = "32" *) 
+(* READ_DATA_WIDTH_B = "32" *) (* READ_LATENCY_A = "1" *) (* READ_LATENCY_B = "1" *) 
+(* READ_RESET_VALUE_A = "0" *) (* READ_RESET_VALUE_B = "0" *) (* RST_MODE_A = "SYNC" *) 
+(* RST_MODE_B = "SYNC" *) (* SIM_ASSERT_CHK = "0" *) (* USE_EMBEDDED_CONSTRAINT = "0" *) 
+(* USE_MEM_INIT = "1" *) (* USE_MEM_INIT_MMI = "0" *) (* VERSION = "0" *) 
+(* WAKEUP_TIME = "0" *) (* WRITE_DATA_WIDTH_A = "32" *) (* WRITE_DATA_WIDTH_B = "32" *) 
+(* WRITE_MODE_A = "1" *) (* WRITE_MODE_B = "1" *) (* WRITE_PROTECT = "1" *) 
+(* XPM_MODULE = "TRUE" *) (* keep_hierarchy = "soft" *) (* rsta_loop_iter = "32" *) 
+(* rstb_loop_iter = "32" *) 
 module mipi_init_gen_xpm_memory_base__parameterized0
    (sleep,
     clka,
@@ -8508,20 +8656,23 @@ endmodule
 (* P_MAX_DEPTH_DATA = "256" *) (* P_MEMORY_OPT = "yes" *) (* P_MEMORY_PRIMITIVE = "0" *) 
 (* P_MIN_WIDTH_DATA = "32" *) (* P_MIN_WIDTH_DATA_A = "32" *) (* P_MIN_WIDTH_DATA_B = "32" *) 
 (* P_MIN_WIDTH_DATA_ECC = "32" *) (* P_MIN_WIDTH_DATA_LDW = "4" *) (* P_MIN_WIDTH_DATA_SHFT = "32" *) 
-(* P_NUM_COLS_WRITE_A = "4" *) (* P_NUM_COLS_WRITE_B = "1" *) (* P_NUM_ROWS_READ_A = "1" *) 
-(* P_NUM_ROWS_READ_B = "1" *) (* P_NUM_ROWS_WRITE_A = "1" *) (* P_NUM_ROWS_WRITE_B = "1" *) 
-(* P_SDP_WRITE_MODE = "yes" *) (* P_WIDTH_ADDR_LSB_READ_A = "0" *) (* P_WIDTH_ADDR_LSB_READ_B = "0" *) 
-(* P_WIDTH_ADDR_LSB_WRITE_A = "0" *) (* P_WIDTH_ADDR_LSB_WRITE_B = "0" *) (* P_WIDTH_ADDR_READ_A = "8" *) 
-(* P_WIDTH_ADDR_READ_B = "8" *) (* P_WIDTH_ADDR_WRITE_A = "8" *) (* P_WIDTH_ADDR_WRITE_B = "8" *) 
-(* P_WIDTH_COL_WRITE_A = "8" *) (* P_WIDTH_COL_WRITE_B = "32" *) (* RAM_DECOMP = "auto" *) 
-(* READ_DATA_WIDTH_A = "32" *) (* READ_DATA_WIDTH_B = "32" *) (* READ_LATENCY_A = "1" *) 
-(* READ_LATENCY_B = "1" *) (* READ_RESET_VALUE_A = "0" *) (* READ_RESET_VALUE_B = "0" *) 
-(* RST_MODE_A = "SYNC" *) (* RST_MODE_B = "SYNC" *) (* SIM_ASSERT_CHK = "0" *) 
-(* USE_EMBEDDED_CONSTRAINT = "0" *) (* USE_MEM_INIT = "1" *) (* USE_MEM_INIT_MMI = "0" *) 
-(* VERSION = "0" *) (* WAKEUP_TIME = "0" *) (* WRITE_DATA_WIDTH_A = "32" *) 
-(* WRITE_DATA_WIDTH_B = "32" *) (* WRITE_MODE_A = "1" *) (* WRITE_MODE_B = "1" *) 
-(* WRITE_PROTECT = "1" *) (* XPM_MODULE = "TRUE" *) (* keep_hierarchy = "soft" *) 
-(* rsta_loop_iter = "32" *) (* rstb_loop_iter = "32" *) 
+(* P_NUM_COLS_WRITE_A = "4" *) (* P_NUM_COLS_WRITE_B = "1" *) (* P_NUM_COL_READ_A = "4" *) 
+(* P_NUM_COL_READ_B = "1" *) (* P_NUM_COL_WRITE_A = "4" *) (* P_NUM_COL_WRITE_B = "1" *) 
+(* P_NUM_ROWS_READ_A = "1" *) (* P_NUM_ROWS_READ_B = "1" *) (* P_NUM_ROWS_WRITE_A = "1" *) 
+(* P_NUM_ROWS_WRITE_B = "1" *) (* P_SDP_WRITE_MODE = "yes" *) (* P_WIDTH_ADDR_LSB_READ_A = "0" *) 
+(* P_WIDTH_ADDR_LSB_READ_B = "0" *) (* P_WIDTH_ADDR_LSB_READ_COLL_A = "2" *) (* P_WIDTH_ADDR_LSB_READ_COLL_B = "1" *) 
+(* P_WIDTH_ADDR_LSB_WRITE_A = "0" *) (* P_WIDTH_ADDR_LSB_WRITE_B = "0" *) (* P_WIDTH_ADDR_LSB_WRITE_COLL_A = "2" *) 
+(* P_WIDTH_ADDR_LSB_WRITE_COLL_B = "1" *) (* P_WIDTH_ADDR_READ_A = "8" *) (* P_WIDTH_ADDR_READ_B = "8" *) 
+(* P_WIDTH_ADDR_WRITE_A = "8" *) (* P_WIDTH_ADDR_WRITE_B = "8" *) (* P_WIDTH_COL_WRITE_A = "8" *) 
+(* P_WIDTH_COL_WRITE_B = "32" *) (* RAM_DECOMP = "auto" *) (* READ_DATA_WIDTH_A = "32" *) 
+(* READ_DATA_WIDTH_B = "32" *) (* READ_LATENCY_A = "1" *) (* READ_LATENCY_B = "1" *) 
+(* READ_RESET_VALUE_A = "0" *) (* READ_RESET_VALUE_B = "0" *) (* RST_MODE_A = "SYNC" *) 
+(* RST_MODE_B = "SYNC" *) (* SIM_ASSERT_CHK = "0" *) (* USE_EMBEDDED_CONSTRAINT = "0" *) 
+(* USE_MEM_INIT = "1" *) (* USE_MEM_INIT_MMI = "0" *) (* VERSION = "0" *) 
+(* WAKEUP_TIME = "0" *) (* WRITE_DATA_WIDTH_A = "32" *) (* WRITE_DATA_WIDTH_B = "32" *) 
+(* WRITE_MODE_A = "1" *) (* WRITE_MODE_B = "1" *) (* WRITE_PROTECT = "1" *) 
+(* XPM_MODULE = "TRUE" *) (* keep_hierarchy = "soft" *) (* rsta_loop_iter = "32" *) 
+(* rstb_loop_iter = "32" *) 
 module mipi_init_gen_xpm_memory_base__parameterized1
    (sleep,
     clka,
@@ -9433,20 +9584,23 @@ endmodule
 (* P_MAX_DEPTH_DATA = "256" *) (* P_MEMORY_OPT = "yes" *) (* P_MEMORY_PRIMITIVE = "0" *) 
 (* P_MIN_WIDTH_DATA = "32" *) (* P_MIN_WIDTH_DATA_A = "32" *) (* P_MIN_WIDTH_DATA_B = "32" *) 
 (* P_MIN_WIDTH_DATA_ECC = "32" *) (* P_MIN_WIDTH_DATA_LDW = "4" *) (* P_MIN_WIDTH_DATA_SHFT = "32" *) 
-(* P_NUM_COLS_WRITE_A = "4" *) (* P_NUM_COLS_WRITE_B = "1" *) (* P_NUM_ROWS_READ_A = "1" *) 
-(* P_NUM_ROWS_READ_B = "1" *) (* P_NUM_ROWS_WRITE_A = "1" *) (* P_NUM_ROWS_WRITE_B = "1" *) 
-(* P_SDP_WRITE_MODE = "yes" *) (* P_WIDTH_ADDR_LSB_READ_A = "0" *) (* P_WIDTH_ADDR_LSB_READ_B = "0" *) 
-(* P_WIDTH_ADDR_LSB_WRITE_A = "0" *) (* P_WIDTH_ADDR_LSB_WRITE_B = "0" *) (* P_WIDTH_ADDR_READ_A = "8" *) 
-(* P_WIDTH_ADDR_READ_B = "8" *) (* P_WIDTH_ADDR_WRITE_A = "8" *) (* P_WIDTH_ADDR_WRITE_B = "8" *) 
-(* P_WIDTH_COL_WRITE_A = "8" *) (* P_WIDTH_COL_WRITE_B = "32" *) (* RAM_DECOMP = "auto" *) 
-(* READ_DATA_WIDTH_A = "32" *) (* READ_DATA_WIDTH_B = "32" *) (* READ_LATENCY_A = "1" *) 
-(* READ_LATENCY_B = "1" *) (* READ_RESET_VALUE_A = "0" *) (* READ_RESET_VALUE_B = "0" *) 
-(* RST_MODE_A = "SYNC" *) (* RST_MODE_B = "SYNC" *) (* SIM_ASSERT_CHK = "0" *) 
-(* USE_EMBEDDED_CONSTRAINT = "0" *) (* USE_MEM_INIT = "1" *) (* USE_MEM_INIT_MMI = "0" *) 
-(* VERSION = "0" *) (* WAKEUP_TIME = "0" *) (* WRITE_DATA_WIDTH_A = "32" *) 
-(* WRITE_DATA_WIDTH_B = "32" *) (* WRITE_MODE_A = "1" *) (* WRITE_MODE_B = "1" *) 
-(* WRITE_PROTECT = "1" *) (* XPM_MODULE = "TRUE" *) (* keep_hierarchy = "soft" *) 
-(* rsta_loop_iter = "32" *) (* rstb_loop_iter = "32" *) 
+(* P_NUM_COLS_WRITE_A = "4" *) (* P_NUM_COLS_WRITE_B = "1" *) (* P_NUM_COL_READ_A = "4" *) 
+(* P_NUM_COL_READ_B = "1" *) (* P_NUM_COL_WRITE_A = "4" *) (* P_NUM_COL_WRITE_B = "1" *) 
+(* P_NUM_ROWS_READ_A = "1" *) (* P_NUM_ROWS_READ_B = "1" *) (* P_NUM_ROWS_WRITE_A = "1" *) 
+(* P_NUM_ROWS_WRITE_B = "1" *) (* P_SDP_WRITE_MODE = "yes" *) (* P_WIDTH_ADDR_LSB_READ_A = "0" *) 
+(* P_WIDTH_ADDR_LSB_READ_B = "0" *) (* P_WIDTH_ADDR_LSB_READ_COLL_A = "2" *) (* P_WIDTH_ADDR_LSB_READ_COLL_B = "1" *) 
+(* P_WIDTH_ADDR_LSB_WRITE_A = "0" *) (* P_WIDTH_ADDR_LSB_WRITE_B = "0" *) (* P_WIDTH_ADDR_LSB_WRITE_COLL_A = "2" *) 
+(* P_WIDTH_ADDR_LSB_WRITE_COLL_B = "1" *) (* P_WIDTH_ADDR_READ_A = "8" *) (* P_WIDTH_ADDR_READ_B = "8" *) 
+(* P_WIDTH_ADDR_WRITE_A = "8" *) (* P_WIDTH_ADDR_WRITE_B = "8" *) (* P_WIDTH_COL_WRITE_A = "8" *) 
+(* P_WIDTH_COL_WRITE_B = "32" *) (* RAM_DECOMP = "auto" *) (* READ_DATA_WIDTH_A = "32" *) 
+(* READ_DATA_WIDTH_B = "32" *) (* READ_LATENCY_A = "1" *) (* READ_LATENCY_B = "1" *) 
+(* READ_RESET_VALUE_A = "0" *) (* READ_RESET_VALUE_B = "0" *) (* RST_MODE_A = "SYNC" *) 
+(* RST_MODE_B = "SYNC" *) (* SIM_ASSERT_CHK = "0" *) (* USE_EMBEDDED_CONSTRAINT = "0" *) 
+(* USE_MEM_INIT = "1" *) (* USE_MEM_INIT_MMI = "0" *) (* VERSION = "0" *) 
+(* WAKEUP_TIME = "0" *) (* WRITE_DATA_WIDTH_A = "32" *) (* WRITE_DATA_WIDTH_B = "32" *) 
+(* WRITE_MODE_A = "1" *) (* WRITE_MODE_B = "1" *) (* WRITE_PROTECT = "1" *) 
+(* XPM_MODULE = "TRUE" *) (* keep_hierarchy = "soft" *) (* rsta_loop_iter = "32" *) 
+(* rstb_loop_iter = "32" *) 
 module mipi_init_gen_xpm_memory_base__parameterized2
    (sleep,
     clka,
@@ -10347,6 +10501,7 @@ module mipi_init_gen_xpm_memory_base__parameterized2
         .WE(1'b0));
 endmodule
 
+(* ORIG_REF_NAME = "xpm_memory_spram" *) 
 module mipi_init_gen_xpm_memory_spram
    (douta,
     \gen_rd_a.gen_rd_a_synth_template.gen_rf_narrow_reg.douta_reg_reg[5] ,
@@ -10615,7 +10770,7 @@ module mipi_init_gen_xpm_memory_spram
   (* ECC_MODE = "0" *) 
   (* ECC_TYPE = "NONE" *) 
   (* IGNORE_INIT_SYNTH = "0" *) 
-  (* KEEP_HIERARCHY = "soft" *) 
+  (* KEEP_HIERARCHY = "SOFT" *) 
   (* MAX_NUM_CHAR = "0" *) 
   (* MEMORY_INIT_FILE = "mipi_init_gen_mask.mem" *) 
   (* MEMORY_INIT_PARAM = "" *) 
@@ -10639,6 +10794,10 @@ module mipi_init_gen_xpm_memory_spram
   (* P_MIN_WIDTH_DATA_SHFT = "32" *) 
   (* P_NUM_COLS_WRITE_A = "4" *) 
   (* P_NUM_COLS_WRITE_B = "1" *) 
+  (* P_NUM_COL_READ_A = "4" *) 
+  (* P_NUM_COL_READ_B = "1" *) 
+  (* P_NUM_COL_WRITE_A = "4" *) 
+  (* P_NUM_COL_WRITE_B = "1" *) 
   (* P_NUM_ROWS_READ_A = "1" *) 
   (* P_NUM_ROWS_READ_B = "1" *) 
   (* P_NUM_ROWS_WRITE_A = "1" *) 
@@ -10646,8 +10805,12 @@ module mipi_init_gen_xpm_memory_spram
   (* P_SDP_WRITE_MODE = "yes" *) 
   (* P_WIDTH_ADDR_LSB_READ_A = "0" *) 
   (* P_WIDTH_ADDR_LSB_READ_B = "0" *) 
+  (* P_WIDTH_ADDR_LSB_READ_COLL_A = "2" *) 
+  (* P_WIDTH_ADDR_LSB_READ_COLL_B = "1" *) 
   (* P_WIDTH_ADDR_LSB_WRITE_A = "0" *) 
   (* P_WIDTH_ADDR_LSB_WRITE_B = "0" *) 
+  (* P_WIDTH_ADDR_LSB_WRITE_COLL_A = "2" *) 
+  (* P_WIDTH_ADDR_LSB_WRITE_COLL_B = "1" *) 
   (* P_WIDTH_ADDR_READ_A = "8" *) 
   (* P_WIDTH_ADDR_READ_B = "8" *) 
   (* P_WIDTH_ADDR_WRITE_A = "8" *) 
@@ -10849,7 +11012,7 @@ module mipi_init_gen_xpm_memory_spram__parameterized0
   (* ECC_MODE = "0" *) 
   (* ECC_TYPE = "NONE" *) 
   (* IGNORE_INIT_SYNTH = "0" *) 
-  (* KEEP_HIERARCHY = "soft" *) 
+  (* KEEP_HIERARCHY = "SOFT" *) 
   (* MAX_NUM_CHAR = "0" *) 
   (* MEMORY_INIT_FILE = "mipi_init_gen_ctrl.mem" *) 
   (* MEMORY_INIT_PARAM = "" *) 
@@ -10873,6 +11036,10 @@ module mipi_init_gen_xpm_memory_spram__parameterized0
   (* P_MIN_WIDTH_DATA_SHFT = "32" *) 
   (* P_NUM_COLS_WRITE_A = "4" *) 
   (* P_NUM_COLS_WRITE_B = "1" *) 
+  (* P_NUM_COL_READ_A = "4" *) 
+  (* P_NUM_COL_READ_B = "1" *) 
+  (* P_NUM_COL_WRITE_A = "4" *) 
+  (* P_NUM_COL_WRITE_B = "1" *) 
   (* P_NUM_ROWS_READ_A = "1" *) 
   (* P_NUM_ROWS_READ_B = "1" *) 
   (* P_NUM_ROWS_WRITE_A = "1" *) 
@@ -10880,8 +11047,12 @@ module mipi_init_gen_xpm_memory_spram__parameterized0
   (* P_SDP_WRITE_MODE = "yes" *) 
   (* P_WIDTH_ADDR_LSB_READ_A = "0" *) 
   (* P_WIDTH_ADDR_LSB_READ_B = "0" *) 
+  (* P_WIDTH_ADDR_LSB_READ_COLL_A = "2" *) 
+  (* P_WIDTH_ADDR_LSB_READ_COLL_B = "1" *) 
   (* P_WIDTH_ADDR_LSB_WRITE_A = "0" *) 
   (* P_WIDTH_ADDR_LSB_WRITE_B = "0" *) 
+  (* P_WIDTH_ADDR_LSB_WRITE_COLL_A = "2" *) 
+  (* P_WIDTH_ADDR_LSB_WRITE_COLL_B = "1" *) 
   (* P_WIDTH_ADDR_READ_A = "8" *) 
   (* P_WIDTH_ADDR_READ_B = "8" *) 
   (* P_WIDTH_ADDR_WRITE_A = "8" *) 
@@ -11509,7 +11680,7 @@ module mipi_init_gen_xpm_memory_spram__parameterized1
   (* ECC_MODE = "0" *) 
   (* ECC_TYPE = "NONE" *) 
   (* IGNORE_INIT_SYNTH = "0" *) 
-  (* KEEP_HIERARCHY = "soft" *) 
+  (* KEEP_HIERARCHY = "SOFT" *) 
   (* MAX_NUM_CHAR = "0" *) 
   (* MEMORY_INIT_FILE = "mipi_init_gen_addr.mem" *) 
   (* MEMORY_INIT_PARAM = "" *) 
@@ -11533,6 +11704,10 @@ module mipi_init_gen_xpm_memory_spram__parameterized1
   (* P_MIN_WIDTH_DATA_SHFT = "32" *) 
   (* P_NUM_COLS_WRITE_A = "4" *) 
   (* P_NUM_COLS_WRITE_B = "1" *) 
+  (* P_NUM_COL_READ_A = "4" *) 
+  (* P_NUM_COL_READ_B = "1" *) 
+  (* P_NUM_COL_WRITE_A = "4" *) 
+  (* P_NUM_COL_WRITE_B = "1" *) 
   (* P_NUM_ROWS_READ_A = "1" *) 
   (* P_NUM_ROWS_READ_B = "1" *) 
   (* P_NUM_ROWS_WRITE_A = "1" *) 
@@ -11540,8 +11715,12 @@ module mipi_init_gen_xpm_memory_spram__parameterized1
   (* P_SDP_WRITE_MODE = "yes" *) 
   (* P_WIDTH_ADDR_LSB_READ_A = "0" *) 
   (* P_WIDTH_ADDR_LSB_READ_B = "0" *) 
+  (* P_WIDTH_ADDR_LSB_READ_COLL_A = "2" *) 
+  (* P_WIDTH_ADDR_LSB_READ_COLL_B = "1" *) 
   (* P_WIDTH_ADDR_LSB_WRITE_A = "0" *) 
   (* P_WIDTH_ADDR_LSB_WRITE_B = "0" *) 
+  (* P_WIDTH_ADDR_LSB_WRITE_COLL_A = "2" *) 
+  (* P_WIDTH_ADDR_LSB_WRITE_COLL_B = "1" *) 
   (* P_WIDTH_ADDR_READ_A = "8" *) 
   (* P_WIDTH_ADDR_READ_B = "8" *) 
   (* P_WIDTH_ADDR_WRITE_A = "8" *) 
@@ -12574,7 +12753,7 @@ module mipi_init_gen_xpm_memory_spram__parameterized2
   (* ECC_MODE = "0" *) 
   (* ECC_TYPE = "NONE" *) 
   (* IGNORE_INIT_SYNTH = "0" *) 
-  (* KEEP_HIERARCHY = "soft" *) 
+  (* KEEP_HIERARCHY = "SOFT" *) 
   (* MAX_NUM_CHAR = "0" *) 
   (* MEMORY_INIT_FILE = "mipi_init_gen_data.mem" *) 
   (* MEMORY_INIT_PARAM = "" *) 
@@ -12598,6 +12777,10 @@ module mipi_init_gen_xpm_memory_spram__parameterized2
   (* P_MIN_WIDTH_DATA_SHFT = "32" *) 
   (* P_NUM_COLS_WRITE_A = "4" *) 
   (* P_NUM_COLS_WRITE_B = "1" *) 
+  (* P_NUM_COL_READ_A = "4" *) 
+  (* P_NUM_COL_READ_B = "1" *) 
+  (* P_NUM_COL_WRITE_A = "4" *) 
+  (* P_NUM_COL_WRITE_B = "1" *) 
   (* P_NUM_ROWS_READ_A = "1" *) 
   (* P_NUM_ROWS_READ_B = "1" *) 
   (* P_NUM_ROWS_WRITE_A = "1" *) 
@@ -12605,8 +12788,12 @@ module mipi_init_gen_xpm_memory_spram__parameterized2
   (* P_SDP_WRITE_MODE = "yes" *) 
   (* P_WIDTH_ADDR_LSB_READ_A = "0" *) 
   (* P_WIDTH_ADDR_LSB_READ_B = "0" *) 
+  (* P_WIDTH_ADDR_LSB_READ_COLL_A = "2" *) 
+  (* P_WIDTH_ADDR_LSB_READ_COLL_B = "1" *) 
   (* P_WIDTH_ADDR_LSB_WRITE_A = "0" *) 
   (* P_WIDTH_ADDR_LSB_WRITE_B = "0" *) 
+  (* P_WIDTH_ADDR_LSB_WRITE_COLL_A = "2" *) 
+  (* P_WIDTH_ADDR_LSB_WRITE_COLL_B = "1" *) 
   (* P_WIDTH_ADDR_READ_A = "8" *) 
   (* P_WIDTH_ADDR_READ_B = "8" *) 
   (* P_WIDTH_ADDR_WRITE_A = "8" *) 

@@ -1632,28 +1632,28 @@ module test_bench();
 	reg					clk_100MHz			;
 	assign clk_100MHz = roic_data_clk;
 
-mipi_csi2_rx_wrapper ex_mipi_csi2_rx
-  (
-    .clk_100MHz                 (clk_100MHz),
-    .done                       (),
-    .done_1                     (),
-    .mipi_phy_if_0_clk_hs_p     (mipi_phy_if_clk_hs_p),
-    .mipi_phy_if_0_clk_hs_n     (mipi_phy_if_clk_hs_n),
-    .mipi_phy_if_0_clk_lp_p     (mipi_phy_if_clk_lp_p),
-    .mipi_phy_if_0_clk_lp_n     (mipi_phy_if_clk_lp_n),
-    .mipi_phy_if_0_data_hs_p    (mipi_phy_if_data_hs_p),
-    .mipi_phy_if_0_data_hs_n    (mipi_phy_if_data_hs_n),
-    .mipi_phy_if_0_data_lp_p    (mipi_phy_if_data_lp_p),
-    .mipi_phy_if_0_data_lp_n    (mipi_phy_if_data_lp_n),
-    .reset_rtl_0                (reset),
-    .rxbyteclkhs                (),
-    .status                     (),
-    .status_1                   (),
-    .video_out_tdata            (),
-    .video_out_tdest            (),
-    .video_out_tlast            (),
-    .video_out_tvalid           ()
-    );
+//mipi_csi2_rx_wrapper ex_mipi_csi2_rx
+//  (
+//    .clk_100MHz                 (clk_100MHz),
+//    .done                       (),
+//    .done_1                     (),
+//    .mipi_phy_if_0_clk_hs_p     (mipi_phy_if_clk_hs_p),
+//    .mipi_phy_if_0_clk_hs_n     (mipi_phy_if_clk_hs_n),
+//    .mipi_phy_if_0_clk_lp_p     (mipi_phy_if_clk_lp_p),
+//    .mipi_phy_if_0_clk_lp_n     (mipi_phy_if_clk_lp_n),
+//    .mipi_phy_if_0_data_hs_p    (mipi_phy_if_data_hs_p),
+//    .mipi_phy_if_0_data_hs_n    (mipi_phy_if_data_hs_n),
+//    .mipi_phy_if_0_data_lp_p    (mipi_phy_if_data_lp_p),
+//    .mipi_phy_if_0_data_lp_n    (mipi_phy_if_data_lp_n),
+//    .reset_rtl_0                (reset),
+//    .rxbyteclkhs                (),
+//    .status                     (),
+//    .status_1                   (),
+//    .video_out_tdata            (),
+//    .video_out_tdest            (),
+//    .video_out_tlast            (),
+//    .video_out_tvalid           ()
+//    );
     
 mipi_csi2_rx_wrapper sv_mipi_csi2_rx
   (
@@ -1811,8 +1811,8 @@ mipi_csi2_rx_wrapper sv_mipi_csi2_rx
 	// TI ROIC test case
 
     // Absolute path to ROIC simulation data files
-    string roic_data_file_path = "/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/ti-roic/tb_src/roic_sim_data_522.txt"; // Path to ROIC simulation data file
-    string roic_256_data_file_path = "/home/holee/github_work/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/ti-roic/tb_src/roic_sim_data_256.txt"; // Path to ROIC simulation data file
+    string roic_data_file_path = "D:/workspace/github-space/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/ti-roic/tb_src/roic_sim_data_522.txt"; // Path to ROIC simulation data file
+    string roic_256_data_file_path = "D:/workspace/github-space/fpga-work/BLUE-HD-FPGA/xdaq_top/source/hdl/ti-roic/tb_src/roic_sim_data_256.txt"; // Path to ROIC simulation data file
     
     logic deser_reset;               // Deserializer reset
     // Test validation signals

@@ -1,9 +1,9 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -- Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2024.2.2 (lin64) Build 6060944 Thu Mar 06 19:10:09 MST 2025
--- Date        : Fri Jan 16 15:13:26 2026
--- Host        : drlinux running 64-bit Ubuntu 22.04.5 LTS
+-- Tool Version: Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+-- Date        : Tue Jan 27 14:13:28 2026
+-- Host        : work-dev running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim -rename_top mipi_csi2_tx_subsys -prefix
 --               mipi_csi2_tx_subsys_ mipi_csi2_tx_subsys_sim_netlist.vhdl
 -- Design      : mipi_csi2_tx_subsys
@@ -33,11 +33,11 @@ entity mipi_csi2_tx_subsys_bd_26df is
     oserdes_clk90_out : out STD_LOGIC;
     oserdes_clk_out : out STD_LOGIC;
     oserdes_clkdiv_out : out STD_LOGIC;
-    s_axi_araddr : in STD_LOGIC_VECTOR ( 12 downto 0 );
+    s_axi_araddr : in STD_LOGIC_VECTOR ( 16 downto 0 );
     s_axi_arprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
     s_axi_arready : out STD_LOGIC_VECTOR ( 0 to 0 );
     s_axi_arvalid : in STD_LOGIC_VECTOR ( 0 to 0 );
-    s_axi_awaddr : in STD_LOGIC_VECTOR ( 12 downto 0 );
+    s_axi_awaddr : in STD_LOGIC_VECTOR ( 16 downto 0 );
     s_axi_awprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
     s_axi_awready : out STD_LOGIC_VECTOR ( 0 to 0 );
     s_axi_awvalid : in STD_LOGIC_VECTOR ( 0 to 0 );
@@ -74,44 +74,63 @@ architecture STRUCTURE of mipi_csi2_tx_subsys_bd_26df is
   port (
     aclk : in STD_LOGIC;
     aresetn : in STD_LOGIC;
-    s_axi_awaddr : in STD_LOGIC_VECTOR ( 12 downto 0 );
-    s_axi_awprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    s_axi_awvalid : in STD_LOGIC_VECTOR ( 0 to 0 );
-    s_axi_awready : out STD_LOGIC_VECTOR ( 0 to 0 );
-    s_axi_wdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    s_axi_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    s_axi_wvalid : in STD_LOGIC_VECTOR ( 0 to 0 );
-    s_axi_wready : out STD_LOGIC_VECTOR ( 0 to 0 );
-    s_axi_bresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    s_axi_bvalid : out STD_LOGIC_VECTOR ( 0 to 0 );
-    s_axi_bready : in STD_LOGIC_VECTOR ( 0 to 0 );
-    s_axi_araddr : in STD_LOGIC_VECTOR ( 12 downto 0 );
-    s_axi_arprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    s_axi_arvalid : in STD_LOGIC_VECTOR ( 0 to 0 );
-    s_axi_arready : out STD_LOGIC_VECTOR ( 0 to 0 );
-    s_axi_rdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    s_axi_rresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    s_axi_rvalid : out STD_LOGIC_VECTOR ( 0 to 0 );
-    s_axi_rready : in STD_LOGIC_VECTOR ( 0 to 0 );
-    m_axi_awaddr : out STD_LOGIC_VECTOR ( 25 downto 0 );
-    m_axi_awprot : out STD_LOGIC_VECTOR ( 5 downto 0 );
-    m_axi_awvalid : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    m_axi_awready : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    m_axi_wdata : out STD_LOGIC_VECTOR ( 63 downto 0 );
-    m_axi_wstrb : out STD_LOGIC_VECTOR ( 7 downto 0 );
-    m_axi_wvalid : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    m_axi_wready : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    m_axi_bresp : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    m_axi_bvalid : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    m_axi_bready : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    m_axi_araddr : out STD_LOGIC_VECTOR ( 25 downto 0 );
-    m_axi_arprot : out STD_LOGIC_VECTOR ( 5 downto 0 );
-    m_axi_arvalid : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    m_axi_arready : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    m_axi_rdata : in STD_LOGIC_VECTOR ( 63 downto 0 );
-    m_axi_rresp : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    m_axi_rvalid : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    m_axi_rready : out STD_LOGIC_VECTOR ( 1 downto 0 )
+    S00_AXI_awaddr : in STD_LOGIC_VECTOR ( 16 downto 0 );
+    S00_AXI_awprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    S00_AXI_awvalid : in STD_LOGIC;
+    S00_AXI_awready : out STD_LOGIC;
+    S00_AXI_wdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    S00_AXI_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    S00_AXI_wvalid : in STD_LOGIC;
+    S00_AXI_wready : out STD_LOGIC;
+    S00_AXI_bresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    S00_AXI_bvalid : out STD_LOGIC;
+    S00_AXI_bready : in STD_LOGIC;
+    S00_AXI_araddr : in STD_LOGIC_VECTOR ( 16 downto 0 );
+    S00_AXI_arprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    S00_AXI_arvalid : in STD_LOGIC;
+    S00_AXI_arready : out STD_LOGIC;
+    S00_AXI_rdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    S00_AXI_rresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    S00_AXI_rvalid : out STD_LOGIC;
+    S00_AXI_rready : in STD_LOGIC;
+    M00_AXI_awaddr : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    M00_AXI_awprot : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    M00_AXI_awvalid : out STD_LOGIC;
+    M00_AXI_awready : in STD_LOGIC;
+    M00_AXI_wdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    M00_AXI_wstrb : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    M00_AXI_wvalid : out STD_LOGIC;
+    M00_AXI_wready : in STD_LOGIC;
+    M00_AXI_bresp : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    M00_AXI_bvalid : in STD_LOGIC;
+    M00_AXI_bready : out STD_LOGIC;
+    M00_AXI_araddr : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    M00_AXI_arprot : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    M00_AXI_arvalid : out STD_LOGIC;
+    M00_AXI_arready : in STD_LOGIC;
+    M00_AXI_rdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    M00_AXI_rresp : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    M00_AXI_rvalid : in STD_LOGIC;
+    M00_AXI_rready : out STD_LOGIC;
+    M01_AXI_awaddr : out STD_LOGIC_VECTOR ( 6 downto 0 );
+    M01_AXI_awprot : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    M01_AXI_awvalid : out STD_LOGIC;
+    M01_AXI_awready : in STD_LOGIC;
+    M01_AXI_wdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    M01_AXI_wstrb : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    M01_AXI_wvalid : out STD_LOGIC;
+    M01_AXI_wready : in STD_LOGIC;
+    M01_AXI_bresp : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    M01_AXI_bvalid : in STD_LOGIC;
+    M01_AXI_bready : out STD_LOGIC;
+    M01_AXI_araddr : out STD_LOGIC_VECTOR ( 6 downto 0 );
+    M01_AXI_arprot : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    M01_AXI_arvalid : out STD_LOGIC;
+    M01_AXI_arready : in STD_LOGIC;
+    M01_AXI_rdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    M01_AXI_rresp : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    M01_AXI_rvalid : in STD_LOGIC;
+    M01_AXI_rready : out STD_LOGIC
   );
   end component mipi_csi2_tx_subsys_bd_26df_axi_crossbar_0_0;
   component mipi_csi2_tx_subsys_bd_26df_mipi_csi2_tx_ctrl_0_0 is
@@ -336,9 +355,9 @@ architecture STRUCTURE of mipi_csi2_tx_subsys_bd_26df is
   signal axi_crossbar_0_M01_AXI_RREADY : STD_LOGIC;
   signal axi_crossbar_0_M01_AXI_RRESP : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal axi_crossbar_0_M01_AXI_RVALID : STD_LOGIC;
-  signal axi_crossbar_0_M01_AXI_WDATA : STD_LOGIC_VECTOR ( 63 downto 32 );
+  signal axi_crossbar_0_M01_AXI_WDATA : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal axi_crossbar_0_M01_AXI_WREADY : STD_LOGIC;
-  signal axi_crossbar_0_M01_AXI_WSTRB : STD_LOGIC_VECTOR ( 7 downto 4 );
+  signal axi_crossbar_0_M01_AXI_WSTRB : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal axi_crossbar_0_M01_AXI_WVALID : STD_LOGIC;
   signal mipi_csi2_tx_ctrl_0_master_reset_4dphy : STD_LOGIC;
   signal mipi_dphy_0_cl_txclkactivehs : STD_LOGIC;
@@ -386,10 +405,10 @@ architecture STRUCTURE of mipi_csi2_tx_subsys_bd_26df is
   signal mipi_dphy_0_tx_mipi_ppi_if_DL3_ULPSACTIVENOT : STD_LOGIC;
   signal \^txbyteclkhs\ : STD_LOGIC;
   signal \^txclkesc_out\ : STD_LOGIC;
-  signal NLW_axi_crossbar_0_m_axi_araddr_UNCONNECTED : STD_LOGIC_VECTOR ( 25 downto 8 );
-  signal NLW_axi_crossbar_0_m_axi_arprot_UNCONNECTED : STD_LOGIC_VECTOR ( 5 downto 0 );
-  signal NLW_axi_crossbar_0_m_axi_awaddr_UNCONNECTED : STD_LOGIC_VECTOR ( 25 downto 8 );
-  signal NLW_axi_crossbar_0_m_axi_awprot_UNCONNECTED : STD_LOGIC_VECTOR ( 5 downto 0 );
+  signal NLW_axi_crossbar_0_M00_AXI_arprot_UNCONNECTED : STD_LOGIC_VECTOR ( 2 downto 0 );
+  signal NLW_axi_crossbar_0_M00_AXI_awprot_UNCONNECTED : STD_LOGIC_VECTOR ( 2 downto 0 );
+  signal NLW_axi_crossbar_0_M01_AXI_arprot_UNCONNECTED : STD_LOGIC_VECTOR ( 2 downto 0 );
+  signal NLW_axi_crossbar_0_M01_AXI_awprot_UNCONNECTED : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal NLW_mipi_csi2_tx_ctrl_0_dl0_txskewcalhs_UNCONNECTED : STD_LOGIC;
   signal NLW_mipi_csi2_tx_ctrl_0_dl1_txskewcalhs_UNCONNECTED : STD_LOGIC;
   signal NLW_mipi_csi2_tx_ctrl_0_dl2_txskewcalhs_UNCONNECTED : STD_LOGIC;
@@ -404,11 +423,11 @@ architecture STRUCTURE of mipi_csi2_tx_subsys_bd_26df is
   signal NLW_mipi_dphy_0_dl3_stopstate_UNCONNECTED : STD_LOGIC;
   signal NLW_mipi_dphy_0_dl3_txreadyesc_UNCONNECTED : STD_LOGIC;
   attribute CHECK_LICENSE_TYPE : string;
-  attribute CHECK_LICENSE_TYPE of axi_crossbar_0 : label is "bd_26df_axi_crossbar_0_0,axi_crossbar_v2_1_36_axi_crossbar,{}";
+  attribute CHECK_LICENSE_TYPE of axi_crossbar_0 : label is "bd_26df_axi_crossbar_0_0,bd_36f1,{}";
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of axi_crossbar_0 : label is "yes";
   attribute X_CORE_INFO : string;
-  attribute X_CORE_INFO of axi_crossbar_0 : label is "axi_crossbar_v2_1_36_axi_crossbar,Vivado 2024.2.2";
+  attribute X_CORE_INFO of axi_crossbar_0 : label is "bd_36f1,Vivado 2025.2";
   attribute C_AXIS_TDATA_WIDTH : string;
   attribute C_AXIS_TDATA_WIDTH of mipi_csi2_tx_ctrl_0 : label is "48";
   attribute C_AXIS_TUSER_WIDTH : string;
@@ -512,9 +531,9 @@ architecture STRUCTURE of mipi_csi2_tx_subsys_bd_26df is
   attribute X_INTERFACE_INFO of oserdes_clkdiv_out : signal is "xilinx.com:signal:clock:1.0 CLK.OSERDES_CLKDIV_OUT CLK";
   attribute X_INTERFACE_PARAMETER of oserdes_clkdiv_out : signal is "XIL_INTERFACENAME CLK.OSERDES_CLKDIV_OUT, CLK_DOMAIN bd_26df_mipi_dphy_0_0_oserdes_clkdiv_out, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
   attribute X_INTERFACE_INFO of s_axis_aclk : signal is "xilinx.com:signal:clock:1.0 CLK.S_AXIS_ACLK CLK";
-  attribute X_INTERFACE_PARAMETER of s_axis_aclk : signal is "XIL_INTERFACENAME CLK.S_AXIS_ACLK, ASSOCIATED_BUSIF s_axi:s_axis, ASSOCIATED_RESET s_axis_aresetn, CLK_DOMAIN bd_26df_s_axis_aclk, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
+  attribute X_INTERFACE_PARAMETER of s_axis_aclk : signal is "XIL_INTERFACENAME CLK.S_AXIS_ACLK, ASSOCIATED_BUSIF s_axi:s_axis, ASSOCIATED_CLKEN s_sc_aclken, ASSOCIATED_RESET s_axis_aresetn, CLK_DOMAIN bd_26df_s_axis_aclk, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
   attribute X_INTERFACE_INFO of s_axis_aresetn : signal is "xilinx.com:signal:reset:1.0 RST.S_AXIS_ARESETN RST";
-  attribute X_INTERFACE_PARAMETER of s_axis_aresetn : signal is "XIL_INTERFACENAME RST.S_AXIS_ARESETN, INSERT_VIP 0, POLARITY ACTIVE_LOW, TYPE INTERCONNECT";
+  attribute X_INTERFACE_PARAMETER of s_axis_aresetn : signal is "XIL_INTERFACENAME RST.S_AXIS_ARESETN, INSERT_VIP 0, POLARITY ACTIVE_LOW";
   attribute X_INTERFACE_INFO of s_axis_tlast : signal is "xilinx.com:interface:axis:1.0 s_axis TLAST";
   attribute X_INTERFACE_INFO of s_axis_tready : signal is "xilinx.com:interface:axis:1.0 s_axis TREADY";
   attribute X_INTERFACE_INFO of s_axis_tvalid : signal is "xilinx.com:interface:axis:1.0 s_axis TVALID";
@@ -528,7 +547,7 @@ architecture STRUCTURE of mipi_csi2_tx_subsys_bd_26df is
   attribute X_INTERFACE_INFO of mipi_phy_if_data_lp_p : signal is "xilinx.com:interface:mipi_phy:1.0 mipi_phy_if DATA_LP_P";
   attribute X_INTERFACE_INFO of s_axi_araddr : signal is "xilinx.com:interface:aximm:1.0 s_axi ARADDR";
   attribute X_INTERFACE_MODE of s_axi_araddr : signal is "Slave";
-  attribute X_INTERFACE_PARAMETER of s_axi_araddr : signal is "XIL_INTERFACENAME s_axi, ADDR_WIDTH 13, ARUSER_WIDTH 0, AWUSER_WIDTH 0, BUSER_WIDTH 0, CLK_DOMAIN bd_26df_s_axis_aclk, DATA_WIDTH 32, FREQ_HZ 100000000, HAS_BRESP 1, HAS_BURST 0, HAS_CACHE 0, HAS_LOCK 0, HAS_PROT 1, HAS_QOS 0, HAS_REGION 0, HAS_RRESP 1, HAS_WSTRB 1, ID_WIDTH 0, INSERT_VIP 0, MAX_BURST_LENGTH 1, NUM_READ_OUTSTANDING 1, NUM_READ_THREADS 1, NUM_WRITE_OUTSTANDING 1, NUM_WRITE_THREADS 1, PHASE 0.0, PROTOCOL AXI4LITE, READ_WRITE_MODE READ_WRITE, RUSER_BITS_PER_BYTE 0, RUSER_WIDTH 0, SUPPORTS_NARROW_BURST 0, WUSER_BITS_PER_BYTE 0, WUSER_WIDTH 0";
+  attribute X_INTERFACE_PARAMETER of s_axi_araddr : signal is "XIL_INTERFACENAME s_axi, ADDR_WIDTH 17, ARUSER_WIDTH 0, AWUSER_WIDTH 0, BUSER_WIDTH 0, CLK_DOMAIN bd_26df_s_axis_aclk, DATA_WIDTH 32, FREQ_HZ 100000000, HAS_BRESP 1, HAS_BURST 0, HAS_CACHE 0, HAS_LOCK 0, HAS_PROT 1, HAS_QOS 0, HAS_REGION 0, HAS_RRESP 1, HAS_WSTRB 1, ID_WIDTH 0, INSERT_VIP 0, MAX_BURST_LENGTH 256, NUM_READ_OUTSTANDING 1, NUM_READ_THREADS 1, NUM_WRITE_OUTSTANDING 1, NUM_WRITE_THREADS 1, PHASE 0.0, PROTOCOL AXI4LITE, READ_WRITE_MODE READ_WRITE, RUSER_BITS_PER_BYTE 0, RUSER_WIDTH 0, SUPPORTS_NARROW_BURST 1, WUSER_BITS_PER_BYTE 0, WUSER_WIDTH 0";
   attribute X_INTERFACE_INFO of s_axi_arprot : signal is "xilinx.com:interface:aximm:1.0 s_axi ARPROT";
   attribute X_INTERFACE_INFO of s_axi_arready : signal is "xilinx.com:interface:aximm:1.0 s_axi ARREADY";
   attribute X_INTERFACE_INFO of s_axi_arvalid : signal is "xilinx.com:interface:aximm:1.0 s_axi ARVALID";
@@ -558,67 +577,65 @@ begin
   txclkesc_out <= \^txclkesc_out\;
 axi_crossbar_0: component mipi_csi2_tx_subsys_bd_26df_axi_crossbar_0_0
      port map (
+      M00_AXI_araddr(7 downto 0) => axi_crossbar_0_M00_AXI_ARADDR(7 downto 0),
+      M00_AXI_arprot(2 downto 0) => NLW_axi_crossbar_0_M00_AXI_arprot_UNCONNECTED(2 downto 0),
+      M00_AXI_arready => axi_crossbar_0_M00_AXI_ARREADY,
+      M00_AXI_arvalid => axi_crossbar_0_M00_AXI_ARVALID,
+      M00_AXI_awaddr(7 downto 0) => axi_crossbar_0_M00_AXI_AWADDR(7 downto 0),
+      M00_AXI_awprot(2 downto 0) => NLW_axi_crossbar_0_M00_AXI_awprot_UNCONNECTED(2 downto 0),
+      M00_AXI_awready => axi_crossbar_0_M00_AXI_AWREADY,
+      M00_AXI_awvalid => axi_crossbar_0_M00_AXI_AWVALID,
+      M00_AXI_bready => axi_crossbar_0_M00_AXI_BREADY,
+      M00_AXI_bresp(1 downto 0) => axi_crossbar_0_M00_AXI_BRESP(1 downto 0),
+      M00_AXI_bvalid => axi_crossbar_0_M00_AXI_BVALID,
+      M00_AXI_rdata(31 downto 0) => axi_crossbar_0_M00_AXI_RDATA(31 downto 0),
+      M00_AXI_rready => axi_crossbar_0_M00_AXI_RREADY,
+      M00_AXI_rresp(1 downto 0) => axi_crossbar_0_M00_AXI_RRESP(1 downto 0),
+      M00_AXI_rvalid => axi_crossbar_0_M00_AXI_RVALID,
+      M00_AXI_wdata(31 downto 0) => axi_crossbar_0_M00_AXI_WDATA(31 downto 0),
+      M00_AXI_wready => axi_crossbar_0_M00_AXI_WREADY,
+      M00_AXI_wstrb(3 downto 0) => axi_crossbar_0_M00_AXI_WSTRB(3 downto 0),
+      M00_AXI_wvalid => axi_crossbar_0_M00_AXI_WVALID,
+      M01_AXI_araddr(6 downto 0) => axi_crossbar_0_M01_AXI_ARADDR(6 downto 0),
+      M01_AXI_arprot(2 downto 0) => NLW_axi_crossbar_0_M01_AXI_arprot_UNCONNECTED(2 downto 0),
+      M01_AXI_arready => axi_crossbar_0_M01_AXI_ARREADY,
+      M01_AXI_arvalid => axi_crossbar_0_M01_AXI_ARVALID,
+      M01_AXI_awaddr(6 downto 0) => axi_crossbar_0_M01_AXI_AWADDR(6 downto 0),
+      M01_AXI_awprot(2 downto 0) => NLW_axi_crossbar_0_M01_AXI_awprot_UNCONNECTED(2 downto 0),
+      M01_AXI_awready => axi_crossbar_0_M01_AXI_AWREADY,
+      M01_AXI_awvalid => axi_crossbar_0_M01_AXI_AWVALID,
+      M01_AXI_bready => axi_crossbar_0_M01_AXI_BREADY,
+      M01_AXI_bresp(1 downto 0) => axi_crossbar_0_M01_AXI_BRESP(1 downto 0),
+      M01_AXI_bvalid => axi_crossbar_0_M01_AXI_BVALID,
+      M01_AXI_rdata(31 downto 0) => axi_crossbar_0_M01_AXI_RDATA(31 downto 0),
+      M01_AXI_rready => axi_crossbar_0_M01_AXI_RREADY,
+      M01_AXI_rresp(1 downto 0) => axi_crossbar_0_M01_AXI_RRESP(1 downto 0),
+      M01_AXI_rvalid => axi_crossbar_0_M01_AXI_RVALID,
+      M01_AXI_wdata(31 downto 0) => axi_crossbar_0_M01_AXI_WDATA(31 downto 0),
+      M01_AXI_wready => axi_crossbar_0_M01_AXI_WREADY,
+      M01_AXI_wstrb(3 downto 0) => axi_crossbar_0_M01_AXI_WSTRB(3 downto 0),
+      M01_AXI_wvalid => axi_crossbar_0_M01_AXI_WVALID,
+      S00_AXI_araddr(16 downto 0) => s_axi_araddr(16 downto 0),
+      S00_AXI_arprot(2 downto 0) => s_axi_arprot(2 downto 0),
+      S00_AXI_arready => s_axi_arready(0),
+      S00_AXI_arvalid => s_axi_arvalid(0),
+      S00_AXI_awaddr(16 downto 0) => s_axi_awaddr(16 downto 0),
+      S00_AXI_awprot(2 downto 0) => s_axi_awprot(2 downto 0),
+      S00_AXI_awready => s_axi_awready(0),
+      S00_AXI_awvalid => s_axi_awvalid(0),
+      S00_AXI_bready => s_axi_bready(0),
+      S00_AXI_bresp(1 downto 0) => s_axi_bresp(1 downto 0),
+      S00_AXI_bvalid => s_axi_bvalid(0),
+      S00_AXI_rdata(31 downto 0) => s_axi_rdata(31 downto 0),
+      S00_AXI_rready => s_axi_rready(0),
+      S00_AXI_rresp(1 downto 0) => s_axi_rresp(1 downto 0),
+      S00_AXI_rvalid => s_axi_rvalid(0),
+      S00_AXI_wdata(31 downto 0) => s_axi_wdata(31 downto 0),
+      S00_AXI_wready => s_axi_wready(0),
+      S00_AXI_wstrb(3 downto 0) => s_axi_wstrb(3 downto 0),
+      S00_AXI_wvalid => s_axi_wvalid(0),
       aclk => s_axis_aclk,
-      aresetn => s_axis_aresetn,
-      m_axi_araddr(25 downto 20) => NLW_axi_crossbar_0_m_axi_araddr_UNCONNECTED(25 downto 20),
-      m_axi_araddr(19 downto 13) => axi_crossbar_0_M01_AXI_ARADDR(6 downto 0),
-      m_axi_araddr(12 downto 8) => NLW_axi_crossbar_0_m_axi_araddr_UNCONNECTED(12 downto 8),
-      m_axi_araddr(7 downto 0) => axi_crossbar_0_M00_AXI_ARADDR(7 downto 0),
-      m_axi_arprot(5 downto 0) => NLW_axi_crossbar_0_m_axi_arprot_UNCONNECTED(5 downto 0),
-      m_axi_arready(1) => axi_crossbar_0_M01_AXI_ARREADY,
-      m_axi_arready(0) => axi_crossbar_0_M00_AXI_ARREADY,
-      m_axi_arvalid(1) => axi_crossbar_0_M01_AXI_ARVALID,
-      m_axi_arvalid(0) => axi_crossbar_0_M00_AXI_ARVALID,
-      m_axi_awaddr(25 downto 20) => NLW_axi_crossbar_0_m_axi_awaddr_UNCONNECTED(25 downto 20),
-      m_axi_awaddr(19 downto 13) => axi_crossbar_0_M01_AXI_AWADDR(6 downto 0),
-      m_axi_awaddr(12 downto 8) => NLW_axi_crossbar_0_m_axi_awaddr_UNCONNECTED(12 downto 8),
-      m_axi_awaddr(7 downto 0) => axi_crossbar_0_M00_AXI_AWADDR(7 downto 0),
-      m_axi_awprot(5 downto 0) => NLW_axi_crossbar_0_m_axi_awprot_UNCONNECTED(5 downto 0),
-      m_axi_awready(1) => axi_crossbar_0_M01_AXI_AWREADY,
-      m_axi_awready(0) => axi_crossbar_0_M00_AXI_AWREADY,
-      m_axi_awvalid(1) => axi_crossbar_0_M01_AXI_AWVALID,
-      m_axi_awvalid(0) => axi_crossbar_0_M00_AXI_AWVALID,
-      m_axi_bready(1) => axi_crossbar_0_M01_AXI_BREADY,
-      m_axi_bready(0) => axi_crossbar_0_M00_AXI_BREADY,
-      m_axi_bresp(3 downto 2) => axi_crossbar_0_M01_AXI_BRESP(1 downto 0),
-      m_axi_bresp(1 downto 0) => axi_crossbar_0_M00_AXI_BRESP(1 downto 0),
-      m_axi_bvalid(1) => axi_crossbar_0_M01_AXI_BVALID,
-      m_axi_bvalid(0) => axi_crossbar_0_M00_AXI_BVALID,
-      m_axi_rdata(63 downto 32) => axi_crossbar_0_M01_AXI_RDATA(31 downto 0),
-      m_axi_rdata(31 downto 0) => axi_crossbar_0_M00_AXI_RDATA(31 downto 0),
-      m_axi_rready(1) => axi_crossbar_0_M01_AXI_RREADY,
-      m_axi_rready(0) => axi_crossbar_0_M00_AXI_RREADY,
-      m_axi_rresp(3 downto 2) => axi_crossbar_0_M01_AXI_RRESP(1 downto 0),
-      m_axi_rresp(1 downto 0) => axi_crossbar_0_M00_AXI_RRESP(1 downto 0),
-      m_axi_rvalid(1) => axi_crossbar_0_M01_AXI_RVALID,
-      m_axi_rvalid(0) => axi_crossbar_0_M00_AXI_RVALID,
-      m_axi_wdata(63 downto 32) => axi_crossbar_0_M01_AXI_WDATA(63 downto 32),
-      m_axi_wdata(31 downto 0) => axi_crossbar_0_M00_AXI_WDATA(31 downto 0),
-      m_axi_wready(1) => axi_crossbar_0_M01_AXI_WREADY,
-      m_axi_wready(0) => axi_crossbar_0_M00_AXI_WREADY,
-      m_axi_wstrb(7 downto 4) => axi_crossbar_0_M01_AXI_WSTRB(7 downto 4),
-      m_axi_wstrb(3 downto 0) => axi_crossbar_0_M00_AXI_WSTRB(3 downto 0),
-      m_axi_wvalid(1) => axi_crossbar_0_M01_AXI_WVALID,
-      m_axi_wvalid(0) => axi_crossbar_0_M00_AXI_WVALID,
-      s_axi_araddr(12 downto 0) => s_axi_araddr(12 downto 0),
-      s_axi_arprot(2 downto 0) => s_axi_arprot(2 downto 0),
-      s_axi_arready(0) => s_axi_arready(0),
-      s_axi_arvalid(0) => s_axi_arvalid(0),
-      s_axi_awaddr(12 downto 0) => s_axi_awaddr(12 downto 0),
-      s_axi_awprot(2 downto 0) => s_axi_awprot(2 downto 0),
-      s_axi_awready(0) => s_axi_awready(0),
-      s_axi_awvalid(0) => s_axi_awvalid(0),
-      s_axi_bready(0) => s_axi_bready(0),
-      s_axi_bresp(1 downto 0) => s_axi_bresp(1 downto 0),
-      s_axi_bvalid(0) => s_axi_bvalid(0),
-      s_axi_rdata(31 downto 0) => s_axi_rdata(31 downto 0),
-      s_axi_rready(0) => s_axi_rready(0),
-      s_axi_rresp(1 downto 0) => s_axi_rresp(1 downto 0),
-      s_axi_rvalid(0) => s_axi_rvalid(0),
-      s_axi_wdata(31 downto 0) => s_axi_wdata(31 downto 0),
-      s_axi_wready(0) => s_axi_wready(0),
-      s_axi_wstrb(3 downto 0) => s_axi_wstrb(3 downto 0),
-      s_axi_wvalid(0) => s_axi_wvalid(0)
+      aresetn => s_axis_aresetn
     );
 mipi_csi2_tx_ctrl_0: component mipi_csi2_tx_subsys_bd_26df_mipi_csi2_tx_ctrl_0_0
      port map (
@@ -802,9 +819,9 @@ mipi_dphy_0: component mipi_csi2_tx_subsys_bd_26df_mipi_dphy_0_0
       s_axi_rready => axi_crossbar_0_M01_AXI_RREADY,
       s_axi_rresp(1 downto 0) => axi_crossbar_0_M01_AXI_RRESP(1 downto 0),
       s_axi_rvalid => axi_crossbar_0_M01_AXI_RVALID,
-      s_axi_wdata(31 downto 0) => axi_crossbar_0_M01_AXI_WDATA(63 downto 32),
+      s_axi_wdata(31 downto 0) => axi_crossbar_0_M01_AXI_WDATA(31 downto 0),
       s_axi_wready => axi_crossbar_0_M01_AXI_WREADY,
-      s_axi_wstrb(3 downto 0) => axi_crossbar_0_M01_AXI_WSTRB(7 downto 4),
+      s_axi_wstrb(3 downto 0) => axi_crossbar_0_M01_AXI_WSTRB(3 downto 0),
       s_axi_wvalid => axi_crossbar_0_M01_AXI_WVALID,
       system_rst_out => system_rst_out,
       txbyteclkhs => \^txbyteclkhs\,
@@ -830,7 +847,7 @@ entity mipi_csi2_tx_subsys is
     cl_tst_clk_out : out STD_LOGIC;
     dl_tst_clk_out : out STD_LOGIC;
     interrupt : out STD_LOGIC;
-    s_axi_awaddr : in STD_LOGIC_VECTOR ( 12 downto 0 );
+    s_axi_awaddr : in STD_LOGIC_VECTOR ( 16 downto 0 );
     s_axi_awprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
     s_axi_awvalid : in STD_LOGIC_VECTOR ( 0 to 0 );
     s_axi_awready : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -841,7 +858,7 @@ entity mipi_csi2_tx_subsys is
     s_axi_bresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
     s_axi_bvalid : out STD_LOGIC_VECTOR ( 0 to 0 );
     s_axi_bready : in STD_LOGIC_VECTOR ( 0 to 0 );
-    s_axi_araddr : in STD_LOGIC_VECTOR ( 12 downto 0 );
+    s_axi_araddr : in STD_LOGIC_VECTOR ( 16 downto 0 );
     s_axi_arprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
     s_axi_arvalid : in STD_LOGIC_VECTOR ( 0 to 0 );
     s_axi_arready : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -872,7 +889,7 @@ entity mipi_csi2_tx_subsys is
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of mipi_csi2_tx_subsys : entity is "yes";
   attribute X_CORE_INFO : string;
-  attribute X_CORE_INFO of mipi_csi2_tx_subsys : entity is "bd_26df,Vivado 2024.2.2";
+  attribute X_CORE_INFO of mipi_csi2_tx_subsys : entity is "bd_26df,Vivado 2025.2";
 end mipi_csi2_tx_subsys;
 
 architecture STRUCTURE of mipi_csi2_tx_subsys is
@@ -903,10 +920,10 @@ architecture STRUCTURE of mipi_csi2_tx_subsys is
   attribute X_INTERFACE_PARAMETER of oserdes_clkdiv_out : signal is "XIL_INTERFACENAME CLK.oserdes_clkdiv_out, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN bd_26df_mipi_dphy_0_0_oserdes_clkdiv_out, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of s_axis_aclk : signal is "xilinx.com:signal:clock:1.0 CLK.s_axis_aclk CLK";
   attribute X_INTERFACE_MODE of s_axis_aclk : signal is "slave";
-  attribute X_INTERFACE_PARAMETER of s_axis_aclk : signal is "XIL_INTERFACENAME CLK.s_axis_aclk, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN bd_26df_s_axis_aclk, ASSOCIATED_BUSIF s_axi:s_axis, ASSOCIATED_RESET s_axis_aresetn, INSERT_VIP 0";
+  attribute X_INTERFACE_PARAMETER of s_axis_aclk : signal is "XIL_INTERFACENAME CLK.s_axis_aclk, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN bd_26df_s_axis_aclk, ASSOCIATED_BUSIF s_axi:s_axis, ASSOCIATED_RESET s_axis_aresetn, INSERT_VIP 0, ASSOCIATED_CLKEN s_sc_aclken";
   attribute X_INTERFACE_INFO of s_axis_aresetn : signal is "xilinx.com:signal:reset:1.0 RST.s_axis_aresetn RST";
   attribute X_INTERFACE_MODE of s_axis_aresetn : signal is "slave";
-  attribute X_INTERFACE_PARAMETER of s_axis_aresetn : signal is "XIL_INTERFACENAME RST.s_axis_aresetn, POLARITY ACTIVE_LOW, INSERT_VIP 0, TYPE INTERCONNECT";
+  attribute X_INTERFACE_PARAMETER of s_axis_aresetn : signal is "XIL_INTERFACENAME RST.s_axis_aresetn, POLARITY ACTIVE_LOW, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of s_axis_tlast : signal is "xilinx.com:interface:axis:1.0 s_axis TLAST";
   attribute X_INTERFACE_INFO of s_axis_tready : signal is "xilinx.com:interface:axis:1.0 s_axis TREADY";
   attribute X_INTERFACE_INFO of s_axis_tvalid : signal is "xilinx.com:interface:axis:1.0 s_axis TVALID";
@@ -926,7 +943,7 @@ architecture STRUCTURE of mipi_csi2_tx_subsys is
   attribute X_INTERFACE_INFO of s_axi_arvalid : signal is "xilinx.com:interface:aximm:1.0 s_axi ARVALID";
   attribute X_INTERFACE_INFO of s_axi_awaddr : signal is "xilinx.com:interface:aximm:1.0 s_axi AWADDR";
   attribute X_INTERFACE_MODE of s_axi_awaddr : signal is "slave";
-  attribute X_INTERFACE_PARAMETER of s_axi_awaddr : signal is "XIL_INTERFACENAME s_axi, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 13, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN bd_26df_s_axis_aclk, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
+  attribute X_INTERFACE_PARAMETER of s_axi_awaddr : signal is "XIL_INTERFACENAME s_axi, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 17, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 1, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 256, PHASE 0.0, CLK_DOMAIN bd_26df_s_axis_aclk, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of s_axi_awprot : signal is "xilinx.com:interface:aximm:1.0 s_axi AWPROT";
   attribute X_INTERFACE_INFO of s_axi_awready : signal is "xilinx.com:interface:aximm:1.0 s_axi AWREADY";
   attribute X_INTERFACE_INFO of s_axi_awvalid : signal is "xilinx.com:interface:aximm:1.0 s_axi AWVALID";
@@ -966,11 +983,11 @@ inst: entity work.mipi_csi2_tx_subsys_bd_26df
       oserdes_clk90_out => oserdes_clk90_out,
       oserdes_clk_out => oserdes_clk_out,
       oserdes_clkdiv_out => oserdes_clkdiv_out,
-      s_axi_araddr(12 downto 0) => s_axi_araddr(12 downto 0),
+      s_axi_araddr(16 downto 0) => s_axi_araddr(16 downto 0),
       s_axi_arprot(2 downto 0) => s_axi_arprot(2 downto 0),
       s_axi_arready(0) => s_axi_arready(0),
       s_axi_arvalid(0) => s_axi_arvalid(0),
-      s_axi_awaddr(12 downto 0) => s_axi_awaddr(12 downto 0),
+      s_axi_awaddr(16 downto 0) => s_axi_awaddr(16 downto 0),
       s_axi_awprot(2 downto 0) => s_axi_awprot(2 downto 0),
       s_axi_awready(0) => s_axi_awready(0),
       s_axi_awvalid(0) => s_axi_awvalid(0),

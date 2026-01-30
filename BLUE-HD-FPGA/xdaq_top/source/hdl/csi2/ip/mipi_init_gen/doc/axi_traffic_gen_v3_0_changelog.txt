@@ -1,3 +1,17 @@
+2025.2:
+ * Version 3.0 (Rev. 22)
+ * General: Bug fix in customization page
+
+2025.1.1:
+ * Version 3.0 (Rev. 21)
+ * No changes
+
+2025.1:
+ * Version 3.0 (Rev. 21)
+ * General: Updated IP Catalog taxonomy structure. This change has no impact to the IP.
+ * General: Reduced number of internal subcores used, no functional change
+ * Revision change in one or more subcores
+
 2024.2.2:
  * Version 3.0 (Rev. 20)
  * No changes

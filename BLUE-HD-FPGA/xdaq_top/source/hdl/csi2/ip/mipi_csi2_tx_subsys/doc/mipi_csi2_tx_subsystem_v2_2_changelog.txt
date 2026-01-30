@@ -1,3 +1,17 @@
+2025.2:
+ * Version 2.2 (Rev. 18)
+ * General: Updated constraints and added line-rate restrictions in accordance with the device datasheet. Integrated SmartConnect IP. These changes do not affect the functional behavior of the IP.
+ * Revision change in one or more subcores
+
+2025.1.1:
+ * Version 2.2 (Rev. 17)
+ * Revision change in one or more subcores
+
+2025.1:
+ * Version 2.2 (Rev. 16)
+ * General: Updated IP Catalog taxonomy structure. This change has no impact to the IP.
+ * Revision change in one or more subcores
+
 2024.2.2:
  * Version 2.2 (Rev. 15)
  * Revision change in one or more subcores

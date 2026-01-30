@@ -350,7 +350,7 @@ wire  [3:0] phy_wr_en_data_muxout;
 // Deskew signal Declaration Start 
 
 wire         deskew_start     ; 
-wire         deskew_done      ; 
+//wire         deskew_done      ; 
 wire         ld               ; 
 wire [8:0]   cntvaluein       ; 
 wire [8:0]   cntvalueout      ; 

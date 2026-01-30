@@ -48,7 +48,7 @@
 
 
 // IP VLNV: xilinx.com:ip:axi_traffic_gen:3.0
-// IP Revision: 20
+// IP Revision: 22
 
 `timescale 1ns/1ps
 
@@ -128,7 +128,7 @@ output wire m_axi_lite_ch1_rready;
 output wire done;
 output wire [31 : 0] status;
 
-  axi_traffic_gen_v3_0_20_top #(
+  axi_traffic_gen_v3_0_22_top #(
     .C_FAMILY("artix7"),
     .C_BASEADDR(32'H00000000),
     .C_HIGHADDR(32'H0000FFFF),

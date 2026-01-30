@@ -46,7 +46,7 @@
 -- 
 -- DO NOT MODIFY THIS FILE.
 -- IP VLNV: xilinx.com:ip:mipi_csi2_tx_subsystem:2.2
--- IP Revision: 15
+-- IP Revision: 18
 
 -- The following code must appear in the VHDL architecture header.
 
@@ -66,7 +66,7 @@ COMPONENT mipi_csi2_tx_subsys
     cl_tst_clk_out : OUT STD_LOGIC;
     dl_tst_clk_out : OUT STD_LOGIC;
     interrupt : OUT STD_LOGIC;
-    s_axi_awaddr : IN STD_LOGIC_VECTOR(12 DOWNTO 0);
+    s_axi_awaddr : IN STD_LOGIC_VECTOR(16 DOWNTO 0);
     s_axi_awprot : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
     s_axi_awvalid : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
     s_axi_awready : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
@@ -77,7 +77,7 @@ COMPONENT mipi_csi2_tx_subsys
     s_axi_bresp : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
     s_axi_bvalid : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
     s_axi_bready : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
-    s_axi_araddr : IN STD_LOGIC_VECTOR(12 DOWNTO 0);
+    s_axi_araddr : IN STD_LOGIC_VECTOR(16 DOWNTO 0);
     s_axi_arprot : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
     s_axi_arvalid : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
     s_axi_arready : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);

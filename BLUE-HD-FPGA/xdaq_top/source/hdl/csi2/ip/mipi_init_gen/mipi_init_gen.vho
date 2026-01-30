@@ -46,7 +46,7 @@
 -- 
 -- DO NOT MODIFY THIS FILE.
 -- IP VLNV: xilinx.com:ip:axi_traffic_gen:3.0
--- IP Revision: 20
+-- IP Revision: 22
 
 -- The following code must appear in the VHDL architecture header.
 

@@ -1,14 +1,14 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xE1BF21A28C1AC0D3",
+      "boundary_crc": "0xCFC5C44ACCD1EC6",
       "design_src": "SBD",
       "device": "xc7a35tfgg484-1",
       "name": "bd_26df",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "scoped": "true",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2024.2.2",
+      "tool_version": "2025.2",
       "validated": "true"
     },
     "design_tree": {
@@ -20,7 +20,13 @@
       "mipi_phy_if": {
         "mode": "Master",
         "vlnv_bus_definition": "xilinx.com:interface:mipi_phy:1.0",
-        "vlnv": "xilinx.com:interface:mipi_phy_rtl:1.0"
+        "vlnv": "xilinx.com:interface:mipi_phy_rtl:1.0",
+        "hdl_attributes": {
+          "LOCKED": {
+            "value": "FALSE",
+            "value_src": "default"
+          }
+        }
       },
       "s_axi": {
         "mode": "Slave",
@@ -28,8 +34,7 @@
         "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
         "parameters": {
           "ADDR_WIDTH": {
-            "value": "13",
-            "value_src": "user_prop"
+            "value": "17"
           },
           "ARUSER_WIDTH": {
             "value": "0",
@@ -56,27 +61,27 @@
           },
           "HAS_BRESP": {
             "value": "1",
-            "value_src": "constant"
+            "value_src": "default"
           },
           "HAS_BURST": {
             "value": "0",
-            "value_src": "default"
+            "value_src": "ip"
           },
           "HAS_CACHE": {
             "value": "0",
-            "value_src": "default"
+            "value_src": "ip"
           },
           "HAS_LOCK": {
             "value": "0",
-            "value_src": "default"
+            "value_src": "ip"
           },
           "HAS_PROT": {
             "value": "1",
-            "value_src": "constant"
+            "value_src": "default"
           },
           "HAS_QOS": {
             "value": "0",
-            "value_src": "default"
+            "value_src": "ip"
           },
           "HAS_REGION": {
             "value": "0",
@@ -84,35 +89,33 @@
           },
           "HAS_RRESP": {
             "value": "1",
-            "value_src": "constant"
+            "value_src": "default"
           },
           "HAS_WSTRB": {
             "value": "1",
-            "value_src": "constant"
+            "value_src": "default"
           },
           "ID_WIDTH": {
             "value": "0",
-            "value_src": "ip"
+            "value_src": "default"
           },
           "INSERT_VIP": {
             "value": "0",
             "value_src": "default"
           },
           "MAX_BURST_LENGTH": {
-            "value": "1",
-            "value_src": "default"
+            "value": "256",
+            "value_src": "default_prop"
           },
           "NUM_READ_OUTSTANDING": {
-            "value": "1",
-            "value_src": "default"
+            "value": "1"
           },
           "NUM_READ_THREADS": {
             "value": "1",
             "value_src": "default"
           },
           "NUM_WRITE_OUTSTANDING": {
-            "value": "1",
-            "value_src": "default"
+            "value": "1"
           },
           "NUM_WRITE_THREADS": {
             "value": "1",
@@ -138,8 +141,8 @@
             "value_src": "default"
           },
           "SUPPORTS_NARROW_BURST": {
-            "value": "0",
-            "value_src": "default"
+            "value": "1",
+            "value_src": "default_prop"
           },
           "WUSER_BITS_PER_BYTE": {
             "value": "0",
@@ -153,8 +156,20 @@
         "address_space_ref": "s_axi",
         "base_address": {
           "minimum": "0x00000000",
-          "maximum": "0x00001FFF",
-          "width": "13"
+          "maximum": "0x0001FFFF",
+          "width": "17"
+        },
+        "bd_attributes": {
+          "TYPE": {
+            "value": "END_POINT",
+            "value_src": "auto"
+          }
+        },
+        "hdl_attributes": {
+          "LOCKED": {
+            "value": "FALSE",
+            "value_src": "default"
+          }
         }
       },
       "s_axis": {
@@ -214,6 +229,12 @@
             "value": "96",
             "value_src": "auto"
           }
+        },
+        "hdl_attributes": {
+          "LOCKED": {
+            "value": "FALSE",
+            "value_src": "default"
+          }
         }
       }
     },
@@ -224,6 +245,10 @@
         "parameters": {
           "ASSOCIATED_BUSIF": {
             "value": "s_axi:s_axis"
+          },
+          "ASSOCIATED_CLKEN": {
+            "value": "s_sc_aclken",
+            "value_src": "constant"
           },
           "ASSOCIATED_RESET": {
             "value": "s_axis_aresetn"
@@ -260,10 +285,6 @@
           },
           "POLARITY": {
             "value": "ACTIVE_LOW"
-          },
-          "TYPE": {
-            "value": "INTERCONNECT",
-            "value_src": "default"
           }
         }
       },
@@ -499,8 +520,9 @@
         "vlnv": "xilinx.com:ip:mipi_csi2_tx_ctrl:1.0",
         "ip_revision": "6",
         "xci_name": "bd_26df_mipi_csi2_tx_ctrl_0_0",
-        "xci_path": "ip/ip_0/bd_26df_mipi_csi2_tx_ctrl_0_0.xci",
+        "xci_path": "ip\\ip_0\\bd_26df_mipi_csi2_tx_ctrl_0_0.xci",
         "inst_hier_path": "mipi_csi2_tx_ctrl_0",
+        "has_run_ip_tcl": "true",
         "parameters": {
           "C_CSI_CLK_PRE": {
             "value": "1"
@@ -557,10 +579,11 @@
       },
       "mipi_dphy_0": {
         "vlnv": "xilinx.com:ip:mipi_dphy:4.3",
-        "ip_revision": "14",
+        "ip_revision": "17",
         "xci_name": "bd_26df_mipi_dphy_0_0",
-        "xci_path": "ip/ip_1/bd_26df_mipi_dphy_0_0.xci",
+        "xci_path": "ip\\ip_1\\bd_26df_mipi_dphy_0_0.xci",
         "inst_hier_path": "mipi_dphy_0",
+        "has_run_ip_tcl": "true",
         "parameters": {
           "C_CLK_IO_SWAP": {
             "value": "false"
@@ -655,48 +678,115 @@
         }
       },
       "axi_crossbar_0": {
-        "vlnv": "xilinx.com:ip:axi_crossbar:2.1",
-        "ip_revision": "36",
+        "vlnv": "xilinx.com:ip:smartconnect:1.0",
+        "ip_revision": "28",
         "xci_name": "bd_26df_axi_crossbar_0_0",
-        "xci_path": "ip/ip_2/bd_26df_axi_crossbar_0_0.xci",
+        "xci_path": "ip\\ip_2\\bd_26df_axi_crossbar_0_0.xci",
         "inst_hier_path": "axi_crossbar_0",
+        "has_run_ip_tcl": "true",
         "parameters": {
-          "ADDR_WIDTH": {
-            "value": "13"
+          "HAS_ARESETN": {
+            "value": "1"
           },
-          "DATA_WIDTH": {
-            "value": "32"
-          },
-          "M00_A00_ADDR_WIDTH": {
-            "value": "12"
-          },
-          "M00_A00_BASE_ADDR": {
-            "value": "0x0000000000000000"
-          },
-          "M01_A00_ADDR_WIDTH": {
-            "value": "12"
-          },
-          "M01_A00_BASE_ADDR": {
-            "value": "0x0000000000001000"
+          "NUM_CLKS": {
+            "value": "1"
           },
           "NUM_MI": {
             "value": "2"
           },
-          "PROTOCOL": {
-            "value": "AXI4LITE"
-          },
-          "R_REGISTER": {
+          "NUM_SI": {
             "value": "1"
           }
         },
         "interface_ports": {
           "S00_AXI": {
-            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
             "mode": "Slave",
+            "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+            "parameters": {
+              "NUM_READ_OUTSTANDING": {
+                "value": "1"
+              },
+              "NUM_WRITE_OUTSTANDING": {
+                "value": "1"
+              }
+            },
             "bridges": [
               "M00_AXI",
               "M01_AXI"
-            ]
+            ],
+            "bd_attributes": {
+              "BRIDGES": {
+                "value": "M00_AXI:M01_AXI",
+                "value_src": "auto"
+              },
+              "TYPE": {
+                "value": "interior",
+                "value_src": "default"
+              }
+            }
+          },
+          "M00_AXI": {
+            "mode": "Master",
+            "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+            "parameters": {
+              "NUM_READ_OUTSTANDING": {
+                "value": "1"
+              },
+              "NUM_READ_THREADS": {
+                "value": "1"
+              },
+              "NUM_WRITE_OUTSTANDING": {
+                "value": "1"
+              },
+              "NUM_WRITE_THREADS": {
+                "value": "1"
+              },
+              "RUSER_BITS_PER_BYTE": {
+                "value": "0"
+              },
+              "WUSER_BITS_PER_BYTE": {
+                "value": "0"
+              }
+            },
+            "bd_attributes": {
+              "TYPE": {
+                "value": "interior",
+                "value_src": "default"
+              }
+            }
+          },
+          "M01_AXI": {
+            "mode": "Master",
+            "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+            "parameters": {
+              "NUM_READ_OUTSTANDING": {
+                "value": "1"
+              },
+              "NUM_READ_THREADS": {
+                "value": "1"
+              },
+              "NUM_WRITE_OUTSTANDING": {
+                "value": "1"
+              },
+              "NUM_WRITE_THREADS": {
+                "value": "1"
+              },
+              "RUSER_BITS_PER_BYTE": {
+                "value": "0"
+              },
+              "WUSER_BITS_PER_BYTE": {
+                "value": "0"
+              }
+            },
+            "bd_attributes": {
+              "TYPE": {
+                "value": "interior",
+                "value_src": "default"
+              }
+            }
           }
         }
       }
@@ -854,18 +944,18 @@
       "/": {
         "address_spaces": {
           "s_axi": {
-            "range": "8K",
-            "width": "13",
+            "range": "128K",
+            "width": "17",
             "segments": {
               "mipi_csi2_tx_ctrl_0": {
                 "address_block": "/mipi_csi2_tx_ctrl_0/s_axi/reg0",
-                "offset": "0x0000",
+                "offset": "0x00000",
                 "range": "4K",
                 "is_combined_segments": "TRUE"
               },
               "mipi_dphy_0": {
                 "address_block": "/mipi_dphy_0/s_axi/Reg",
-                "offset": "0x1000",
+                "offset": "0x01000",
                 "range": "4K",
                 "is_combined_segments": "TRUE"
               }

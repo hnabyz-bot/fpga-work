@@ -48,7 +48,7 @@
 
 
 // IP VLNV: xilinx.com:ip:axis_data_fifo:2.0
-// IP Revision: 16
+// IP Revision: 17
 
 `timescale 1ns/1ps
 
@@ -116,7 +116,7 @@ output wire m_axis_tlast;
 output wire almost_empty;
 output wire almost_full;
 
-  axis_data_fifo_v2_0_16_top #(
+  axis_data_fifo_v2_0_17_top #(
     .C_FAMILY("artix7"),
     .C_AXIS_TDATA_WIDTH(24),
     .C_AXIS_TID_WIDTH(1),

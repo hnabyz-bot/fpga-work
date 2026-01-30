@@ -1,3 +1,15 @@
+2025.2:
+ * Version 8.0 (Rev. 17)
+ * No changes
+
+2025.1.1:
+ * Version 8.0 (Rev. 17)
+ * No changes
+
+2025.1:
+ * Version 8.0 (Rev. 17)
+ * General: Updated IP Catalog taxonomy structure. This change has no impact to the IP.
+
 2024.2.2:
  * Version 8.0 (Rev. 16)
  * No changes

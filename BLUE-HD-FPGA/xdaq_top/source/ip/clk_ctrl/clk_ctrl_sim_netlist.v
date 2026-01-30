@@ -1,8 +1,8 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-// Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+// Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-// Date        : Tue Jan 13 10:09:57 2026
+// Tool Version: Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+// Date        : Tue Jan 27 14:12:13 2026
 // Host        : work-dev running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/ip/clk_ctrl/clk_ctrl_sim_netlist.v
@@ -69,6 +69,7 @@ module clk_ctrl_clk_wiz
   wire c1;
   wire c1_clk_ctrl;
   wire clk_in1_clk_ctrl;
+  wire clk_in1_clk_ctrl_buf;
   wire clk_in1_n;
   wire clk_in1_p;
   wire clkfbout_clk_ctrl;
@@ -92,6 +93,10 @@ module clk_ctrl_clk_wiz
   wire [15:0]NLW_mmcm_adv_inst_DO_UNCONNECTED;
 
   (* BOX_TYPE = "PRIMITIVE" *) 
+  BUFG clkin1_bufg1
+       (.I(clk_in1_clk_ctrl_buf),
+        .O(clk_in1_clk_ctrl));
+  (* BOX_TYPE = "PRIMITIVE" *) 
   (* CAPACITANCE = "DONT_CARE" *) 
   (* IBUF_DELAY_VALUE = "0" *) 
   (* IFD_DELAY_VALUE = "AUTO" *) 
@@ -100,7 +105,7 @@ module clk_ctrl_clk_wiz
     clkin1_ibufgds
        (.I(clk_in1_p),
         .IB(clk_in1_n),
-        .O(clk_in1_clk_ctrl));
+        .O(clk_in1_clk_ctrl_buf));
   (* BOX_TYPE = "PRIMITIVE" *) 
   BUFG clkout1_buf
        (.I(c0_clk_ctrl),

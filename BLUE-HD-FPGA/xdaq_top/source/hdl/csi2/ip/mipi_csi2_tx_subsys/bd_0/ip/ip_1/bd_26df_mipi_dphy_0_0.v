@@ -164,7 +164,6 @@ module bd_26df_mipi_dphy_0_0
 
 
 
-
        input                core_rst,
        output               txclkesc_out,
        output               txbyteclkhs,

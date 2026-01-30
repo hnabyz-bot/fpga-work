@@ -80,11 +80,15 @@ module clk_ctrl_clk_wiz
   // Input buffering
   //------------------------------------
 wire clk_in1_clk_ctrl;
+wire clk_in1_clk_ctrl_buf;
 wire clk_in2_clk_ctrl;
   IBUFDS clkin1_ibufgds
-   (.O  (clk_in1_clk_ctrl),
+   (.O  (clk_in1_clk_ctrl_buf),
     .I  (clk_in1_p),
     .IB (clk_in1_n));
+    BUFG clkin1_bufg1
+   (.O (clk_in1_clk_ctrl),
+    .I (clk_in1_clk_ctrl_buf));
 
 
 
@@ -99,9 +103,9 @@ wire clk_in2_clk_ctrl;
   wire        c0_clk_ctrl;
   wire        c1_clk_ctrl;
   wire        dphy_clk_clk_ctrl;
-  wire        axi_clk_clk_ctrl;
-  wire        roic_mclk_clk_ctrl;
-  wire        spi_clk_clk_ctrl;
+  wire        clk_out4_clk_ctrl;
+  wire        clk_out5_clk_ctrl;
+  wire        clk_out6_clk_ctrl;
   wire        clk_out7_clk_ctrl;
 
   wire [15:0] do_unused;

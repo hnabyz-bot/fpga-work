@@ -1,11 +1,11 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -- Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2024.2.2 (lin64) Build 6060944 Thu Mar 06 19:10:09 MST 2025
--- Date        : Fri Jan 16 15:12:43 2026
--- Host        : drlinux running 64-bit Ubuntu 22.04.5 LTS
--- Command     : write_vhdl -force -mode synth_stub -rename_top axis_data_fifo_0 -prefix
---               axis_data_fifo_0_ axis_data_fifo_0_stub.vhdl
+-- Tool Version: Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+-- Date        : Tue Jan 27 14:12:17 2026
+-- Host        : work-dev running 64-bit major release  (build 9200)
+-- Command     : write_vhdl -force -mode synth_stub
+--               d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/axis_data_fifo_0/axis_data_fifo_0_stub.vhdl
 -- Design      : axis_data_fifo_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7a35tfgg484-1
@@ -35,9 +35,9 @@ entity axis_data_fifo_0 is
   );
 
   attribute CHECK_LICENSE_TYPE : string;
-  attribute CHECK_LICENSE_TYPE of axis_data_fifo_0 : entity is "axis_data_fifo_0,axis_data_fifo_v2_0_16_top,{}";
+  attribute CHECK_LICENSE_TYPE of axis_data_fifo_0 : entity is "axis_data_fifo_0,axis_data_fifo_v2_0_17_top,{}";
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of axis_data_fifo_0 : entity is "axis_data_fifo_0,axis_data_fifo_v2_0_16_top,{x_ipProduct=Vivado 2024.2.2,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=axis_data_fifo,x_ipVersion=2.0,x_ipCoreRevision=16,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_FAMILY=artix7,C_AXIS_TDATA_WIDTH=24,C_AXIS_TID_WIDTH=1,C_AXIS_TDEST_WIDTH=1,C_AXIS_TUSER_WIDTH=1,C_AXIS_SIGNAL_SET=0b00000000000000000000000000011111,C_FIFO_DEPTH=256,C_FIFO_MODE=1,C_IS_ACLK_ASYNC=1,C_SYNCHRONIZER_STAGE=3,C_ACLKEN_CONV_MODE=0,C_ECC_MODE=0,C_FIFO_MEMORY_TYPE=block,C_USE_ADV_FEATURES=825765944,C_PROG_EMPTY_THRESH=5,C_PROG_FULL_THRESH=11}";
+  attribute CORE_GENERATION_INFO of axis_data_fifo_0 : entity is "axis_data_fifo_0,axis_data_fifo_v2_0_17_top,{x_ipProduct=Vivado 2025.2,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=axis_data_fifo,x_ipVersion=2.0,x_ipCoreRevision=17,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_FAMILY=artix7,C_AXIS_TDATA_WIDTH=24,C_AXIS_TID_WIDTH=1,C_AXIS_TDEST_WIDTH=1,C_AXIS_TUSER_WIDTH=1,C_AXIS_SIGNAL_SET=0b00000000000000000000000000011111,C_FIFO_DEPTH=256,C_FIFO_MODE=1,C_IS_ACLK_ASYNC=1,C_SYNCHRONIZER_STAGE=3,C_ACLKEN_CONV_MODE=0,C_ECC_MODE=0,C_FIFO_MEMORY_TYPE=block,C_USE_ADV_FEATURES=825765944,C_PROG_EMPTY_THRESH=5,C_PROG_FULL_THRESH=11}";
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of axis_data_fifo_0 : entity is "yes";
 end axis_data_fifo_0;
@@ -76,6 +76,6 @@ architecture stub of axis_data_fifo_0 is
   attribute X_INTERFACE_INFO of m_axis_tkeep : signal is "xilinx.com:interface:axis:1.0 M_AXIS TKEEP";
   attribute X_INTERFACE_INFO of m_axis_tlast : signal is "xilinx.com:interface:axis:1.0 M_AXIS TLAST";
   attribute X_CORE_INFO : string;
-  attribute X_CORE_INFO of stub : architecture is "axis_data_fifo_v2_0_16_top,Vivado 2024.2.2";
+  attribute X_CORE_INFO of stub : architecture is "axis_data_fifo_v2_0_17_top,Vivado 2025.2";
 begin
 end;

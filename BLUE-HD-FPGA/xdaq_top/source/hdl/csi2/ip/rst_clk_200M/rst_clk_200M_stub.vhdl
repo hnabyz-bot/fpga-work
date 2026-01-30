@@ -1,11 +1,11 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -- Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2024.2.2 (win64) Build 6060944 Thu Mar 06 19:10:01 MST 2025
--- Date        : Mon Jun  2 13:10:28 2025
--- Host        : WS-DRAKE running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub -rename_top rst_clk_200M -prefix
---               rst_clk_200M_ rst_clk_200M_stub.vhdl
+-- Tool Version: Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+-- Date        : Tue Jan 27 14:12:15 2026
+-- Host        : work-dev running 64-bit major release  (build 9200)
+-- Command     : write_vhdl -force -mode synth_stub
+--               d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/rst_clk_200M/rst_clk_200M_stub.vhdl
 -- Design      : rst_clk_200M
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7a35tfgg484-1
@@ -30,7 +30,7 @@ entity rst_clk_200M is
   attribute CHECK_LICENSE_TYPE : string;
   attribute CHECK_LICENSE_TYPE of rst_clk_200M : entity is "rst_clk_200M,proc_sys_reset,{}";
   attribute core_generation_info : string;
-  attribute core_generation_info of rst_clk_200M : entity is "rst_clk_200M,proc_sys_reset,{x_ipProduct=Vivado 2024.2.2,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=proc_sys_reset,x_ipVersion=5.0,x_ipCoreRevision=16,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_FAMILY=artix7,C_EXT_RST_WIDTH=4,C_AUX_RST_WIDTH=4,C_EXT_RESET_HIGH=1,C_AUX_RESET_HIGH=0,C_NUM_BUS_RST=1,C_NUM_PERP_RST=1,C_NUM_INTERCONNECT_ARESETN=1,C_NUM_PERP_ARESETN=1}";
+  attribute core_generation_info of rst_clk_200M : entity is "rst_clk_200M,proc_sys_reset,{x_ipProduct=Vivado 2025.2,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=proc_sys_reset,x_ipVersion=5.0,x_ipCoreRevision=17,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_FAMILY=artix7,C_EXT_RST_WIDTH=4,C_AUX_RST_WIDTH=4,C_EXT_RESET_HIGH=1,C_AUX_RESET_HIGH=0,C_NUM_BUS_RST=1,C_NUM_PERP_RST=1,C_NUM_INTERCONNECT_ARESETN=1,C_NUM_PERP_ARESETN=1}";
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of rst_clk_200M : entity is "yes";
 end rst_clk_200M;
@@ -71,6 +71,6 @@ architecture stub of rst_clk_200M is
   attribute x_interface_mode of peripheral_aresetn : signal is "master peripheral_low_rst";
   attribute x_interface_parameter of peripheral_aresetn : signal is "XIL_INTERFACENAME peripheral_low_rst, POLARITY ACTIVE_LOW, TYPE PERIPHERAL, INSERT_VIP 0";
   attribute x_core_info : string;
-  attribute x_core_info of stub : architecture is "proc_sys_reset,Vivado 2024.2.2";
+  attribute x_core_info of stub : architecture is "proc_sys_reset,Vivado 2025.2";
 begin
 end;

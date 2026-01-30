@@ -1,11 +1,11 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2024.2.2 (win64) Build 6060944 Thu Mar 06 19:10:01 MST 2025
-// Date        : Mon Jun  2 13:10:28 2025
-// Host        : WS-DRAKE running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub -rename_top rst_clk_200M -prefix
-//               rst_clk_200M_ rst_clk_200M_stub.v
+// Tool Version: Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+// Date        : Tue Jan 27 14:12:15 2026
+// Host        : work-dev running 64-bit major release  (build 9200)
+// Command     : write_verilog -force -mode synth_stub
+//               d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/hdl/csi2/ip/rst_clk_200M/rst_clk_200M_stub.v
 // Design      : rst_clk_200M
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7a35tfgg484-1
@@ -14,8 +14,8 @@
 // This empty module with port declaration file causes synthesis tools to infer a black box for IP.
 // The synthesis directives are for Synopsys Synplify support to prevent IO buffer insertion.
 // Please paste the declaration into a Verilog source file or add the file as an additional source.
-(* CHECK_LICENSE_TYPE = "rst_clk_200M,proc_sys_reset,{}" *) (* core_generation_info = "rst_clk_200M,proc_sys_reset,{x_ipProduct=Vivado 2024.2.2,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=proc_sys_reset,x_ipVersion=5.0,x_ipCoreRevision=16,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_FAMILY=artix7,C_EXT_RST_WIDTH=4,C_AUX_RST_WIDTH=4,C_EXT_RESET_HIGH=1,C_AUX_RESET_HIGH=0,C_NUM_BUS_RST=1,C_NUM_PERP_RST=1,C_NUM_INTERCONNECT_ARESETN=1,C_NUM_PERP_ARESETN=1}" *) (* downgradeipidentifiedwarnings = "yes" *) 
-(* x_core_info = "proc_sys_reset,Vivado 2024.2.2" *) 
+(* CHECK_LICENSE_TYPE = "rst_clk_200M,proc_sys_reset,{}" *) (* core_generation_info = "rst_clk_200M,proc_sys_reset,{x_ipProduct=Vivado 2025.2,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=proc_sys_reset,x_ipVersion=5.0,x_ipCoreRevision=17,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_FAMILY=artix7,C_EXT_RST_WIDTH=4,C_AUX_RST_WIDTH=4,C_EXT_RESET_HIGH=1,C_AUX_RESET_HIGH=0,C_NUM_BUS_RST=1,C_NUM_PERP_RST=1,C_NUM_INTERCONNECT_ARESETN=1,C_NUM_PERP_ARESETN=1}" *) (* downgradeipidentifiedwarnings = "yes" *) 
+(* x_core_info = "proc_sys_reset,Vivado 2025.2" *) 
 module rst_clk_200M(slowest_sync_clk, ext_reset_in, aux_reset_in, 
   mb_debug_sys_rst, dcm_locked, mb_reset, bus_struct_reset, peripheral_reset, 
   interconnect_aresetn, peripheral_aresetn)

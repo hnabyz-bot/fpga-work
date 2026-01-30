@@ -2,50 +2,11 @@
 <Root MajorVersion="0" MinorVersion="43">
   <CompositeFile CompositeFileTopName="bd_62e9" CanBeSetAsTop="true" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="RESET" Timestamp="1768543858"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1768543858"/>
-    <Generation Name="IMPLEMENTATION" State="RESET" Timestamp="1768543858"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1768543858"/>
-    <FileCollection Name="SOURCES" Type="SOURCES">
-      <File Name="synth/bd_62e9.v" Type="Verilog">
-        <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <ProcessingOrder Val="NORMAL"/>
-      </File>
-      <File Name="sim/bd_62e9.v" Type="Verilog">
-        <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SIMULATION"/>
-        <ProcessingOrder Val="NORMAL"/>
-      </File>
-      <File Name="bd_62e9_ooc.xdc" Type="XDC">
-        <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="OUT_OF_CONTEXT"/>
-        <ProcessingOrder Val="NORMAL"/>
-      </File>
-      <File Name="hw_handoff/mipi_csi2_rx_mipi_csi2_rx_subsyst_0_0.hwh" Type="HwHandoff">
-        <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="HW_HANDOFF"/>
-        <ProcessingOrder Val="NORMAL"/>
-      </File>
-      <File Name="synth/mipi_csi2_rx_mipi_csi2_rx_subsyst_0_0.hwdef">
-        <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="HW_HANDOFF"/>
-        <ProcessingOrder Val="NORMAL"/>
-      </File>
-      <File Name="sim/bd_62e9.protoinst">
-        <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SIMULATION"/>
-        <ProcessingOrder Val="NORMAL"/>
-      </File>
-    </FileCollection>
+    <Generation Name="SYNTHESIS" State="RESET" Timestamp="1769423875"/>
+    <Generation Name="SIMULATION" State="RESET" Timestamp="1769423875"/>
+    <Generation Name="IMPLEMENTATION" State="RESET" Timestamp="1769423875"/>
+    <Generation Name="HW_HANDOFF" State="STALE" Timestamp="1769423865"/>
+    <Generation Name="INSTANTIATION_TEMPLATE" State="STALE" Timestamp="1769423865"/>
+    <FileCollection Name="SOURCES" Type="SOURCES"/>
   </CompositeFile>
 </Root>

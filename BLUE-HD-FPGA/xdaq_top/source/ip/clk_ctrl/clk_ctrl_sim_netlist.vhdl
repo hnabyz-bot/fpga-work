@@ -1,8 +1,8 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
--- Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+-- Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
--- Date        : Tue Jan 13 10:09:57 2026
+-- Tool Version: Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+-- Date        : Tue Jan 27 14:12:13 2026
 -- Host        : work-dev running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
 --               d:/workspace/gittea-work/BLUE-HD-FPGA/xdaq_top/source/ip/clk_ctrl/clk_ctrl_sim_netlist.vhdl
@@ -31,6 +31,7 @@ architecture STRUCTURE of clk_ctrl_clk_wiz is
   signal c0_clk_ctrl : STD_LOGIC;
   signal c1_clk_ctrl : STD_LOGIC;
   signal clk_in1_clk_ctrl : STD_LOGIC;
+  signal clk_in1_clk_ctrl_buf : STD_LOGIC;
   signal clkfbout_clk_ctrl : STD_LOGIC;
   signal dphy_clk_clk_ctrl : STD_LOGIC;
   signal NLW_mmcm_adv_inst_CLKFBOUTB_UNCONNECTED : STD_LOGIC;
@@ -48,6 +49,7 @@ architecture STRUCTURE of clk_ctrl_clk_wiz is
   signal NLW_mmcm_adv_inst_PSDONE_UNCONNECTED : STD_LOGIC;
   signal NLW_mmcm_adv_inst_DO_UNCONNECTED : STD_LOGIC_VECTOR ( 15 downto 0 );
   attribute BOX_TYPE : string;
+  attribute BOX_TYPE of clkin1_bufg1 : label is "PRIMITIVE";
   attribute BOX_TYPE of clkin1_ibufgds : label is "PRIMITIVE";
   attribute CAPACITANCE : string;
   attribute CAPACITANCE of clkin1_ibufgds : label is "DONT_CARE";
@@ -60,6 +62,11 @@ architecture STRUCTURE of clk_ctrl_clk_wiz is
   attribute BOX_TYPE of clkout3_buf : label is "PRIMITIVE";
   attribute BOX_TYPE of mmcm_adv_inst : label is "PRIMITIVE";
 begin
+clkin1_bufg1: unisim.vcomponents.BUFG
+     port map (
+      I => clk_in1_clk_ctrl_buf,
+      O => clk_in1_clk_ctrl
+    );
 clkin1_ibufgds: unisim.vcomponents.IBUFDS
     generic map(
       IOSTANDARD => "DEFAULT"
@@ -67,7 +74,7 @@ clkin1_ibufgds: unisim.vcomponents.IBUFDS
         port map (
       I => clk_in1_p,
       IB => clk_in1_n,
-      O => clk_in1_clk_ctrl
+      O => clk_in1_clk_ctrl_buf
     );
 clkout1_buf: unisim.vcomponents.BUFG
      port map (

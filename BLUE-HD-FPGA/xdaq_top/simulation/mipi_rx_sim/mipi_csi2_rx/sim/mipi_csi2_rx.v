@@ -1,9 +1,9 @@
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 //Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
-//Tool Version: Vivado v.2024.2.2 (lin64) Build 6060944 Thu Mar 06 19:10:09 MST 2025
-//Date        : Fri Jan 16 15:10:56 2026
-//Host        : drlinux running 64-bit Ubuntu 22.04.5 LTS
+//Tool Version: Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+//Date        : Mon Jan 26 21:12:27 2026
+//Host        : work-dev running 64-bit major release  (build 9200)
 //Command     : generate_target mipi_csi2_rx.bd
 //Design      : mipi_csi2_rx
 //Purpose     : IP block netlist
@@ -138,7 +138,6 @@ module mipi_csi2_rx
   wire [0:0]video_out_tuser_0;
   wire video_out_tvalid;
   wire [0:0]xlconstant_0_dout;
-  wire NLW_mipi_csi2_rx_subsyst_0_frame_rcvd_pulse_out_UNCONNECTED;
   wire NLW_mipi_csi2_rx_subsyst_0_system_rst_out_UNCONNECTED;
   wire NLW_proc_sys_reset_0_mb_reset_UNCONNECTED;
   wire [0:0]NLW_proc_sys_reset_0_bus_struct_reset_UNCONNECTED;

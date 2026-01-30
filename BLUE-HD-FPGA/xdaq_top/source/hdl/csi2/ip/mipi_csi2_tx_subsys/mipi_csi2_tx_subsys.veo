@@ -47,7 +47,7 @@
 // DO NOT MODIFY THIS FILE.
 
 // IP VLNV: xilinx.com:ip:mipi_csi2_tx_subsystem:2.2
-// IP Revision: 15
+// IP Revision: 18
 
 // The following must be inserted into your Verilog file for this
 // core to be instantiated. Change the instance name and port connections
@@ -68,7 +68,7 @@ mipi_csi2_tx_subsys your_instance_name (
   .cl_tst_clk_out(cl_tst_clk_out),                // output wire cl_tst_clk_out
   .dl_tst_clk_out(dl_tst_clk_out),                // output wire dl_tst_clk_out
   .interrupt(interrupt),                          // output wire interrupt
-  .s_axi_awaddr(s_axi_awaddr),                    // input wire [12 : 0] s_axi_awaddr
+  .s_axi_awaddr(s_axi_awaddr),                    // input wire [16 : 0] s_axi_awaddr
   .s_axi_awprot(s_axi_awprot),                    // input wire [2 : 0] s_axi_awprot
   .s_axi_awvalid(s_axi_awvalid),                  // input wire [0 : 0] s_axi_awvalid
   .s_axi_awready(s_axi_awready),                  // output wire [0 : 0] s_axi_awready
@@ -79,7 +79,7 @@ mipi_csi2_tx_subsys your_instance_name (
   .s_axi_bresp(s_axi_bresp),                      // output wire [1 : 0] s_axi_bresp
   .s_axi_bvalid(s_axi_bvalid),                    // output wire [0 : 0] s_axi_bvalid
   .s_axi_bready(s_axi_bready),                    // input wire [0 : 0] s_axi_bready
-  .s_axi_araddr(s_axi_araddr),                    // input wire [12 : 0] s_axi_araddr
+  .s_axi_araddr(s_axi_araddr),                    // input wire [16 : 0] s_axi_araddr
   .s_axi_arprot(s_axi_arprot),                    // input wire [2 : 0] s_axi_arprot
   .s_axi_arvalid(s_axi_arvalid),                  // input wire [0 : 0] s_axi_arvalid
   .s_axi_arready(s_axi_arready),                  // output wire [0 : 0] s_axi_arready

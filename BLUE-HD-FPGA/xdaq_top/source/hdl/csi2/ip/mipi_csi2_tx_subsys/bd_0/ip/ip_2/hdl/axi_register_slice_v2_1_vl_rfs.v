@@ -46,7 +46,7 @@
 
 `timescale 1ps/1ps
 
-module axi_register_slice_v2_1_34_test_master #
+module axi_register_slice_v2_1_36_test_master #
   (
    parameter integer C_AXI_ID_WIDTH = 0,
    parameter integer C_AXI_ADDR_WIDTH = 32,
@@ -567,7 +567,7 @@ endmodule
 
 `timescale 1ps/1ps
 
-module axi_register_slice_v2_1_34_test_slave #
+module axi_register_slice_v2_1_36_test_slave #
   (
    parameter integer C_AXI_ID_WIDTH = 0,
    parameter integer C_AXI_ADDR_WIDTH = 32,
@@ -1025,7 +1025,7 @@ endmodule
 `timescale 1ps/1ps
 `default_nettype none
 
-module axi_register_slice_v2_1_34_tdm_sample (
+module axi_register_slice_v2_1_36_tdm_sample (
 ///////////////////////////////////////////////////////////////////////////////
 // Port Declarations
 ///////////////////////////////////////////////////////////////////////////////
@@ -1128,7 +1128,7 @@ endmodule // tdm_sample
 `timescale 1ps/1ps
 (* DowngradeIPIdentifiedWarnings="yes" *) 
 (* autopipeline_module="yes" *)
-module axi_register_slice_v2_1_34_auto_slr #
+module axi_register_slice_v2_1_36_auto_slr #
   (
    parameter integer C_DATA_WIDTH = 32
    )
@@ -1178,7 +1178,7 @@ module axi_register_slice_v2_1_34_auto_slr #
     
   // Source-side submodule
     
-    axi_register_slice_v2_1_34_auto_src #
+    axi_register_slice_v2_1_36_auto_src #
       (
        .C_DATA_WIDTH (C_DATA_WIDTH)
       )
@@ -1197,7 +1197,7 @@ module axi_register_slice_v2_1_34_auto_slr #
     
   // Destination-side submodule
     
-    axi_register_slice_v2_1_34_auto_dest #
+    axi_register_slice_v2_1_36_auto_dest #
       (
        .C_DATA_WIDTH (C_DATA_WIDTH)
       )
@@ -1216,7 +1216,7 @@ module axi_register_slice_v2_1_34_auto_slr #
     
 endmodule  // auto_slr
 
-module axi_register_slice_v2_1_34_auto_src #
+module axi_register_slice_v2_1_36_auto_src #
   (
    parameter integer C_DATA_WIDTH = 32
   )
@@ -1301,7 +1301,7 @@ module axi_register_slice_v2_1_34_auto_src #
     
 endmodule  // auto_src
 
-module axi_register_slice_v2_1_34_auto_dest #
+module axi_register_slice_v2_1_36_auto_dest #
   (
    parameter integer C_DATA_WIDTH = 32
    )
@@ -1386,7 +1386,7 @@ module axi_register_slice_v2_1_34_auto_dest #
         .D   (m_ready_d)
      );
     
-    axi_register_slice_v2_1_34_axic_reg_srl_fifo #
+    axi_register_slice_v2_1_36_axic_reg_srl_fifo #
       (
        .C_FIFO_WIDTH (C_DATA_WIDTH), 
        .C_FIFO_SIZE  (5)  
@@ -1466,7 +1466,7 @@ endmodule  // auto_dest
 
 `timescale 1ps/1ps
 (* DowngradeIPIdentifiedWarnings="yes" *) 
-module axi_register_slice_v2_1_34_srl_rtl #
+module axi_register_slice_v2_1_36_srl_rtl #
   (
    parameter         C_A_WIDTH = 2          // Address Width (>= 1)
    )
@@ -1490,7 +1490,7 @@ endmodule  // srl_rtl
 
 `timescale 1ps/1ps
 (* DowngradeIPIdentifiedWarnings="yes" *) 
-module axi_register_slice_v2_1_34_axic_register_slice #
+module axi_register_slice_v2_1_36_axic_register_slice #
   (
    parameter C_FAMILY     = "virtex6",
    parameter C_DATA_WIDTH = 32,
@@ -1693,7 +1693,7 @@ module axi_register_slice_v2_1_34_axic_register_slice #
     //---------------------------------------------------------------------------
       genvar i;
       for (i=0;i<C_DATA_WIDTH;i=i+1) begin : gen_srls
-        axi_register_slice_v2_1_34_srl_rtl #
+        axi_register_slice_v2_1_36_srl_rtl #
           (
            .C_A_WIDTH (2)
           )
@@ -2195,7 +2195,7 @@ endmodule // axic_register_slice
 
 `timescale 1ps/1ps
 (* DowngradeIPIdentifiedWarnings="yes" *) 
-module axi_register_slice_v2_1_34_multi_slr #
+module axi_register_slice_v2_1_36_multi_slr #
   (
    parameter C_FAMILY     = "virtex6",
    parameter integer C_DATA_WIDTH = 32,
@@ -2235,7 +2235,7 @@ module axi_register_slice_v2_1_34_multi_slr #
   
   if (C_NUM_SLR_CROSSINGS==0) begin : single_slr
     
-    axi_register_slice_v2_1_34_single_slr # (
+    axi_register_slice_v2_1_36_single_slr # (
       .C_FAMILY     ( C_FAMILY              ) ,
       .C_DATA_WIDTH ( C_DATA_WIDTH ) ,
       .C_PIPELINES  (C_PIPELINES_MASTER) 
@@ -2260,7 +2260,7 @@ module axi_register_slice_v2_1_34_multi_slr #
     wire dummy_reset;
         
     if (C_CHANNEL==P_FORWARD) begin : fwd
-      axi_register_slice_v2_1_34_source_region_slr # (
+      axi_register_slice_v2_1_36_source_region_slr # (
         .C_FAMILY     ( C_FAMILY ) ,
         .C_DATA_WIDTH ( C_DATA_WIDTH ) ,
         .C_SLR_WIDTH  ( C_DATA_WIDTH ),
@@ -2282,7 +2282,7 @@ module axi_register_slice_v2_1_34_multi_slr #
         .laguna_m_ready     ( src_ready   )
       );
       
-      axi_register_slice_v2_1_34_dest_region_slr #(
+      axi_register_slice_v2_1_36_dest_region_slr #(
         .C_FAMILY     ( C_FAMILY         ) ,
         .C_REG_CONFIG ( P_REG_CONFIG ) ,
         .C_CHANNEL    ( C_CHANNEL ),
@@ -2306,7 +2306,7 @@ module axi_register_slice_v2_1_34_multi_slr #
       );
       
     end else begin : resp
-      axi_register_slice_v2_1_34_source_region_slr # (
+      axi_register_slice_v2_1_36_source_region_slr # (
         .C_FAMILY     ( C_FAMILY ) ,
         .C_DATA_WIDTH ( C_DATA_WIDTH ) ,
         .C_SLR_WIDTH  ( C_DATA_WIDTH ),
@@ -2328,7 +2328,7 @@ module axi_register_slice_v2_1_34_multi_slr #
         .laguna_m_ready     ( src_ready   )
       );
       
-      axi_register_slice_v2_1_34_dest_region_slr #(
+      axi_register_slice_v2_1_36_dest_region_slr #(
         .C_FAMILY     ( C_FAMILY         ) ,
         .C_REG_CONFIG ( P_REG_CONFIG ) ,
         .C_CHANNEL    ( C_CHANNEL ),
@@ -2366,7 +2366,7 @@ module axi_register_slice_v2_1_34_multi_slr #
     wire dummy_reset2;
         
     if (C_CHANNEL==P_FORWARD) begin : fwd
-      axi_register_slice_v2_1_34_source_region_slr # (
+      axi_register_slice_v2_1_36_source_region_slr # (
         .C_FAMILY     ( C_FAMILY ) ,
         .C_DATA_WIDTH ( C_DATA_WIDTH ) ,
         .C_SLR_WIDTH  ( C_DATA_WIDTH ),
@@ -2388,7 +2388,7 @@ module axi_register_slice_v2_1_34_multi_slr #
         .laguna_m_ready     ( src_ready   )
       );
       
-      axi_register_slice_v2_1_34_middle_region_slr #(
+      axi_register_slice_v2_1_36_middle_region_slr #(
         .C_FAMILY     ( C_FAMILY         ) ,
         .C_DATA_WIDTH ( C_DATA_WIDTH ) ,
         .C_CHANNEL    ( C_CHANNEL ),
@@ -2410,7 +2410,7 @@ module axi_register_slice_v2_1_34_multi_slr #
         .laguna_m_ready     ( dest_ready   )
       );
       
-      axi_register_slice_v2_1_34_dest_region_slr #(
+      axi_register_slice_v2_1_36_dest_region_slr #(
         .C_FAMILY     ( C_FAMILY         ) ,
         .C_REG_CONFIG ( P_REG_CONFIG ) ,
         .C_CHANNEL    ( C_CHANNEL ),
@@ -2434,7 +2434,7 @@ module axi_register_slice_v2_1_34_multi_slr #
       );
       
     end else begin : resp
-      axi_register_slice_v2_1_34_source_region_slr # (
+      axi_register_slice_v2_1_36_source_region_slr # (
         .C_FAMILY     ( C_FAMILY ) ,
         .C_DATA_WIDTH ( C_DATA_WIDTH ) ,
         .C_SLR_WIDTH  ( C_DATA_WIDTH ),
@@ -2456,7 +2456,7 @@ module axi_register_slice_v2_1_34_multi_slr #
         .laguna_m_ready     ( src_ready   )
       );
       
-      axi_register_slice_v2_1_34_middle_region_slr #(
+      axi_register_slice_v2_1_36_middle_region_slr #(
         .C_FAMILY     ( C_FAMILY         ) ,
         .C_DATA_WIDTH ( C_DATA_WIDTH ) ,
         .C_CHANNEL    ( C_CHANNEL ),
@@ -2478,7 +2478,7 @@ module axi_register_slice_v2_1_34_multi_slr #
         .laguna_m_ready     ( dest_ready   )
       );
       
-      axi_register_slice_v2_1_34_dest_region_slr #(
+      axi_register_slice_v2_1_36_dest_region_slr #(
         .C_FAMILY     ( C_FAMILY         ) ,
         .C_REG_CONFIG ( P_REG_CONFIG ) ,
         .C_CHANNEL    ( C_CHANNEL ),
@@ -2521,7 +2521,7 @@ module axi_register_slice_v2_1_34_multi_slr #
     wire dummy_reset3;
         
     if (C_CHANNEL==P_FORWARD) begin : fwd
-      axi_register_slice_v2_1_34_source_region_slr # (
+      axi_register_slice_v2_1_36_source_region_slr # (
         .C_FAMILY     ( C_FAMILY ) ,
         .C_DATA_WIDTH ( C_DATA_WIDTH ) ,
         .C_SLR_WIDTH  ( C_DATA_WIDTH ),
@@ -2543,7 +2543,7 @@ module axi_register_slice_v2_1_34_multi_slr #
         .laguna_m_ready     ( src_ready   )
       );
       
-      axi_register_slice_v2_1_34_middle_region_slr #(
+      axi_register_slice_v2_1_36_middle_region_slr #(
         .C_FAMILY     ( C_FAMILY         ) ,
         .C_DATA_WIDTH ( C_DATA_WIDTH ) ,
         .C_CHANNEL    ( C_CHANNEL ),
@@ -2565,7 +2565,7 @@ module axi_register_slice_v2_1_34_multi_slr #
         .laguna_m_ready     ( mid_ready   )
       );
       
-      axi_register_slice_v2_1_34_middle_region_slr #(
+      axi_register_slice_v2_1_36_middle_region_slr #(
         .C_FAMILY     ( C_FAMILY         ) ,
         .C_DATA_WIDTH ( C_DATA_WIDTH ) ,
         .C_CHANNEL    ( C_CHANNEL ),
@@ -2587,7 +2587,7 @@ module axi_register_slice_v2_1_34_multi_slr #
         .laguna_m_ready     ( dest_ready   )
       );
       
-      axi_register_slice_v2_1_34_dest_region_slr #(
+      axi_register_slice_v2_1_36_dest_region_slr #(
         .C_FAMILY     ( C_FAMILY         ) ,
         .C_REG_CONFIG ( P_REG_CONFIG ) ,
         .C_CHANNEL    ( C_CHANNEL ),
@@ -2611,7 +2611,7 @@ module axi_register_slice_v2_1_34_multi_slr #
       );
       
     end else begin : resp
-      axi_register_slice_v2_1_34_source_region_slr # (
+      axi_register_slice_v2_1_36_source_region_slr # (
         .C_FAMILY     ( C_FAMILY ) ,
         .C_DATA_WIDTH ( C_DATA_WIDTH ) ,
         .C_SLR_WIDTH  ( C_DATA_WIDTH ),
@@ -2633,7 +2633,7 @@ module axi_register_slice_v2_1_34_multi_slr #
         .laguna_m_ready     ( src_ready   )
       );
       
-      axi_register_slice_v2_1_34_middle_region_slr #(
+      axi_register_slice_v2_1_36_middle_region_slr #(
         .C_FAMILY     ( C_FAMILY         ) ,
         .C_DATA_WIDTH ( C_DATA_WIDTH ) ,
         .C_CHANNEL    ( C_CHANNEL ),
@@ -2655,7 +2655,7 @@ module axi_register_slice_v2_1_34_multi_slr #
         .laguna_m_ready     ( mid_ready   )
       );
       
-      axi_register_slice_v2_1_34_middle_region_slr #(
+      axi_register_slice_v2_1_36_middle_region_slr #(
         .C_FAMILY     ( C_FAMILY         ) ,
         .C_DATA_WIDTH ( C_DATA_WIDTH ) ,
         .C_CHANNEL    ( C_CHANNEL ),
@@ -2677,7 +2677,7 @@ module axi_register_slice_v2_1_34_multi_slr #
         .laguna_m_ready     ( dest_ready   )
       );
       
-      axi_register_slice_v2_1_34_dest_region_slr #(
+      axi_register_slice_v2_1_36_dest_region_slr #(
         .C_FAMILY     ( C_FAMILY         ) ,
         .C_REG_CONFIG ( P_REG_CONFIG ) ,
         .C_CHANNEL    ( C_CHANNEL ),
@@ -2707,7 +2707,7 @@ endmodule  // multi_slr
 
 `timescale 1ps/1ps
 (* DowngradeIPIdentifiedWarnings="yes" *) 
-module axi_register_slice_v2_1_34_middle_region_slr #
+module axi_register_slice_v2_1_36_middle_region_slr #
   (
    parameter C_FAMILY     = "virtex6",
    parameter integer C_DATA_WIDTH = 32,
@@ -2848,7 +2848,7 @@ endmodule  // middle_region_slr
 
 `timescale 1ps/1ps
 (* DowngradeIPIdentifiedWarnings="yes" *) 
-module axi_register_slice_v2_1_34_source_region_slr #
+module axi_register_slice_v2_1_36_source_region_slr #
   (
    parameter C_FAMILY     = "virtex6",
    parameter integer C_REG_CONFIG = 12,
@@ -2928,7 +2928,7 @@ module axi_register_slice_v2_1_34_source_region_slr #
       end
     end
 
-    axi_register_slice_v2_1_34_tdm_sample tdm_sample_inst (
+    axi_register_slice_v2_1_36_tdm_sample tdm_sample_inst (
       .slow_clk     (ACLK),
       .fast_clk     (ACLK2X),
       .sample_cycle (sample_cycle)
@@ -3032,7 +3032,7 @@ endmodule  // source_region_slr
 
 `timescale 1ps/1ps
 (* DowngradeIPIdentifiedWarnings="yes" *)
-module axi_register_slice_v2_1_34_dest_region_slr #
+module axi_register_slice_v2_1_36_dest_region_slr #
   (
    parameter C_FAMILY     = "virtex6",
    parameter integer C_REG_CONFIG = 12,
@@ -3251,7 +3251,7 @@ module axi_register_slice_v2_1_34_dest_region_slr #
         .D   (laguna_s_handshake)
      );
         
-    axi_register_slice_v2_1_34_axic_reg_srl_fifo #
+    axi_register_slice_v2_1_36_axic_reg_srl_fifo #
       (
        .C_FIFO_WIDTH (C_DATA_WIDTH), 
        .C_FIFO_SIZE  ((C_PIPELINES+C_SOURCE_LATENCY>14) ? 6 : (C_PIPELINES+C_SOURCE_LATENCY>6) ? 5 : 4)  
@@ -3274,7 +3274,7 @@ endmodule  // dest_region_slr
 
 `timescale 1ps/1ps
 (* DowngradeIPIdentifiedWarnings="yes" *)
-module axi_register_slice_v2_1_34_single_slr #
+module axi_register_slice_v2_1_36_single_slr #
   (
    parameter C_FAMILY     = "virtex6",
    parameter integer C_DATA_WIDTH = 32,
@@ -3413,7 +3413,7 @@ module axi_register_slice_v2_1_34_single_slr #
     
     end else begin : srl_fifo
     
-      axi_register_slice_v2_1_34_axic_reg_srl_fifo #
+      axi_register_slice_v2_1_36_axic_reg_srl_fifo #
         (
          .C_FIFO_WIDTH (C_DATA_WIDTH), 
          .C_FIFO_SIZE  ((C_PIPELINES>12) ? 5 : 4)  
@@ -3436,7 +3436,7 @@ module axi_register_slice_v2_1_34_single_slr #
 endmodule  // single_slr
 
 (* DowngradeIPIdentifiedWarnings="yes" *) 
-module axi_register_slice_v2_1_34_axic_reg_srl_fifo #
+module axi_register_slice_v2_1_36_axic_reg_srl_fifo #
   // FIFO with no s_ready back-pressure; must guarantee parent will never push beyond full
   (
    parameter integer C_FIFO_WIDTH  = 1,      // Width of s_mesg/m_mesg.
@@ -3639,7 +3639,7 @@ module axi_register_slice_v2_1_34_axic_reg_srl_fifo #
     // Instantiate SRLs
     //---------------------------------------------------------------------------
     for (i=0;i<C_FIFO_WIDTH;i=i+1) begin : srl
-      (* keep_hierarchy = "yes" *) axi_register_slice_v2_1_34_srl_rtl #
+      (* keep_hierarchy = "yes" *) axi_register_slice_v2_1_36_srl_rtl #
         (
          .C_A_WIDTH (C_FIFO_SIZE)
         )
@@ -3719,7 +3719,7 @@ endmodule  // axic_reg_srl_fifo
 `timescale 1ps/1ps
 
 (* DowngradeIPIdentifiedWarnings="yes" *) 
-module axi_register_slice_v2_1_34_axi_register_slice #
+module axi_register_slice_v2_1_36_axi_register_slice #
   (
    parameter C_FAMILY                            = "virtex6",
    parameter C_AXI_PROTOCOL                      = 0,
@@ -3910,7 +3910,7 @@ module axi_register_slice_v2_1_34_axi_register_slice #
   
   if (C_RESERVE_MODE==1) begin : gen_reserve_si
   
-    axi_register_slice_v2_1_34_test_slave #(
+    axi_register_slice_v2_1_36_test_slave #(
       .C_AXI_ID_WIDTH(C_AXI_ID_WIDTH),
       .C_AXI_ADDR_WIDTH(C_AXI_ADDR_WIDTH),
       .C_AXI_DATA_WIDTH(C_AXI_DATA_WIDTH),
@@ -4005,7 +4005,7 @@ module axi_register_slice_v2_1_34_axi_register_slice #
       
   end else if (C_RESERVE_MODE==2) begin : gen_reserve_mi
     
-    axi_register_slice_v2_1_34_test_master #(
+    axi_register_slice_v2_1_36_test_master #(
     .C_AXI_ID_WIDTH(C_AXI_ID_WIDTH),
     .C_AXI_ADDR_WIDTH(C_AXI_ADDR_WIDTH),
     .C_AXI_DATA_WIDTH(C_AXI_DATA_WIDTH),
@@ -4204,7 +4204,7 @@ module axi_register_slice_v2_1_34_axi_register_slice #
   end  // Reserve SI/MI branch
 
   if ((C_REG_CONFIG_AW <= 9) && (C_RESERVE_MODE==0)) begin : aw
-    axi_register_slice_v2_1_34_axic_register_slice # (
+    axi_register_slice_v2_1_36_axic_register_slice # (
       .C_FAMILY     ( C_FAMILY              ) ,
       .C_DATA_WIDTH ( G_AXI_AWPAYLOAD_WIDTH ) ,
       .C_REG_CONFIG ( C_REG_CONFIG_AW       ) 
@@ -4227,7 +4227,7 @@ module axi_register_slice_v2_1_34_axi_register_slice #
     
   end else if ((C_REG_CONFIG_AW == 15) && (C_RESERVE_MODE==0)) begin : aw15
     
-    axi_register_slice_v2_1_34_multi_slr # (
+    axi_register_slice_v2_1_36_multi_slr # (
       .C_FAMILY     ( C_FAMILY              ) ,
       .C_DATA_WIDTH ( G_AXI_AWPAYLOAD_WIDTH ) ,
       .C_CHANNEL    ( P_FORWARD ),
@@ -4254,7 +4254,7 @@ module axi_register_slice_v2_1_34_axi_register_slice #
     
   end else if ((C_REG_CONFIG_AW == 16) && (C_RESERVE_MODE==0)) begin : aw16
     
-    axi_register_slice_v2_1_34_auto_slr # (
+    axi_register_slice_v2_1_36_auto_slr # (
       .C_DATA_WIDTH ( G_AXI_AWPAYLOAD_WIDTH ) 
     )
     aw_auto (
@@ -4283,7 +4283,7 @@ module axi_register_slice_v2_1_34_axi_register_slice #
     wire slr_awhandshake;
     wire slr_awready;
         
-    axi_register_slice_v2_1_34_source_region_slr #(
+    axi_register_slice_v2_1_36_source_region_slr #(
       .C_FAMILY     ( C_FAMILY         ) ,
       .C_REG_CONFIG ( C_REG_CONFIG_AW       ) ,
       .C_CHANNEL    ( P_FORWARD ),
@@ -4305,7 +4305,7 @@ module axi_register_slice_v2_1_34_axi_register_slice #
       .laguna_m_ready     ( slr_awready   )
     );
 
-    axi_register_slice_v2_1_34_dest_region_slr #(
+    axi_register_slice_v2_1_36_dest_region_slr #(
       .C_FAMILY     ( C_FAMILY         ) ,
       .C_REG_CONFIG ( C_REG_CONFIG_AW       ) ,
       .C_CHANNEL    ( P_FORWARD ),
@@ -4330,7 +4330,7 @@ module axi_register_slice_v2_1_34_axi_register_slice #
   end  // gen_aw
     
   if ((C_REG_CONFIG_W <= 9) && (C_RESERVE_MODE==0)) begin : w
-    axi_register_slice_v2_1_34_axic_register_slice # (
+    axi_register_slice_v2_1_36_axic_register_slice # (
       .C_FAMILY     ( C_FAMILY             ) ,
       .C_DATA_WIDTH ( G_AXI_WPAYLOAD_WIDTH ) ,
       .C_REG_CONFIG ( C_REG_CONFIG_W       ) 
@@ -4353,7 +4353,7 @@ module axi_register_slice_v2_1_34_axi_register_slice #
     
   end else if ((C_REG_CONFIG_W == 15) && (C_RESERVE_MODE==0)) begin : w15
     
-    axi_register_slice_v2_1_34_multi_slr # (
+    axi_register_slice_v2_1_36_multi_slr # (
       .C_FAMILY     ( C_FAMILY              ) ,
       .C_DATA_WIDTH ( G_AXI_WPAYLOAD_WIDTH ) ,
       .C_CHANNEL    ( P_FORWARD ),
@@ -4380,7 +4380,7 @@ module axi_register_slice_v2_1_34_axi_register_slice #
     
   end else if ((C_REG_CONFIG_W == 16) && (C_RESERVE_MODE==0)) begin : w16
     
-    axi_register_slice_v2_1_34_auto_slr # (
+    axi_register_slice_v2_1_36_auto_slr # (
       .C_DATA_WIDTH ( G_AXI_WPAYLOAD_WIDTH ) 
     )
     w_auto (
@@ -4409,7 +4409,7 @@ module axi_register_slice_v2_1_34_axi_register_slice #
     wire slr_whandshake;
     wire slr_wready;
         
-    axi_register_slice_v2_1_34_source_region_slr #(
+    axi_register_slice_v2_1_36_source_region_slr #(
       .C_FAMILY     ( C_FAMILY         ) ,
       .C_REG_CONFIG ( C_REG_CONFIG_W       ) ,
       .C_CHANNEL    ( P_FORWARD ),
@@ -4431,7 +4431,7 @@ module axi_register_slice_v2_1_34_axi_register_slice #
       .laguna_m_ready     ( slr_wready   )
     );
 
-    axi_register_slice_v2_1_34_dest_region_slr #(
+    axi_register_slice_v2_1_36_dest_region_slr #(
       .C_FAMILY     ( C_FAMILY         ) ,
       .C_REG_CONFIG ( C_REG_CONFIG_W       ) ,
       .C_CHANNEL    ( P_FORWARD ),
@@ -4456,7 +4456,7 @@ module axi_register_slice_v2_1_34_axi_register_slice #
   end  // gen_w
 
   if ((C_REG_CONFIG_B <= 9) && (C_RESERVE_MODE==0)) begin : b
-    axi_register_slice_v2_1_34_axic_register_slice # (
+    axi_register_slice_v2_1_36_axic_register_slice # (
       .C_FAMILY     ( C_FAMILY             ) ,
       .C_DATA_WIDTH ( G_AXI_BPAYLOAD_WIDTH ) ,
       .C_REG_CONFIG ( C_REG_CONFIG_B       ) 
@@ -4479,7 +4479,7 @@ module axi_register_slice_v2_1_34_axi_register_slice #
  
   end else if ((C_REG_CONFIG_B == 15) && (C_RESERVE_MODE==0)) begin : b15
     
-    axi_register_slice_v2_1_34_multi_slr # (
+    axi_register_slice_v2_1_36_multi_slr # (
       .C_FAMILY     ( C_FAMILY              ) ,
       .C_DATA_WIDTH ( G_AXI_BPAYLOAD_WIDTH ) ,
       .C_CHANNEL    ( P_RESPONSE ),
@@ -4506,7 +4506,7 @@ module axi_register_slice_v2_1_34_axi_register_slice #
     
   end else if ((C_REG_CONFIG_B == 16) && (C_RESERVE_MODE==0)) begin : b16
     
-    axi_register_slice_v2_1_34_auto_slr # (
+    axi_register_slice_v2_1_36_auto_slr # (
       .C_DATA_WIDTH ( G_AXI_BPAYLOAD_WIDTH ) 
     )
     b_auto (
@@ -4535,7 +4535,7 @@ module axi_register_slice_v2_1_34_axi_register_slice #
     wire slr_bhandshake;
     wire slr_bready;
         
-    axi_register_slice_v2_1_34_source_region_slr #(
+    axi_register_slice_v2_1_36_source_region_slr #(
       .C_FAMILY     ( C_FAMILY         ) ,
       .C_REG_CONFIG ( C_REG_CONFIG_B       ) ,
       .C_CHANNEL    ( P_RESPONSE ),
@@ -4557,7 +4557,7 @@ module axi_register_slice_v2_1_34_axi_register_slice #
       .laguna_m_ready     ( slr_bready   )
     );
 
-    axi_register_slice_v2_1_34_dest_region_slr #(
+    axi_register_slice_v2_1_36_dest_region_slr #(
       .C_FAMILY     ( C_FAMILY         ) ,
       .C_REG_CONFIG ( C_REG_CONFIG_B       ) ,
       .C_CHANNEL    ( P_RESPONSE ),
@@ -4582,7 +4582,7 @@ module axi_register_slice_v2_1_34_axi_register_slice #
   end  // gen_b
 
   if ((C_REG_CONFIG_AR <= 9) && (C_RESERVE_MODE==0)) begin : ar
-    axi_register_slice_v2_1_34_axic_register_slice # (
+    axi_register_slice_v2_1_36_axic_register_slice # (
       .C_FAMILY     ( C_FAMILY              ) ,
       .C_DATA_WIDTH ( G_AXI_ARPAYLOAD_WIDTH ) ,
       .C_REG_CONFIG ( C_REG_CONFIG_AR       ) 
@@ -4605,7 +4605,7 @@ module axi_register_slice_v2_1_34_axi_register_slice #
     
   end else if ((C_REG_CONFIG_AR == 15) && (C_RESERVE_MODE==0)) begin : ar15
     
-    axi_register_slice_v2_1_34_multi_slr # (
+    axi_register_slice_v2_1_36_multi_slr # (
       .C_FAMILY     ( C_FAMILY              ) ,
       .C_DATA_WIDTH ( G_AXI_ARPAYLOAD_WIDTH ) ,
       .C_CHANNEL    ( P_FORWARD ),
@@ -4632,7 +4632,7 @@ module axi_register_slice_v2_1_34_axi_register_slice #
     
   end else if ((C_REG_CONFIG_AR == 16) && (C_RESERVE_MODE==0)) begin : ar16
     
-    axi_register_slice_v2_1_34_auto_slr # (
+    axi_register_slice_v2_1_36_auto_slr # (
       .C_DATA_WIDTH ( G_AXI_ARPAYLOAD_WIDTH ) 
     )
     ar_auto (
@@ -4661,7 +4661,7 @@ module axi_register_slice_v2_1_34_axi_register_slice #
     wire slr_arhandshake;
     wire slr_arready;
         
-    axi_register_slice_v2_1_34_source_region_slr #(
+    axi_register_slice_v2_1_36_source_region_slr #(
       .C_FAMILY     ( C_FAMILY         ) ,
       .C_REG_CONFIG ( C_REG_CONFIG_AR       ) ,
       .C_CHANNEL    ( P_FORWARD ),
@@ -4683,7 +4683,7 @@ module axi_register_slice_v2_1_34_axi_register_slice #
       .laguna_m_ready     ( slr_arready   )
     );
 
-    axi_register_slice_v2_1_34_dest_region_slr #(
+    axi_register_slice_v2_1_36_dest_region_slr #(
       .C_FAMILY     ( C_FAMILY         ) ,
       .C_REG_CONFIG ( C_REG_CONFIG_AR       ) ,
       .C_CHANNEL    ( P_FORWARD ),
@@ -4708,7 +4708,7 @@ module axi_register_slice_v2_1_34_axi_register_slice #
   end  // gen_ar
         
   if ((C_REG_CONFIG_R <= 9) && (C_RESERVE_MODE==0)) begin : r
-    axi_register_slice_v2_1_34_axic_register_slice # (
+    axi_register_slice_v2_1_36_axic_register_slice # (
       .C_FAMILY     ( C_FAMILY             ) ,
       .C_DATA_WIDTH ( G_AXI_RPAYLOAD_WIDTH ) ,
       .C_REG_CONFIG ( C_REG_CONFIG_R       ) 
@@ -4731,7 +4731,7 @@ module axi_register_slice_v2_1_34_axi_register_slice #
     
   end else if ((C_REG_CONFIG_R == 15) && (C_RESERVE_MODE==0)) begin : r15
     
-    axi_register_slice_v2_1_34_multi_slr # (
+    axi_register_slice_v2_1_36_multi_slr # (
       .C_FAMILY     ( C_FAMILY              ) ,
       .C_DATA_WIDTH ( G_AXI_RPAYLOAD_WIDTH ) ,
       .C_CHANNEL    ( P_RESPONSE ),
@@ -4758,7 +4758,7 @@ module axi_register_slice_v2_1_34_axi_register_slice #
     
   end else if ((C_REG_CONFIG_R == 16) && (C_RESERVE_MODE==0)) begin : r16
     
-    axi_register_slice_v2_1_34_auto_slr # (
+    axi_register_slice_v2_1_36_auto_slr # (
       .C_DATA_WIDTH ( G_AXI_RPAYLOAD_WIDTH ) 
     )
     r_auto (
@@ -4787,7 +4787,7 @@ module axi_register_slice_v2_1_34_axi_register_slice #
     wire slr_rhandshake;
     wire slr_rready;
         
-    axi_register_slice_v2_1_34_source_region_slr #(
+    axi_register_slice_v2_1_36_source_region_slr #(
       .C_FAMILY     ( C_FAMILY         ) ,
       .C_REG_CONFIG ( C_REG_CONFIG_R       ) ,
       .C_CHANNEL    ( P_RESPONSE ),
@@ -4809,7 +4809,7 @@ module axi_register_slice_v2_1_34_axi_register_slice #
       .laguna_m_ready     ( slr_rready   )
     );
 
-    axi_register_slice_v2_1_34_dest_region_slr #(
+    axi_register_slice_v2_1_36_dest_region_slr #(
       .C_FAMILY     ( C_FAMILY         ) ,
       .C_REG_CONFIG ( C_REG_CONFIG_R       ) ,
       .C_CHANNEL    ( P_RESPONSE ),

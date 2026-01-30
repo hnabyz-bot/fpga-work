@@ -4,7 +4,7 @@
     "xci_name": "bd_62e9_phy_0",
     "cell_name": "phy",
     "component_reference": "xilinx.com:ip:mipi_dphy:4.3",
-    "ip_revision": "14",
+    "ip_revision": "17",
     "gen_directory": ".",
     "parameters": {
       "component_parameters": {
@@ -186,10 +186,18 @@
         "C_VERSAL": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "C_EN_CNTS_BYTE_CLK": [ { "value": "false", "value_src": "user", "resolve_type": "user", "format": "bool", "usage": "all" } ],
         "C_EN_DSI_CNTS_BYTE_CLK": [ { "value": "false", "resolve_type": "user", "format": "bool", "usage": "all" } ],
-        "C_EXT_MMCM": [ { "value": "0", "resolve_type": "user", "enabled": false, "usage": "all" } ]
+        "C_EXT_MMCM": [ { "value": "0", "resolve_type": "user", "enabled": false, "usage": "all" } ],
+        "C_IO_TYPE": [ { "value": "0", "resolve_type": "user", "usage": "all" } ],
+        "ENABLE_SHIM_FLOP": [ { "value": "0", "resolve_type": "user", "usage": "all" } ],
+        "C_DBG_PORTS_ON": [ { "value": "0", "resolve_type": "user", "usage": "all" } ],
+        "C_SEP_RIU": [ { "value": "false", "value_src": "user", "resolve_type": "user", "format": "bool", "usage": "all" } ],
+        "C_MASTER_RIU": [ { "value": "true", "value_src": "user", "resolve_type": "user", "format": "bool", "usage": "all" } ],
+        "XSDB_INTF_EN": [ { "value": "0", "resolve_type": "user", "usage": "all" } ]
       },
       "model_parameters": {
         "C_EXT_MMCM": [ { "value": "false", "resolve_type": "generated", "format": "bool", "usage": "all" } ],
+        "C_IO_TYPE": [ { "value": "0", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "ENABLE_SHIM_FLOP": [ { "value": "0", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "C_S50_LOGIC": [ { "value": "0", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "C_TX_RIU_WR_GAP": [ { "value": "40", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "C_EN_DCTS_LOGIC": [ { "value": "0", "resolve_type": "generated", "format": "long", "usage": "all" } ],
@@ -292,29 +300,31 @@
         "C_RCVE_DESKEW_SEQ": [ { "value": "false", "resolve_type": "generated", "format": "bool", "usage": "all" } ],
         "C_RCVE_ALT_DESKEW_SEQ": [ { "value": "false", "resolve_type": "generated", "format": "bool", "usage": "all" } ],
         "C_SKEWCAL_FIRST_TIME": [ { "value": "4096", "resolve_type": "generated", "format": "long", "usage": "all" } ],
-        "C_SKEWCAL_PERIODIC_TIME": [ { "value": "128", "resolve_type": "generated", "format": "long", "usage": "all" } ]
+        "C_SKEWCAL_PERIODIC_TIME": [ { "value": "128", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_DBG_PORTS_ON": [ { "value": "0", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "XSDB_INTF_EN": [ { "value": "0", "resolve_type": "generated", "format": "long", "usage": "all" } ]
       },
       "project_parameters": {
-        "ARCHITECTURE": [ { "value": "artix7" } ],
-        "BASE_BOARD_PART": [ { "value": "" } ],
-        "BOARD_CONNECTIONS": [ { "value": "" } ],
-        "DEVICE": [ { "value": "xc7a35t" } ],
-        "PACKAGE": [ { "value": "fgg484" } ],
-        "PREFHDL": [ { "value": "VERILOG" } ],
-        "SILICON_REVISION": [ { "value": "" } ],
-        "SIMULATOR_LANGUAGE": [ { "value": "MIXED" } ],
-        "SPEEDGRADE": [ { "value": "-1" } ],
-        "STATIC_POWER": [ { "value": "" } ],
-        "TEMPERATURE_GRADE": [ { "value": "" } ]
+        "ARCHITECTURE": [ { "value": "artix7", "resolve_type": "generated", "usage": "all" } ],
+        "BASE_BOARD_PART": [ { "value": "", "resolve_type": "generated", "usage": "all" } ],
+        "BOARD_CONNECTIONS": [ { "value": "", "resolve_type": "generated", "usage": "all" } ],
+        "DEVICE": [ { "value": "xc7a35t", "resolve_type": "generated", "usage": "all" } ],
+        "PACKAGE": [ { "value": "fgg484", "resolve_type": "generated", "usage": "all" } ],
+        "PREFHDL": [ { "value": "VERILOG", "resolve_type": "generated", "usage": "all" } ],
+        "SILICON_REVISION": [ { "value": "", "resolve_type": "generated", "usage": "all" } ],
+        "SIMULATOR_LANGUAGE": [ { "value": "MIXED", "resolve_type": "generated", "usage": "all" } ],
+        "SPEEDGRADE": [ { "value": "-1", "resolve_type": "generated", "usage": "all" } ],
+        "STATIC_POWER": [ { "value": "", "resolve_type": "generated", "usage": "all" } ],
+        "TEMPERATURE_GRADE": [ { "value": "", "resolve_type": "generated", "usage": "all" } ]
       },
       "runtime_parameters": {
         "IPCONTEXT": [ { "value": "IP_Integrator" } ],
-        "IPREVISION": [ { "value": "14" } ],
+        "IPREVISION": [ { "value": "17" } ],
         "MANAGED": [ { "value": "TRUE" } ],
         "OUTPUTDIR": [ { "value": "." } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],
         "SHAREDDIR": [ { "value": "../../../../../ipshared" } ],
-        "SWVERSION": [ { "value": "2024.2.2" } ],
+        "SWVERSION": [ { "value": "2025.2" } ],
         "SYNTHESISFLOW": [ { "value": "OUT_OF_CONTEXT" } ]
       }
     },
@@ -540,15 +550,15 @@
             "HAS_BRESP": [ { "value": "1", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
             "HAS_RRESP": [ { "value": "1", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
             "SUPPORTS_NARROW_BURST": [ { "value": "0", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
-            "NUM_READ_OUTSTANDING": [ { "value": "1", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
-            "NUM_WRITE_OUTSTANDING": [ { "value": "1", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
-            "MAX_BURST_LENGTH": [ { "value": "1", "value_src": "ip_propagated", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "NUM_READ_OUTSTANDING": [ { "value": "1", "value_src": "user_prop", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "NUM_WRITE_OUTSTANDING": [ { "value": "1", "value_src": "user_prop", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "MAX_BURST_LENGTH": [ { "value": "1", "value_src": "default_prop", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
             "PHASE": [ { "value": "0.0", "value_src": "ip_propagated", "value_permission": "bd", "resolve_type": "generated", "format": "float", "is_ips_inferred": true, "is_static_object": false } ],
             "CLK_DOMAIN": [ { "value": "/clk_wiz_0_clk_out1", "value_src": "ip_propagated", "value_permission": "bd", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ],
-            "NUM_READ_THREADS": [ { "value": "1", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
-            "NUM_WRITE_THREADS": [ { "value": "1", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
-            "RUSER_BITS_PER_BYTE": [ { "value": "0", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
-            "WUSER_BITS_PER_BYTE": [ { "value": "0", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "NUM_READ_THREADS": [ { "value": "1", "value_src": "user_prop", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "NUM_WRITE_THREADS": [ { "value": "1", "value_src": "user_prop", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "RUSER_BITS_PER_BYTE": [ { "value": "0", "value_src": "user_prop", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "WUSER_BITS_PER_BYTE": [ { "value": "0", "value_src": "user_prop", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
             "INSERT_VIP": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "simulation.rtl", "is_ips_inferred": true, "is_static_object": false } ]
           },
           "port_maps": {
@@ -676,6 +686,56 @@
             "DL3_STOPSTATE": [ { "physical_name": "dl3_stopstate" } ],
             "DL3_ULPSACTIVENOT": [ { "physical_name": "dl3_ulpsactivenot" } ]
           }
+        },
+        "csirx_ppi_if": {
+          "vlnv": "xilinx.com:interface:rx_mipi_ppi_if:1.1",
+          "abstraction_type": "xilinx.com:interface:rx_mipi_ppi_if_rtl:1.1",
+          "mode": "master",
+          "port_maps": {
+            "CL_ENABLE": [ { "physical_name": "cl_enable" } ],
+            "CL_RXULPSCLKNOT": [ { "physical_name": "cl_rxulpsclknot" } ],
+            "CL_STOPSTATE": [ { "physical_name": "cl_stopstate" } ],
+            "DL0_ENABLE": [ { "physical_name": "dl0_enable" } ],
+            "DL0_ERRCONTROL": [ { "physical_name": "dl0_errcontrol" } ],
+            "DL0_ERRESC": [ { "physical_name": "dl0_erresc" } ],
+            "DL0_ERRSOTHS": [ { "physical_name": "dl0_errsoths" } ],
+            "DL0_ERRSOTSYNCHS": [ { "physical_name": "dl0_errsotsynchs" } ],
+            "DL0_RXACTIVEHS": [ { "physical_name": "dl0_rxactivehs" } ],
+            "DL0_RXDATAHS": [ { "physical_name": "dl0_rxdatahs" } ],
+            "DL0_RXSYNCHS": [ { "physical_name": "dl0_rxsynchs" } ],
+            "DL0_RXVALIDHS": [ { "physical_name": "dl0_rxvalidhs" } ],
+            "DL0_STOPSTATE": [ { "physical_name": "dl0_stopstate" } ],
+            "DL1_ENABLE": [ { "physical_name": "dl1_enable" } ],
+            "DL1_ERRCONTROL": [ { "physical_name": "dl1_errcontrol" } ],
+            "DL1_ERRESC": [ { "physical_name": "dl1_erresc" } ],
+            "DL1_ERRSOTHS": [ { "physical_name": "dl1_errsoths" } ],
+            "DL1_ERRSOTSYNCHS": [ { "physical_name": "dl1_errsotsynchs" } ],
+            "DL1_RXACTIVEHS": [ { "physical_name": "dl1_rxactivehs" } ],
+            "DL1_RXDATAHS": [ { "physical_name": "dl1_rxdatahs" } ],
+            "DL1_RXSYNCHS": [ { "physical_name": "dl1_rxsynchs" } ],
+            "DL1_RXVALIDHS": [ { "physical_name": "dl1_rxvalidhs" } ],
+            "DL1_STOPSTATE": [ { "physical_name": "dl1_stopstate" } ],
+            "DL2_ENABLE": [ { "physical_name": "dl2_enable" } ],
+            "DL2_ERRCONTROL": [ { "physical_name": "dl2_errcontrol" } ],
+            "DL2_ERRESC": [ { "physical_name": "dl2_erresc" } ],
+            "DL2_ERRSOTHS": [ { "physical_name": "dl2_errsoths" } ],
+            "DL2_ERRSOTSYNCHS": [ { "physical_name": "dl2_errsotsynchs" } ],
+            "DL2_RXACTIVEHS": [ { "physical_name": "dl2_rxactivehs" } ],
+            "DL2_RXDATAHS": [ { "physical_name": "dl2_rxdatahs" } ],
+            "DL2_RXSYNCHS": [ { "physical_name": "dl2_rxsynchs" } ],
+            "DL2_RXVALIDHS": [ { "physical_name": "dl2_rxvalidhs" } ],
+            "DL2_STOPSTATE": [ { "physical_name": "dl2_stopstate" } ],
+            "DL3_ENABLE": [ { "physical_name": "dl3_enable" } ],
+            "DL3_ERRCONTROL": [ { "physical_name": "dl3_errcontrol" } ],
+            "DL3_ERRESC": [ { "physical_name": "dl3_erresc" } ],
+            "DL3_ERRSOTHS": [ { "physical_name": "dl3_errsoths" } ],
+            "DL3_ERRSOTSYNCHS": [ { "physical_name": "dl3_errsotsynchs" } ],
+            "DL3_RXACTIVEHS": [ { "physical_name": "dl3_rxactivehs" } ],
+            "DL3_RXDATAHS": [ { "physical_name": "dl3_rxdatahs" } ],
+            "DL3_RXSYNCHS": [ { "physical_name": "dl3_rxsynchs" } ],
+            "DL3_RXVALIDHS": [ { "physical_name": "dl3_rxvalidhs" } ],
+            "DL3_STOPSTATE": [ { "physical_name": "dl3_stopstate" } ]
+          }
         }
       },
       "memory_maps": {
@@ -690,5 +750,6 @@
         }
       }
     }
-  }
+  },
+  "checksum": "10a7ce17"
 }

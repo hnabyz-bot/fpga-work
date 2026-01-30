@@ -7,7 +7,7 @@
 // - Pattern macros: DEFGATE_GROUP, DEFROIC_ACLK, DEFTI_ROIC_REG
 //==============================================================================
 
-//`define TB_SIM
+// `define TB_SIM
 `define TI_ROIC
 
 //==============================================================================
@@ -53,33 +53,33 @@
 // Define GATE register group (12 registers per mode)
 // Usage: `DEFGATE_GROUP(MODE, BASE_ADDR, values...)
 `define DEFGATE_GROUP(mode, base_addr, up_stv1, dn_stv1, up_stv2, dn_stv2, up_cpv1, dn_cpv1, up_cpv2, dn_cpv2, dn_oe1, up_oe1, dn_oe2, up_oe2) \
-    `DEFREG(UP_GATE_STV1_``mode,  base_addr + 16'h0, up_stv1) \
-    `DEFREG(DN_GATE_STV1_``mode,  base_addr + 16'h1, dn_stv1) \
-    `DEFREG(UP_GATE_STV2_``mode,  base_addr + 16'h2, up_stv2) \
-    `DEFREG(DN_GATE_STV2_``mode,  base_addr + 16'h3, dn_stv2) \
-    `DEFREG(UP_GATE_CPV1_``mode,  base_addr + 16'h4, up_cpv1) \
-    `DEFREG(DN_GATE_CPV1_``mode,  base_addr + 16'h5, dn_cpv1) \
-    `DEFREG(UP_GATE_CPV2_``mode,  base_addr + 16'h6, up_cpv2) \
-    `DEFREG(DN_GATE_CPV2_``mode,  base_addr + 16'h7, dn_cpv2) \
-    `DEFREG(DN_GATE_OE1_``mode,   base_addr + 16'h8, dn_oe1) \
-    `DEFREG(UP_GATE_OE1_``mode,   base_addr + 16'h9, up_oe1) \
-    `DEFREG(DN_GATE_OE2_``mode,   base_addr + 16'hA, dn_oe2) \
-    `DEFREG(UP_GATE_OE2_``mode,   base_addr + 16'hB, up_oe2)
+    `DEFREG(UP_GATE_STV1_``mode, base_addr + 16'h0, up_stv1) \
+    `DEFREG(DN_GATE_STV1_``mode, base_addr + 16'h1, dn_stv1) \
+    `DEFREG(UP_GATE_STV2_``mode, base_addr + 16'h2, up_stv2) \
+    `DEFREG(DN_GATE_STV2_``mode, base_addr + 16'h3, dn_stv2) \
+    `DEFREG(UP_GATE_CPV1_``mode, base_addr + 16'h4, up_cpv1) \
+    `DEFREG(DN_GATE_CPV1_``mode, base_addr + 16'h5, dn_cpv1) \
+    `DEFREG(UP_GATE_CPV2_``mode, base_addr + 16'h6, up_cpv2) \
+    `DEFREG(DN_GATE_CPV2_``mode, base_addr + 16'h7, dn_cpv2) \
+    `DEFREG(DN_GATE_OE1_``mode,  base_addr + 16'h8, dn_oe1) \
+    `DEFREG(UP_GATE_OE1_``mode,  base_addr + 16'h9, up_oe1) \
+    `DEFREG(DN_GATE_OE2_``mode,  base_addr + 16'hA, dn_oe2) \
+    `DEFREG(UP_GATE_OE2_``mode,  base_addr + 16'hB, up_oe2)
 
 // Define ROIC ACLK register sequence (11 registers per mode)
 // Usage: `DEFROIC_ACLK(MODE, BASE_ADDR, v0...v10)
 `define DEFROIC_ACLK(mode, base_addr, v0, v1, v2, v3, v4, v5, v6, v7, v8, v9, v10) \
-    `DEFREG(UP_ROIC_ACLK_0_``mode,   base_addr + 16'h0, v0) \
-    `DEFREG(UP_ROIC_ACLK_1_``mode,   base_addr + 16'h1, v1) \
-    `DEFREG(UP_ROIC_ACLK_2_``mode,   base_addr + 16'h2, v2) \
-    `DEFREG(UP_ROIC_ACLK_3_``mode,   base_addr + 16'h3, v3) \
-    `DEFREG(UP_ROIC_ACLK_4_``mode,   base_addr + 16'h4, v4) \
-    `DEFREG(UP_ROIC_ACLK_5_``mode,   base_addr + 16'h5, v5) \
-    `DEFREG(UP_ROIC_ACLK_6_``mode,   base_addr + 16'h6, v6) \
-    `DEFREG(UP_ROIC_ACLK_7_``mode,   base_addr + 16'h7, v7) \
-    `DEFREG(UP_ROIC_ACLK_8_``mode,   base_addr + 16'h8, v8) \
-    `DEFREG(UP_ROIC_ACLK_9_``mode,   base_addr + 16'h9, v9) \
-    `DEFREG(UP_ROIC_ACLK_10_``mode,  base_addr + 16'hA, v10)
+    `DEFREG(UP_ROIC_ACLK_0_``mode,  base_addr + 16'h0, v0) \
+    `DEFREG(UP_ROIC_ACLK_1_``mode,  base_addr + 16'h1, v1) \
+    `DEFREG(UP_ROIC_ACLK_2_``mode,  base_addr + 16'h2, v2) \
+    `DEFREG(UP_ROIC_ACLK_3_``mode,  base_addr + 16'h3, v3) \
+    `DEFREG(UP_ROIC_ACLK_4_``mode,  base_addr + 16'h4, v4) \
+    `DEFREG(UP_ROIC_ACLK_5_``mode,  base_addr + 16'h5, v5) \
+    `DEFREG(UP_ROIC_ACLK_6_``mode,  base_addr + 16'h6, v6) \
+    `DEFREG(UP_ROIC_ACLK_7_``mode,  base_addr + 16'h7, v7) \
+    `DEFREG(UP_ROIC_ACLK_8_``mode,  base_addr + 16'h8, v8) \
+    `DEFREG(UP_ROIC_ACLK_9_``mode,  base_addr + 16'h9, v9) \
+    `DEFREG(UP_ROIC_ACLK_10_``mode, base_addr + 16'hA, v10)
 
 // Define ROIC register set sequence (0-15)
 `define DEFROIC_REG_SET(idx, addr, defval) \
@@ -140,7 +140,7 @@
 `DEFREG(DN_BACK_BIAS_OPR,           16'h0023, 16'd0)
 
 // ===== GATE Registers - READ Mode (0x0024 - 0x002F) =====
-`DEFGATE_GROUP(READ, 16'h0024, 
+`DEFGATE_GROUP(READ, 16'h0024,
     16'h003C, 16'h0168, 16'h003C, 16'h0168,     // STV1, STV2
     16'h006E, 16'h01E5, 16'h006E, 16'h01E5,     // CPV1, CPV2
     16'd990, 16'd2490, 16'd990, 16'd2490)       // OE1, OE2
@@ -452,7 +452,7 @@
 `ifdef TB_SIM
     `define NUM_ROIC                    8'h2 // Simulation: 2 ROIC chips
 `else
-    `define NUM_ROIC                    8'd12 // Hardware: 12 ROIC chips
+    `define NUM_ROIC                    8'd12 // Hardware: 12 ROIC chips (Cyan HD Board)
 `endif
 
 //--------------------------------------------------------------------------------

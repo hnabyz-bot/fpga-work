@@ -4611,18 +4611,9 @@
         <spirit:name>xilinx_anylanguagebehavioralsimulation</spirit:name>
         <spirit:displayName>Simulation</spirit:displayName>
         <spirit:envIdentifier>:vivado.xilinx.com:simulation</spirit:envIdentifier>
-        <spirit:modelName>axi_traffic_gen_v3_0_20_top</spirit:modelName>
+        <spirit:modelName>axi_traffic_gen_v3_0_22_top</spirit:modelName>
         <spirit:fileSetRef>
           <spirit:localName>xilinx_anylanguagebehavioralsimulation_xilinx_com_ip_dist_mem_gen_8_0__ref_view_fileset</spirit:localName>
-        </spirit:fileSetRef>
-        <spirit:fileSetRef>
-          <spirit:localName>xilinx_anylanguagebehavioralsimulation_xilinx_com_ip_blk_mem_gen_8_4__ref_view_fileset</spirit:localName>
-        </spirit:fileSetRef>
-        <spirit:fileSetRef>
-          <spirit:localName>xilinx_anylanguagebehavioralsimulation_xilinx_com_ip_lib_bmg_1_0__ref_view_fileset</spirit:localName>
-        </spirit:fileSetRef>
-        <spirit:fileSetRef>
-          <spirit:localName>xilinx_anylanguagebehavioralsimulation_xilinx_com_ip_lib_cdc_1_0__ref_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:fileSetRef>
           <spirit:localName>xilinx_anylanguagebehavioralsimulation_view_fileset</spirit:localName>
@@ -4630,11 +4621,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Jan 16 06:10:54 UTC 2026</spirit:value>
+            <spirit:value>Mon Jan 26 10:38:44 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:b0456752</spirit:value>
+            <spirit:value>9:7a16b815</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -4642,18 +4633,9 @@
         <spirit:name>xilinx_anylanguagesynthesis</spirit:name>
         <spirit:displayName>Synthesis</spirit:displayName>
         <spirit:envIdentifier>:vivado.xilinx.com:synthesis</spirit:envIdentifier>
-        <spirit:modelName>axi_traffic_gen_v3_0_20_top</spirit:modelName>
+        <spirit:modelName>axi_traffic_gen_v3_0_22_top</spirit:modelName>
         <spirit:fileSetRef>
           <spirit:localName>xilinx_anylanguagesynthesis_xilinx_com_ip_dist_mem_gen_8_0__ref_view_fileset</spirit:localName>
-        </spirit:fileSetRef>
-        <spirit:fileSetRef>
-          <spirit:localName>xilinx_anylanguagesynthesis_xilinx_com_ip_blk_mem_gen_8_4__ref_view_fileset</spirit:localName>
-        </spirit:fileSetRef>
-        <spirit:fileSetRef>
-          <spirit:localName>xilinx_anylanguagesynthesis_xilinx_com_ip_lib_bmg_1_0__ref_view_fileset</spirit:localName>
-        </spirit:fileSetRef>
-        <spirit:fileSetRef>
-          <spirit:localName>xilinx_anylanguagesynthesis_xilinx_com_ip_lib_cdc_1_0__ref_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:fileSetRef>
           <spirit:localName>xilinx_anylanguagesynthesis_view_fileset</spirit:localName>
@@ -4661,11 +4643,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Jan 20 02:12:35 UTC 2026</spirit:value>
+            <spirit:value>Mon Jan 26 10:38:44 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:2827cd9a</spirit:value>
+            <spirit:value>9:4d5bd05f</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -4673,17 +4655,10 @@
         <spirit:name>xilinx_blockmodel</spirit:name>
         <spirit:displayName>Block Model files</spirit:displayName>
         <spirit:envIdentifier>:vivado.xilinx.com:block_model</spirit:envIdentifier>
-        <spirit:fileSetRef>
-          <spirit:localName>xilinx_blockmodel_view_fileset</spirit:localName>
-        </spirit:fileSetRef>
         <spirit:parameters>
           <spirit:parameter>
-            <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Jan 20 02:12:34 UTC 2026</spirit:value>
-          </spirit:parameter>
-          <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:2827cd9a</spirit:value>
+            <spirit:value>9:4d5bd05f</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -4697,11 +4672,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Jan 20 02:12:42 UTC 2026</spirit:value>
+            <spirit:value>Tue Jan 27 05:12:22 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:2827cd9a</spirit:value>
+            <spirit:value>9:4d5bd05f</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -4715,11 +4690,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Jan 20 02:12:35 UTC 2026</spirit:value>
+            <spirit:value>Mon Jan 26 10:38:44 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:2827cd9a</spirit:value>
+            <spirit:value>9:4d5bd05f</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -4734,11 +4709,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Jan 16 06:10:07 UTC 2026</spirit:value>
+            <spirit:value>Mon Jan 26 10:38:44 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:4e1ceb0d</spirit:value>
+            <spirit:value>9:4d5bd05f</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -4754,11 +4729,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Jan 16 06:10:54 UTC 2026</spirit:value>
+            <spirit:value>Mon Jan 26 10:38:44 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:b0456752</spirit:value>
+            <spirit:value>9:7a16b815</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -4774,11 +4749,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Jan 20 02:12:35 UTC 2026</spirit:value>
+            <spirit:value>Mon Jan 26 10:38:44 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:2827cd9a</spirit:value>
+            <spirit:value>9:4d5bd05f</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -4792,11 +4767,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Jan 16 06:10:54 UTC 2026</spirit:value>
+            <spirit:value>Mon Jan 26 10:38:44 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:4e1ceb0d</spirit:value>
+            <spirit:value>9:4d5bd05f</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -10512,61 +10487,12 @@
         <spirit:name>simulation/dist_mem_gen_v8_0.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-        <spirit:logicalName>dist_mem_gen_v8_0_16</spirit:logicalName>
-        <spirit:exportedName>dist_mem_gen_v8_0_16</spirit:exportedName>
+        <spirit:logicalName>dist_mem_gen_v8_0_17</spirit:logicalName>
+        <spirit:exportedName>dist_mem_gen_v8_0_17</spirit:exportedName>
       </spirit:file>
       <spirit:vendorExtensions>
         <xilinx:subCoreRef>
-          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="ip" xilinx:name="dist_mem_gen" xilinx:version="8.0" xilinx:isGenerated="true" xilinx:checksum="08643aee">
-            <xilinx:mode xilinx:name="copy_mode"/>
-          </xilinx:componentRef>
-        </xilinx:subCoreRef>
-      </spirit:vendorExtensions>
-    </spirit:fileSet>
-    <spirit:fileSet>
-      <spirit:name>xilinx_anylanguagebehavioralsimulation_xilinx_com_ip_blk_mem_gen_8_4__ref_view_fileset</spirit:name>
-      <spirit:file>
-        <spirit:name>simulation/blk_mem_gen_v8_4.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-        <spirit:logicalName>blk_mem_gen_v8_4_10</spirit:logicalName>
-        <spirit:exportedName>blk_mem_gen_v8_4_10</spirit:exportedName>
-      </spirit:file>
-      <spirit:vendorExtensions>
-        <xilinx:subCoreRef>
-          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="ip" xilinx:name="blk_mem_gen" xilinx:version="8.4" xilinx:isGenerated="true" xilinx:checksum="43ef4fac">
-            <xilinx:mode xilinx:name="copy_mode"/>
-          </xilinx:componentRef>
-        </xilinx:subCoreRef>
-      </spirit:vendorExtensions>
-    </spirit:fileSet>
-    <spirit:fileSet>
-      <spirit:name>xilinx_anylanguagebehavioralsimulation_xilinx_com_ip_lib_bmg_1_0__ref_view_fileset</spirit:name>
-      <spirit:file>
-        <spirit:name>hdl/lib_bmg_v1_0_rfs.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-        <spirit:logicalName>lib_bmg_v1_0_19</spirit:logicalName>
-      </spirit:file>
-      <spirit:vendorExtensions>
-        <xilinx:subCoreRef>
-          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="ip" xilinx:name="lib_bmg" xilinx:version="1.0" xilinx:isGenerated="true" xilinx:checksum="979a3879">
-            <xilinx:mode xilinx:name="copy_mode"/>
-          </xilinx:componentRef>
-        </xilinx:subCoreRef>
-      </spirit:vendorExtensions>
-    </spirit:fileSet>
-    <spirit:fileSet>
-      <spirit:name>xilinx_anylanguagebehavioralsimulation_xilinx_com_ip_lib_cdc_1_0__ref_view_fileset</spirit:name>
-      <spirit:file>
-        <spirit:name>hdl/lib_cdc_v1_0_rfs.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-        <spirit:logicalName>lib_cdc_v1_0_3</spirit:logicalName>
-      </spirit:file>
-      <spirit:vendorExtensions>
-        <xilinx:subCoreRef>
-          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="ip" xilinx:name="lib_cdc" xilinx:version="1.0" xilinx:isGenerated="true" xilinx:checksum="726cb4eb">
+          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="ip" xilinx:name="dist_mem_gen" xilinx:version="8.0" xilinx:isGenerated="true" xilinx:checksum="be82c773">
             <xilinx:mode xilinx:name="copy_mode"/>
           </xilinx:componentRef>
         </xilinx:subCoreRef>
@@ -10623,23 +10549,17 @@
         <spirit:userFileType>mem</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/src/verilog/axi_traffic_gen_v3_0_20_defines.v</spirit:name>
+        <spirit:name>hdl/src/verilog/axi_traffic_gen_v3_0_22_defines.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
         <spirit:isIncludeFile>true</spirit:isIncludeFile>
-        <spirit:logicalName>axi_traffic_gen_v3_0_20</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/axi_traffic_gen_v3_0_rfs.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-        <spirit:logicalName>axi_traffic_gen_v3_0_20</spirit:logicalName>
+        <spirit:logicalName>axi_traffic_gen_v3_0_22</spirit:logicalName>
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/axi_traffic_gen_v3_0_rfs.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-        <spirit:logicalName>axi_traffic_gen_v3_0_20</spirit:logicalName>
+        <spirit:logicalName>axi_traffic_gen_v3_0_22</spirit:logicalName>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -10647,56 +10567,11 @@
       <spirit:file>
         <spirit:name>hdl/dist_mem_gen_v8_0_vhsyn_rfs.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:logicalName>dist_mem_gen_v8_0_16</spirit:logicalName>
+        <spirit:logicalName>dist_mem_gen_v8_0_17</spirit:logicalName>
       </spirit:file>
       <spirit:vendorExtensions>
         <xilinx:subCoreRef>
-          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="ip" xilinx:name="dist_mem_gen" xilinx:version="8.0" xilinx:isGenerated="true" xilinx:checksum="70e53a41">
-            <xilinx:mode xilinx:name="copy_mode"/>
-          </xilinx:componentRef>
-        </xilinx:subCoreRef>
-      </spirit:vendorExtensions>
-    </spirit:fileSet>
-    <spirit:fileSet>
-      <spirit:name>xilinx_anylanguagesynthesis_xilinx_com_ip_blk_mem_gen_8_4__ref_view_fileset</spirit:name>
-      <spirit:file>
-        <spirit:name>hdl/blk_mem_gen_v8_4_vhsyn_rfs.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:logicalName>blk_mem_gen_v8_4_10</spirit:logicalName>
-      </spirit:file>
-      <spirit:vendorExtensions>
-        <xilinx:subCoreRef>
-          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="ip" xilinx:name="blk_mem_gen" xilinx:version="8.4" xilinx:isGenerated="true" xilinx:checksum="f5b24b49">
-            <xilinx:mode xilinx:name="copy_mode"/>
-          </xilinx:componentRef>
-        </xilinx:subCoreRef>
-      </spirit:vendorExtensions>
-    </spirit:fileSet>
-    <spirit:fileSet>
-      <spirit:name>xilinx_anylanguagesynthesis_xilinx_com_ip_lib_bmg_1_0__ref_view_fileset</spirit:name>
-      <spirit:file>
-        <spirit:name>hdl/lib_bmg_v1_0_rfs.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:logicalName>lib_bmg_v1_0_19</spirit:logicalName>
-      </spirit:file>
-      <spirit:vendorExtensions>
-        <xilinx:subCoreRef>
-          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="ip" xilinx:name="lib_bmg" xilinx:version="1.0" xilinx:isGenerated="true" xilinx:checksum="979a3879">
-            <xilinx:mode xilinx:name="copy_mode"/>
-          </xilinx:componentRef>
-        </xilinx:subCoreRef>
-      </spirit:vendorExtensions>
-    </spirit:fileSet>
-    <spirit:fileSet>
-      <spirit:name>xilinx_anylanguagesynthesis_xilinx_com_ip_lib_cdc_1_0__ref_view_fileset</spirit:name>
-      <spirit:file>
-        <spirit:name>hdl/lib_cdc_v1_0_rfs.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:logicalName>lib_cdc_v1_0_3</spirit:logicalName>
-      </spirit:file>
-      <spirit:vendorExtensions>
-        <xilinx:subCoreRef>
-          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="ip" xilinx:name="lib_cdc" xilinx:version="1.0" xilinx:isGenerated="true" xilinx:checksum="726cb4eb">
+          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="ip" xilinx:name="dist_mem_gen" xilinx:version="8.0" xilinx:isGenerated="true" xilinx:checksum="7e89c697">
             <xilinx:mode xilinx:name="copy_mode"/>
           </xilinx:componentRef>
         </xilinx:subCoreRef>
@@ -10753,34 +10628,14 @@
         <spirit:userFileType>mem</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/src/verilog/axi_traffic_gen_v3_0_20_defines.v</spirit:name>
+        <spirit:name>hdl/src/verilog/axi_traffic_gen_v3_0_22_defines.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:isIncludeFile>true</spirit:isIncludeFile>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/axi_traffic_gen_v3_0_rfs.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:logicalName>axi_traffic_gen_v3_0_20</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
         <spirit:name>hdl/axi_traffic_gen_v3_0_rfs.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:logicalName>axi_traffic_gen_v3_0_20</spirit:logicalName>
-      </spirit:file>
-    </spirit:fileSet>
-    <spirit:fileSet>
-      <spirit:name>xilinx_blockmodel_view_fileset</spirit:name>
-      <spirit:file>
-        <spirit:name>mipi_init_gen.bmj</spirit:name>
-        <spirit:userFileType>bmj</spirit:userFileType>
-        <spirit:userFileType>USED_IN_simulation_pre</spirit:userFileType>
-        <spirit:userFileType>USED_IN_synthesis_pre</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>mipi_init_gen_bmstub.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_simulation_pre</spirit:userFileType>
-        <spirit:userFileType>USED_IN_synthesis_pre</spirit:userFileType>
+        <spirit:logicalName>axi_traffic_gen_v3_0_22</spirit:logicalName>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -10838,6 +10693,15 @@
       <spirit:file>
         <spirit:name>mipi_init_gen.veo</spirit:name>
         <spirit:userFileType>verilogTemplate</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>mipi_init_gen_sv.sv</spirit:name>
+        <spirit:fileType>systemVerilogSource</spirit:fileType>
+        <spirit:userFileType>INTERNAL_FILE</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>mipi_init_gen_sv.sveo</spirit:name>
+        <spirit:userFileType>systemVerilogTemplate</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -11572,8 +11436,9 @@
       <xilinx:displayName>AXI Traffic Generator</xilinx:displayName>
       <xilinx:xpmLibraries>
         <xilinx:xpmLibrary>XPM_MEMORY</xilinx:xpmLibrary>
+        <xilinx:xpmLibrary>XPM_CDC</xilinx:xpmLibrary>
       </xilinx:xpmLibraries>
-      <xilinx:coreRevision>20</xilinx:coreRevision>
+      <xilinx:coreRevision>22</xilinx:coreRevision>
       <xilinx:configElementInfos>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXI.ADDR_WIDTH" xilinx:valueSource="auto"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXI.BUSER_WIDTH" xilinx:valueSource="constant"/>
@@ -11713,11 +11578,11 @@
       </xilinx:configElementInfos>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
-      <xilinx:xilinxVersion>2024.2.2</xilinx:xilinxVersion>
+      <xilinx:xilinxVersion>2025.2</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="be5e4dea"/>
       <xilinx:checksum xilinx:scope="addressSpaces" xilinx:value="aaa49c9b"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="0e66e6c9"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="5e8605d5"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="23a611b1"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="ab2bae2c"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="029b2361"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="57d2b62f"/>

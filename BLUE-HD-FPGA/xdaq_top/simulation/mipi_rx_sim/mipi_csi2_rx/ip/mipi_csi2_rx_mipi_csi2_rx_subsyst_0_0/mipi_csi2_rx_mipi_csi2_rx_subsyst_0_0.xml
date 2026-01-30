@@ -93,6 +93,15 @@
             </xilinx:parameterInfo>
           </spirit:vendorExtensions>
         </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>ASSOCIATED_CLKEN</spirit:name>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.CLK.LITE_ACLK.ASSOCIATED_CLKEN">s_sc_aclken</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
       </spirit:parameters>
     </spirit:busInterface>
     <spirit:busInterface>
@@ -126,15 +135,6 @@
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>simulation.rtl</xilinx:parameterUsage>
-            </xilinx:parameterInfo>
-          </spirit:vendorExtensions>
-        </spirit:parameter>
-        <spirit:parameter>
-          <spirit:name>TYPE</spirit:name>
-          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.RST.LITE_ARESETN.TYPE">INTERCONNECT</spirit:value>
-          <spirit:vendorExtensions>
-            <xilinx:parameterInfo>
-              <xilinx:parameterUsage>none</xilinx:parameterUsage>
             </xilinx:parameterInfo>
           </spirit:vendorExtensions>
         </spirit:parameter>
@@ -1248,29 +1248,6 @@
   <spirit:model>
     <spirit:views>
       <spirit:view>
-        <spirit:name>xilinx_anylanguagebehavioralsimulation</spirit:name>
-        <spirit:displayName>Simulation</spirit:displayName>
-        <spirit:envIdentifier>:vivado.xilinx.com:simulation</spirit:envIdentifier>
-        <spirit:modelName>bd_62e9</spirit:modelName>
-        <spirit:parameters>
-          <spirit:parameter>
-            <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:25f5272e</spirit:value>
-          </spirit:parameter>
-        </spirit:parameters>
-      </spirit:view>
-      <spirit:view>
-        <spirit:name>xilinx_blockmodel</spirit:name>
-        <spirit:displayName>Block Model files</spirit:displayName>
-        <spirit:envIdentifier>:vivado.xilinx.com:block_model</spirit:envIdentifier>
-        <spirit:parameters>
-          <spirit:parameter>
-            <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:6e3274ad</spirit:value>
-          </spirit:parameter>
-        </spirit:parameters>
-      </spirit:view>
-      <spirit:view>
         <spirit:name>xilinx_elaboratebd</spirit:name>
         <spirit:displayName>Elaborate BD</spirit:displayName>
         <spirit:envIdentifier>:vivado.xilinx.com:elaborate.bd</spirit:envIdentifier>
@@ -1280,11 +1257,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Jan 14 09:24:36 UTC 2026</spirit:value>
+            <spirit:value>Mon Jan 19 07:10:39 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:92627393</spirit:value>
+            <spirit:value>9:04d3aa82</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1298,31 +1275,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Jan 14 09:24:36 UTC 2026</spirit:value>
+            <spirit:value>Mon Jan 19 07:10:39 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:3586a16e</spirit:value>
-          </spirit:parameter>
-        </spirit:parameters>
-      </spirit:view>
-      <spirit:view>
-        <spirit:name>xilinx_verilogsimulationwrapper</spirit:name>
-        <spirit:displayName>Verilog Simulation Wrapper</spirit:displayName>
-        <spirit:envIdentifier>verilogSource:vivado.xilinx.com:simulation.wrapper</spirit:envIdentifier>
-        <spirit:language>verilog</spirit:language>
-        <spirit:modelName>mipi_csi2_rx_mipi_csi2_rx_subsyst_0_0</spirit:modelName>
-        <spirit:fileSetRef>
-          <spirit:localName>xilinx_verilogsimulationwrapper_view_fileset</spirit:localName>
-        </spirit:fileSetRef>
-        <spirit:parameters>
-          <spirit:parameter>
-            <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Jan 16 06:10:57 UTC 2026</spirit:value>
-          </spirit:parameter>
-          <spirit:parameter>
-            <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:25f5272e</spirit:value>
+            <spirit:value>9:24159ad7</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1335,7 +1292,7 @@
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>std_logic</spirit:typeName>
-              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_elaborateports</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
@@ -1347,9 +1304,12 @@
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>std_logic</spirit:typeName>
-              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_elaborateports</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
+          <spirit:driver>
+            <spirit:defaultValue spirit:format="long">1</spirit:defaultValue>
+          </spirit:driver>
         </spirit:wire>
       </spirit:port>
       <spirit:port>
@@ -1359,7 +1319,7 @@
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>std_logic</spirit:typeName>
-              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_elaborateports</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
@@ -1371,7 +1331,7 @@
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>std_logic</spirit:typeName>
-              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_elaborateports</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
@@ -1383,7 +1343,7 @@
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>std_logic</spirit:typeName>
-              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_elaborateports</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
@@ -1395,7 +1355,7 @@
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>std_logic</spirit:typeName>
-              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_elaborateports</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
@@ -1407,7 +1367,7 @@
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>std_logic</spirit:typeName>
-              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_elaborateports</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
@@ -1419,19 +1379,7 @@
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>std_logic</spirit:typeName>
-              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
-            </spirit:wireTypeDef>
-          </spirit:wireTypeDefs>
-        </spirit:wire>
-      </spirit:port>
-      <spirit:port>
-        <spirit:name>frame_rcvd_pulse_out</spirit:name>
-        <spirit:wire>
-          <spirit:direction>out</spirit:direction>
-          <spirit:wireTypeDefs>
-            <spirit:wireTypeDef>
-              <spirit:typeName>std_logic</spirit:typeName>
-              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_elaborateports</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
@@ -1447,7 +1395,7 @@
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>std_logic_vector</spirit:typeName>
-              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_elaborateports</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
@@ -1466,7 +1414,7 @@
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>std_logic_vector</spirit:typeName>
-              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_elaborateports</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
@@ -1485,7 +1433,7 @@
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>std_logic_vector</spirit:typeName>
-              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_elaborateports</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
@@ -1504,7 +1452,7 @@
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>std_logic_vector</spirit:typeName>
-              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_elaborateports</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
@@ -1523,7 +1471,7 @@
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>std_logic_vector</spirit:typeName>
-              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_elaborateports</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
@@ -1542,7 +1490,7 @@
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>std_logic_vector</spirit:typeName>
-              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_elaborateports</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
@@ -1561,7 +1509,7 @@
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>std_logic_vector</spirit:typeName>
-              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_elaborateports</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
@@ -1580,7 +1528,7 @@
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>std_logic_vector</spirit:typeName>
-              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_elaborateports</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
@@ -1599,7 +1547,7 @@
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>std_logic_vector</spirit:typeName>
-              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_elaborateports</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
@@ -1618,7 +1566,7 @@
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>std_logic_vector</spirit:typeName>
-              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_elaborateports</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
@@ -1637,7 +1585,7 @@
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>std_logic_vector</spirit:typeName>
-              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_elaborateports</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
@@ -1656,7 +1604,7 @@
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>std_logic_vector</spirit:typeName>
-              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_elaborateports</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
@@ -1675,7 +1623,7 @@
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>std_logic_vector</spirit:typeName>
-              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_elaborateports</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
@@ -1694,7 +1642,7 @@
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>std_logic_vector</spirit:typeName>
-              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_elaborateports</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
@@ -1713,7 +1661,7 @@
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>std_logic_vector</spirit:typeName>
-              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_elaborateports</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
@@ -1732,7 +1680,7 @@
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>std_logic_vector</spirit:typeName>
-              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_elaborateports</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
@@ -1751,7 +1699,7 @@
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>std_logic_vector</spirit:typeName>
-              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_elaborateports</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
@@ -1770,7 +1718,7 @@
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>std_logic_vector</spirit:typeName>
-              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_elaborateports</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
@@ -1789,7 +1737,7 @@
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>std_logic_vector</spirit:typeName>
-              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_elaborateports</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
@@ -1808,7 +1756,7 @@
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>std_logic_vector</spirit:typeName>
-              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_elaborateports</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
@@ -1827,7 +1775,7 @@
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>std_logic_vector</spirit:typeName>
-              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_elaborateports</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
@@ -1842,7 +1790,7 @@
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>std_logic</spirit:typeName>
-              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_elaborateports</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
@@ -1857,7 +1805,7 @@
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>std_logic</spirit:typeName>
-              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_elaborateports</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
@@ -1876,7 +1824,7 @@
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>std_logic_vector</spirit:typeName>
-              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_elaborateports</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
@@ -1891,7 +1839,7 @@
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>std_logic</spirit:typeName>
-              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_elaborateports</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
@@ -1903,7 +1851,7 @@
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>std_logic</spirit:typeName>
-              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_elaborateports</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
@@ -1918,7 +1866,7 @@
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>std_logic</spirit:typeName>
-              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_elaborateports</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
@@ -1933,7 +1881,7 @@
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>std_logic</spirit:typeName>
-              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_elaborateports</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
@@ -1948,7 +1896,7 @@
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>std_logic</spirit:typeName>
-              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_elaborateports</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
@@ -1967,7 +1915,7 @@
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>std_logic_vector</spirit:typeName>
-              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_elaborateports</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
@@ -1986,7 +1934,7 @@
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>std_logic_vector</spirit:typeName>
-              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_elaborateports</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
@@ -2005,7 +1953,7 @@
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>std_logic_vector</spirit:typeName>
-              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_elaborateports</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
@@ -2024,7 +1972,7 @@
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>std_logic_vector</spirit:typeName>
-              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_elaborateports</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
@@ -2110,6 +2058,25 @@
       <spirit:enumeration>MIPI_Video_Pipe_Camera_to_Display</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
+      <spirit:name>choice_list_1dab49df</spirit:name>
+      <spirit:enumeration>8</spirit:enumeration>
+      <spirit:enumeration>16</spirit:enumeration>
+      <spirit:enumeration>24</spirit:enumeration>
+      <spirit:enumeration>32</spirit:enumeration>
+      <spirit:enumeration>40</spirit:enumeration>
+      <spirit:enumeration>48</spirit:enumeration>
+      <spirit:enumeration>56</spirit:enumeration>
+      <spirit:enumeration>64</spirit:enumeration>
+      <spirit:enumeration>80</spirit:enumeration>
+      <spirit:enumeration>96</spirit:enumeration>
+      <spirit:enumeration>112</spirit:enumeration>
+      <spirit:enumeration>128</spirit:enumeration>
+      <spirit:enumeration>112</spirit:enumeration>
+      <spirit:enumeration>128</spirit:enumeration>
+      <spirit:enumeration>160</spirit:enumeration>
+      <spirit:enumeration>192</spirit:enumeration>
+    </spirit:choice>
+    <spirit:choice>
       <spirit:name>choice_list_1f1af28c</spirit:name>
       <spirit:enumeration>128</spirit:enumeration>
       <spirit:enumeration>256</spirit:enumeration>
@@ -2123,16 +2090,6 @@
     <spirit:choice>
       <spirit:name>choice_list_2dc23030</spirit:name>
       <spirit:enumeration>All_Byte</spirit:enumeration>
-    </spirit:choice>
-    <spirit:choice>
-      <spirit:name>choice_list_2ff84448</spirit:name>
-      <spirit:enumeration>1</spirit:enumeration>
-      <spirit:enumeration>2</spirit:enumeration>
-      <spirit:enumeration>32</spirit:enumeration>
-      <spirit:enumeration>48</spirit:enumeration>
-      <spirit:enumeration>64</spirit:enumeration>
-      <spirit:enumeration>96</spirit:enumeration>
-      <spirit:enumeration>112</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
       <spirit:name>choice_list_37bfbb05</spirit:name>
@@ -2184,18 +2141,20 @@
       <spirit:enumeration>None</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
-      <spirit:name>choice_list_71735158</spirit:name>
+      <spirit:name>choice_list_8af5a703</spirit:name>
+      <spirit:enumeration>0</spirit:enumeration>
+      <spirit:enumeration>1</spirit:enumeration>
+    </spirit:choice>
+    <spirit:choice>
+      <spirit:name>choice_list_922d8369</spirit:name>
       <spirit:enumeration>1</spirit:enumeration>
       <spirit:enumeration>2</spirit:enumeration>
       <spirit:enumeration>32</spirit:enumeration>
       <spirit:enumeration>48</spirit:enumeration>
       <spirit:enumeration>64</spirit:enumeration>
       <spirit:enumeration>96</spirit:enumeration>
-    </spirit:choice>
-    <spirit:choice>
-      <spirit:name>choice_list_8af5a703</spirit:name>
-      <spirit:enumeration>0</spirit:enumeration>
-      <spirit:enumeration>1</spirit:enumeration>
+      <spirit:enumeration>112</spirit:enumeration>
+      <spirit:enumeration>128</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
       <spirit:name>choice_list_aa031417</spirit:name>
@@ -2207,23 +2166,6 @@
     <spirit:choice>
       <spirit:name>choice_list_ac75ef1e</spirit:name>
       <spirit:enumeration>Custom</spirit:enumeration>
-    </spirit:choice>
-    <spirit:choice>
-      <spirit:name>choice_list_b8170f43</spirit:name>
-      <spirit:enumeration>8</spirit:enumeration>
-      <spirit:enumeration>16</spirit:enumeration>
-      <spirit:enumeration>24</spirit:enumeration>
-      <spirit:enumeration>32</spirit:enumeration>
-      <spirit:enumeration>40</spirit:enumeration>
-      <spirit:enumeration>48</spirit:enumeration>
-      <spirit:enumeration>56</spirit:enumeration>
-      <spirit:enumeration>64</spirit:enumeration>
-      <spirit:enumeration>80</spirit:enumeration>
-      <spirit:enumeration>96</spirit:enumeration>
-      <spirit:enumeration>112</spirit:enumeration>
-      <spirit:enumeration>128</spirit:enumeration>
-      <spirit:enumeration>160</spirit:enumeration>
-      <spirit:enumeration>192</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
       <spirit:name>choice_list_c27a3567</spirit:name>
@@ -2275,14 +2217,6 @@
       <spirit:file>
         <spirit:name>bd_0/bd_62e9.bd</spirit:name>
         <spirit:userFileType>block_diagram</spirit:userFileType>
-      </spirit:file>
-    </spirit:fileSet>
-    <spirit:fileSet>
-      <spirit:name>xilinx_verilogsimulationwrapper_view_fileset</spirit:name>
-      <spirit:file>
-        <spirit:name>sim/mipi_csi2_rx_mipi_csi2_rx_subsyst_0_0.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
       </spirit:file>
     </spirit:fileSet>
   </spirit:fileSets>
@@ -2390,7 +2324,7 @@
     <spirit:parameter>
       <spirit:name>VFB_TU_WIDTH</spirit:name>
       <spirit:displayName>TUSER Width</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.VFB_TU_WIDTH" spirit:choiceRef="choice_list_71735158" spirit:order="19">1</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.VFB_TU_WIDTH" spirit:choiceRef="choice_list_922d8369" spirit:order="19">1</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>C_IDLY_GROUP_NAME</spirit:name>
@@ -2513,6 +2447,13 @@
       <spirit:name>YUV420_BUF_DPTH</spirit:name>
       <spirit:displayName>YUV420 word count</spirit:displayName>
       <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.YUV420_BUF_DPTH" spirit:choiceRef="choice_list_1f1af28c" spirit:order="45">128</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.YUV420_BUF_DPTH">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>C_EN_CSI_V2_0</spirit:name>
@@ -2530,64 +2471,69 @@
       <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.C_SPRT_ISP_BRIDGE" spirit:order="48">false</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
+      <spirit:name>C_DEBUG_BUS</spirit:name>
+      <spirit:displayName>Support MIPI DEBUG BUS</spirit:displayName>
+      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.C_DEBUG_BUS" spirit:order="49">false</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
       <spirit:name>CMN_VC</spirit:name>
       <spirit:displayName>Allowed VC</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.CMN_VC" spirit:choiceRef="choice_list_3cf149eb" spirit:order="49">All</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.CMN_VC" spirit:choiceRef="choice_list_3cf149eb" spirit:order="50">All</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>CMN_NUM_PIXELS</spirit:name>
       <spirit:displayName>Pixels Per Clock</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.CMN_NUM_PIXELS" spirit:choiceRef="choice_list_dd2843c6" spirit:order="50">2</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.CMN_NUM_PIXELS" spirit:choiceRef="choice_list_dd2843c6" spirit:order="51">2</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>CMN_INC_IIC</spirit:name>
       <spirit:displayName>Enable AXI IIC(CCI)</spirit:displayName>
-      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.CMN_INC_IIC" spirit:order="51">false</spirit:value>
+      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.CMN_INC_IIC" spirit:order="52">false</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>CMN_INC_VFB</spirit:name>
       <spirit:displayName>Include Video Format Bridge (VFB)</spirit:displayName>
-      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.CMN_INC_VFB" spirit:order="52">true</spirit:value>
+      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.CMN_INC_VFB" spirit:order="53">true</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>CMN_PROJ_FAMILY</spirit:name>
       <spirit:displayName>Family selection</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.CMN_PROJ_FAMILY" spirit:choiceRef="choice_list_8af5a703" spirit:order="53">0</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.CMN_PROJ_FAMILY" spirit:choiceRef="choice_list_8af5a703" spirit:order="54">0</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>CMN_FIFO_RD_EN_CNTRL</spirit:name>
       <spirit:displayName>HSSIO RX FIFO Read enable control</spirit:displayName>
-      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.CMN_FIFO_RD_EN_CNTRL" spirit:order="54">true</spirit:value>
+      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.CMN_FIFO_RD_EN_CNTRL" spirit:order="55">true</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>C_HS_LINE_RATE</spirit:name>
-      <spirit:displayName>Line Rate (Mbps)</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_HS_LINE_RATE" spirit:order="55" spirit:minimum="80" spirit:maximum="4500" spirit:rangeType="long">800</spirit:value>
+      <spirit:displayName>Line Rate (Msps-CPHY , Mbps-DPHY)</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_HS_LINE_RATE" spirit:order="56" spirit:minimum="80" spirit:maximum="4500" spirit:rangeType="long">800</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>DPY_LINE_RATE</spirit:name>
-      <spirit:displayName>Line Rate (Mbps)</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.DPY_LINE_RATE" spirit:order="56" spirit:minimum="80" spirit:maximum="1500" spirit:rangeType="long">400</spirit:value>
+      <spirit:displayName>Line Rate (Msps-CPHY , Mbps-DPHY)</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.DPY_LINE_RATE" spirit:order="57" spirit:minimum="80" spirit:maximum="1500" spirit:rangeType="long">400</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>DPY_EN_REG_IF</spirit:name>
       <spirit:displayName>PHY Register Interface</spirit:displayName>
-      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.DPY_EN_REG_IF" spirit:order="57">true</spirit:value>
+      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.DPY_EN_REG_IF" spirit:order="58">true</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>CSI_EMB_NON_IMG</spirit:name>
       <spirit:displayName>Embedded non-image Interface</spirit:displayName>
-      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.CSI_EMB_NON_IMG" spirit:order="58">false</spirit:value>
+      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.CSI_EMB_NON_IMG" spirit:order="59">false</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>CSI_BUF_DEPTH</spirit:name>
       <spirit:displayName>Line Buffer Depth</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.CSI_BUF_DEPTH" spirit:choiceRef="choice_list_1f1af28c" spirit:order="59">8192</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.CSI_BUF_DEPTH" spirit:choiceRef="choice_list_1f1af28c" spirit:order="60">8192</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>AXIS_TDATA_WIDTH</spirit:name>
       <spirit:displayName>TDATA Width</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.AXIS_TDATA_WIDTH" spirit:choiceRef="choice_list_b8170f43" spirit:order="60">32</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.AXIS_TDATA_WIDTH" spirit:choiceRef="choice_list_1dab49df" spirit:order="61">32</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -2599,7 +2545,7 @@
     <spirit:parameter>
       <spirit:name>AXIS_TUSER_WIDTH</spirit:name>
       <spirit:displayName>TUSER Width</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.AXIS_TUSER_WIDTH" spirit:choiceRef="choice_list_2ff84448" spirit:order="61">96</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.AXIS_TUSER_WIDTH" spirit:choiceRef="choice_list_922d8369" spirit:order="62">96</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -2611,42 +2557,42 @@
     <spirit:parameter>
       <spirit:name>AXIS_TDEST_WIDTH</spirit:name>
       <spirit:displayName>TDEST Width</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.AXIS_TDEST_WIDTH" spirit:choiceRef="choice_list_c732e7f5" spirit:order="62">4</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.AXIS_TDEST_WIDTH" spirit:choiceRef="choice_list_c732e7f5" spirit:order="63">4</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>HP_IO_BANK_SELECTION</spirit:name>
       <spirit:displayName>HP IO Bank Selection</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.HP_IO_BANK_SELECTION" spirit:choiceRef="choice_list_165ed04b" spirit:order="63">64</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.HP_IO_BANK_SELECTION" spirit:choiceRef="choice_list_165ed04b" spirit:order="64">64</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>CLK_LANE_IO_LOC</spirit:name>
       <spirit:displayName>Clock Lane LOC</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.CLK_LANE_IO_LOC" spirit:choiceRef="choice_list_6f5507b7" spirit:order="64">None</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.CLK_LANE_IO_LOC" spirit:choiceRef="choice_list_6f5507b7" spirit:order="65">None</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>DATA_LANE0_IO_LOC</spirit:name>
       <spirit:displayName>Data Lane0 LOC</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.DATA_LANE0_IO_LOC" spirit:choiceRef="choice_list_6f5507b7" spirit:order="65">None</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.DATA_LANE0_IO_LOC" spirit:choiceRef="choice_list_6f5507b7" spirit:order="66">None</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>DATA_LANE1_IO_LOC</spirit:name>
       <spirit:displayName>Data Lane1 LOC</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.DATA_LANE1_IO_LOC" spirit:choiceRef="choice_list_6f5507b7" spirit:order="66">None</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.DATA_LANE1_IO_LOC" spirit:choiceRef="choice_list_6f5507b7" spirit:order="67">None</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>DATA_LANE2_IO_LOC</spirit:name>
       <spirit:displayName>Data Lane2 LOC</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.DATA_LANE2_IO_LOC" spirit:choiceRef="choice_list_6f5507b7" spirit:order="67">None</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.DATA_LANE2_IO_LOC" spirit:choiceRef="choice_list_6f5507b7" spirit:order="68">None</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>DATA_LANE3_IO_LOC</spirit:name>
       <spirit:displayName>Data Lane3 LOC</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.DATA_LANE3_IO_LOC" spirit:choiceRef="choice_list_6f5507b7" spirit:order="68">None</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.DATA_LANE3_IO_LOC" spirit:choiceRef="choice_list_6f5507b7" spirit:order="69">None</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>DATA_LANE0_BYTE</spirit:name>
       <spirit:displayName>Data Lane 0 Byte</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.DATA_LANE0_BYTE" spirit:choiceRef="choice_list_2dc23030" spirit:order="69">All_Byte</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.DATA_LANE0_BYTE" spirit:choiceRef="choice_list_2dc23030" spirit:order="70">All_Byte</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -2658,22 +2604,22 @@
     <spirit:parameter>
       <spirit:name>DATA_LANE1_BYTE</spirit:name>
       <spirit:displayName>Data Lane 1 Byte</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.DATA_LANE1_BYTE" spirit:choiceRef="choice_list_2dc23030" spirit:order="70">All_Byte</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.DATA_LANE1_BYTE" spirit:choiceRef="choice_list_2dc23030" spirit:order="71">All_Byte</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>DATA_LANE2_BYTE</spirit:name>
       <spirit:displayName>Data Lane 2 Byte</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.DATA_LANE2_BYTE" spirit:choiceRef="choice_list_2dc23030" spirit:order="71">All_Byte</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.DATA_LANE2_BYTE" spirit:choiceRef="choice_list_2dc23030" spirit:order="72">All_Byte</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>DATA_LANE3_BYTE</spirit:name>
       <spirit:displayName>Data Lane 3 Byte</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.DATA_LANE3_BYTE" spirit:choiceRef="choice_list_2dc23030" spirit:order="72">All_Byte</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.DATA_LANE3_BYTE" spirit:choiceRef="choice_list_2dc23030" spirit:order="73">All_Byte</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>CLK_LANE_IO_LOC_NAME</spirit:name>
       <spirit:displayName>Clock Lane LOC Name</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.CLK_LANE_IO_LOC_NAME" spirit:order="73">None</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.CLK_LANE_IO_LOC_NAME" spirit:order="74">None</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -2685,7 +2631,7 @@
     <spirit:parameter>
       <spirit:name>DATA_LANE0_IO_LOC_NAME</spirit:name>
       <spirit:displayName>Data Lane0 LOC Name</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.DATA_LANE0_IO_LOC_NAME" spirit:order="74">None</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.DATA_LANE0_IO_LOC_NAME" spirit:order="75">None</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -2697,7 +2643,7 @@
     <spirit:parameter>
       <spirit:name>DATA_LANE1_IO_LOC_NAME</spirit:name>
       <spirit:displayName>Data Lane1 LOC Name</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.DATA_LANE1_IO_LOC_NAME" spirit:order="75">None</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.DATA_LANE1_IO_LOC_NAME" spirit:order="76">None</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -2709,7 +2655,7 @@
     <spirit:parameter>
       <spirit:name>DATA_LANE2_IO_LOC_NAME</spirit:name>
       <spirit:displayName>Data Lane2 LOC Name</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.DATA_LANE2_IO_LOC_NAME" spirit:order="76">None</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.DATA_LANE2_IO_LOC_NAME" spirit:order="77">None</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -2721,7 +2667,7 @@
     <spirit:parameter>
       <spirit:name>DATA_LANE3_IO_LOC_NAME</spirit:name>
       <spirit:displayName>Data Lane3 LOC Name</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.DATA_LANE3_IO_LOC_NAME" spirit:order="77">None</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.DATA_LANE3_IO_LOC_NAME" spirit:order="78">None</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -2733,7 +2679,7 @@
     <spirit:parameter>
       <spirit:name>SupportLevel</spirit:name>
       <spirit:displayName>Shared Logic support level</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.SupportLevel" spirit:choiceRef="choice_pairs_53749dec" spirit:order="78">1</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.SupportLevel" spirit:choiceRef="choice_pairs_53749dec" spirit:order="79">1</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -2745,47 +2691,47 @@
     <spirit:parameter>
       <spirit:name>C_CLK_LANE_IO_POSITION</spirit:name>
       <spirit:displayName>Clock Lane IO Position</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_CLK_LANE_IO_POSITION" spirit:order="79">0</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_CLK_LANE_IO_POSITION" spirit:order="80">0</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>C_DATA_LANE0_IO_POSITION</spirit:name>
       <spirit:displayName>Data Lane 0 IO Position</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_DATA_LANE0_IO_POSITION" spirit:order="80">2</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_DATA_LANE0_IO_POSITION" spirit:order="81">2</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>C_DATA_LANE1_IO_POSITION</spirit:name>
       <spirit:displayName>Data Lane 1 IO Position</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_DATA_LANE1_IO_POSITION" spirit:order="81">4</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_DATA_LANE1_IO_POSITION" spirit:order="82">4</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>C_DATA_LANE2_IO_POSITION</spirit:name>
       <spirit:displayName>Data Lane 2 IO Position</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_DATA_LANE2_IO_POSITION" spirit:order="82">6</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_DATA_LANE2_IO_POSITION" spirit:order="83">6</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>C_DATA_LANE3_IO_POSITION</spirit:name>
       <spirit:displayName>Data Lane 3 IO Position</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_DATA_LANE3_IO_POSITION" spirit:order="83">8</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_DATA_LANE3_IO_POSITION" spirit:order="84">8</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>C_IS_7SERIES</spirit:name>
       <spirit:displayName>7-Series family selection</spirit:displayName>
-      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.C_IS_7SERIES" spirit:order="84">true</spirit:value>
+      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.C_IS_7SERIES" spirit:order="85">true</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>C_IS_VERSAL</spirit:name>
       <spirit:displayName>Versal family selection</spirit:displayName>
-      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.C_IS_VERSAL" spirit:order="85">false</spirit:value>
+      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.C_IS_VERSAL" spirit:order="86">false</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>C_EN_CNTS_BYTE_CLK</spirit:name>
       <spirit:displayName>Enable Continuous clock for CSI2 Rx Subsystem</spirit:displayName>
-      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.C_EN_CNTS_BYTE_CLK" spirit:order="86">false</spirit:value>
+      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.C_EN_CNTS_BYTE_CLK" spirit:order="87">false</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>C_RCVE_DESKEW_SEQ</spirit:name>
       <spirit:displayName>Enable Deskew Detection</spirit:displayName>
-      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.C_RCVE_DESKEW_SEQ" spirit:order="87">false</spirit:value>
+      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.C_RCVE_DESKEW_SEQ" spirit:order="88">false</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -2795,9 +2741,19 @@
       </spirit:vendorExtensions>
     </spirit:parameter>
     <spirit:parameter>
+      <spirit:name>C_MASTER_RIU</spirit:name>
+      <spirit:displayName>Enable Deskew Detection</spirit:displayName>
+      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.C_MASTER_RIU" spirit:order="89">true</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>C_SEP_RIU</spirit:name>
+      <spirit:displayName>Enable Seperate RIU</spirit:displayName>
+      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.C_SEP_RIU" spirit:order="90">false</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
       <spirit:name>C_RCVE_ALT_DESKEW_SEQ</spirit:name>
       <spirit:displayName>Enable Alternate Deskew Detection</spirit:displayName>
-      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.C_RCVE_ALT_DESKEW_SEQ" spirit:order="88">false</spirit:value>
+      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.C_RCVE_ALT_DESKEW_SEQ" spirit:order="91">false</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -2809,7 +2765,7 @@
     <spirit:parameter>
       <spirit:name>C_RCVE_PREAMBLE_SEQ</spirit:name>
       <spirit:displayName>Enable Premable Deskew Detection</spirit:displayName>
-      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.C_RCVE_PREAMBLE_SEQ" spirit:order="89">false</spirit:value>
+      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.C_RCVE_PREAMBLE_SEQ" spirit:order="92">false</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -2821,12 +2777,12 @@
     <spirit:parameter>
       <spirit:name>C_CAL_MODE</spirit:name>
       <spirit:displayName>Calibration Mode</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.C_CAL_MODE" spirit:choiceRef="choice_list_4a1a3b04" spirit:order="90">NONE</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.C_CAL_MODE" spirit:choiceRef="choice_list_4a1a3b04" spirit:order="93">NONE</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>C_IDLY_TAP</spirit:name>
       <spirit:displayName>IDELAY Tap Value</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_IDLY_TAP" spirit:order="91" spirit:minimum="1" spirit:maximum="31" spirit:rangeType="long">1</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_IDLY_TAP" spirit:order="94" spirit:minimum="1" spirit:maximum="31" spirit:rangeType="long">1</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -2838,7 +2794,7 @@
     <spirit:parameter>
       <spirit:name>C_EN_EXT_TAP</spirit:name>
       <spirit:displayName>External IDELAY tap loading</spirit:displayName>
-      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.C_EN_EXT_TAP" spirit:order="92">false</spirit:value>
+      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.C_EN_EXT_TAP" spirit:order="95">false</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -2850,32 +2806,32 @@
     <spirit:parameter>
       <spirit:name>C_EN_CLK300M</spirit:name>
       <spirit:displayName>Enable 300 MHz clock for IDELAYCTRL</spirit:displayName>
-      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.C_EN_CLK300M" spirit:order="93">false</spirit:value>
+      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.C_EN_CLK300M" spirit:order="96">false</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>C_SHARE_IDLYCTRL</spirit:name>
       <spirit:displayName>Include IDELAYCTRL in core</spirit:displayName>
-      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.C_SHARE_IDLYCTRL" spirit:order="94">false</spirit:value>
+      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.C_SHARE_IDLYCTRL" spirit:order="97">false</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>C_FIFO_RD_EN_CONTROL</spirit:name>
       <spirit:displayName>HSSIO RX FIFO Read enable control</spirit:displayName>
-      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.C_FIFO_RD_EN_CONTROL" spirit:order="95">true</spirit:value>
+      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.C_FIFO_RD_EN_CONTROL" spirit:order="98">true</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>C_HS_SETTLE_NS</spirit:name>
-      <spirit:displayName>HS_SETTLE Parameter (ns)</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_HS_SETTLE_NS" spirit:order="96">160</spirit:value>
+      <spirit:displayName>HS Settle Time (in core clock cycles)</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_HS_SETTLE_NS" spirit:order="99">160</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>C_EN_TIMEOUT_REGS</spirit:name>
       <spirit:displayName>Enable HS and ESC Timeout Counters/Registers</spirit:displayName>
-      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.C_EN_TIMEOUT_REGS" spirit:order="97">false</spirit:value>
+      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.C_EN_TIMEOUT_REGS" spirit:order="100">false</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>C_HS_TIMEOUT</spirit:name>
       <spirit:displayName>HS Timeout (Bytes)</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_HS_TIMEOUT" spirit:order="98" spirit:minimum="1000" spirit:maximum="65541" spirit:rangeType="long">65541</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_HS_TIMEOUT" spirit:order="101" spirit:minimum="1000" spirit:maximum="65541" spirit:rangeType="long">65541</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -2887,7 +2843,7 @@
     <spirit:parameter>
       <spirit:name>C_ESC_TIMEOUT</spirit:name>
       <spirit:displayName>Escape Timeout (ns)</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_ESC_TIMEOUT" spirit:order="99" spirit:minimum="800" spirit:maximum="25600" spirit:rangeType="long">25600</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_ESC_TIMEOUT" spirit:order="102" spirit:minimum="800" spirit:maximum="25600" spirit:rangeType="long">25600</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -2899,17 +2855,17 @@
     <spirit:parameter>
       <spirit:name>C_INIT</spirit:name>
       <spirit:displayName>T_INIT (ns)</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_INIT" spirit:order="100" spirit:minimum="99000" spirit:maximum="1000000" spirit:rangeType="long">100000</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_INIT" spirit:order="103" spirit:minimum="99000" spirit:maximum="1000000" spirit:rangeType="long">100000</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>C_CSI_FILTER_USERDATATYPE</spirit:name>
       <spirit:displayName>Filter User Defined data types</spirit:displayName>
-      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.C_CSI_FILTER_USERDATATYPE" spirit:order="101">false</spirit:value>
+      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.C_CSI_FILTER_USERDATATYPE" spirit:order="104">false</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>USE_BOARD_FLOW</spirit:name>
       <spirit:displayName>Generate Board based IO Constraints</spirit:displayName>
-      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.USE_BOARD_FLOW" spirit:order="102">false</spirit:value>
+      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.USE_BOARD_FLOW" spirit:order="105">false</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -2920,7 +2876,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>DPHYRX_BOARD_INTERFACE</spirit:name>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.DPHYRX_BOARD_INTERFACE" spirit:choiceRef="choice_list_ac75ef1e" spirit:order="103">Custom</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.DPHYRX_BOARD_INTERFACE" spirit:choiceRef="choice_list_ac75ef1e" spirit:order="106">Custom</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -2932,17 +2888,27 @@
     <spirit:parameter>
       <spirit:name>CSI_CONTROLLER_REG_IF</spirit:name>
       <spirit:displayName>CSI2 Controller Register Interface</spirit:displayName>
-      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.CSI_CONTROLLER_REG_IF" spirit:order="104">true</spirit:value>
+      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.CSI_CONTROLLER_REG_IF" spirit:order="107">true</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>C_IS_KSB</spirit:name>
       <spirit:displayName>KSB and derivatives selection</spirit:displayName>
-      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.C_IS_KSB" spirit:order="105">false</spirit:value>
+      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.C_IS_KSB" spirit:order="108">false</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>C_INC_PHY</spirit:name>
       <spirit:displayName>Include PHY with subsystem</spirit:displayName>
-      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.C_INC_PHY" spirit:order="106">true</spirit:value>
+      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.C_INC_PHY" spirit:order="109">true</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>C_CLOCK_MASK</spirit:name>
+      <spirit:displayName>Clock mask</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_CLOCK_MASK" spirit:order="110">39</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>C_DBG_PORTS_ON</spirit:name>
+      <spirit:displayName>Enable phy debug ports</spirit:displayName>
+      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.C_DBG_PORTS_ON" spirit:order="111">false</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>Component_Name</spirit:name>
@@ -2956,7 +2922,7 @@
         <xilinx:xpmLibrary>XPM_CDC</xilinx:xpmLibrary>
         <xilinx:xpmLibrary>XPM_FIFO</xilinx:xpmLibrary>
       </xilinx:xpmLibraries>
-      <xilinx:coreRevision>4</xilinx:coreRevision>
+      <xilinx:coreRevision>7</xilinx:coreRevision>
       <xilinx:tags>
         <xilinx:tag xilinx:name="driver_mode">mixed</xilinx:tag>
       </xilinx:tags>
@@ -2969,6 +2935,7 @@
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CLK.DPHY_CLK_200M.FREQ_TOLERANCE_HZ" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CLK.DPHY_CLK_200M.PHASE" xilinx:valueSource="ip_propagated" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CLK.LITE_ACLK.ASSOCIATED_BUSIF" xilinx:valueSource="user" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CLK.LITE_ACLK.ASSOCIATED_CLKEN" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CLK.LITE_ACLK.ASSOCIATED_PORT" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CLK.LITE_ACLK.ASSOCIATED_RESET" xilinx:valueSource="user" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CLK.LITE_ACLK.CLK_DOMAIN" xilinx:valueSource="ip_propagated" xilinx:valuePermission="bd"/>
@@ -2996,33 +2963,32 @@
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CSIRXSS_S_AXI.CLK_DOMAIN" xilinx:valueSource="ip_propagated" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CSIRXSS_S_AXI.DATA_WIDTH" xilinx:valueSource="user" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CSIRXSS_S_AXI.FREQ_HZ" xilinx:valueSource="ip_propagated" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CSIRXSS_S_AXI.HAS_BRESP" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CSIRXSS_S_AXI.HAS_BRESP" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CSIRXSS_S_AXI.HAS_BURST" xilinx:valueSource="propagated" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CSIRXSS_S_AXI.HAS_CACHE" xilinx:valueSource="propagated" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CSIRXSS_S_AXI.HAS_LOCK" xilinx:valueSource="propagated" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CSIRXSS_S_AXI.HAS_PROT" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CSIRXSS_S_AXI.HAS_PROT" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CSIRXSS_S_AXI.HAS_QOS" xilinx:valueSource="propagated" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CSIRXSS_S_AXI.HAS_REGION" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CSIRXSS_S_AXI.HAS_RRESP" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CSIRXSS_S_AXI.HAS_WSTRB" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CSIRXSS_S_AXI.ID_WIDTH" xilinx:valueSource="propagated" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CSIRXSS_S_AXI.HAS_RRESP" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CSIRXSS_S_AXI.HAS_WSTRB" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CSIRXSS_S_AXI.ID_WIDTH" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CSIRXSS_S_AXI.MAX_BURST_LENGTH" xilinx:valueSource="default_prop" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CSIRXSS_S_AXI.NUM_READ_OUTSTANDING" xilinx:valueSource="user_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CSIRXSS_S_AXI.NUM_READ_OUTSTANDING" xilinx:valueSource="user" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CSIRXSS_S_AXI.NUM_READ_THREADS" xilinx:valueSource="user_prop" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CSIRXSS_S_AXI.NUM_WRITE_OUTSTANDING" xilinx:valueSource="user_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CSIRXSS_S_AXI.NUM_WRITE_OUTSTANDING" xilinx:valueSource="user" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CSIRXSS_S_AXI.NUM_WRITE_THREADS" xilinx:valueSource="user_prop" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CSIRXSS_S_AXI.PHASE" xilinx:valueSource="ip_propagated" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CSIRXSS_S_AXI.PROTOCOL" xilinx:valueSource="user" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CSIRXSS_S_AXI.READ_WRITE_MODE" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CSIRXSS_S_AXI.RUSER_BITS_PER_BYTE" xilinx:valueSource="user_prop" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CSIRXSS_S_AXI.RUSER_WIDTH" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CSIRXSS_S_AXI.SUPPORTS_NARROW_BURST" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CSIRXSS_S_AXI.SUPPORTS_NARROW_BURST" xilinx:valueSource="default_prop" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CSIRXSS_S_AXI.WUSER_BITS_PER_BYTE" xilinx:valueSource="user_prop" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CSIRXSS_S_AXI.WUSER_WIDTH" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.INTR.CSIRXSS_CSI_IRQ.PortWidth" xilinx:valueSource="default_prop" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.INTR.CSIRXSS_CSI_IRQ.SENSITIVITY" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.RST.LITE_ARESETN.POLARITY" xilinx:valueSource="user" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.RST.LITE_ARESETN.TYPE" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.RST.SYSTEM_RST_OUT.POLARITY" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.RST.VIDEO_ARESETN.POLARITY" xilinx:valueSource="user" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.VIDEO_OUT.CLK_DOMAIN" xilinx:valueSource="ip_propagated" xilinx:valuePermission="bd"/>
@@ -3055,10 +3021,10 @@
       </xilinx:configElementInfos>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
-      <xilinx:xilinxVersion>2024.2.2</xilinx:xilinxVersion>
+      <xilinx:xilinxVersion>2025.2</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="1225b11c"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="f6f9e66d"/>
-      <xilinx:checksum xilinx:scope="parameters" xilinx:value="2d86e294"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="d107776f"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="140625bb"/>
     </xilinx:packagingInfo>
   </spirit:vendorExtensions>
 </spirit:component>
